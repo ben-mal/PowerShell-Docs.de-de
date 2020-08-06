@@ -1,19 +1,12 @@
 ---
 title: Wideentry-Element für widecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 014763cb-7716-4931-899c-8375b5d7a3dd
-caps.latest.revision: 15
-ms.openlocfilehash: d1d13b5c3436871053353814293d9163ea13c7fb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 13dd1f6ad7ac1e9d8d0524f0a0f18fe80ffaf8e2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367899"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780014"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>Element „WideEntry“ für WideControl (Format)
 
@@ -32,32 +25,32 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `WideEntry`-Elements beschrieben. Sie müssen ein einzelnes `WideItem` untergeordnetes Element angeben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `WideEntry` Elements beschrieben. Sie müssen ein einzelnes untergeordnetes `WideItem` Element angeben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[Entryselectedby-Element für wideentry (Format)](./entryselectedby-element-for-wideentry-format.md)|Optionales Element.<br /><br /> Definiert die .NET-Typen, die diese Breite Eingabe Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
+|[Element „EntrySelectedBy“ für WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Optionales Element.<br /><br /> Definiert die .NET-Typen, die diese Breite Eingabe Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 |[Wideitem-Element (Format)](./wideitem-element-for-widecontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Eigenschaft oder das Skript, dessen Wert angezeigt wird.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |[Wideentries-Element (Format)](./wideentries-element-for-widecontrol-format.md)|Stellt die Definitionen der breiten Ansicht bereit.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Eine breite Ansicht ist ein Listenformat, in dem ein einzelner Eigenschafts Wert oder ein Skript Wert für jedes Objekt angezeigt wird. Im Gegensatz zu anderen Sicht Typen können Sie für jede Sicht Definition nur ein Element Element angeben. Weitere Informationen zu den anderen Komponenten einer breiten Ansicht finden Sie unter [Erstellen einer breiten Ansicht](./creating-a-wide-view.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein `WideEntry`-Element, das ein einzelnes `WideItem` Element definiert. Das `WideItem`-Element definiert die-Eigenschaft, deren Wert in der Ansicht angezeigt wird.
+Das folgende Beispiel zeigt ein- `WideEntry` Element, das ein einzelnes- `WideItem` Element definiert. Das- `WideItem` Element definiert die-Eigenschaft, deren Wert in der Ansicht angezeigt wird.
 
 ```xml
 <WideEntries>
@@ -86,4 +79,4 @@ Ein umfassendes Beispiel für eine breite Ansicht finden Sie unter [Wide View (B
 
 [Wideitem-Element (Format)](./wideitem-element-for-widecontrol-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
 title: Frame-Element für customItem für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d879c8ce-679d-4622-bc43-c207f6413871
-caps.latest.revision: 9
-ms.openlocfilehash: b11b154a94daccead57bdfb5e579e1de2c190c09
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fa435b8d6b868d2d7c94b7926321d94edc2ec290
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363659"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781476"
 ---
 # <a name="frame-element-for-customitem-for-controls-for-configuration-format"></a>Element „Frame“ für CustomItem für Controls für Configuration (Format)
 
 Definiert, wie die Daten angezeigt werden, z. b. das Verschieben der Daten nach links oder rechts. Dieses Element wird verwendet, wenn ein gemeinsames Steuerelement definiert wird, das von allen Sichten in der Formatierungs Datei verwendet werden kann.
 
-Konfigurationselement (Format) steuert Element des Konfigurations Elements (Format) Steuerelement für Steuerelemente für Konfiguration (Format) CustomControl-Element für Steuerelement für Configuration (Format) customentries-Element für CustomControl for Configuration ( Format) customentry-Element für CustomControl für Steuerelemente für Configuration (Format) customItem-Element für customentry für Steuerelemente für das Configuration Frame-Element für customItem für Steuerelemente für die Konfiguration (Format)
+Konfigurationselement (Format) steuert Element des Konfigurations Elements (Format) Steuerelement für Steuerelemente für Konfiguration (Format) CustomControl-Element für Steuerelement für Configuration (Format) customentries-Element für CustomControl for Configuration (Format) customentry-Element für CustomControl for Controls for Configuration (Format) customItem-Element für customentry für Steuerelemente für das Configuration Frame-Element für customItem
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,42 +28,42 @@ Konfigurationselement (Format) steuert Element des Konfigurations Elements (Form
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `Frame`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `Frame` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`CustomItem Element`|Erforderliches Element|
-|[Firstlinehanging-Element für Frame für Steuerelemente für die Konfiguration (Format)](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die erste Zeile der Daten nach links verschoben wird.|
-|[FirstLineIndent-Element für Frame für Steuerelemente für die Konfiguration (Format)](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die erste Zeile der Daten nach rechts verschoben wird.|
-|[LeftIndent-Element für Frame für Steuerelemente für die Konfiguration (Format)](./leftindent-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die Daten vom linken Rand entfernt werden.|
-|[RightIndent-Element für Frame für Steuerelemente für die Konfiguration (Format)](./rightindent-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die Daten vom rechten Rand entfernt werden.|
+|[Element „FirstLineHanging“ für Frame für Controls für Configuration (Format)](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die erste Zeile der Daten nach links verschoben wird.|
+|[Element „FirstLineIndent“ für Frame für Controls für Configuration (Format)](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die erste Zeile der Daten nach rechts verschoben wird.|
+|[Element „LeftIndent“ für Frame für Controls für Configuration (Format)](./leftindent-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die Daten vom linken Rand entfernt werden.|
+|[Element „RightIndent“ für Frame für Controls für Configuration (Format)](./rightindent-element-for-frame-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die Daten vom rechten Rand entfernt werden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[CustomItem-Element für customentry für Steuerelemente für die Konfiguration](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|Definiert, welche Daten vom Steuerelement angezeigt werden und wie es angezeigt wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Sie können die Elemente [firstlinehanging](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md) und [FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md) nicht im selben `Frame` Element angeben.
+Sie können die Elemente [firstlinehanging](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md) und [FirstLineIndent](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md) nicht im selben Element angeben `Frame` .
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Firstlinehanging-Element für Frame für Steuerelemente für die Konfiguration (Format)](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)
+[Element „FirstLineHanging“ für Frame für Controls für Configuration (Format)](./firstlinehanging-element-for-frame-for-controls-for-configuration-format.md)
 
-[FirstLineIndent-Element für Frame für Steuerelemente für die Konfiguration (Format)](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md)
+[Element „FirstLineIndent“ für Frame für Controls für Configuration (Format)](./firstlineindent-element-for-frame-for-controls-for-configuration-format.md)
 
-[LeftIndent-Element für Frame für Steuerelemente für die Konfiguration (Format)](./leftindent-element-for-frame-for-controls-for-configuration-format.md)
+[Element „LeftIndent“ für Frame für Controls für Configuration (Format)](./leftindent-element-for-frame-for-controls-for-configuration-format.md)
 
-[RightIndent-Element für Frame für Steuerelemente für die Konfiguration (Format)](./rightindent-element-for-frame-for-controls-for-configuration-format.md)
+[Element „RightIndent“ für Frame für Controls für Configuration (Format)](./rightindent-element-for-frame-for-controls-for-configuration-format.md)
 
 [CustomItem-Element für customentry für Steuerelemente für die Konfiguration](./customitem-element-for-customentry-for-controls-for-configuration-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

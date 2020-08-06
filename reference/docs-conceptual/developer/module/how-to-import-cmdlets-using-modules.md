@@ -1,19 +1,12 @@
 ---
 title: Importieren von Cmdlets mithilfe von Modulen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 08/28/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a41d9e5f-de6f-47b7-9601-c108609320d0
-caps.latest.revision: 8
-ms.openlocfilehash: 840c5bc92d718ec4e54d864dc5e012cd33f83905
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: fa8d629c14b06e3f9e9d6151cf09aa6b4acce358
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83811319"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779368"
 ---
 # <a name="how-to-import-cmdlets-using-modules"></a>Importieren von Cmdlets mit Modulen
 
@@ -40,7 +33,7 @@ In diesem Artikel wird beschrieben, wie Sie Cmdlets mithilfe eines binären Modu
 
    Mithilfe dieses Verfahrens können Sie die Cmdlets testen. Der Sitzung werden alle Cmdlets in der Assembly hinzugefügt. Weitere Informationen zu Modulen finden Sie unter [Schreiben eines Windows PowerShell-Moduls](../module/writing-a-windows-powershell-module.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Schreiben eines PowerShell-Binärmoduls](../module/how-to-write-a-powershell-module-manifest.md)
 

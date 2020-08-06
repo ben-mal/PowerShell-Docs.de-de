@@ -1,19 +1,12 @@
 ---
 title: Schreiben eines PowerShell-Binär Moduls | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
-caps.latest.revision: 15
-ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 92395bd6b8be1bd3741888eb3716d62f0253e213
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367119"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779266"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Schreiben eines PowerShell-Binärmoduls
 
@@ -23,7 +16,7 @@ Im folgenden Verfahren wird beschrieben, wie ein PowerShell-Binär Modul erstell
 
 #### <a name="how-to-create-and-install-a-powershell-binary-module"></a>Erstellen und Installieren eines binären PowerShell-Moduls
 
-1. Erstellen Sie eine binäre PowerShell-Projekt Mappe (z. b. ein C#in geschriebenes Cmdlet) mit den benötigten Funktionen, und stellen Sie sicher, dass Sie ordnungsgemäß ausgeführt wird.
+1. Erstellen Sie eine binäre PowerShell-Projekt Mappe (z. b. ein in c# geschriebenes Cmdlet) mit den benötigten Funktionen, und stellen Sie sicher, dass Sie ordnungsgemäß ausgeführt wird.
 
    Aus Sicht des Codes ist das Kernstück eines binären Moduls einfach eine Cmdlet-Assembly. Tatsächlich behandelt PowerShell eine einzelne Cmdlet-Assembly als Modul im Hinblick auf das Laden und entladen, ohne zusätzlichen Aufwand für den Entwickler. Weitere Informationen zum Schreiben eines Cmdlets finden Sie unter [Schreiben eines Windows PowerShell-Cmdlets](../cmdlet/writing-a-windows-powershell-cmdlet.md).
 
@@ -34,7 +27,7 @@ Im folgenden Verfahren wird beschrieben, wie ein PowerShell-Binär Modul erstell
    Daher ist ein Modul Manifest besonders nützlich für das Kombinieren mehrerer Dateien in einem einzelnen Paket oder das explizite Steuern der Veröffentlichung für eine bestimmte Assembly.
    Weitere Informationen finden Sie unter Gewusst [wie: Schreiben eines PowerShell-Modul Manifests](how-to-write-a-powershell-module-manifest.md).
 
-   Der folgende Code ist ein extrem einfacher C# Codeblock, der drei Cmdlets in der gleichen Datei enthält, die als Modul verwendet werden können.
+   Der folgende Code ist ein äußerst einfacher c#-Codeblock, der drei Cmdlets in der gleichen Datei enthält, die als Modul verwendet werden können.
 
    ```csharp
    using System.Management.Automation;           // Windows PowerShell namespace.
@@ -73,9 +66,9 @@ Im folgenden Verfahren wird beschrieben, wie ein PowerShell-Binär Modul erstell
 
 3. Packen Sie die Projekt Mappe, und speichern Sie das Paket an einer beliebigen Stelle im PowerShell-Modulpfad.
 
-   Die `PSModulePath` globale Umgebungsvariable beschreibt die Standard Pfade, die von PowerShell verwendet werden, um das Modul zu suchen. Beispielsweise wäre ein allgemeiner Pfad zum Speichern eines Moduls auf einem System `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>`. Wenn Sie nicht die Standard Pfade verwenden, müssen Sie den Speicherort des Moduls während der Installation explizit angeben. Stellen Sie sicher, dass Sie einen Ordner erstellen, in dem das Modul gespeichert werden kann, da Sie möglicherweise den Ordner zum Speichern mehrerer Assemblys und Dateien für die Projekt Mappe benötigen.
+   Die `PSModulePath` globale Umgebungsvariable beschreibt die Standard Pfade, die von PowerShell verwendet werden, um das Modul zu suchen. Beispielsweise wäre ein allgemeiner Pfad zum Speichern eines Moduls auf einem System `%SystemRoot%\users\<user>\Documents\WindowsPowerShell\Modules\<moduleName>` . Wenn Sie nicht die Standard Pfade verwenden, müssen Sie den Speicherort des Moduls während der Installation explizit angeben. Stellen Sie sicher, dass Sie einen Ordner erstellen, in dem das Modul gespeichert werden kann, da Sie möglicherweise den Ordner zum Speichern mehrerer Assemblys und Dateien für die Projekt Mappe benötigen.
 
-   Beachten Sie, dass Sie das Modul nicht an einer beliebigen Stelle im `PSModulePath` installieren müssen. Dies sind lediglich die Standard Speicherorte, die PowerShell nach Ihrem Modul sucht. Es wird jedoch empfohlen, dies zu tun, es sei denn, Sie haben einen guten Grund, das Modul an anderer Stelle zu speichern. Weitere Informationen finden Sie unter [Installieren eines PowerShell-Moduls](./installing-a-powershell-module.md) und [Ändern des Installations Pfads des PowerShell-Moduls](./modifying-the-psmodulepath-installation-path.md).
+   Beachten Sie, dass Sie das Modul nicht an einer beliebigen Stelle im installieren müssen `PSModulePath` . diese sind einfach die Standard Speicherorte, die von PowerShell nach Ihrem Modul gesucht werden. Es wird jedoch empfohlen, dies zu tun, es sei denn, Sie haben einen guten Grund, das Modul an anderer Stelle zu speichern. Weitere Informationen finden Sie unter [Installieren eines PowerShell-Moduls](./installing-a-powershell-module.md) und [Ändern des Installations Pfads des PowerShell-Moduls](./modifying-the-psmodulepath-installation-path.md).
 
 4. Importieren Sie das Modul mit einem [Import-Module-](/powershell/module/Microsoft.PowerShell.Core/Import-Module)Befehl in PowerShell.
 

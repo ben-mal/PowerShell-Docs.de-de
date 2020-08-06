@@ -1,19 +1,12 @@
 ---
 title: Erforderliche Entwicklungs Richtlinien | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41d2b308-a36a-496f-8542-666b6a21eedc
-caps.latest.revision: 19
-ms.openlocfilehash: e68e43a91f9139e8d3dc636b5740121515aab2e6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ca0168050e3c1c2e7537036f96da62f52d50982e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369519"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781697"
 ---
 # <a name="required-development-guidelines"></a>Erforderliche Entwicklungsrichtlinien
 
@@ -75,7 +68,7 @@ Das im Cmdlet-Attribut angegebene Verb muss aus dem erkannten Satz von Verben st
 
 Weitere Informationen zu den genehmigten Verb Namen finden Sie unter [Cmdlet-Verben](./approved-verbs-for-windows-powershell-commands.md).
 
-Benutzer benötigen einen Satz erkennbarer und erwarteter Cmdlet-Namen. Verwenden Sie das geeignete Verb, damit der Benutzer eine schnelle Bewertung der Funktionsweise eines Cmdlets durchführen und die Funktionen des Systems problemlos ermitteln kann. Beispielsweise wird mit dem folgenden Befehlszeilen Befehl eine Liste aller Befehle auf dem System abgerufen, deren Namen mit "Start" beginnen: `get-command start-*`. Verwenden Sie die Substantiven in ihren Cmdlets, um ihre Cmdlets von anderen Cmdlets zu unterscheiden. Das Substantiv gibt die Ressource an, für die der Vorgang ausgeführt wird. Der Vorgang selbst wird durch das Verb dargestellt.
+Benutzer benötigen einen Satz erkennbarer und erwarteter Cmdlet-Namen. Verwenden Sie das geeignete Verb, damit der Benutzer eine schnelle Bewertung der Funktionsweise eines Cmdlets durchführen und die Funktionen des Systems problemlos ermitteln kann. Beispielsweise wird mit dem folgenden Befehlszeilen Befehl eine Liste aller Befehle auf dem System abgerufen, deren Namen mit "Start" beginnen: `get-command start-*` . Verwenden Sie die Substantiven in ihren Cmdlets, um ihre Cmdlets von anderen Cmdlets zu unterscheiden. Das Substantiv gibt die Ressource an, für die der Vorgang ausgeführt wird. Der Vorgang selbst wird durch das Verb dargestellt.
 
 ### <a name="cmdlet-names-characters-that-cannot-be-used-rd02"></a>Cmdlet-Namen: Zeichen, die nicht verwendet werden können (RD02)
 
@@ -93,7 +86,7 @@ Wenn Sie Cmdlets benennen, dürfen Sie keines der folgenden Sonderzeichen verwen
 |/|Schrägstrich|
 |\\| umgekehrter Schrägstrich|
 |$|Dollarzeichen|
-|^|Caretzeichen|
+|^|caret|
 |;|Semikolon|
 |:|Doppelpunkt|
 |"|doppeltes Anführungszeichen|
@@ -117,12 +110,12 @@ Windows PowerShell bietet einen gemeinsamen Satz von Parametern für alle Cmdlet
 
 Für Cmdlets, die einen Vorgang ausführen, der das System ändert, sollten Sie die [System. Management. Automation. Cmdlet. Schulter dprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode zum Anfordern der Bestätigung und in speziellen Fällen die [System. Management. Automation. Cmdlet. Schulter dcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Methode aufruft. (Die [System. Management. Automation. Cmdlet. schuldcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Methode sollte nur aufgerufen werden, nachdem die [System. Management. Automation. Cmdlet. Schulter Name Process *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode aufgerufen wurde.)
 
-Um diese Aufrufe vorzunehmen, muss das Cmdlet angeben, dass Bestätigungs Anforderungen unterstützt werden, indem das `SupportsShouldProcess`-Schlüsselwort des Cmdlet-Attributs festgelegt wird. Weitere Informationen zum Festlegen dieses Attributs finden [Sie unter Cmdlet-Attribut Deklaration](./cmdlet-attribute-declaration.md).
+Um diese Aufrufe vorzunehmen, muss das Cmdlet angeben, dass es Bestätigungs Anforderungen unterstützt, indem das- `SupportsShouldProcess` Schlüsselwort des Cmdlet-Attributs festgelegt wird. Weitere Informationen zum Festlegen dieses Attributs finden [Sie unter Cmdlet-Attribut Deklaration](./cmdlet-attribute-declaration.md).
 
 > [!NOTE]
 > Wenn das Cmdlet-Attribut der Cmdlet-Klasse anzeigt, dass das Cmdlet Aufrufe der [System. Management. Automation. Cmdlet. Schulter dprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode unterstützt, und das Cmdlet den Aufruf der [System. Management. Automation. Cmdlet. Schulter dprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode nicht ausführen kann, kann der Benutzer das System unerwartet ändern.
 
-Verwenden Sie die [System. Management. Automation. Cmdlet. Schulter dprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode für jede System Änderung. Eine Benutzereinstellung und der `WhatIf`-Parameter steuern die [System. Management. Automation. Cmdlet. Schulter dprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode. Im Gegensatz dazu führt der [System. Management. Automation. Cmdlet. schuldcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Befehl eine zusätzliche Überprüfung auf potenziell gefährliche Änderungen aus. Diese Methode wird nicht durch eine Benutzereinstellung oder den `WhatIf`-Parameter gesteuert. Wenn das Cmdlet die [System. Management. Automation. Cmdlet. tiondcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Methode aufruft, sollte es über einen `Force` Parameter verfügen, der die Aufrufe an diese beiden Methoden umgeht und den Vorgang fortsetzt. Dies ist wichtig, da das Cmdlet in nicht interaktiven Skripts und Hosts verwendet werden kann.
+Verwenden Sie die [System. Management. Automation. Cmdlet. Schulter dprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode für jede System Änderung. Eine Benutzereinstellung und der `WhatIf` Parameter steuern die [System. Management. Automation. Cmdlet. schuldprocess *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) -Methode. Im Gegensatz dazu führt der [System. Management. Automation. Cmdlet. schuldcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Befehl eine zusätzliche Überprüfung auf potenziell gefährliche Änderungen aus. Diese Methode wird nicht von einer Benutzereinstellung oder dem- `WhatIf` Parameter gesteuert. Wenn das Cmdlet die [System. Management. Automation. Cmdlet. tiondcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Methode aufruft, muss es über einen Parameter verfügen, `Force` der die Aufrufe an diese beiden Methoden umgeht und den Vorgang fortsetzt. Dies ist wichtig, da das Cmdlet in nicht interaktiven Skripts und Hosts verwendet werden kann.
 
 Wenn die Cmdlets diese Aufrufe unterstützen, kann der Benutzer bestimmen, ob die Aktion tatsächlich ausgeführt werden soll. Beispielsweise ruft das Cmdlet " [Stopp-Process](/powershell/module/microsoft.powershell.management/stop-process) " die [System. Management. Automation. Cmdlet. tiondcontinue *](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) -Methode auf, bevor es eine Reihe kritischer Prozesse stoppt, einschließlich der System-, Winlogon-und spoolsv-Prozesse.
 
@@ -200,7 +193,7 @@ Eine Verwaltungs Umgebung erkennt von Natur aus wichtige Änderungen am System, 
 
 - Das [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) -Objekt, auf das von der [System. Management. Automation. Cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) -und der [System. Management. Automation. Cmdlet. Write-error *](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) -Methode verwiesen wird, erfordert im Kern eine Ausnahme. Befolgen Sie die Entwurfs Richtlinien für .NET Framework, wenn Sie die zu verwendende Ausnahme bestimmen. Wenn der Fehler semantisch identisch mit einer vorhandenen Ausnahme ist, verwenden Sie diese Ausnahme oder leiten Sie von dieser Ausnahme ab. Leiten Sie andernfalls eine neue Ausnahme-oder eine Ausnahme Hierarchie direkt vom [System. Exception](/dotnet/api/System.Exception) -Typ ab.
 
-Ein [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) -Objekt benötigt außerdem eine Fehler Kategorie, in der Fehler für den Benutzer gruppiert werden. Der Benutzer kann Fehler basierend auf der Kategorie anzeigen, indem er den Wert der `$ErrorView` Shellvariable auf categoryview festlegt. Die möglichen Kategorien werden von der [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) -Enumeration definiert.
+Ein [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) -Objekt benötigt außerdem eine Fehler Kategorie, in der Fehler für den Benutzer gruppiert werden. Der Benutzer kann Fehler basierend auf der Kategorie anzeigen, indem er den Wert der `$ErrorView` Shellvariablen auf categoryview festlegt. Die möglichen Kategorien werden von der [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) -Enumeration definiert.
 
 - Wenn ein Cmdlet einen neuen Thread erstellt und der Code, der in diesem Thread ausgeführt wird, eine nicht behandelte Ausnahme auslöst, wird der Fehler von Windows PowerShell nicht abgefangen, und der Prozess wird beendet.
 
@@ -212,8 +205,8 @@ Erstellen Sie ein Windows PowerShell-Modul, um die Cmdlets zu verpacken und bere
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Stark unterstützt Entwicklungs Richtlinien](./strongly-encouraged-development-guidelines.md)
+[Ausdrücklich empfohlene Entwicklungsrichtlinien](./strongly-encouraged-development-guidelines.md)
 
-[Leitlinien für die Beratung](./advisory-development-guidelines.md)
+[Empfohlene Entwicklungsrichtlinien](./advisory-development-guidelines.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

@@ -1,19 +1,12 @@
 ---
 title: PropertyName-Element für wideitem für widecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3d91d0e6-bf18-4587-b651-db66849e5df5
-caps.latest.revision: 6
-ms.openlocfilehash: 326880834cd82ab826aadc409cd7a8f21cd36824
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7728f960a67faa99eaafb4a4934674e119b8af27
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364939"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780473"
 ---
 # <a name="propertyname-element-for-wideitem-for-widecontrol-format"></a>Element „PropertyName“ für WideItem für WideControl (Format)
 
@@ -29,19 +22,19 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `PropertyName`-Elements beschrieben.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `PropertyName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Wideitem-Element (Format)](./wideitem-element-for-widecontrol-format.md)|Definiert die Eigenschaft oder das Skript, dessen Wert in der breiten Ansicht angezeigt wird.|
 
@@ -49,7 +42,7 @@ Keine.
 
 Geben Sie den Namen der Eigenschaft an, deren Wert angezeigt wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu den Komponenten einer breiten Ansicht finden Sie unter [Erstellen einer breiten Ansicht](./creating-a-wide-view.md).
 
@@ -82,4 +75,4 @@ View>
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

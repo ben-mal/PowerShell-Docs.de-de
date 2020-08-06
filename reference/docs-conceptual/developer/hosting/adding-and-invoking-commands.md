@@ -1,19 +1,12 @@
 ---
 title: Hinzufügen und Aufrufen von Befehlen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
-caps.latest.revision: 5
-ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b51c4ae3fa5c5239e3c5c5e65bf7aa63c58c4da9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367639"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779793"
 ---
 # <a name="adding-and-invoking-commands"></a>Hinzufügen und Aufrufen von Befehlen
 
@@ -47,7 +40,7 @@ Nachdem Sie einen Runspace erstellt haben, können Sie Windows powershellcommand
 
 ### <a name="addparameter"></a>AddParameter
 
- Das vorherige Beispiel führt einen einzelnen Befehl ohne Parameter aus. Sie können dem Befehl Parameter hinzufügen, indem Sie die [System. Management. Automation. PSCommand. AddParameter *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) -Methode verwenden. der folgende Code ruft beispielsweise eine Liste aller Prozesse ab, die `PowerShell` auf dem Computer ausgeführt werden.
+ Das vorherige Beispiel führt einen einzelnen Befehl ohne Parameter aus. Sie können dem Befehl mithilfe der [System. Management. Automation. PSCommand. AddParameter *](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) -Methode Parameter hinzufügen. der folgende Code ruft beispielsweise eine Liste aller Prozesse ab, die `PowerShell` auf dem Computer mit dem Namen ausgeführt werden.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -79,7 +72,7 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ### <a name="addstatement"></a>Addstatement
 
- Sie können die Batch Verarbeitung simulieren, indem Sie die [System. Management. Automation. PowerShell. addstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) -Methode verwenden, mit der am Ende der Pipeline eine zusätzliche Anweisung hinzugefügt wird. der folgende Code Ruft eine Liste der ausgelaufenden Prozesse mit dem Namen `PowerShell`ab und ruft dann die Liste der ausgelaufenden Dienste ab.
+ Sie können die Batch Verarbeitung simulieren, indem Sie die [System. Management. Automation. PowerShell. addstatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) -Methode verwenden, mit der am Ende der Pipeline eine zusätzliche Anweisung hinzugefügt wird. der folgende Code Ruft eine Liste der ausgelaufenden Prozesse mit dem Namen ab `PowerShell` und ruft dann die Liste der ausgelaufenden Dienste ab.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -90,14 +83,14 @@ ps.Invoke();
 
 ### <a name="addscript"></a>AddScript
 
- Sie können ein vorhandenes Skript ausführen, indem Sie die [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) -Methode aufrufen. Das folgende Beispiel fügt der Pipeline ein Skript hinzu und führt es aus. In diesem Beispiel wird davon ausgegangen, dass bereits ein Skript mit dem Namen `MyScript.ps1` in einem Ordner namens `D:\PSScripts`vorhanden ist.
+ Sie können ein vorhandenes Skript ausführen, indem Sie die [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) -Methode aufrufen. Das folgende Beispiel fügt der Pipeline ein Skript hinzu und führt es aus. In diesem Beispiel wird davon ausgegangen, dass bereits ein Skript namens `MyScript.ps1` in einem Ordner namens vorhanden ist `D:\PSScripts` .
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
- Es gibt auch eine Version der [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) -Methode, die einen booleschen Parameter namens "`useLocalScope`" annimmt. Wenn dieser Parameter auf `true`festgelegt ist, wird das Skript im lokalen Gültigkeitsbereich ausgeführt. Mit dem folgenden Code wird das Skript im lokalen Gültigkeitsbereich ausgeführt.
+ Es gibt auch eine Version der [System. Management. Automation. PowerShell. addScript *](/dotnet/api/System.Management.Automation.PowerShell.AddScript) -Methode, die einen booleschen Parameter namens annimmt `useLocalScope` . Wenn dieser Parameter auf festgelegt ist `true` , wird das Skript im lokalen Gültigkeitsbereich ausgeführt. Mit dem folgenden Code wird das Skript im lokalen Gültigkeitsbereich ausgeführt.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -184,6 +177,6 @@ namespace HostPS3
 
 ## <a name="see-also"></a>Weitere Informationen
 
- [Erstellen eines initialsessionstate](./creating-an-initialsessionstate.md)
+ [Erstellen von InitialSessionState](./creating-an-initialsessionstate.md)
 
- [Erstellen eines eingeschränkten Runspace](./creating-a-constrained-runspace.md)
+ [Erstellen eines eingeschränkten Runspaces](./creating-a-constrained-runspace.md)

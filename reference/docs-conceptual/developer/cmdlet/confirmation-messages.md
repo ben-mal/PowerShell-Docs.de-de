@@ -1,19 +1,12 @@
 ---
 title: Bestätigungsmeldungen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a886a26d-7730-4586-aeac-fd3f0bc60b88
-caps.latest.revision: 8
-ms.openlocfilehash: 229725b5b9f1f0082592dcebe11564fd2f630ce1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8f8192f6ed96b1eeb22e3b28ce1366eee8e7c16a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365729"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782190"
 ---
 # <a name="confirmation-messages"></a>Bestätigungsmeldungen
 
@@ -24,7 +17,7 @@ Im folgenden finden Sie unterschiedliche Bestätigungsmeldungen, die je nach den
 
 ## <a name="specifying-the-resource"></a>Angeben der Ressource
 
-Sie können die zu ändernde Ressource angeben, indem Sie das [System. Management. Automation. Cmdlet aufrufen. Displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) -Methode. In diesem Fall stellen Sie die Ressource mithilfe des `target`-Parameters der-Methode bereit, und der Vorgang wird von Windows PowerShell hinzugefügt. In der folgenden Meldung ist der Text "MyResource" die Ressource, auf die reagiert wird, und der Vorgang ist der Name des Befehls, der den-Vorgang ausführt.
+Sie können die zu ändernde Ressource angeben, indem Sie das [System. Management. Automation. Cmdlet aufrufen. Displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) -Methode. In diesem Fall stellen Sie die Ressource mithilfe des `target` -Parameters der-Methode bereit, und der Vorgang wird von Windows PowerShell hinzugefügt. In der folgenden Meldung ist der Text "MyResource" die Ressource, auf die reagiert wird, und der Vorgang ist der Name des Befehls, der den-Vorgang ausführt.
 
 ```output
 Confirm
@@ -48,7 +41,7 @@ Continue with this operation?
 
 ## <a name="specifying-the-operation-and-resource"></a>Angeben des Vorgangs und der Ressource
 
-Sie können die zu ändernde Ressource und den von dem Befehl auszuführenden Vorgang angeben, indem Sie das [System. Management. Automation. Cmdlet. tiondprocess% 2a aufrufen? Displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) -Methode. In diesem Fall geben Sie die Ressource mit dem `target`-Parameter und dem-Vorgang mithilfe des `target`-Parameters an. In der folgenden Meldung ist der Text "MyResource" die Ressource, die ausgeführt wird, und "myaction" ist der Vorgang, der ausgeführt werden soll.
+Sie können die zu ändernde Ressource und den von dem Befehl auszuführenden Vorgang angeben, indem Sie das [System. Management. Automation. Cmdlet. tiondprocess% 2a aufrufen? Displayproperty = FullName](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess?view=powershellsdk-1.1.0) -Methode. In diesem Fall stellen Sie die Ressource mithilfe des `target` -Parameters und des-Vorgangs bereit, indem Sie den- `target` Parameter verwenden. In der folgenden Meldung ist der Text "MyResource" die Ressource, die ausgeführt wird, und "myaction" ist der Vorgang, der ausgeführt werden soll.
 
 ```output
 Confirm

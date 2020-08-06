@@ -1,23 +1,16 @@
 ---
 title: Deklaration des Parameter Attributs | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, Parameter
 - Parameter attribute, described
 - Parameter attribute
-ms.assetid: 08433d0b-169b-42c8-9335-2881d9034698
-caps.latest.revision: 13
-ms.openlocfilehash: 7482690c44cdaabf23b886107ac5d112c0fa5c9d
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 55b157b93c3a42324d63e16ddfa8db1f0d38f82b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692390"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781850"
 ---
 # <a name="parameter-attribute-declaration"></a>Attributdeklaration: Parameter
 
@@ -32,17 +25,17 @@ Das Parameter Attribut identifiziert eine öffentliche Eigenschaft der Cmdlet-Kl
 
 #### <a name="parameters"></a>Parameter
 
-`Mandatory`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter erforderlich ist. Wenn ein erforderlicher Parameter nicht bereitgestellt wird, wenn das Cmdlet aufgerufen wird, fordert Windows PowerShell den Benutzer auf, einen Parameterwert einzugeben. Der Standardwert ist `false`.
+`Mandatory`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter erforderlich ist. Wenn ein erforderlicher Parameter nicht bereitgestellt wird, wenn das Cmdlet aufgerufen wird, fordert Windows PowerShell den Benutzer auf, einen Parameterwert einzugeben. Der Standardwert lautet `false`.
 
 `ParameterSetName`([System. String](/dotnet/api/System.String)) optionaler benannter Parameter. Gibt den Parametersatz an, zu dem dieser Cmdlet-Parameter gehört. Wenn kein Parametersatz angegeben wird, gehört der Parameter zu allen Parametersätzen.
 
 `Position`([System. Int32](/dotnet/api/System.Int32)) optionaler benannter Parameter. Gibt die Position des Parameters innerhalb eines Windows PowerShell-Befehls an.
 
-`ValueFromPipeline`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter seinen Wert von einem Pipeline Objekt annimmt. Geben Sie dieses Schlüsselwort an, wenn das Cmdlet auf das gesamte Objekt zugreift, nicht nur auf eine Eigenschaft des Objekts. Der Standardwert ist `false`.
+`ValueFromPipeline`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter seinen Wert von einem Pipeline Objekt annimmt. Geben Sie dieses Schlüsselwort an, wenn das Cmdlet auf das gesamte Objekt zugreift, nicht nur auf eine Eigenschaft des Objekts. Der Standardwert lautet `false`.
 
-`ValueFromPipelineByPropertyName`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter seinen Wert von einer Eigenschaft eines Pipeline Objekts annimmt, das entweder denselben Namen oder denselben Alias wie dieser Parameter hat. Wenn das Cmdlet beispielsweise über einen `Name` -Parameter verfügt und das Pipeline Objekt auch über eine- `Name` Eigenschaft verfügt, wird der Wert der-Eigenschaft dem- `Name` `Name` Parameter des Cmdlets zugewiesen. Der Standardwert ist `false`.
+`ValueFromPipelineByPropertyName`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter seinen Wert von einer Eigenschaft eines Pipeline Objekts annimmt, das entweder denselben Namen oder denselben Alias wie dieser Parameter hat. Wenn das Cmdlet beispielsweise über einen `Name` -Parameter verfügt und das Pipeline Objekt auch über eine- `Name` Eigenschaft verfügt, wird der Wert der-Eigenschaft dem- `Name` `Name` Parameter des Cmdlets zugewiesen. Der Standardwert lautet `false`.
 
-`ValueFromRemainingArguments`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter alle verbleibenden Argumente annimmt, die an das Cmdlet übergeben werden. Der Standardwert ist `false`.
+`ValueFromRemainingArguments`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. `True`Gibt an, dass der Cmdlet-Parameter alle verbleibenden Argumente annimmt, die an das Cmdlet übergeben werden. Der Standardwert lautet `false`.
 
 `HelpMessage`Optionaler benannter Parameter. Gibt eine kurze Beschreibung des Parameters an. Windows PowerShell zeigt diese Meldung an, wenn ein Cmdlet ausgeführt wird und kein obligatorischer Parameter angegeben ist.
 
@@ -50,7 +43,7 @@ Das Parameter Attribut identifiziert eine öffentliche Eigenschaft der Cmdlet-Kl
 
 `HelpMessageResourceId`Optionaler benannter Parameter. Gibt den Ressourcen Bezeichner für eine Hilfe Nachricht an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - Weitere Informationen zum Deklarieren dieses Attributs finden Sie unter [Deklarieren von Cmdlet-Parametern](./how-to-declare-cmdlet-parameters.md).
 

@@ -1,25 +1,18 @@
 ---
 title: Frame-Element für customItem für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e1a13100-41a4-4847-9f07-458c85783505
-caps.latest.revision: 6
-ms.openlocfilehash: 925ef86e61801f5a66f89dd25e0756f00dd35155
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4864ea1a865f77c9de6e495d7e8296e81c19b366
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363639"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781442"
 ---
 # <a name="frame-element-for-customitem-for-customcontrol-for-view-format"></a>Element „Frame“ für CustomItem für CustomControl für View (Format)
 
 Definiert, wie die Daten angezeigt werden, z. b. das Verschieben der Daten nach links oder rechts. Dieses Element wird beim Definieren einer benutzerdefinierten Steuerelement Ansicht verwendet.
 
-Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Format) CustomControl-Element (Format) customentries-Element für CustomControl für View (Format) customentry-Element für customentries für View (Format) customItem-Element für Customentry für customcontrolview (Format) Frame-Element für customItem für CustomControl für Ansicht (Format)
+Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) CustomControl-Element (Format) customentries-Element für CustomControl für View (Format) customentry-Element für customentries für View (Format) customItem-Element für customentry für customcontrolview (Format) Frame Element für customItem für CustomControl for View (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,15 +28,15 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `Frame`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `Frame` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`CustomItem Element`|Erforderliches Element|
 |[Firstlinehanging-Element](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die erste Zeile der Daten nach links verschoben wird.|
@@ -53,13 +46,13 @@ Keine.
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[CustomItem-Element für customentry für View (Format)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Definiert, welche Daten vom Steuerelement angezeigt werden und wie es angezeigt wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Sie können die Elemente [firstlinehanging](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md) und [FirstLineIndent](./firstlineindent-element-for-frame-for-customcontrol-for-view-format.md) nicht im selben `Frame` Element angeben.
+Sie können die Elemente [firstlinehanging](./firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md) und [FirstLineIndent](./firstlineindent-element-for-frame-for-customcontrol-for-view-format.md) nicht im selben Element angeben `Frame` .
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -73,4 +66,4 @@ Sie können die Elemente [firstlinehanging](./firstlinehanging-element-for-frame
 
 [CustomItem-Element für customentry für View (Format)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

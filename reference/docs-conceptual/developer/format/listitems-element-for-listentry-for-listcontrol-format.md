@@ -1,19 +1,12 @@
 ---
 title: ListItems-Element für ListEntry für ListControl (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d2c1da6d-acc7-4fe8-9e7d-6dcddc2787cd
-caps.latest.revision: 9
-ms.openlocfilehash: c25f18489d9c7abd8889758499dbbacd6ee29304
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 03b89a3df2ab0498533d0c00f303f643e0039b25
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362739"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781136"
 ---
 # <a name="listitems-element-for-listentry-for-listcontrol-format"></a>Element „ListItems“ für ListEntry für ListControl (Format)
 
@@ -31,25 +24,25 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `ListItems`-Elements beschrieben. Es gibt keine Beschränkung für die Anzahl der untergeordneten Elemente, die angegeben werden können. Die Reihenfolge der untergeordneten Elemente definiert die Reihenfolge, in der Werte in der Listenansicht angezeigt werden.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `ListItems` Elements beschrieben. Es gibt keine Beschränkung für die Anzahl der untergeordneten Elemente, die angegeben werden können. Die Reihenfolge der untergeordneten Elemente definiert die Reihenfolge, in der Werte in der Listenansicht angezeigt werden.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[ListItem-Element für ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Eigenschaft oder das Skript, dessen Wert in der Listenansicht angezeigt wird.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[ListEntry-Element für ListControl (Format)](./listentry-element-for-listcontrol-format.md)|Stellt eine Definition der Listenansicht bereit.|
+|[Element „ListEntry“ für ListControl (Format)](./listentry-element-for-listcontrol-format.md)|Stellt eine Definition der Listenansicht bereit.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu dieser Art der Ansicht finden Sie unter [Erstellen einer Listenansicht](./creating-a-list-view.md).
 
@@ -75,10 +68,10 @@ Dieses Beispiel zeigt die XML-Elemente, die drei Zeilen der Listenansicht defini
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[ListEntry-Element für ListControl (Format)](./listentry-element-for-listcontrol-format.md)
+[Element „ListEntry“ für ListControl (Format)](./listentry-element-for-listcontrol-format.md)
 
 [ListItem-Element für ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)
 
 [Erstellen einer Listenansicht](./creating-a-list-view.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

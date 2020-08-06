@@ -1,25 +1,18 @@
 ---
 title: PropertyName-Element für itemselectioncondition für ListControl (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d5e707ae-3c84-4ceb-ba31-56b3ffde6d6c
-caps.latest.revision: 7
-ms.openlocfilehash: b15e26e18126f69eee7c3a857f9a461d4bdf5848
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8bdbb05326f7ff5ccffa46215631a5c954080dc1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362389"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780864"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-listcontrol-format"></a>Element „PropertyName“ für ItemSeclectionCondition für ListControl (Format)
 
-Gibt die .net-Eigenschaft an, die die Bedingung auslöst. Wenn diese Eigenschaft vorhanden ist oder als zu `true`ausgewertet wird, wird die Bedingung erfüllt, und die Ansicht wird verwendet. Dieses Element wird beim Definieren einer Listenansicht verwendet.
+Gibt die .net-Eigenschaft an, die die Bedingung auslöst. Wenn diese Eigenschaft vorhanden ist oder als ausgewertet wird `true` , wird die Bedingung erfüllt, und die Ansicht wird verwendet. Dieses Element wird beim Definieren einer Listenansicht verwendet.
 
-Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) ListControl-Element (Format) ListEntries-Element (Format) ListEntry-Element für ListControl (Format) ListItems-Element für ListEntry für ListControl (Format) ListItem Element für ListItems für ListControl (Format) itemselectioncondition-Element für ListItem für ListControls propertyName-Element für itemselectioncondition für ListControl (Format)
+Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) ListControl-Element (Format) ListEntries-Element (Format) ListEntry-Element für ListControl (Format) ListItems-Element für ListEntry für ListControl (Format) ListItem-Element für ListItems für ListControl (Format) itemselectioncondition-Element für ListItem für ListControls propertyName-Element für itemselectioncondition für ListControl (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,27 +22,27 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und die übergeordneten Elemente des `PropertyName`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und die übergeordneten Elemente des- `PropertyName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Itemselectioncondition-Element für ListItem für ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)||
+|[Element „ItemSelectionCondition“ für ListItem für ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)||
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen der Eigenschaft an, deren Wert angezeigt wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Wenn dieses Element verwendet wird, können Sie das [ScriptBlock](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md) -Element nicht angeben, wenn Sie die Auswahlbedingung definieren.
 
@@ -57,6 +50,6 @@ Wenn dieses Element verwendet wird, können Sie das [ScriptBlock](./scriptblock-
 
 [ScriptBlock-Element für itemselectioncondition für listicontrol (Format)](./scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md)
 
-[Itemselectioncondition-Element für ListItem für ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)
+[Element „ItemSelectionCondition“ für ListItem für ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

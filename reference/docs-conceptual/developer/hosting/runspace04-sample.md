@@ -1,25 +1,18 @@
 ---
 title: Runspace04-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a6a04f15-b5d8-475b-ac9c-e75c58ec8933
-caps.latest.revision: 8
-ms.openlocfilehash: 416061e5812e608f2099ca833bcaac4f0e651f59
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 73f48c797a4ce9bf4bc78ff34abb5efa41cda121
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557617"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779504"
 ---
 # <a name="runspace04-sample"></a>Runspace04-Beispiel
 
 Dieses Beispiel zeigt, wie Sie mit der [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Klasse Befehle ausführen und abschließende Fehler abfangen, die beim Ausführen der Befehle ausgelöst werden. Zwei Befehle werden ausgeführt. An den letzten Befehl wird ein ungültiges Parameterargument übergeben. Daher werden keine Objekte zurückgegeben, und ein Fehler mit Abbruch wird ausgelöst.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

@@ -1,19 +1,12 @@
 ---
 title: Tyname-Element für viewselectedby (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0ad807a9-d7d8-4e96-b799-9c6a7677cc2d
-caps.latest.revision: 12
-ms.openlocfilehash: e2028c479103cc414295dc24a0f9bb69190bfc66
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e9a391565c3e66041dd9a340455dccfce9ce929b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361439"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780031"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>Element „TypeName“ für ViewSelectedBy (Format)
 
@@ -29,27 +22,27 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und die übergeordneten Elemente des `TypeName`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und die übergeordneten Elemente des- `TypeName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[Viewselectedby-Element (Format)](./viewselectedby-element-format.md)|Definiert die .NET-Objekte, die von der Ansicht angezeigt werden.|
+|[Element „ViewSelectedBy“ (Format)](./viewselectedby-element-format.md)|Definiert die .NET-Objekte, die von der Ansicht angezeigt werden.|
 
 ## <a name="text-value"></a>Textwert
 
-Geben Sie den voll qualifizierten Namen des .net-Typs an, z. b. `System.IO.DirectoryInfo`.
+Geben Sie den voll qualifizierten Namen des .net-Typs an, z `System.IO.DirectoryInfo` . b..
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zur Verwendung dieses Elements in verschiedenen Ansichten finden Sie unter [Erstellen einer Tabellen Sicht](./creating-a-table-view.md), [Erstellen einer Listenansicht](./creating-a-list-view.md), [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)und [benutzerdefinierte Ansichts Komponenten](./creating-custom-controls.md).
 
@@ -75,8 +68,8 @@ Im folgenden Beispiel wird gezeigt, wie das [System. ServiceProcess. ServiceCont
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Erstellen benutzerdefinierter Steuerelemente](./creating-custom-controls.md)
+[Erstellen von benutzerdefinierten Steuerelementen](./creating-custom-controls.md)
 
-[Viewselectedby-Element (Format)](./viewselectedby-element-format.md)
+[Element „ViewSelectedBy“ (Format)](./viewselectedby-element-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

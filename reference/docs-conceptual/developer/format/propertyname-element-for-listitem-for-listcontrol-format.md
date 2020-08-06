@@ -1,19 +1,12 @@
 ---
 title: PropertyName-Element für ListItem für ListControl (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 01ae8cbe-acdc-4043-bd6e-1118a5691a55
-caps.latest.revision: 12
-ms.openlocfilehash: 405184f7bdbf1955f1df7766bf2723c244dcc27f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9ee466d7f73e53b129f8d46f49a21549683bb32c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362379"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780830"
 ---
 # <a name="propertyname-element-for-listitem-for-listcontrol-format"></a>Element „PropertyName“ für ListItem für ListControl (Format)
 
@@ -29,19 +22,19 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `PropertyName`-Elements beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `PropertyName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[ListItem-Element (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|Definiert die Eigenschaft oder das Skript, dessen Wert in der Zeile der Listenansicht angezeigt wird.|
 
@@ -49,7 +42,7 @@ Keine.
 
 Geben Sie den Namen der Eigenschaft an, deren Wert angezeigt wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Wenn dieses Element angegeben ist, können Sie das [ScriptBlock](./scriptblock-element-for-listitem-for-listcontrol-format.md) -Element nicht angeben.
 
@@ -69,10 +62,10 @@ ListItem>
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[ScriptBlock-Element für ListItem für ListControl (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md)
+[Element „ScriptBlock“ für ListItem für ListControl (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md)
 
 [Erstellen einer Listenansicht](./creating-a-list-view.md)
 
 [ListItem-Element für ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

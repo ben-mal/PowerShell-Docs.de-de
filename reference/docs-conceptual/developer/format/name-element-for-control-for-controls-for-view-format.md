@@ -1,19 +1,12 @@
 ---
 title: Name-Element für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 26437467-d578-4e8d-8cdd-17dfe644957a
-caps.latest.revision: 7
-ms.openlocfilehash: 7e24aa60f7abae5768707d2527826c452b709002
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 109f3a40606dbe82322decf0c69d2367c75175f6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365099"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781085"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>Element „Name“ für Control für Controls für View (Format)
 
@@ -29,19 +22,19 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `Name`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `Name` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Control-Element für Steuerelemente für View (Format)](./control-element-for-controls-for-view-format.md)|Definiert ein Steuerelement, das von der Ansicht verwendet werden kann, und den Namen, der verwendet wird, um auf das Steuerelement zu verweisen.|
 
@@ -49,7 +42,7 @@ Keine.
 
 Geben Sie den Namen an, der zum Verweisen auf das Steuerelement verwendet wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der hier angegebene Name kann in den folgenden Elementen verwendet werden, um auf dieses Steuerelement zu verweisen.
 
@@ -59,10 +52,10 @@ Der hier angegebene Name kann in den folgenden Elementen verwendet werden, um au
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[GroupBy-Element für Ansicht (Format)](./groupby-element-for-view-format.md)
+[Element „GroupBy“ für View (Format)](./groupby-element-for-view-format.md)
 
-[ExpressionBinding-Element für customItem für Steuerelemente für Ansicht (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Element „ExpressionBinding“ für CustomItem für Controls für View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
 [Control-Element für Steuerelemente für View (Format)](./control-element-for-controls-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

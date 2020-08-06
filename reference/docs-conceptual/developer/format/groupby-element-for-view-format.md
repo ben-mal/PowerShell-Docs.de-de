@@ -1,19 +1,12 @@
 ---
 title: GroupBy-Element für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 67a2b061-2a4a-4ad1-84f9-cdbefb64aaab
-caps.latest.revision: 8
-ms.openlocfilehash: abb8b91626128b3deaa2db24a9fd8b34a6563410
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2f9071a3ebbc7cc2ccb7721dd518e82723e9cc4e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363629"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781425"
 ---
 # <a name="groupby-element-for-view-format"></a>Element „GroupBy“ für View (Format)
 
@@ -35,42 +28,42 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[CustomControl-Element für GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert das benutzerdefinierte Steuerelement, das neue Gruppen anzeigt.|
-|[Customcontrolname-Element für GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt den Namen eines Steuer Elements an, das zum Anzeigen der neuen Gruppe verwendet wird.|
-|[Label-Element für GroupBy (Format)](./label-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt eine Bezeichnung an, die beim Auftreten einer neuen Gruppe angezeigt wird.|
-|[PropertyName-Element für GroupBy (Format)](./propertyname-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt an, dass die .net-Eigenschaft eine neue Gruppe startet, wenn sich der Wert ändert.|
-|[ScriptBlock-Element für GroupBy (Format)](./scriptblock-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das eine neue Gruppe startet, wenn sich der Wert ändert.|
+|[Element „CustomControl“ für GroupBy (Format)](./customcontrol-element-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert das benutzerdefinierte Steuerelement, das neue Gruppen anzeigt.|
+|[Element „CustomControlName“ für GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt den Namen eines Steuer Elements an, das zum Anzeigen der neuen Gruppe verwendet wird.|
+|[Element „Label“ für GroupBy (Format)](./label-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt eine Bezeichnung an, die beim Auftreten einer neuen Gruppe angezeigt wird.|
+|[Element „PropertyName“ für GroupBy (Format)](./propertyname-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt an, dass die .net-Eigenschaft eine neue Gruppe startet, wenn sich der Wert ändert.|
+|[Element „ScriptBlock“ für GroupBy (Format)](./scriptblock-element-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das eine neue Gruppe startet, wenn sich der Wert ändert.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[View-Element (Format)](./view-element-format.md)|Definiert eine Ansicht, in der ein oder mehrere .NET-Objekte angezeigt werden.|
+|[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, in der ein oder mehrere .NET-Objekte angezeigt werden.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Wenn Sie definieren, wie eine neue Gruppe von Objekten angezeigt wird, müssen Sie die Eigenschaft oder das Skript angeben, mit der die neue Gruppe gestartet wird. Es ist jedoch nicht möglich, beides anzugeben.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Customcontrolname-Element für GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)
+[Element „CustomControlName“ für GroupBy (Format)](./customcontrolname-element-for-groupby-format.md)
 
-[Label-Element für GroupBy (Format)](./label-element-for-groupby-format.md)
+[Element „Label“ für GroupBy (Format)](./label-element-for-groupby-format.md)
 
-[PropertyName-Element für GroupBy (Format)](./propertyname-element-for-groupby-format.md)
+[Element „PropertyName“ für GroupBy (Format)](./propertyname-element-for-groupby-format.md)
 
-[ScriptBlock-Element für GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
+[Element „ScriptBlock“ für GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
 
-[View-Element (Format)](./view-element-format.md)
+[Element „View“ (Format)](./view-element-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

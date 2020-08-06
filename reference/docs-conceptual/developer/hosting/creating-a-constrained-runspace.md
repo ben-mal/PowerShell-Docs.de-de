@@ -1,23 +1,16 @@
 ---
 title: Erstellen eines eingeschränkten Runspace | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
-caps.latest.revision: 5
-ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367649"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779810"
 ---
 # <a name="creating-a-constrained-runspace"></a>Erstellen eines eingeschränkten Runspaces
 
-Aus Leistungs-oder Sicherheitsgründen möchten Sie möglicherweise die Windows PowerShell-Befehle einschränken, die für die Host Anwendung verfügbar sind. Zu diesem Zweck erstellen Sie ein leeres [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , indem Sie die [System. Management. Automation. Runspaces. initialsessionstate. Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) -Methode aufrufen und dann nur die Befehle hinzufügen, die Sie verfügbar machen möchten.
+Aus Leistungs-oder Sicherheitsgründen möchten Sie möglicherweise die Windows PowerShell-Befehle einschränken, die für die Host Anwendung verfügbar sind. Zu diesem Zweck erstellen Sie eine leere [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , indem Sie den [System.Management.Automation.Runspaces.Initialsessionstate aufrufen. Create *](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) -Methode, und fügen Sie dann nur die Befehle hinzu, die Sie verfügbar machen möchten.
 
  Wenn Sie einen Runspace verwenden, der nur die von Ihnen angegebenen Befehle lädt, wird die Leistung erheblich verbessert.
 
@@ -122,4 +115,4 @@ this.runspace.Open();
 
 ## <a name="see-also"></a>Weitere Informationen
 
- [Erstellen eines initialsessionstate](./creating-an-initialsessionstate.md)
+ [Erstellen von InitialSessionState](./creating-an-initialsessionstate.md)

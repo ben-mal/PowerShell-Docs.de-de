@@ -1,19 +1,12 @@
 ---
 title: Schnellstart für Windows PowerShell-Host | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/12/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
-caps.latest.revision: 9
-ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fea6bd5ae49ecf552c583271ee9d869b1ccebae8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360819"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779402"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Windows PowerShell-Host: Schnellstart
 
@@ -58,7 +51,7 @@ Wenn Sie das Ergebnis eines vorherigen Befehls nicht an einen Befehl übergeben 
 
 Das vorherige Beispiel führt einen einzelnen Befehl ohne Parameter aus.
 Sie können dem Befehl Parameter hinzufügen, indem Sie die [System. Management. Automation. PSCommand. AddParameter](/dotnet/api/System.Management.Automation.PSCommand.AddParameter) -Methode verwenden.
-Der folgende Code ruft beispielsweise eine Liste aller Prozesse ab, die `PowerShell` auf dem Computer ausgeführt werden.
+Der folgende Code ruft beispielsweise eine Liste aller Prozesse ab, die `PowerShell` auf dem Computer mit dem Namen ausgeführt werden.
 
 ```csharp
 PowerShell.Create().AddCommand("Get-Process")
@@ -91,7 +84,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>Addstatement
 
 Sie können die Batch Verarbeitung simulieren, indem Sie die [System. Management. Automation. PowerShell. addstatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) -Methode verwenden, mit der am Ende der Pipeline eine zusätzliche-Anweisung hinzugefügt wird.
-Der folgende Code Ruft eine Liste der laufenden Prozesse mit dem Namen `PowerShell`ab und ruft dann die Liste der laufenden Dienste ab.
+Mit dem folgenden Code wird eine Liste der laufenden Prozesse mit dem Namen abgerufen `PowerShell` , und anschließend wird die Liste der laufenden Dienste abgerufen.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -104,15 +97,15 @@ ps.Invoke();
 
 Sie können ein vorhandenes Skript ausführen, indem Sie die [System. Management. Automation. PowerShell. addScript](/dotnet/api/System.Management.Automation.PowerShell.AddScript) -Methode aufrufen.
 Das folgende Beispiel fügt der Pipeline ein Skript hinzu und führt es aus.
-In diesem Beispiel wird davon ausgegangen, dass bereits ein Skript mit dem Namen `MyScript.ps1` in einem Ordner namens `D:\PSScripts`vorhanden ist.
+In diesem Beispiel wird davon ausgegangen, dass bereits ein Skript namens `MyScript.ps1` in einem Ordner namens vorhanden ist `D:\PSScripts` .
 
 ```csharp
 PowerShell ps = PowerShell.Create();
 ps.AddScript("D:\PSScripts\MyScript.ps1").Invoke();
 ```
 
-Es gibt auch eine Version der addScript-Methode, die einen booleschen Parameter namens "`useLocalScope`" annimmt.
-Wenn dieser Parameter auf `true`festgelegt ist, wird das Skript im lokalen Gültigkeitsbereich ausgeführt.
+Es gibt auch eine Version der addScript-Methode, die einen booleschen Parameter namens annimmt `useLocalScope` .
+Wenn dieser Parameter auf festgelegt ist `true` , wird das Skript im lokalen Gültigkeitsbereich ausgeführt.
 Mit dem folgenden Code wird das Skript im lokalen Gültigkeitsbereich ausgeführt.
 
 ```csharp
@@ -125,11 +118,11 @@ ps.AddScript(@"D:\PSScripts\MyScript.ps1", true).Invoke();
 Während der Standard-Runspace, der in den vorherigen Beispielen verwendet wird, alle Windows PowerShell-Kern Befehle lädt, können Sie einen benutzerdefinierten Runspace erstellen, der nur eine bestimmte Teilmenge aller Befehle lädt.
 Dies ist möglicherweise sinnvoll, um die Leistung zu verbessern (das Laden einer größeren Anzahl von Befehlen ist eine Leistungs Beeinträchtigung) oder um die Fähigkeit des Benutzers einzuschränken, Vorgänge auszuführen.
 Ein Runspace, der nur eine begrenzte Anzahl von Befehlen verfügbar macht, wird als eingeschränkter Runspace bezeichnet.
-Um einen eingeschränkten Runspace zu erstellen, verwenden Sie die Klassen " [System. Management. Automation. Runspaces. Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) " und " [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) ".
+Um einen eingeschränkten Runspace zu erstellen, verwenden Sie die Klassen " [System. Management. Automation. Runspaces. Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) " und " [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) ".
 
 ### <a name="creating-an-initialsessionstate-object"></a>Erstellen eines initialsessionstate-Objekts
 
-Um einen benutzerdefinierten Runspace zu erstellen, müssen Sie zunächst ein [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt erstellen.
+Um einen benutzerdefinierten Runspace zu erstellen, müssen Sie zuerst ein [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt erstellen.
 Im folgenden Beispiel wird mithilfe von [System. Management. Automation. Runspaces. runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) ein Runspace erstellt, nachdem ein Standardmäßiges initialsessionstate-Objekt erstellt wurde.
 
 ```csharp
@@ -144,14 +137,14 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>Einschränken des Runspace
 
-Im vorherigen Beispiel haben wir ein Standardmäßiges [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt erstellt, das alle integrierten Windows PowerShell-Kernfunktionen lädt.
-Wir könnten auch die [System. Management. Automation. Runspaces. initialsessionstate. CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) -Methode aufrufen, um ein initialsessionstate-Objekt zu erstellen, das nur die Befehle im Microsoft. PowerShell. Core-Snap-in Laden würde.
-Um einen eingeschränkteren Runspace zu erstellen, müssen Sie ein leeres initialsessionstate-Objekt erstellen, indem Sie die [System. Management. Automation. Runspaces. initialsessionstate. Create](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) -Methode aufrufen und dann den initialsessionstate-Befehlen hinzufügen.
+Im vorherigen Beispiel haben wir ein Standard [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt erstellt, das alle integrierten Windows PowerShell-Kern Objekte lädt.
+Wir könnten auch die [System.Management.Automation.Runspaces.Initialsessionstate. CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) -Methode aufrufen, um ein initialsessionstate-Objekt zu erstellen, das nur die Befehle im Microsoft. PowerShell. Core-Snap-in Laden würde.
+Um einen eingeschränkteren Runspace zu erstellen, müssen Sie ein leeres initialsessionstate-Objekt erstellen, indem Sie die [System.Management.Automation.Runspaces.Initialsessionstate. Create](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) -Methode aufrufen und dann dem initialsessionstate Befehle hinzufügen.
 
 Wenn Sie einen Runspace verwenden, der nur die von Ihnen angegebenen Befehle lädt, wird die Leistung erheblich verbessert.
 
 Verwenden Sie die Methoden der [System. Management. Automation. Runspaces. sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) -Klasse, um Cmdlets für den anfänglichen Sitzungs Status zu definieren.
-Im folgenden Beispiel wird ein leerer ursprünglicher Sitzungszustand erstellt. Anschließend werden die `Get-Command`-und `Import-Module`-Befehle definiert und dem anfänglichen Sitzungszustand hinzugefügt.
+Im folgenden Beispiel wird ein leerer ursprünglicher Sitzungszustand erstellt. Anschließend werden die `Get-Command` -und-Befehle definiert und dem `Import-Module` anfänglichen Sitzungszustand hinzugefügt.
 Anschließend erstellen wir einen durch diesen anfänglichen Sitzungs Status eingeschränkten Runspace und führen die Befehle in diesem Runspace aus.
 
 Erstellen Sie den anfänglichen Sitzungszustand.

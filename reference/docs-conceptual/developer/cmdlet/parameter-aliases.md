@@ -1,23 +1,16 @@
 ---
 title: Parameter Aliase | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
-caps.latest.revision: 13
-ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e320eeb4d2ab91acf2116fdc817a50e93c82aead
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369589"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781986"
 ---
 # <a name="parameter-aliases"></a>Parameteraliase
 
-Cmdlet-Parameter können auch Aliase aufweisen. Sie können die Aliase anstelle der Parameternamen verwenden, wenn Sie den-Parameter in einem-Befehl eingeben oder angeben.
+Cmdlet-Parameter können auch Aliase enthalten. Sie können die Aliase anstelle der Parameternamen verwenden, wenn Sie den-Parameter in einem-Befehl eingeben oder angeben.
 
 ## <a name="benefits-of-using-aliases"></a>Vorteile der Verwendung von Aliasen
 
@@ -50,7 +43,7 @@ private string userName;
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Allgemeine Parameter Namen](./common-parameter-names.md)
+[Allgemeine Parameternamen](./common-parameter-names.md)
 
 [Deklarieren von Cmdlet-Parametern](./how-to-declare-cmdlet-parameters.md)
 

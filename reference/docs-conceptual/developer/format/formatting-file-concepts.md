@@ -1,19 +1,12 @@
 ---
 title: Formatieren von Datei Konzepten | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1804dbe4-69eb-4b0b-bc40-cbb2f00bb083
-caps.latest.revision: 10
-ms.openlocfilehash: 81b035f3cb44dcb672f5951511d03542e694cc42
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6849a61ab1796ae49c73550b48e78de6f787274e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362979"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781493"
 ---
 # <a name="formatting-file-concepts"></a>Formatierungsdatei: Konzepte
 
@@ -29,7 +22,7 @@ Die Themen in diesem Abschnitt enthalten Informationen, die Sie möglicherweise 
 
 [Erstellen benutzerdefinierter Steuerelemente](./creating-custom-controls.md) Stellt ein Beispiel für ein benutzerdefiniertes Steuerelement bereit.
 
-[Definieren allgemeiner Konfigurations Features](./defining-common-configuration-features.md)
+[Definieren von allgemeinen Konfigurationsfunktionen](./defining-common-configuration-features.md)
 
 [Definieren von Auswahl Sätzen](./defining-selection-sets.md) Enthält Informationen, ein Beispiel und beschreibt die XML-Elemente, die zum Erstellen eines Auswahl Satzes verwendet werden.
 

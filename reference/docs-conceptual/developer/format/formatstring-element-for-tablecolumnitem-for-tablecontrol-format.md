@@ -1,19 +1,12 @@
 ---
 title: FormatString-Element für tablecolumnitem für tablecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8a150731-d4b4-4d63-8db5-f14d463c8c37
-caps.latest.revision: 13
-ms.openlocfilehash: b7e1d0adc43254141056a729e1c1cc9699b6ac9b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 848583e697d0ab7bd5b017c14c47aba3c51a3c17
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363709"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781544"
 ---
 # <a name="formatstring-element-for-tablecolumnitem-for-tablecontrol-format"></a>Element „FormatString“ für TableColumnItem für TableControl (Format)
 
@@ -29,19 +22,19 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `FormatString`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `FormatString` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |[Tablecolumnitem-Element (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|Definiert die Eigenschaft oder das Skript, dessen Wert in der Spalte der Zeile angezeigt wird.|
 
@@ -49,7 +42,7 @@ Keine.
 
 Geben Sie das Muster an, das zum Formatieren der Daten verwendet wird. Beispielsweise kann dieses Muster verwendet werden, um den Wert einer beliebigen Eigenschaft des Typs " [System. TimeSpan](/dotnet/api/System.TimeSpan): {0: MMM} {0: DD} {0: hh}: {0: mm}" zu formatieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Format Zeichenfolgen können beim Erstellen von Tabellen Sichten, Listen Sichten, breiten Ansichten oder benutzerdefinierten Ansichten verwendet werden. Weitere Informationen zum Formatieren eines in einer Ansicht angezeigten Werts finden Sie unter [Formatieren von angezeigten Daten](./formatting-displayed-data.md).
 
@@ -57,7 +50,7 @@ Weitere Informationen zu den Komponenten einer Tabellenansicht finden Sie unter 
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den Wert der `StartTime`-Eigenschaft definiert wird.
+Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den Wert der-Eigenschaft definiert wird `StartTime` .
 
 ```xml
 <TableColumnItem>
@@ -70,8 +63,8 @@ Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den
 
 [Erstellen einer Tabellenansicht](./creating-a-table-view.md)
 
-[Formatieren der angezeigten Daten](./formatting-displayed-data.md)
+[Formatieren von angezeigten Daten](./formatting-displayed-data.md)
 
 [Tablecolumnitem-Element (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

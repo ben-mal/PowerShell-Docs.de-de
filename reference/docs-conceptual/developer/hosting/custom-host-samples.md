@@ -1,19 +1,12 @@
 ---
 title: Beispiele für benutzerdefinierte Hosts | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 55aee25b-bbcb-4d41-a4c0-fb8e30c4cdc1
-caps.latest.revision: 11
-ms.openlocfilehash: 1e58b74cf1c37c70ebfb0f4970cfbf8a8263ec5c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6a10d3da6d8bf93986a3f5b029fdae3afb23a903
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367509"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779521"
 ---
 # <a name="custom-host-samples"></a>Beispiele für benutzerdefinierte Hosts
 
@@ -23,7 +16,7 @@ Dieser Abschnitt enthält Beispielcode zum Schreiben eines benutzerdefinierten H
 
  [Host01-Beispiel](./host01-sample.md) Dieses Beispiel zeigt, wie eine Host Anwendung implementiert wird, die einen einfachen benutzerdefinierten Host verwendet.
 
- [Host02-Beispiel](./host02-sample.md) In diesem Beispiel wird gezeigt, wie eine Host Anwendung geschrieben wird, die die Windows PowerShell-Laufzeit zusammen mit einer benutzerdefinierten Host Implementierung verwendet. Die Host Anwendung legt die Host Kultur auf Deutsch fest, führt das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet aus und zeigt die Ergebnisse an, wie Sie Sie mit pwrsh. exe sehen würden, und gibt dann die aktuellen Daten und die aktuelle Zeit in Deutsch aus.
+ [Host02-Beispiel](./host02-sample.md) In diesem Beispiel wird gezeigt, wie eine Host Anwendung geschrieben wird, die die Windows PowerShell-Laufzeit zusammen mit einer benutzerdefinierten Host Implementierung verwendet. Die Host Anwendung legt die Host Kultur auf Deutsch fest, führt das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet aus und zeigt die Ergebnisse an, wie Sie Sie mit pwrsh.exe anzeigen. Anschließend werden die aktuellen Daten und die aktuelle Zeit in Deutsch ausgegeben.
 
  [Host03-Beispiel](./host03-sample.md) Dieses Beispiel zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt.
 

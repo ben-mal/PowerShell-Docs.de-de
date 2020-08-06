@@ -1,21 +1,14 @@
 ---
 title: Validieren eines Argument Satzes | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - ValidateSet attribute, example
-ms.assetid: 55f0f664-d2ad-4501-a3dc-9f7a27c8ab11
-caps.latest.revision: 8
-ms.openlocfilehash: 6d8b189ed6311efd5a7348ab1e58934e9bff12a3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6173f1380583f5b27e2b188990a5ea041f447c57
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365509"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782003"
 ---
 # <a name="how-to-validate-an-argument-set"></a>Überprüfen eines Argumentsatzes
 
@@ -26,7 +19,7 @@ Dieses Beispiel zeigt, wie Sie eine Validierungs Regel angeben, mit der die Wind
 
 ## <a name="to-validate-an-argument-set"></a>So validieren Sie einen Argument Satz
 
-- Fügen Sie das validateset-Attribut hinzu, wie im folgenden Code gezeigt. In diesem Beispiel wird ein Satz von drei möglichen Werten für den `UserName`-Parameter angegeben.
+- Fügen Sie das validateset-Attribut hinzu, wie im folgenden Code gezeigt. In diesem Beispiel wird ein Satz von drei möglichen Werten für den- `UserName` Parameter angegeben.
 
     ```csharp
     [ValidateSet("Steve", "Mary", "Carl", IgnoreCase = true)]
@@ -46,6 +39,6 @@ Weitere Informationen zum Deklarieren dieses Attributs finden Sie unter [validat
 
 [System. Management. Automation. validatesetattribute](/dotnet/api/System.Management.Automation.ValidateSetAttribute)
 
-[Validateset-Attribut Deklaration](./validateset-attribute-declaration.md)
+[Attributdeklaration: ValidateSet](./validateset-attribute-declaration.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

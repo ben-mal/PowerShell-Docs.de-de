@@ -1,24 +1,22 @@
 ---
 title: Erstellen eines Windows PowerShell-Navigationsanbieters
 ms.date: 09/13/2016
-ms.topic: article
-ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-ms.openlocfilehash: 1280da0067f93873a42cb534fae75f758c310912
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 0c9714c396a023516cd1c409e598d61bb6cda3ce
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978405"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778974"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Erstellen eines Windows PowerShell-Navigationsanbieters
 
 In diesem Thema wird beschrieben, wie Sie einen Windows PowerShell-Navigations Anbieter erstellen, der im Datenspeicher navigieren kann. Dieser Anbietertyp unterstützt rekursive Befehle, unterstützte Container und relative Pfade.
 
 > [!NOTE]
-> Sie können die C# Quelldatei (AccessDBSampleProvider05.cs) für diesen Anbieter mithilfe des Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0-Laufzeitkomponenten herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
-> Die heruntergeladenen Quelldateien stehen im **\<PowerShell-Beispiele >** Verzeichnis zur Verfügung. Weitere Informationen zu anderen Windows PowerShell-Anbieter Implementierungen finden [Sie unter Entwerfen des Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md).
+> Sie können die c#-Quelldatei (AccessDBSampleProvider05.cs) für diesen Anbieter mit dem Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0-Laufzeitkomponenten herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Die heruntergeladenen Quelldateien sind im **\<PowerShell Samples>** Verzeichnis verfügbar. Weitere Informationen zu anderen Windows PowerShell-Anbieter Implementierungen finden [Sie unter Entwerfen des Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md).
 
-Der hier beschriebene Anbieter ermöglicht dem Benutzer das Verarbeiten einer Access-Datenbank als Laufwerk, sodass der Benutzer zu den Datentabellen in der Datenbank navigieren kann. Beim Erstellen eines eigenen navigationsanbieters können Sie Methoden implementieren, die für das Laufwerk qualifizierte Pfade für die Navigation, normalisieren relativer Pfade, Verschieben von Elementen des Datenspeicher sowie Methoden zum erhalten von untergeordneten Namen, zum erhalten des übergeordneten Pfads eines Elements und zum Testen , um zu ermitteln, ob ein Element ein Container ist.
+Der hier beschriebene Anbieter ermöglicht dem Benutzer das Verarbeiten einer Access-Datenbank als Laufwerk, sodass der Benutzer zu den Datentabellen in der Datenbank navigieren kann. Beim Erstellen eines eigenen navigationsanbieters können Sie Methoden implementieren, die für das Laufwerk qualifizierte Pfade für die Navigation, normalisieren relativer Pfade, Verschieben von Elementen des Datenspeicher sowie Methoden zur Verfügung stellen, die untergeordnete Namen erhalten, den übergeordneten Pfad eines Elements erhalten und testen, ob ein Element ein Container ist.
 
 > [!CAUTION]
 > Beachten Sie, dass bei diesem Entwurf eine Datenbank mit einem Feld mit der namens-ID und der Typ des Felds longinteger ist.
@@ -47,7 +45,7 @@ Um die untergeordneten Elemente (oder deren Namen) des Datenspeicher sowie Metho
 
 Windows PowerShell-Navigations Anbieter verwenden Sie einen Anbieter internen Windows PowerShell-Pfad, um durch die Elemente des Datenspeicher zu navigieren. Um einen Anbieter internen Pfad zu erstellen, muss der Anbieter die [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode implementieren, um Aufrufe vom Cmdlet "Combine-Path" zu unterstützen. Diese Methode kombiniert einen übergeordneten und untergeordneten Pfad zu einem Anbieter internen Pfad, wobei ein Anbieter spezifisches Pfad Trennzeichen zwischen den übergeordneten und untergeordneten Pfaden verwendet wird.
 
-Die Standard Implementierung verwendet Pfade mit "/" oder "\\" als Pfad Trennzeichen, normalisiert das Pfad Trennzeichen in "\\", kombiniert die übergeordneten und untergeordneten Pfad Teile mit dem Trennzeichen zwischen diesen und gibt dann eine Zeichenfolge zurück, die die kombinierten Pfade enthält.
+Die Standard Implementierung verwendet Pfade mit "/" oder " \\ " als Pfad Trennzeichen, normalisiert das Pfad \\ Trennzeichen in "", kombiniert die übergeordneten und untergeordneten Pfad Teile mit dem Trennzeichen zwischen diesen und gibt dann eine Zeichenfolge zurück, die die kombinierten Pfade enthält.
 
 Diese Methode wird von diesem Navigations Anbieter nicht implementiert. Der folgende Code ist jedoch die Standard Implementierung der [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode.
 
@@ -57,29 +55,29 @@ Diese Methode wird von diesem Navigations Anbieter nicht implementiert. Der folg
 
 Die folgenden Bedingungen können für Ihre Implementierung von [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath)gelten:
 
-- Ihre Implementierung der [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode sollte den Pfad nicht als einen gültigen voll qualifizierten Pfad im Anbieter Namespace validieren. Beachten Sie, dass jeder Parameter nur einen Teil eines Pfads darstellen kann, und die kombinierten Teile generieren möglicherweise keinen voll qualifizierten Pfad. Beispielsweise kann die [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode für den File System-Anbieter "Windows\System32" im `parent`-Parameter und "ABC. dll" im `child`-Parameter empfangen. Die Methode verbindet diese Werte mit dem Trennzeichen "\\" und gibt "windows\system32\abc.dll" zurück, das kein voll qualifizierter Dateisystempfad ist.
+- Ihre Implementierung der [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode sollte den Pfad nicht als einen gültigen voll qualifizierten Pfad im Anbieter Namespace validieren. Beachten Sie, dass jeder Parameter nur einen Teil eines Pfads darstellen kann, und die kombinierten Teile generieren möglicherweise keinen voll qualifizierten Pfad. Beispielsweise kann die [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode für den File System-Anbieter "Windows\System32" im `parent` Parameter und "abc.dll" im `child` Parameter empfangen. Die-Methode verbindet diese Werte mit dem \\ Trennzeichen "" und gibt "windows\system32\abc.dll" zurück, bei dem es sich nicht um einen voll qualifizierten Dateisystempfad handelt.
 
   > [!IMPORTANT]
   > Die im Aufruf von [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) bereitgestellten Pfad Teile können Zeichen enthalten, die im Anbieter Namespace nicht zulässig sind. Diese Zeichen werden wahrscheinlich für die Platzhalter Erweiterung verwendet, und die Implementierung dieser Methode sollte Sie nicht entfernen.
 
 ## <a name="retrieving-the-parent-path"></a>Abrufen des übergeordneten Pfads
 
-Windows PowerShell-Navigations Anbieter implementieren die [System. Management. Automation. Provider. navigationcmdletprovider. getbientpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) -Methode, um den übergeordneten Teil des angegebenen vollständigen oder partiellen anbieterspezifischen Pfads abzurufen. Die-Methode entfernt den untergeordneten Teil des Pfads und gibt den übergeordneten Pfadteil zurück. Der `root`-Parameter gibt den voll qualifizierten Pfad zum Stamm eines Laufwerks an. Dieser Parameter kann NULL oder leer sein, wenn ein bereitgestelltes Laufwerk nicht für den Abruf Vorgang verwendet wird. Wenn ein root-Wert angegeben wird, muss die Methode einen Pfad zu einem Container in derselben Struktur wie der Stamm zurückgeben.
+Windows PowerShell-Navigations Anbieter implementieren die [System. Management. Automation. Provider. navigationcmdletprovider. getbientpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) -Methode, um den übergeordneten Teil des angegebenen vollständigen oder partiellen anbieterspezifischen Pfads abzurufen. Die-Methode entfernt den untergeordneten Teil des Pfads und gibt den übergeordneten Pfadteil zurück. Der `root` -Parameter gibt den voll qualifizierten Pfad zum Stamm eines Laufwerks an. Dieser Parameter kann NULL oder leer sein, wenn ein bereitgestelltes Laufwerk nicht für den Abruf Vorgang verwendet wird. Wenn ein root-Wert angegeben wird, muss die Methode einen Pfad zu einem Container in derselben Struktur wie der Stamm zurückgeben.
 
 Der Beispiel-Navigations Anbieter setzt diese Methode nicht außer Kraft, sondern verwendet die Standard Implementierung.
-Sie akzeptiert Pfade, die "/" und "\\" als Pfad Trennzeichen verwenden. Zuerst wird der Pfad so normalisiert, dass nur die Trennzeichen "\\" vorhanden sind. Anschließend wird der übergeordnete Pfad auf der letzten "\\" und der übergeordnete Pfad zurückgegeben.
+Sie akzeptiert Pfade, die sowohl "/" als auch " \\ " als Pfad Trennzeichen verwenden. Zuerst wird der Pfad so normalisiert, dass nur die Trennzeichen " \\ " vorhanden sind. Anschließend wird der übergeordnete Pfad auf dem letzten "" entfernt, \\ und der übergeordnete Pfad wird zurückgegeben.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetparentpath](Msh_samplestestcmdlets#testprovidergetparentpath)]  -->
 
 #### <a name="to-remember-about-implementing-getparentpath"></a>So denken Sie an die Implementierung von getcentpath
 
-Ihre Implementierung der [System. Management. Automation. Provider. navigationcmdletprovider. getparameentpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) -Methode sollte den Pfad lexikalisch auf dem Pfad Trennzeichen für den Anbieter Namespace aufteilen. Beispielsweise verwendet der File System-Anbieter diese Methode, um nach dem letzten "\\" zu suchen, und gibt alles links vom Trennzeichen zurück.
+Ihre Implementierung der [System. Management. Automation. Provider. navigationcmdletprovider. getparameentpath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) -Methode sollte den Pfad lexikalisch auf dem Pfad Trennzeichen für den Anbieter Namespace aufteilen. Beispielsweise verwendet der File System-Anbieter diese Methode, um nach dem letzten "" zu suchen, \\ und gibt alles links vom Trennzeichen zurück.
 
 ## <a name="retrieve-the-child-path-name"></a>Abrufen des Namens des untergeordneten Pfads
 
 Der Navigations Anbieter implementiert die [System. Management. Automation. Provider. navigationcmdletprovider. getchildname *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetChildName) -Methode, um den Namen (Blatt Element) der untergeordneten Elemente des Elements abzurufen, das sich unter dem angegebenen vollständigen oder partiellen anbieterspezifischen Pfad befindet.
 
-Der Beispiel-Navigations Anbieter setzt diese Methode nicht außer Kraft. Die Standard Implementierung ist unten dargestellt. Sie akzeptiert Pfade, die "/" und "\\" als Pfad Trennzeichen verwenden. Zuerst wird der Pfad so normalisiert, dass nur die Trennzeichen "\\" vorhanden sind. Anschließend wird der übergeordnete Pfad auf dem letzten "\\" und der Name des untergeordneten Pfads zurückgegeben.
+Der Beispiel-Navigations Anbieter setzt diese Methode nicht außer Kraft. Die Standard Implementierung ist unten dargestellt. Sie akzeptiert Pfade, die sowohl "/" als auch " \\ " als Pfad Trennzeichen verwenden. Zuerst wird der Pfad so normalisiert, dass nur die Trennzeichen " \\ " vorhanden sind. Anschließend wird der übergeordnete Pfad auf dem letzten " \\ " entfernt und der Name des untergeordneten Pfads zurückgegeben.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetchildname](Msh_samplestestcmdlets#testprovidergetchildname)]  -->
 
@@ -92,7 +90,7 @@ Ihre Implementierung der [System. Management. Automation. Provider. navigationcm
 
 ## <a name="determining-if-an-item-is-a-container"></a>Ermitteln, ob ein Element ein Container ist
 
-Der Navigations Anbieter kann die [System. Management. Automation. Provider. navigationcmdletprovider. isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) -Methode implementieren, um zu bestimmen, ob der angegebene Pfad einen Container angibt. Sie gibt true zurück, wenn der Pfad einen Container darstellt, andernfalls false. Der Benutzer benötigt diese Methode, damit das `Test-Path`-Cmdlet für den angegebenen Pfad verwendet werden kann.
+Der Navigations Anbieter kann die [System. Management. Automation. Provider. navigationcmdletprovider. isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) -Methode implementieren, um zu bestimmen, ob der angegebene Pfad einen Container angibt. Sie gibt true zurück, wenn der Pfad einen Container darstellt, andernfalls false. Der Benutzer benötigt diese Methode, damit das `Test-Path` Cmdlet für den angegebenen Pfad verwendet werden kann.
 
 Der folgende Code zeigt die [System. Management. Automation. Provider. navigationcmdletprovider. isitemcontainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) -Implementierung in unserem Beispiel-Navigations Anbieter. Die-Methode überprüft, ob der angegebene Pfad richtig ist und ob die Tabelle vorhanden ist, und gibt true zurück, wenn der Pfad einen Container angibt.
 
@@ -104,7 +102,7 @@ Die .NET-Klasse des navigationsanbieters kann die Anbieter Funktionen von expand
 
 ## <a name="moving-an-item"></a>Verschieben eines Elements
 
-Der Navigations Anbieter implementiert die [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) -Methode, um das Cmdlet "`Move-Item`" zu unterstützen. Diese Methode verschiebt das durch den `path`-Parameter angegebene Element in den Container an dem im `destination`-Parameter angegebenen Pfad.
+Zur Unterstützung des `Move-Item` Cmdlets implementiert der Navigations Anbieter die [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) -Methode. Diese Methode verschiebt das durch den-Parameter angegebene Element in den `path` Container an dem Pfad, der im-Parameter angegeben ist `destination` .
 
 Der Beispiel-Navigations Anbieter überschreibt nicht die [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) -Methode. Im folgenden finden Sie die Standard Implementierung.
 
@@ -114,16 +112,16 @@ Der Beispiel-Navigations Anbieter überschreibt nicht die [System. Management. A
 
 Die .NET-Klasse des navigationsanbieters kann die Anbieter Funktionen von expandwildcards, Filtern, einschließen oder Ausschließen von der [System. Management. Automation. Provider. providerfunktionalitäten](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) -Enumeration deklarieren. In diesem Fall muss die Implementierung von [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) sicherstellen, dass der weiter gegebene Pfad den Anforderungen entspricht. Zu diesem Zweck sollte die-Methode auf die entsprechende Eigenschaft zugreifen, z. b. die **cmdletprovider. Exclude** -Eigenschaft.
 
-Standardmäßig sollten über schreibungen dieser Methode Objekte nicht über vorhandene Objekte verschieben, es sei denn, die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft ist auf `true`festgelegt. Beispielsweise kopiert der File System-Anbieter nicht "c:\temp\abc.txt" über eine vorhandene c:\bar.txt-Datei, es sei denn, die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft ist auf "`true`" festgelegt. Wenn der im `destination`-Parameter angegebene Pfad vorhanden ist und ein Container ist, ist die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft nicht erforderlich. In diesem Fall sollte [System. Management. Automation. Provider. navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) das Element, das vom `path`-Parameter angegeben wird, in den Container verschieben, der durch den `destination`-Parameter als untergeordnetes Element angegeben wird.
+Standardmäßig sollten über schreibungen dieser Methode Objekte nicht über vorhandene Objekte verschieben, es sei denn, die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft ist auf festgelegt `true` . Beispielsweise kopiert der File System-Anbieter c:\temp\abc.txt nicht über eine vorhandene c:\bar.txt Datei, es sei denn, die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft ist auf festgelegt `true` . Wenn der im `destination` -Parameter angegebene Pfad vorhanden ist und ein Container ist, ist die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft nicht erforderlich. In diesem Fall sollte [System. Management. Automation. Provider. navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) das Element, das durch den-Parameter angegeben ist, in den Container verschieben, der `path` durch den-Parameter als untergeordnetes Element angegeben wird `destination` .
 
 Ihre Implementierung der [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) -Methode sollte [System. Management. Automation. Provider. cmdletprovider. rechtdprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) aufzurufen und ihren Rückgabewert überprüfen, bevor Änderungen am Datenspeicher vorgenommen werden. Diese Methode wird verwendet, um die Ausführung eines Vorgangs zu bestätigen, wenn eine Änderung am Systemstatus vorgenommen wird, z. b. das Löschen von Dateien.
 [System. Management. Automation. Provider. cmdletprovider. schuldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) sendet den Namen der Ressource, die an den Benutzer geändert werden soll, wobei die Windows PowerShell-Laufzeit alle Befehlszeilen Einstellungen oder Einstellungs Variablen unternimmt, um zu bestimmen, was dem Benutzer angezeigt werden soll.
 
-Nach dem Aufruf von [System. Management. Automation. Provider. cmdletprovider. schuldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) gibt `true`zurück, die [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) -Methode muss die [System. Management. Automation. Provider. cmdletprovider. dendcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) -Methode aufruft. Diese Methode sendet eine Meldung an den Benutzer, um Feedback zu geben, ob der Vorgang fortgesetzt werden soll. Der Anbieter sollte [System. Management. Automation. Provider. cmdletprovider. undcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) als zusätzliche Überprüfung auf potenziell gefährliche System Änderungen abrufen.
+Nachdem der Aufruf von [System. Management. Automation. Provider. cmdletprovider. dendprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) zurückgegeben `true` wurde, sollte die [System. Management. Automation. Provider. navigationcmdletprovider. muveitem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) -Methode die [System. Management. Automation. Provider. cmdletprovider. dendcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) -Methode aufruft. Diese Methode sendet eine Meldung an den Benutzer, um Feedback zu geben, ob der Vorgang fortgesetzt werden soll. Der Anbieter sollte [System. Management. Automation. Provider. cmdletprovider. undcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) als zusätzliche Überprüfung auf potenziell gefährliche System Änderungen abrufen.
 
 ## <a name="attaching-dynamic-parameters-to-the-move-item-cmdlet"></a>Anfügen dynamischer Parameter an das Cmdlet "Move-Item"
 
-Manchmal erfordert das `Move-Item`-Cmdlet zusätzliche Parameter, die zur Laufzeit dynamisch bereitgestellt werden. Um diese dynamischen Parameter bereitzustellen, muss der Navigations Anbieter das [System implementieren. Management. Automation. Provider. navigationcmdletprovider. muveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) -Methode, um die erforderlichen Parameterwerte aus dem Element im angezeigten Pfad abzurufen, und gibt ein Objekt zurück, das über Eigenschaften und Felder mit Eigenschaften und Feldern mit ähnlichen Attributen wie einer Cmdlet-Klasse oder einem [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt verfügt
+Manchmal `Move-Item` benötigt das Cmdlet zusätzliche Parameter, die zur Laufzeit dynamisch bereitgestellt werden. Um diese dynamischen Parameter bereitzustellen, muss der Navigations Anbieter das [System implementieren. Management. Automation. Provider. navigationcmdletprovider. muveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters) -Methode, um die erforderlichen Parameterwerte aus dem Element im angezeigten Pfad abzurufen, und gibt ein Objekt zurück, das über Eigenschaften und Felder mit Eigenschaften und Feldern mit ähnlichen Attributen wie einer Cmdlet-Klasse oder einem [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt verfügt
 
 Diese Methode wird von diesem Navigations Anbieter nicht implementiert. Der folgende Code ist jedoch die Standard Implementierung von [System. Management. Automation. Provider. navigationcmdletprovider. muveitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItemDynamicParameters).
 
@@ -131,7 +129,7 @@ Diese Methode wird von diesem Navigations Anbieter nicht implementiert. Der folg
 
 ## <a name="normalizing-a-relative-path"></a>Normalisieren eines relativen Pfads
 
-Der Navigations Anbieter implementiert die [System. Management. Automation. Provider. navigationcmdletprovider. normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) -Methode, um den voll qualifizierten Pfad zu normalisieren, der im `path`-Parameter als relativ zu dem durch den `basePath`-Parameter angegebenen Pfad angegeben ist. Die-Methode gibt eine Zeichen folgen Darstellung des normalisierten Pfads zurück. Wenn der `path`-Parameter einen nicht vorhandenen Pfad angibt, schreibt er einen Fehler.
+Der Navigations Anbieter implementiert die [System. Management. Automation. Provider. navigationcmdletprovider. normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) -Methode, um den voll qualifizierten Pfad zu normalisieren, der im- `path` Parameter als relativ zu dem durch den-Parameter angegebenen Pfad angegeben ist `basePath` . Die-Methode gibt eine Zeichen folgen Darstellung des normalisierten Pfads zurück. Es wird ein Fehler geschrieben, wenn der- `path` Parameter einen nicht vorhandenen Pfad angibt.
 
 Der Beispiel-Navigations Anbieter setzt diese Methode nicht außer Kraft. Im folgenden finden Sie die Standard Implementierung.
 
@@ -139,7 +137,7 @@ Der Beispiel-Navigations Anbieter setzt diese Methode nicht außer Kraft. Im fol
 
 #### <a name="things-to-remember-about-implementing-normalizerelativepath"></a>Dinge, die Sie beim Implementieren von normalizerelativepath beachten sollten
 
-Ihre Implementierung von [System. Management. Automation. Provider. navigationcmdletprovider. normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) sollte den `path`-Parameter analysieren, jedoch nicht die rein syntaktische Analyse verwenden. Es wird empfohlen, diese Methode so zu entwerfen, dass Sie den Pfad verwendet, um die Pfadinformationen im Datenspeicher zu suchen und einen Pfad zu erstellen, der mit der Syntax für Groß-und Kleinschreibung übereinstimmt.
+Die Implementierung von [System. Management. Automation. Provider. navigationcmdletprovider. normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) sollte den- `path` Parameter analysieren, er muss jedoch nicht die reine syntaktische Analyse verwenden. Es wird empfohlen, diese Methode so zu entwerfen, dass Sie den Pfad verwendet, um die Pfadinformationen im Datenspeicher zu suchen und einen Pfad zu erstellen, der mit der Syntax für Groß-und Kleinschreibung übereinstimmt.
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -157,13 +155,13 @@ Weitere Informationen finden Sie unter [Registrieren von Cmdlets, Anbietern und 
 
 Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, können Sie ihn testen, indem Sie die unterstützten Cmdlets in der Befehlszeile ausführen, einschließlich der von der Ableitung bereitgestellten Cmdlets. In diesem Beispiel wird der Beispiel-Navigations Anbieter getestet.
 
-1. Führen Sie die neue Shell aus, und verwenden Sie das Cmdlet "`Set-Location`", um den Pfad für die Zugriffs Datenbank festzulegen.
+1. Führen Sie die neue Shell aus, und verwenden Sie das `Set-Location` Cmdlet, um den Pfad zum Angeben der Access-Datenbank festzulegen.
 
    ```powershell
    Set-Location mydb:
    ```
 
-2. Führen Sie nun das Cmdlet "`Get-Childitem`" aus, um eine Liste der Datenbankelemente abzurufen, die die verfügbaren Datenbanktabellen sind. Für jede Tabelle ruft dieses Cmdlet auch die Anzahl der Tabellenzeilen ab.
+2. Führen Sie nun das `Get-Childitem` Cmdlet aus, um eine Liste der Datenbankelemente abzurufen, die die verfügbaren Datenbanktabellen sind. Für jede Tabelle ruft dieses Cmdlet auch die Anzahl der Tabellenzeilen ab.
 
    ```powershell
    Get-ChildItem | Format-Table rowcount,name -AutoSize
@@ -190,13 +188,13 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
          29   Suppliers
    ```
 
-3. Verwenden Sie das Cmdlet "`Set-Location`" erneut, um den Speicherort der Datentabelle "Employees" festzulegen.
+3. Verwenden `Set-Location` Sie das Cmdlet erneut, um den Speicherort der Datentabelle Employees festzulegen.
 
    ```powershell
    Set-Location Employees
    ```
 
-4. Nun verwenden wir das Cmdlet "`Get-Location`", um den Pfad zur Tabelle "Employees" abzurufen.
+4. Nun verwenden wir das `Get-Location` Cmdlet, um den Pfad zur Tabelle Employees abzurufen.
 
    ```powershell
    Get-Location
@@ -208,7 +206,7 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
    mydb:\Employees
    ```
 
-5. Verwenden Sie nun das an das `Format-Table`-Cmdlet weitergeleitete `Get-Childitem`-Cmdlet. Mit diesem Cmdlet werden die Elemente für die Datentabelle "Employees" abgerufen, bei der es sich um die Tabellenzeilen handelt. Sie werden entsprechend der Angabe durch das-Cmdlet `Format-Table` formatiert.
+5. Verwenden Sie nun das `Get-Childitem` Cmdlet an das `Format-Table` Cmdlet weitergeleitet. Mit diesem Cmdlet werden die Elemente für die Datentabelle "Employees" abgerufen, bei der es sich um die Tabellenzeilen handelt. Sie sind entsprechend der Angabe durch das- `Format-Table` Cmdlet formatiert.
 
    ```powershell
    Get-ChildItem | Format-Table rownumber,psiscontainer,data -AutoSize
@@ -228,7 +226,7 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
    8           False            System.Data.DataRow
    ```
 
-6. Sie können jetzt das `Get-Item`-Cmdlet ausführen, um die Elemente für Zeile 0 der Datentabelle Employees abzurufen.
+6. Sie können nun das `Get-Item` Cmdlet ausführen, um die Elemente für Zeile 0 der Tabelle Employees-Daten abzurufen.
 
    ```powershell
    Get-Item 0
@@ -245,7 +243,7 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
    RowNumber      : 0
    ```
 
-7. Verwenden Sie das Cmdlet "`Get-Item`" erneut, um die Mitarbeiterdaten für die Elemente in Zeile 0 abzurufen.
+7. Verwenden `Get-Item` Sie das Cmdlet erneut, um die Mitarbeiterdaten für die Elemente in Zeile 0 abzurufen.
 
    ```powershell
    (Get-Item 0).data
@@ -287,6 +285,6 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
 
 [Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions/ms714644(v=vs.85))
 
-[Windows PowerShell-Programmier Handbuch](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell-Programmiererhandbuch](./windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

@@ -1,19 +1,12 @@
 ---
 title: Hidetableheaders-Element (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a20eaa3d-2bca-4a1f-8d40-fe038631d778
-caps.latest.revision: 11
-ms.openlocfilehash: 532563a70c702c05771a37a06124212c9548bb23
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 529a3ebbbc1be17131c17e537311c2c041326393
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362959"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781357"
 ---
 # <a name="hidetableheaders-element-format"></a>Element „HideTableHeaders“ (Format)
 
@@ -29,27 +22,27 @@ Viewdefinitions-Element (Format) View-Element (Format) tablecontrol-Element (For
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `HideTableHeaders`-Elements beschrieben.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `HideTableHeaders` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Tablecontrol-Element (Format)](./tablecontrol-element-format.md)|Definiert ein Tabellenformat für eine Sicht.|
+|[Element „TableControl“ (Format)](./tablecontrol-element-format.md)|Definiert ein Tabellenformat für eine Sicht.|
 
 ## <a name="text-value"></a>Textwert
 
-Geben Sie `true` an, um die Header der Tabelle auszublenden.
+Geben `true` Sie an, um die Header der Tabelle auszublenden.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu den Komponenten einer Tabellenansicht finden Sie unter [Erstellen einer Tabellen Sicht](./creating-a-table-view.md).
 
@@ -57,4 +50,4 @@ Weitere Informationen zu den Komponenten einer Tabellenansicht finden Sie unter 
 
 [Erstellen einer Tabellenansicht](./creating-a-table-view.md)
 
-[Tablecontrol-Element (Format)](./tablecontrol-element-format.md)
+[Element „TableControl“ (Format)](./tablecontrol-element-format.md)

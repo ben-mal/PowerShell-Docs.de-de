@@ -1,28 +1,21 @@
 ---
-title: Erstellen einer Formatierungs Datei (. Format. ps1xml) | Microsoft-Dokumentation
-ms.custom: ''
+title: Vorgehensweise beim Erstellen einer Formatierungs Datei (.format.ps1XML) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
-caps.latest.revision: 8
-ms.openlocfilehash: 7a578dd63a53562f992b2970573258b8676e2a52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692275"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781255"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Erstellen einer Formatierungsdatei (.format.ps1xml)
 
-In diesem Thema wird beschrieben, wie eine Formatierungs Datei (. Format. ps1xml) erstellt wird.
+In diesem Thema wird beschrieben, wie eine Formatierungs Datei (.format.ps1XML) erstellt wird.
 
 > [!NOTE]
 > Sie können auch eine Formatierungs Datei erstellen, indem Sie eine Kopie einer der von Windows PowerShell bereitgestellten Dateien erstellen. Wenn Sie eine Kopie einer vorhandenen Datei erstellen, löschen Sie die vorhandene digitale Signatur, und fügen Sie der neuen Datei Ihre eigene Signatur hinzu.
 
-### <a name="to-create-a-formatps1xml-file"></a>Zum Erstellen einer. Format. ps1xml-Datei.
+### <a name="to-create-a-formatps1xml-file"></a>Zum Erstellen einer .format.ps1-XML-Datei.
 
 1. Erstellen Sie eine Textdatei (. txt) mit einem Text-Editor, z. b. Notepad.
 

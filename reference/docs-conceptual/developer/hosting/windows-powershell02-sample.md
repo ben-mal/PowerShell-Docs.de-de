@@ -1,31 +1,24 @@
 ---
 title: Windows PowerShell02 Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 92492a7e-257d-47d3-b119-89df3c5545e8
-caps.latest.revision: 9
-ms.openlocfilehash: 4d697e73ff4ab4cc4b88593f814d589f89005663
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978643"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779385"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02-Beispiel
 
 Dieses Beispiel zeigt, wie Befehle asynchron mit den Runspaces eines Runspace-Pools ausgeführt werden. Das Beispiel generiert eine Liste mit Befehlen und führt diese Befehle aus, während die Windows PowerShell-Engine einen Runspace aus dem Pool öffnet, wenn Sie benötigt wird.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 - Dieses Beispiel erfordert Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Veranschaulicht
+## <a name="demonstrates"></a>Zeigt
 
-Dieses Beispiel zeigt die folgenden Vorgänge:
+Dieses Beispiel zeigt Folgendes:
 
 - Das Erstellen eines runspacepool-Objekts mit einer minimalen und maximalen Anzahl von Runspaces, die gleichzeitig geöffnet sein dürfen.
 - Erstellen einer Liste von Befehlen.
@@ -41,4 +34,4 @@ Dieses Beispiel zeigt, wie Sie die Runspaces eines Runspace-Pools öffnen und Be
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Schreiben einer Windows PowerShell-Host Anwendung](./writing-a-windows-powershell-host-application.md)
+[Schreiben einer Windows PowerShell-Hostanwendung](./writing-a-windows-powershell-host-application.md)

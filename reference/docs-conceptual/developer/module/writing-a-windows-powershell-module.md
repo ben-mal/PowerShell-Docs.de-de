@@ -1,25 +1,18 @@
 ---
 title: Schreiben eines Windows PowerShell-Moduls | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: bfbccc5b-2b2b-432a-a971-9f8ab503cdc3
-caps.latest.revision: 17
-ms.openlocfilehash: 0b7263ea19745e902fff04b993933e443d4d6333
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d2398a8111a9832af2465d045be0bdefc3cf927a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360619"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779147"
 ---
 # <a name="writing-a-windows-powershell-module"></a>Schreiben eines Windows PowerShell-Moduls
 
 Dieses Dokument ist für Administratoren, Skriptentwickler und Cmdlet-Entwickler geschrieben, die Ihre Windows PowerShell-Cmdlets Verpacken und verteilen müssen. Mithilfe von Windows PowerShell-Modulen können Sie Windows PowerShell-Lösungen Verpacken und verteilen, ohne eine kompilierte Sprache zu verwenden.
 
-Mit Windows PowerShell-Modulen können Sie Ihren Windows PowerShell-Code in eigenständige, wiederverwendbare Einheiten partitionieren, organisieren und abstrahieren. Mit diesen wiederverwendbaren Einheiten können Sie Ihre Module problemlos direkt für andere freigeben. Wenn Sie ein Skriptentwickler sind, können Sie auch Drittanbieter Module neu verpacken, um benutzerdefinierte skriptbasierte Anwendungen zu erstellen. Module, die mit Modulen in anderen Skriptsprachen wie z. b. perl und python vergleichbar sind, ermöglichen die Bereitstellung von Skript Erstellungs Lösungen, die wiederverwendbare, verteilbare Komponenten verwenden, mit dem zusätzlichen Vorteil, dass Sie mehrere Komponenten erneut Verpacken und abstrahieren können. Erstellen Sie benutzerdefinierte Lösungen.
+Mit Windows PowerShell-Modulen können Sie Ihren Windows PowerShell-Code in eigenständige, wiederverwendbare Einheiten partitionieren, organisieren und abstrahieren. Mit diesen wiederverwendbaren Einheiten können Sie Ihre Module problemlos direkt für andere freigeben. Wenn Sie ein Skriptentwickler sind, können Sie auch Drittanbieter Module neu verpacken, um benutzerdefinierte skriptbasierte Anwendungen zu erstellen. Module, die mit Modulen in anderen Skriptsprachen wie z. b. perl und python vergleichbar sind, ermöglichen die Bereitstellung von Skript Erstellungs Lösungen, die wiederverwendbare, verteilbare Komponenten verwenden. der zusätzliche Vorteil besteht darin, dass Sie mehrere Komponenten erneut Verpacken und abstrahieren können, um benutzerdefinierte Lösungen
 
 Windows PowerShell behandelt in den meisten Fällen jeden gültigen Windows PowerShell-Skriptcode, der in einer psm1-Datei gespeichert ist, als Modul. PowerShell behandelt auch automatisch jede binäre Cmdlet-Assembly als Modul. Sie können jedoch auch ein Modul (oder genauer gesagt, ein Modul Manifest) verwenden, um eine gesamte Projekt Mappe zusammenzufassen. In den folgenden Szenarien werden typische Verwendungsmöglichkeiten für Windows PowerShell-Module beschrieben.
 
@@ -37,15 +30,15 @@ Cmdlet-und Anbieter Entwickler können Module verwenden, um Ihren kompilierten C
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Grundlegendes zu einem Windows PowerShell-Modul](./understanding-a-windows-powershell-module.md)
+[Grundlegendes zum Windows PowerShell-Modul](./understanding-a-windows-powershell-module.md)
 
-[Schreiben eines PowerShell-Skript Moduls](./how-to-write-a-powershell-script-module.md)
+[Schreiben eines PowerShell-Skriptmoduls](./how-to-write-a-powershell-script-module.md)
 
-[Schreiben eines PowerShell-Binär Moduls](./how-to-write-a-powershell-binary-module.md)
+[Schreiben eines PowerShell-Binärmoduls](./how-to-write-a-powershell-binary-module.md)
 
-[Schreiben eines PowerShell-Modul Manifests](how-to-write-a-powershell-module-manifest.md)
+[Schreiben eines PowerShell-Binärmoduls](how-to-write-a-powershell-module-manifest.md)
 
-[Ändern des psmodulepath-Installations Pfads](./modifying-the-psmodulepath-installation-path.md)
+[Ändern des Installationspfads PSModulePath](./modifying-the-psmodulepath-installation-path.md)
 
 [Importieren eines PowerShell-Moduls](./importing-a-powershell-module.md)
 
