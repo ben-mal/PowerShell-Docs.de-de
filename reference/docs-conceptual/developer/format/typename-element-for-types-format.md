@@ -1,19 +1,12 @@
 ---
 title: Typname-Element für Typen (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
-caps.latest.revision: 15
-ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368029"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772534"
 ---
 # <a name="typename-element-for-types-format"></a>Element „TypeName“ für Types (Format)
 
@@ -29,19 +22,19 @@ Configuration-Element (Format) selectionsets-Element (Format) SelectionSet-Eleme
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `TypeName`-Elements beschrieben. Mindestens ein `TypeName` Element muss im Auswahl Satz enthalten sein.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `TypeName` Elements beschrieben. `TypeName`Im Auswahl Satz muss mindestens ein Element enthalten sein.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |[Types-Element (Format)](./types-element-for-selectionset-format.md)|Definiert die .NET-Objekte, die sich im Auswahl Satz befinden.|
 
@@ -49,15 +42,15 @@ Keine.
 
 Geben Sie den voll qualifizierten Namen des .net-Typs an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Sie können Auswahl Sätze verwenden, wenn Sie über einen Satz verwandter Objekte verfügen, auf die Sie verweisen möchten, indem Sie einen einzelnen Namen verwenden, z. b. eine Gruppe von Objekten, die durch Vererbung verknüpft sind. Wenn Sie die Ansichten definieren, können Sie den Satz von-Objekten angeben, indem Sie den Namen des Auswahl Satzes verwenden, anstatt alle Objekte in jeder Ansicht aufzulisten.
 
-Allgemeine Auswahl Sätze werden durch ihren Namen angegeben, wenn die Ansichten der Formatierungs Datei definiert werden. In diesen Fällen gibt das `SelectionSetName` untergeordnete Element des `ViewSelectedBy`-Elements für die Sicht den Satz an. Bei verschiedenen Einträgen einer Sicht kann jedoch auch ein Auswahl Satz angegeben werden, der nur für diesen Eintrag der Sicht gilt. Weitere Informationen zu Auswahl Sätzen finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
+Allgemeine Auswahl Sätze werden durch ihren Namen angegeben, wenn die Ansichten der Formatierungs Datei definiert werden. In diesen Fällen gibt das untergeordnete- `SelectionSetName` Element des- `ViewSelectedBy` Elements für die Sicht den Satz an. Bei verschiedenen Einträgen einer Sicht kann jedoch auch ein Auswahl Satz angegeben werden, der nur für diesen Eintrag der Sicht gilt. Weitere Informationen zu Auswahl Sätzen finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein `SelectionSet`-Element, das vier .NET-Typen definiert.
+Das folgende Beispiel zeigt ein- `SelectionSet` Element, das vier .NET-Typen definiert.
 
 ```
 <SelectionSets>
@@ -75,12 +68,12 @@ Das folgende Beispiel zeigt ein `SelectionSet`-Element, das vier .NET-Typen defi
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Definieren von Auswahl Sätzen](./defining-selection-sets.md)
+[Definieren von Auswahlgruppen](./defining-selection-sets.md)
 
-[SelectionSet-Element (Format)](./selectionset-element-format.md)
+[Element „SelectionSet“ (Format)](./selectionset-element-format.md)
 
-[Selectionsets-Element (Format)](./selectionsets-element-format.md)
+[Element „SelectionSets“ (Format)](./selectionsets-element-format.md)
 
 [Types-Element (Format)](./types-element-for-selectionset-format.md)
 
-[Schreiben einer Windows PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer Windows PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

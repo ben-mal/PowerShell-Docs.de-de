@@ -1,23 +1,16 @@
 ---
 title: Übersicht über die Formatierung von Dateien | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fe888fee-1fe9-459f-9d62-35732c19a7f8
-caps.latest.revision: 13
-ms.openlocfilehash: d418cff70c1197aa3c331eed909f49198da139e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: efdd3eed15c5f3c88636fcbe7a39f6c6cfb20ced
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363689"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87773503"
 ---
 # <a name="formatting-file-overview"></a>Formatierungsdatei: Übersicht
 
-Das Anzeige Format für die Objekte, die von Befehlen (Cmdlets, Funktionen und Skripts) zurückgegeben werden, wird mithilfe von Formatierungs Dateien (Format. ps1xml-Dateien) definiert. Einige dieser Dateien werden von PowerShell bereitgestellt, um das Anzeige Format für die Objekte zu definieren, die von von PowerShell bereitgestellten Befehlen zurückgegeben werden, z. b. das [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekt, das vom Cmdlet `Get-Process` zurückgegeben wird Sie können jedoch auch eigene benutzerdefinierte Formatierungs Dateien erstellen, um die Standard Anzeige Formate zu überschreiben, oder Sie können eine benutzerdefinierte Formatierungs Datei schreiben, um die Anzeige von Objekten zu definieren, die von ihren eigenen Befehlen zurückgegeben werden.
+Das Anzeige Format für die Objekte, die von Befehlen (Cmdlets, Funktionen und Skripts) zurückgegeben werden, wird mithilfe von Formatierungs Dateien (format.ps1XML-Dateien) definiert. Einige dieser Dateien werden von PowerShell bereitgestellt, um das Anzeige Format für die Objekte zu definieren, die von von PowerShell bereitgestellten Befehlen zurückgegeben werden, z. b. das vom Cmdlet zurückgegebene [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekt `Get-Process` . Sie können jedoch auch eigene benutzerdefinierte Formatierungs Dateien erstellen, um die Standard Anzeige Formate zu überschreiben, oder Sie können eine benutzerdefinierte Formatierungs Datei schreiben, um die Anzeige von Objekten zu definieren, die von ihren eigenen Befehlen zurückgegeben werden.
 
 > [!IMPORTANT]
 > Beim Formatieren von Dateien werden die Elemente eines Objekts, die an die Pipeline zurückgegeben werden, nicht bestimmt. Wenn ein Objekt an die Pipeline zurückgegeben wird, sind alle Member dieses Objekts verfügbar, auch wenn einige nicht angezeigt werden.
@@ -38,19 +31,19 @@ Jede Formatierungs Datei kann die folgenden Komponenten definieren, die für all
 
 Durch das Formatieren von Sichten können Objekte in einem Tabellenformat, einem Listenformat, einem breiten Format und einem benutzerdefinierten Format angezeigt werden. In den meisten Fällen wird jede Formatierungs Definition durch eine Reihe von XML-Tags beschrieben, die die Sicht beschreiben. Jede Ansicht enthält den Namen der Ansicht, die Objekte, die die Sicht verwenden, und die Elemente der Ansicht, z. b. die Spalten-und Zeilen Informationen für eine Tabellen Sicht.
 
-In der Tabellenansicht werden die Eigenschaften eines Objekts oder eines Skriptblock Werts in mindestens einer Spalte aufgelistet. Jede Spalte stellt eine einzelne Eigenschaft des Objekts oder einen Skript Wert dar. Sie können eine Tabellen Sicht definieren, in der alle Eigenschaften eines Objekts, eine Teilmenge der Eigenschaften eines Objekts oder eine Kombination von Eigenschaften und Skript Werten angezeigt werden. Jede Zeile der Tabelle stellt ein zurück gegebenes Objekt dar. Das Erstellen einer Tabellenansicht ist sehr ähnlich, wenn Sie ein Objekt an das `Format-Table`-Cmdlet weiterreichen. Weitere Informationen zu dieser Ansicht finden Sie unter [Tabellen Sicht](./creating-a-table-view.md).
+In der Tabellenansicht werden die Eigenschaften eines Objekts oder eines Skriptblock Werts in mindestens einer Spalte aufgelistet. Jede Spalte stellt eine einzelne Eigenschaft des Objekts oder einen Skript Wert dar. Sie können eine Tabellen Sicht definieren, in der alle Eigenschaften eines Objekts, eine Teilmenge der Eigenschaften eines Objekts oder eine Kombination von Eigenschaften und Skript Werten angezeigt werden. Jede Zeile der Tabelle stellt ein zurück gegebenes Objekt dar. Das Erstellen einer Tabellenansicht ist sehr ähnlich, wenn Sie ein Objekt an das `Format-Table` Cmdlet weiterreichen. Weitere Informationen zu dieser Ansicht finden Sie unter [Tabellen Sicht](./creating-a-table-view.md).
 
-In der Listenansicht werden die Eigenschaften eines Objekts oder eines Skript Werts in einer einzelnen Spalte aufgelistet. In jeder Zeile der Liste wird eine optionale Bezeichnung oder der Eigenschaftsname, gefolgt vom Wert der Eigenschaft oder des Skripts, angezeigt. Das Erstellen einer Listenansicht ähnelt der Weiterleitung eines Objekts an das `Format-List`-Cmdlet. Weitere Informationen zu dieser Ansicht finden Sie in der [Listenansicht](./creating-a-list-view.md).
+In der Listenansicht werden die Eigenschaften eines Objekts oder eines Skript Werts in einer einzelnen Spalte aufgelistet. In jeder Zeile der Liste wird eine optionale Bezeichnung oder der Eigenschaftsname, gefolgt vom Wert der Eigenschaft oder des Skripts, angezeigt. Das Erstellen einer Listenansicht ähnelt der Weiterleitung eines Objekts an das `Format-List` Cmdlet. Weitere Informationen zu dieser Ansicht finden Sie in der [Listenansicht](./creating-a-list-view.md).
 
-Die Breite Ansicht Listet eine einzelne Eigenschaft eines Objekts oder einen Skript Wert in einer oder mehreren Spalten auf. Für diese Ansicht gibt es keine Bezeichnung oder einen Header. Das Erstellen einer breiten Ansicht ähnelt stark dem Übergeben eines Objekts an das `Format-Wide`-Cmdlet. Weitere Informationen zu dieser Ansicht finden Sie unter [Wide View](./creating-a-wide-view.md).
+Die Breite Ansicht Listet eine einzelne Eigenschaft eines Objekts oder einen Skript Wert in einer oder mehreren Spalten auf. Für diese Ansicht gibt es keine Bezeichnung oder einen Header. Das Erstellen einer breiten Ansicht ähnelt stark dem Übergeben eines Objekts an das `Format-Wide` Cmdlet. Weitere Informationen zu dieser Ansicht finden Sie unter [Wide View](./creating-a-wide-view.md).
 
-Die benutzerdefinierte Ansicht zeigt eine anpassbare Ansicht von Objekteigenschaften oder Skript Werten an, die nicht der festen Struktur von Tabellen Sichten, Listenansichten oder breiten Ansichten entspricht. Sie können eine eigenständige benutzerdefinierte Sicht definieren, oder Sie können eine benutzerdefinierte Ansicht definieren, die von einer anderen Ansicht verwendet wird, z. b. eine Tabellen-oder Listenansicht. Das Erstellen einer benutzerdefinierten Ansicht ähnelt der Weiterleitung eines Objekts an das `Format-Custom`-Cmdlet. Weitere Informationen zu dieser Ansicht finden Sie unter [benutzerdefinierte Ansicht](./creating-custom-controls.md).
+Die benutzerdefinierte Ansicht zeigt eine anpassbare Ansicht von Objekteigenschaften oder Skript Werten an, die nicht der festen Struktur von Tabellen Sichten, Listenansichten oder breiten Ansichten entspricht. Sie können eine eigenständige benutzerdefinierte Sicht definieren, oder Sie können eine benutzerdefinierte Ansicht definieren, die von einer anderen Ansicht verwendet wird, z. b. eine Tabellen-oder Listenansicht. Das Erstellen einer benutzerdefinierten Ansicht ähnelt der Weiterleitung eines Objekts an das `Format-Custom` Cmdlet. Weitere Informationen zu dieser Ansicht finden Sie unter [benutzerdefinierte Ansicht](./creating-custom-controls.md).
 
 ## <a name="components-of-a-view"></a>Komponenten einer Ansicht
 
 Die folgenden XML-Beispiele zeigen die grundlegenden XML-Komponenten einer Ansicht. Die einzelnen XML-Elemente variieren abhängig von der Sicht, die Sie erstellen möchten, aber die grundlegenden Komponenten der Sichten sind identisch.
 
-Um mit zu beginnen, verfügt jede Ansicht über ein `Name`-Element, das einen benutzerfreundlichen Namen angibt, der zum Verweisen auf die Sicht verwendet wird. ein `ViewSelectedBy` Element, das definiert, welche .NET-Objekte von der Sicht angezeigt werden, und ein *Steuer* Element, das die Ansicht definiert.
+Um mit zu beginnen, verfügt jede Ansicht über ein- `Name` Element, das einen benutzerfreundlichen Namen angibt, der zum Verweisen auf die Sicht verwendet wird. ein `ViewSelectedBy` -Element, das definiert, welche .NET-Objekte von der Sicht angezeigt werden, und ein *Steuer* Element, das die Ansicht definiert.
 
 ```xml
 <ViewDefinitions>
@@ -116,7 +109,7 @@ Wie in den vorherigen Beispielen gezeigt, kann die Formatierungs Datei mehrere S
 
 ## <a name="example-of-a-table-view"></a>Beispiel für eine Tabellenansicht
 
-Das folgende Beispiel zeigt die XML-Tags, mit denen eine Tabellen Sicht definiert wird, die zwei Spalten enthält. Das [viewdefinitions](./viewdefinitions-element-format.md) -Element ist das Containerelement für alle Sichten, die in der Formatierungs Datei definiert sind. Das [Ansichts](./view-element-format.md) Element definiert die spezifische Tabelle, die Liste, die Breite oder die benutzerdefinierte Sicht. Innerhalb jedes [Ansichts](./view-element-format.md) Elements gibt das [Name](./name-element-for-view-format.md) -Element den Namen der Ansicht an, das [viewselectedby](./viewselectedby-element-format.md) -Element definiert die Objekte, die die Sicht verwenden, und die verschiedenen Steuerelemente (wie z. b. das `TableControl`-Element, das im folgenden Beispiel gezeigt wird) definieren den Typ der Sicht.
+Das folgende Beispiel zeigt die XML-Tags, mit denen eine Tabellen Sicht definiert wird, die zwei Spalten enthält. Das [viewdefinitions](./viewdefinitions-element-format.md) -Element ist das Containerelement für alle Sichten, die in der Formatierungs Datei definiert sind. Das [Ansichts](./view-element-format.md) Element definiert die spezifische Tabelle, die Liste, die Breite oder die benutzerdefinierte Sicht. Innerhalb jedes [Ansichts](./view-element-format.md) Elements gibt das [Name](./name-element-for-view-format.md) -Element den Namen der Ansicht an, das [viewselectedby](./viewselectedby-element-format.md) -Element definiert die Objekte, die die Sicht verwenden, und die verschiedenen Steuerelemente (z. b. das `TableControl` im folgenden Beispiel gezeigte Element) definieren den Typ der Sicht.
 
 ```xml
 <ViewDefinitions>
@@ -161,6 +154,6 @@ Das folgende Beispiel zeigt die XML-Tags, mit denen eine Tabellen Sicht definier
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Erstellen benutzerdefinierter Steuerelemente](./creating-custom-controls.md)
+[Erstellen von benutzerdefinierten Steuerelementen](./creating-custom-controls.md)
 
 [Schreiben einer PowerShell-Formatierungs-und-Typen Datei](./writing-a-powershell-formatting-file.md)

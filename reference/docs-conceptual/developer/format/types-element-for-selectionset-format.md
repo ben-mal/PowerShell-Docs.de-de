@@ -1,19 +1,12 @@
 ---
 title: Types-Element für SelectionSet (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 4606fec0-ff31-4d36-af68-227405335ec3
-caps.latest.revision: 15
-ms.openlocfilehash: 0427367efa2c8a7e352d718706d1341a0c8e3621
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9978daefb3e97ab131774ca4dff633dde6b4dfbf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367959"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772517"
 ---
 # <a name="types-element-for-selectionset-format"></a>Element „Types“ für SelectionSet (Format)
 
@@ -32,31 +25,31 @@ Configuration-Element (Format) selectionsets-Element (Format) SelectionSet-Eleme
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `Types`-Elements beschrieben. Es muss mindestens ein untergeordnetes Element vorhanden sein, es gibt jedoch keine maximale Beschränkung für die Anzahl der untergeordneten Elemente, die hinzugefügt werden können.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `Types` Elements beschrieben. Es muss mindestens ein untergeordnetes Element vorhanden sein, es gibt jedoch keine maximale Beschränkung für die Anzahl der untergeordneten Elemente, die hinzugefügt werden können.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |[Typname-Element von Typen (Format)](./typename-element-for-types-format.md)|Erforderliches Element.<br /><br /> Gibt das .NET-Objekt an, das zum Auswahl Satz gehört.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[SelectionSet-Element (Format)](./selectionset-element-format.md)|Definiert einen Satz von .NET-Objekten, auf die durch den Namen des Satzes verwiesen werden kann.|
+|[Element „SelectionSet“ (Format)](./selectionset-element-format.md)|Definiert einen Satz von .NET-Objekten, auf die durch den Namen des Satzes verwiesen werden kann.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die von diesem Element definierten Objekte bilden einen Auswahl Satz, der von einer Ansicht, durch eine Definition einer Ansicht (Sichten können mehrere Definitionen aufweisen) oder durch Angeben einer Auswahlbedingung verwendet werden kann.  Weitere Informationen zu Auswahl Sätzen finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt ein `SelectionSet`-Element, das vier .NET-Typen definiert.
+Dieses Beispiel zeigt ein- `SelectionSet` Element, das vier .NET-Typen definiert.
 
 ```xml
 <SelectionSets>
@@ -76,8 +69,8 @@ Dieses Beispiel zeigt ein `SelectionSet`-Element, das vier .NET-Typen definiert.
 
 [Definieren von Objekt Sätzen](./defining-selection-sets.md)
 
-[SelectionSet-Element (Format)](./selectionset-element-format.md)
+[Element „SelectionSet“ (Format)](./selectionset-element-format.md)
 
 [Typname-Element von Typen (Format)](./typename-element-for-types-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

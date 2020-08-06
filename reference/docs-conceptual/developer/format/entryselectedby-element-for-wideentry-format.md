@@ -1,19 +1,12 @@
 ---
 title: Entryselectedby-Element für wideentry (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e0c98933-b7a5-4205-b811-06c0b0bf8988
-caps.latest.revision: 9
-ms.openlocfilehash: 54c7c261a23075721cd7bce75e530150dc0e0212
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: ba0a776839c39d753d12859335388c5326639fd4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363329"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774081"
 ---
 # <a name="entryselectedby-element-for-wideentry-format"></a>Element „EntrySelectedBy“ für WideEntry (Format)
 
@@ -33,31 +26,31 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `EntrySelectedBy`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `EntrySelectedBy` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Selectioncondition-Element für entryselectedby für wideentry (Format)](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|Optionales Element.<br /><br /> Definiert die Bedingung, die vorhanden sein muss, damit diese Breite Sicht Definition verwendet werden muss.|
 |[Selectionsetname-Element für entryselectedby für wideentry (Format)](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt einen Satz von .NET-Typen an, die diese Breite Sicht Definition verwenden.|
-|[Tyname-Element für entryselectedby für wideentry (Format)](./typename-element-for-entryselectedby-for-wideentry-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der diese Breite Sicht Definition verwendet.|
+|[Element „TypeName“ für EntrySelectedBy für WideEntry (Format)](./typename-element-for-entryselectedby-for-wideentry-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der diese Breite Sicht Definition verwendet.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Wideentry-Element (Format)](./wideentry-element-for-widecontrol-format.md)|Stellt eine Definition der breiten Ansicht bereit.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Sie müssen mindestens einen Typ, einen Auswahl Satz oder eine Auswahlbedingung für eine breite Sicht Definition angeben. Es gibt keine maximale Beschränkung für die Anzahl der untergeordneten Elemente, die Sie verwenden können.
 
-Auswahl Bedingungen werden verwendet, um eine Bedingung zu definieren, die für die zu verwendende Definition vorhanden sein muss, z. b. Wenn ein Objekt über eine bestimmte Eigenschaft verfügt oder ein bestimmter Eigenschafts Wert oder Skript Wert als `true`ausgewertet wird. Weitere Informationen zu Auswahl Bedingungen finden Sie unter [Definieren von Bedingungen zum Anzeigen von Daten](./defining-conditions-for-displaying-data.md).
+Auswahl Bedingungen werden verwendet, um eine Bedingung zu definieren, die für die zu verwendende Definition vorhanden sein muss, z. b. Wenn ein Objekt über eine bestimmte Eigenschaft verfügt oder für einen bestimmten Eigenschafts Wert oder Skript Wert ausgewertet wird `true` . Weitere Informationen zu Auswahl Bedingungen finden Sie unter [Definieren von Bedingungen zum Anzeigen von Daten](./defining-conditions-for-displaying-data.md).
 
 Weitere Informationen zu anderen Komponenten einer breiten Ansicht finden Sie unter [Erstellen einer breiten Ansicht](./creating-a-wide-view.md).
 
@@ -69,10 +62,10 @@ Weitere Informationen zu anderen Komponenten einer breiten Ansicht finden Sie un
 
 [Selectionsetname-Element für entryselectedby für wideentry (Format)](./selectionsetname-element-for-entryselectedby-for-widecontrol-format.md)
 
-[Tyname-Element für entryselectedby für wideentry (Format)](./typename-element-for-entryselectedby-for-wideentry-format.md)
+[Element „TypeName“ für EntrySelectedBy für WideEntry (Format)](./typename-element-for-entryselectedby-for-wideentry-format.md)
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Definieren von Bedingungen zum Anzeigen von Daten](./defining-conditions-for-displaying-data.md)
+[Definieren von Bedingungen für die Datenanzeige](./defining-conditions-for-displaying-data.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

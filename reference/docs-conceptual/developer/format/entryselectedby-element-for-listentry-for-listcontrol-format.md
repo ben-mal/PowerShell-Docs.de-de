@@ -1,19 +1,12 @@
 ---
 title: Entryselectedby-Element für ListEntry für ListControl (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0f7a74e9-764d-46ce-ab8e-8b9314ce1659
-caps.latest.revision: 12
-ms.openlocfilehash: 442565d25f60ae8e04501f3f9ffba35d486fbc8a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d6ab1c08dd353da74d1a7d27c569d2fa86e083c3
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363829"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774115"
 ---
 # <a name="entryselectedby-element-for-listentry-for-listcontrol-format"></a>Element „EntrySelectedBy“ für ListEntry für ListControl (Format)
 
@@ -33,31 +26,31 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `EntrySelectedBy`-Elements beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `EntrySelectedBy` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Selectioncondition-Element für entryselectedby für ListControl (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Definiert die Bedingung, die für die Verwendung dieser Listen Ansichts Definition vorhanden sein muss.|
-|[Selectionsetname-Element für entryselectedby für ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt eine Gruppe von .NET-Typen an, die diese Listen Ansichts Definition verwenden.|
-|[Tyname-Element für entryselectedby für ListControl (Format)](./typename-element-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der diese Listen Ansichts Definition verwendet.|
+|[Element „SelectionSetName“ für EntrySelectedBy für ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt eine Gruppe von .NET-Typen an, die diese Listen Ansichts Definition verwenden.|
+|[Element „TypeName“ für EntrySelectedBy für ListControl (Format)](./typename-element-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der diese Listen Ansichts Definition verwendet.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[ListEntry-Element für ListControl (Format)](./listentry-element-for-listcontrol-format.md)|Definiert, wie die Zeilen der Liste angezeigt werden.|
+|[Element „ListEntry“ für ListControl (Format)](./listentry-element-for-listcontrol-format.md)|Definiert, wie die Zeilen der Liste angezeigt werden.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Sie müssen mindestens einen Typ, einen Auswahl Satz oder eine Auswahlbedingung für eine Listen Ansichts Definition angeben. Es gibt keine maximale Beschränkung für die Anzahl der untergeordneten Elemente, die Sie verwenden können.
 
-Auswahl Bedingungen werden verwendet, um eine Bedingung zu definieren, die für die zu verwendende Definition vorhanden sein muss, z. b. Wenn ein Objekt über eine bestimmte Eigenschaft verfügt oder ein bestimmter Eigenschafts Wert oder Skript als `true`ausgewertet wird. Weitere Informationen zu Auswahl Bedingungen finden Sie unter [Definieren von Bedingungen für den Fall, dass Daten angezeigt werden](./defining-conditions-for-displaying-data.md).
+Auswahl Bedingungen werden verwendet, um eine Bedingung zu definieren, die für die zu verwendende Definition vorhanden sein muss, z. b. Wenn ein Objekt über eine bestimmte Eigenschaft verfügt oder ein bestimmter Eigenschafts Wert oder ein bestimmtes Skript als ausgewertet wird `true` . Weitere Informationen zu Auswahl Bedingungen finden Sie unter [Definieren von Bedingungen für den Fall, dass Daten angezeigt werden](./defining-conditions-for-displaying-data.md).
 
 Weitere Informationen zu den Komponenten einer Listenansicht finden Sie unter [Erstellen einer Listenansicht](./creating-a-list-view.md).
 
@@ -75,16 +68,16 @@ Im folgenden Beispiel wird gezeigt, wie die-Objekte für eine Listenansicht mith
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[ListEntry-Element für ListControl (Format)](./listentry-element-for-listcontrol-format.md)
+[Element „ListEntry“ für ListControl (Format)](./listentry-element-for-listcontrol-format.md)
 
-[Selectioncondition-Element für entryselectedby für ListControl (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
+[Element „SelectionCondition“ für EntrySelectedBy für ListControl (Format)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Selectionsetname-Element für entryselectedby für ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[Element „SelectionSetName“ für EntrySelectedBy für ListControl (Format)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
-[Tyname-Element für entryselectedby für ListControl (Format)](./typename-element-for-entryselectedby-for-listcontrol-format.md)
+[Element „TypeName“ für EntrySelectedBy für ListControl (Format)](./typename-element-for-entryselectedby-for-listcontrol-format.md)
 
 [Erstellen einer Listenansicht](./creating-a-list-view.md)
 
 [Definieren von Bedingungen für die Anzeige von Daten](./defining-conditions-for-displaying-data.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

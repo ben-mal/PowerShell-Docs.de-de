@@ -1,19 +1,12 @@
 ---
 title: Viewdefinitions-Element (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 29840c10-2b30-4bb1-a8a0-ddf84d19c2d0
-caps.latest.revision: 18
-ms.openlocfilehash: c5ec80350c7707ccd41112ab5e1952e5dc198cca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a108c4f8b03e3dec3905181b390aee2c82ab0028
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361419"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772483"
 ---
 # <a name="viewdefinitions-element-format"></a>Element „ViewDefinitions“ (Format)
 
@@ -32,25 +25,25 @@ Configuration-Element (Format) viewdefinitions (Format XML)-Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `ViewDefinitions`-Elements beschrieben. Es gibt keine Beschränkung für die Anzahl der Sichten, die in einer Formatierungs Datei definiert werden können, und Sie können in beliebiger Reihenfolge hinzugefügt werden.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `ViewDefinitions` Elements beschrieben. Es gibt keine Beschränkung für die Anzahl der Sichten, die in einer Formatierungs Datei definiert werden können, und Sie können in beliebiger Reihenfolge hinzugefügt werden.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[View-Element (Format)](./view-element-format.md)|Definiert eine Ansicht, die verwendet wird, um ein oder mehrere .NET-Objekte anzuzeigen.|
+|[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, die verwendet wird, um ein oder mehrere .NET-Objekte anzuzeigen.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Configuration-Element (Format)](./configuration-element-format.md)|Stellt das Element der obersten Ebene einer Formatierungs Datei dar.|
+|[Element „Configuration“ (Format)](./configuration-element-format.md)|Stellt das Element der obersten Ebene einer Formatierungs Datei dar.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu den Komponenten der verschiedenen Sicht Typen finden Sie in den folgenden Themen:
 
@@ -64,7 +57,7 @@ Weitere Informationen zu den Komponenten der verschiedenen Sicht Typen finden Si
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt ein `ViewDefinitions`-Element, das die übergeordneten Elemente für eine Tabellenansicht und eine Listenansicht enthält.
+Dieses Beispiel zeigt ein `ViewDefinitions` -Element, das die übergeordneten Elemente für eine Tabellenansicht und eine Listenansicht enthält.
 
 ```xml
 <Configuration>
@@ -81,9 +74,9 @@ Dieses Beispiel zeigt ein `ViewDefinitions`-Element, das die übergeordneten Ele
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Configuration-Element (Format)](./configuration-element-format.md)
+[Element „Configuration“ (Format)](./configuration-element-format.md)
 
-[View-Element (Format)](./view-element-format.md)
+[Element „View“ (Format)](./view-element-format.md)
 
 [Erstellen einer Tabellenansicht](./creating-a-table-view.md)
 
@@ -93,4 +86,4 @@ Dieses Beispiel zeigt ein `ViewDefinitions`-Element, das die übergeordneten Ele
 
 [Benutzerdefinierte Steuerelemente](./creating-custom-controls.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

@@ -1,25 +1,18 @@
 ---
 title: Selectioncondition-Element für entryselectedby für GroupBy (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 6dc2093a-dc54-42c4-ada3-c8d089ba1e8e
-caps.latest.revision: 6
-ms.openlocfilehash: a6738a7c4c934b2d6a16695a711f7c6c80afdd2d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0930d8076c314c12cac6cdfa2b33716b7efeb6a9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368429"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772840"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-groupby-format"></a>Element „SelectionCondition“ für EntrySelectedBy für GroupBy (Format)
 
 Definiert eine Bedingung, die vorhanden sein muss, damit eine Steuerelement Definition verwendet werden muss. Dieses Element wird verwendet, wenn definiert wird, wie eine neue Gruppe von Objekten angezeigt wird.
 
-Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) GroupBy-Element für View (Format) CustomControl-Element für GroupBy (Format) customentries-Element für CustomControl für GroupBy (Format) customentry-Element für CustomControl für GroupBy (Format) entryselectedby-Element für customentry für GroupBy (Format) selectioncondition-Element für entryselectedby für GroupBy (Format)
+Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) GroupBy-Element für View (Format) CustomControl-Element für GroupBy (Format) customentries-Element für CustomControl für GroupBy (Format) customentry-Element für CustomControl für GroupBy (Format) entryselectedby-Element für customentry für GroupBy (Format) selectioncondition-Element für entryselectedby für GroupBy (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,28 +27,28 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `SelectionCondition`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `SelectionCondition` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[PropertyName-Element für selectioncondition für GroupBy (Format)](./propertyname-element-for-selectioncondition-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt eine .net-Eigenschaft an, die die Bedingung auslöst.|
+|[Element „PropertyName“ für SelectionCondition für GroupBy (Format)](./propertyname-element-for-selectioncondition-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt eine .net-Eigenschaft an, die die Bedingung auslöst.|
 |[ScriptBlock-Element für selectioncondition für GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das die Bedingung auslöst.|
-|[Selectionsetname-Element für selectioncondition für GroupBy (Format)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt den Satz von .NET-Typen an, der die Bedingung auslöst.|
+|[Element „SelectionSetName“ für SelectionCondition für GroupBy (Format)](./selectionsetname-element-for-selectioncondition-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt den Satz von .NET-Typen an, der die Bedingung auslöst.|
 |[Typname-Element für selectioncondition für GroupBy (Format)](./typename-element-for-selectioncondition-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der die Bedingung auslöst.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Entryselectedby-Element für customentry für GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
+|[Element „EntrySelectedBy“ für CustomEntry für GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Wenn Sie eine Auswahlbedingung definieren, gelten die folgenden Anforderungen:
 
@@ -67,14 +60,14 @@ Weitere Informationen zum Verwenden von Auswahl Bedingungen finden Sie unter [De
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[PropertyName-Element für selectioncondition für CustomControl für View (Format)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[Element „PropertyName“ für SelectionCondition für CustomControl für View (Format)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
-[ScriptBlock-Element für selectioncondition für CustomControl für View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)
+[Element „ScriptBlock“ für SelectionCondition für CustomControl für View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
 [Selectionsetname-Element für selectioncondition für benutzerdefiniertes Steuer Element für Ansicht (Format)](./selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md)
 
 [Typname-Element für selectioncondition für GroupBy (Format)](./typename-element-for-selectioncondition-for-groupby-format.md)
 
-[Entryselectedby-Element für customentry für GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[Element „EntrySelectedBy“ für CustomEntry für GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

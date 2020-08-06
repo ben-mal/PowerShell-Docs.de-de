@@ -1,13 +1,12 @@
 ---
 title: Installieren das Windows PowerShell SDK
 ms.date: 03/30/2020
-ms.topic: article
-ms.openlocfilehash: b47dddaf167024d30a7a31596f96569f976109d7
-ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
+ms.openlocfilehash: 91cf57510bb7f44799cfdaf7cadcc7bcd505c977
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80394987"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771973"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Installieren das Windows PowerShell SDK
 
@@ -18,7 +17,7 @@ Das folgende Thema beschreibt, wie das PowerShell SDK in verschiedenen Versionen
 ## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>Installieren des Windows PowerShell 3.0 SDK für Windows 8 und Windows Server 2012
 
 Windows PowerShell 3.0 wird automatisch mit Windows 8 und Windows Server 2012 installiert. Darüber hinaus können Sie die Verweisassemblys für Windows PowerShell 3.0 als Teil des Windows 8 SDKs herunterladen und installieren. Diese Assemblys ermöglichen Ihnen das Schreiben von Cmdlets, Anbietern und Host-Programmen für Windows PowerShell 3.0. Wenn Sie das Windows SDK für Windows 8 installieren, werden die Windows PowerShell-Assemblys automatisch im Referenzassemblyordner unter `\Program Files
-(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0` installiert. Weitere Informationen finden Sie auf der Windows 8 SDK-Download Website. Windows PowerShell-Codebeispiele sind auch im Repository " [PowerShell-SDK-Samples](https://github.com/MicrosoftDocs/powershell-sdk-samples/tree/master/SDK-3.0) " verfügbar.
+(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0` installiert. Weitere Informationen finden Sie auf der Windows 8 SDK-Downloadwebsite. Windows PowerShell-Codebeispiele sind auch im Repository " [PowerShell-SDK-Samples](https://github.com/MicrosoftDocs/powershell-sdk-samples/tree/master/SDK-3.0) " verfügbar.
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Installieren des Windows PowerShell 3.0 SDK für Windows 7 und Windows Server 2008 R2
 
@@ -26,7 +25,7 @@ Bei Windows 7 und Windows Server 2008 R2 wird PowerShell 2.0 automatisch install
 
 ## <a name="installing-windows-powershell-20-sdk-for-windows-7-vista-xp-server-2003-and-server-2008"></a>Installieren des Windows PowerShell 2.0 SDK für Windows 7, Vista, XP, Server 2003 und Server 2008
 
-Das Windows PowerShell 2.0 SDK stellt die Verweisassemblys bereit, die zum Schreiben von Cmdlets, Anbietern und Hostinganwendungen erforderlich sind, und bietet C#-Beispielcode, der als Ausgangspunkt dienen kann, wenn Sie mit dem Schreiben von Code beginnen. Sie können die Codebeispiele aus [https://www.microsoft.com/download/details.aspx?id=2560](https://www.microsoft.com/download/details.aspx?id=2560)herunterladen.
+Das Windows PowerShell 2.0 SDK stellt die Verweisassemblys bereit, die zum Schreiben von Cmdlets, Anbietern und Hostinganwendungen erforderlich sind, und bietet C#-Beispielcode, der als Ausgangspunkt dienen kann, wenn Sie mit dem Schreiben von Code beginnen. Sie können die Codebeispiele von herunterladen [https://www.microsoft.com/download/details.aspx?id=2560](https://www.microsoft.com/download/details.aspx?id=2560) .
 
 ### <a name="reference-assemblies"></a>Verweisassemblys
 
@@ -50,7 +49,7 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. Die folgenden Abschnitte 
 - GetProcessSample05-zeigt, wie eine Liste der angegebenen Prozesse angezeigt wird.
 - SelectObject: zeigt, wie ein Filter geschrieben wird, um nur bestimmte Objekte auszuwählen.
 - SelectString: zeigt, wie Dateien nach angegebenen Mustern durchsucht werden.
-- StopProcessSample01: zeigt, wie ein PassThru-Parameter implementiert wird und wie Benutzer Feedback durch Aufrufe der Methode "tiondprocess" und "tiondcontinue" angefordert wird. Benutzer geben den passthru-Parameter an, wenn Sie erzwingen möchten, dass das Cmdlet ein Objekt zurückgibt.
+- StopProcessSample01: zeigt, wie ein PassThru-Parameter implementiert wird und wie Benutzer Feedback durch Aufrufe der Methode "tiondprocess" und "tiondcontinue" angefordert wird. Benutzer geben den Parameter PassThru an, wenn sie erzwingen möchten, dass das Cmdlet ein Objekt zurückgibt.
 - StopProcessSample02: zeigt, wie ein bestimmter Prozess beendet wird.
 - StopProcessSample03-zeigt, wie Aliase für Parameter deklariert und Platzhalter unterstützt werden.
 - StopProcessSample04-zeigt, wie Parametersätze, das-Objekt, das vom Cmdlet als Eingabe verwendet wird, deklariert werden und wie der zu verwendende Standardparameter Satz angegeben wird.
@@ -66,13 +65,13 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. Die folgenden Abschnitte 
 #### <a name="event-samples"></a>Ereignisbeispiele
 
 - Event01-zeigt, wie Sie ein Cmdlet für die Ereignis Registrierung durch Ableiten von objecteventregistrationbase erstellen.
-- Event02: zeigt, wie Sie Benachrichtigungen von Windows PowerShell-Ereignissen erhalten, die auf Remote Computern generiert werden. Er verwendet das pereigempfangene Ereignis, das durch die Runspace-Klasse verfügbar gemacht wird.
+- Event02: zeigt, wie Sie Benachrichtigungen von Windows PowerShell-Ereignissen erhalten, die auf Remote Computern generiert werden. Verwendet das über die Runspace-Klasse offen gelegte PSEventReceived-Ereignis.
 
 #### <a name="hosting-application-samples"></a>Hosten von Anwendungsbeispielen
 
-- Runspace01: zeigt, wie die PowerShell-Klasse verwendet wird, um das `Get-Process`-Cmdlet synchron auszuführen.
-  Das `Get-Process`-Cmdlet gibt Prozess Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird.
-- Runspace02: zeigt, wie die PowerShell-Klasse zum synchronen Ausführen der `Get-Process` und `Sort-Object` Cmdlets verwendet wird. Das `Get-Process`-Cmdlet gibt Prozess Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird, und der `Sort-Object` sortiert die Objekte basierend auf Ihrer ID-Eigenschaft. Die Ergebnisse dieser Befehle werden mithilfe eines DataGridView-Steuer Elements angezeigt.
+- Runspace01: zeigt, wie die PowerShell-Klasse verwendet wird, um das `Get-Process` Cmdlet synchron auszuführen.
+  Das- `Get-Process` Cmdlet gibt Prozess Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird.
+- Runspace02: zeigt, wie die PowerShell-Klasse zum `Get-Process` `Sort-Object` synchronen Ausführen der Cmdlets und verwendet wird. Das `Get-Process` -Cmdlet gibt Prozess Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird, und `Sort-Object` sortiert die Objekte basierend auf Ihrer ID-Eigenschaft. Die Ergebnisse dieser Befehle werden anhand des Steuerelements DataGridView angezeigt.
 - Runspace03: zeigt, wie die PowerShell-Klasse zum synchronen Ausführen eines Skripts verwendet wird und wie Fehler ohne Abbruch behandelt werden. Das Skript empfängt eine Liste von Prozessnamen und ruft diese Prozesse anschließend ab. Die Ergebnisse des Skripts, einschließlich Fehler ohne Abbruch, die beim Ausführen des Skripts generiert wurden, werden in einem Konsolenfenster angezeigt.
 - Runspace04: zeigt, wie die PowerShell-Klasse zum Ausführen von Befehlen verwendet wird, und wie abschließende Fehler abgefangen werden, die beim Ausführen der Befehle ausgelöst werden. Zwei Befehle werden ausgeführt. An den letzten Befehl wird ein ungültiges Parameterargument übergeben. Daher werden keine Objekte zurückgegeben, und ein Fehler mit Abbruch wird ausgelöst.
 - Runspace05: zeigt, wie einem initialsessionstate-Objekt ein Snap-in hinzugefügt wird, sodass das Cmdlet des Snap-Ins verfügbar ist, wenn der Runspace geöffnet wird. Das Snap-in stellt ein Get-proc-Cmdlet bereit (definiert durch das GetProcessSample01-Beispiel), das synchron mithilfe eines PowerShell-Objekts ausgeführt wird.
@@ -87,23 +86,23 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. Die folgenden Abschnitte 
 
 #### <a name="host-samples"></a>Hostbeispiele
 
-- Host01: zeigt, wie eine Host Anwendung implementiert wird, die einen benutzerdefinierten Host verwendet. In diesem Beispiel wird ein Runspace erstellt, der den benutzerdefinierten Host verwendet, und dann wird die PowerShell-API zum Ausführen eines Skripts verwendet, das `exit`aufruft. Die Hostanwendung untersucht anschließend die Ausgabe des Skripts und gibt die Ergebnisse aus.
-- Host02: zeigt, wie eine Host Anwendung geschrieben wird, die die Windows PowerShell-Laufzeit zusammen mit einer benutzerdefinierten Host Implementierung verwendet. Die Host Anwendung legt die Host Kultur auf Deutsch fest, führt das `Get-Process`-Cmdlet aus und zeigt die Ergebnisse an, wie Sie Sie mithilfe von "pwrsh. exe" sehen würden. Anschließend werden die aktuellen Daten und die aktuelle Zeit in Deutsch ausgegeben.
+- Host01: zeigt, wie eine Host Anwendung implementiert wird, die einen benutzerdefinierten Host verwendet. In diesem Beispiel wird ein Runspace erstellt, der den benutzerdefinierten Host verwendet, und anschließend wird die PowerShell-API zum Ausführen eines Skripts verwendet, das aufruft `exit` . Die Hostanwendung untersucht anschließend die Ausgabe des Skripts und gibt die Ergebnisse aus.
+- Host02: zeigt, wie eine Host Anwendung geschrieben wird, die die Windows PowerShell-Laufzeit zusammen mit einer benutzerdefinierten Host Implementierung verwendet. Die Host Anwendung legt die Host Kultur auf Deutsch fest, führt das `Get-Process` Cmdlet aus und zeigt die Ergebnisse so an, wie Sie Sie sehen würden, indem pwrsh.exe verwendet wird. Anschließend werden die aktuellen Daten und die aktuelle Zeit in Deutsch ausgegeben.
 - Host03: zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt.
 - Host04: zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt. Diese Hostanwendung unterstützt auch das Anzeigen von Eingabeaufforderungen, die es den Benutzern ermöglichen, mehrere Auswahlmöglichkeiten anzugeben.
-- Host05: zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt. Diese Host Anwendung unterstützt auch Aufrufe von Remote Computern mithilfe der Cmdlets `Enter-PsSession` und `Exit-PsSession`.
+- Host05: zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt. Diese Host Anwendung unterstützt auch Aufrufe von Remote Computern mithilfe der `Enter-PsSession` `Exit-PsSession` Cmdlets und.
 - Host06: zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt. Darüber hinaus verwendet dieses Beispiel die Tokenizer-APIs, um die Farbe des vom Benutzer eingegebenen Texts anzugeben.
 
 #### <a name="provider-samples"></a>Anbieterbeispiele
 
 - AccessDBProviderSample01-zeigt, wie Sie eine Anbieter Klasse deklarieren, die direkt von der cmdletprovider-Klasse abgeleitet wird. Wird hier nur aus Gründen der Vollständigkeit aufgeführt.
 
-- AccessDBProviderSample02: zeigt, wie die newdrive-Methode und die removedrive-Methode überschrieben werden, um Aufrufe des `New-PSDrive` und `Remove-PSDrive`-Cmdlets zu unterstützen. Die Anbieter Klasse in diesem Beispiel wird von der drivecmdletprovider-Klasse abgeleitet.
+- AccessDBProviderSample02: zeigt, wie die newdrive-Methode und die removedrive-Methode überschrieben werden, um Aufrufe der `New-PSDrive` Cmdlets und zu unterstützen `Remove-PSDrive` . Die Anbieterklasse in diesem Beispiel wird von der DriveCmdletProvider-Klasse abgeleitet.
 
-- AccessDBProviderSample03: zeigt, wie Sie die GetItem-Methode und die-Methode für das Festlegen von Methoden überschreiben, um Aufrufe der Cmdlets `Get-Item` und `Set-Item` zu unterstützen Die Anbieter Klasse in diesem Beispiel wird von der itemcmdletprovider-Klasse abgeleitet.
+- AccessDBProviderSample03-zeigt, wie Sie die GetItem-Methode und die-Methode für das Festlegen von Methoden überschreiben, um Aufrufe der `Get-Item` Cmdlets und zu unterstützen `Set-Item` Die Anbieterklasse in diesem Beispiel wird von der ItemCmdletProvider-Klasse abgeleitet.
 
-- AccessDBProviderSample04-zeigt, wie Sie Container Methoden überschreiben, um Aufrufe der Cmdlets `Copy-Item`, `Get-ChildItem`, `New-Item`und `Remove-Item` zu unterstützen. Diese Methoden sollten implementiert werden, wenn der Datenspeicher Elemente enthält, die Container sind. Ein Container ist eine Gruppe von untergeordneten Elementen unter einem gemeinsamen übergeordneten Element. Die Anbieter Klasse in diesem Beispiel wird von der itemcmdletprovider-Klasse abgeleitet.
+- AccessDBProviderSample04-zeigt, wie Sie Container Methoden überschreiben, um Aufrufe `Copy-Item` der `Get-ChildItem` `New-Item` Cmdlets,, und zu unterstützen `Remove-Item` . Diese Methoden sollten implementiert werden, wenn der Datenspeicher Elemente enthält, die Container sind. Ein Container ist eine Gruppe von untergeordneten Elementen unter einem gemeinsamen übergeordneten Element. Die Anbieterklasse in diesem Beispiel wird von der ItemCmdletProvider-Klasse abgeleitet.
 
-- AccessDBProviderSample05: zeigt, wie Sie Container Methoden überschreiben, um Aufrufe an die `Move-Item`-und `Join-Path`-Cmdlets zu unterstützen. Diese Methoden sollten implementiert werden, wenn der Benutzer Elemente innerhalb eines Containers verschieben muss, und wenn der Datenspeicher geschachtelte Container enthält. Die Anbieter Klasse in diesem Beispiel wird von der navigationcmdletprovider-Klasse abgeleitet.
+- AccessDBProviderSample05-zeigt, wie Sie Container Methoden überschreiben, um Aufrufe der `Move-Item` -und- `Join-Path` Cmdlets zu unterstützen. Diese Methoden sollten implementiert werden, wenn der Benutzer Elemente innerhalb eines Containers verschieben muss, und wenn der Datenspeicher geschachtelte Container enthält. Die Anbieterklasse in diesem Beispiel wird von der NavigationCmdletProvider-Klasse abgeleitet.
 
-- AccessDBProviderSample06: zeigt, wie Inhalts Methoden überschrieben werden, um Aufrufe an die `Clear-Content`-, `Get-Content`-und `Set-Content`-Cmdlets zu unterstützen. Diese Methoden sollten implementiert werden, wenn der Benutzer den Inhalt der Elemente im Datenspeicher verwaltet muss. Die Anbieter Klasse in diesem Beispiel wird von der navigationcmdletprovider-Klasse abgeleitet und implementiert die icontentcmdletprovider-Schnittstelle.
+- AccessDBProviderSample06: zeigt, wie Inhalts Methoden überschrieben werden, um Aufrufe `Clear-Content` der `Get-Content` Cmdlets, und zu unterstützen `Set-Content` . Diese Methoden sollten implementiert werden, wenn der Benutzer den Inhalt der Elemente im Datenspeicher verwaltet muss. Die Anbieterklasse in diesem Beispiel wird von der NavigationCmdletProvider-Klasse abgeleitet und implementiert die IContentCmdletProvider-Schnittstelle.

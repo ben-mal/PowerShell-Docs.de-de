@@ -1,19 +1,12 @@
 ---
 title: Deklarieren von Cmdlet-Parametern | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
-caps.latest.revision: 10
-ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 97e86a1eb715f149a8383a1a4529c00da4f0eba8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365679"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774387"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Deklarieren von Cmdlet-Parametern
 
@@ -21,7 +14,7 @@ In diesen Beispielen wird gezeigt, wie benannte, positionelle, erforderliche, op
 
 ## <a name="how-to-declare-a-named-parameter"></a>Deklarieren eines benannten Parameters
 
-- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter-Attribut hinzufügen, lassen Sie das `Position`-Schlüsselwort aus dem-Attribut Weg.
+- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter Attribut hinzufügen, lassen Sie das- `Position` Schlüsselwort aus dem-Attribut Weg.
 
     ```csharp
     [Parameter()]
@@ -37,7 +30,7 @@ Weitere Informationen zum Parameter Attribut finden Sie unter [Parameter Attribu
 
 ## <a name="how-to-declare-a-positional-parameter"></a>Deklarieren eines Positions Parameters
 
-- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter-Attribut hinzufügen, legen Sie das `Position`-Schlüsselwort auf die Argument Position fest. Der Wert 0 gibt die erste Position an.
+- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter-Attribut hinzufügen, legen Sie das- `Position` Schlüsselwort auf die Argument Position fest. Der Wert 0 gibt die erste Position an.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -53,7 +46,7 @@ Weitere Informationen zum Parameter Attribut finden Sie unter [Parameter Attribu
 
 ## <a name="how-to-declare-a-mandatory-parameter"></a>Deklarieren eines obligatorischen Parameters
 
-- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter-Attribut hinzufügen, legen Sie das `Mandatory`-Schlüsselwort auf `true`fest.
+- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter-Attribut hinzufügen, legen Sie das- `Mandatory` Schlüsselwort auf fest `true` .
 
     ```csharp
     [Parameter(Position = 0, Mandatory = true)]
@@ -69,7 +62,7 @@ Weitere Informationen zum Parameter Attribut finden Sie unter [Parameter Attribu
 
 ## <a name="how-to-declare-an-optional-parameter"></a>So deklarieren Sie einen optionalen Parameter
 
-- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter-Attribut hinzufügen, lassen Sie das `Mandatory`-Schlüsselwort aus.
+- Definieren Sie eine öffentliche Eigenschaft, wie im folgenden Code gezeigt. Wenn Sie das Parameter Attribut hinzufügen, lassen Sie das `Mandatory` Schlüsselwort aus.
 
     ```csharp
     [Parameter(Position = 0)]
@@ -116,10 +109,10 @@ Weitere Informationen zum Alias Attribut finden Sie unter [Alias Attribut Deklar
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[System. Management. Automation. Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter)
+[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 
-[Parameter Attribut Deklaration](./parameter-attribute-declaration.md)
+[Attributdeklaration: Parameter](./parameter-attribute-declaration.md)
 
-[Alias Attribut Deklaration](./alias-attribute-declaration.md)
+[Attributdeklaration: Alias](./alias-attribute-declaration.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

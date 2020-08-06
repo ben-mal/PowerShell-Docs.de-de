@@ -1,19 +1,12 @@
 ---
 title: Hintergrund Aufträge | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
-caps.latest.revision: 13
-ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2a1297b8dfe087474564078cca2a5a0526ed0f36
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363559"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774846"
 ---
 # <a name="background-jobs"></a>Hintergrundaufträge
 
@@ -35,11 +28,11 @@ Weitere Informationen zur Verarbeitung von Hintergrund Aufträgen in der Befehls
 
 Zum Schreiben eines Cmdlets, das als Hintergrund Auftrag ausgeführt werden kann, müssen Sie die folgenden Aufgaben ausführen:
 
-- Definieren Sie einen `asJob` Switch-Parameter, sodass der Benutzer entscheiden kann, ob das Cmdlet als Hintergrund Auftrag ausgeführt werden soll.
+- Definieren `asJob` Sie einen Switch-Parameter, sodass der Benutzer entscheiden kann, ob das Cmdlet als Hintergrund Auftrag ausgeführt werden soll.
 
 - Erstellen Sie ein Objekt, das von der [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) -Klasse abgeleitet wird. Bei diesem Objekt kann es sich um ein benutzerdefiniertes Auftrags Objekt oder ein von Windows PowerShell bereitgestelltes Auftrags Objekt handeln, z. b. ein [System. Management. Automation. psiebziger Job](/dotnet/api/System.Management.Automation.PSEventJob) -Objekt.
 
-- Fügen Sie in einer Daten Satz Verarbeitungsmethode eine `if`-Anweisung hinzu, die erkennt, ob das Cmdlet als Hintergrund Auftrag ausgeführt werden soll.
+- Fügen Sie in einer Daten Satz Verarbeitungsmethode eine- `if` Anweisung hinzu, die erkennt, ob das Cmdlet als Hintergrund Auftrag ausgeführt werden soll.
 
 - Implementieren Sie für benutzerdefinierte Auftrags Objekte die Job-Klasse.
 
@@ -51,7 +44,7 @@ Ein Codebeispiel finden [Sie unter How to Support Jobs](./how-to-support-jobs.md
 
 Die folgenden APIs werden von Windows PowerShell zur Verwaltung von Hintergrund Aufträgen bereitgestellt.
 
-[System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) leitet benutzerdefinierte Auftrags Objekte ab. Dies ist eine abstract-Klasse.
+[System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) leitet benutzerdefinierte Auftrags Objekte ab. Dies ist eine abstrakte Klasse.
 
 [System. Management. Automation. jobrepository](/dotnet/api/System.Management.Automation.JobRepository) verwaltet und stellt Informationen über die aktuellen aktiven Hintergrund Aufträge bereit.
 

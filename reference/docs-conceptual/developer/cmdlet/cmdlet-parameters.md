@@ -1,11 +1,6 @@
 ---
 title: Cmdlet-Parameter | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - optional parameters [PowerShell SDK]
 - aliases [PowerShell SDK]
@@ -14,14 +9,12 @@ helpviewer_keywords:
 - mandatory parameters [PowerShell SDK]
 - positional parameters [PowerShell SDK]
 - cmdlets [PowerShell SDK], parameters
-ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
-caps.latest.revision: 23
-ms.openlocfilehash: c1d8984f4aad7bae6f9be66a2222e2c74c8afa3d
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.openlocfilehash: 98b1d5fd0e7ffbf2d4d161f1bed73fb96a737bd4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022211"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774761"
 ---
 # <a name="cmdlet-parameters"></a>Cmdlet-Parameter
 
@@ -47,14 +40,14 @@ Cmdlet-Parameter stellen den Mechanismus bereit, mit dem ein Cmdlet Eingaben akz
 
 Überprüfen der [Parameter Eingabe](./validating-parameter-input.md) Beschreibt, wie Windows PowerShell die an Cmdlet-Parameter übergebenen Argumente überprüft.
 
-[Eingabe Filter Parameter](./input-filter-parameters.md) Erläutert die `Filter`, `Include`und `Exclude` Parameter, die den Satz von Eingabe Objekten filtern, auf die sich das Cmdlet auswirkt.
+[Eingabe Filter Parameter](./input-filter-parameters.md) Erläutert die `Filter` `Include` Parameter, und `Exclude` , die den Satz von Eingabe Objekten filtern, auf die sich das Cmdlet auswirkt.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Validieren von Parameter Eingaben](./how-to-validate-parameter-input.md)
+[Überprüfen einer Parametereingabe](./how-to-validate-parameter-input.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Parameter Attribut Deklaration](./parameter-attribute-declaration.md)
+[Attributdeklaration: Parameter](./parameter-attribute-declaration.md)
 
 [Windows PowerShell-Cmdlets](./cmdlet-overview.md)

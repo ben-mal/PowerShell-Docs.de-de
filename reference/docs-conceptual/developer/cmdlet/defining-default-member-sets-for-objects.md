@@ -1,19 +1,12 @@
 ---
 title: Definieren von Standardmember-Sätzen für Objekte | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 77f94326-8ffe-4d40-bd2a-b79fb0b4a4e5
-caps.latest.revision: 8
-ms.openlocfilehash: 2d634e7638ec0e0117d65ca0b2d08e68f0068a03
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 80e1f54890d3aac1702414699ead16fcf38271e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369779"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774625"
 ---
 # <a name="defining-default-member-sets-for-objects"></a>Definieren von Standardelementgruppen für Objekte
 
@@ -43,7 +36,7 @@ Im folgenden Beispiel definiert der psstandardmembers-Member Satz die defaultdis
   </MemberSet>
 ```
 
-Die folgende Ausgabe zeigt die Standardeigenschaften, die vom Cmdlet " [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) " zurückgegeben werden. Für jedes Prozess Objekt werden nur die Eigenschaften `Id`, `Handles`, `CPU`und `Name` zurückgegeben.
+Die folgende Ausgabe zeigt die Standardeigenschaften, die vom Cmdlet " [Format-List](/powershell/module/Microsoft.PowerShell.Utility/Format-List) " zurückgegeben werden. Nur die `Id` `Handles` Eigenschaften,, `CPU` und `Name` werden für jedes Prozess Objekt zurückgegeben.
 
 ```powershell
 Get-Process | format-list

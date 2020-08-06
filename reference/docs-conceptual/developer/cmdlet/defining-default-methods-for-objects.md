@@ -1,19 +1,12 @@
 ---
 title: Definieren von Standardmethoden für Objekte | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 53fe744a-485f-4c21-9623-1cb546372211
-caps.latest.revision: 9
-ms.openlocfilehash: 346a194c6b4c81aa61a6331cdb62ae380a17bb1e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 10917de9e897fc1eed362430d63ff5b9cb7e813d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365689"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774591"
 ---
 # <a name="defining-default-methods-for-objects"></a>Definieren von Standardmethoden für Objekte
 
@@ -21,13 +14,13 @@ Wenn Sie .NET Framework Objekte erweitern, können Sie den-Objekten Code Methode
 Der XML-Code, der verwendet wird, um diese Methoden zu definieren, wird in den folgenden Abschnitten beschrieben.
 
 > [!NOTE]
-> Die Beispiele in den folgenden Abschnitten stammen aus der `Types.ps1xml` Types-Datei im Windows PowerShell-Installationsverzeichnis (`$PSHOME`). Weitere Informationen finden Sie unter [about Types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
+> Die Beispiele in den folgenden Abschnitten stammen aus der `Types.ps1xml` Datei Types im Installationsverzeichnis von Windows PowerShell ( `$PSHOME` ). Weitere Informationen finden Sie unter Informationen [zu Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="code-methods"></a>Code Methoden
 
 Eine Code Methode verweist auf eine statische Methode eines .NET Framework Objekts.
 
-Im folgenden Beispiel wird die Methode " **destring** " dem [System. Xml. XmlNode](/dotnet/api/System.Xml.XmlNode) -Typ hinzugefügt. Das [pscodemethod](/dotnet/api/system.management.automation.pscodemethod) -Element definiert die erweiterte Methode als Code Methode. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) -Element gibt den Namen der erweiterten Methode an. Das [codereferenzierungselement](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) gibt die statische Methode an. Sie können auch das [pscodemethod](/dotnet/api/system.management.automation.pscodemethod) -Element den Membern des [psmembership Sets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) -Elements hinzufügen.
+Im folgenden Beispiel wird die Methode " **destring** " dem [System.Xml.XmlKnotentyp](/dotnet/api/System.Xml.XmlNode) hinzugefügt. Das [pscodemethod](/dotnet/api/system.management.automation.pscodemethod) -Element definiert die erweiterte Methode als Code Methode. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name?view=pscore-6.2.0#System_Management_Automation_PSMemberInfo_Name) -Element gibt den Namen der erweiterten Methode an. Das [codereferenzierungselement](/dotnet/api/system.management.automation.pscodemethod.codereference?view=pscore-6.2.0#System_Management_Automation_PSCodeMethod_CodeReference) gibt die statische Methode an. Sie können auch das [pscodemethod](/dotnet/api/system.management.automation.pscodemethod) -Element den Membern des [psmembership Sets](/dotnet/api/system.management.automation.psmemberset?view=pscore-6.2.0) -Elements hinzufügen.
 
 ```xml
 <Type>

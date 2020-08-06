@@ -1,19 +1,12 @@
 ---
 title: Host01-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1fca30b1-13fe-48a2-b0dd-979c161177a6
-caps.latest.revision: 14
-ms.openlocfilehash: 9a4b7c842c6222fa2e9f1c14f37f45d7a5158107
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361049"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87772248"
 ---
 # <a name="host01-sample"></a>Host01-Beispiel
 
@@ -21,11 +14,11 @@ Dieses Beispiel zeigt, wie eine Host Anwendung implementiert wird, die einen ben
 
  In diesem Beispiel werden die standardmäßigen Benutzeroberflächen Features von Windows PowerShell verwendet. Weitere Informationen zum Implementieren der Benutzeroberflächen Funktionen eines benutzerdefinierten Hosts finden Sie unter [Host02 Sample](./host02-sample.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
  Dieses Beispiel erfordert Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Gegenstand
+## <a name="demonstrates"></a>Zeigt
 
 - Erstellen einer benutzerdefinierten Host Klasse, die von der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse abgeleitet wird.
 

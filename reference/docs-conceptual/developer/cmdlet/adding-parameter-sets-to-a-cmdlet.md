@@ -1,21 +1,14 @@
 ---
 title: Hinzufügen von Parameter Sätzen zu einem Cmdlet | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
-ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
-caps.latest.revision: 8
-ms.openlocfilehash: 6e17ff3d8ad3f7b2c511b879c913633f320bf511
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: b1e808694b02676d81101a2678cbea341c7bd52c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978626"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87774982"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Hinzufügen von Parametersätzen zu einem Cmdlet
 
@@ -23,11 +16,11 @@ ms.locfileid: "80978626"
 
 Windows PowerShell definiert einen Parametersatz als eine Gruppe von Parametern, die zusammenarbeiten. Indem Sie die Parameter eines Cmdlets gruppieren, können Sie ein einzelnes Cmdlet erstellen, das seine Funktionalität basierend auf der vom Benutzer festgelegten Gruppe von Parametern ändern kann.
 
-Ein Beispiel für ein Cmdlet, das zwei Parametersätze verwendet, um verschiedene Funktionen zu definieren, ist das Cmdlet "`Get-EventLog`", das von Windows PowerShell bereitgestellt wird. Dieses Cmdlet gibt andere Informationen zurück, wenn der Benutzer den `List` oder `LogName` Parameter angibt. Wenn der `LogName`-Parameter angegeben wird, gibt das Cmdlet Informationen zu den Ereignissen in einem bestimmten Ereignisprotokoll zurück. Wenn der `List`-Parameter angegeben wird, gibt das Cmdlet Informationen zu den Protokolldateien selbst zurück (nicht zu den darin enthaltenen Ereignis Informationen). In diesem Fall identifizieren die Parameter "`List`" und "`LogName`" zwei separate Parametersätze.
+Ein Beispiel für ein Cmdlet, das zwei Parametersätze verwendet, um unterschiedliche Funktionen zu definieren, ist das `Get-EventLog` Cmdlet, das von Windows PowerShell bereitgestellt wird. Dieses Cmdlet gibt andere Informationen zurück, wenn der Benutzer den- `List` Parameter oder den- `LogName` Parameter angibt. Wenn der- `LogName` Parameter angegeben wird, gibt das Cmdlet Informationen zu den Ereignissen in einem bestimmten Ereignisprotokoll zurück. Wenn der- `List` Parameter angegeben wird, gibt das Cmdlet Informationen zu den Protokolldateien selbst zurück (nicht zu den darin enthaltenen Ereignis Informationen). In diesem Fall identifizieren der `List` -Parameter und der- `LogName` Parameter zwei separate Parametersätze.
 
 Zwei wichtige Punkte, die bei Parametersätzen beachtet werden sollten, besteht darin, dass die Windows PowerShell-Runtime nur einen Parametersatz für eine bestimmte Eingabe verwendet und jeder Parametersatz mindestens einen Parameter aufweisen muss, der für diesen Parametersatz eindeutig ist.
 
-Um den letzten Punkt zu veranschaulichen, verwendet dieses Cmdlet "Break-proc" drei Parametersätze: `ProcessName`, `ProcessId`und `InputObject`. Jeder dieser Parametersätze verfügt über einen Parameter, der nicht in den anderen Parametersätzen liegt. Die Parametersätze können andere Parameter gemeinsam verwenden, aber das Cmdlet verwendet die eindeutigen Parameter `ProcessName`, `ProcessId`und `InputObject`, um zu ermitteln, welche Parametergruppe von der Windows PowerShell-Laufzeit verwendet werden soll.
+Um den letzten Punkt zu veranschaulichen, verwendet dieses Cmdlet "Break-proc" drei Parametersätze: `ProcessName` , `ProcessId` und `InputObject` . Jeder dieser Parametersätze verfügt über einen Parameter, der nicht in den anderen Parametersätzen liegt. Die Parametersätze können andere Parameter gemeinsam verwenden, aber das Cmdlet verwendet die eindeutigen Parameter, `ProcessName` `ProcessId` und, `InputObject` um zu ermitteln, welche Parametergruppe von der Windows PowerShell-Laufzeit verwendet werden soll.
 
 ## <a name="declaring-the-cmdlet-class"></a>Deklarieren der Cmdlet-Klasse
 
@@ -54,11 +47,11 @@ Public Class StopProcCommand
 
 ## <a name="declaring-the-parameters-of-the-cmdlet"></a>Deklarieren der Parameter des Cmdlets
 
-Dieses Cmdlet definiert drei Parameter, die als Eingabe für das Cmdlet erforderlich sind (diese Parameter definieren auch die Parametersätze), sowie einen `Force` Parameter, der das Cmdlet verwaltet, und einen `PassThru` Parameter, der bestimmt, ob das Cmdlet ein Ausgabe Objekt über die Pipeline sendet. Standardmäßig übergibt dieses Cmdlet ein Objekt nicht über die Pipeline. Weitere Informationen zu diesen beiden letzten Parametern finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
+Dieses Cmdlet definiert drei Parameter, die als Eingabe für das Cmdlet erforderlich sind (diese Parameter definieren auch die Parametersätze), sowie einen Parameter, der `Force` das Cmdlet verwaltet, und einen `PassThru` Parameter, der bestimmt, ob das Cmdlet ein Ausgabe Objekt über die Pipeline sendet. Standardmäßig übergibt dieses Cmdlet ein Objekt nicht über die Pipeline. Weitere Informationen zu diesen beiden letzten Parametern finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
 
 ### <a name="declaring-the-name-parameter"></a>Deklarieren des Name-Parameters
 
-Dieser Eingabeparameter ermöglicht es dem Benutzer, die Namen der zu beendenden Prozesse anzugeben. Beachten Sie, dass das `ParameterSetName` Attribute-Schlüsselwort des [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attributs den für diesen Parameter festgelegten `ProcessName` Parameter angibt.
+Dieser Eingabeparameter ermöglicht es dem Benutzer, die Namen der zu beendenden Prozesse anzugeben. Beachten Sie, dass das `ParameterSetName` Attribut Schlüsselwort des [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attributs den `ProcessName` Parametersatz für diesen Parameter angibt.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample04/StopProcessSample04.cs" range="44-58":::
 
@@ -84,7 +77,7 @@ Beachten Sie auch, dass der Alias "ProcessName" an diesen Parameter übergeben w
 
 ### <a name="declaring-the-id-parameter"></a>Deklarieren des ID-Parameters
 
-Dieser Eingabeparameter ermöglicht es dem Benutzer, die Bezeichner der zu beendenden Prozesse anzugeben. Beachten Sie, dass das `ParameterSetName` Attribute-Schlüsselwort des [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attributs den `ProcessId` Parametersatz angibt.
+Dieser Eingabeparameter ermöglicht es dem Benutzer, die Bezeichner der zu beendenden Prozesse anzugeben. Beachten Sie, dass das `ParameterSetName` Attribut Schlüsselwort des [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attributs den `ProcessId` Parametersatz angibt.
 
 ```csharp
 [Parameter(
@@ -122,7 +115,7 @@ Beachten Sie auch, dass der Alias "ProcessId" an diesen Parameter übergeben wir
 
 ### <a name="declaring-the-inputobject-parameter"></a>Deklarieren des Inputobject-Parameters
 
-Dieser Eingabeparameter ermöglicht es dem Benutzer, ein Eingabe Objekt anzugeben, das Informationen über die zu beendenden Prozesse enthält. Beachten Sie, dass das `ParameterSetName` Attribute-Schlüsselwort des [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attributs den für diesen Parameter festgelegten `InputObject` Parameter angibt.
+Dieser Eingabeparameter ermöglicht es dem Benutzer, ein Eingabe Objekt anzugeben, das Informationen über die zu beendenden Prozesse enthält. Beachten Sie, dass das `ParameterSetName` Attribut Schlüsselwort des [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attributs den `InputObject` Parametersatz für diesen Parameter angibt.
 
 ```csharp
 [Parameter(
@@ -213,7 +206,7 @@ Die Hilfsmethoden, die von der SELECT-Anweisung aufgerufen werden, werden hier n
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Den gesamten C# Beispielcode finden Sie unter [StopProcessSample04 Sample](./stopprocesssample04-sample.md).
+Den gesamten c#-Beispielcode finden Sie unter [StopProcessSample04 Sample](./stopprocesssample04-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definieren von Objekttypen und Formatierung
 
@@ -227,7 +220,7 @@ Nachdem Sie ein Cmdlet implementiert haben, müssen Sie es über ein Windows Pow
 
 Wenn das Cmdlet bei Windows PowerShell registriert wurde, testen Sie es, indem Sie es in der Befehlszeile ausführen. Im folgenden finden Sie einige Tests, die zeigen, wie die Parameter `ProcessId` und `InputObject` verwendet werden können, um Ihre Parametersätze zu testen, um einen Prozess zu verhindern.
 
-- Führen Sie in Windows PowerShell das Cmdlet "Break-proc" mit dem `ProcessId`-Parameter aus, um einen Prozess auf der Grundlage des Bezeichners zu unterbinden. In diesem Fall verwendet das Cmdlet den `ProcessId` Parametersatz, um den Prozess zu verhindern.
+- Führen Sie bei der Ausführung von Windows PowerShell das Cmdlet "Break-proc" mit dem `ProcessId` festgelegten Parameter aus, um einen Prozess auf der Grundlage des Bezeichners anzuhalten. In diesem Fall verwendet das Cmdlet den `ProcessId` Parametersatz, um den Prozess zu verhindern.
 
   ```
   PS> stop-proc -Id 444
@@ -237,7 +230,7 @@ Wenn das Cmdlet bei Windows PowerShell registriert wurde, testen Sie es, indem S
   [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
   ```
 
-- Führen Sie in Windows PowerShell das Cmdlet "Break-proc" mit dem `InputObject`-Parameter aus, um Prozesse für das vom `Get-Process`-Befehl abgerufene Notepad-Objekt zu verhindern.
+- Führen Sie in Windows PowerShell das Cmdlet "Break-proc" mit dem `InputObject` Parameter Set aus, um die Prozesse für das vom Befehl abgerufene Notepad-Objekt zu verhindern `Get-Process` .
 
   ```
   PS> get-process notepad | stop-proc
@@ -249,7 +242,7 @@ Wenn das Cmdlet bei Windows PowerShell registriert wurde, testen Sie es, indem S
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md)
+[Erstellen eines Cmdlet, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md)
 
 [Erstellen eines Windows PowerShell-Cmdlets](/powershell/scripting/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
