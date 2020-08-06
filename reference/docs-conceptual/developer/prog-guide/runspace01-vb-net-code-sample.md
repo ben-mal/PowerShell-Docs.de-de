@@ -1,25 +1,18 @@
 ---
 title: Runspace01 (VB.net)-Code Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 12ee5382-95ba-41c7-8291-7f69a6f63514
-caps.latest.revision: 7
-ms.openlocfilehash: ce6bdec379a7ba9bf9b088c79a08ad5cef5da80b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d40424283057b389d8a4aafeb8ddfa44284f3ba1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560303"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87778662"
 ---
-# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="4dbfa-102">Runspace01-Codebeispiel (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="4dbfa-102">Runspace01 (VB.NET) Code Sample</span></span>
+# <a name="runspace01-vbnet-code-sample"></a><span data-ttu-id="33038-102">Runspace01-Codebeispiel (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="33038-102">Runspace01 (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="4dbfa-103">Im folgenden finden Sie die Codebeispiele für den Runspace [, der unter Erstellen einer Konsolenanwendung beschrieben wird, die einen angegebenen Befehl ausführt](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span><span class="sxs-lookup"><span data-stu-id="4dbfa-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span></span> <span data-ttu-id="4dbfa-104">Hierzu ruft die Anwendung einen Runspace auf und ruft dann einen Befehl auf.</span><span class="sxs-lookup"><span data-stu-id="4dbfa-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="4dbfa-105">(Beachten Sie, dass in dieser Anwendung keine Runspace-Konfigurationsinformationen angegeben werden und keine Pipeline explizit erstellt wird.) Der Befehl, der aufgerufen wird, ist das `Get-Process` Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="4dbfa-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
+<span data-ttu-id="33038-103">Im folgenden finden Sie die Codebeispiele für den Runspace [, der unter Erstellen einer Konsolenanwendung beschrieben wird, die einen angegebenen Befehl ausführt](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span><span class="sxs-lookup"><span data-stu-id="33038-103">Here are the code samples for the runspace described in [Creating a Console Application That Runs a Specified Command](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program).</span></span> <span data-ttu-id="33038-104">Hierzu ruft die Anwendung einen Runspace auf und ruft dann einen Befehl auf.</span><span class="sxs-lookup"><span data-stu-id="33038-104">To do this, the application invokes a runspace, and then invokes a command.</span></span> <span data-ttu-id="33038-105">(Beachten Sie, dass in dieser Anwendung keine Runspace-Konfigurationsinformationen angegeben werden und keine Pipeline explizit erstellt wird.) Der Befehl, der aufgerufen wird, ist das `Get-Process` Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="33038-105">(Note that this application does not specify runspace configuration information, nor does it explicitly create a pipeline.) The command that is invoked is the `Get-Process` cmdlet.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="4dbfa-106">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="4dbfa-106">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="33038-106">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="33038-106">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -71,6 +64,6 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace01.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace01.vb#L09-L53 "Runspace01.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="4dbfa-107">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="4dbfa-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33038-107">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="33038-107">See Also</span></span>
 
-[<span data-ttu-id="4dbfa-108">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="4dbfa-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="33038-108">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="33038-108">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
