@@ -1,32 +1,25 @@
 ---
-title: Erstellen einer Formatierungs Datei (. Format. ps1xml) | Microsoft-Dokumentation
-ms.custom: ''
+title: Vorgehensweise beim Erstellen einer Formatierungs Datei (.format.ps1XML) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
-caps.latest.revision: 8
-ms.openlocfilehash: 7a578dd63a53562f992b2970573258b8676e2a52
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692275"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87781255"
 ---
-# <a name="how-to-create-a-formatting-file-formatps1xml"></a><span data-ttu-id="caaab-102">Erstellen einer Formatierungsdatei (.format.ps1xml)</span><span class="sxs-lookup"><span data-stu-id="caaab-102">How to Create a Formatting File (.format.ps1xml)</span></span>
+# <a name="how-to-create-a-formatting-file-formatps1xml"></a><span data-ttu-id="03afc-102">Erstellen einer Formatierungsdatei (.format.ps1xml)</span><span class="sxs-lookup"><span data-stu-id="03afc-102">How to Create a Formatting File (.format.ps1xml)</span></span>
 
-<span data-ttu-id="caaab-103">In diesem Thema wird beschrieben, wie eine Formatierungs Datei (. Format. ps1xml) erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="caaab-103">This topic describes how to create a formatting file (.format.ps1xml).</span></span>
+<span data-ttu-id="03afc-103">In diesem Thema wird beschrieben, wie eine Formatierungs Datei (.format.ps1XML) erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="03afc-103">This topic describes how to create a formatting file (.format.ps1xml).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="caaab-104">Sie können auch eine Formatierungs Datei erstellen, indem Sie eine Kopie einer der von Windows PowerShell bereitgestellten Dateien erstellen.</span><span class="sxs-lookup"><span data-stu-id="caaab-104">You can also create a formatting file by making a copy of one of the files provided by Windows PowerShell.</span></span> <span data-ttu-id="caaab-105">Wenn Sie eine Kopie einer vorhandenen Datei erstellen, löschen Sie die vorhandene digitale Signatur, und fügen Sie der neuen Datei Ihre eigene Signatur hinzu.</span><span class="sxs-lookup"><span data-stu-id="caaab-105">If you make a copy of an existing file, delete the existing digital signature, and add your own signature to the new file.</span></span>
+> <span data-ttu-id="03afc-104">Sie können auch eine Formatierungs Datei erstellen, indem Sie eine Kopie einer der von Windows PowerShell bereitgestellten Dateien erstellen.</span><span class="sxs-lookup"><span data-stu-id="03afc-104">You can also create a formatting file by making a copy of one of the files provided by Windows PowerShell.</span></span> <span data-ttu-id="03afc-105">Wenn Sie eine Kopie einer vorhandenen Datei erstellen, löschen Sie die vorhandene digitale Signatur, und fügen Sie der neuen Datei Ihre eigene Signatur hinzu.</span><span class="sxs-lookup"><span data-stu-id="03afc-105">If you make a copy of an existing file, delete the existing digital signature, and add your own signature to the new file.</span></span>
 
-### <a name="to-create-a-formatps1xml-file"></a><span data-ttu-id="caaab-106">Zum Erstellen einer. Format. ps1xml-Datei.</span><span class="sxs-lookup"><span data-stu-id="caaab-106">To create a .format.ps1xml file.</span></span>
+### <a name="to-create-a-formatps1xml-file"></a><span data-ttu-id="03afc-106">Zum Erstellen einer .format.ps1-XML-Datei.</span><span class="sxs-lookup"><span data-stu-id="03afc-106">To create a .format.ps1xml file.</span></span>
 
-1. <span data-ttu-id="caaab-107">Erstellen Sie eine Textdatei (. txt) mit einem Text-Editor, z. b. Notepad.</span><span class="sxs-lookup"><span data-stu-id="caaab-107">Create a text file (.txt) using a text editor such as Notepad.</span></span>
+1. <span data-ttu-id="03afc-107">Erstellen Sie eine Textdatei (. txt) mit einem Text-Editor, z. b. Notepad.</span><span class="sxs-lookup"><span data-stu-id="03afc-107">Create a text file (.txt) using a text editor such as Notepad.</span></span>
 
-2. <span data-ttu-id="caaab-108">Kopieren Sie die folgenden Zeilen in die Formatierungs Datei.</span><span class="sxs-lookup"><span data-stu-id="caaab-108">Copy the following lines into the formatting file.</span></span>
+2. <span data-ttu-id="03afc-108">Kopieren Sie die folgenden Zeilen in die Formatierungs Datei.</span><span class="sxs-lookup"><span data-stu-id="03afc-108">Copy the following lines into the formatting file.</span></span>
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -36,14 +29,14 @@ ms.locfileid: "83692275"
    </Configuration>
    ```
 
-   - <span data-ttu-id="caaab-109">Die `<Configuration></Configuration>` Tags definieren den Stamm `Configuration` Knoten.</span><span class="sxs-lookup"><span data-stu-id="caaab-109">The `<Configuration></Configuration>` tags define the root `Configuration` node.</span></span> <span data-ttu-id="caaab-110">Alle zusätzlichen XML-Tags werden in diesen Knoten eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="caaab-110">All additional XML tags will be enclosed within this node.</span></span>
+   - <span data-ttu-id="03afc-109">Die `<Configuration></Configuration>` Tags definieren den Stamm `Configuration` Knoten.</span><span class="sxs-lookup"><span data-stu-id="03afc-109">The `<Configuration></Configuration>` tags define the root `Configuration` node.</span></span> <span data-ttu-id="03afc-110">Alle zusätzlichen XML-Tags werden in diesen Knoten eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="03afc-110">All additional XML tags will be enclosed within this node.</span></span>
 
-   - <span data-ttu-id="caaab-111">Die `<ViewDefinitions></ViewDefinitions>` Tags definieren den `ViewDefinitions` Knoten.</span><span class="sxs-lookup"><span data-stu-id="caaab-111">The `<ViewDefinitions></ViewDefinitions>` tags define the `ViewDefinitions` node.</span></span> <span data-ttu-id="caaab-112">Alle Sichten werden innerhalb dieses Knotens definiert.</span><span class="sxs-lookup"><span data-stu-id="caaab-112">All views are defined within this node.</span></span>
+   - <span data-ttu-id="03afc-111">Die `<ViewDefinitions></ViewDefinitions>` Tags definieren den `ViewDefinitions` Knoten.</span><span class="sxs-lookup"><span data-stu-id="03afc-111">The `<ViewDefinitions></ViewDefinitions>` tags define the `ViewDefinitions` node.</span></span> <span data-ttu-id="03afc-112">Alle Sichten werden innerhalb dieses Knotens definiert.</span><span class="sxs-lookup"><span data-stu-id="03afc-112">All views are defined within this node.</span></span>
 
-3. <span data-ttu-id="caaab-113">Speichern Sie die Datei im Installationsordner von Windows PowerShell, in Ihrem Modul Ordner oder in einem Unterordner des Modul Ordners.</span><span class="sxs-lookup"><span data-stu-id="caaab-113">Save the file to the Windows PowerShell installation folder, to your module folder, or to a subfolder of the module folder.</span></span> <span data-ttu-id="caaab-114">Verwenden Sie das folgende Namensformat, wenn Sie die Datei speichern: `MyFile.format.ps1xml` .</span><span class="sxs-lookup"><span data-stu-id="caaab-114">Use the following name format when you save the file:  `MyFile.format.ps1xml`.</span></span> <span data-ttu-id="caaab-115">Beim Formatieren von Dateien muss die Erweiterung verwendet werden `.format.ps1xml` .</span><span class="sxs-lookup"><span data-stu-id="caaab-115">Formatting files must use the `.format.ps1xml` extension.</span></span>
+3. <span data-ttu-id="03afc-113">Speichern Sie die Datei im Installationsordner von Windows PowerShell, in Ihrem Modul Ordner oder in einem Unterordner des Modul Ordners.</span><span class="sxs-lookup"><span data-stu-id="03afc-113">Save the file to the Windows PowerShell installation folder, to your module folder, or to a subfolder of the module folder.</span></span> <span data-ttu-id="03afc-114">Verwenden Sie das folgende Namensformat, wenn Sie die Datei speichern: `MyFile.format.ps1xml` .</span><span class="sxs-lookup"><span data-stu-id="03afc-114">Use the following name format when you save the file:  `MyFile.format.ps1xml`.</span></span> <span data-ttu-id="03afc-115">Beim Formatieren von Dateien muss die Erweiterung verwendet werden `.format.ps1xml` .</span><span class="sxs-lookup"><span data-stu-id="03afc-115">Formatting files must use the `.format.ps1xml` extension.</span></span>
 
-   <span data-ttu-id="caaab-116">Nun können Sie der Formatierungs Datei Ansichten hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="caaab-116">You are now ready to add views to the formatting file.</span></span> <span data-ttu-id="caaab-117">Es gibt keine Beschränkung für die Anzahl der Sichten, die in einer Formatierungs Datei definiert werden können.</span><span class="sxs-lookup"><span data-stu-id="caaab-117">There is no limit to the number of views that can be defined in a formatting file.</span></span> <span data-ttu-id="caaab-118">Sie können eine einzelne Ansicht für jedes Objekt, mehrere Ansichten für dasselbe Objekt oder eine einzelne Ansicht hinzufügen, die von mehreren Objekten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="caaab-118">You can add a single view for each object, multiple views for the same object, or a single view that is used by multiple objects.</span></span>
+   <span data-ttu-id="03afc-116">Nun können Sie der Formatierungs Datei Ansichten hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="03afc-116">You are now ready to add views to the formatting file.</span></span> <span data-ttu-id="03afc-117">Es gibt keine Beschränkung für die Anzahl der Sichten, die in einer Formatierungs Datei definiert werden können.</span><span class="sxs-lookup"><span data-stu-id="03afc-117">There is no limit to the number of views that can be defined in a formatting file.</span></span> <span data-ttu-id="03afc-118">Sie können eine einzelne Ansicht für jedes Objekt, mehrere Ansichten für dasselbe Objekt oder eine einzelne Ansicht hinzufügen, die von mehreren Objekten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="03afc-118">You can add a single view for each object, multiple views for the same object, or a single view that is used by multiple objects.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="caaab-119">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="caaab-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03afc-119">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="03afc-119">See Also</span></span>
 
-[<span data-ttu-id="caaab-120">Schreiben einer Windows PowerShell-Formatierungs-und-Typen Datei</span><span class="sxs-lookup"><span data-stu-id="caaab-120">Writing a Windows PowerShell Formatting and Types File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="03afc-120">Schreiben einer Windows PowerShell-Formatierungs-und-Typen Datei</span><span class="sxs-lookup"><span data-stu-id="03afc-120">Writing a Windows PowerShell Formatting and Types File</span></span>](./writing-a-powershell-formatting-file.md)

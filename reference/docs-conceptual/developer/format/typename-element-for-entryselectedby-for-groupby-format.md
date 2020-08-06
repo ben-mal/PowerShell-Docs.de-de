@@ -1,64 +1,57 @@
 ---
 title: Tyname-Element für entryselectedby für GroupBy (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b8b6739b-770c-432a-95ab-551c7507c51f
-caps.latest.revision: 6
-ms.openlocfilehash: 3b5ce60d3a0d76988af48f49445a5478a415d498
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e62762cf142bd2d20b21ad8f4249285bd3679280
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361669"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87780266"
 ---
-# <a name="typename-element-for-entryselectedby-for-groupby-format"></a><span data-ttu-id="6ce58-102">Element „TypeName“ für EntrySelectedBy für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="6ce58-102">TypeName Element for EntrySelectedBy for GroupBy (Format)</span></span>
+# <a name="typename-element-for-entryselectedby-for-groupby-format"></a><span data-ttu-id="414bd-102">Element „TypeName“ für EntrySelectedBy für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="414bd-102">TypeName Element for EntrySelectedBy for GroupBy (Format)</span></span>
 
-<span data-ttu-id="6ce58-103">Gibt einen .NET-Typ an, der diese Definition des benutzerdefinierten Steuer Elements verwendet.</span><span class="sxs-lookup"><span data-stu-id="6ce58-103">Specifies a .NET type that uses this definition of the custom control.</span></span> <span data-ttu-id="6ce58-104">Dieses Element wird verwendet, wenn definiert wird, wie eine neue Gruppe von Objekten angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="6ce58-104">This element is used when defining how a new group of objects is displayed.</span></span>
+<span data-ttu-id="414bd-103">Gibt einen .NET-Typ an, der diese Definition des benutzerdefinierten Steuer Elements verwendet.</span><span class="sxs-lookup"><span data-stu-id="414bd-103">Specifies a .NET type that uses this definition of the custom control.</span></span> <span data-ttu-id="414bd-104">Dieses Element wird verwendet, wenn definiert wird, wie eine neue Gruppe von Objekten angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="414bd-104">This element is used when defining how a new group of objects is displayed.</span></span>
 
-<span data-ttu-id="6ce58-105">Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) GroupBy-Element für View (Format) CustomControl-Element für GroupBy (Format) customentries-Element für CustomControl für GroupBy (Format) customentry-Element für CustomControl für GroupBy (Format) entryselectedby-Element für customentry für GroupBy (Format) tykename-Element für entryselectedby für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="6ce58-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) GroupBy Element for View (Format) CustomControl Element for GroupBy (Format) CustomEntries Element for CustomControl for GroupBy (Format) CustomEntry Element for CustomControl for GroupBy (Format) EntrySelectedBy Element for CustomEntry for GroupBy (Format) TypeName Element for EntrySelectedBy for GroupBy (Format)</span></span>
+<span data-ttu-id="414bd-105">Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) GroupBy-Element für View (Format) CustomControl-Element für GroupBy (Format) customentries-Element für CustomControl für GroupBy (Format) customentry-Element für CustomControl für GroupBy (Format) entryselectedby-Element für customentry für GroupBy (Format) tykename-Element für entryselectedby für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="414bd-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) GroupBy Element for View (Format) CustomControl Element for GroupBy (Format) CustomEntries Element for CustomControl for GroupBy (Format) CustomEntry Element for CustomControl for GroupBy (Format) EntrySelectedBy Element for CustomEntry for GroupBy (Format) TypeName Element for EntrySelectedBy for GroupBy (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="6ce58-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="6ce58-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="414bd-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="414bd-106">Syntax</span></span>
 
 ```xml
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="6ce58-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="6ce58-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="414bd-107">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="414bd-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="6ce58-108">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `TypeName`-Elements beschrieben.</span><span class="sxs-lookup"><span data-stu-id="6ce58-108">The following sections describe attributes, child elements, and the parent element of the `TypeName` element.</span></span>
+<span data-ttu-id="414bd-108">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `TypeName` Elements beschrieben.</span><span class="sxs-lookup"><span data-stu-id="414bd-108">The following sections describe attributes, child elements, and the parent element of the `TypeName` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="6ce58-109">Attributes</span><span class="sxs-lookup"><span data-stu-id="6ce58-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="414bd-109">Attribute</span><span class="sxs-lookup"><span data-stu-id="414bd-109">Attributes</span></span>
 
-<span data-ttu-id="6ce58-110">Keine.</span><span class="sxs-lookup"><span data-stu-id="6ce58-110">None.</span></span>
+<span data-ttu-id="414bd-110">Keine</span><span class="sxs-lookup"><span data-stu-id="414bd-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="6ce58-111">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="6ce58-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="414bd-111">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="414bd-111">Child Elements</span></span>
 
-<span data-ttu-id="6ce58-112">Keine.</span><span class="sxs-lookup"><span data-stu-id="6ce58-112">None.</span></span>
+<span data-ttu-id="414bd-112">Keine</span><span class="sxs-lookup"><span data-stu-id="414bd-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="6ce58-113">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="6ce58-113">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="414bd-113">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="414bd-113">Parent Elements</span></span>
 
-|<span data-ttu-id="6ce58-114">Element</span><span class="sxs-lookup"><span data-stu-id="6ce58-114">Element</span></span>|<span data-ttu-id="6ce58-115">Description</span><span class="sxs-lookup"><span data-stu-id="6ce58-115">Description</span></span>|
+|<span data-ttu-id="414bd-114">Element</span><span class="sxs-lookup"><span data-stu-id="414bd-114">Element</span></span>|<span data-ttu-id="414bd-115">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="414bd-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="6ce58-116">Entryselectedby-Element für customentry für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="6ce58-116">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)|<span data-ttu-id="6ce58-117">Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.</span><span class="sxs-lookup"><span data-stu-id="6ce58-117">Defines the .NET types that use this control definition or the condition that must exist for this definition to be used.</span></span>|
+|[<span data-ttu-id="414bd-116">Element „EntrySelectedBy“ für CustomEntry für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="414bd-116">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)|<span data-ttu-id="414bd-117">Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.</span><span class="sxs-lookup"><span data-stu-id="414bd-117">Defines the .NET types that use this control definition or the condition that must exist for this definition to be used.</span></span>|
 
-## <a name="text-value"></a><span data-ttu-id="6ce58-118">Textwert</span><span class="sxs-lookup"><span data-stu-id="6ce58-118">Text Value</span></span>
+## <a name="text-value"></a><span data-ttu-id="414bd-118">Textwert</span><span class="sxs-lookup"><span data-stu-id="414bd-118">Text Value</span></span>
 
-<span data-ttu-id="6ce58-119">Geben Sie den voll qualifizierten Namen des .net-Typs an, z. b. `System.IO.DirectoryInfo`.</span><span class="sxs-lookup"><span data-stu-id="6ce58-119">Specify the fully qualified name of the .NET type, such as `System.IO.DirectoryInfo`.</span></span>
+<span data-ttu-id="414bd-119">Geben Sie den voll qualifizierten Namen des .net-Typs an, z `System.IO.DirectoryInfo` . b..</span><span class="sxs-lookup"><span data-stu-id="414bd-119">Specify the fully qualified name of the .NET type, such as `System.IO.DirectoryInfo`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="6ce58-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6ce58-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="414bd-120">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="414bd-120">Remarks</span></span>
 
-<span data-ttu-id="6ce58-121">Für jede Steuerelement Definition muss mindestens ein Typname, ein Auswahl Satz oder eine Auswahlbedingung definiert sein.</span><span class="sxs-lookup"><span data-stu-id="6ce58-121">Each control definition must have at least one type name, selection set, or selection condition defined.</span></span>
+<span data-ttu-id="414bd-121">Für jede Steuerelement Definition muss mindestens ein Typname, ein Auswahl Satz oder eine Auswahlbedingung definiert sein.</span><span class="sxs-lookup"><span data-stu-id="414bd-121">Each control definition must have at least one type name, selection set, or selection condition defined.</span></span>
 
-<span data-ttu-id="6ce58-122">Weitere Informationen zu den Komponenten einer benutzerdefinierten Steuerelement Ansicht finden Sie unter [Erstellen von benutzerdefinierten Steuerelementen](./creating-custom-controls.md).</span><span class="sxs-lookup"><span data-stu-id="6ce58-122">For more information about the components of a custom control view, see [Creating Custom Controls](./creating-custom-controls.md).</span></span>
+<span data-ttu-id="414bd-122">Weitere Informationen zu den Komponenten einer benutzerdefinierten Steuerelement Ansicht finden Sie unter [Erstellen von benutzerdefinierten Steuerelementen](./creating-custom-controls.md).</span><span class="sxs-lookup"><span data-stu-id="414bd-122">For more information about the components of a custom control view, see [Creating Custom Controls](./creating-custom-controls.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6ce58-123">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6ce58-123">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="414bd-123">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="414bd-123">See Also</span></span>
 
-[<span data-ttu-id="6ce58-124">Erstellen benutzerdefinierter Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="6ce58-124">Creating Custom Controls</span></span>](./creating-custom-controls.md)
+[<span data-ttu-id="414bd-124">Erstellen von benutzerdefinierten Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="414bd-124">Creating Custom Controls</span></span>](./creating-custom-controls.md)
 
-[<span data-ttu-id="6ce58-125">Entryselectedby-Element für customentry für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="6ce58-125">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)
+[<span data-ttu-id="414bd-125">Element „EntrySelectedBy“ für CustomEntry für GroupBy (Format)</span><span class="sxs-lookup"><span data-stu-id="414bd-125">EntrySelectedBy Element for CustomEntry for GroupBy (Format)</span></span>](./entryselectedby-element-for-customentry-for-groupby-format.md)
 
-[<span data-ttu-id="6ce58-126">Schreiben einer PowerShell-Formatierungs Datei</span><span class="sxs-lookup"><span data-stu-id="6ce58-126">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="414bd-126">Schreiben einer PowerShell-Formatierungsdatei</span><span class="sxs-lookup"><span data-stu-id="414bd-126">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)

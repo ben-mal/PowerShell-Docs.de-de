@@ -1,33 +1,26 @@
 ---
 title: Erstellen eines eingeschränkten Runspace | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 59125e65-7030-40bb-9926-756120b2d952
-caps.latest.revision: 5
-ms.openlocfilehash: 20ac1e2af8e047b8b572d86a55439676aa8df25c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367649"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87779810"
 ---
-# <a name="creating-a-constrained-runspace"></a><span data-ttu-id="c5259-102">Erstellen eines eingeschränkten Runspaces</span><span class="sxs-lookup"><span data-stu-id="c5259-102">Creating a constrained runspace</span></span>
+# <a name="creating-a-constrained-runspace"></a><span data-ttu-id="8a56d-102">Erstellen eines eingeschränkten Runspaces</span><span class="sxs-lookup"><span data-stu-id="8a56d-102">Creating a constrained runspace</span></span>
 
-<span data-ttu-id="c5259-103">Aus Leistungs-oder Sicherheitsgründen möchten Sie möglicherweise die Windows PowerShell-Befehle einschränken, die für die Host Anwendung verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="c5259-103">For performance or security reasons, you might want to restrict the Windows PowerShell commands available to your host application.</span></span> <span data-ttu-id="c5259-104">Zu diesem Zweck erstellen Sie ein leeres [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , indem Sie die [System. Management. Automation. Runspaces. initialsessionstate. Create \*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) -Methode aufrufen und dann nur die Befehle hinzufügen, die Sie verfügbar machen möchten.</span><span class="sxs-lookup"><span data-stu-id="c5259-104">To do this you create an empty [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) by calling the [System.Management.Automation.Runspaces.Initialsessionstate.Create\*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method, and then add only the commands you want available.</span></span>
+<span data-ttu-id="8a56d-103">Aus Leistungs-oder Sicherheitsgründen möchten Sie möglicherweise die Windows PowerShell-Befehle einschränken, die für die Host Anwendung verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="8a56d-103">For performance or security reasons, you might want to restrict the Windows PowerShell commands available to your host application.</span></span> <span data-ttu-id="8a56d-104">Zu diesem Zweck erstellen Sie eine leere [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , indem Sie den [System.Management.Automation.Runspaces.Initialsessionstate aufrufen. Create \*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) -Methode, und fügen Sie dann nur die Befehle hinzu, die Sie verfügbar machen möchten.</span><span class="sxs-lookup"><span data-stu-id="8a56d-104">To do this you create an empty [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) by calling the [System.Management.Automation.Runspaces.Initialsessionstate.Create\*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) method, and then add only the commands you want available.</span></span>
 
- <span data-ttu-id="c5259-105">Wenn Sie einen Runspace verwenden, der nur die von Ihnen angegebenen Befehle lädt, wird die Leistung erheblich verbessert.</span><span class="sxs-lookup"><span data-stu-id="c5259-105">Using a runspace that loads only the commands that you specify provides significantly improved performance.</span></span>
+ <span data-ttu-id="8a56d-105">Wenn Sie einen Runspace verwenden, der nur die von Ihnen angegebenen Befehle lädt, wird die Leistung erheblich verbessert.</span><span class="sxs-lookup"><span data-stu-id="8a56d-105">Using a runspace that loads only the commands that you specify provides significantly improved performance.</span></span>
 
- <span data-ttu-id="c5259-106">Verwenden Sie die Methoden der [System. Management. Automation. Runspaces. sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) -Klasse, um Cmdlets für den anfänglichen Sitzungs Status zu definieren.</span><span class="sxs-lookup"><span data-stu-id="c5259-106">You use the methods of the [System.Management.Automation.Runspaces.Sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) class to define cmdlets for the initial session state.</span></span>
+ <span data-ttu-id="8a56d-106">Verwenden Sie die Methoden der [System. Management. Automation. Runspaces. sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) -Klasse, um Cmdlets für den anfänglichen Sitzungs Status zu definieren.</span><span class="sxs-lookup"><span data-stu-id="8a56d-106">You use the methods of the [System.Management.Automation.Runspaces.Sessionstatecmdletentry](/dotnet/api/System.Management.Automation.Runspaces.SessionStateCmdletEntry) class to define cmdlets for the initial session state.</span></span>
 
- <span data-ttu-id="c5259-107">Sie können auch die Befehle als privat festlegen.</span><span class="sxs-lookup"><span data-stu-id="c5259-107">You can also make commands private.</span></span> <span data-ttu-id="c5259-108">Private Befehle können von der Host Anwendung, jedoch nicht von Benutzern der Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c5259-108">Private commands can be used by the host application, but not by users of the application.</span></span>
+ <span data-ttu-id="8a56d-107">Sie können auch die Befehle als privat festlegen.</span><span class="sxs-lookup"><span data-stu-id="8a56d-107">You can also make commands private.</span></span> <span data-ttu-id="8a56d-108">Private Befehle können von der Host Anwendung, jedoch nicht von Benutzern der Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8a56d-108">Private commands can be used by the host application, but not by users of the application.</span></span>
 
-## <a name="adding-commands-to-an-empty-runspace"></a><span data-ttu-id="c5259-109">Hinzufügen von Befehlen zu einem leeren Runspace</span><span class="sxs-lookup"><span data-stu-id="c5259-109">Adding commands to an empty runspace</span></span>
+## <a name="adding-commands-to-an-empty-runspace"></a><span data-ttu-id="8a56d-109">Hinzufügen von Befehlen zu einem leeren Runspace</span><span class="sxs-lookup"><span data-stu-id="8a56d-109">Adding commands to an empty runspace</span></span>
 
- <span data-ttu-id="c5259-110">Im folgenden Beispiel wird veranschaulicht, wie ein leerer initialsessionstate erstellt und ihm Befehle hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="c5259-110">The following example demonstrates how to create an empty InitialSessionState and add commands to it.</span></span>
+ <span data-ttu-id="8a56d-110">Im folgenden Beispiel wird veranschaulicht, wie ein leerer initialsessionstate erstellt und ihm Befehle hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="8a56d-110">The following example demonstrates how to create an empty InitialSessionState and add commands to it.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -107,9 +100,9 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="making-commands-private"></a><span data-ttu-id="c5259-111">Erstellen von Befehlen als privat</span><span class="sxs-lookup"><span data-stu-id="c5259-111">Making commands private</span></span>
+## <a name="making-commands-private"></a><span data-ttu-id="8a56d-111">Erstellen von Befehlen als privat</span><span class="sxs-lookup"><span data-stu-id="8a56d-111">Making commands private</span></span>
 
- <span data-ttu-id="c5259-112">Sie können einen Befehl auch als privat festlegen, indem Sie die [System. Management. Automation. CommandInfo. Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) -Eigenschaft von System. Management [. Automation. sessionstateentryvisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **private**festlegen.</span><span class="sxs-lookup"><span data-stu-id="c5259-112">You can also make a command private, by setting it's [System.Management.Automation.Commandinfo.Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) property to [System.Management.Automation.SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Private**.</span></span> <span data-ttu-id="c5259-113">Die Host Anwendung und andere Befehle können diesen Befehl abrufen, der Benutzer der Anwendung jedoch nicht.</span><span class="sxs-lookup"><span data-stu-id="c5259-113">The host application and other commands can call that command, but the user of the application cannot.</span></span> <span data-ttu-id="c5259-114">Im folgenden Beispiel ist der Befehl [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) privat.</span><span class="sxs-lookup"><span data-stu-id="c5259-114">In the following example, the [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) command is private.</span></span>
+ <span data-ttu-id="8a56d-112">Sie können einen Befehl auch als privat festlegen, indem Sie die [System. Management. Automation. CommandInfo. Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) -Eigenschaft von System. Management [. Automation. sessionstateentryvisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **private**festlegen.</span><span class="sxs-lookup"><span data-stu-id="8a56d-112">You can also make a command private, by setting it's [System.Management.Automation.Commandinfo.Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) property to [System.Management.Automation.SessionStateEntryVisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **Private**.</span></span> <span data-ttu-id="8a56d-113">Die Host Anwendung und andere Befehle können diesen Befehl abrufen, der Benutzer der Anwendung jedoch nicht.</span><span class="sxs-lookup"><span data-stu-id="8a56d-113">The host application and other commands can call that command, but the user of the application cannot.</span></span> <span data-ttu-id="8a56d-114">Im folgenden Beispiel ist der Befehl [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) privat.</span><span class="sxs-lookup"><span data-stu-id="8a56d-114">In the following example, the [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) command is private.</span></span>
 
 ```csharp
 defaultSessionState = InitialSessionState.CreateDefault();
@@ -120,6 +113,6 @@ this.runspace = RunspaceFactory.CreateRunspace(defaultSessionState);
 this.runspace.Open();
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c5259-115">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="c5259-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a56d-115">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="8a56d-115">See Also</span></span>
 
- [<span data-ttu-id="c5259-116">Erstellen eines initialsessionstate</span><span class="sxs-lookup"><span data-stu-id="c5259-116">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="8a56d-116">Erstellen von InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="8a56d-116">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
