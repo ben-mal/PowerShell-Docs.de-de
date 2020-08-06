@@ -1,19 +1,12 @@
 ---
 title: Deklaration der Credential-Attribute | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 96a5dcad-faed-44d8-8c80-321f10499710
-caps.latest.revision: 6
-ms.openlocfilehash: 49a62ccb09f06f77862d4737199e58293e7fbe0a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a6deca52fa6c9e46138ae92401f58ac5dbd15852
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369889"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784366"
 ---
 # <a name="credential-attribute-declaration"></a>Attributdeklaration: Credential
 
@@ -25,7 +18,7 @@ Das Anmelde Informationen-Attribut ist ein optionales Attribut, das mit Anmelde 
 [Credential]
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - In der Regel wird dieses Attribut von Parametern des Typs [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) verwendet, sodass eine Zeichenfolge auch als Argument an den-Parameter übergeben werden kann. Wenn ein [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) -Objekt an den-Parameter übergeben wird, führt Windows PowerShell keine Aktion aus.
 
@@ -37,8 +30,8 @@ Das Anmelde Informationen-Attribut ist ein optionales Attribut, das mit Anmelde 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Parameter Aliase](./parameter-aliases.md)
+[Parameteraliase](./parameter-aliases.md)
 
-[Parameter Attribut Deklaration](./parameter-attribute-declaration.md)
+[Attributdeklaration: Parameter](./parameter-attribute-declaration.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

@@ -1,19 +1,12 @@
 ---
 title: PropertyName-Element für GroupBy (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: ddcecc46-ac75-43fa-b03a-802a68524ec3
-caps.latest.revision: 10
-ms.openlocfilehash: da6ac5abe7acbbee8f57b3e81529664f81800b86
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362519"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785607"
 ---
 # <a name="propertyname-element-for-groupby-format"></a>Element „PropertyName“ für GroupBy (Format)
 
@@ -29,27 +22,27 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `PropertyName`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `PropertyName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[GroupBy-Element für Ansicht (Format)](./groupby-element-for-view-format.md)|Definiert, wie eine Gruppe von .NET-Objekten angezeigt wird.|
+|[Element „GroupBy“ für View (Format)](./groupby-element-for-view-format.md)|Definiert, wie eine Gruppe von .NET-Objekten angezeigt wird.|
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen der .net-Eigenschaft an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Windows PowerShell startet eine neue Gruppe, wenn der Wert dieser Eigenschaft geändert wird.
 
@@ -71,8 +64,8 @@ Ein Beispiel für eine komplette Formatierungs Datei, die dieses Element enthäl
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[GroupBy-Element für Ansicht (Format)](./groupby-element-for-view-format.md)
+[Element „GroupBy“ für View (Format)](./groupby-element-for-view-format.md)
 
-[ScriptBlock-Element für GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
+[Element „ScriptBlock“ für GroupBy (Format)](./scriptblock-element-for-groupby-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

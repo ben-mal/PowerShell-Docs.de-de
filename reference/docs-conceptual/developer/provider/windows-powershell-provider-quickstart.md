@@ -1,19 +1,12 @@
 ---
 title: Schnellstart für Windows PowerShell-Anbieter | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
-caps.latest.revision: 5
-ms.openlocfilehash: 4693a2ec02a8f010f900bebf5a50853edef88cb1
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 048812d1a4765b2ff0069698615453f91ee95409
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560932"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783125"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Windows PowerShell-Anbieter: Schnellstart
 
@@ -35,7 +28,7 @@ Erstellen Sie in Visual Studio ein Klassen Bibliotheksprojekt mit dem Namen acce
 
 1. Fügen Sie die System. Management. Automation-Assembly als Verweis auf das Projekt hinzu.
 
-2. Klicken Sie **> Debuggen auf Projekt > accessdbprovidersample-Eigenschaften**. Klicken Sie unter **Projekt starten**auf **externes Programm starten**, und navigieren Sie zur ausführbaren Windows PowerShell-Datei (in der Regel c:\Windows\System32\WindowsPowerShell\v1.0 \\ . PowerShell. exe).
+2. Klicken Sie **> Debuggen auf Projekt > accessdbprovidersample-Eigenschaften**. Klicken Sie unter **Projekt starten**auf **externes Programm starten**, und navigieren Sie zur ausführbaren Windows PowerShell-Datei (in der Regel c:\Windows\System32\WindowsPowerShell\v1.0 \\.powershell.exe).
 
 3. Geben Sie unter **Start Optionen**Folgendes in das Feld **Befehlszeilenargumente** ein:`-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 

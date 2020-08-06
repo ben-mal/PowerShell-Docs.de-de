@@ -1,19 +1,12 @@
 ---
 title: AutoSize-Element für widecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: def37479-7b6e-40cf-bc81-0f7cbc651b31
-caps.latest.revision: 11
-ms.openlocfilehash: 6dbaef5886a0600bd9fe96dbc8d21f00a674dfcf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 64e62142738916978b37eb1cd3a73536b0447099
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369049"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783873"
 ---
 # <a name="autosize-element-for-widecontrol-format"></a>Element „AutoSize“ für WideControl (Format)
 
@@ -29,11 +22,11 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `AutoSize`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `AutoSize` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -41,13 +34,13 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[Widecontrol-Element (Format)](./widecontrol-element-format.md)|Definiert ein breites Listenformat (Einzelwert) für die Sicht.|
+|[Element „WideControl“ (Format)](./widecontrol-element-format.md)|Definiert ein breites Listenformat (Einzelwert) für die Sicht.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie eine breite Sicht definieren, können Sie das `AutoSize`-Element oder das [ColumnNumber](./columnnumber-element-for-widecontrol-format.md) -Element hinzufügen, aber Sie können nicht beides hinzufügen.
+Beim Definieren einer breiten Ansicht können Sie das- `AutoSize` Element oder das [ColumnNumber](./columnnumber-element-for-widecontrol-format.md) -Element hinzufügen. Sie können jedoch nicht beides hinzufügen.
 
 Weitere Informationen zu den Komponenten einer breiten Ansicht finden Sie unter [Erstellen einer breiten Ansicht](./creating-a-wide-view.md).
 
@@ -55,10 +48,10 @@ Ein Beispiel für eine breite Ansicht finden Sie unter [Wide View (Basic)](./wid
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[ColumnNumber-Element für widecontrol (Format)](./columnnumber-element-for-widecontrol-format.md)
+[Element „ColumnNumber“ für WideControl (Format)](./columnnumber-element-for-widecontrol-format.md)
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Widecontrol-Element (Format)](./widecontrol-element-format.md)
+[Element „WideControl“ (Format)](./widecontrol-element-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

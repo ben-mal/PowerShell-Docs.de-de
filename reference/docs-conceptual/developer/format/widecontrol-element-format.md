@@ -1,19 +1,12 @@
 ---
 title: Widecontrol-Element (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 715ea055-037b-46ad-b70f-87b3f5134403
-caps.latest.revision: 14
-ms.openlocfilehash: 2742be0389a1bf04af100a490a59c0d938165811
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b6f19cf94dcb440eeaf53547db407287e5462520
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367989"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784978"
 ---
 # <a name="widecontrol-element-format"></a>Element „WideControl“ (Format)
 
@@ -33,29 +26,29 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `WideControl`-Elements beschrieben. Die `AutoSize`-und `ColumnNumber`-Elemente können nicht gleichzeitig angegeben werden.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `WideControl` Elements beschrieben. Das `AutoSize` -Element und das-Element können nicht `ColumnNumber` gleichzeitig angegeben werden.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[AutoSize-Element für widecontrol (Format)](./autosize-element-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt an, ob die Spaltengröße und die Anzahl der Spalten basierend auf der Größe der Daten angepasst werden.|
-|[ColumnNumber-Element für widecontrol (Format)](./columnnumber-element-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt die Anzahl der Spalten an, die in der breiten Ansicht angezeigt werden.|
+|[Element „AutoSize“ für WideControl (Format)](./autosize-element-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt an, ob die Spaltengröße und die Anzahl der Spalten basierend auf der Größe der Daten angepasst werden.|
+|[Element „ColumnNumber“ für WideControl (Format)](./columnnumber-element-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt die Anzahl der Spalten an, die in der breiten Ansicht angezeigt werden.|
 |[Wideentries-Element (Format)](./wideentries-element-for-widecontrol-format.md)|Erforderliches Element.<br /><br /> Stellt die Definitionen der breiten Ansicht bereit.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[View-Element (Format)](./view-element-format.md)|Definiert eine Ansicht, die verwendet wird, um ein oder mehrere .NET-Objekte anzuzeigen.|
+|[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, die verwendet wird, um ein oder mehrere .NET-Objekte anzuzeigen.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Beim Definieren einer breiten Ansicht können Sie das `AutoSize`-Element oder das-`ColumnNumber` hinzufügen, aber Sie können nicht beides hinzufügen.
+Beim Definieren einer breiten Ansicht können Sie das- `AutoSize` Element oder das-Element hinzufügen, `ColumnNumber` aber Sie können nicht beides hinzufügen.
 
 In den meisten Fällen ist nur eine Definition für jede Breite Ansicht erforderlich, aber es ist möglich, mehrere Definitionen zu verwenden, wenn Sie dieselbe Ansicht verwenden möchten, um unterschiedliche .NET-Objekte anzuzeigen. In diesen Fällen können Sie eine separate Definition für jedes Objekt oder jede Gruppe von Objekten bereitstellen.
 
@@ -63,7 +56,7 @@ Weitere Informationen zu den Komponenten einer breiten Ansicht finden Sie unter 
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein `WideControl`-Element, das verwendet wird, um eine Eigenschaft des [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekts anzuzeigen.
+Das folgende Beispiel zeigt ein- `WideControl` Element, das verwendet wird, um eine Eigenschaft des [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekts anzuzeigen.
 
 ```xml
 <View>
@@ -83,9 +76,9 @@ Ein umfassendes Beispiel für eine breite Ansicht finden Sie unter [Wide View (B
 
 [AutoSize-Element für widecontrol (Format)](./autosize-element-for-widecontrol-format.md)
 
-[ColumnNumber-Element für widecontrol (Format)](./columnnumber-element-for-widecontrol-format.md)
+[Element „ColumnNumber“ für WideControl (Format)](./columnnumber-element-for-widecontrol-format.md)
 
-[View-Element (Format)](./view-element-format.md)
+[Element „View“ (Format)](./view-element-format.md)
 
 [Wideentries-Element (Format)](./wideentries-element-for-widecontrol-format.md)
 
@@ -93,4 +86,4 @@ Ein umfassendes Beispiel für eine breite Ansicht finden Sie unter [Wide View (B
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

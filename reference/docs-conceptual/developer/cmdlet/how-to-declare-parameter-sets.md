@@ -1,30 +1,23 @@
 ---
 title: Deklarieren von Parameter Sätzen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 46905eb9-64d7-4c55-9c2a-7bc7bf04e14b
-caps.latest.revision: 10
-ms.openlocfilehash: 6c2e5891a8e3f24969c12a2e57dc5ae8caa68e41
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e6d06a9a78356693fe7a338dc5c9207044b23441
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365609"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784162"
 ---
 # <a name="how-to-declare-parameter-sets"></a>Deklarieren von Parametersätzen
 
 In diesem Beispiel wird gezeigt, wie zwei Parametersätze definiert werden, wenn Sie die Parameter für ein Cmdlet deklarieren. Jeder Parametersatz verfügt sowohl über einen eindeutigen Parameter als auch über einen freigegebenen Parameter, der von beiden Parametersätzen verwendet wird. Weitere Informationen zu Parametersätzen, einschließlich der Angabe des Standardparameter Satzes, finden Sie unter [Cmdlet-Parametersätze](./cmdlet-parameter-sets.md).
 
 > [!IMPORTANT]
-> Definieren Sie nach Möglichkeit den eindeutigen Parameter eines Parameter Satzes als erforderlichen Parameter. Wenn Sie jedoch möchten, dass das Cmdlet ohne Angabe von Parametern ausgeführt wird, kann der Unique-Parameter ein optionaler Parameter sein. Beispielsweise ist der Unique-Parameter des `Get-Command`-Cmdlets optional.
+> Definieren Sie nach Möglichkeit den eindeutigen Parameter eines Parameter Satzes als erforderlichen Parameter. Wenn Sie jedoch möchten, dass das Cmdlet ohne Angabe von Parametern ausgeführt wird, kann der Unique-Parameter ein optionaler Parameter sein. Beispielsweise ist der Unique-Parameter des `Get-Command` Cmdlets optional.
 
 ## <a name="how-to-define-two-parameter-sets"></a>Definieren von zwei Parameter Sätzen
 
-1. Fügen Sie dem Parameter-Attribut für den Unique-Parameter des ersten Parameter Satzes das `ParameterSet`-Schlüsselwort hinzu.
+1. Fügen Sie dem `ParameterSet` Parameter-Attribut für den Unique-Parameter des ersten Parameter Satzes das-Schlüsselwort hinzu.
 
    ```csharp
    [Parameter(Position = 0, Mandatory = true,
@@ -37,7 +30,7 @@ In diesem Beispiel wird gezeigt, wie zwei Parametersätze definiert werden, wenn
    private string userName;
    ```
 
-2. Fügen Sie dem Parameter-Attribut für den Unique-Parameter des zweiten Parameter Satzes das `ParameterSet`-Schlüsselwort hinzu.
+2. Fügen Sie das- `ParameterSet` Schlüsselwort zum Parameter-Attribut für den eindeutigen Parameter des zweiten Parameter Satzes hinzu.
 
    ```csharp
    [Parameter(Position = 0, Mandatory = true,
@@ -50,7 +43,7 @@ In diesem Beispiel wird gezeigt, wie zwei Parametersätze definiert werden, wenn
    private string computerName;
    ```
 
-3. Fügen Sie für den Parameter, der zu beiden Parametersätzen gehört, ein Parameter Attribut für jeden Parametersatz hinzu, und fügen Sie dann jedem Satz das `ParameterSet`-Schlüsselwort hinzu. In jedem Parameter Attribut können Sie angeben, wie dieser Parameter definiert wird. Ein Parameter kann in einem Satz optional sein und in einem anderen obligatorisch sein.
+3. Fügen Sie für den Parameter, der zu beiden Parametersätzen gehört, ein Parameter Attribut für jeden Parametersatz hinzu, und fügen Sie dann `ParameterSet` jedem Satz das Schlüsselwort hinzu. In jedem Parameter Attribut können Sie angeben, wie dieser Parameter definiert wird. Ein Parameter kann in einem Satz optional sein und in einem anderen obligatorisch sein.
 
    ```csharp
    [Parameter(Mandatory= true, ParameterSetName = "Test01")]
@@ -65,6 +58,6 @@ In diesem Beispiel wird gezeigt, wie zwei Parametersätze definiert werden, wenn
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Cmdlet-Parameter Sätze](./cmdlet-parameter-sets.md)
+[Cmdlet-Parametersätze](./cmdlet-parameter-sets.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

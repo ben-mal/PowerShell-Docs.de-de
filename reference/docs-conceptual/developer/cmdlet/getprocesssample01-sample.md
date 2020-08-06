@@ -1,19 +1,12 @@
 ---
 title: GetProcessSample01-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
-caps.latest.revision: 10
-ms.openlocfilehash: 27f1c346863458920b310c6c4ce1403b3aab69ba
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563803"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784247"
 ---
 # <a name="getprocesssample01-sample"></a>GetProcessSample01-Beispiel
 
@@ -35,7 +28,7 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Proz
 
 2. Navigieren Sie zu dem Verzeichnis, das die Datei "Sample. dll" enthält.
 
-3. Führen Sie "installutil" GetProcessSample01. dll aus.
+3. Führen Sie "installutil" GetProcessSample01.dll "aus.
 
 4. Starten Sie Windows PowerShell.
 
@@ -64,7 +57,7 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Proz
    A file was created in the TEMP directory
    ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Für dieses Beispiel ist Windows PowerShell 1,0 oder höher erforderlich.
 

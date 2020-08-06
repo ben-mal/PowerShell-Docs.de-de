@@ -1,25 +1,18 @@
 ---
 title: Selectionsetname-Element für entryselectedby für widecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c9c6e18f-6cca-465c-bd20-3969e7897a96
-caps.latest.revision: 10
-ms.openlocfilehash: 6b6a4a4647412d11d947f1dc4ea12d1e05ff536e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 546225b0619ebec83d04a7e27bbc298ffef0a14d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361979"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785250"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-widecontrol-format"></a>Element „SelectionSetName“ für EntrySelectedBy für WideControl (Format)
 
 Gibt einen Satz von .NET-Objekten für die-Definition an. Die Definition wird immer dann verwendet, wenn eines dieser Objekte angezeigt wird.
 
-Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) widecontrol-Element (Format) wideentries-Element (Format) wideentry-Element (Format) entryselectedby-Element für wideentry (Format) selectionsetname-Element für Entryselectedby für wideentry (Format)
+Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) widecontrol-Element (Format) wideentries-Element (Format) wideentry-Element (Format) entryselectedby-Element für wideentry (Format) selectionsetname-Element für entryselectedby für wideentry (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,27 +23,27 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `SelectionSetName`-Elements beschrieben.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `SelectionSetName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[Entryselectedby-Element für wideentry (Format)](./entryselectedby-element-for-wideentry-format.md)|Definiert die .NET-Typen, die diesen breiten Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
+|[Element „EntrySelectedBy“ für WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Definiert die .NET-Typen, die diesen breiten Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen des Auswahl Satzes an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Jede Definition muss einen Typnamen, einen Auswahl Satz oder eine Auswahlbedingung angeben.
 
@@ -62,8 +55,8 @@ Weitere Informationen zu anderen Komponenten einer breiten Ansicht finden Sie un
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Definieren von Auswahl Sätzen](./defining-selection-sets.md)
+[Definieren von Auswahlgruppen](./defining-selection-sets.md)
 
-[Entryselectedby-Element für wideentry (Format)](./entryselectedby-element-for-wideentry-format.md)
+[Element „EntrySelectedBy“ für WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

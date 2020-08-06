@@ -1,25 +1,18 @@
 ---
 title: CustomItem-Element für customentry für GroupBy (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f7c517aa-24f5-41ae-b82d-cb0fac81a245
-caps.latest.revision: 7
-ms.openlocfilehash: 2d821f5e3bc8d0f81ef8a8a040c6f9bcb1658bee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e8086c5330b6644f83316ad4ae33c33ba40d9eee
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363879"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783720"
 ---
 # <a name="customitem-element-for-customentry-for-groupby-format"></a>Element „CustomItem“ für CustomEntry für GroupBy (Format)
 
 Definiert, welche Daten von der benutzerdefinierten Steuerelement Ansicht und der Anzeige angezeigt werden. Dieses Element wird verwendet, wenn definiert wird, wie eine neue Gruppe von Objekten angezeigt wird.
 
-Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) GroupBy-Element für View (Format) CustomControl-Element für GroupBy (Format) customentries-Element für CustomControl für GroupBy (Format) customItem-Element für Customentry für GroupBy (Format)
+Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) GroupBy-Element für View (Format) CustomControl-Element für GroupBy (Format) customentries-Element für CustomControl für GroupBy (Format) customItem-Element für customentry für GroupBy (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,39 +27,39 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `CustomItem`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `CustomItem` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[ExpressionBinding-Element für customItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert die Daten, die vom-Steuerelement angezeigt werden.|
-|[Frame-Element für customItem für GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert, welche Daten von der benutzerdefinierten Steuerelement Ansicht und der Anzeige angezeigt werden.|
-|[NewLine-Element für customItem für GroupBy (Format)](./newline-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Fügt der Anzeige des-Steuer Elements eine leere Zeile hinzu.|
-|[Text-Element für customItem für GroupBy (Format)](./text-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt zusätzlichen Text zu den Daten an, die vom-Steuerelement angezeigt werden.|
+|[Element „ExpressionBinding“ für CustomItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert die Daten, die vom-Steuerelement angezeigt werden.|
+|[Element „Frame“ für CustomItem für GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert, welche Daten von der benutzerdefinierten Steuerelement Ansicht und der Anzeige angezeigt werden.|
+|[Element „NewLine“ für CustomItem für GroupBy (Format)](./newline-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Fügt der Anzeige des-Steuer Elements eine leere Zeile hinzu.|
+|[Element „Text“ für CustomItem für GroupBy (Format)](./text-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt zusätzlichen Text zu den Daten an, die vom-Steuerelement angezeigt werden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[Customentry-Element für CustomControl für GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)|Stellt eine Definition der benutzerdefinierten Steuerelement Ansicht bereit.|
+|[Element „CustomEntry“ für CustomControl für GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)|Stellt eine Definition der benutzerdefinierten Steuerelement Ansicht bereit.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Customentry-Element für CustomControl für GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)
+[Element „CustomEntry“ für CustomControl für GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)
 
-[ExpressionBinding-Element für customItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)
+[Element „ExpressionBinding“ für CustomItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)
 
-[Frame-Element für customItem für GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)
+[Element „Frame“ für CustomItem für GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)
 
-[NewLine-Element für customItem für GroupBy (Format)](./newline-element-for-customitem-for-groupby-format.md)
+[Element „NewLine“ für CustomItem für GroupBy (Format)](./newline-element-for-customitem-for-groupby-format.md)
 
-[Text-Element für customItem für GroupBy (Format)](./text-element-for-customitem-for-groupby-format.md)
+[Element „Text“ für CustomItem für GroupBy (Format)](./text-element-for-customitem-for-groupby-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

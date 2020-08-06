@@ -1,23 +1,16 @@
 ---
 title: Benutzerdefinierte Formatierungs Dateien | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 85d27545-8097-4010-9947-6d8b3ce2eac0
-caps.latest.revision: 15
-ms.openlocfilehash: 71c1c181058c5646c817b90d9832976a78c6c7de
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a9633e2ee18e1817459645b4a5950ea8a622850b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369829"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784349"
 ---
 # <a name="custom-formatting-files"></a>Benutzerdefinierte Formatierungsdateien
 
-Das Anzeige Format für die von Cmdlets, Funktionen und Skripts zurückgegebenen Objekte wird mithilfe von Formatierungs Dateien (Format. ps1xml-Dateien) definiert. Einige dieser Dateien werden von Windows PowerShell bereitgestellt, um das Standard Anzeige Format für die von Windows PowerShell-Cmdlets zurückgegebenen Objekte zu definieren. Sie können jedoch auch eigene benutzerdefinierte Formatierungs Dateien erstellen, um die Standard Anzeige Formate zu überschreiben oder die Anzeige von Objekten zu definieren, die von ihren eigenen Befehlen zurückgegeben werden.
+Das Anzeige Format für die von Cmdlets, Funktionen und Skripts zurückgegebenen Objekte wird mithilfe von Formatierungs Dateien (format.ps1XML-Dateien) definiert. Einige dieser Dateien werden von Windows PowerShell bereitgestellt, um das Standard Anzeige Format für die von Windows PowerShell-Cmdlets zurückgegebenen Objekte zu definieren. Sie können jedoch auch eigene benutzerdefinierte Formatierungs Dateien erstellen, um die Standard Anzeige Formate zu überschreiben oder die Anzeige von Objekten zu definieren, die von ihren eigenen Befehlen zurückgegeben werden.
 
 Windows PowerShell verwendet die Daten in diesen Formatierungs Dateien, um zu bestimmen, was angezeigt wird und wie die Daten formatiert werden. Die angezeigten Daten können die Eigenschaften eines Objekts oder den Wert eines Skript Blocks enthalten.  Skriptblöcke werden verwendet, wenn Sie einen Wert anzeigen möchten, der nicht direkt aus den Eigenschaften eines Objekts verfügbar ist. Beispielsweise können Sie den Wert von zwei Eigenschaften eines Objekts hinzufügen und die Summe als separates Datenelement anzeigen. Wenn Sie eine eigene Formatierungs Datei schreiben, müssen Sie *Sichten* für die Objekte definieren, die Sie anzeigen möchten. Sie können für jedes Objekt eine einzelne Ansicht definieren, Sie können eine einzelne Ansicht für mehrere Objekte definieren, oder Sie können mehrere Ansichten für dasselbe Objekt definieren. Es gibt keine Beschränkung für die Anzahl der Sichten, die Sie definieren können.
 
@@ -40,7 +33,7 @@ Die benutzerdefinierte Ansicht zeigt eine anpassbare Ansicht von Objekteigenscha
 
 ## <a name="view-xml-elements"></a>Anzeigen von XML-Elementen
 
-Das folgende Beispiel zeigt die XML-Tags, mit denen eine Tabellen Sicht definiert wird, die zwei Spalten enthält. Das [viewdefinitions](../format/viewdefinitions-element-format.md) -Element ist das Containerelement für alle Sichten, die in der Formatierungs Datei definiert sind. Das [Ansichts](../format/view-element-format.md) Element definiert die spezifische Tabelle, die Liste, die Breite oder die benutzerdefinierte Sicht. In jeder Ansicht gibt das [Name](../format/name-element-for-view-format.md) -Element den Namen der Ansicht an, das [viewselectedby](../format/viewselectedby-element-format.md) -Element definiert die Objekte, die die Sicht verwenden, und die verschiedenen Steuerelemente (z. b. das `TableControl`-Element) definieren das Format der Sicht.
+Das folgende Beispiel zeigt die XML-Tags, mit denen eine Tabellen Sicht definiert wird, die zwei Spalten enthält. Das [viewdefinitions](../format/viewdefinitions-element-format.md) -Element ist das Containerelement für alle Sichten, die in der Formatierungs Datei definiert sind. Das [Ansichts](../format/view-element-format.md) Element definiert die spezifische Tabelle, die Liste, die Breite oder die benutzerdefinierte Sicht. In jeder Ansicht gibt das [Name](../format/name-element-for-view-format.md) -Element den Namen der Ansicht an, das [viewselectedby](../format/viewselectedby-element-format.md) -Element definiert die Objekte, die die Sicht verwenden, und die verschiedenen Steuerelemente (z. b. das- `TableControl` Element) definieren das Format der Sicht.
 
 ```xml
 ViewDefinitions

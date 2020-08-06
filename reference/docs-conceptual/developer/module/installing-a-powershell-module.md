@@ -1,19 +1,12 @@
 ---
 title: Installieren eines PowerShell-Moduls | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
-caps.latest.revision: 28
-ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6a4e9ac2884d0b300b5c1ad8b6156525438a1650
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367069"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784859"
 ---
 # <a name="installing-a-powershell-module"></a>Installieren eines PowerShell-Moduls
 
@@ -31,14 +24,14 @@ Die **psmodulepath** -Umgebungsvariable ($env:P smodulepath) enthält die Speich
 
 Standardmäßig enthält der Wert der Umgebungsvariablen **psmodulepath** die folgenden System-und Benutzermodul Verzeichnisse, aber Sie können den Wert hinzufügen und bearbeiten.
 
-- `$PSHome\Modules` (%windir%\system32\WindowsPowerShell\v1.0\modules)
+- `$PSHome\Modules`%Windir%\System32\WindowsPowerShell\v1.0\Modules
 
   > [!WARNING]
   > Dieser Speicherort ist für Module reserviert, die mit Windows ausgeliefert werden. Installieren Sie keine Module an diesem Speicherort.
 
-- `$Home\Documents\WindowsPowerShell\Modules` (%USERPROFILE%\documents\windowspowershell\modules)
+- `$Home\Documents\WindowsPowerShell\Modules`(%USERPROFILE%\documents\windowspowershell\modules)
 
-- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\windowspowershell\modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules`(%ProgramFiles%\windowspowershell\modules)
 
   Um den Wert der **psmodulepath** -Umgebungsvariablen abzurufen, verwenden Sie einen der folgenden Befehle.
 
@@ -62,7 +55,7 @@ Standardmäßig enthält der Wert der Umgebungsvariablen **psmodulepath** die fo
   ```
 
   > [!IMPORTANT]
-  > Nachdem Sie den Pfad zu **psmodulepath**hinzugefügt haben, sollten Sie eine Umgebungs Meldung über die Änderung übertragen. Durch das Senden der Änderung können andere Anwendungen, wie z. b. die Shell, die Änderung übernehmen. Wenn Sie die Änderung übertragen möchten, lassen Sie den Produkt Installationscode eine **WM_SETTINGCHANGE** Nachricht senden, bei der `lParam` auf die Zeichenfolge "Environment" festgelegt ist. Stellen Sie sicher, dass Sie die Nachricht senden, nachdem der Installationscode des Moduls " **psmodulepath**" aktualisiert hat.
+  > Nachdem Sie den Pfad zu **psmodulepath**hinzugefügt haben, sollten Sie eine Umgebungs Meldung über die Änderung übertragen. Durch das Senden der Änderung können andere Anwendungen, wie z. b. die Shell, die Änderung übernehmen. Wenn Sie die Änderung übertragen möchten, lassen Sie den Produkt Installationscode eine **WM_SETTINGCHANGE** Nachricht senden, wobei `lParam` auf die Zeichenfolge "Environment" festgelegt ist. Stellen Sie sicher, dass Sie die Nachricht senden, nachdem der Installationscode des Moduls " **psmodulepath**" aktualisiert hat.
 
 ### <a name="use-the-correct-module-directory-name"></a>Richtigen Modul Verzeichnisnamen verwenden
 
@@ -70,7 +63,7 @@ Ein wohl geformtes Modul ist ein Modul, das in einem Verzeichnis gespeichert ist
 
 Der "Basisname" einer Datei ist der Name ohne die Dateinamenerweiterung. In einem wohlgeformten Modul muss der Name des Verzeichnisses, das die Moduldateien enthält, mit dem Basis Namen von mindestens einer Datei im Modul identisch sein.
 
-Beispielsweise heißt das Verzeichnis im Fabrikam-Beispielmodul, das die Moduldateien enthält, den Namen Fabrikam, und mindestens eine Datei hat den Basisnamen "Fabrikam". In diesem Fall haben sowohl "fabrikam. psd1" als auch "fabrikam. dll" den Basisnamen "Fabrikam".
+Beispielsweise heißt das Verzeichnis im Fabrikam-Beispielmodul, das die Moduldateien enthält, den Namen Fabrikam, und mindestens eine Datei hat den Basisnamen "Fabrikam". In diesem Fall haben sowohl Fabrikam.psd1 als auch Fabrikam.dll den Basisnamen "Fabrikam".
 
 ```
 C:\Program Files
@@ -89,7 +82,7 @@ Wenn das Modul nicht wohl geformt ist und sein Speicherort nicht im Wert der **p
 
 - Die Funktion zum automatischen Laden von Modulen kann das Modul nicht automatisch importieren.
 
-- Der `ListAvailable`-Parameter des Cmdlets " [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) " kann das Modul nicht finden.
+- Der `ListAvailable` -Parameter des Cmdlets " [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) " kann das Modul nicht finden.
 
 - Das [Import-Module-](/powershell/module/Microsoft.PowerShell.Core/Import-Module) Cmdlet kann das Modul nicht finden. Zum Importieren des Moduls müssen Sie den vollständigen Pfad zur Stamm Modul Datei oder zur Modul Manifest-Datei angeben.
 
@@ -101,7 +94,7 @@ Wenn das Modul nicht wohl geformt ist und sein Speicherort nicht im Wert der **p
 
 - Das Cmdlet " [Show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) " kann die Befehle im Modul nicht finden und anzeigen.
 
-  Die Befehle im Modul fehlen im `Show-Command` Fenster in Windows PowerShell Integrated Scripting Environment (ISE).
+  Die Befehle im Modul fehlen `Show-Command` im Fenster in Windows PowerShell Integrated Scripting Environment (ISE).
 
 ## <a name="where-to-install-modules"></a>Installationsort von Modulen
 
@@ -153,7 +146,7 @@ $p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 
 Wenn ein Modul von mehreren Komponenten eines Produkts oder von mehreren Produktversionen verwendet wird, installieren Sie das Modul in einem modulspezifischen Unterverzeichnis des Unterverzeichnisses "%ProgramFiles%\Common files\modules".
 
-Im folgenden Beispiel wird das Modul "Fabrikam" in einem Unterverzeichnis "Fabrikam" des `%ProgramFiles%\Common Files\Modules` Unterverzeichnis installiert. Beachten Sie, dass sich jedes Modul in einem eigenen Unterverzeichnis im Unterverzeichnis "modules" befindet.
+Im folgenden Beispiel wird das Modul "Fabrikam" in einem Unterverzeichnis "Fabrikam" des `%ProgramFiles%\Common Files\Modules` Unterverzeichnisses installiert. Beachten Sie, dass sich jedes Modul in einem eigenen Unterverzeichnis im Unterverzeichnis "modules" befindet.
 
 ```
 C:\Program Files
@@ -185,7 +178,7 @@ Wenn Sie mehrere Versionen desselben Moduls installieren möchten, verwenden Sie
 2. Erstellen Sie ein Modul Manifest für jede Version des Moduls. Geben Sie im Manifest im Wert des **moduleversion** -Schlüssels die Modulversionsnummer ein. Speichern Sie die Manifest-Datei (. psd1) im Versions spezifischen Verzeichnis für das Modul.
 3. Fügen Sie den Pfad des Modul Stamm Ordners zum Wert der **psmodulepath** -Umgebungsvariablen hinzu, wie in den folgenden Beispielen gezeigt.
 
-Um eine bestimmte Version des Moduls zu importieren, kann der Endbenutzer die `MinimumVersion` oder `RequiredVersion` Parameter des Cmdlets [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) verwenden.
+Um eine bestimmte Version des Moduls zu importieren, kann der Endbenutzer den- `MinimumVersion` Parameter oder den- `RequiredVersion` Parameter des [Import-Module-](/powershell/module/Microsoft.PowerShell.Core/Import-Module) Cmdlets verwenden.
 
 Wenn das Modul Fabrikam beispielsweise in den Versionen 8,0 und 9,0 verfügbar ist, könnte die Fabrikam-Modul Verzeichnisstruktur wie folgt aussehen.
 
@@ -210,7 +203,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-Wenn diese Schritte ausgeführt werden, ruft der **listavailable** -Parameter des [Get-Module-](/powershell/module/Microsoft.PowerShell.Core/Get-Module) Cmdlets beide Fabrikam-Module ab. Um ein bestimmtes Modul zu importieren, verwenden Sie die Parameter `MinimumVersion` oder `RequiredVersion` des Cmdlets [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+Wenn diese Schritte ausgeführt werden, ruft der **listavailable** -Parameter des [Get-Module-](/powershell/module/Microsoft.PowerShell.Core/Get-Module) Cmdlets beide Fabrikam-Module ab. Verwenden Sie zum Importieren eines bestimmten Moduls den- `MinimumVersion` Parameter oder den- `RequiredVersion` Parameter des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) -Cmdlets.
 
 Wenn beide Module in dieselbe Sitzung importiert werden und die Module Cmdlets mit denselben Namen enthalten, sind die zuletzt importierten Cmdlets in der Sitzung gültig.
 
@@ -220,7 +213,7 @@ Konflikte mit Befehlsnamen können auftreten, wenn die Befehle, die ein Modul ex
 
 Wenn eine Sitzung zwei Befehle mit demselben Namen enthält, führt Windows PowerShell den Befehlstyp aus, der Vorrang hat. Wenn eine Sitzung zwei Befehle mit demselben Namen und demselben Typ enthält, führt Windows PowerShell den Befehl aus, der der Sitzung zuletzt hinzugefügt wurde. Um einen Befehl auszuführen, der nicht standardmäßig ausgeführt wird, können Benutzer den Befehlsnamen mit dem Modulnamen qualifizieren.
 
-Wenn die Sitzung z. b. eine `Get-Date`-Funktion und das `Get-Date`-Cmdlet enthält, führt Windows PowerShell die Funktion standardmäßig aus. Um das Cmdlet auszuführen, stellen Sie dem Befehl den Namen des Moduls voran, z. b.:
+Wenn die Sitzung z. b. eine `Get-Date` Funktion und das `Get-Date` Cmdlet enthält, führt Windows PowerShell die Funktion standardmäßig aus. Um das Cmdlet auszuführen, stellen Sie dem Befehl den Namen des Moduls voran, z. b.:
 
 ```powershell
 Microsoft.PowerShell.Utility\Get-Date
@@ -228,7 +221,7 @@ Microsoft.PowerShell.Utility\Get-Date
 
 Um Namenskonflikte zu verhindern, können Modul Autoren den **defaultcommandprefix** -Schlüssel im Modul Manifest verwenden, um ein Substantiv-Präfix für alle Befehle anzugeben, die vom Modul exportiert werden.
 
-Benutzer können den **prefix** -Parameter des `Import-Module`-Cmdlets verwenden, um ein alternatives Präfix zu verwenden. Der Wert des **prefix** -Parameters hat Vorrang vor dem Wert des **defaultcommandprefix** -Schlüssels.
+Benutzer können den **prefix** -Parameter des `Import-Module` Cmdlets verwenden, um ein alternatives Präfix zu verwenden. Der Wert des **prefix** -Parameters hat Vorrang vor dem Wert des **defaultcommandprefix** -Schlüssels.
 
 ## <a name="see-also"></a>Weitere Informationen
 

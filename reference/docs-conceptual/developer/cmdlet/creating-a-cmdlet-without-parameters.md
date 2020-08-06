@@ -1,22 +1,15 @@
 ---
 title: Erstellen eines Cmdlets ohne Parameter | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], creating
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
-caps.latest.revision: 8
-ms.openlocfilehash: af41c2c9855310d047404114a07b27180a7aa8fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415671"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784383"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Erstellen eines Cmdlet ohne Parameter
 
@@ -29,11 +22,11 @@ In diesem Abschnitt wird beschrieben, wie Sie ein Cmdlet erstellen, das Informat
 
 Ein Cmdlet-Name besteht aus einem Verb, das die Aktion angibt, die das Cmdlet annimmt, und einem Substantiv, das die Elemente angibt, auf die das Cmdlet angewendet wird. Da das Get-proc-Beispiel-Cmdlet Prozess Objekte abruft, wird das Verb "Get" verwendet, das von der [System. Management. Automation. verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) -Enumeration definiert wird, und das Nomen "proc", um anzugeben, dass das Cmdlet für Prozesselemente funktioniert.
 
-Verwenden Sie beim Benennen von Cmdlets keines der folgenden Zeichen: #, () {} [] &-/\ $; : "" < > &#124; ? @ ` .
+Verwenden Sie beim Benennen von Cmdlets keines der folgenden Zeichen: #, () {} [] &-/\ $;: "' <> &#124; ? @ ` .
 
 ### <a name="choosing-a-noun"></a>Auswählen eines Substantivs
 
-Sie sollten ein bestimmtes Substantiv auswählen. Es empfiehlt sich, ein Singular-Substantiv zu verwenden, das mit einer verkürzten Version des Produkt namens versehen ist. Ein Beispiel für einen Cmdlet-Namen dieses Typs ist "`Get-SQLServer`".
+Sie sollten ein bestimmtes Substantiv auswählen. Es empfiehlt sich, ein Singular-Substantiv zu verwenden, das mit einer verkürzten Version des Produkt namens versehen ist. Ein Beispiel für einen Cmdlet-Namen dieses Typs ist " `Get-SQLServer` ".
 
 ### <a name="choosing-a-verb"></a>Auswählen eines Verbs
 
@@ -54,7 +47,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Beachten Sie, dass das [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) -Attribut, das mit der Syntax `[Cmdlet(verb, noun, ...)]`, vor der Klassendefinition verwendet wird, um diese Klasse als Cmdlet zu identifizieren. Dies ist das einzige erforderliche Attribut für alle Cmdlets und ermöglicht es der Windows PowerShell-Laufzeit, Sie ordnungsgemäß aufzurufen. Sie können Attribut Schlüsselwörter festlegen, um die Klasse bei Bedarf weiter zu deklarieren. Beachten Sie, dass die Attribut Deklaration für die getproccommand-Beispiel Klasse nur die Substantiv-und Verb Namen für das Get-proc-Cmdlet deklariert.
+Beachten Sie, dass das [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) -Attribut mit der-Syntax vor der Klassendefinition `[Cmdlet(verb, noun, ...)]` verwendet wird, um diese Klasse als Cmdlet zu identifizieren. Dies ist das einzige erforderliche Attribut für alle Cmdlets und ermöglicht es der Windows PowerShell-Laufzeit, Sie ordnungsgemäß aufzurufen. Sie können Attribut Schlüsselwörter festlegen, um die Klasse bei Bedarf weiter zu deklarieren. Beachten Sie, dass die Attribut Deklaration für die getproccommand-Beispiel Klasse nur die Substantiv-und Verb Namen für das Get-proc-Cmdlet deklariert.
 
 > [!NOTE]
 > Für alle Windows PowerShell-Attribut Klassen entsprechen die Schlüsselwörter, die Sie festlegen können, den Eigenschaften der Attribut Klasse.
@@ -78,7 +71,7 @@ Für alle Typen von Eingaben Ruft die Windows PowerShell-Runtime [System. Manage
 > [!NOTE]
 > Windows PowerShell verwendet den Begriff "Datensatz", um den Satz von Parameterwerten zu beschreiben, die beim Aufrufen eines Cmdlets bereitgestellt werden.
 
-Wenn das Cmdlet Pipeline Eingaben annimmt, muss es die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode und optional die [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) -Methode überschreiben. Ein Cmdlet kann z. b. beide Methoden überschreiben, wenn es die gesamte Eingabe mithilfe von [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) sammelt und dann die Eingabe als Ganzes anstelle eines Elements, wie das `Sort-Object`-Cmdlet, verhält.
+Wenn das Cmdlet Pipeline Eingaben annimmt, muss es die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode und optional die [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) -Methode überschreiben. Beispielsweise kann ein Cmdlet beide Methoden überschreiben, wenn es die gesamte Eingabe mithilfe von [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) sammelt und dann die Eingabe als Ganzes anstelle eines Elements, wie das `Sort-Object` Cmdlet, bearbeitet.
 
 Wenn das Cmdlet keine Pipeline Eingaben annimmt, sollte es die [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) -Methode überschreiben. Beachten Sie, dass diese Methode häufig anstelle von [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) verwendet wird, wenn das Cmdlet nicht gleichzeitig auf einem Element agieren kann, wie es bei einem Sortierungs-Cmdlet der Fall ist.
 
@@ -131,7 +124,7 @@ Beispielsweise kann " [System. Management. Automation. Cmdlet. EndProcessing](/d
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Den gesamten C# Beispielcode finden Sie unter [GetProcessSample01 Sample](./getprocesssample01-sample.md).
+Den gesamten c#-Beispielcode finden Sie unter [GetProcessSample01 Sample](./getprocesssample01-sample.md).
 
 ## <a name="defining-object-types-and-formatting"></a>Definieren von Objekttypen und Formatierung
 
@@ -233,7 +226,7 @@ Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der 
     ...
     ```
 
-7. Verwenden Sie das Cmdlet "`Get-Member`", um die für die einzelnen Prozesse verfügbaren Eigenschaften aufzulisten.
+7. Verwenden `Get-Member` Sie das Cmdlet, um die für die einzelnen Prozesse verfügbaren Eigenschaften aufzulisten.
 
     ```powershell
     $p | Get-Member -MemberType property

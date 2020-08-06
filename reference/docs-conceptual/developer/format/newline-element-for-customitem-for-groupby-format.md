@@ -1,19 +1,12 @@
 ---
 title: NewLine-Element für customItem für GroupBy (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 8e37477e-cf2c-4ebd-85d1-eb923e2f4eea
-caps.latest.revision: 6
-ms.openlocfilehash: 790abbccad2c9e57d64e444b7b04d805decd4ed6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0c998c9a85238feaa8bc48fd3eb4f66b4f7f8d66
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362599"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783516"
 ---
 # <a name="newline-element-for-customitem-for-groupby-format"></a>Element „NewLine“ für CustomItem für GroupBy (Format)
 
@@ -29,26 +22,26 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `NewLine`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `NewLine` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[CustomItem-Element für customentry für GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)|Definiert ein Steuerelement für die benutzerdefinierte Steuerelement Ansicht.|
+|[Element „CustomItem“ für CustomEntry für GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)|Definiert ein Steuerelement für die benutzerdefinierte Steuerelement Ansicht.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[CustomItem-Element für customentry für GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)
+[Element „CustomItem“ für CustomEntry für GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

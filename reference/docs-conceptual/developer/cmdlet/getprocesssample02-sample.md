@@ -1,23 +1,16 @@
 ---
 title: GetProcessSample02-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 481f557d-3344-4d33-b2da-4736a0165181
-caps.latest.revision: 7
-ms.openlocfilehash: fa4cd8a724793e71b615c84a5c5a833aa92c93fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fa10774508b70f4aab4546cf4d6fbe8978032f1b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364569"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784230"
 ---
 # <a name="getprocesssample02-sample"></a>GetProcessSample02-Beispiel
 
-Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lokalen Computer abruft. Sie stellt einen `Name` Parameter bereit, der zum Angeben der abzurufenden Prozesse verwendet werden kann. Dieses Cmdlet ist eine vereinfachte Version des `Get-Process` Cmdlets, das von Windows PowerShell 2,0 bereitgestellt wird.
+Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lokalen Computer abruft. Es wird ein `Name` Parameter bereitgestellt, mit dem die abzurufenden Prozesse angegeben werden können. Dieses Cmdlet ist eine vereinfachte Version des `Get-Process` Cmdlets, das von Windows PowerShell 2,0 bereitgestellt wird.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio.
 
@@ -47,11 +40,11 @@ Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lo
 
     `get-proc`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Gegenstand
+## <a name="demonstrates"></a>Zeigt
 
 In diesem Beispiel wird Folgendes veranschaulicht:
 
@@ -65,7 +58,7 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt eine Implementierung des Get-proc-Cmdlets, das einen `Name`-Parameter enthält.
+Dieses Beispiel zeigt eine Implementierung des Get-proc-Cmdlets, das einen- `Name` Parameter enthält.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

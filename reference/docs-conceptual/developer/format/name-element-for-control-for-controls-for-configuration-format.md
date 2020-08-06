@@ -1,19 +1,12 @@
 ---
 title: Name-Element für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b4371d45-49a4-4303-8384-5b54105bd0d6
-caps.latest.revision: 8
-ms.openlocfilehash: 2704a530e0ae269efb772ac10e531bcbb12f6eff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3d45ba98b909ebee18e01d2b6985a48906ce39d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362709"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783533"
 ---
 # <a name="name-element-for-control-for-controls-for-configuration-format"></a>Element „Name“ für Control für Controls für Configuration (Format)
 
@@ -30,27 +23,27 @@ Konfigurationselement (Format) steuert Element des Konfigurations Elements (Form
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `Name`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `Name` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Control-Element für Steuerelemente für die Konfiguration (Format)](./control-element-for-controls-for-configuration-format.md)|Definiert ein gängiges Steuerelement, das von allen Ansichten der Formatierungs Datei und dem Namen, der zum Verweisen auf das Steuerelement verwendet wird, verwendet werden kann.|
+|[Element „Control“ für Controls für Configuration (Format)](./control-element-for-controls-for-configuration-format.md)|Definiert ein gängiges Steuerelement, das von allen Ansichten der Formatierungs Datei und dem Namen, der zum Verweisen auf das Steuerelement verwendet wird, verwendet werden kann.|
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen an, der zum Verweisen auf dieses Steuerelement verwendet wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Der hier angegebene Name kann in den folgenden Elementen verwendet werden, um auf dieses Steuerelement zu verweisen.
 
@@ -62,12 +55,12 @@ Der hier angegebene Name kann in den folgenden Elementen verwendet werden, um au
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Control-Element für Steuerelemente für die Konfiguration (Format)](./control-element-for-controls-for-configuration-format.md)
+[Element „Control“ für Controls für Configuration (Format)](./control-element-for-controls-for-configuration-format.md)
 
-[ExpressionBinding-Element für customItem für Steuerelemente für die Konfiguration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
+[Element „ExpressionBinding“ für CustomItem für Controls für Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)
 
-[ExpressionBinding-Element für customItem für Steuerelemente für Ansicht (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Element „ExpressionBinding“ für CustomItem für Controls für View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-[GroupBy-Element für Ansicht (Format)](./groupby-element-for-view-format.md)
+[Element „GroupBy“ für View (Format)](./groupby-element-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

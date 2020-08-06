@@ -1,19 +1,12 @@
 ---
 title: Importieren eines PowerShell-Moduls | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 02/03/2020
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 697791b3-2135-4a39-b9d7-8566ed67acf2
-caps.latest.revision: 13
-ms.openlocfilehash: d5ce61a1cba1d91c130394c5cf7249021e95f485
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 8cd1938d0a7b49b4a594753d8ce5ebe60625025d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76996023"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784876"
 ---
 # <a name="importing-a-powershell-module"></a>Importieren eines PowerShell-Moduls
 
@@ -26,20 +19,20 @@ Module waren in PowerShell 1,0 nicht vorhanden: stattdessen mussten Sie Snap-Ins
 
 ## <a name="importing-a-module-with-import-module-powershell-20"></a>Importieren eines Moduls mit Import-Module (PowerShell 2,0)
 
-PowerShell 2,0 verwendet das entsprechend benannte Cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) zum Importieren von Modulen. Wenn dieses Cmdlet ausgeführt wird, sucht Windows PowerShell in den Verzeichnissen, die in der `PSModulePath` Variablen angegeben sind, nach dem angegebenen Modul. Wenn das angegebene Verzeichnis gefunden wird, sucht Windows PowerShell nach Dateien in der folgenden Reihenfolge: Modul Manifest-Dateien (. psd1), Skript Moduldateien (. psm1), binäre Moduldateien (. dll). Weitere Informationen zum Hinzufügen von Verzeichnissen zur Suche finden Sie unter [Ändern des psmodulepath-Installations Pfads](./modifying-the-psmodulepath-installation-path.md).
+PowerShell 2,0 verwendet das entsprechend benannte Cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) zum Importieren von Modulen. Wenn dieses Cmdlet ausgeführt wird, sucht Windows PowerShell in den Verzeichnissen, die in der Variablen angegeben sind, nach dem angegebenen Modul `PSModulePath` . Wenn das angegebene Verzeichnis gefunden wird, sucht Windows PowerShell nach Dateien in der folgenden Reihenfolge: Modul Manifest-Dateien (. psd1), Skript Moduldateien (. psm1), binäre Moduldateien (. dll). Weitere Informationen zum Hinzufügen von Verzeichnissen zur Suche finden Sie unter [Ändern des psmodulepath-Installations Pfads](./modifying-the-psmodulepath-installation-path.md).
 Im folgenden Code wird beschrieben, wie Sie ein Modul importieren:
 
 ```powershell
 Import-Module myModule
 ```
 
-Wenn sich MyModule im `PSModulePath`befindet, lädt PowerShell MyModule in den aktiven Arbeitsspeicher. Wenn "MyModule" nicht in einem `PSModulePath` Pfad gefunden wurde, können Sie PowerShell trotzdem explizit mitteilen, wo Sie Sie finden:
+Wenn sich MyModule im Verzeichnis befindet `PSModulePath` , lädt PowerShell MyModule in den aktiven Arbeitsspeicher. Wenn "MyModule" nicht in einem `PSModulePath` Pfad gefunden wurde, können Sie PowerShell trotzdem explizit mitteilen, wo Sie Sie finden:
 
 ```powershell
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-Sie können auch den `-Verbose`-Parameter verwenden, um zu ermitteln, was aus dem Modul exportiert wird und was in den aktiven Speicher importiert wird. Sowohl Exporte als auch Importe schränken die Informationen ein, die dem Benutzer zur Verfügung stehen: der Unterschied besteht darin, wer die Sichtbarkeit steuert. Im Grunde werden Exporte durch Code im Modul gesteuert. Im Gegensatz dazu werden Importe durch den `Import-Module`-Aufrufe gesteuert. Weitere Informationen finden Sie weiter unten unter **Einschränken von importierten**Membern.
+Sie können auch den `-Verbose` -Parameter verwenden, um zu ermitteln, was aus dem Modul exportiert wird und was in den aktiven Speicher importiert wird. Sowohl Exporte als auch Importe schränken die Informationen ein, die dem Benutzer zur Verfügung stehen: der Unterschied besteht darin, wer die Sichtbarkeit steuert. Im Grunde werden Exporte durch Code im Modul gesteuert. Im Gegensatz dazu werden Importe durch den-Befehl gesteuert `Import-Module` . Weitere Informationen finden Sie weiter unten unter **Einschränken von importierten**Membern.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>Implizites Importieren eines Moduls (PowerShell 3,0)
 
@@ -47,13 +40,13 @@ Ab Windows PowerShell 3.0 werden Module automatisch importiert, wenn ein Cmdlet 
 
 Mit den folgenden Aktionen wird das automatische Importieren eines Moduls, auch bekannt als "Automatisches Laden von Modulen", auslöst.
 
-- Verwenden eines Cmdlets in einem-Befehl. Wenn Sie beispielsweise `Get-ExecutionPolicy` eingeben, wird das Microsoft. PowerShell. Security-Modul importiert, das das `Get-ExecutionPolicy`-Cmdlet enthält.
+- Verwenden eines Cmdlets in einem-Befehl. Wenn Sie z. b. eingeben, wird `Get-ExecutionPolicy` das Microsoft. PowerShell. Security-Modul importiert, das das `Get-ExecutionPolicy` Cmdlet enthält.
 
-- Verwenden des Cmdlets [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) , um den Befehl zu erhalten. Wenn Sie beispielsweise `Get-Command Get-JobTrigger` eingeben, wird das **psscheduledjob** -Modul importiert, das das `Get-JobTrigger`-Cmdlet enthält. Ein `Get-Command` Befehl, der Platzhalter Zeichen enthält, wird als Ermittlung angesehen und löst nicht das Importieren eines Moduls aus.
+- Verwenden des Cmdlets [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) , um den Befehl zu erhalten. Wenn Sie z. b. eingeben, wird `Get-Command Get-JobTrigger` das **psscheduledjob** -Modul importiert, das das `Get-JobTrigger` Cmdlet enthält. Ein `Get-Command` Befehl, der Platzhalter Zeichen enthält, wird als Ermittlung angesehen und löst nicht das Importieren eines Moduls aus.
 
-- Verwenden des Cmdlets " [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) ", um Hilfe zu einem Cmdlet zu erhalten. Wenn Sie beispielsweise `Get-Help Get-WinEvent` eingeben, wird das Microsoft. PowerShell. Diagnostics-Modul importiert, das das `Get-WinEvent`-Cmdlet enthält.
+- Verwenden des Cmdlets " [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) ", um Hilfe zu einem Cmdlet zu erhalten. Wenn Sie z. b. eingeben, wird `Get-Help Get-WinEvent` das Microsoft. PowerShell. Diagnostics-Modul importiert, das das `Get-WinEvent` Cmdlet enthält.
 
-Um das automatische Importieren von Modulen zu unterstützen, ruft das Cmdlet "`Get-Command`" alle Cmdlets und Funktionen in allen installierten Modulen ab, auch wenn das Modul nicht in die Sitzung importiert wird. Weitere Informationen finden Sie im Hilfethema für das Cmdlet " [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) ".
+Um das automatische Importieren von Modulen zu unterstützen, ruft das `Get-Command` Cmdlet alle Cmdlets und Funktionen in allen installierten Modulen ab, auch wenn das Modul nicht in die Sitzung importiert wird. Weitere Informationen finden Sie im Hilfethema für das Cmdlet " [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) ".
 
 ## <a name="the-importing-process"></a>Der Import Vorgang.
 
@@ -69,7 +62,7 @@ Standardmäßig gibt das [Import-Module-](/powershell/module/Microsoft.PowerShel
 ## <a name="restricting--the-members-that-are-imported"></a>Einschränken der importierten Member
 
 Wenn ein Modul mithilfe des [Import-Module-](/powershell/module/Microsoft.PowerShell.Core/Import-Module) Cmdlets importiert wird, werden standardmäßig alle exportierten Modul Elemente in die Sitzung importiert, einschließlich aller Befehle, die von einem Netz Modul in das Modul exportiert werden. Standardmäßig werden Variablen und Aliase nicht exportiert. Verwenden Sie ein [Modul Manifest](./how-to-write-a-powershell-module-manifest.md), um die exportierten Member einzuschränken.
-Verwenden Sie die folgenden Parameter des `Import-Module`-Cmdlets, um die importierten Member einzuschränken.
+Verwenden Sie die folgenden Parameter des Cmdlets, um die importierten Member einzuschränken `Import-Module` .
 
 - **Function**: dieser Parameter schränkt die exportierten Funktionen ein. (Wenn Sie ein Modul Manifest verwenden, finden Sie weitere Informationen unter dem functionstoexport-Schlüssel.)
 
@@ -79,6 +72,6 @@ Verwenden Sie die folgenden Parameter des `Import-Module`-Cmdlets, um die import
 
 - **Alias**: dieser Parameter schränkt die exportierten Aliase ein (wenn Sie ein Modul Manifest verwenden, finden Sie weitere Informationen unter dem Schlüssel "aliasestoexport").
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Schreiben eines Windows PowerShell-Moduls](./writing-a-windows-powershell-module.md)

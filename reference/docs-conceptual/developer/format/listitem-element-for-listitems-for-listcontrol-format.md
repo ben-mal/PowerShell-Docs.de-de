@@ -1,19 +1,12 @@
 ---
 title: ListItem-Element für ListItems für ListControl (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0f96f4f5-8bd5-43ed-95e7-a7358115999a
-caps.latest.revision: 11
-ms.openlocfilehash: 1e0a1b2d20853650328b8cfd1513a08f7e167cd6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e72a887e8bd1f93bacb663e3079eeaec34bdfa51
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365129"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785675"
 ---
 # <a name="listitem-element-for-listitems-for-listcontrol-format"></a>Element „ListItem“ für ListItems für ListControl (Format)
 
@@ -35,29 +28,29 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `ListItem`-Elements beschrieben. Es kann nur eine Eigenschaft oder ein Skript angegeben werden.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `ListItem` Elements beschrieben. Es kann nur eine Eigenschaft oder ein Skript angegeben werden.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
 Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[FormatString-Element für ListItem für ListControl (Format)](./formatstring-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt eine Format Zeichenfolge an, die definiert, wie der Eigenschafts-oder Skript Wert angezeigt wird.|
-|[Itemselectioncondition-Element für ListItem für ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Definiert die Bedingung, die vorhanden sein muss, damit dieses Listenelement verwendet werden muss.|
-|[Label-Element für ListItem für ListControl (Format)](./label-element-for-listitem-for-listcontrol-format.md)|Optionales Element<br /><br /> Gibt die Bezeichnung an, die auf der linken Seite des Eigenschafts-oder Skript Werts in der Zeile angezeigt wird.|
-|[PropertyName-Element für ListItem für ListControl (Format)](./propertyname-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt die .net-Eigenschaft an, deren Wert in der Zeile angezeigt wird.|
-|[ScriptBlock-Element für ListItem für ListControl (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, dessen Wert in der Zeile angezeigt wird.|
+|[Element „ItemSelectionCondition“ für ListItem für ListControl (Format)](./itemselectioncondition-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Definiert die Bedingung, die vorhanden sein muss, damit dieses Listenelement verwendet werden muss.|
+|[Element „Label“ für ListItem für ListControl (Format)](./label-element-for-listitem-for-listcontrol-format.md)|Optionales Element<br /><br /> Gibt die Bezeichnung an, die auf der linken Seite des Eigenschafts-oder Skript Werts in der Zeile angezeigt wird.|
+|[Element „PropertyName“ für ListItem für ListControl (Format)](./propertyname-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt die .net-Eigenschaft an, deren Wert in der Zeile angezeigt wird.|
+|[Element „ScriptBlock“ für ListItem für ListControl (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, dessen Wert in der Zeile angezeigt wird.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[ListItems-Element für Listen Steuer Element (Format)](./listitems-element-for-listentry-for-listcontrol-format.md)|Definiert die Eigenschaften und Skripts, deren Werte in der Listenansicht angezeigt werden.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu den Komponenten einer Listenansicht finden Sie unter [Erstellen einer Listenansicht](./creating-a-list-view.md).
 

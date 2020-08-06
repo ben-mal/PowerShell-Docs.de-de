@@ -1,19 +1,12 @@
 ---
 title: Viewselectedby-Element (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: acdeef4d-3554-4f39-a7e6-a684e3848fd7
-caps.latest.revision: 19
-ms.openlocfilehash: efc1c5d1338889ecd0be7150b7733842ce78979e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c8704c1504c6e24c9cac6bc8bc25e92a0d9110cc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367969"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785012"
 ---
 # <a name="viewselectedby-element-format"></a>Element „ViewSelectedBy“ (Format)
 
@@ -32,30 +25,30 @@ Viewdefinitions-Element (Format) View-Element (Format) viewselectedby-Element (F
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `ViewSelectedBy`-Elements beschrieben. Dieses Element muss mindestens ein `TypeName` oder `SelectionSetName` untergeordnetes Element enthalten. Es gibt keine Beschränkung für die Anzahl der untergeordneten Elemente, die angegeben werden können, und ihre Reihenfolge ist nicht signifikant.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `ViewSelectedBy` Elements beschrieben. Dieses Element muss mindestens ein untergeordnetes- `TypeName` Element oder ein- `SelectionSetName` Element enthalten. Es gibt keine Beschränkung für die Anzahl der untergeordneten Elemente, die angegeben werden können, und ihre Reihenfolge ist nicht signifikant.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Tyname-Element für viewselectedby (Format)](./typename-element-for-viewselectedby-format.md)|Optionales Element.<br /><br /> Gibt ein .NET-Objekt an, das von der Ansicht angezeigt wird.|
-|[Selectionsetname-Element für viewselectedby (Format)](./selectionsetname-element-for-viewselectedby-format.md)|Optionales Element.<br /><br /> Gibt einen Satz von .NET-Objekten an, die von der Sicht angezeigt werden.|
+|[Element „TypeName“ für ViewSelectedBy (Format)](./typename-element-for-viewselectedby-format.md)|Optionales Element.<br /><br /> Gibt ein .NET-Objekt an, das von der Ansicht angezeigt wird.|
+|[Element „SelectionSetName“ für ViewSelectedBy (Format)](./selectionsetname-element-for-viewselectedby-format.md)|Optionales Element.<br /><br /> Gibt einen Satz von .NET-Objekten an, die von der Sicht angezeigt werden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[View-Element (Format)](./view-element-format.md)|Definiert eine Ansicht, in der ein oder mehrere .NET-Objekte angezeigt werden.|
+|[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, in der ein oder mehrere .NET-Objekte angezeigt werden.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zur Verwendung dieses Elements in verschiedenen Ansichten finden Sie unter [Tabellen Ansichts Komponenten](./creating-a-table-view.md), [Listen Ansichts Komponenten](./creating-a-list-view.md), [Wide View Components](./creating-a-wide-view.md)und [Custom Control Components](./creating-custom-controls.md).
 
-Das `SelectionSetName`-Element wird verwendet, wenn die Formatierungs Datei eine Reihe von-Objekten definiert, die von mehreren Sichten angezeigt werden. Weitere Informationen zum Definieren und referenziert von Auswahl Sätzen finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
+Das- `SelectionSetName` Element wird verwendet, wenn die Formatierungs Datei eine Reihe von-Objekten definiert, die von mehreren Sichten angezeigt werden. Weitere Informationen zum Definieren und referenziert von Auswahl Sätzen finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -79,12 +72,12 @@ Im folgenden Beispiel wird gezeigt, wie das [System. ServiceProcess. ServiceCont
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Erstellen benutzerdefinierter Steuerelemente](./creating-custom-controls.md)
+[Erstellen von benutzerdefinierten Steuerelementen](./creating-custom-controls.md)
 
-[Definieren von Auswahl Sätzen](./defining-selection-sets.md)
+[Definieren von Auswahlgruppen](./defining-selection-sets.md)
 
-[Selectionsetname-Element für viewselectedby (Format)](./selectionsetname-element-for-viewselectedby-format.md)
+[Element „SelectionSetName“ für ViewSelectedBy (Format)](./selectionsetname-element-for-viewselectedby-format.md)
 
 [Tyname-Element (Format)](./typename-element-for-viewselectedby-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

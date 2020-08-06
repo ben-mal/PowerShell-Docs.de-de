@@ -1,19 +1,12 @@
 ---
 title: Leitfaden für die Empfehlung zur Entwicklung | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
-caps.latest.revision: 9
-ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dc8ef586954106f6d7fbce550dc22cd935018936
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72370039"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782428"
 ---
 # <a name="advisory-development-guidelines"></a>Empfohlene Entwicklungsrichtlinien
 
@@ -25,17 +18,17 @@ Beim Entwerfen von Cmdlets sollten die folgenden Richtlinien berücksichtigt wer
 
 ### <a name="support-an-inputobject-parameter-ad01"></a>Unterstützung eines Inputobject-Parameters (ad01)
 
-Da Windows PowerShell direkt mit Microsoft .NET Framework-Objekten arbeitet, ist häufig ein .NET Framework Objekt verfügbar, das genau mit dem Typ übereinstimmt, den der Benutzer zum Ausführen eines bestimmten Vorgangs benötigt. `InputObject` ist der Standardname für einen Parameter, der ein solches Objekt als Eingabe annimmt. Beispielsweise definiert das Beispiel **Stop-proc-** Cmdlet im [stopproc-Tutorial](./stopproc-tutorial.md) einen `InputObject` Parameter des Typs Process, der die Eingabe aus der Pipeline unterstützt. Der Benutzer kann einen Satz von Prozess Objekten erhalten, ihn bearbeiten, um die genauen Objekte auszuwählen, die beendet werden sollen, und Sie dann direkt an das Cmdlet "Set **-proc** " übergeben.
+Da Windows PowerShell direkt mit Microsoft .NET Framework-Objekten arbeitet, ist häufig ein .NET Framework Objekt verfügbar, das genau mit dem Typ übereinstimmt, den der Benutzer zum Ausführen eines bestimmten Vorgangs benötigt. `InputObject`der Standardname für einen Parameter, der ein solches Objekt als Eingabe annimmt. Beispielsweise definiert das Beispiel **Stop-proc-** Cmdlet im [stopproc-Tutorial](./stopproc-tutorial.md) einen `InputObject` Parameter des Typs Process, der die Eingabe aus der Pipeline unterstützt. Der Benutzer kann einen Satz von Prozess Objekten erhalten, ihn bearbeiten, um die genauen Objekte auszuwählen, die beendet werden sollen, und Sie dann direkt an das Cmdlet "Set **-proc** " übergeben.
 
 ### <a name="support-the-force-parameter-ad02"></a>Unterstützen des Force-Parameters (ad02)
 
 Gelegentlich muss ein Cmdlet den Benutzer vor der Ausführung eines angeforderten Vorgangs schützen. Ein derartiges Cmdlet sollte einen `Force` Parameter unterstützen, um dem Benutzer zu ermöglichen, diesen Schutz zu überschreiben, wenn der Benutzer über Berechtigungen zum Ausführen des Vorgangs verfügt.
 
-Beispielsweise entfernt das [Remove-Item-](/powershell/module/microsoft.powershell.management/remove-item) Cmdlet normalerweise keine schreibgeschützte Datei. Dieses Cmdlet unterstützt jedoch einen `Force` Parameter, sodass ein Benutzer das Entfernen einer schreibgeschützten Datei erzwingen kann. Wenn der Benutzer bereits über die Berechtigung zum Ändern des schreibgeschützten Attributs verfügt und der Benutzer die Datei entfernt, vereinfacht die Verwendung des `Force`-Parameters den Vorgang. Wenn der Benutzer jedoch nicht über die Berechtigung zum Entfernen der Datei verfügt, hat der `Force`-Parameter keine Auswirkungen.
+Beispielsweise entfernt das [Remove-Item-](/powershell/module/microsoft.powershell.management/remove-item) Cmdlet normalerweise keine schreibgeschützte Datei. Dieses Cmdlet unterstützt jedoch einen `Force` Parameter, sodass ein Benutzer das Entfernen einer schreibgeschützten Datei erzwingen kann. Wenn der Benutzer bereits über die Berechtigung zum Ändern des schreibgeschützten Attributs verfügt und der Benutzer die Datei entfernt, vereinfacht die Verwendung des- `Force` Parameters den Vorgang. Wenn der Benutzer jedoch nicht über die Berechtigung zum Entfernen der Datei verfügt, hat der- `Force` Parameter keine Auswirkungen.
 
 ### <a name="handle-credentials-through-windows-powershell-ad03"></a>Behandeln von Anmelde Informationen über Windows PowerShell (AD03)
 
-Ein Cmdlet muss einen `Credential` Parameter definieren, um die Anmelde Informationen darzustellen. Dieser Parameter muss vom Typ " [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) " sein und muss mithilfe der Deklaration eines Credential-Attributs definiert werden. Durch diese Unterstützung wird der Benutzer automatisch zur Eingabe des Benutzernamens, des Kennworts oder für beides aufgefordert, wenn keine vollständigen Anmelde Informationen direkt bereitgestellt werden. Weitere Informationen zum Credential-Attribut finden Sie unter [Credential Attribute Declaration](./credential-attribute-declaration.md).
+Ein Cmdlet `Credential` muss einen Parameter definieren, um die Anmelde Informationen darzustellen. Dieser Parameter muss vom Typ " [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential) " sein und muss mithilfe der Deklaration eines Credential-Attributs definiert werden. Durch diese Unterstützung wird der Benutzer automatisch zur Eingabe des Benutzernamens, des Kennworts oder für beides aufgefordert, wenn keine vollständigen Anmelde Informationen direkt bereitgestellt werden. Weitere Informationen zum Credential-Attribut finden Sie unter [Credential Attribute Declaration](./credential-attribute-declaration.md).
 
 ### <a name="support-encoding-parameters-ad04"></a>Unterstützen von Codierungs Parametern (AD04)
 
@@ -55,11 +48,11 @@ Durch die folgenden Standard Benennungs Konventionen machen Sie Ihre Cmdlets lei
 
 #### <a name="define-a-cmdlet-in-the-correct-namespace"></a>Definieren eines Cmdlets im richtigen Namespace
 
-Normalerweise definieren Sie die-Klasse für ein Cmdlet in einem .NET Framework Namespace, der "" anfügt. Befehle "für den Namespace, der das Produkt darstellt, in dem das Cmdlet ausgeführt wird. Beispielsweise werden Cmdlets, die in Windows PowerShell enthalten sind, im `Microsoft.PowerShell.Commands`-Namespace definiert.
+Normalerweise definieren Sie die-Klasse für ein Cmdlet in einem .NET Framework Namespace, der "" anfügt. Befehle "für den Namespace, der das Produkt darstellt, in dem das Cmdlet ausgeführt wird. Beispielsweise werden Cmdlets, die in Windows PowerShell enthalten sind, im- `Microsoft.PowerShell.Commands` Namespace definiert.
 
 #### <a name="name-the-cmdlet-class-to-match-the-cmdlet-name"></a>Benennen Sie die Cmdlet-Klasse mit dem Namen des Cmdlets.
 
-Wenn Sie die .NET Framework Klasse benennen, die ein Cmdlet implementiert, benennen Sie die Klasse " *\<Verb > **\<Substantiv >** \<Command >* ", wobei Sie das *\<Verb >* und *\<Substantiv >* Platzhalter durch das Verb und das Nomen ersetzen, die für den Cmdlet-Namen verwendet werden. Beispielsweise wird das Cmdlet " [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) " von einer Klasse mit dem Namen "`GetProcessCommand`" implementiert.
+Wenn Sie die .NET Framework Klasse benennen, die ein Cmdlet implementiert, benennen Sie die Klasse " *\<Verb>**\<Noun>**\<Command>* ", wobei Sie *\<Verb>* die *\<Noun>* Platzhalter und durch das Verb und den Substantiv ersetzen, die für den Cmdlet-Namen verwendet werden. Das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet wird z. b. von einer Klasse mit dem Namen implementiert `GetProcessCommand` .
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Wenn keine Pipeline Eingabe die BeginProcessing-Methode außer Kraft setzt (AC02)
 
@@ -95,7 +88,7 @@ Integrierte, verteilbare Typen:
 
 - Pslistmodifier
 
-- PS-Anmeldeinformationen
+- PSCredential
 
 - IPAddress, Mail Address
 
@@ -107,7 +100,7 @@ Integrierte, verteilbare Typen:
 
 Andere Typen:
 
-- Sicherheitszeichenfolge
+- SecureString
 
 - Container (Listen und Wörterbücher des obigen Typs)
 
@@ -117,8 +110,8 @@ Verwenden Sie bei der Behandlung sensibler Daten stets den Datentyp [System. Sec
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Erforderliche Entwicklungs Richtlinien](./required-development-guidelines.md)
+[Erforderliche Entwicklungsrichtlinien](./required-development-guidelines.md)
 
-[Stark unterstützt Entwicklungs Richtlinien](./strongly-encouraged-development-guidelines.md)
+[Ausdrücklich empfohlene Entwicklungsrichtlinien](./strongly-encouraged-development-guidelines.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

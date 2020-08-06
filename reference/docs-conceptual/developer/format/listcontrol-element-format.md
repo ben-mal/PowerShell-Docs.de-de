@@ -1,19 +1,12 @@
 ---
 title: ListControl-Element (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 37beeb0b-7a81-4747-becb-e309e17278fb
-caps.latest.revision: 12
-ms.openlocfilehash: 7a117c25b0d117dc846ba8e060e31e838b5edd52
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0173b9797bffcca74f1a32903686f771366ebb1b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362779"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785726"
 ---
 # <a name="listcontrol-element-format"></a>Element „ListControl“ (Format)
 
@@ -32,25 +25,25 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `ListControl`-Elements beschrieben. Dieses Element darf nur ein einzelnes untergeordnetes Element enthalten.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `ListControl` Elements beschrieben. Dieses Element darf nur ein einzelnes untergeordnetes Element enthalten.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |[ListEntries-Element (Format)](./listentries-element-for-listcontrol-format.md)|Erforderliches Element.<br /><br /> Stellt die Definitionen der Listenansicht bereit.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[View-Element (Format)](./view-element-format.md)|Definiert eine Ansicht, die zum Anzeigen der Member von einem oder mehreren-Objekten verwendet wird.|
+|[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, die zum Anzeigen der Member von einem oder mehreren-Objekten verwendet wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zum Erstellen einer Listenansicht finden Sie unter [Erstellen einer Listenansicht](./creating-a-list-view.md).
 
@@ -74,7 +67,7 @@ Dieses Beispiel zeigt eine Listenansicht für das [System. ServiceProcess. Servi
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[View-Element (Format)](./view-element-format.md)
+[Element „View“ (Format)](./view-element-format.md)
 
 [ListEntries-Element (Format)](./listentries-element-for-listcontrol-format.md)
 

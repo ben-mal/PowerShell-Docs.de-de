@@ -1,24 +1,17 @@
 ---
 title: Windows PowerShell-Fehler Datensätze | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - error category [PowerShell SDK]
 - error identifier [PowerShell SDK]
 - error records [PowerShell SDK]
 - error category string [PowerShell SDK]
-ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
-caps.latest.revision: 9
-ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 52243916adf18b4f3a1e00f1fb4199c2619946e9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369109"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783975"
 ---
 # <a name="windows-powershell-error-records"></a>Windows PowerShell-Fehlerdatensätze
 
@@ -38,7 +31,7 @@ Wenn das Cmdlet eine Ausnahme nicht abfängt, muss eine neue Ausnahme erstellt u
 
 - Optionale Aufruf Informationen über das Cmdlet, das den Fehler ausgelöst hat. Diese Informationen werden von Windows PowerShell angegeben (siehe Aufruf Nachricht).
 
-- Das Zielobjekt, das beim Auftreten des Fehlers verarbeitet wurde. Dies kann das Eingabe Objekt sein, oder es kann ein anderes Objekt sein, das das Cmdlet verarbeitet hat. Beispielsweise kann für den Befehl `remove-item -recurse c:\somedirectory`der Fehler eine Instanz eines FileInfo-Objekts für "c:\somedirectory\lockedfile" sein. Die Zielobjekt Informationen sind optional.
+- Das Zielobjekt, das beim Auftreten des Fehlers verarbeitet wurde. Dies kann das Eingabe Objekt sein, oder es kann ein anderes Objekt sein, das das Cmdlet verarbeitet hat. Für den-Befehl `remove-item -recurse c:\somedirectory` könnte der Fehler beispielsweise eine Instanz eines FileInfo-Objekts für "c:\somedirectory\lockedfile" sein. Die Zielobjekt Informationen sind optional.
 
 ## <a name="error-identifier"></a>Fehler Bezeichner
 
@@ -60,7 +53,7 @@ Verwenden Sie die folgenden Richtlinien, um beim Erstellen von Fehler Datensätz
 
 ## <a name="error-category"></a>Fehlerkategorie
 
-Wenn Sie einen Fehler Daten Satz erstellen, geben Sie die Kategorie des Fehlers mithilfe einer der Konstanten an, die von der [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) -Enumeration definiert werden. Windows PowerShell verwendet die Fehler Kategorie, um Fehlerinformationen anzuzeigen, wenn Benutzer die `$ErrorView` Variable auf `"CategoryView"`festlegen.
+Wenn Sie einen Fehler Daten Satz erstellen, geben Sie die Kategorie des Fehlers mithilfe einer der Konstanten an, die von der [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) -Enumeration definiert werden. Windows PowerShell verwendet die Fehler Kategorie, um Fehlerinformationen anzuzeigen, wenn Benutzer die `$ErrorView` Variable auf festlegen `"CategoryView"` .
 
 Vermeiden Sie die Verwendung der [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory?view=pscore-6.2.0) **NotSet** -Konstante. Wenn Sie Informationen über den Fehler oder den Vorgang haben, der den Fehler verursacht hat, wählen Sie die Kategorie aus, die den Fehler oder den Vorgang am besten beschreibt, auch wenn die Kategorie nicht perfekt geeignet ist.
 

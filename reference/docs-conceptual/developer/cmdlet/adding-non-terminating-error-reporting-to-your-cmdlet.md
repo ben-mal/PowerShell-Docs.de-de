@@ -1,25 +1,18 @@
 ---
 title: Hinzufügen von Fehlerberichten ohne Abbruch zum Cmdlet | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
-caps.latest.revision: 8
-ms.openlocfilehash: ec29d1cffa083e4cce667d3e1efbd4eeecbffb51
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870114"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784587"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Hinzufügen von Berichten für Fehler ohne Abbruch zu Cmdlet
 
-Cmdlets können nicht abschließende Fehler melden, indem Sie die [System. Management. Automation. Cmdlet. Write error][] -Methode aufrufen und weiterhin auf dem aktuellen Eingabe Objekt oder in weiteren eingehenden Pipeline Objekten arbeiten. In diesem Abschnitt wird erläutert, wie ein Cmdlet erstellt wird, das nicht abschließende Fehler von seinen Eingabe Verarbeitungsmethoden meldet.
+Cmdlets können nicht abschließende Fehler melden, indem Sie die [System. Management. Automation. Cmdlet. Write-error][] -Methode aufrufen und weiterhin auf dem aktuellen Eingabe Objekt oder in weiteren eingehenden Pipeline Objekten arbeiten. In diesem Abschnitt wird erläutert, wie ein Cmdlet erstellt wird, das nicht abschließende Fehler von seinen Eingabe Verarbeitungsmethoden meldet.
 
-Bei nicht beendenden Fehlern (sowie beim Beenden von Fehlern) muss das Cmdlet ein [System. Management. Automation. ErrorRecord][] -Objekt übergeben, das den Fehler identifiziert. Jeder Fehler Daten Satz wird durch eine eindeutige Zeichenfolge identifiziert, die als "Fehler Bezeichner" bezeichnet wird. Zusätzlich zum Bezeichner wird die Kategorie jedes Fehlers durch Konstanten angegeben, die durch eine [System. Management. Automation. ErrorCategory][] -Enumeration definiert werden. Der Benutzer kann Fehler basierend auf der Kategorie anzeigen, indem er die `$ErrorView` Variable auf "categoryview" festlegt.
+Bei nicht beendenden Fehlern (sowie beim Beenden von Fehlern) muss das Cmdlet ein [System. Management. Automation. ErrorRecord][] -Objekt übergeben, das den Fehler identifiziert. Jeder Fehler Daten Satz wird durch eine eindeutige Zeichenfolge identifiziert, die als "Fehler Bezeichner" bezeichnet wird. Zusätzlich zum Bezeichner wird die Kategorie jedes Fehlers durch Konstanten angegeben, die durch eine [System. Management. Automation. ErrorCategory][] -Enumeration definiert werden. Der Benutzer kann Fehler basierend auf der Kategorie anzeigen `$ErrorView` , indem er die Variable auf "categoryview" festlegt.
 
 Weitere Informationen zu Fehler Datensätzen finden Sie unter [Windows PowerShell-Fehler Datensätze](./windows-powershell-error-records.md).
 
@@ -115,9 +108,9 @@ Nicht behandelte Ausnahmen werden von PowerShell unter den folgenden Bedingungen
 
 ## <a name="reporting-nonterminating-errors"></a>Melden von nicht abschließenden Fehlern
 
-Jede der Eingabe Verarbeitungsmethoden kann mithilfe der [System. Management. Automation. Cmdlet. Write error][] -Methode einen Fehler ohne Abbruch an den Ausgabestream melden.
+Jede der Eingabe Verarbeitungsmethoden kann mithilfe der [System. Management. Automation. Cmdlet. Write-error][] -Methode einen Fehler ohne Abbruch an den Ausgabestream melden.
 
-Im folgenden finden Sie ein Codebeispiel aus diesem Get-proc-Cmdlet, das den [System. Management. Automation. Cmdlet. Write error][] -Befehl in der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord][] -Methode veranschaulicht. In diesem Fall wird der-Befehl durchgeführt, wenn das Cmdlet keinen Prozess für einen angegebenen Prozess Bezeichner finden kann.
+Im folgenden finden Sie ein Codebeispiel aus diesem Get-proc-Cmdlet, das den [System. Management. Automation. Cmdlet. Write-error][] -Befehl in der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord][] -Methode veranschaulicht. In diesem Fall wird der-Befehl durchgeführt, wenn das Cmdlet keinen Prozess für einen angegebenen Prozess Bezeichner finden kann.
 
 ```csharp
 protected override void ProcessRecord()
@@ -161,13 +154,13 @@ protected override void ProcessRecord()
 
 Bei einem Fehler ohne Abbruch muss das Cmdlet einen bestimmten Fehler Bezeichner für jedes bestimmte Eingabe Objekt generieren.
 
-Ein Cmdlet muss häufig die PowerShell-Aktion ändern, die von einem Fehler ohne Abbruch erzeugt wird. Hierzu können Sie die Parameter "`ErrorAction`" und "`ErrorVariable`" definieren. Wenn Sie den `ErrorAction` Parameter definieren, zeigt das Cmdlet die Benutzeroptionen [System. Management. Automation. Action Preference][]an. Sie können die Aktion auch direkt beeinflussen, indem Sie die `$ErrorActionPreference` Variable festlegen.
+Ein Cmdlet muss häufig die PowerShell-Aktion ändern, die von einem Fehler ohne Abbruch erzeugt wird. Hierzu können Sie den `ErrorAction` -Parameter und den `ErrorVariable` -Parameter definieren. Wenn Sie den `ErrorAction` Parameter definieren, zeigt das Cmdlet die Benutzeroptionen [System. Management. Automation. Action Preference][]an. Sie können die Aktion auch direkt beeinflussen, indem Sie die `$ErrorActionPreference` Variable festlegen.
 
-Mit dem-Cmdlet können nicht abschließende Fehler in einer Variablen gespeichert werden. dabei wird der `ErrorVariable`-Parameter verwendet, der von der-Einstellung `ErrorAction`nicht betroffen ist. Fehler können an eine vorhandene Fehler Variable angehängt werden, indem ein Pluszeichen (+) am Anfang des Variablen namens hinzugefügt wird.
+Mithilfe des- `ErrorVariable` Parameters, der nicht von der-Einstellung von betroffen ist, kann das Cmdlet nicht abschließende Fehler in einer Variablen speichern `ErrorAction` . Fehler können an eine vorhandene Fehler Variable angehängt werden, indem ein Pluszeichen (+) am Anfang des Variablen namens hinzugefügt wird.
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Den gesamten C# Beispielcode finden Sie unter [GetProcessSample04 Sample](./getprocesssample04-sample.md).
+Den gesamten c#-Beispielcode finden Sie unter [GetProcessSample04 Sample](./getprocesssample04-sample.md).
 
 ## <a name="define-object-types-and-formatting"></a>Definieren von Objekttypen und Formatierung
 
@@ -195,9 +188,9 @@ Wenn das Cmdlet in PowerShell registriert wurde, können Sie es in der Befehlsze
   + get-proc  <<<< -name test
   ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Hinzufügen von Parametern, die Pipeline Eingaben verarbeiten](./adding-parameters-that-process-pipeline-input.md)
+[Hinzufügen von Parametern, die Pipelineeingaben verarbeiten](./adding-parameters-that-process-pipeline-input.md)
 
 [Hinzufügen von Parametern zur Verarbeitung der Befehlszeilen Eingabe](./adding-parameters-that-process-command-line-input.md)
 
@@ -211,7 +204,7 @@ Wenn das Cmdlet in PowerShell registriert wurde, können Sie es in der Befehlsze
 
 [Cmdlet-Beispiele](./cmdlet-samples.md)
 
-[System. Exception]: /dotnet/api/System.Exception
+[System.Exception]: /dotnet/api/System.Exception
 [System. Management. Automation. Action Preference]: /dotnet/api/System.Management.Automation.ActionPreference
 [System. Management. Automation. Cmdlet. ProcessRecord]: /dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord
 [System. Management. Automation. Cmdlet. Write error]: /dotnet/api/System.Management.Automation.Cmdlet.WriteError

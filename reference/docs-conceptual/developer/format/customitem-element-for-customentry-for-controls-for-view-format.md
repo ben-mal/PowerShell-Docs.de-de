@@ -1,25 +1,18 @@
 ---
 title: CustomItem-Element für customentry für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 33cb5350-73ef-4b79-a879-0edf051869e4
-caps.latest.revision: 7
-ms.openlocfilehash: 174ba6a14819f823ec39f72e49a626e781221d8c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 747ea14e7118be62ebee00e7d80af2dccb5c8353
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363939"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785845"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-view-format"></a>Element „CustomItem“ für CustomEntry für Controls für View (Format)
 
 Definiert, welche Daten vom Steuerelement angezeigt werden und wie es angezeigt wird. Dieses Element wird beim Definieren von Steuerelementen verwendet, die von einer Ansicht verwendet werden können.
 
-Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) steuert Element (Format) Steuerelement (Format) Steuerelement für Steuerelemente für Ansicht (Format) CustomControl-Element für Steuerelement für Steuerelemente für Ansicht (Format) customentries-Element für CustomControl für View (Format) customentry-Element für customentries für Steuerelemente für Ansicht (Format) customItem-Element für customentry für Steuerelemente für Ansicht (Format)
+Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) steuert Element (Format) Steuerelement für Steuerelemente für Ansicht (Format) CustomControl-Element für Steuerelemente für Ansicht (Format) customentries-Element für CustomControl für View (Format) customentry-Element für customentries für Steuerelemente für Ansicht (Format) customItem-Element für customentry für Steuerelemente für Ansicht (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,32 +27,32 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `CustomItem`-Elements beschrieben. Weitere Informationen finden Sie in den Hinweisen.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `CustomItem` Elements beschrieben. Weitere Informationen finden Sie in den Hinweisen.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[ExpressionBinding-Element für customItem für Steuerelemente für Ansicht (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Definiert die Daten, die vom-Steuerelement angezeigt werden.|
-|[Frame-Element für customItem für Steuerelemente für Ansicht (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Definiert, wie die Daten angezeigt werden, z. b. das Verschieben der Daten nach links oder rechts.|
-|[NewLine-Element für customItem für Steuerelemente für Ansicht (Format)](./newline-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Fügt der Anzeige des-Steuer Elements eine leere Zeile hinzu.|
-|[Text-Element für customItem für Steuerelemente für Ansicht (Format)](./text-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Fügt der Anzeige des-Steuer Elements Text, z. b. Klammern oder eckige Klammern, hinzu.|
+|[Element „ExpressionBinding“ für CustomItem für Controls für View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Definiert die Daten, die vom-Steuerelement angezeigt werden.|
+|[Element „Frame“ für CustomItem für Controls für View (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Definiert, wie die Daten angezeigt werden, z. b. das Verschieben der Daten nach links oder rechts.|
+|[Element „NewLine“ für CustomItem für Controls für View (Format)](./newline-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Fügt der Anzeige des-Steuer Elements eine leere Zeile hinzu.|
+|[Element „Text“ für CustomItem für Controls für View (Format)](./text-element-for-customitem-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Fügt der Anzeige des-Steuer Elements Text, z. b. Klammern oder eckige Klammern, hinzu.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
-|[Customentry-Element für customentries für Steuerelemente für Ansicht (Format)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Stellt eine Definition des-Steuer Elements bereit.|
+|[Element „CustomEntry“ für CustomEntries für Controls für View (Format)](./customentry-element-for-customentries-for-controls-for-view-format.md)|Stellt eine Definition des-Steuer Elements bereit.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Beachten Sie Folgendes, wenn Sie die untergeordneten Elemente des `CustomItem` Elements angeben:
+Beachten Sie Folgendes, wenn Sie die untergeordneten Elemente des- `CustomItem` Elements angeben:
 
-- Die untergeordneten Elemente müssen in der folgenden Reihenfolge hinzugefügt werden: `ExpressionBinding`, `NewLine`, `Text`und `Frame`.
+- Die untergeordneten Elemente müssen in der folgenden Reihenfolge hinzugefügt werden: `ExpressionBinding` , `NewLine` , `Text` und `Frame` .
 
 - Es gibt keine maximale Beschränkung für die Anzahl der Sequenzen, die Sie angeben können.
 
@@ -67,12 +60,12 @@ Beachten Sie Folgendes, wenn Sie die untergeordneten Elemente des `CustomItem` E
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[ExpressionBinding-Element für customItem für Steuerelemente für Ansicht (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
+[Element „ExpressionBinding“ für CustomItem für Controls für View (Format)](./expressionbinding-element-for-customitem-for-controls-for-view-format.md)
 
-[Frame-Element für customItem für Steuerelemente für Ansicht (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)
+[Element „Frame“ für CustomItem für Controls für View (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)
 
-[NewLine-Element für customItem für Steuerelemente für Ansicht (Format)](./newline-element-for-customitem-for-controls-for-view-format.md)
+[Element „NewLine“ für CustomItem für Controls für View (Format)](./newline-element-for-customitem-for-controls-for-view-format.md)
 
-[Text-Element für customItem für Steuerelemente für Ansicht (Format)](./text-element-for-customitem-for-controls-for-view-format.md)
+[Element „Text“ für CustomItem für Controls für View (Format)](./text-element-for-customitem-for-controls-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

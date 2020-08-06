@@ -1,19 +1,12 @@
 ---
 title: Wideentries-Element für widecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 0c4bff45-0960-4b3a-95e7-47f2cee03ac5
-caps.latest.revision: 12
-ms.openlocfilehash: 083f3c8df8136858e32778ed231943ef983e47aa
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 74383b288c945008c1d7b5119363a166c04802ae
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361429"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785046"
 ---
 # <a name="wideentries-element-for-widecontrol-format"></a>Element „WideEntries“ für WideControl (Format)
 
@@ -32,31 +25,31 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View-Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `WideEntries`-Elements beschrieben. Es muss mindestens ein untergeordnetes Element angegeben werden.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `WideEntries` Elements beschrieben. Es muss mindestens ein untergeordnetes Element angegeben werden.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Wideentry-Element (Format)](./wideentry-element-for-widecontrol-format.md)|Stellt eine Definition der breiten Ansicht bereit.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Widecontrol-Element (Format)](./widecontrol-element-format.md)|Definiert ein breites Listenformat (Einzelwert) für die Sicht.|
+|[Element „WideControl“ (Format)](./widecontrol-element-format.md)|Definiert ein breites Listenformat (Einzelwert) für die Sicht.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Eine breite Ansicht ist ein Listenformat, in dem ein einzelner Eigenschafts Wert oder ein Skript Wert für jedes Objekt angezeigt wird. Weitere Informationen zu den Komponenten einer breiten Ansicht finden Sie unter [Wide View Components](./creating-a-wide-view.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein `WideEntries`-Element, das ein einzelnes `WideEntry` Element definiert. Das `WideEntry`-Element enthält ein einzelnes `WideItem` Element, das definiert, welcher Eigenschafts-oder Skript Wert in der Ansicht angezeigt wird.
+Das folgende Beispiel zeigt ein- `WideEntries` Element, das ein einzelnes- `WideEntry` Element definiert. Das- `WideEntry` Element enthält ein einzelnes- `WideItem` Element, das definiert, welcher Eigenschafts-oder Skript Wert in der Ansicht angezeigt wird.
 
 ```xml
 <WideControl>
@@ -74,8 +67,8 @@ Ein umfassendes Beispiel für eine breite Ansicht finden Sie unter [Wide View (B
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Widecontrol-Element (Format)](./widecontrol-element-format.md)
+[Element „WideControl“ (Format)](./widecontrol-element-format.md)
 
 [Wideentry-Element (Format)](./wideentry-element-for-widecontrol-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

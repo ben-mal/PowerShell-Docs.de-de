@@ -1,22 +1,15 @@
 ---
 title: Cmdlet-Klassen Deklaration | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], declaring
 - declaring cmdlets [PowerShell SDK]
-ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
-caps.latest.revision: 14
-ms.openlocfilehash: 0de49d979c31b0e8d111323a2e1899d97868ec3f
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978711"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784502"
 ---
 # <a name="cmdlet-class-declaration"></a>Deklaration der Cmdlet-Klasse
 
@@ -30,7 +23,7 @@ Wenn Sie das **Cmdlet** -Attribut angeben, müssen Sie das Verb-und-Substantiv-P
 
 Das Substantiv des Cmdlets gibt die Ressourcen an, auf die das Cmdlet angewendet wird. Das Substantiv unterscheidet Ihre Cmdlets von anderen Cmdlets.
 
-Nomen in Cmdlet-Namen müssen spezifisch sein, und im Fall von generischen Substantiven, wie z. b. *Server*, ist es am besten, ein kurzes Präfix hinzuzufügen, das Ihre Ressource von anderen ähnlichen Ressourcen unterscheidet. Beispielsweise ist ein Cmdlet-Name, der ein Substantiv mit einem Präfix enthält, `Get-SQLServer`. Die Kombination eines bestimmten Substantiv mit einem allgemeineren Verb ermöglicht dem Benutzer, das Cmdlet anhand seiner Aktion schnell zu finden und dann das Cmdlet anhand seiner Ressource zu identifizieren, während unnötige Cmdlet-namens Duplikate vermieden werden.
+Nomen in Cmdlet-Namen müssen spezifisch sein, und im Fall von generischen Substantiven, wie z. b. *Server*, ist es am besten, ein kurzes Präfix hinzuzufügen, das Ihre Ressource von anderen ähnlichen Ressourcen unterscheidet. Beispielsweise ist ein Cmdlet-Name, der ein Substantiv mit einem Präfix enthält, `Get-SQLServer` . Die Kombination eines bestimmten Substantiv mit einem allgemeineren Verb ermöglicht dem Benutzer, das Cmdlet anhand seiner Aktion schnell zu finden und dann das Cmdlet anhand seiner Ressource zu identifizieren, während unnötige Cmdlet-namens Duplikate vermieden werden.
 
 Eine Liste von Sonderzeichen, die in Cmdlet-Namen nicht verwendet werden können, finden Sie unter [erforderliche Entwicklungs Richtlinien](./required-development-guidelines.md).
 
@@ -54,7 +47,7 @@ Der folgende Code ist die Definition für eine getproc-Cmdlet-Klasse. Beachten S
 
 ## <a name="pascal-casing"></a>Pascal-Schreibweise
 
-Wenn Sie Cmdlets benennen, verwenden Sie die Pascal-Schreibweise. Die Cmdlets `Get-Item` und `Get-ItemProperty` zeigen z. b. die richtige Methode für die Verwendung von Groß-und Kleinschreibung, wenn Sie Cmdlets benennen.
+Wenn Sie Cmdlets benennen, verwenden Sie die Pascal-Schreibweise. Die `Get-Item` `Get-ItemProperty` Cmdlets und zeigen z. b. die richtige Methode für die Verwendung von Groß-und Kleinschreibung, wenn Sie Cmdlets benennen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

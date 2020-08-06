@@ -1,23 +1,16 @@
 ---
 title: Alias Attribut Deklaration | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Alias attribute
 - attributes, Alias
 - Alias attribute, described
-ms.assetid: d0df3a46-b1cc-42b9-beb1-e16bce254007
-caps.latest.revision: 10
-ms.openlocfilehash: 4d20672c5181c994c1b53624f6c42a301db11f26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4c1ff34a244611173ca919a44d6598189b19dc98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72370019"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782411"
 ---
 # <a name="alias-attribute-declaration"></a>Attributdeklaration: Alias
 
@@ -31,9 +24,9 @@ Das Alias-Attribut ermöglicht es dem Benutzer, unterschiedliche Namen für eine
 
 #### <a name="parameters"></a>Parameter
 
-`aliasName` (Zeichenfolge []) ist erforderlich. Gibt eine Reihe von durch Trennzeichen getrennten Aliasnamen für den Cmdlet-Parameter an.
+`aliasName`(Zeichenfolge []) Erforderlich. Gibt eine Reihe von durch Trennzeichen getrennten Aliasnamen für den Cmdlet-Parameter an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - Das Alias-Attribut wird mit dem Parameter-Attribut verwendet, wenn Sie einen Cmdlet-Parameter angeben. Weitere Informationen zum Deklarieren dieser Attribute finden Sie unter [Deklarieren von Cmdlet-Parametern](./how-to-declare-cmdlet-parameters.md).
 
@@ -45,6 +38,6 @@ Das Alias-Attribut ermöglicht es dem Benutzer, unterschiedliche Namen für eine
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Parameter Aliase](./parameter-aliases.md)
+[Parameteraliase](./parameter-aliases.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

@@ -1,25 +1,18 @@
 ---
 title: Runspace11-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9c90d268-730b-4e73-9dfd-5f288c27aed0
-caps.latest.revision: 8
-ms.openlocfilehash: 606f06339d0bbec3393c6b2602df3636c1f4e458
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 6e8a4080bb4fb33f7e0d428e24483b5cfac5c70e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565382"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784927"
 ---
 # <a name="runspace11-sample"></a>Runspace11-Beispiel
 
 In diesem Beispiel wird gezeigt, wie Sie mit der [System. Management. Automation. ProxyCommand](/dotnet/api/System.Management.Automation.ProxyCommand) -Klasse einen Proxy Befehl erstellen, der ein vorhandenes Cmdlet aufruft, aber den Satz verfügbarer Parameter einschränkt. Der Proxybefehl wird anschließend zu einem anfänglichen Sitzungsstatus hinzugefügt, der dazu verwendet wird, einen eingeschränkten Runspace zu erstellen. Dies bedeutet, dass der Benutzer nur über den Proxybefehl auf die Funktionalität des Cmdlets zugreifen kann.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
@@ -29,11 +22,11 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 - Erstellen eines [System. Management. Automation. commandmetadata](/dotnet/api/System.Management.Automation.CommandMetadata) -Objekts, das die Metadaten eines vorhandenen Cmdlets beschreibt.
 
-- Ein [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt wird erstellt.
+- Erstellen eines [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekts.
 
 - Ändern der Cmdlet-Metadaten zum Entfernen eines Parameters des Cmdlets.
 
-- Fügen Sie das Cmdlet dem [System. Management. Automation. Runspaces. initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzu, und machen Sie das Cmdlet privat.
+- Fügen Sie das Cmdlet dem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzu, und machen Sie das Cmdlet privat.
 
 - Erstellen einer Proxy Funktion, die das vorhandene Cmdlet aufruft, aber nur einen eingeschränkten Satz von Parametern verfügbar macht.
 
