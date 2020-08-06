@@ -1,32 +1,25 @@
 ---
-title: StopProc01 (C#)-Beispiel Code | Microsoft-Dokumentation
-ms.custom: ''
+title: StopProc01 (c#)-Beispiel Code | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 89796687-ae20-447a-a6b1-2f51b559d4e9
-caps.latest.revision: 5
-ms.openlocfilehash: e38a1eac948929772c2aef0755df18df572505f9
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 61cf4388c180a46847d7598756c6b492d31d3ec1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80977606"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787018"
 ---
 # <a name="stopproc01-c-sample-code"></a>StopProc01-Codebeispiel (C#)
 
-Im folgenden finden Sie C# den gesamten Code für das StopProc01-Beispiel-Cmdlet.
+Dies ist der komplette c#-Code für das StopProc01-Beispiel-Cmdlet.
 
 > [!NOTE]
-> Sie können die C# (stopproc01.cs)-Quelldatei für das Cmdlet "Start-proc" mithilfe der Laufzeitkomponenten Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0 herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
-> Die heruntergeladenen Quelldateien stehen im **\<PowerShell-Beispiele >** Verzeichnis zur Verfügung.
+> Sie können die c#-Quelldatei (stopproc01.cs) für das Cmdlet "Start-proc" mithilfe der Laufzeitkomponenten Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0 herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Die heruntergeladenen Quelldateien sind im **\<PowerShell Samples>** Verzeichnis verfügbar.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/StopProcessSample01/StopProcessSample01.cs" range="11-212":::
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Windows PowerShell-Programmier Handbuch](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell-Programmiererhandbuch](./windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

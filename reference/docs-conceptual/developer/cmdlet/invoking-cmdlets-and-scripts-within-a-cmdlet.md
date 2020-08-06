@@ -1,19 +1,12 @@
 ---
 title: Aufrufen von Cmdlets und Skripts in einem Cmdlet | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e7040a5c-4a47-42df-a2ea-96b134a4ed9b
-caps.latest.revision: 10
-ms.openlocfilehash: f20708ff41d9a6de90090997a875ba5371eccd74
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 3d5f76242c02763c41b81215bbb031e19869066a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364289"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786576"
 ---
 # <a name="invoking-cmdlets-and-scripts-within-a-cmdlet"></a>Aufrufen von Cmdlets und Skripts in einem Cmdlet
 
@@ -31,7 +24,7 @@ Die [System. Management. Automation. Cmdlet. aufrufen *](/dotnet/api/System.Mana
 
 ## <a name="examples"></a>Beispiele
 
-|Beispiel|Description|
+|Beispiel|Beschreibung|
 |-------------|-----------------|
 |[Aufrufen von Cmdlets in einem Cmdlet](./how-to-invoke-a-cmdlet-from-within-a-cmdlet.md)|Dieses Beispiel zeigt, wie Sie ein Cmdlet in einem anderen Cmdlet aufrufen.|
 |[Aufrufen von Skripts in einem Cmdlet](./how-to-invoke-scripts-within-a-cmdlet.md)|In diesem Beispiel wird gezeigt, wie ein Skript aufgerufen wird, das für das Cmdlet aus einem anderen Cmdlet bereitgestellt wird.|

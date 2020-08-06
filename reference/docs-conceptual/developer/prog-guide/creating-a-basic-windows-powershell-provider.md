@@ -1,22 +1,15 @@
 ---
 title: Erstellen eines einfachen Windows PowerShell-Anbieters | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - base provider [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], base provider
-ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
-caps.latest.revision: 7
-ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978507"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787222"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Erstellen eines Windows PowerShell-Standardanbieters
 
@@ -29,9 +22,9 @@ Wie bereits erwähnt, implementiert der hier beschriebene grundlegende Anbieter 
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Definieren der Windows PowerShell-Anbieter Klasse
 
-Der erste Schritt beim Erstellen eines Windows PowerShell-Anbieters ist die Definition der .NET-Klasse. Dieser grundlegende Anbieter definiert eine Klasse mit dem Namen `AccessDBProvider`, die von der [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) -Basisklasse abgeleitet wird.
+Der erste Schritt beim Erstellen eines Windows PowerShell-Anbieters ist die Definition der .NET-Klasse. Dieser grundlegende Anbieter definiert eine Klasse mit `AccessDBProvider` dem Namen, die von der [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) -Basisklasse abgeleitet wird.
 
-Es wird empfohlen, dass Sie Ihre Anbieter Klassen in einem `Providers` Namespace ihres API-Namespace platzieren, z. b. xxx. PowerShell. Providers. Dieser Anbieter verwendet den `Microsoft.Samples.PowerShell.Provider`-Namespace, in dem alle Windows PowerShell-Anbieter Beispiele ausgeführt werden.
+Es wird empfohlen, die Anbieter Klassen in einem `Providers` Namespace ihres API-Namespace zu platzieren, z. b. xxx. PowerShell. Providers. Dieser Anbieter verwendet den- `Microsoft.Samples.PowerShell.Provider` Namespace, in dem alle Windows PowerShell-Anbieter Beispiele ausgeführt werden.
 
 > [!NOTE]
 > Die-Klasse für einen Windows PowerShell-Anbieter muss explizit als public gekennzeichnet werden. Klassen, die nicht als public gekennzeichnet sind, werden standardmäßig intern verwendet und werden von der Windows PowerShell-Laufzeit nicht gefunden.
@@ -85,7 +78,7 @@ Einen umfassenden Beispielcode finden Sie unter [AccessDbProviderSample01-Codebe
 
 ## <a name="testing-the-windows-powershell-provider"></a>Testen des Windows PowerShell-Anbieters
 
-Nachdem der Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, können Sie ihn testen, indem Sie die unterstützten Cmdlets in der Befehlszeile ausführen. Führen Sie für diesen grundlegenden Anbieter die neue Shell aus, und verwenden Sie das Cmdlet "`Get-PSProvider`", um die Liste der Anbieter abzurufen und sicherzustellen, dass der accessdb-Anbieter vorhanden ist.
+Nachdem der Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, können Sie ihn testen, indem Sie die unterstützten Cmdlets in der Befehlszeile ausführen. Führen Sie für diesen grundlegenden Anbieter die neue Shell aus, und verwenden `Get-PSProvider` Sie das Cmdlet, um die Liste der Anbieter abzurufen und sicherzustellen, dass der accessdb-Anbieter vorhanden ist.
 
 ```powershell
 Get-PSProvider
@@ -108,4 +101,4 @@ Registry             ShouldProcess                 {HKLM, HKCU}
 
 [Erstellen von Windows PowerShell-Anbietern](./how-to-create-a-windows-powershell-provider.md)
 
-[Entwerfen Ihres Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md)
+[Entwerfen eines Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md)

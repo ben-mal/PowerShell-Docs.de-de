@@ -1,19 +1,12 @@
 ---
-title: GetProc02 (C#)-Beispiel Code | Microsoft-Dokumentation
-ms.custom: ''
+title: GetProc02 (c#)-Beispiel Code | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e4e1eee3-316b-43a4-8a60-313391619be6
-caps.latest.revision: 6
-ms.openlocfilehash: c5e71ddacae1036164c5e8e579ddc8704d30670e
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: d9afa8fff23d99661987c067e8082a9294c12717
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978388"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787154"
 ---
 # <a name="getproc02-c-sample-code"></a>GetProc02-Codebeispiel (C#)
 

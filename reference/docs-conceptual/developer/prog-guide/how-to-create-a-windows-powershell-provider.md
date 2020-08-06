@@ -1,23 +1,16 @@
 ---
 title: Erstellen eines Windows PowerShell-Anbieters | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - providers [PowerShell Programmer's Guide]
 - providers [PowerShellProgrammer's Guide], creating
 - Windows PowerShell Programmer's Guide, providers
-ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
-caps.latest.revision: 5
-ms.openlocfilehash: 4c84d015aba327c0ab039558414c5777d43ec4ba
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 5e7424c035d22d0f5eb154b369427a6da80b1c49
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870879"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787103"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Erstellen eines Windows PowerShell-Anbieters
 
@@ -29,7 +22,7 @@ Für den Entwickler ist der Windows PowerShell-Anbieter die Schnittstelle zwisch
 
 Windows PowerShell stellt mehrere Anbieter (z. b. den File System-Anbieter, Registrierungs Anbieter und Alias Anbieter) bereit, die für den Zugriff auf bekannte Datenspeicher verwendet werden. Weitere Informationen zu den von Windows PowerShell bereitgestellten Anbietern erhalten Sie, indem Sie den folgenden Befehl verwenden, um auf die Online Hilfe zuzugreifen:
 
-**PS > Get-Help about_Providers**
+**PS>Get-Help about_Providers**
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Zugreifen auf die gespeicherten Daten mithilfe von Windows PowerShell-Pfaden
 
@@ -47,23 +40,23 @@ Windows PowerShell wendet die folgenden Regeln für ein Windows PowerShell-Laufw
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-In der folgenden Tabelle sind Themen aufgeführt, die Codebeispiele enthalten, die aufeinander aufbauen. Ab dem zweiten Thema kann der grundlegende Windows PowerShell-Anbieter von der Windows PowerShell-Laufzeit initialisiert und nicht initialisiert werden. im nächsten Thema werden Funktionen für den Datenzugriff hinzugefügt. im nächsten Thema werden die Funktionen zum Bearbeiten der Daten ( die Elemente in den gespeicherten Daten) usw.
+In der folgenden Tabelle sind Themen aufgeführt, die Codebeispiele enthalten, die aufeinander aufbauen. Beginnend mit dem zweiten Thema kann der grundlegende Windows PowerShell-Anbieter von der Windows PowerShell-Laufzeit initialisiert und nicht initialisiert werden. im nächsten Thema werden Funktionen für den Datenzugriff hinzugefügt. das nächste Thema bietet Funktionen zum Bearbeiten der Daten (die Elemente in den gespeicherten Daten) usw.
 
 |                                                    Thema                                                    |                                                                                         Definition                                                                                          |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Entwerfen Ihres Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md)               | In diesem Thema werden Aspekte erläutert, die Sie vor der Implementierung eines Windows PowerShell-Anbieters berücksichtigen sollten. Es fasst die verwendeten Basisklassen und Schnittstellen des Windows PowerShell-Anbieters zusammen. |
-| [Erstellen eines einfachen Windows PowerShell-Anbieters](./creating-a-basic-windows-powershell-provider.md)           | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es der Windows PowerShell-Laufzeit ermöglicht, den Anbieter zu initialisieren und dessen Initialisierung zu deaktivieren.                                        |
-| [Erstellen eines Windows PowerShell-Laufwerks Anbieters](./creating-a-windows-powershell-drive-provider.md)           | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, über ein Windows PowerShell-Laufwerk auf einen Datenspeicher zuzugreifen.                                                |
-| [Erstellen eines Windows PowerShell-Element Anbieters](./creating-a-windows-powershell-item-provider.md)             | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, die Elemente in einem Datenspeicher zu bearbeiten.                                                                  |
-| [Erstellen eines Windows PowerShell-Container Anbieters](./creating-a-windows-powershell-container-provider.md)   | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, an mehrschichtigen Daten speichern zu arbeiten.                                                                        |
-| [Erstellen eines Windows PowerShell-navigationsanbieters](./creating-a-windows-powershell-navigation-provider.md) | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, die Elemente eines Datenspeicher hierarchisch zu navigieren.                                           |
-| [Erstellen eines Windows PowerShell-Inhalts Anbieters](./creating-a-windows-powershell-content-provider.md)       | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, den Inhalt von Elementen in einem Datenspeicher zu bearbeiten.                                                       |
-| [Erstellen eines Windows PowerShell-Eigenschaften Anbieters](./creating-a-windows-powershell-property-provider.md)     | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, die Eigenschaften von Elementen in einem Datenspeicher zu bearbeiten.                                                    |
+| [Entwerfen eines Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md)               | In diesem Thema werden Aspekte erläutert, die Sie vor der Implementierung eines Windows PowerShell-Anbieters berücksichtigen sollten. Es fasst die verwendeten Basisklassen und Schnittstellen des Windows PowerShell-Anbieters zusammen. |
+| [Erstellen eines Windows PowerShell-Standardanbieters](./creating-a-basic-windows-powershell-provider.md)           | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es der Windows PowerShell-Laufzeit ermöglicht, den Anbieter zu initialisieren und dessen Initialisierung zu deaktivieren.                                        |
+| [Erstellen eines Windows PowerShell-Laufwerkanbieters](./creating-a-windows-powershell-drive-provider.md)           | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, über ein Windows PowerShell-Laufwerk auf einen Datenspeicher zuzugreifen.                                                |
+| [Erstellen eines Windows PowerShell-Elementanbieters](./creating-a-windows-powershell-item-provider.md)             | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, die Elemente in einem Datenspeicher zu bearbeiten.                                                                  |
+| [Erstellen eines Windows PowerShell-Containeranbieters](./creating-a-windows-powershell-container-provider.md)   | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, an mehrschichtigen Daten speichern zu arbeiten.                                                                        |
+| [Erstellen eines Windows PowerShell-Navigationsanbieters](./creating-a-windows-powershell-navigation-provider.md) | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, die Elemente eines Datenspeicher hierarchisch zu navigieren.                                           |
+| [Erstellen eines Windows PowerShell-Inhaltsanbieters](./creating-a-windows-powershell-content-provider.md)       | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, den Inhalt von Elementen in einem Datenspeicher zu bearbeiten.                                                       |
+| [Erstellen eines Windows PowerShell-Eigenschaftenanbieters](./creating-a-windows-powershell-property-provider.md)     | In diesem Thema wird gezeigt, wie Sie einen Windows PowerShell-Anbieter erstellen, der es dem Benutzer ermöglicht, die Eigenschaften von Elementen in einem Datenspeicher zu bearbeiten.                                                    |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Funktionsweise von Windows PowerShell](/previous-versions/ms714658(v=vs.85))
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
 
-[Windows PowerShell-Programmier Handbuch](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell-Programmiererhandbuch](./windows-powershell-programmer-s-guide.md)

@@ -1,19 +1,12 @@
 ---
 title: ScriptBlock-Element für wideitem für widecontrol (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: e00e8f36-76f2-49a0-9b02-3a2a7fceb2dd
-caps.latest.revision: 8
-ms.openlocfilehash: 6534e9dbfbe0dedf60dadd6467cff9ad9b447ba4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: be649d6de0d2dfa6bad14f2d7476cced9cd6cb6d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362029"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787596"
 ---
 # <a name="scriptblock-element-for-wideitem-for-widecontrol-format"></a>Element „ScriptBlock“ für WideItem für WideControl (Format)
 
@@ -29,19 +22,19 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des `ScriptBlock`-Elements beschrieben.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und das übergeordnete Element des- `ScriptBlock` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Wideitem-Element (Format)](./wideitem-element-for-widecontrol-format.md)|Definiert den Eigenschafts-oder Skriptblock, dessen Wert in der breiten Ansicht angezeigt wird.|
 
@@ -49,13 +42,13 @@ Keine.
 
 Geben Sie das Skript an, dessen Wert angezeigt wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu den Komponenten einer breiten Ansicht finden Sie unter [Erstellen einer breiten Ansicht](./creating-a-wide-view.md).
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt ein `WideItem`-Element, das ein Skript definiert, dessen Wert in der Ansicht angezeigt wird.
+Dieses Beispiel zeigt ein- `WideItem` Element, das ein Skript definiert, dessen Wert in der Ansicht angezeigt wird.
 
 ```xml
 <WideItem>
@@ -69,4 +62,4 @@ Dieses Beispiel zeigt ein `WideItem`-Element, das ein Skript definiert, dessen W
 
 [Erstellen einer breiten Ansicht](./creating-a-wide-view.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

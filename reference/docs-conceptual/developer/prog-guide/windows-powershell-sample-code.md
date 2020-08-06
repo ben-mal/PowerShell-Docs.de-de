@@ -1,30 +1,23 @@
 ---
 title: Windows PowerShell-Beispiel Code | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1106829a-8ddc-454e-bbdd-ade15d4bffb4
-caps.latest.revision: 7
-ms.openlocfilehash: 76b4195eb33a1058109df8f6174a89708ba039d1
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8dcbe6d8760d77666a8191ca78416ef63dfebdeb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563249"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786933"
 ---
 # <a name="windows-powershell-sample-code"></a>Windows PowerShell-Beispielcode
 
 Windows PowerShell-® Beispiele sind über die Windows SDK verfügbar. Dieser Abschnitt enthält den Beispielcode, der in den Windows SDK Beispielen enthalten ist.
 
 > [!NOTE]
-> Wenn die Windows SDK installiert ist, wird ein **Samples** -Verzeichnis erstellt, in dem alle Windows PowerShell-Beispiele zur Verfügung gestellt werden. Ein typisches Installationsverzeichnis ist **c:\Programme\Microsoft SDKs\Windows\v6.0**. Starten Sie Windows PowerShell, und geben Sie **"CD samples\sysmgmt\powershell"** ein, um das Windows PowerShell Samples-Verzeichnis zu suchen. In diesem Dokument wird das Windows PowerShell Samples-Verzeichnis als ** \< PowerShell-Beispiele>** bezeichnet.
+> Wenn die Windows SDK installiert ist, wird ein **Samples** -Verzeichnis erstellt, in dem alle Windows PowerShell-Beispiele zur Verfügung gestellt werden. Ein typisches Installationsverzeichnis ist **c:\Programme\Microsoft SDKs\Windows\v6.0**. Starten Sie Windows PowerShell, und geben Sie **"CD samples\sysmgmt\powershell"** ein, um das Windows PowerShell Samples-Verzeichnis zu suchen. In diesem Dokument wird das Windows PowerShell Samples-Verzeichnis als bezeichnet **\<PowerShell Samples>** .
 
 ## <a name="sample-code-listing"></a>Beispiel Code Auflistung
 
-|                                    Beispielcode                                    |                                                                                                                                           Beschreibung                                                                                                                                           |
+|                                    Beispielcode                                    |                                                                                                                                           BESCHREIBUNG                                                                                                                                           |
 | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [AccessDbProviderSample01-Codebeispiel](./accessdbprovidersample01-code-sample.md) | Dies ist der unter [Erstellen eines einfachen Windows PowerShell-Anbieters](./creating-a-basic-windows-powershell-provider.md)beschriebene Anbieter.                                                                                                                                                            |
 | [AccessDbProviderSample02-Codebeispiel](./accessdbprovidersample02-code-sample.md) | Dies ist der Anbieter, der unter [Erstellen eines Windows PowerShell-Laufwerks Anbieters](./creating-a-windows-powershell-drive-provider.md)beschrieben wird.                                                                                                                                                            |

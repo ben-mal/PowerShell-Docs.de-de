@@ -1,19 +1,12 @@
 ---
 title: Erstellen einer Tabellenansicht | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
-caps.latest.revision: 23
-ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cbe81962a0f68d64506062898a8f21a1596cc29a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363409"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786151"
 ---
 # <a name="creating-a-table-view"></a>Erstellen einer Tabellenansicht
 
@@ -21,7 +14,7 @@ Eine Tabellen Sicht zeigt Daten in einer oder mehreren Spalten an. Jede Zeile in
 
 ## <a name="a-table-view-display"></a>Anzeige der Tabellenansicht
 
-Das folgende Beispiel zeigt, wie Windows PowerShell das [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) -Objekt anzeigt, das vom Cmdlet " [Get-Service](/powershell/module/microsoft.powershell.management/get-service) " zurückgegeben wird. Für dieses Objekt hat Windows PowerShell eine Tabellen Sicht definiert, in der die `Status`-Eigenschaft, die `Name`-Eigenschaft (diese Eigenschaft ist eine Alias Eigenschaft für die `ServiceName`-Eigenschaft) und die `DisplayName`-Eigenschaft angezeigt werden. Jede Zeile in der Tabelle stellt ein vom Cmdlet zurück gegebenes Objekt dar.
+Das folgende Beispiel zeigt, wie Windows PowerShell das [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) -Objekt anzeigt, das vom Cmdlet " [Get-Service](/powershell/module/microsoft.powershell.management/get-service) " zurückgegeben wird. Für dieses Objekt hat Windows PowerShell eine Tabellen Sicht definiert, in der die `Status` -Eigenschaft, die `Name` -Eigenschaft (diese Eigenschaft ist eine Alias Eigenschaft für die `ServiceName` -Eigenschaft) und die-Eigenschaft angezeigt werden `DisplayName` . Jede Zeile in der Tabelle stellt ein vom Cmdlet zurück gegebenes Objekt dar.
 
 ```output
 Status   Name               DisplayName
@@ -215,7 +208,7 @@ Die folgenden XML-Elemente können verwendet werden, um die Objekte anzugeben, d
 
 ## <a name="using-format-strings"></a>Using-Format
 
-Formatierungs Zeichenfolgen können einer Ansicht hinzugefügt werden, um die Anzeige der Daten weiter zu definieren. Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den Wert der `StartTime`-Eigenschaft definiert wird.
+Formatierungs Zeichenfolgen können einer Ansicht hinzugefügt werden, um die Anzeige der Daten weiter zu definieren. Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den Wert der-Eigenschaft definiert wird `StartTime` .
 
 ```xml
 <TableColumnItem>
@@ -232,7 +225,7 @@ Die folgenden XML-Elemente können verwendet werden, um ein Format Muster anzuge
 
 - Das Format [String](./label-element-for-listitem-for-listcontrol-format.md) -Element gibt ein Format Muster an, das definiert, wie der Eigenschafts-oder Skript Wert angezeigt wird.
 
-Im folgenden Beispiel wird die `ToString`-Methode aufgerufen, um den Wert des Skripts zu formatieren. Skripts können beliebige Methoden eines Objekts aufzurufen. Wenn ein Objekt z. b. über eine-Methode verfügt, z. b. `ToString`, die über Formatierungs Parameter verfügt, kann das Skript diese Methode zum Formatieren des Ausgabe Werts des Skripts aufruft.
+Im folgenden Beispiel wird die- `ToString` Methode aufgerufen, um den Wert des Skripts zu formatieren. Skripts können beliebige Methoden eines Objekts aufzurufen. Wenn ein Objekt über eine-Methode verfügt, z. b. `ToString` mit Formatierungs Parametern, kann das Skript daher diese Methode zum Formatieren des Ausgabe Werts des Skripts aufruft.
 
 ```xml
 <ListItem>
@@ -243,7 +236,7 @@ Im folgenden Beispiel wird die `ToString`-Methode aufgerufen, um den Wert des Sk
 </ListItem>
 ```
 
-Das folgende XML-Element kann verwendet werden, um die `ToString`-Methode aufrufen:
+Das folgende XML-Element kann zum Aufrufen der- `ToString` Methode verwendet werden:
 
 - Das [tablecolumnitem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) -Element definiert die Eigenschaft oder das Skript, dessen Wert in der Spalte der Zeile angezeigt wird. Für jede Spalte der Zeile ist ein [tablecolumnitem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) -Element erforderlich. Der erste Eintrag wird in der ersten Spalte angezeigt, der zweite Eintrag in der zweiten Spalte usw.
 
@@ -251,4 +244,4 @@ Das folgende XML-Element kann verwendet werden, um die `ToString`-Methode aufruf
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

@@ -1,19 +1,12 @@
 ---
 title: Customentries-Element für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: cb412831-94f7-4054-b19e-32c1b14c66dd
-caps.latest.revision: 11
-ms.openlocfilehash: 827baacd22ef258dd9b0c8a383a23fce7d975f7f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c89eb25f6922a92e2c18298d0128c4c2ca93df3d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364079"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785964"
 ---
 # <a name="customentries-element-for-customcontrol-for-view-format"></a>Element „CustomEntries“ für CustomControl für View (Format)
 
@@ -31,32 +24,32 @@ Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `CustomControlEntries`-Elements beschrieben. Sie müssen mindestens ein untergeordnetes Element angeben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `CustomControlEntries` Elements beschrieben. Sie müssen mindestens ein untergeordnetes Element angeben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Customentry-Element für customentries für View (Format)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)|Erforderliches Element.<br /><br /> Stellt eine Definition der benutzerdefinierten Steuerelement Ansicht bereit.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[CustomControl-Element für Ansicht (Format)](./customcontrol-element-for-view-format.md)|Erforderliches Element.<br /><br /> Definiert ein benutzerdefiniertes Steuerelement Format für die Ansicht.|
+|[Element „CustomControl“ für View (Format)](./customcontrol-element-for-view-format.md)|Erforderliches Element.<br /><br /> Definiert ein benutzerdefiniertes Steuerelement Format für die Ansicht.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-In den meisten Fällen verfügt ein Steuerelement nur über eine Definition, die in einem einzelnen `CustomEntry` Element definiert ist. Es ist jedoch möglich, mehrere Definitionen zu verwenden, wenn Sie das gleiche Steuerelement verwenden möchten, um unterschiedliche .NET-Objekte anzuzeigen. In diesen Fällen können Sie ein `CustomEntry`-Element für jedes Objekt oder jede Gruppe von Objekten definieren.
+In den meisten Fällen verfügt ein Steuerelement nur über eine Definition, die in einem einzelnen `CustomEntry` Element definiert ist. Es ist jedoch möglich, mehrere Definitionen zu verwenden, wenn Sie das gleiche Steuerelement verwenden möchten, um unterschiedliche .NET-Objekte anzuzeigen. In diesen Fällen können Sie ein- `CustomEntry` Element für jedes Objekt oder jede Gruppe von Objekten definieren.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[CustomControl-Element für Ansicht (Format)](./customcontrol-element-for-view-format.md)
+[Element „CustomControl“ für View (Format)](./customcontrol-element-for-view-format.md)
 
 [Customentry-Element für customentries für View (Format)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

@@ -1,23 +1,16 @@
 ---
 title: StopProcessSample01-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
-caps.latest.revision: 9
-ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 6d4737d0526a7d142b4a986986974bcbdc12ec7e
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365299"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786457"
 ---
 # <a name="stopprocesssample01-sample"></a>StopProcessSample01-Beispiel
 
-In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das Feedback vom Benutzer anfordert, bevor es versucht, einen Prozess zu beenden, und wie ein `PassThru`-Parameter implementiert wird, der angibt, dass das Cmdlet ein Objekt zurückgeben soll. Dieses Cmdlet ähnelt dem `Stop-Process`-Cmdlet, das von Windows PowerShell 2,0 bereitgestellt wird.
+Dieses Beispiel zeigt, wie ein Cmdlet geschrieben wird, das Feedback vom Benutzer anfordert, bevor es versucht, einen Prozess zu beenden, und wie ein Parameter implementiert wird, der `PassThru` angibt, dass der Benutzer das Cmdlet zum Zurückgeben eines Objekts wünscht. Dieses Cmdlet ähnelt dem `Stop-Process` Cmdlet, das von Windows PowerShell 2,0 bereitgestellt wird.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio.
 
@@ -47,11 +40,11 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das Feedback v
 
     `stop-proc`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Gegenstand
+## <a name="demonstrates"></a>Zeigt
 
 In diesem Beispiel wird Folgendes veranschaulicht:
 
@@ -61,11 +54,11 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 - Aufrufen der Methode "tiondprocess", um eine Bestätigung anzufordern.
 
-- Implementieren eines `PassThru`-Parameters, der angibt, ob der Benutzer das Cmdlet zum Zurückgeben eines Objekts wünscht. Standardmäßig gibt dieses Cmdlet kein Objekt an die Pipeline zurück.
+- Implementieren eines `PassThru` Parameters, der angibt, ob der Benutzer das Cmdlet zum Zurückgeben eines Objekts wünscht. Standardmäßig gibt dieses Cmdlet kein Objekt an die Pipeline zurück.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird gezeigt, wie ein `PassThru` Parameter implementiert wird, der angibt, dass das Cmdlet ein Objekt zurückgeben soll und wie Benutzer Feedback durch Aufrufe der Methoden `ShouldProcess` und `ShouldContinue` angefordert wird.
+Dieses Beispiel zeigt, wie ein Parameter implementiert wird, der `PassThru` angibt, dass der Benutzer das Cmdlet zum Zurückgeben eines Objekts und das Anfordern von Benutzer Feedback durch Aufrufe der `ShouldProcess` -Methode und der- `ShouldContinue` Methode wünscht.
 
 ```csharp
 using System;

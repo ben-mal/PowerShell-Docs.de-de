@@ -1,19 +1,12 @@
 ---
 title: Erstellen einer breiten Ansicht | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2d4303c5-b451-4ccb-9831-b17a17ceac20
-caps.latest.revision: 16
-ms.openlocfilehash: 651de5d3bc2619f20438f3951ac5a8c4b0bf46d4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0cf6a35201c47e4b12dd160191570eccec3427ef
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368949"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786134"
 ---
 # <a name="creating-a-wide-view"></a>Erstellen einer breiten Ansicht
 
@@ -220,7 +213,7 @@ Ein Beispiel für eine komplette Formatierungs Datei, die Gruppen definiert, fin
 
 ## <a name="using-format-strings"></a>Using-Format
 
-Formatierungs Zeichenfolgen können einer breiten Ansicht hinzugefügt werden, um die Anzeige der Daten weiter zu definieren. Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den Wert der `StartTime`-Eigenschaft definiert wird.
+Formatierungs Zeichenfolgen können einer breiten Ansicht hinzugefügt werden, um die Anzeige der Daten weiter zu definieren. Im folgenden Beispiel wird gezeigt, wie eine Formatierungs Zeichenfolge für den Wert der-Eigenschaft definiert wird `StartTime` .
 
 ```xml
 <WideItem>
@@ -239,7 +232,7 @@ Die folgenden XML-Elemente können verwendet werden, um ein Format Muster anzuge
 
 - Das [ScriptBlock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) -Element (nicht angezeigt) gibt das Skript an, dessen Wert von der Sicht angezeigt wird. Sie müssen entweder ein-Skript oder eine-Eigenschaft angeben, aber Sie können nicht beides angeben.
 
-Im folgenden Beispiel wird die `ToString`-Methode aufgerufen, um den Wert des Skripts zu formatieren. Skripts können beliebige Methoden eines Objekts aufzurufen. Wenn ein Objekt z. b. über eine-Methode verfügt, z. b. `ToString`, die über Formatierungs Parameter verfügt, kann das Skript diese Methode zum Formatieren des Ausgabe Werts des Skripts aufruft.
+Im folgenden Beispiel wird die- `ToString` Methode aufgerufen, um den Wert des Skripts zu formatieren. Skripts können beliebige Methoden eines Objekts aufzurufen. Wenn ein Objekt über eine-Methode verfügt, z. b. `ToString` mit Formatierungs Parametern, kann das Skript daher diese Methode zum Formatieren des Ausgabe Werts des Skripts aufruft.
 
 ```xml
 <WideItem>
@@ -250,7 +243,7 @@ Im folgenden Beispiel wird die `ToString`-Methode aufgerufen, um den Wert des Sk
 </WideItem>
 ```
 
-Das folgende XML-Element kann verwendet werden, um die `ToString`-Methode aufrufen:
+Das folgende XML-Element kann zum Aufrufen der- `ToString` Methode verwendet werden:
 
 - Das [wideitem](./wideitem-element-for-widecontrol-format.md) -Element gibt die Daten an, die von der Sicht angezeigt werden.
 
@@ -262,4 +255,4 @@ Das folgende XML-Element kann verwendet werden, um die `ToString`-Methode aufruf
 
 [Breite Ansicht (GroupBy)](./wide-view-groupby.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

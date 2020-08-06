@@ -1,23 +1,16 @@
 ---
 title: Validateset-Attribut Deklaration | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, ValidateSet
 - ValidateSet attribute, described
 - ValidateSet attribute
-ms.assetid: 4a6f97ab-45b2-4f3d-84d4-30acf8e074d0
-caps.latest.revision: 12
-ms.openlocfilehash: b036f39cd01ffe4b4ce7db9627cb6da0d5327190
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0b6833efb0ce8e9474e9d91049fd201fc845cbea
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364279"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787766"
 ---
 # <a name="validateset-attribute-declaration"></a>Attributdeklaration: ValidateSet
 
@@ -34,16 +27,16 @@ Wenn dieses Attribut angegeben wird, bestimmt die Windows PowerShell-Laufzeit, o
 
 #### <a name="parameters"></a>Parameter
 
-`ValidValues` ([System. String](/dotnet/api/System.String)) erforderlich. Gibt die gültigen Parameter Element Werte an. Im folgenden Beispiel wird gezeigt, wie ein-Element oder mehrere-Elemente angegeben werden.
+`ValidValues`([System. String](/dotnet/api/System.String)) erforderlich. Gibt die gültigen Parameter Element Werte an. Im folgenden Beispiel wird gezeigt, wie ein-Element oder mehrere-Elemente angegeben werden.
 
 ```csharp
 [ValidateSetAttribute("Steve")]
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase` ([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. Der Standardwert `true` gibt an, dass der Fall ignoriert wird. Bei einem Wert von `false` wird beim Cmdlet die Groß-/Kleinschreibung beachtet.
+`IgnoreCase`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. Der Standardwert `true` gibt an, dass der Fall ignoriert wird. Bei einem Wert von `false` wird beim Cmdlet die Groß-/Kleinschreibung beachtet.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - Dieses Attribut kann nur einmal pro Parameter verwendet werden.
 

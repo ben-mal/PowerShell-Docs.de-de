@@ -1,13 +1,12 @@
 ---
 title: Typkonverter für erweiterte Typsysteme
 ms.date: 07/09/2020
-ms.topic: conceptual
-ms.openlocfilehash: f709a64febe68733b79ed8af804714d3f3ddeaac
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+ms.openlocfilehash: 0d04293fffde9901ed2e33a9bab21e6612ce9cd5
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217939"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786185"
 ---
 # <a name="ets-type-converters"></a>ETS-Typkonverter
 
@@ -17,27 +16,27 @@ ETS verwendet zwei grundlegende Typen von Typkonvertern, wenn ein-Befehl an die-
 
 Diese Standard Konvertierungen werden vor allen benutzerdefinierten Konvertierungen geprüft und können nicht überschrieben werden. In der folgenden Tabelle werden die Typkonvertierungen aufgelistet, die von PowerShell beim Aufrufen der-Methode durchgeführt werden `ConvertTo(System.Object, System.Type)` . Beachten Sie, dass Verweise auf die Parameter **valueToConvert** und **ResultType** auf Parameter der `ConvertTo(System.Object,System.Type)` Methode verweisen.
 
-| From (valueToConvert) |  To (ResultType)  |                                                                               Rückgabe                                                                               |
+| From (valueToConvert) |  To (ResultType)  |                                                                               Gibt zurück                                                                               |
 | --------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| NULL                  | Zeichenfolge            | ""                                                                                                                                                                  |
-| NULL                  | Char              | '\0'                                                                                                                                                                |
-| NULL                  | Numeric           | `0`des Typs, der im **ResultType** -Parameter angegeben ist.                                                                                                          |
-| NULL                  | Boolean           | Ergebnisse des Aufrufes der- `IsTrue(System.Object)(Null)` Methode.                                                                                                        |
-| NULL                  | PSObject          | Neues Objekt vom Typ " **psobject**".                                                                                                                                    |
-| NULL                  | Nicht-Werttyp    | Normal.                                                                                                                                                               |
-| NULL                  | Nullable &lt; T&gt; | Normal.                                                                                                                                                               |
+| Null                  | String            | ""                                                                                                                                                                  |
+| Null                  | Char              | '\0'                                                                                                                                                                |
+| Null                  | Numerisch           | `0`des Typs, der im **ResultType** -Parameter angegeben ist.                                                                                                          |
+| Null                  | Boolean           | Ergebnisse des Aufrufes der- `IsTrue(System.Object)(Null)` Methode.                                                                                                        |
+| Null                  | PSObject          | Neues Objekt vom Typ " **psobject**".                                                                                                                                    |
+| Null                  | Nicht-Werttyp    | Normal.                                                                                                                                                               |
+| Null                  | Nullable &lt; T&gt; | Normal.                                                                                                                                                               |
 | Abgeleitete Klasse         | Basisklasse        | **valueToConvert**                                                                                                                                                  |
 | Dagegen              | Void              | **Automationnull. Value**                                                                                                                                            |
-| Dagegen              | Zeichenfolge            | Ruft den `ToString` Mechanismus auf.                                                                                                                                         |
+| Dagegen              | String            | Ruft den `ToString` Mechanismus auf.                                                                                                                                         |
 | Dagegen              | Boolean           | `IsTrue(System.Object) (valueToConvert)`                                                                                                                            |
 | Dagegen              | PSObject          | Ergebnisse des Aufrufes der- `AsPSObject(System.Object) (valueToConvert)` Methode.                                                                                         |
 | Dagegen              | XML-Dokument      | Konvertiert **valueToConvert** in eine Zeichenfolge und ruft dann den **XmlDocument** -Konstruktor auf.                                                                                      |
 | Array                 | Array             | Versucht, jedes Element des Arrays zu konvertieren.                                                                                                                      |
 | Singleton             | Array             | `Array[0]`entspricht **valueToConvert** , das in den Elementtyp des Arrays konvertiert wird.                                                                            |
 | IDictionary           | Hash Tabelle        | Ergebnisse des Aufrufes Hashtable-Aufrufes (valueToConvert).                                                                                                                       |
-| Zeichenfolge                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
-| Zeichenfolge                | Regex             | Ergebnisse des Aufrufes `Regx(valueToConvert)` .                                                                                                                          |
-| Zeichenfolge                | Typ              | Gibt den entsprechenden Typ mithilfe des **valueToConvert** -Parameters zum Durchsuchen von **runspaceconfiguration.** Assemblys zurück.                                                 |
+| String                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
+| String                | Regex             | Ergebnisse des Aufrufes `Regx(valueToConvert)` .                                                                                                                          |
+| String                | type              | Gibt den entsprechenden Typ mithilfe des **valueToConvert** -Parameters zum Durchsuchen von **runspaceconfiguration.** Assemblys zurück.                                                 |
 | String                | Numeric           | Wenn **valueToConvert** den Wert "" hat, wird `0` der **ResultType**zurückgegeben. Andernfalls wird die Kultur "Kultur invariant" verwendet, um einen numerischen Wert zu erhalten.                       |
 | Integer               | System.Enum       | Konvertiert die Ganzzahl in die Konstante, wenn die Ganzzahl durch die-Enumeration definiert wird. Wenn die Ganzzahl nicht definiert ist, wird eine **psinvalidcastexception** -Ausnahme ausgelöst. |
 

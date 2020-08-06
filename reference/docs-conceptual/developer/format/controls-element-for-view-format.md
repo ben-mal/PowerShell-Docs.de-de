@@ -1,19 +1,12 @@
 ---
 title: Controls-Element für View (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 3bd82666-447f-40fe-bd87-c8b182522f4f
-caps.latest.revision: 14
-ms.openlocfilehash: 477b8b54c8edd2fa0e6939041d04322d861197c9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 26b7e73afd465b1be9632cd71a75e4be6cc4aeca
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363389"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786168"
 ---
 # <a name="controls-element-for-view-format"></a>Element „Controls“ für View (Format)
 
@@ -31,30 +24,30 @@ Configuration-Element (Format) viewdefinitions-Element (Format) View Element (Fo
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und die übergeordneten Elemente des `Controls`-Elements beschrieben. Dieses Element muss mindestens ein untergeordnetes Element aufweisen. Es gibt keine maximale Anzahl von untergeordneten Elementen, und ihre Reihenfolge ist nicht signifikant.
+In den folgenden Abschnitten werden die Attribute, die untergeordneten Elemente und die übergeordneten Elemente des- `Controls` Elements beschrieben. Dieses Element muss mindestens ein untergeordnetes Element aufweisen. Es gibt keine maximale Anzahl von untergeordneten Elementen, und ihre Reihenfolge ist nicht signifikant.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Control-Element für Steuerelemente für View (Format)](./control-element-for-controls-for-view-format.md)|Definiert ein Steuerelement, das von der Ansicht verwendet werden kann.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[View-Element (Format)](./view-element-format.md)|Definiert eine Ansicht, die zum Anzeigen der Member von einem oder mehreren .NET-Objekten verwendet wird.|
+|[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, die zum Anzeigen der Member von einem oder mehreren .NET-Objekten verwendet wird.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Control-Element (Format)](./control-element-for-controls-for-view-format.md)
 
-[View-Element (Format)](./view-element-format.md)
+[Element „View“ (Format)](./view-element-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

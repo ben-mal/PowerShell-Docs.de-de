@@ -1,13 +1,12 @@
 ---
 title: Planen von Aufträgen mit der Windows PowerShell-API
 ms.date: 09/13/2016
-ms.topic: article
-ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 19962d3140b6e20164c378e63a317b888120e13b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359829"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786729"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Planen von Aufträgen mit der Windows PowerShell-API
 
@@ -31,11 +30,11 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 Wenn Sie einen Windows PowerShell-Auftrag definieren, erstellen Sie ein Parameter Wörterbuch. Die folgenden Parameter werden unterstützt.
 
-|Name des Parameters|Description|
+|Parametername|BESCHREIBUNG|
 |---|---|
 |Name|Der Name des Auftrags.|
 |Scriptbock|Ein Windows PowerShell-Skriptblock, der angibt, was der Auftrag bewirkt.|
-|Dateipfad|Ein Pfad zu einer Datei, die einen Windows PowerShell-Skriptblock enthält, der angibt, was der Auftrag bewirkt.|
+|FilePath|Ein Pfad zu einer Datei, die einen Windows PowerShell-Skriptblock enthält, der angibt, was der Auftrag bewirkt.|
 |InitializationScript|Ein Windows PowerShell-Skriptblock, der den Auftrag initialisiert.|
 |Argument List|Ein Array von-Objekten, die Argumente angeben, die der Auftrag annimmt.|
 |RunAs32|Ein boolescher Wert, der angibt, ob der Auftrag in einem 32-Bit-Prozess ausgeführt werden soll.|

@@ -1,19 +1,12 @@
 ---
 title: Vorgehensweise beim unterstützen von Aufträgen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
-caps.latest.revision: 9
-ms.openlocfilehash: 65f6b3d44910a0a3e848b4d2cd3e619186e5ed25
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.openlocfilehash: 7ae4e6c118965c73ba6b3d4d38b1bd3171d2b3da
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706239"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786627"
 ---
 # <a name="how-to-support-jobs"></a>Unterstützen von Aufträgen
 
@@ -21,7 +14,7 @@ In diesem Beispiel wird gezeigt, wie Aufträge beim Schreiben von Cmdlets unters
 
 ## <a name="to-support-jobs"></a>So unterstützen Sie Aufträge
 
-1. Definieren Sie einen `AsJob` Switch-Parameter, sodass der Benutzer entscheiden kann, ob das Cmdlet als Auftrag ausgeführt werden soll.
+1. Definieren `AsJob` Sie einen Switch-Parameter, sodass der Benutzer entscheiden kann, ob das Cmdlet als Auftrag ausgeführt werden soll.
 
     Das folgende Beispiel zeigt eine AsJob-Parameter Deklaration.
 
@@ -47,7 +40,7 @@ In diesem Beispiel wird gezeigt, wie Aufträge beim Schreiben von Cmdlets unters
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. Fügen Sie in einer Daten Satz Verarbeitungsmethode eine `if`-Anweisung hinzu, um zu ermitteln, ob das Cmdlet als Auftrag ausgeführt werden soll. Der folgende Code verwendet die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
+3. Fügen Sie in einer Daten Satz Verarbeitungsmethode eine-Anweisung hinzu, `if` um zu ermitteln, ob das Cmdlet als Auftrag ausgeführt werden soll. Der folgende Code verwendet die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
 
     ```csharp
     protected override void ProcessRecord()

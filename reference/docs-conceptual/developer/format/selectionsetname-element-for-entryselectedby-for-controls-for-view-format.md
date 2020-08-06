@@ -1,25 +1,18 @@
 ---
 title: Selectionsetname-Element für entryselectedby für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b594a064-746f-4900-99e4-7be7bf5aa5a2
-caps.latest.revision: 7
-ms.openlocfilehash: d540c99707f4e0796b2d408f2161a9208257ab32
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5c762a626fff746266919d1f7fcb991a8cdbcdf2
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368349"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787545"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-view-format"></a>Element „SelectionSetName“ für EntrySelectedBy für Controls für View (Format)
 
 Gibt einen Satz von .NET-Typen an, die diese Definition des-Steuer Elements verwenden. Dieses Element wird beim Definieren von Steuerelementen verwendet, die von einer Ansicht verwendet werden können.
 
-Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) steuert Element (Format) Steuerelement (Format) Steuerelement für Steuerelemente für Ansicht (Format) CustomControl-Element für Steuerelement für Steuerelemente für Ansicht (Format) customentries-Element für CustomControl für Steuerelemente für das View (Format) customentry-Element für customentries für Steuerelemente für das View (Format) entryselectedby-Element für customentry für Steuerelemente für das View (Format) selectionsetname-Element für entryselectedby für Steuerelemente für Ansicht ( Ges
+Configuration-Element (Format) viewdefinitions-Element (Format) Ansichts Element (Format) Steuerelement (Format) Steuerelement (Format) Steuerelement für Steuerelemente für Ansicht (Format) CustomControl-Element für Steuerelement für Steuerelemente für Ansicht (Format) customentries-Element für CustomControl für Steuerelemente für Ansicht (Format) customentry-Element für customentries für Steuerelemente für das View (Format) entryselectedby-Element für customentry für Steuerelemente für View (Format) selectionsetname-Element für entryselectedby für Steuerelemente für View (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,27 +23,27 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `SelectionSetName`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `SelectionSetName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
 Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Entryselectedby-Element für customentry für Steuerelemente für Ansicht (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
+|[Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen des Auswahl Satzes an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Für jede Steuerelement Definition muss mindestens ein Typname, ein Auswahl Satz oder eine Auswahlbedingung definiert sein.
 
@@ -58,6 +51,6 @@ Auswahl Sätze werden in der Regel verwendet, wenn Sie eine Gruppe von Objekten 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Entryselectedby-Element für customentry für Steuerelemente für Ansicht (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)
+[Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

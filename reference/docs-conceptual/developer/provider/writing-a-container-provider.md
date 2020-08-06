@@ -1,19 +1,12 @@
 ---
 title: Schreiben eines Container Anbieters | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
-caps.latest.revision: 5
-ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366239"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786797"
 ---
 # <a name="writing-a-container-provider"></a>Schreiben eines Containeranbieters
 
@@ -542,6 +535,6 @@ Ein typischer Real-World-Anbieter ist in der Lage, Elemente innerhalb des Laufwe
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Schreiben eines navigationsanbieters](./writing-a-navigation-provider.md)
+[Schreiben eines Navigationsanbieters](./writing-a-navigation-provider.md)
 
-[Windows PowerShell-Anbieter (Übersicht)](./windows-powershell-provider-overview.md)
+[Windows PowerShell-Anbieter: Übersicht](./windows-powershell-provider-overview.md)

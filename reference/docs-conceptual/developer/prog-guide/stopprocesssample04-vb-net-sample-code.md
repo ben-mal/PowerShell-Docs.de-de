@@ -1,28 +1,21 @@
 ---
 title: StopProcessSample04 (VB.net)-Beispiel Code | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 48019ceb-0aeb-4cd1-8b42-79f2c29c3e65
-caps.latest.revision: 5
-ms.openlocfilehash: 3e709f0897b0d77f4c5f12e1c042edd4e24b142a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5526bec79f3bb38f0de11680302a94699240a3d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417811"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786984"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>StopProcessSample04-Codebeispiel (VB.NET)
 
-Dies ist der umfassende VB.NET-Beispielcode für das Cmdlet "StopProc04 Sample". Dies ist der Code für das `Stop-Process`-Cmdlet, das unter [Hinzufügen von Parameter Sätzen zu einem Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md)beschrieben wird. Das `Stop-Process`-Cmdlet ist so konzipiert, dass Prozesse beendet werden, die mit dem Cmdlet "Get-proc" abgerufen werden (siehe [Erstellen des ersten Cmdlets](../cmdlet/creating-a-cmdlet-without-parameters.md)).
+Dies ist der umfassende VB.NET-Beispielcode für das Cmdlet "StopProc04 Sample". Dies ist der Code für das `Stop-Process` Cmdlet, das unter [Hinzufügen von Parameter Sätzen zu einem Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md)beschrieben wird. Das- `Stop-Process` Cmdlet ist so konzipiert, dass Prozesse beendet werden, die mit dem Cmdlet "Get-proc" abgerufen werden (siehe [Erstellen des ersten Cmdlets](../cmdlet/creating-a-cmdlet-without-parameters.md)).
 
 > [!NOTE]
 > Sie können die VB.net-Quelldatei (stopprocesssample04. vb) für dieses Cmdlet "Pause-proc" mithilfe der Laufzeitkomponenten Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0 herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> Die heruntergeladenen Quelldateien stehen im **\<PowerShell-Beispiele >** Verzeichnis zur Verfügung.
+> Die heruntergeladenen Quelldateien sind im **\<PowerShell Samples>** Verzeichnis verfügbar.
 
 ```vb
 Imports System
@@ -479,6 +472,6 @@ End Namespace
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Windows PowerShell-Programmier Handbuch](./windows-powershell-programmer-s-guide.md)
+[Windows PowerShell-Programmiererhandbuch](./windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)

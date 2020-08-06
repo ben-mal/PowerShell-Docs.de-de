@@ -1,23 +1,16 @@
 ---
 title: StopProcessSample02-Beispiel | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
-caps.latest.revision: 10
-ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369379"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786440"
 ---
 # <a name="stopprocesssample02-sample"></a>StopProcessSample02-Beispiel
 
-In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das beim Beenden von Prozessen auf dem lokalen Computer Debugmeldungen ("Write Debug"), "ausführliche" ("Write-ausführliche") und "Warning" (Write Warning) schreibt. Dieses Cmdlet ähnelt dem `Stop-Process`-Cmdlet, das von Windows PowerShell 2,0 bereitgestellt wird.
+In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das beim Beenden von Prozessen auf dem lokalen Computer Debugmeldungen ("Write Debug"), "ausführliche" ("Write-ausführliche") und "Warning" (Write Warning) schreibt. Dieses Cmdlet ähnelt dem `Stop-Process` Cmdlet, das von Windows PowerShell 2,0 bereitgestellt wird.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio.
 
@@ -49,11 +42,11 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das beim Beend
 
     `stop-proc`
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Gegenstand
+## <a name="demonstrates"></a>Zeigt
 
 In diesem Beispiel wird Folgendes veranschaulicht:
 
@@ -69,7 +62,7 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt, wie Sie mit den Methoden `WriteDebug`, `WriteVerbose`und `WriteWarning` Debug-, ausführliche und Warnmeldungen schreiben.
+Dieses Beispiel zeigt, wie Sie mit den `WriteDebug` Methoden, und Debuggen, ausführliche und Warnmeldungen schreiben `WriteVerbose` `WriteWarning` .
 
 ```csharp
 using System;

@@ -1,19 +1,12 @@
 ---
 title: Schreiben eines Element Anbieters | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
-caps.latest.revision: 5
-ms.openlocfilehash: 12d2cb8c40c9fd6278bb964a6259d03167536195
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1df30e7af1b534756f797b9b5d4e29b689cbc782
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359879"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786763"
 ---
 # <a name="writing-an-item-provider"></a>Schreiben eines Elementanbieters
 
@@ -227,8 +220,8 @@ Ein typischer Real-World-Anbieter ist in der Lage, Elemente zu unterstützen, di
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Schreiben eines Container Anbieters](./writing-a-container-provider.md)
+[Schreiben eines Containeranbieters](./writing-a-container-provider.md)
 
-[Schreiben eines navigationsanbieters](./writing-a-navigation-provider.md)
+[Schreiben eines Navigationsanbieters](./writing-a-navigation-provider.md)
 
-[Windows PowerShell-Anbieter (Übersicht)](./windows-powershell-provider-overview.md)
+[Windows PowerShell-Anbieter: Übersicht](./windows-powershell-provider-overview.md)

@@ -1,19 +1,12 @@
 ---
 title: Customcontrolname-Element für ExpressionBinding für GroupBy (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 9e11da8f-1e75-4d3d-b4c8-b500dec3028e
-caps.latest.revision: 6
-ms.openlocfilehash: 32f8a71e9818c8c1a052f3b96f442f169c1bda4a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 06e612b25accf81467108ca48500943153efd575
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368909"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87785998"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-groupby-format"></a>Element „CustomControlName“ für ExpressionBinding für GroupBy (Format)
 
@@ -29,40 +22,40 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `CustomControlName`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `CustomControlName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[ExpressionBinding-Element für customItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Definiert die Daten, die vom-Steuerelement angezeigt werden.|
+|[Element „ExpressionBinding“ für CustomItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Definiert die Daten, die vom-Steuerelement angezeigt werden.|
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen des Steuer Elements an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Sie können allgemeine Steuerelemente erstellen, die von allen Ansichten einer Formatierungs Datei verwendet werden können, und Sie können Ansichts Steuerelemente erstellen, die von einer bestimmten Ansicht verwendet werden können. Die folgenden Elemente geben die Namen dieser Steuerelemente an:
 
-- [Name-Element für Steuerelemente für die Konfiguration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
+- [Element „Name“ für Control für Controls für Configuration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-- [Name-Element für Steuerelemente für Ansicht (Format)](./name-element-for-control-for-controls-for-view-format.md)
+- [Element „Name“ für Control für Controls für View (Format)](./name-element-for-control-for-controls-for-view-format.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Name-Element für Steuerelemente für die Konfiguration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
+[Element „Name“ für Control für Controls für Configuration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)
 
-[Name-Element für Steuerelemente für Ansicht (Format)](./name-element-for-control-for-controls-for-view-format.md)
+[Element „Name“ für Control für Controls für View (Format)](./name-element-for-control-for-controls-for-view-format.md)
 
-[ExpressionBinding-Element für customItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)
+[Element „ExpressionBinding“ für CustomItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

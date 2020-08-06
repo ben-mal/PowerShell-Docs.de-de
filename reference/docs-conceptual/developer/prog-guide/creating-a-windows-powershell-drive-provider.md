@@ -1,23 +1,16 @@
 ---
 title: Erstellen eines Windows PowerShell-Laufwerk Anbieters | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - drive providers [PowerShell Programmer's Guide]
 - providers [PowerShell Programmer's Guide], drive provider
 - drives [PowerShell Programmer's Guide]
-ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
-caps.latest.revision: 6
-ms.openlocfilehash: 88be7cc6cc0ab54604bc9de71e0ae07c20457514
-ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
+ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80978456"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787188"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Erstellen eines Windows PowerShell-Laufwerkanbieters
 
@@ -44,7 +37,7 @@ Die meisten Anbieter (einschließlich des hier beschriebenen Anbieters) können 
 
 Alle Windows PowerShell-Anbieter gelten als zustandslos. Dies bedeutet, dass Ihr Laufwerks Anbieter alle Zustandsinformationen erstellen muss, die von der Windows PowerShell-Laufzeit benötigt werden, wenn der Anbieter aufgerufen wird.
 
-Bei diesem Laufwerk Anbieter enthalten Zustandsinformationen die Verbindung mit der Datenbank, die als Teil der Laufwerk Informationen beibehalten wird. Der folgende Code zeigt, wie diese Informationen im [System. Management. Automation. psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) -Objekt gespeichert werden, das das Laufwerk beschreibt:
+Bei diesem Laufwerk Anbieter enthalten Zustandsinformationen die Verbindung mit der Datenbank, die als Teil der Laufwerk Informationen beibehalten wird. Der folgende Code zeigt, wie diese Informationen im [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) -Objekt gespeichert werden, das das Laufwerk beschreibt:
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="130-151":::
 
@@ -56,17 +49,17 @@ Damit die Windows PowerShell-Laufzeit ein Laufwerk erstellen kann, muss der Lauf
 
 Die außer Kraft setzung dieser Methode sollte folgende Aktionen ausführen:
 
-- Überprüfen Sie, ob der Member " [System. Management. Automation. psdriveinfo. root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) " vorhanden ist und eine Verbindung mit dem Datenspeicher hergestellt werden kann.
-- Erstellen Sie ein Laufwerk, und füllen Sie das Verbindungs Mitglied auf, um das `New-PSDrive`-Cmdlet zu unterstützen.
-- Überprüfen Sie das [System. Management. Automation. psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) -Objekt für das vorgeschlagene Laufwerk.
-- Ändern Sie das [System. Management. Automation. psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) -Objekt, das das Laufwerk mit den erforderlichen Leistungs-oder Zuverlässigkeits Informationen beschreibt, oder stellen Sie zusätzliche Daten für Aufrufer mit dem Laufwerk bereit.
-- Behandeln Sie Fehler mithilfe der [System. Management. Automation. Provider. cmdletprovider. Write-error](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) -Methode, und geben Sie dann `null`zurück.
+- Überprüfen Sie, ob die [System.Management.Automation.PSDriveingefo. Der root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) -Member ist vorhanden, und es kann eine Verbindung mit dem Datenspeicher hergestellt werden.
+- Erstellen Sie ein Laufwerk, und füllen Sie das Verbindungs Mitglied auf, um das `New-PSDrive` Cmdlet zu unterstützen.
+- Überprüfen Sie das [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) -Objekt für das vorgeschlagene Laufwerk.
+- Ändern Sie das [System.Management.Automation.PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) -Objekt, das das Laufwerk mit den erforderlichen Leistungs-oder Zuverlässigkeits Informationen beschreibt, oder stellen Sie zusätzliche Daten für Aufrufer mit dem Laufwerk bereit.
+- Behandeln Sie Fehler mithilfe der [System. Management. Automation. Provider. cmdletprovider. Write-error](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) -Methode, und geben Sie dann zurück `null` .
 
   Diese Methode gibt entweder die Laufwerk Informationen zurück, die an die-Methode oder eine anbieterspezifische Version der Methode übermittelt wurden.
 
 ## <a name="attaching-dynamic-parameters-to-newdrive"></a>Dynamische Parameter werden an newdrive angefügt.
 
-Das `New-PSDrive`-Cmdlet, das von Ihrem Laufwerk Anbieter unterstützt wird, erfordert möglicherweise zusätzliche Parameter. Um diese dynamischen Parameter an das Cmdlet anzufügen, implementiert der Anbieter die [System. Management. Automation. Provider. drivecmdletprovider. newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) -Methode. Diese Methode gibt ein Objekt zurück, das über Eigenschaften und Felder mit Attribut Attributen verfügt, die einer Cmdlet-Klasse oder einem [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt ähneln.
+Das `New-PSDrive` Cmdlet, das von Ihrem Laufwerk Anbieter unterstützt wird, erfordert möglicherweise zusätzliche Parameter. Um diese dynamischen Parameter an das Cmdlet anzufügen, implementiert der Anbieter die [System. Management. Automation. Provider. drivecmdletprovider. newdrivedynamicparameters *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDriveDynamicParameters) -Methode. Diese Methode gibt ein Objekt zurück, das über Eigenschaften und Felder mit Attribut Attributen verfügt, die einer Cmdlet-Klasse oder einem [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt ähneln.
 
 Dieser Laufwerk Anbieter setzt diese Methode nicht außer Kraft. Der folgende Code zeigt jedoch die Standard Implementierung dieser Methode:
 
@@ -80,21 +73,21 @@ Der folgende Code zeigt die Implementierung der [System. Management. Automation.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="91-116":::
 
-Wenn das Laufwerk entfernt werden kann, sollte die-Methode die an die Methode übergebenen Informationen über den `drive`-Parameter zurückgeben. Wenn das Laufwerk nicht entfernt werden kann, sollte die Methode eine Ausnahme schreiben und dann `null`zurückgeben. Wenn der Anbieter diese Methode nicht außer Kraft setzt, gibt die Standard Implementierung dieser Methode nur die als Eingabe übergebenen Laufwerks Informationen zurück.
+Wenn das Laufwerk entfernt werden kann, sollte die-Methode die an die Methode übergebenen Informationen über den-Parameter zurückgeben `drive` . Wenn das Laufwerk nicht entfernt werden kann, sollte die Methode eine Ausnahme schreiben und dann zurückgeben `null` . Wenn der Anbieter diese Methode nicht außer Kraft setzt, gibt die Standard Implementierung dieser Methode nur die als Eingabe übergebenen Laufwerks Informationen zurück.
 
 ## <a name="initializing-default-drives"></a>Standard Laufwerke werden initialisiert.
 
-Der Laufwerks Anbieter implementiert die [System. Management. Automation. Provider. drivecmdletprovider. initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) -Methode zum Einbinden von Laufwerken. Beispielsweise kann der Active Directory Anbieter ein Laufwerk für den Standard namens Kontext einbinden, wenn der Computer einer Domäne hinzugefügt wird.
+Der Laufwerks Anbieter implementiert die [System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) -Methode zum Einbinden von Laufwerken. Beispielsweise kann der Active Directory Anbieter ein Laufwerk für den Standard namens Kontext einbinden, wenn der Computer einer Domäne hinzugefügt wird.
 
 Diese Methode gibt eine Auflistung von Laufwerk Informationen zu den initialisierten Laufwerken oder eine leere Auflistung zurück. Der Aufruf dieser Methode erfolgt, nachdem die Windows PowerShell-Runtime die [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) -Methode aufgerufen hat, um den Anbieter zu initialisieren.
 
-Dieser Laufwerk Anbieter setzt die [System. Management. Automation. Provider. drivecmdletprovider. initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) -Methode nicht außer Kraft. Der folgende Code zeigt jedoch die Standard Implementierung, die eine leere Laufwerks Auflistung zurückgibt:
+Dieser Laufwerk Anbieter überschreibt nicht die [System.Management.Automation.Provider.Drivecmdletprovider.Initializedefaultdrives *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.InitializeDefaultDrives) -Methode. Der folgende Code zeigt jedoch die Standard Implementierung, die eine leere Laufwerks Auflistung zurückgibt:
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testproviderinitializedefaultdrives](Msh_samplestestcmdlets#testproviderinitializedefaultdrives)]  -->
 
 #### <a name="things-to-remember-about-implementing-initializedefaultdrives"></a>Dinge, die Sie beim Implementieren von initializedefaultdrives beachten sollten
 
-Alle Laufwerks Anbieter sollten ein Stamm Laufwerk einbinden, um dem Benutzer die Auffindbarkeit zu erleichtern. Das Stamm Laufwerk kann Speicherorte auflisten, die als Stämme für andere eingebundene Laufwerke fungieren. Beispielsweise kann der Active Directory Anbieter ein Laufwerk erstellen, das die Namenskontexte auflistet, die in den `namingContext`-Attributen der DSE-Stamm Umgebung (DSE) enthalten sind. Dadurch können Benutzer Einstellungspunkte für andere Laufwerke ermitteln.
+Alle Laufwerks Anbieter sollten ein Stamm Laufwerk einbinden, um dem Benutzer die Auffindbarkeit zu erleichtern. Das Stamm Laufwerk kann Speicherorte auflisten, die als Stämme für andere eingebundene Laufwerke fungieren. Beispielsweise kann der Active Directory Anbieter ein Laufwerk erstellen, das die Namenskontexte auflistet, die in den `namingContext` Attributen der DSE-Stamm Umgebung (DSE) gefunden werden. Dadurch können Benutzer Einstellungspunkte für andere Laufwerke ermitteln.
 
 ## <a name="code-sample"></a>Codebeispiel
 
@@ -104,9 +97,9 @@ Einen umfassenden Beispielcode finden Sie unter [AccessDbProviderSample02-Codebe
 
 Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, können Sie ihn testen, indem Sie die unterstützten Cmdlets in der Befehlszeile ausführen, einschließlich aller Cmdlets, die durch Ableitung verfügbar gemacht wurden. Testen Sie den Beispiel Laufwerk Anbieter.
 
-1. Führen Sie das `Get-PSProvider` Cmdlet aus, um die Liste der Anbieter abzurufen, um sicherzustellen, dass der accessdb-Laufwerks Anbieter vorhanden ist:
+1. Führen Sie das- `Get-PSProvider` Cmdlet aus, um die Liste der Anbieter abzurufen und sicherzustellen, dass der accessdb-Laufwerks Anbieter vorhanden ist:
 
-   **PS-> `Get-PSProvider`**
+   **PS->`Get-PSProvider`**
 
    Die folgende Ausgabe wird angezeigt:
 
@@ -121,7 +114,7 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
    Registry             ShouldProcess                 {HKLM, HKCU}
    ```
 
-2. Stellen Sie sicher, dass ein Datenbankserver Name (DSN) für die Datenbank vorhanden ist, indem Sie auf den **Datenquellen** Teil der **Verwaltungs Tools** für das Betriebssystem zugreifen. Doppelklicken Sie in der Tabelle **Benutzer-DSN** auf **MS Access Database** , und fügen Sie den Laufwerks Pfad `C:\ps\northwind.mdb`hinzu.
+2. Stellen Sie sicher, dass ein Datenbankserver Name (DSN) für die Datenbank vorhanden ist, indem Sie auf den **Datenquellen** Teil der **Verwaltungs Tools** für das Betriebssystem zugreifen. Doppelklicken Sie in der Tabelle **Benutzer-DSN** auf **MS Access Database** , und fügen Sie den Laufwerks Pfad hinzu `C:\ps\northwind.mdb` .
 
 3. Erstellen Sie ein neues Laufwerk mithilfe des Beispiel-Laufwerk Anbieters:
 
@@ -171,4 +164,4 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
 
 [Entwerfen Ihres Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md)
 
-[Erstellen eines einfachen Windows PowerShell-Anbieters](./creating-a-basic-windows-powershell-provider.md)
+[Erstellen eines Windows PowerShell-Standardanbieters](./creating-a-basic-windows-powershell-provider.md)

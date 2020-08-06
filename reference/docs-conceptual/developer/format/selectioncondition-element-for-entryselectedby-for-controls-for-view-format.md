@@ -1,25 +1,18 @@
 ---
 title: Selectioncondition-Element für entryselectedby für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 2623407e-fa10-4d27-a804-204f6d50ef22
-caps.latest.revision: 6
-ms.openlocfilehash: ea15e647a9dd7a7064718a0c536c4a3178d62d95
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1c14b2638249bdbfe25f7a96e917d66ea10ed239
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72362049"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787579"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-view-format"></a>Element „SelectionCondition“ für EntrySelectedBy für Controls für View (Format)
 
 Definiert eine Bedingung, die vorhanden sein muss, damit die Steuerelement Definition verwendet werden muss. Dieses Element wird beim Definieren von Steuerelementen verwendet, die von einer Ansicht verwendet werden können.
 
-Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) steuert Element (Format) Steuerelement (Format) Steuerelement für Steuerelemente für Ansicht (Format) CustomControl-Element für Steuerelement für Steuerelemente für Ansicht (Format) customentries-Element für CustomControl für Steuerelemente für das View (Format) customentry-Element für customentries für Steuerelemente für das View (Format) entryselectedby-Element für customentry für Steuerelemente für das View (Format) selectioncondition-Element für entryselectedby für Steuerelemente für View ( Ges
+Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element (Format) steuert Element (Format) Steuerelement für Steuerelemente für Ansicht (Format) CustomControl-Element für Steuerelemente für das View (Format) customentries-Element für CustomControl für Steuerelemente View (Format) customentry-Element für customentries für Steuerelemente für das View (Format) entryselectedby-Element für customentry für Steuerelemente für View (Format) selectioncondition-Element für entryselectedby für Steuerelemente für View (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,28 +27,28 @@ Konfigurationselement (Format) viewdefinitions-Element (Format) Ansichts Element
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `SelectionCondition`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `SelectionCondition` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[PropertyName-Element für selectioncondition für Steuerelemente für View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt eine .net-Eigenschaft an, die die Bedingung auslöst.|
-|[ScriptBlock-Element für selectioncondition für Steuerelemente für View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das die Bedingung auslöst.|
-|[Selectionsetname-Element für selectioncondition für Steuerelemente für View (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt den Satz von .NET-Typen an, der die Bedingung auslöst.|
-|[Typname-Element für selectioncondition für Steuerelemente für View (Format)](./typename-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der die Bedingung auslöst.|
+|[Element „PropertyName“ für SelectionCondition für Controls für View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt eine .net-Eigenschaft an, die die Bedingung auslöst.|
+|[Element „ScriptBlock“ für SelectionCondition für Controls für View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das die Bedingung auslöst.|
+|[Element „SelectionSetName“ für SelectionCondition für Controls für View (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt den Satz von .NET-Typen an, der die Bedingung auslöst.|
+|[Element „TypeName“ für SelectionCondition für Controls für View (Format)](./typename-element-for-selectioncondition-for-controls-for-view-format.md)|Optionales Element.<br /><br /> Gibt einen .NET-Typ an, der die Bedingung auslöst.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Entryselectedby-Element für customentry für Steuerelemente für Ansicht (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
+|[Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Wenn Sie eine Auswahlbedingung definieren, gelten die folgenden Anforderungen:
 
@@ -67,14 +60,14 @@ Weitere Informationen zum Verwenden von Auswahl Bedingungen finden Sie unter [De
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[PropertyName-Element für selectioncondition für Steuerelemente für View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md)
+[Element „PropertyName“ für SelectionCondition für Controls für View (Format)](./propertyname-element-for-selectioncondition-for-controls-for-view-format.md)
 
-[ScriptBlock-Element für selectioncondition für Steuerelemente für View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md)
+[Element „ScriptBlock“ für SelectionCondition für Controls für View (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md)
 
-[Selectionsetname-Element für selectioncondition für Steuerelemente für View (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)
+[Element „SelectionSetName“ für SelectionCondition für Controls für View (Format)](./selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md)
 
-[Typname-Element für selectioncondition für Steuerelemente für View (Format)](./typename-element-for-selectioncondition-for-controls-for-view-format.md)
+[Element „TypeName“ für SelectionCondition für Controls für View (Format)](./typename-element-for-selectioncondition-for-controls-for-view-format.md)
 
-[Entryselectedby-Element für customentry für Steuerelemente für Ansicht (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)
+[Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)](./entryselectedby-element-for-customentry-for-controls-for-view-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

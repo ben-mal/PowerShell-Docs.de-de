@@ -1,19 +1,12 @@
 ---
 title: Erstellen von benutzerdefinierten Steuerelementen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: c3baa406-cd33-4420-be5a-07ef09d93480
-caps.latest.revision: 8
-ms.openlocfilehash: 3504ab1d974c55e9279172d0e851961474ccb926
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c36fa9b778e01501a3c88f735cdefdfbb04411a0
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363379"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786117"
 ---
 # <a name="creating-custom-controls"></a>Erstellen von benutzerdefinierten Steuerelementen
 
@@ -21,7 +14,7 @@ Benutzerdefinierte Steuerelemente sind die flexibelsten Komponenten einer Format
 
 ## <a name="custom-control-example"></a>Beispiel für einen benutzerdefinierten
 
-Das folgende Beispiel zeigt ein benutzerdefiniertes Steuerelement, das in der Datei "Zertifikats. Format. ps1xml" definiert ist. Dieses benutzerdefinierte Steuerelement wird zum Trennen der [System. Management. Automation. Signature](/dotnet/api/System.Management.Automation.Signature) -Objekte verwendet, die in einer Tabellenansicht angezeigt werden.
+Im folgenden Beispiel wird ein benutzerdefiniertes Steuerelement gezeigt, das in der Certificates.Format.ps1-XML-Datei definiert ist. Dieses benutzerdefinierte Steuerelement wird zum Trennen der [System. Management. Automation. Signature](/dotnet/api/System.Management.Automation.Signature) -Objekte verwendet, die in einer Tabellenansicht angezeigt werden.
 
 ```xml
 <Controls>
@@ -53,4 +46,4 @@ Das folgende Beispiel zeigt ein benutzerdefiniertes Steuerelement, das in der Da
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

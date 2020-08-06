@@ -1,23 +1,16 @@
 ---
 title: Validatepattern-Attribut Deklaration | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, ValidatePattern
 - ValidatePattern attribute, described
 - ValidatePattern attribute
-ms.assetid: 87b811be-6d93-4e7d-b9d0-c567a19bb0ef
-caps.latest.revision: 13
-ms.openlocfilehash: 5edcb65a6fbe1cb2fe2d0efe3f763fb84628b049
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369159"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787800"
 ---
 # <a name="validatepattern-attribute-declaration"></a>Attributdeklaration: ValidatePattern
 
@@ -34,15 +27,15 @@ Wenn validatepattern innerhalb eines Cmdlets aufgerufen wird, konvertiert Window
 
 #### <a name="parameters"></a>Parameter
 
-`RegexString` ([System. String](/dotnet/api/System.String)) erforderlich. Gibt einen regulären Ausdruck an, der das Parameter Argument überprüft.
+`RegexString`([System. String](/dotnet/api/System.String)) erforderlich. Gibt einen regulären Ausdruck an, der das Parameter Argument überprüft.
 
 Optionen ([System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)) optionaler benannter Parameter. Gibt eine bitweise Kombination von [System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) -Flags an, die Optionen für reguläre Ausdrücke angeben.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - Dieses Attribut kann nur einmal pro Parameter verwendet werden.
 
-- Mit dem `Option`-Parameter des-Attributs können Sie das Muster weiter definieren. Beispielsweise können Sie für das Muster die Groß-/Kleinschreibung beachten.
+- Mit dem- `Option` Parameter des-Attributs können Sie das Muster weiter definieren. Beispielsweise können Sie für das Muster die Groß-/Kleinschreibung beachten.
 
 - Wenn dieses Attribut auf eine Auflistung angewendet wird, muss jedes Element in der Auflistung mit dem Muster identisch sein.
 

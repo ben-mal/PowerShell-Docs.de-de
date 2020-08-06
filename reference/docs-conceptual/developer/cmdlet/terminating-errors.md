@@ -1,19 +1,12 @@
 ---
 title: Fehler beim Beenden | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: b804e738-aefa-41bb-9649-f9ed897fd96c
-caps.latest.revision: 8
-ms.openlocfilehash: d1967fe7996f75ec5229920f7ec49aa5ff6bdbfd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 272e6cdd9a1da3cfd2e4f730f6aeb27577948278
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369329"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786389"
 ---
 # <a name="terminating-errors"></a>Fehler mit Abbruch
 
@@ -29,7 +22,7 @@ Cmdlets können eine beliebige Anzahl von Ausgabe Objekten oder nicht Beendigung
 
 Cmdlets können [System. Management. Automation. Cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) nur aus dem Thread aufrufen, der die Eingabe Verarbeitungsmethode [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)oder [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) aufgerufen hat. Versuchen Sie nicht, " [System. Management. Automation. Cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) " oder " [System. Management. Automation. Cmdlet. Write-error](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) " aus einem anderen Thread aufzurufen. Stattdessen müssen Fehler an den Haupt Thread übermittelt werden.
 
-Es ist möglich, dass ein Cmdlet in der Implementierung der [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)-, [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)-Methode oder der [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) -Methode eine Ausnahme auslöst. Jede Ausnahme, die von diesen Methoden ausgelöst wird (mit Ausnahme einiger schwerwiegender Fehlerbedingungen zum Beenden des Windows PowerShell-Hosts), wird als Beendigungs Fehler interpretiert, der die Pipeline, aber nicht als Ganzes als Windows PowerShell stoppt. (Dies gilt nur für den Haupt-Cmdlet-Thread. Nicht abgefangene Ausnahmen in Threads, die durch das Cmdlet erzeugt werden, stoppen den Windows PowerShell-Host im Allgemeinen.) Es wird empfohlen, dass Sie [System. Management. Automation. Cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) verwenden, anstatt eine Ausnahme auszulösen, da der Fehler Daten Satz zusätzliche Informationen über die Fehlerbedingung bereitstellt, die für den Endbenutzer nützlich ist. Cmdlets sollten die Richtlinie für verwalteten Code beachten, um alle Ausnahmen abzufangen und zu behandeln (`catch (Exception e)`). Konvertieren Sie nur Ausnahmen bekannter und erwarteter Typen in Fehler Datensätze.
+Es ist möglich, dass ein Cmdlet in der Implementierung der [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing)-, [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)-Methode oder der [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) -Methode eine Ausnahme auslöst. Jede Ausnahme, die von diesen Methoden ausgelöst wird (mit Ausnahme einiger schwerwiegender Fehlerbedingungen zum Beenden des Windows PowerShell-Hosts), wird als Beendigungs Fehler interpretiert, der die Pipeline, aber nicht als Ganzes als Windows PowerShell stoppt. (Dies gilt nur für den Haupt-Cmdlet-Thread. Nicht abgefangene Ausnahmen in Threads, die durch das Cmdlet erzeugt werden, stoppen den Windows PowerShell-Host im Allgemeinen.) Es wird empfohlen, dass Sie [System. Management. Automation. Cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) verwenden, anstatt eine Ausnahme auszulösen, da der Fehler Daten Satz zusätzliche Informationen über die Fehlerbedingung bereitstellt, die für den Endbenutzer nützlich ist. Cmdlets sollten die Richtlinie für verwalteten Code beachten, um alle Ausnahmen abzufangen und zu behandeln ( `catch (Exception e)` ). Konvertieren Sie nur Ausnahmen bekannter und erwarteter Typen in Fehler Datensätze.
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -45,6 +38,6 @@ Es ist möglich, dass ein Cmdlet in der Implementierung der [System. Management.
 
 [System. Management. Automation. Cmdlet. Write error](/dotnet/api/System.Management.Automation.Cmdlet.WriteError)
 
-[Windows PowerShell-Fehler Datensätze](./windows-powershell-error-records.md)
+[Windows PowerShell-Fehlerdatensätze](./windows-powershell-error-records.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

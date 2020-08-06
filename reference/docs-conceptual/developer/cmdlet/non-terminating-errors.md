@@ -1,19 +1,12 @@
 ---
 title: Fehler ohne Abbruch | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 468dabd6-bfeb-448d-8e09-0996db516edd
-caps.latest.revision: 8
-ms.openlocfilehash: 5f804756e0e3e867832f15f50967fd6987f160a5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d74c248e6ef54151400b8060d76524e89d87352c
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369599"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786559"
 ---
 # <a name="non-terminating-errors"></a>Fehler ohne Abbruch
 
@@ -33,6 +26,6 @@ Cmdlets können [System. Management. Automation. Cmdlet. Write-error](/dotnet/ap
 
 [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)
 
-[Windows PowerShell-Fehler Datensätze](./windows-powershell-error-records.md)
+[Windows PowerShell-Fehlerdatensätze](./windows-powershell-error-records.md)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

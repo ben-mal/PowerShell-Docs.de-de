@@ -1,19 +1,12 @@
 ---
 title: DefaultSettings-Element (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
-caps.latest.revision: 11
-ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7da7948fc0814e38a8f3910596e223470ec27d75
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72363869"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787732"
 ---
 # <a name="defaultsettings-element-format"></a>Element „DefaultSettings“ (Format)
 
@@ -35,42 +28,42 @@ Configuration-Element (Format) DefaultSettings-Element (Format)
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `DefaultSettings`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `DefaultSettings` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Display Error-Element (Format)](./displayerror-element-format.md)|Optionales Element.<br /><br /> Gibt an, dass die Zeichenfolge #Err angezeigt wird, wenn ein Fehler auftritt, während ein Datenelement angezeigt wird.|
-|[Enumerableexpansions-Element (Format)](./enumerableexpansions-element-format.md)|Optionales Element.<br /><br /> Definiert die verschiedenen Möglichkeiten, wie .NET-Objekte erweitert werden, wenn Sie in einer Ansicht angezeigt werden.|
+|[Element „DisplayError“ (Format)](./displayerror-element-format.md)|Optionales Element.<br /><br /> Gibt an, dass die Zeichenfolge #Err angezeigt wird, wenn ein Fehler auftritt, während ein Datenelement angezeigt wird.|
+|[Element „EnumerableExpansions“ (Format)](./enumerableexpansions-element-format.md)|Optionales Element.<br /><br /> Definiert die verschiedenen Möglichkeiten, wie .NET-Objekte erweitert werden, wenn Sie in einer Ansicht angezeigt werden.|
 |[PropertyCountForTable (Format)](./propertycountfortable-element-format.md)|Optionales Element.<br /><br /> Gibt die Mindestanzahl von Eigenschaften an, die ein Objekt besitzen muss, um das Objekt in einer Tabellenansicht anzuzeigen.|
-|[ShowError-Element (Format)](./showerror-element-format.md)|Optionales Element.<br /><br /> Gibt an, dass der vollständige Fehler Daten Satz angezeigt wird, wenn ein Fehler auftritt, während ein Datenelement angezeigt wird.|
-|[Wraptables-Element (Format)](./wraptables-element-format.md)|Optionales Element.<br /><br /> Gibt an, dass Daten in einer Tabelle in die nächste Zeile verschoben werden, wenn Sie nicht in die Spaltenbreite passt.|
+|[Element „ShowError“ (Format)](./showerror-element-format.md)|Optionales Element.<br /><br /> Gibt an, dass der vollständige Fehler Daten Satz angezeigt wird, wenn ein Fehler auftritt, während ein Datenelement angezeigt wird.|
+|[Element „WrapTables“ (Format)](./wraptables-element-format.md)|Optionales Element.<br /><br /> Gibt an, dass Daten in einer Tabelle in die nächste Zeile verschoben werden, wenn Sie nicht in die Spaltenbreite passt.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Configuration-Element](./configuration-element-format.md)|Stellt das Element der obersten Ebene einer Formatierungs Datei dar.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Configuration-Element](./configuration-element-format.md)
 
-[Display Error-Element (Format)](./displayerror-element-format.md)
+[Element „DisplayError“ (Format)](./displayerror-element-format.md)
 
-[Enumerableexpansions-Element (Format)](./enumerableexpansions-element-format.md)
+[Element „EnumerableExpansions“ (Format)](./enumerableexpansions-element-format.md)
 
 [PropertyCountForTable (Format)](./propertycountfortable-element-format.md)
 
-[ShowError-Element (Format)](./showerror-element-format.md)
+[Element „ShowError“ (Format)](./showerror-element-format.md)
 
-[Wraptables-Element (Format)](./wraptables-element-format.md)
+[Element „WrapTables“ (Format)](./wraptables-element-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

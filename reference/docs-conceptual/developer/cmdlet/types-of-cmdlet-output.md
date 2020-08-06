@@ -1,21 +1,14 @@
 ---
 title: Typen der Cmdlet-Ausgabe | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 01/18/2019
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - cmdlets [PowerShell SDK], output
-ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
-caps.latest.revision: 12
-ms.openlocfilehash: de21d9ebfec4f23d3819695df225f7a230864a7b
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83561411"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786355"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet-Ausgabetypen
 
@@ -62,7 +55,7 @@ Für alle Aufrufe der Schreibmethode wird die Inhalts Anzeige durch bestimmte La
 
 ## <a name="accessing-the-output-functionality-of-a-host-application"></a>Zugreifen auf die Ausgabefunktionen einer Host Anwendung
 
-Sie können ein Cmdlet auch so entwerfen, dass direkt auf die Ausgabefunktionen einer Host Anwendung über die PowerShell-Laufzeit zugegriffen wird. Durch die Verwendung der von PowerShell bereitgestellten Host-APIs anstelle von [System. Console](/dotnet/api/System.Console) oder [System. Windows. Forms](/dotnet/api/System.Windows.Forms) wird sichergestellt, dass das Cmdlet mit einer Vielzahl von Hosts funktioniert. Beispiel: der Konsolen Host " **PowerShell. exe** ", der grafische Host " **powershell_ise. exe** ", der PowerShell-Remoting-Host und die Drittanbieter Hosts.
+Sie können ein Cmdlet auch so entwerfen, dass direkt auf die Ausgabefunktionen einer Host Anwendung über die PowerShell-Laufzeit zugegriffen wird. Durch die Verwendung der von PowerShell bereitgestellten Host-APIs anstelle von [System. Console](/dotnet/api/System.Console) oder [System. Windows. Forms](/dotnet/api/System.Windows.Forms) wird sichergestellt, dass das Cmdlet mit einer Vielzahl von Hosts funktioniert. Beispiel: der **powershell.exe** Konsolen Host, der **powershell_ise.exe** grafische Host, der PowerShell-Remoting-Host und die Drittanbieter Hosts.
 
 ## <a name="see-also"></a>Siehe auch
 

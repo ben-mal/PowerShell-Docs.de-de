@@ -1,19 +1,12 @@
 ---
 title: CustomControl-Element für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: d9d92a9e-c680-46ca-962e-e82452726953
-caps.latest.revision: 10
-ms.openlocfilehash: 1d72ce5b18e89bd81c7f81b27f4b8c60bed99764
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5aacf824421dfce19f1f495fc0a95e766cdbaf8b
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72368969"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786083"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Element „CustomControl“ für Control für Controls für Configuration (Format)
 
@@ -31,30 +24,30 @@ Configuration-Element (Format) Controls-Element des Configuration (Format)-Steue
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des `CustomControl`-Elements beschrieben. Dieses Element muss mindestens ein untergeordnetes Element aufweisen. Es gibt keine maximale Beschränkung für die Anzahl der untergeordneten Elemente, die angegeben werden können.
+In den folgenden Abschnitten werden die Attribute, untergeordneten Elemente und das übergeordnete Element des- `CustomControl` Elements beschrieben. Dieses Element muss mindestens ein untergeordnetes Element aufweisen. Es gibt keine maximale Beschränkung für die Anzahl der untergeordneten Elemente, die angegeben werden können.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Customentries-Element für CustomControl für Configuration (Format)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)|Erforderliches Element.<br /><br /> Stellt die Definitionen eines-Steuer Elements bereit.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Control-Element für Steuerelemente für die Konfiguration (Format)](./control-element-for-controls-for-configuration-format.md)|Definiert ein gängiges Steuerelement, das von allen Ansichten der Formatierungs Datei und dem Namen, der zum Verweisen auf das Steuerelement verwendet wird, verwendet werden kann.|
+|[Element „Control“ für Controls für Configuration (Format)](./control-element-for-controls-for-configuration-format.md)|Definiert ein gängiges Steuerelement, das von allen Ansichten der Formatierungs Datei und dem Namen, der zum Verweisen auf das Steuerelement verwendet wird, verwendet werden kann.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Control-Element für Steuerelemente für die Konfiguration (Format)](./control-element-for-controls-for-configuration-format.md)
+[Element „Control“ für Controls für Configuration (Format)](./control-element-for-controls-for-configuration-format.md)
 
 [Customentries-Element für CustomControl für Configuration (Format)](./customentries-element-for-customcontrol-for-controls-for-configuration-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

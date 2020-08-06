@@ -1,19 +1,12 @@
 ---
 title: Stop proc-Tutorial | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: a142aeb6-9c11-44a0-b34f-1f9470fa347b
-caps.latest.revision: 5
-ms.openlocfilehash: 27c8e2c7525aba38e69e50b2b7fd3b18b8e54989
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e298c729b7ac59141638052d19b95ab77aa25cd6
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72369409"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786474"
 ---
 # <a name="stopproc-tutorial"></a>StopProc-Tutorial
 
@@ -33,11 +26,11 @@ Die Themen in diesem Lernprogramm sind so konzipiert, dass Sie sequenziell geles
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md)
+[Erstellen eines Cmdlet, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md)
 
-[Hinzufügen von Benutzer Nachrichten zum Cmdlet](./adding-user-messages-to-your-cmdlet.md)
+[Hinzufügen von Benutzermeldungen zum Cmdlet](./adding-user-messages-to-your-cmdlet.md)
 
-[Hinzufügen von Aliasen, Platzhalter Erweiterungen und Hilfe zu Cmdlet-Parametern](./adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md)
+[Hinzufügen von Aliasen, Platzhaltererweiterung und Hilfe zu Cmdlet-Parametern](./adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md)
 
 [Hinzufügen von Parameter Sätzen zu Cmdlets](./adding-parameter-sets-to-a-cmdlet.md)
 

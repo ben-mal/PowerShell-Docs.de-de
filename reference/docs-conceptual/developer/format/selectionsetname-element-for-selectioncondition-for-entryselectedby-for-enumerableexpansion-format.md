@@ -1,25 +1,18 @@
 ---
 title: Selectionsetname-Element für selectioncondition für entryselectedby für enumerableweiterung (Format) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.assetid: 7b7af0b2-68e6-43c3-adcc-7c58007fced8
-caps.latest.revision: 13
-ms.openlocfilehash: 6f7c8d9af3c1c2fbda0208148b0088161701fdbe
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e18c74bb95c658f2c3e7b7454628f78d523f7609
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72361989"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87787494"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>Element „SelectionSetName“ für SelectionCondition für EntrySelectedBy für EnumerableExpansion (Format)
 
 Gibt den Satz von .NET-Typen an, die die Bedingung auslöst. Wenn einer der Typen in diesem Satz vorhanden ist, wird die Bedingung erfüllt.
 
-Configuration-Element DefaultSettings-Element (Format) enumerableerweiterungs-Element (Format) enumerableerweiterungs-Element (Format) entryselectedby-Element für enumerableexpansion (Format) selectioncondition-Element für entryselectedby Enumerableexpansion (Format) selectionsetname-Element für selectioncondition für entryselectedby für enumerableexpansion (Format)
+Configuration-Element DefaultSettings-Element (Format) enumerableweiterung-Element (Format) enumerableerweiterungen-Element (Format) entryselectedby-Element für enumerableexpansion (Format) selectioncondition-Element für entryselectedby für enumerableweiterung (Format) selectionsetname-Element für selectioncondition für entryselectedby für enumerableexpansion (Format)
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,27 +22,27 @@ Configuration-Element DefaultSettings-Element (Format) enumerableerweiterungs-El
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des `SelectionSetName`-Elements beschrieben.
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente und das übergeordnete Element des- `SelectionSetName` Elements beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-Keine.
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine.
+Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|Description|
+|Element|Beschreibung|
 |-------------|-----------------|
-|[Selectioncondition-Element für entryselectedby für enumerableweiterung (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|Definiert die Bedingung, die vorhanden sein muss, um die Auflistungs Objekte dieser Definition zu erweitern.|
+|[Element „SelectionCondition“ für EntrySelectedBy für EnumerableExpansion (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|Definiert die Bedingung, die vorhanden sein muss, um die Auflistungs Objekte dieser Definition zu erweitern.|
 
 ## <a name="text-value"></a>Textwert
 
 Geben Sie den Namen des Auswahl Satzes an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Auswahlbedingung kann einen Auswahl Satz oder einen .NET-Typ angeben, kann jedoch nicht beides angeben. Weitere Informationen zum Verwenden von Auswahl Bedingungen finden Sie unter [Definieren von Bedingungen zum Anzeigen von Daten](./defining-conditions-for-displaying-data.md).
 
@@ -57,8 +50,8 @@ Auswahl Sätze sind allgemeine Gruppen von .NET-Objekten, die von jeder Sicht ve
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Definieren von Auswahl Sätzen](./defining-selection-sets.md)
+[Definieren von Auswahlgruppen](./defining-selection-sets.md)
 
-[Selectioncondition-Element für entryselectedby für enumerableweiterung (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)
+[Element „SelectionCondition“ für EntrySelectedBy für EnumerableExpansion (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)
 
-[Schreiben einer PowerShell-Formatierungs Datei](./writing-a-powershell-formatting-file.md)
+[Schreiben einer PowerShell-Formatierungsdatei](./writing-a-powershell-formatting-file.md)

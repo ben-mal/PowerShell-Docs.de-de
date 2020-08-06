@@ -1,23 +1,16 @@
 ---
 title: Validatecount-Attribut Deklaration | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attributes, ValidateCount
 - ValidateCount attribute, described
 - ValidateCount attribute
-ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
-caps.latest.revision: 11
-ms.openlocfilehash: 3cae95fab30a4abe4e544ed5cb7dadc9f4debf02
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: c013a354ee339bd14508fe30549673bc79d5c616
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692375"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786321"
 ---
 # <a name="validatecount-attribute-declaration"></a>Attributdeklaration: ValidateCount
 
@@ -35,7 +28,7 @@ Das validatecount-Attribut gibt die minimale und maximale Anzahl von Argumenten 
 
 `MaxLength`([System. Int32][]) erforderlich. Gibt die maximale Anzahl von Argumenten an.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 - Weitere Informationen zum Deklarieren dieses Attributs finden Sie unter [Validieren einer Argument Anzahl][].
 
@@ -60,5 +53,5 @@ Das validatecount-Attribut gibt die minimale und maximale Anzahl von Argumenten 
 [Überprüfen einer Argumentanzahl]: how-to-validate-an-argument-count.md
 [Schreiben eines Windows PowerShell-Cmdlets]: writing-a-windows-powershell-cmdlet.md
 
-[System.Int32]: /dotnet/api/System.Int32
+[System. Int32]: /dotnet/api/System.Int32
 [System. Management. Automation. validatezähltattribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute
