@@ -5,12 +5,12 @@ helpviewer_keywords:
 - action names [PowerShell SDK]
 - verb names [PowerShell SDK]
 - cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 1cdfed5727c0b93bd1d4008fd0d6c03c448c6aed
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.openlocfilehash: f065610b6e54c9a6a927948bc6b2ffe5a1671e0c
+ms.sourcegitcommit: f05f18154913d346012527c23020d48d87ccac74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782394"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162476"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Genehmigte Verben für PowerShell-Befehle
 
@@ -18,6 +18,14 @@ PowerShell verwendet ein Verb-Substantiv-Paar für die Namen von Cmdlets und fü
 
 > [!NOTE]
 > PowerShell verwendet den Begriff " _Verb_ ", um ein Wort zu beschreiben, das eine Aktion impliziert, auch wenn dieses Wort kein Standard Verb in englischer Sprache ist. Der Begriff " _New_ " ist beispielsweise ein gültiger PowerShell-Verb Name, da er eine Aktion impliziert, obwohl es sich nicht um ein Verb in englischer Sprache handelt.
+
+<!--
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+-->
+
+Für jedes genehmigte Verb ist ein entsprechendes _Alias Präfix_ definiert.
+Dieses Alias Präfix wird häufig verwendet, um Aliase für Befehle zu benennen, die dieses Verb verwenden.
+Beispielsweise ist das Alias Präfix für, `Import` `ip` und entsprechend lautet der Alias für `Import-Module` `ipmo` .  Dabei handelt es sich um eine Empfehlung, aber nicht um eine Regel. insbesondere muss Sie nicht für Befehls Aliase beachtet werden, die bekannte Befehle aus anderen Umgebungen imitieren.
 
 ## <a name="verb-naming-rules"></a>Verb Benennungs Regeln
 
@@ -75,7 +83,7 @@ PowerShell verwendet die [System. Management. Automation. verbscommon](/dotnet/a
 |--------------------|------------|--------------|
 |[Hinzufügen](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Fügt einem Container eine Ressource hinzu oder fügt ein Element an ein anderes Element an. Das- `Add-Content` Cmdlet fügt beispielsweise Inhalt zu einer Datei hinzu. Dieses Verb ist mit gekoppelt `Remove` .|Verwenden Sie für diese Aktion keine Verben wie z. b. anfügen, anfügen, verketten oder einfügen.|
 |[Löschen](/dotnet/api/System.Management.Automation.VerbsCommon.Clear) (CL)|Entfernt alle Ressourcen aus einem Container, löscht den Container jedoch nicht. Beispielsweise entfernt das `Clear-Content` Cmdlet den Inhalt einer Datei, aber die Datei wird nicht gelöscht.|Verwenden Sie für diese Aktion keine Verben wie "Flush", "Erase", "Release", "UNMARK", "unset" oder "Nullify"|
-|[Schließen](/dotnet/api/System.Management.Automation.VerbsCommon.Close) (CS)|Ändert den Zustand einer Ressource, damit Sie nicht zugänglich, nicht verfügbar oder unbrauchbar ist. Dieses Verb ist mit`Open.`||
+|[Schließen](/dotnet/api/System.Management.Automation.VerbsCommon.Close) (CS)|Ändert den Zustand einer Ressource, damit Sie nicht zugänglich, nicht verfügbar oder unbrauchbar ist. Dieses Verb ist mit `Open.`||
 |[Kopieren](/dotnet/api/System.Management.Automation.VerbsCommon.Copy) (CP)|Kopiert eine Ressource in einen anderen Namen oder in einen anderen Container. Beispielsweise kopiert das `Copy-Item` Cmdlet, das für den Zugriff auf gespeicherte Daten verwendet wird, ein Element von einem Speicherort im Datenspeicher an einen anderen Speicherort.|Verwenden Sie für diese Aktion keine Verben wie z. b. duplizieren, Klonen, replizieren oder synchronisieren.|
 |[Eingabe](/dotnet/api/System.Management.Automation.VerbsCommon.Enter) Taste (et)|Gibt eine Aktion an, die dem Benutzer das Verschieben in eine Ressource ermöglicht. Beispielsweise wird `Enter-PSSession` der Benutzer mit dem-Cmdlet in eine interaktive Sitzung versetzt. Dieses Verb ist mit gekoppelt `Exit` .|Verwenden Sie für diese Aktion keine Verben wie Push oder into.|
 |[Exit](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Legt die aktuelle Umgebung oder den aktuellen Kontext auf den zuletzt verwendeten Kontext fest. Beispielsweise wird der `Exit-PSSession` Benutzer mit dem-Cmdlet in der Sitzung abgelegt, die zum Starten der interaktiven Sitzung verwendet wurde. Dieses Verb ist mit gekoppelt `Enter` .|Verwenden Sie für diese Aktion keine Verben wie Pop oder out.|
