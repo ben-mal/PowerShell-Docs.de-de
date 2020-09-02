@@ -1,38 +1,38 @@
 ---
-title: Cmdlet-Beispiele | Microsoft-Dokumentation
+title: Cmdletbeispiele | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 633e4a5108673b09a92679c7992421b6b3405b72
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
-ms.translationtype: MT
+ms.openlocfilehash: 7a4fb91cb316bf4231df0bb4446b9a7cd54cf647
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774744"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89235981"
 ---
 # <a name="cmdlet-samples"></a>Cmdlet-Beispiele
 
-In diesem Abschnitt wird der Beispielcode beschrieben, der im Windows PowerShell 2,0 SDK bereitgestellt wird. Sie können Code aus den Themen in diesem Abschnitt kopieren oder die mit dem SDK installierten Quelldateien öffnen. Das [Windows PowerShell 2,0 Software Development Kit (SDK)](https://www.microsoft.com/en-us/download/details.aspx?id=2560) stellt Info Dateien, Quelldateien und Visual Studio-Projektdateien für die einzelnen Beispiele bereit. Wenn das SDK installiert ist, können Sie die Beispiele im `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\` Ordner finden.
+In diesem Abschnitt wird der Beispielcode beschrieben, der im Windows PowerShell 2.0 SDK bereitgestellt wird. Sie können für die Themen in diesem Abschnitt den entsprechenden Code kopieren oder die mit dem SDK installierten Quelldateien öffnen. Das [Windows PowerShell 2.0 Software Development Kit (SDK)](https://www.microsoft.com/download/details.aspx?id=2560) enthält Infodateien, Quelldateien und Visual Studio-Projektdateien für jedes Beispiel. Wenn das SDK installiert ist, finden Sie die Beispiele im Ordner `<Drive>:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[GetProcessSample01-Beispiel](./getprocesssample01-sample.md) Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lokalen Computer abruft.
+[GetProcessSample01-Beispiel](./getprocesssample01-sample.md): Dieses Beispiel zeigt ein Cmdlet, das die Prozesse auf dem lokalen Computer abruft.
 
-[GetProcessSample02-Beispiel](./getprocesssample02-sample.md) Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lokalen Computer abruft. Sie stellt einen Name-Parameter bereit, der zum Angeben der abzurufenden Prozesse verwendet werden kann.
+[GetProcessSample02-Beispiel](./getprocesssample02-sample.md): Dieses Beispiel zeigt ein Cmdlet, das die Prozesse auf dem lokalen Computer abruft. Es enthält den Parameter „Name“, mit dem Sie die Prozesse angeben können, die abgerufen werden sollen.
 
-[GetProcessSample03-Beispiel](./getprocesssample03-sample.md) Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lokalen Computer abruft. Sie stellt einen Name-Parameter bereit, der ein Objekt aus der Pipeline oder einen Wert aus einer Eigenschaft eines Objekts akzeptieren kann, dessen Eigenschaftsname mit dem Parameternamen identisch ist.
+[GetProcessSample03-Beispiel](./getprocesssample03-sample.md): Dieses Beispiel zeigt ein Cmdlet, das die Prozesse auf dem lokalen Computer abruft. Es enthält den Parameter „Name“, der ein Objekt aus der Pipeline oder einen Wert aus einer Eigenschaft eines Objekts akzeptieren kann, dessen Eigenschaftenname mit dem Parameternamen übereinstimmt.
 
-[GetProcessSample04-Beispiel](./getprocesssample04-sample.md) Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das die Prozesse auf dem lokalen Computer abruft. Wenn beim Abrufen eines Prozesses ein Fehler auftritt, wird ein Fehler vom Typ "nicht abgebrochen" generiert.
+[GetProcessSample04-Beispiel](./getprocesssample04-sample.md): Dieses Beispiel zeigt ein Cmdlet, das die Prozesse auf dem lokalen Computer abruft. Darin wird ein Fehler ohne Abbruch generiert, wenn es beim Abrufen eines Prozesses zu einem Fehler kommt.
 
-[GetProcessSample05-Beispiel](./getprocesssample05-sample.md) Dieses Beispiel zeigt eine vollständige Version des Get-proc-Cmdlets.
+[GetProcessSample05-Beispiel](./getprocesssample05-sample.md): Dieses Beispiel zeigt eine vollständige Version des Cmdlets „Get-Proc“.
 
-[StopProcessSample01-Beispiel](./stopprocesssample01-sample.md) Dieses Beispiel zeigt, wie ein Cmdlet geschrieben wird, das Feedback vom Benutzer anfordert, bevor versucht wird, einen Prozess zu beenden, und wie ein Parameter implementiert wird, der `PassThru` angibt, dass der Benutzer das Cmdlet zum Zurückgeben eines Objekts wünscht.
+[StopProcessSample01-Beispiel](./stopprocesssample01-sample.md): Dieses Beispiel zeigt ein Cmdlet, das vor dem Versuch zur Beendigung eines Prozesses Feedback vom Benutzer anfordert. Außerdem wird gezeigt, wie Sie einen `PassThru`-Parameter implementieren, über den das Cmdlet angewiesen werden kann, ein Objekt zurückzugeben.
 
-[StopProcessSample02-Beispiel](./stopprocesssample02-sample.md) In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das beim Beenden von Prozessen auf dem lokalen Computer Debug-, ausführliche und Warnmeldungen schreibt.
+[StopProcessSample02-Beispiel](./stopprocesssample02-sample.md): Dieses Beispiel zeigt ein Cmdlet, das Prozesse auf dem lokalen Computer beendet und dabei Debugmeldungen, ausführliche Meldungen und Warnmeldungen erzeugt.
 
-[StopProcessSample03-Beispiel](./stopprocesssample03-sample.md) In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, dessen Parameter Aliase aufweisen und Platzhalter Zeichen unterstützen.
+[StopProcessSample03-Beispiel](./stopprocesssample03-sample.md): Dieses Beispiel zeigt ein Cmdlet, dessen Parameter über Aliase verfügen und Platzhalterzeichen unterstützen.
 
-[StopProcessSample04-Beispiel](./stopprocesssample04-sample.md) Dieses Beispiel zeigt, wie Sie ein Cmdlet schreiben, das Parametersätze deklariert, den Standardparameter Satz angibt und ein Eingabe Objekt akzeptieren kann.
+[StopProcessSample04-Beispiel](./stopprocesssample04-sample.md): Dieses Beispiel zeigt ein Cmdlet, das Parametersätze deklariert, den Standardparametersatz angibt und ein Eingabeobjekt akzeptieren kann.
 
-[Events01-Beispiel](./events01-sample.md) In diesem Beispiel wird gezeigt, wie ein Cmdlet erstellt wird, das es dem Benutzer ermöglicht, sich für Ereignisse zu registrieren, die von [System. IO. FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher)ausgelöst werden. Mit diesem Cmdlet können Benutzer z. b. eine Aktion registrieren, die ausgeführt wird, wenn eine Datei unter einem bestimmten Verzeichnis erstellt wird. Dieses Beispiel wird von der [Microsoft. PowerShell. Commands. objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) -Basisklasse abgeleitet.
+[Events01-Beispiel](./events01-sample.md): Dieses Beispiel zeigt ein Cmdlet, das es Benutzern erlaubt, sich für Ereignisse zu registrieren, die von [System.IO.Filesystemwatcher](/dotnet/api/System.IO.FileSystemWatcher) ausgelöst werden. Mit diesem Cmdlet können Benutzer z. B. eine Aktion registrieren, die ausgeführt wird, wenn in einem bestimmten Verzeichnis eine Datei erstellt wird. Dieses Beispiel ist aus der Basisklasse [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) abgeleitet.
 
 ## <a name="see-also"></a>Weitere Informationen
 

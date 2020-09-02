@@ -1,16 +1,16 @@
 ---
 title: Unterstützung einer aktualisierbaren Hilfe
 ms.date: 10/28/2012
-ms.openlocfilehash: 6fa1a9e1f7f3cd42b512a72d7b68ae4a4976978f
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
-ms.translationtype: MT
+ms.openlocfilehash: bc5f08d2989b1031806c91acf43dd6a3b2646f04
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893338"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236338"
 ---
 # <a name="supporting-updatable-help"></a>Unterstützung einer aktualisierbaren Hilfe
 
-Das *aktualisierbare Hilfe System von Windows PowerShell*, das in Windows 8 und Windows Server 2012 eingeführt wurde, soll sicherstellen, dass Benutzer immer über die neuesten Hilfe Themen an der Eingabeaufforderung auf dem lokalen Computer verfügen. Zusammen mit der Windows PowerShell-Online Hilfe bietet die aktualisierbare Hilfe eine umfassende Hilfe Lösung für Benutzer. Dieser Abschnitt beschreibt das aktualisierbare Hilfe System und erläutert, wie Modul Entwickler die aktualisierbare Hilfe für Ihre Module unterstützen können.
+Das in Windows 8 und Windows Server 2012 eingeführte *Aktualisierbare Windows PowerShell-Hilfesystem* ist so konzipiert, dass Benutzern an der Eingabeaufforderung auf ihren lokalen Computern immer die neuesten Hilfethemen angezeigt werden. Zusammen mit der Windows PowerShell-Onlinehilfe bildet die aktualisierbare Hilfe eine umfassende Hilfelösung für Benutzer. In diesem Abschnitt wird das aktualisierbare Hilfesystem beschrieben, und es wird erläutert, wie Ersteller von Modulen die aktualisierbare Hilfe für ihre Module unterstützen können.
 
 In diesem Abschnitt werden folgende Themen behandelt.
 
@@ -32,4 +32,4 @@ In diesem Abschnitt werden folgende Themen behandelt.
 
 [Unterstützung einer Onlinehilfe](./supporting-online-help.md)
 
-[Aktualisierbare Hilfe Status Tabelle](https://www.microsoft.com/en-us/itpro/windows)
+[Statustabelle der aktualisierbaren Hilfe](/windows/deployment/deploy-whats-new)
