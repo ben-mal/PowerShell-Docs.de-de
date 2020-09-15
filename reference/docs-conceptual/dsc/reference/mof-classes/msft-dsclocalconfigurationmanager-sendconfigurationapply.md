@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: SendConfigurationApply-Methode
-ms.openlocfilehash: 11b9d435bbaac1600d25ff074b6c55b236a8378b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9b684790e5a7d6c7bdf074caca6040e13807f1ca
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954887"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464314"
 ---
 # <a name="sendconfigurationapply-method"></a>SendConfigurationApply-Methode
 
@@ -24,9 +24,9 @@ uint32 SendConfigurationApply(
 
 ## <a name="parameters"></a>Parameter
 
-*ConfigurationData* \[in\] Die Umgebungsdaten für die Konfiguration.
+**ConfigurationData** \[in\] Die Umgebungsdaten für die Konfiguration.
 
-*force* \[in\] **true**, um das Beenden der Konfiguration zu erzwingen.
+**force** \[in\] **true**, um das Beenden der Konfiguration zu erzwingen.
 
 ## <a name="return-value"></a>Rückgabewert
 

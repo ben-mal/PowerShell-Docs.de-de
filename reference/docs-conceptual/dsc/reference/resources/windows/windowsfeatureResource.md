@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: DSC-Ressource „WindowsFeature“
-ms.openlocfilehash: 7f9b200b4d10aef6c8a3f76c497f4d60e8062cb5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b15b267c6898697816b386a381e5a6d59acd492a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557396"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464110"
 ---
 # <a name="dsc-windowsfeature-resource"></a>DSC-Ressource „WindowsFeature“
 
@@ -24,7 +24,6 @@ WindowsFeature [string] #ResourceName
     [ Credential = [PSCredential] ]
     [ IncludeAllSubFeature = [bool] ]
     [ LogPath = [string] ]
-    [ Source = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
     [ PsDscRunAsCredential = [PSCredential] ]
@@ -39,7 +38,6 @@ WindowsFeature [string] #ResourceName
 |Anmeldeinformationen |Gibt die Anmeldeinformationen zum Hinzufügen oder Entfernen der Rolle oder des Features an. |
 |IncludeAllSubFeature |Legen Sie diese Eigenschaft auf `$true` fest, um den Status aller erforderlichen Teilfeatures mit dem Status des Features sicherzustellen, das Sie mit der **Name**-Eigenschaft angeben. |
 |LogPath |Gibt den Pfad zu einer Protokolldatei an, in der der Ressourcenanbieter den Vorgang protokollieren soll. |
-|`Source` |Gibt bei Bedarf den Speicherort der Quelldatei an, die für die Installation verwendet werden soll. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
 

@@ -3,12 +3,12 @@ ms.date: 09/20/2019
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 description: Stellt einen Mechanismus zum Verwalten lokaler Gruppen auf dem Zielknoten zur Verfügung.
 title: DSC-Ressource „GroupSet“
-ms.openlocfilehash: 99b9cafdd4d799e18e1b9b1f08d7dd41ec435711
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560337"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464194"
 ---
 # <a name="dsc-groupset-resource"></a>DSC-Ressource „GroupSet“
 
@@ -24,8 +24,6 @@ Verwenden Sie diese Ressource, wenn Sie dieselbe Liste von Mitgliedern mehreren 
 Group [string] #ResourceName
 {
     GroupName = [string[]]
-    [ Members = [string[]] ]
-    [ Description = [string[]] ]
     [ MembersToInclude = [string[]] ]
     [ MembersToExclude = [string[]] ]
     [ Credential = [PSCredential] ]
@@ -41,7 +39,6 @@ Group [string] #ResourceName
 |---|---|
 |GroupName |Die Namen der Gruppen, für die Sie einen bestimmten Zustand sicherstellen möchten. |
 |Members |Verwenden Sie diese Eigenschaft, um die aktuelle Gruppenmitgliedschaft durch die angegebenen Member zu ersetzen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festlegen, verwenden Sie weder die Eigenschaft **MembersToExclude** noch die Eigenschaft **MembersToInclude**. Andernfalls wird ein Fehler generiert. |
-|BESCHREIBUNG |Die Beschreibung der Gruppe. |
 |MembersToInclude |Verwenden Sie diese Eigenschaft, um Member zur vorhandenen Gruppenmitgliedschaft hinzuzufügen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festgelegt haben, verwenden Sie die Eigenschaft **Members** nicht. Andernfalls wird ein Fehler generiert. |
 |MembersToExclude |Verwenden Sie diese Eigenschaft, um Mitglieder aus der vorhandenen Gruppenmitgliedschaft zu entfernen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festgelegt haben, verwenden Sie die Eigenschaft **Members** nicht. Andernfalls wird ein Fehler generiert. |
 |Anmeldeinformationen |Die Anmeldeinformationen für den Zugriff auf Remoteressourcen. Dieses Konto muss die entsprechenden Active Directory-Berechtigungen aufweisen, um alle nicht lokalen Konten zur Gruppe hinzuzufügen. Andernfalls tritt ein Fehler auf. |

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: GetConfigurationStatus-Methode
-ms.openlocfilehash: 83b30ba2612d962fcf2fa658d07d18fb2d91ccc7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c2c478151428052d656832fb4079f12d666a910d
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955017"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464048"
 ---
 # <a name="getconfigurationstatus-method"></a>GetConfigurationStatus-Methode
 
@@ -24,9 +24,9 @@ uint32 GetConfigurationStatus(
 
 ## <a name="parameters"></a>Parameter
 
-*All* \[in\] **true**, wenn diese Methode Informationen zu allen Konfigurationsausführungen auf dem Computer zurückgeben soll, einschließlich der Konfigurationsanwendung und der Konsistenzprüfung.
+**All** \[in\] **true**, wenn diese Methode Informationen zu allen Konfigurationsausführungen auf dem Computer zurückgeben soll, einschließlich der Konfigurationsanwendung und der Konsistenzprüfung.
 
-*configurationStatus* \[out\] Enthält bei der Rückgabe eine eingebettete Instanz der **MSFT_DSCConfigurationStatus**-Klasse, die die Einstellungen definiert.
+**configurationStatus** \[out\] Enthält bei der Rückgabe eine eingebettete Instanz der **MSFT_DSCConfigurationStatus**-Klasse, die die Einstellungen definiert.
 
 ## <a name="return-value"></a>Rückgabewert
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: RollBack-Methode
-ms.openlocfilehash: 6452bdffd5160d9956576fb59c98e2f9ff7ddbbb
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 301b8926d2ebf1ebe524f52a67928d34e26d860e
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954937"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464331"
 ---
 # <a name="rollback-method"></a>RollBack-Methode
 
@@ -23,7 +23,7 @@ uint32 RollBack(
 
 ## <a name="parameters"></a>Parameter
 
-*configurationNumber* \[in\] Gibt die angeforderte Konfiguration an.
+**configurationNumber** \[in\] Gibt die angeforderte Konfiguration an.
 
 ## <a name="return-value"></a>Rückgabewert
 

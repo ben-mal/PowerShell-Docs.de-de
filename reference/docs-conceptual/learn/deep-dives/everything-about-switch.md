@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über die switch-Anweisung wissen wollten
 description: Die switch-Anweisung in PowerShell bietet Features, die es in anderen Sprachen nicht gibt.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ebf6191d56374273465ae6bee49ef82a02cc1580
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: 685a5691599408a0d54ca99bf383bcd7702322a6
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149423"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469717"
 ---
 # <a name="everything-you-ever-wanted-to-know-about-the-switch-statement"></a>Alles, was Sie schon immer über die switch-Anweisung wissen wollten
 
@@ -17,7 +17,7 @@ Wie viele andere Sprachen bietet PowerShell Befehle zur Ablaufsteuerung der Ausf
 > [!NOTE]
 > Die [Originalversion][] dieses Artikels ist im Blog von [@KevinMarquette][] erschienen. Das PowerShell-Team dankt Kevin Marquette, dass er diesen Inhalt mit uns teilt. Weitere Informationen finden Sie in seinem Blog auf [PowerShellExplained.com][].
 
-## <a name="if-statement"></a>If-Anweisung
+## <a name="the-if-statement"></a>Die Anweisung `if`
 
 Eine der ersten Anweisungen, die Sie kennenlernen, ist die `if`-Anweisung. Sie können einen Skriptblock ausführen, wenn eine Anweisung `$true` ist.
 

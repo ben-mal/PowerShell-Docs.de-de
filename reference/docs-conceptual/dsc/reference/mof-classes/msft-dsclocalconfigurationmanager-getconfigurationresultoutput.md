@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: GetConfigurationResultOutput-Methode
-ms.openlocfilehash: 480e710ce1a208253f0e664474c3e9bab296066a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9c81082c28b2ffcc329264d29784782deaa9779d
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953417"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464076"
 ---
 # <a name="getconfigurationresultoutput-method"></a>GetConfigurationResultOutput-Methode
 
@@ -25,11 +25,11 @@ uint32 GetConfigurationResultOutput(
 
 ## <a name="parameters"></a>Parameter
 
-*jobId* \[in\] Die ID des Auftrags, für den Ausgabedaten abgerufen werden sollen.
+**jobId** \[in\] Die ID des Auftrags, für den Ausgabedaten abgerufen werden sollen.
 
-*resumeOutputBookmark* \[in\] Gibt an, dass die Ausgabe eine Fortsetzung eines vorherigen Lesezeichens sein soll.
+**resumeOutputBookmark** \[in\] Gibt an, dass die Ausgabe eine Fortsetzung eines vorherigen Lesezeichens sein soll.
 
-*output* \[out\] Die Ausgabe für den angegebenen Auftrag.
+**output** \[out\] Die Ausgabe für den angegebenen Auftrag.
 
 ## <a name="return-value"></a>Rückgabewert
 
