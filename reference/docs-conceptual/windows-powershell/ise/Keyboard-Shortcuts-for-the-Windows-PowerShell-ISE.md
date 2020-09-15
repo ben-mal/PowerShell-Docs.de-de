@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Tastenkombinationen für Windows PowerShell ISE
-ms.openlocfilehash: ee1b5961f8528d44330345bc49368e61970861ca
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809766"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092115"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tastenkombinationen für Windows PowerShell ISE
 
@@ -75,7 +75,7 @@ Sie können die folgenden Tastenkombinationen verwenden, wenn Sie Skripts debugg
 | **Ausführen/Fortsetzen**           | <kbd>F5</kbd>                                  | Skriptbereich beim Debuggen eines Skripts |
 | **Einzelschritt**              | <kbd>F11</kbd>                                 | Skriptbereich beim Debuggen eines Skripts |
 | **Überspringen**              | <kbd>F10</kbd>                                 | Skriptbereich beim Debuggen eines Skripts |
-| **Rücksprung**               | <kbd>UMSCHALT</kbd>+<kbd><kbd>F11</kbd></kbd>     | Skriptbereich beim Debuggen eines Skripts |
+| **Rücksprung**               | <kbd>UMSCHALT</kbd>+<kbd>F11</kbd>                | Skriptbereich beim Debuggen eines Skripts |
 | **Aufrufliste anzeigen**     | <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd>  | Skriptbereich beim Debuggen eines Skripts |
 | **Haltepunkte auflisten**       | <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>L</kbd>  | Skriptbereich beim Debuggen eines Skripts |
 | **Haltepunkt umschalten**      | <kbd>F9</kbd>                                  | Skriptbereich beim Debuggen eines Skripts |

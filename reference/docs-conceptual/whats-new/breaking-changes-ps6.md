@@ -2,12 +2,12 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Breaking Changes in PowerShell Core 6.0
-ms.openlocfilehash: 47ed14cceed86e4dd04a8e0079af00f6a98988ea
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
+ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76995467"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158189"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Breaking Changes in PowerShell 6.x
 
@@ -35,8 +35,8 @@ Zukünftig soll die native Parallelität in der PowerShell-Sprache ohne Notwendi
 
 Wenn für die Fortsetzung eines Skripts nach dem Neustart des Betriebssystems Prüfpunkte erforderlich sind, empfehlen wir die Verwendung des Taskplaners, um beim Betriebssystemstart ein Skript auszuführen. Das Skript muss dabei jedoch seinen Status selbst verwalten (z. B. durch Speichern in eine Datei).
 
-[workflow]: /powershell/scripting/components/workflows-guide
-[workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
+[workflow]: /previous-versions/powershell/scripting/components/workflows-guide
+[workflow-foundation]: /dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>Benutzerdefinierte Snap-Ins
 
@@ -46,7 +46,7 @@ Aufgrund der Komplexität der unterstützenden Snap-Ins und der zu geringen Verw
 
 Dadurch funktionieren die Module `ActiveDirectory` und `DnsClient` unter Windows und Windows Server nicht mehr.
 
-[snapin]: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins
+[snapin]: /powershell/module/microsoft.powershell.core/about/about_pssnapins
 
 ### <a name="wmi-v1-cmdlets"></a>WMI v1-Cmdlets
 
@@ -246,8 +246,8 @@ Folgende Features wurden entfernt, da sie in PowerShell Core nicht unterstützt 
 
 Zuvor konnten Sie bei der programmgesteuerten Erstellung eines PowerShell-Runspaces mithilfe der API die veraltete Klasse [`RunspaceConfiguration`][runspaceconfig] oder die neuere Klasse [`InitialSessionState`][iss] verwenden. Durch diese Änderung wurde die Unterstützung für `RunspaceConfiguration` entfernt, sodass nur noch `InitialSessionState` unterstützt wird.
 
-[runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
-[iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate
+[runspaceconfig]: /dotnet/api/system.management.automation.runspaces.runspaceconfiguration
+[iss]: /dotnet/api/system.management.automation.runspaces.initialsessionstate
 
 ### <a name="commandinvocationintrinsicsinvokescript-bind-arguments-to-input-instead-of-args-4923"></a>`CommandInvocationIntrinsics.InvokeScript` bindet Argumente an `$input` anstatt an `$args` [#4923](https://github.com/PowerShell/PowerShell/issues/4923)
 

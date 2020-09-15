@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: GetConfiguration-Methode
-ms.openlocfilehash: eabc536cfe69abe1144ff031a6f64c09a772e638
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 989aeef4cd9aa5d55741b48c8565c657c4b6512c
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955047"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463821"
 ---
 # <a name="getconfiguration-method"></a>GetConfiguration-Methode
 
@@ -24,9 +24,9 @@ uint32 GetConfiguration(
 
 ## <a name="parameters"></a>Parameter
 
-*configurationData* \[in\] Gibt die zu sendenden Konfigurationsdaten an.
+**configurationData** \[in\] Gibt die zu sendenden Konfigurationsdaten an.
 
-*configurations* \[out\] Enthält bei Rückgabe eine eingebettete Instanz der Konfigurationen.
+**configurations** \[out\] Enthält bei Rückgabe eine eingebettete Instanz der Konfigurationen.
 
 ## <a name="return-value"></a>Rückgabewert
 

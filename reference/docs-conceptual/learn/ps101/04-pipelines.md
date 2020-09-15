@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 4244c34628e8f2ee8d54471fc2d5ad81a870e739
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: b8fd45e5e5dc408754ebac015757ef4241428978
+ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438061"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84633344"
 ---
 # <a name="chapter-4---one-liners-and-the-pipeline"></a>Kapitel 4: Einzeiler und die Pipeline
 
@@ -407,8 +407,8 @@ Erstellen Sie ein benutzerdefiniertes Objekt, um die Pipelineeingabe als Eigensc
 
 ```powershell
 $CustomObject = [pscustomobject]@{
->> Name = 'w32time'
->> }
+ Name = 'w32time'
+ }
 ```
 
 Der Inhalt der Variablen **CustomObject** ist ein **PSCustomObject**-Objekttyp, der eine Eigenschaft namens **Name** enthält.

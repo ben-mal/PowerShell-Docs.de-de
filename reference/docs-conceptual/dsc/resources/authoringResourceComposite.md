@@ -1,19 +1,20 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: 'Zusammengesetzte Ressourcen: Verwenden einer DSC-Konfiguration als Ressource'
-ms.openlocfilehash: 79fe94bd5bab8fa460714e5994d2e2487f302410
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1baa5e4ca5dfa808edc4452db4874a83aa78107e
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415888"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217541"
 ---
 # <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Zusammengesetzte Ressourcen: Verwenden einer DSC-Konfiguration als Ressource
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-In realen Situationen können Konfigurationen lang und komplex sein, viele verschiedene Ressourcen aufrufen und eine große Anzahl von Eigenschaften festlegen. Um mit dieser Komplexität zurecht zu kommen, können Sie eine Windows PowerShell DSC-Konfiguration als Ressource für andere Konfigurationen verwenden. Dies wird als zusammengesetzte Ressource bezeichnet. Eine zusammengesetzte Ressource ist eine DSC-Konfiguration, die Parameter verwendet. Die Parameter der Konfiguration fungieren als Eigenschaften der Ressource. Die Konfiguration wird als Datei mit der Erweiterung `.schema.psm1` gespeichert. Sie ersetzt sowohl das MOF-Schema als auch das Ressourcenskript in einer typischen DSC-Ressource. Weitere Informationen zu DSC-Ressourcen finden Sie unter [Windows PowerShell DSC-Ressourcen](resources.md).
+In realen Situationen können Konfigurationen lang und komplex sein, viele verschiedene Ressourcen aufrufen und eine große Anzahl von Eigenschaften festlegen. Um mit dieser Komplexität zurecht zu kommen, können Sie eine Windows PowerShell DSC-Konfiguration als Ressource für andere Konfigurationen verwenden. Dies wird als zusammengesetzte Ressource bezeichnet. Eine zusammengesetzte Ressource ist eine DSC-Konfiguration, die Parameter verwendet. Die Parameter der Konfiguration fungieren als Eigenschaften der Ressource.
+Die Konfiguration wird als Datei mit der Erweiterung `.schema.psm1` gespeichert. Sie ersetzt sowohl das MOF-Schema als auch das Ressourcenskript in einer typischen DSC-Ressource. Weitere Informationen zu DSC-Ressourcen finden Sie unter [Windows PowerShell DSC-Ressourcen](resources.md).
 
 ## <a name="creating-the-composite-resource"></a>Erstellen der zusammengesetzten Ressource
 

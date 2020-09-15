@@ -1,17 +1,18 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Schreiben einer Einzelinstanz-DSC-Ressource (empfohlen)
-ms.openlocfilehash: 4d9e07c6aaa064f808a03d4252e8d352b82183ec
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: cd6048c0f8aeef7fb5458a5f0bfefef25169297c
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71952817"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217609"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Schreiben einer Einzelinstanz-DSC-Ressource (empfohlen)
 
->**Hinweis:** In diesem Thema wird ein bewährtes Verfahren zum Definieren einer DSC-Ressource beschrieben, die nur eine einzige Instanz in einer Konfiguration zulässt. Derzeit gibt es hierfür keine integrierte DSC-Funktion. Dies kann sich zukünftig ändern.
+> [!NOTE]
+> In diesem Thema wird ein bewährtes Verfahren zum Definieren einer DSC-Ressource beschrieben, die nur eine einzige Instanz in einer Konfiguration zulässt. Derzeit gibt es hierfür keine integrierte DSC-Funktion. Dies kann sich zukünftig ändern.
 
 Es gibt Situationen, in denen Sie für eine Ressource nicht zulassen möchten, dass sie mehrmals in einer Konfiguration verwendet wird. Beispielsweise konnte in einer früheren Implementierung der [xTimeZone](https://github.com/PowerShell/xTimeZone)-Ressource eine Konfiguration die Ressource mehrmals aufrufen, wodurch die Zeitzone in jedem Ressourcenblock auf eine andere Einstellung festgelegt wurde:
 
@@ -48,8 +49,7 @@ Configuration SetTimeZone
 
 Ursache hierfür ist die Funktionsweise der DSC-Ressourcenschlüssel. Eine Ressource muss mindestens eine Schlüsseleigenschaft haben. Eine Ressourceninstanz wird als eindeutig angesehen, wenn die Kombination aus allen ihrer Schlüsseleigenschaften eindeutig ist. In ihrer vorherigen Implementierung hat die [xTimeZone](https://github.com/PowerShell/xTimeZone)-Ressource nur eine Eigenschaft, **TimeZone**, die ein Schlüssel sein muss. Aus diesem Grund würde eine Konfiguration wie die hier gezeigte ohne Warnung kompiliert und ausgeführt. Jeder der **xTimeZone**-Ressourcenblöcke wird als eindeutig angesehen. Dies würde dazu führen, dass die Konfiguration wiederholt auf den Knoten angewendet wird, wodurch ständig zwischen den Zeitzonen gewechselt würde.
 
-Um sicherzustellen, dass eine Konfiguration die Zeitzone für einen Zielknoten nur einmal festlegen kann, wurde die Ressource so aktualisiert, dass ihr eine zweite Eigenschaft, **IsSingleInstance**, hinzugefügt wurde, die die Schlüsseleigenschaft geworden ist.
-Der **IsSingleInstance**-Schlüssel wurde mit einem **ValueMap** auf einen einzigen Wert eingeschränkt: „Yes“. Das alte MOF-Schema für die Ressource sieht so aus:
+Um sicherzustellen, dass eine Konfiguration die Zeitzone für einen Zielknoten nur einmal festlegen kann, wurde die Ressource so aktualisiert, dass ihr eine zweite Eigenschaft, **IsSingleInstance**, hinzugefügt wurde, die die Schlüsseleigenschaft geworden ist. Der **IsSingleInstance**-Schlüssel wurde mit einem **ValueMap** auf einen einzigen Wert eingeschränkt: „Yes“. Das alte MOF-Schema für die Ressource sieht so aus:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -122,7 +122,7 @@ function Set-TargetResource
     $CurrentTimeZone = Get-TimeZone
 
     Write-Verbose -Message "Replace the System Time Zone to $TimeZone"
-    
+
     try
     {
         if($CurrentTimeZone -ne $TimeZone)
@@ -204,7 +204,7 @@ Export-ModuleMember -Function *-TargetResource
 
 Beachten Sie, dass die **TimeZone**-Eigenschaft kein Schlüssel mehr ist. Wenn nun eine Konfiguration versucht, die Zeitzone zweimal festzulegen (durch Verwenden von zwei verschiedenen **xTimeZone**-Blöcken mit verschiedenen **TimeZone**-Werten), wird beim Kompilieren ein Fehler verursacht:
 
-```powershell
+```Output
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and
 '[xTimeZone]TimeZoneExample2 (::22::10::xTimeZone)' in node 'CONTOSO-CLIENT'. Resources have identical key properties but there are differences in the
 following non-key properties: 'TimeZone'. Values 'Eastern Standard Time' don't match values 'Pacific Standard Time'. Please update these property

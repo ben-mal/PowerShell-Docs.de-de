@@ -3,12 +3,12 @@ title: Styleguide für die PowerShell-Dokumentation
 description: Dieser Artikel enthält die Stilregeln für das Schreiben von PowerShell-Dokumentation.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b60ad9a4965e75cc5f68309604f1893e5757f351
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 32df641f7cafa2a5bfcf1bcbf94be594aa77c7d0
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837442"
 ---
 # <a name="powershell-docs-style-guide"></a>Styleguide für die PowerShell-Dokumentation
 
@@ -240,7 +240,7 @@ Beispiel:
 - `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
 - `[custom key bindings](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings)`
 
-Weitere Informationen finden Sie unter [Verwenden von Links in der Dokumentation](https://docs.microsoft.com/contribute/how-to-write-links).
+Weitere Informationen finden Sie unter [Verwenden von Links in der Dokumentation](/contribute/how-to-write-links).
 
 ## <a name="formatting-command-syntax-elements"></a>Formatieren von Befehlssyntaxelementen
 
