@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Bewährte Methoden für Pullserver
-ms.openlocfilehash: 2d707dc64c327cf30d09104aee140e5b78ee7c29
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 7b717e9e3bd753ef287701f3e2406e3fde1e2542
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692255"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236253"
 ---
 # <a name="pull-server-best-practices"></a>Bewährte Methoden für Pullserver
 
@@ -64,7 +64,7 @@ Neben der Installation der neuesten Inhalte von Windows Update werden zwei Downl
 ### <a name="wmf"></a>WMF
 
 Windows Server 2012 R2 umfasst ein Feature namens DSC-Dienst. Das DSC-Dienstfeature bietet die Pullserverfunktionalität, einschließlich der Binärdateien, die den OData-Endpunkt unterstützen. WMF ist in Windows Server enthalten und wird in einem agilen Rhythmus zwischen den Windows Server-Versionen aktualisiert.
-[Neue WMF 5.0-Versionen](https://www.microsoft.com/en-us/download/details.aspx?id=54616) können Updates des DSC-Dienstfeatures enthalten. Aus diesem Grund ist es eine bewährte Methode, die neueste WMF-Version herunterzuladen und die Versionshinweise zu überprüfen, um festzustellen, ob die Version ein Update für das DSC-Dienstfeature enthält. Sie sollten auch den Abschnitt über die Versionshinweise überprüfen, die angeben, ob der Status des Entwurfs für ein Update oder Szenario als stabil oder experimentell aufgeführt wird. Damit ein agiler Veröffentlichungszyklus möglich ist, können einzelne Features als stabil erklärt werden. Dies gibt an, dass das Feature zur Nutzung in einer Produktionsumgebung bereit ist, auch wenn WMF als Vorschau zur Verfügung gestellt wird. Andere Features, die in der Vergangenheit durch WMF-Versionen aktualisiert wurden (weitere Informationen in den WMF-Versionshinweisen):
+[Neue WMF 5.0-Versionen](https://www.microsoft.com/download/details.aspx?id=54616) können Updates des DSC-Dienstfeatures enthalten. Aus diesem Grund ist es eine bewährte Methode, die neueste WMF-Version herunterzuladen und die Versionshinweise zu überprüfen, um festzustellen, ob die Version ein Update für das DSC-Dienstfeature enthält. Sie sollten auch den Abschnitt über die Versionshinweise überprüfen, die angeben, ob der Status des Entwurfs für ein Update oder Szenario als stabil oder experimentell aufgeführt wird. Damit ein agiler Veröffentlichungszyklus möglich ist, können einzelne Features als stabil erklärt werden. Dies gibt an, dass das Feature zur Nutzung in einer Produktionsumgebung bereit ist, auch wenn WMF als Vorschau zur Verfügung gestellt wird. Andere Features, die in der Vergangenheit durch WMF-Versionen aktualisiert wurden (weitere Informationen in den WMF-Versionshinweisen):
 
 - Windows PowerShell Windows PowerShell Integrated Scripting
 - Environment (ISE) Windows PowerShell Web Services (Management OData

@@ -2,12 +2,12 @@
 ms.date: 08/15/2019
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Erste Schritte mit Desired State Configuration (DSC) für Windows
-ms.openlocfilehash: 2add2c936e60c0c9446bf4b398fbf7b4bd6407f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75416164"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236321"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Erste Schritte mit Desired State Configuration (DSC) für Windows
 
@@ -31,7 +31,7 @@ Die eigenständige Produkt-SKU [Microsoft Hyper-V Server](/windows-server/virtua
 
 ## <a name="installing-dsc"></a>Installieren von DSC
 
-PowerShell Desired State Configuration ist in Windows enthalten und wird über Windows Management Framework aktualisiert. Die aktuelle Version ist [Windows Management Framework 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+PowerShell Desired State Configuration ist in Windows enthalten und wird über Windows Management Framework aktualisiert. Die aktuelle Version ist [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 > [!NOTE]
 > Es ist nicht erforderlich, das Windows Server-Feature „DSC-Service“ zu aktivieren, um einen Computer mithilfe von DSC zu verwalten.

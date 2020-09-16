@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Konfigurieren eines virtuellen Computers beim ersten Hochfahren mithilfe von DSC
-ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 48f5e30bed0b97b80724fbf95ec604ede9f2ea5d
+ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954607"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89236287"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Konfigurieren eines virtuellen Computers beim ersten Hochfahren mithilfe von DSC
 
@@ -22,7 +22,7 @@ ms.locfileid: "71954607"
 
 Um diese Beispiele auszuführen, benötigen Sie:
 
-- Eine startbare virtuelle Festplatte (VHD). Sie können ein ISO-Image mit einer Evaluierungsversion von Windows Server 2016 aus dem [TechNet-Evaluierungscenter](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016) herunterladen.
+- Eine startbare virtuelle Festplatte (VHD). Sie können ein ISO-Image mit einer Evaluierungsversion von Windows Server 2016 aus dem [TechNet-Evaluierungscenter](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016) herunterladen.
   Anweisungen finden Sie zum Erstellen einer VHD aus einem ISO-Image finden Sie unter [Erstellen startbarer virtueller Festplatten](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)).
 - Ein Hostcomputer, auf dem Hyper-V aktiviert ist. Informationen hierzu finden Sie unter [Übersicht über Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
