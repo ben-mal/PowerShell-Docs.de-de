@@ -9,29 +9,29 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: dfaf084a76d6f1cb37a722956fb8abca5bc8416c
-  ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+  ms.openlocfilehash: 14d9c28093ec91351048819e719ab80d5dd9c501
+  ms.sourcegitcommit: a073c7db07d765ab45f52345ab98c7660582bc98
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/22/2020
-  ms.locfileid: "80500531"
+  ms.lasthandoff: 07/29/2020
+  ms.locfileid: "87377502"
 highlightedContent:
   items:
-  - title: Übersicht
+  - title: Überblick
     itemType: get-started
-    url: https://docs.microsoft.com/powershell/scripting/overview
+    url: /powershell/scripting/overview
   - title: Setup und Installation
     itemType: download
-    url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell
+    url: /powershell/scripting/install/installing-powershell
   - title: Beispielskripts
     itemType: how-to-guide
-    url: https://docs.microsoft.com/powershell/scripting/samples/sample-scripts-for-administration
+    url: /powershell/scripting/samples/sample-scripts-for-administration
   - title: PowerShell-Katalog
     itemType: deploy
     url: https://www.powershellgallery.com/
   - title: PowerShell-Modulbrowser
     itemType: reference
-    url: https://docs.microsoft.com/powershell/module/
+    url: /powershell/module/
   - title: PowerShell auf GitHub
     itemType: architecture
     url: https://github.com/PowerShell/PowerShell
@@ -39,101 +39,101 @@ productDirectory:
   title: PowerShell-Editionen und Tools
   summary: Verfügbare Editionen, Tools und Technologien, die PowerShell unterstützen
   items:
-  - title: PowerShell 5.1
-    imageSrc: ./media/index/powershell_128.svg
-    links:
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell
-      text: Installieren von Windows PowerShell
-    - url: https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-windows-powershell-50
-      text: Neuigkeiten in PowerShell 5.x
-  - title: PowerShell Core
+  - title: PowerShell
     imageSrc: ./media/index/ps_black_128.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows
-      text: Installieren von PowerShell Core unter Windows
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux
-      text: Installieren von PowerShell Core unter Linux
-    - url: https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos
-      text: Installieren von PowerShell Core unter macOS
-    - url: https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-62
-      text: Neuigkeiten in PowerShell 6.2
+    - url: /powershell/scripting/install/installing-powershell-core-on-windows
+      text: Installieren von PowerShell unter Windows
+    - url: /powershell/scripting/install/installing-powershell-core-on-linux
+      text: Installieren von PowerShell unter Linux
+    - url: /powershell/scripting/install/installing-powershell-core-on-macos
+      text: Installieren von PowerShell unter macOS
+    - url: /powershell/scripting/whats-new/what-s-new-in-powershell-70
+      text: Neuigkeiten in PowerShell 7.0
+  - title: Windows PowerShell 5.1
+    imageSrc: ./media/index/powershell_128.svg
+    links:
+    - url: /powershell/scripting/windows-powershell/install/installing-windows-powershell
+      text: Installieren von Windows PowerShell
+    - url: /powershell/scripting/windows-powershell/whats-new/what-s-new-in-windows-powershell-50
+      text: Neuigkeiten in Windows PowerShell 5.x
   - title: PowerShell-Katalog
     imageSrc: ./media/index/avatar_128.svg
     links:
     - url: https://www.powershellgallery.com/
       text: PowerShell-Katalog
-    - url: https://docs.microsoft.com/powershell/scripting/gallery/overview
+    - url: /powershell/scripting/gallery/overview
       text: Was ist der PowerShell-Katalog
-    - url: https://docs.microsoft.com/powershell/scripting/gallery/concepts/publishing-guidelines
+    - url: /powershell/scripting/gallery/concepts/publishing-guidelines
       text: Bewährte Methoden
-    - url: https://docs.microsoft.com/powershell/scripting/gallery/faqs
+    - url: /powershell/scripting/gallery/faqs
       text: Häufig gestellte Fragen
   - title: PowerShell DSC
-    imageSrc: https://docs.microsoft.com/media/common/i_config-tools.svg
+    imageSrc: /media/common/i_config-tools.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/dsc/overview/overview
+    - url: /powershell/scripting/dsc/overview/overview
       text: DSC-Übersicht
-    - url: https://docs.microsoft.com/powershell/scripting/dsc/getting-started/lnxgettingstarted
+    - url: /powershell/scripting/dsc/getting-started/lnxgettingstarted
       text: Erste Schritte mit DSC für Linux
     - url: https://dsccommunity.org/
       text: DSC-Community
   - title: Entwicklerressourcen
-    imageSrc: https://docs.microsoft.com/media/common/i_code-edit.svg
+    imageSrc: /media/common/i_code-edit.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/developer/windows-powershell
-      text: PowerShell SDK-Dokumentation
-    - url: https://docs.microsoft.com/dotnet/api/?view=pscore-6.2.0
-      text: PowerShell Core SDK 6.2.0 API-Referenz
     - url: https://code.visualstudio.com/docs/languages/powershell
       text: Visual Studio Code PowerShell-Erweiterung
-    - url: https://docs.microsoft.com/powershell/scripting/components/vscode/using-vscode-for-remote-editing-and-debugging
+    - url: /powershell/scripting/components/vscode/using-vscode-for-remote-editing-and-debugging
       text: Verwenden von VSCode für Remotebearbeitung und Remotedebuggen
+    - url: /powershell/scripting/developer/windows-powershell
+      text: Windows PowerShell SDK-Dokumentation
+    - url: /dotnet/api/?view=powershellsdk-7.0.0
+      text: PowerShell 7.0.0-API-Referenz
   - title: Verwandte Technologien
-    imageSrc: https://docs.microsoft.com/media/common/i_tools.svg
+    imageSrc: /media/common/i_tools.svg
     links:
-    - url: https://docs.microsoft.com/powershell/scripting/wmf/overview
+    - url: /powershell/scripting/windows-powershell/wmf/overview
       text: Windows Management Framework
-    - url: https://docs.microsoft.com/powershell/windows/get-started?view=win10-ps
+    - url: /powershell/windows/get-started?view=win10-ps
       text: PowerShell-Module zum Verwalten von Windows
     - url: https://aka.ms/cloudshell/powershell-docs
       text: PowerShell in Azure Cloud Shell
-    - url: https://docs.microsoft.com/powershell/azure/overview
+    - url: /powershell/azure/overview
       text: Azure PowerShell
-    - url: https://docs.microsoft.com/azure/automation/automation-runbook-types
+    - url: /azure/automation/automation-runbook-types
       text: Azure Automation-Runbooks
-    - url: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-powershell
+    - url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-powershell
       text: Azure Functions unter Verwendung von PowerShell
 tools:
   title: Communityressourcen
   summary: Herstellen von Verbindungen mit anderen PowerShell-Benutzern
   items:
   - title: Benutzergruppen
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group.svg
+    imageSrc: /media/hubs/powershell/i_group.svg
     url: https://aka.ms/psusergroup
   - title: PowerShell Tech Community
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
-    url: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+    imageSrc: /media/hubs/powershell/i_group-feedback.svg
+    url: https://techcommunity.microsoft.com/t5/powershell/ct-p/WindowsPowerShell
   - title: DSC-Community
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    imageSrc: /media/hubs/powershell/i_group-feedback.svg
     url: https://dsccommunity.org/
   - title: PowerShell.org
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_group-feedback.svg
+    imageSrc: /media/hubs/powershell/i_group-feedback.svg
     url: https://powershell.org/
   - title: StackOverFlow
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/logo_stackoverflow.svg
+    imageSrc: /media/hubs/powershell/logo_stackoverflow.svg
     url: https://stackoverflow.com/questions/tagged/powershell
   - title: r/PowerShell
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/logo_reddit.svg
+    imageSrc: /media/hubs/powershell/logo_reddit.svg
     url: https://www.reddit.com/r/PowerShell/
   - title: PowerShell Slack
-    imageSrc: https://docs.microsoft.com/media/logos/logo-slack.svg
-    url: http://poshcode.org/slack
+    imageSrc: /media/logos/logo-slack.svg
+    url: https://aka.ms/psslack
   - title: PowerShell Discord
     imageSrc: ./media/index/discord.svg
-    url: http://poshcode.org/discord
+    url: https://aka.ms/psdiscord
   - title: Digitale Kunst
-    imageSrc: https://docs.microsoft.com/media/hubs/powershell/i_digital-art.svg
-    url: https://docs.microsoft.com/powershell/scripting/community/digital-art
+    imageSrc: /media/hubs/powershell/i_digital-art.svg
+    url: /powershell/scripting/community/digital-art
 additionalContent:
   sections:
   - title: PowerShell-Team
