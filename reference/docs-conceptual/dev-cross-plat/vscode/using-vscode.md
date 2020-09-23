@@ -2,12 +2,12 @@
 title: Verwenden von Visual Studio Code für die Entwicklung mit PowerShell
 description: Verwenden von Visual Studio Code für die Entwicklung mit PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: b492e59f340f4cec92c177ad44bbab9dc95da5da
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 181746e7d3df2880223d1f15a0c8b99b324f5b98
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808856"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782530"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Verwenden von Visual Studio Code für die Entwicklung mit PowerShell
 
@@ -54,7 +54,7 @@ Herkömmliche Windows PowerShell-Workloads finden Sie unter [Installieren von Wi
    1. Dann öffnet sich die Ansicht **Erweiterungen** in der Seitenleiste. Wählen Sie die PowerShell-Erweiterung für Microsoft aus.
       Ihnen wird in etwa folgender Visual Studio Code-Bildschirm angezeigt:
 
-      ![Visual Studio Code](media/using-vscode/vscode.png)
+      ![Ansicht der PowerShell-Erweiterung für Visual Studio Code](media/using-vscode/vscode.png)
 
    1. Klicken Sie auf die Schaltfläche **Installieren** in der PowerShell-Erweiterung für Microsoft.
    1. Nach der Installation ändert sich die Schaltfläche **Installieren** in **Erneut laden**. Klicken Sie auf **Erneut laden**.
@@ -190,7 +190,7 @@ Die aktuelle PowerShell-Erweiterung bietet keine Unterstützung für [PowerShell
 
 Öffnen Sie zunächst den Erweiterungsbereich, und suchen Sie nach `PowerShell`. Klicken Sie dann auf das Zahnrad, und wählen Sie **Andere Version installieren** aus.
 
-![Andere Version installieren...](media/using-vscode/install-another-version.png)
+![Menüelement „Andere Version installieren...“](media/using-vscode/install-another-version.png)
 
 Wählen Sie anschließend die Version **2020.1.0** aus. Diese Version der Erweiterung ist die letzte Version, die v3 und v4 unterstützt. Fügen Sie außerdem die folgende Einstellung hinzu, damit Ihre Erweiterungsversion nicht automatisch aktualisiert wird:
 

@@ -1,14 +1,14 @@
 ---
 title: Alles, was Sie schon immer über Arrays wissen wollten
 description: Arrays sind ein grundlegendes Sprachfeature der meisten Programmiersprachen.
-ms.date: 05/23/2020
+ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 5cab354a99b122401f8f8119de24e075cf9d21f8
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
+ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149603"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092098"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Alles, was Sie schon immer über Arrays wissen wollten
 
@@ -241,6 +241,8 @@ Lee Dailey hat mich darauf hingewiesen, dass wir auch `$data.GetUpperBound(0)` v
 
 ```powershell
 PS> $data.GetUpperBound(0)
+3
+PS> $data[ $data.GetUpperBound(0) ]
 Three
 ```
 
@@ -321,7 +323,7 @@ Diese Syntax ist weniger bekannt, funktioniert aber genauso gut. Diese `foreach`
 
 #### <a name="for-loop"></a>for-Schleife
 
-Die `for`-Schleife wird in den meisten anderen Sprachen ausgiebig genutzt, in PowerShell kommt sie nur selten vor. Wenn sie vorkommt, dann meist beim Durchlaufen eines Arrays.
+Die `for`-Schleife wird in den meisten anderen Sprachen ausgiebig genutzt, in PowerShell kommt sie jedoch nur selten vor. Wenn sie vorkommt, dann meist beim Durchlaufen eines Arrays.
 
 ```powershell
 for ( $index = 0; $index -lt $data.count; $index++)
@@ -586,7 +588,7 @@ True
 
 ### <a name="-in"></a>-in
 
-Wenn Sie überprüfen möchten, ob ein einzelner Wert mit einem von mehreren Werten übereinstimmt, können Sie den `-in`-Operator verwenden. Der Wert steht dann auf der linken und das Array auf der rechten Seite des Vorgangs.
+Wenn Sie überprüfen möchten, ob ein einzelner Wert mit einem von mehreren Werten übereinstimmt, können Sie den `-in`-Operator verwenden. Der Wert steht dann auf der linken und das Array auf der rechten Seite des Operators.
 
 ```powershell
 PS> $data = @('red','green','blue')

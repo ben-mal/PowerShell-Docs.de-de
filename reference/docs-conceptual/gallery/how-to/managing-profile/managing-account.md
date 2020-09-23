@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Kontoeinstellungen für den PowerShell-Katalog
-ms.openlocfilehash: 7f67311b42123f247a00a9c7a5bf775685b64d48
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: b71c7f0658c24ec2eeddb050e48b777a37c11917
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560456"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771786"
 ---
 # <a name="powershell-gallery-account-settings"></a>Kontoeinstellungen für den PowerShell-Katalog
 
@@ -36,7 +36,7 @@ Wenn Sie eine neue E-Mail-Adresse eingeben, sendet der PowerShell-Katalog eine V
 - Benutzer können mich über den PowerShell-Katalog kontaktieren
 - Benachrichtigen, wenn ein Paket mit meinem Konto in den PowerShell-Katalog gepusht wird
 
-![E-Mail-Adresse ändern](media/managing-account/PSGallery_AccountEmailOptions.png)
+![Auswählen von Optionen für die E-Mail-Adresse](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 Wie auch auf der Seite angemerkt, können wichtige Benachrichtigungen des PowerShell-Katalogs nicht deaktiviert werden.
 Dazu gehören:
@@ -49,20 +49,20 @@ Dazu gehören:
 
 Sie müssen mit dem aktuellen Konto angemeldet sein, um das Anmeldekonto zu ändern. Führen Sie zum Ändern die folgenden Schritte aus:
 
-![Kontoeinstellungen](media/managing-account/PSGallery_LoginAccountSettings.png)
+![Ändern der Einstellungen für das Anmeldekonto](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. Klicken Sie auf **Kontotyp ändern**. In einem Popupfenster wird erklärt, dass die Änderung des Anmeldekontos für den gesamten PowerShell-Katalog gilt. Überprüfen Sie die Informationen, und klicken Sie dann auf **OK**.
 
-   ![Kontoeinstellungen](media/managing-account/PSGallery_LoginAccountChange-1.png)
+   ![Bestätigen der Änderung: „OK“/„Abbrechen“](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. Dann werden Sie aufgefordert, sich mit dem _neuen Konto_ anzumelden.
 
-   ![Kontoeinstellungen](media/managing-account/PSGallery_LoginAccountChange-2.png)
+   ![Anmelden mit dem neuen Konto](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. Wenn Sie auf **Weiter klicken**, wird eine Meldung angezeigt, dass Sie noch mit Ihrem alten Konto angemeldet sind.
    Klicken Sie auf **Sign out and sign in with a different account** (Abmelden und mit anderem Konto anmelden).
 
-   ![Kontoeinstellungen](media/managing-account/PSGallery_LoginAccountChange-3.png)
+   ![Melden Sie sich ab, und melden Sie sich mit einem anderen Konto an.](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Geben Sie das Kennwort für das neue Konto ein. Wenn Sie das Kennwort eingegeben haben, werden Sie zu den Kontoeinstellungen weitergeleitet. Dort wird angezeigt, dass das Anmeldekonto aktualisiert wurde.
 

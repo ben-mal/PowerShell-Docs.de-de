@@ -1,12 +1,12 @@
 ---
 title: Kompatibilität von PowerShell 7-Modulen
 ms.date: 02/03/2020
-ms.openlocfilehash: 273e25e3b7cd48e09b63e50c34ed0b98a4e766f0
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
+ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83565062"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84722812"
 ---
 # <a name="powershell-7-module-compatibility"></a>Kompatibilität von PowerShell 7-Modulen
 
@@ -69,18 +69,19 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | Modulname                        | Status                               | Unterstütztes Betriebssystem                       |
 | ---------------------------------- | ------------------------------------ | ---------------------------------- |
 | ActiveDirectory                    | Nativ kompatibel                  | Windows Server 1809 und höher mit RSAT-AD-PowerShell<br>Windows 10 1809 und höher mit Rsat.ActiveDirectory.DS-LDS.Tools |
+| ADDSDeployment                     | Funktioniert mit Kompatibilitätsebene       |  Windows Server 2019 1809 und höher         |
 | ADFS                               | Nicht mit Kompatibilitätsebene getestet    |                                    |
 | AppBackgroundTask                  | Nativ kompatibel                  | Windows 10 1903 und höher                   |
 | AppLocker                          | Nicht mit Kompatibilitätsebene getestet    |                                    |
 | AppvClient                         | Nicht mit Kompatibilitätsebene getestet    |                                    |
-| Appx                               | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher |
+| APPX-Datei                               | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher |
 | AssignedAccess                     | Nativ kompatibel                  | Windows 10 1809 und höher                   |
-| BestPractices                      | Nicht mit Kompatibilitätsebene getestet    |                                    |
+| BestPractices                      | Wird von Kompatibilitätsebene nicht unterstützt |                                    |
 | BitLocker                          | Nativ kompatibel                  | Windows Server 1809 und höher mit BitLocker<br>Windows 10 1809 und höher |
 | BitsTransfer                       | Nativ kompatibel                  | Windows Server 20H1<br>Windows 10 20H1 |
 | BootEventCollector                 | Nicht mit Kompatibilitätsebene getestet    |                                        |
 | BranchCache                        | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher |
-| CimCmdlets                         | Nativ kompatibel                  | In PowerShell 7 integriert |
+| CimCmdlets                         | Nativ kompatibel                  | In PowerShell 7 integriert |
 | ClusterAwareUpdating               | Nicht mit Kompatibilitätsebene getestet    |                         |
 | ConfigCI                           | Nicht mit Kompatibilitätsebene getestet    |                         |
 | Defender                           | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher  |
@@ -109,7 +110,7 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | Kds                                | Nativ kompatibel                  | Windows Server 20H1<br>Windows 10 20H1        |
 | Microsoft.PowerShell.Archive       | Nativ kompatibel                  | In PowerShell 7 integriert                       |
 | Microsoft.PowerShell.Diagnostics   | Nativ kompatibel                  | In PowerShell 7 integriert                       |
-| Microsoft.PowerShell.Host          | Nativ kompatibel                  | In PowerShell 7 integriert                       |
+| Microsoft.PowerShell.Host          | Nativ kompatibel                  | In PowerShell 7 integriert                       |
 | Microsoft.PowerShell.LocalAccounts | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | Microsoft.PowerShell.Management    | Nativ kompatibel                  | In PowerShell 7 integriert                       |
 | Microsoft.PowerShell.ODataUtils    | Nicht mit Kompatibilitätsebene getestet    |                                               |
@@ -148,7 +149,7 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | Bereitstellung                       | Nicht mit Kompatibilitätsebene getestet    |                                               |
 | PSDesiredStateConfiguration        | Teilweise                            | In PowerShell 7 integriert                       |
 | PSDiagnostics                      | Nativ kompatibel                  | In PowerShell 7 integriert                       |
-| PSScheduledJob                     | Funktioniert nicht mit Kompatibilitätsebene | In PowerShell 5.1 integriert                     |
+| PSScheduledJob                     | Wird von Kompatibilitätsebene nicht unterstützt | In PowerShell 5.1 integriert                     |
 | PSWorkflow                         | Nicht mit Kompatibilitätsebene getestet    |                                               |
 | PSWorkflowUtility                  | Nicht mit Kompatibilitätsebene getestet    |                                               |
 | RemoteAccess                       | Nicht mit Kompatibilitätsebene getestet    |                                               |
@@ -156,7 +157,7 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | ScheduledTasks                     | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | SecureBoot                         | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | ServerCore                         | Nicht mit Kompatibilitätsebene getestet    |                                               |
-| ServerManager                      | Nicht mit Kompatibilitätsebene getestet    |                                               |
+| ServerManager                      | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher mit Rsat.ServerManager.Tools<br>_Siehe Hinweise unten_ |
 | ServerManagerTasks                 | Nicht mit Kompatibilitätsebene getestet    |                                               |
 | ShieldedVMDataFile                 | Nativ kompatibel                  | Windows Server 1903 und höher mit RSAT-Shielded-VM-Tools<br>Windows 10 1903 und höher mit Rsat.Shielded.VM.Tools |
 | ShieldedVMProvisioning             | Nativ kompatibel                  | Windows Server 1809 und höher mit HostGuardian<br>Windows 10 1809 und höher mit HostGuardian  |
@@ -164,7 +165,7 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | SmbShare                           | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | SmbWitness                         | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | SMISConfig                         | Nativ kompatibel                  | Windows Server 1903 und höher mit WindowsStorageManagementService |
-| sms                                | Nicht mit Kompatibilitätsebene getestet    |                                               |
+| SMS                                | Nicht mit Kompatibilitätsebene getestet    |                                               |
 | SoftwareInventoryLogging           | Nativ kompatibel                  | Windows Server 1809 und höher                          |
 | StartLayout                        | Nativ kompatibel                  | Windows Server 1809 und höher mit Desktopoberfläche<br>Windows 10 1809 und höher |
 | Storage                            | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
@@ -178,7 +179,7 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | TroubleshootingPack                | Nativ kompatibel                  | Windows 10 1903 und höher                              |
 | TrustedPlatformModule              | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | UEV                                | Nativ kompatibel                  | Windows Server ??Künftige Version von Server mit Desktopoberfläche??<br>Windows 10 1903 und höher |
-| UpdateServices                     | Funktioniert nicht mit Kompatibilitätsebene |                                               |
+| UpdateServices                     | Wird von Kompatibilitätsebene nicht unterstützt |                                               |
 | VpnClient                          | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | Wdac                               | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher      |
 | WebAdministration                  | Nicht mit Kompatibilitätsebene getestet    |                                               |
@@ -189,3 +190,10 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | WindowsServerBackup                | Nativ kompatibel                  | Windows Server 19H2 mit Windows-Server-Backup |
 | WindowsUpdate                      | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher       |
 | WindowsUpdate              | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher       |
+
+## <a name="notes"></a>Hinweise
+
+### <a name="servermanager-module"></a>ServerManager-Modul
+
+Das Modul weist einige kleinere Kompatibilitätsprobleme mit formatierten Ausgaben in PowerShell 7 auf. So gibt das Cmdlet `Get-WindowsFeature` beispielsweise das richtige Objekt mit allen Eigenschaften zurück, doch im Standardanzeigeformat werden einige Eigenschaften leer angezeigt. Über `Select-Object` oder direkten Elementzugriff sind die tatsächlichen Werte in den Objekteigenschaften verfügbar.
+

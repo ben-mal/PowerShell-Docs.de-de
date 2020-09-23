@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Erste Schritte mit DSC für Linux
-ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 64657dda04fa2df97fa2ad7c7a5c2d15b66a270a
+ms.sourcegitcommit: 4bb44f183dcbfa8dced57f075812e02d3b45fd70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "73933853"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301334"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Erste Schritte mit DSC für Linux
 
@@ -15,25 +15,14 @@ In diesem Thema werden die ersten Schritte mit PowerShell DSC für Linux erläut
 
 ## <a name="supported-linux-operation-system-versions"></a>Unterstützte Linux-Betriebssystemversionen
 
-Die folgenden Linux-Betriebssystemversionen werden für DSC unterstützt.
+Die folgenden Linux-Betriebssystemversionen werden von DSC für Linux unterstützt:
 
 - CentOS 5, 6 und 7 (x86/x64)
 - Debian GNU/Linux 6, 7 und 8 (x86/x64)
 - Oracle Linux 5, 6 und 7 (x86/x64)
 - Red Hat Enterprise Linux Server 5, 6 und 7 (x86/x64)
 - SUSE Linux Enterprise Server 10, 11 und 12 (x86/x64)
-- Ubuntu Server 12.04 LTS, 14.04 LTS und 16.04 LTS (x86/x64)
-
-In der folgenden Tabelle werden die erforderlichen Paketabhängigkeiten für DSC für Linux beschrieben.
-
-|  Erforderliches Paket |  BESCHREIBUNG |  Mindestversion |
-|---|---|---|
-| glibc| GNU-Bibliothek| 2…4 – 31.30|
-| Python| Python| 2.4 – 3.4|
-| omiserver| Open Management Infrastructure| 1.0.8.1|
-| openssl| OpenSSL-Bibliotheken| 0.9.8 oder 1.0|
-| ctypes| Python CTypes-Bibliothek| Muss mit Python-Version übereinstimmen|
-| libcurl| cURL http-Clientbibliothek| 7.15.1|
+- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS (x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>Installieren von DSC für Linux
 
@@ -54,7 +43,7 @@ Führen Sie den folgenden Befehl aus, um OMI auf einem CentOS 7 x64-System zu in
 
 ### <a name="installing-dsc"></a>Installieren von DSC
 
-DSC für Linux kann [hier](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) heruntergeladen werden.
+DSC für Linux kann von [hier](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) heruntergeladen werden.
 
 Zum Installieren von DSC installieren Sie das Ihrem Linux-System entsprechende Paket (RPM oder DEB), die OpenSSL-Version (ssl_098 oder ssl_100) und die Architektur (x64/x86). RPM-Pakete eignen sich für CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Oracle Linux. DEB-Pakete sind für Debian GNU/Linux und Ubuntu Server geeignet. Die ssl_098-Pakete eignen sich für Computer mit installiertem OpenSSL 0.9.8, während die ssl_100 Pakete für Computer mit installiertem OpenSSL 1.0 geeignet sind.
 

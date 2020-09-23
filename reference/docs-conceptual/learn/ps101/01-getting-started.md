@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 0f72fb5baf5b829142b18ed774261e9b3b66291b
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: e8938a5d36cd1c9c5a74eed1c22cd5d0e1a91966
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438021"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786746"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>Kapitel 1: Erste Schritte mit PowerShell
 
@@ -29,7 +29,7 @@ Alle modernen Versionen von Windows-Betriebssystemen werden mit einer vorinstall
 
 Die einfachste Möglichkeit, um PowerShell unter Windows 10 zu finden, besteht darin, **PowerShell** in die Suchleiste einzugeben, wie in Abbildung 1-1 dargestellt.
 
-![Abbildung 1-1](media/figure1-1.png)
+![Abbildung 1-1: Suchen nach PowerShell im Startmenü](media/figure1-1.png)
 
 Beachten Sie, dass in Abbildung 1-1 vier verschiedene Tastenkombinationen für PowerShell gezeigt werden. Auf dem Computer, der zu Demonstrationszwecken in diesem Buch verwendet wird, wird die 64-Bit-Version von Windows 10 ausgeführt, weshalb es eine 64-Bit-Version der PowerShell-Konsole und der PowerShell ISE (Integrated Scripting Environment) gibt sowie eine 32-Bit-Version von diesen beiden Komponenten, die durch das Suffix (x86) bei den Tastenkombinationen kenntlich ist. Wenn Sie eine 32-Bit-Version von Windows 10 ausführen, haben Sie nur zwei Tastenkombinationen. Diese Elemente haben nicht das Suffix (x86) und sind 32-Bit-Versionen. Wenn Sie über ein 64-Bit-Betriebssystem verfügen, empfehle ich Ihnen, die 64-Bit-Version von PowerShell auszuführen, es sei denn, Sie haben einen bestimmten Grund für die Ausführung der 32-Bit-Version.
 
@@ -41,7 +41,7 @@ In den von mir unterstützten Produktionsumgebungen für Unternehmen verwende ic
 
 Ich habe die PowerShell-Konsole durch Klicken auf die Verknüpfung „Windows PowerShell“ gestartet, wie in Abbildung 1-1 dargestellt.
 
-![Abbildung 1-4](media/figure1-4.png)
+![Abbildung 1-4: Titelleiste des PowerShell-Fensters](media/figure1-4.png)
 
 Beachten Sie, dass in der Titelleiste der PowerShell-Konsole „Windows PowerShell“ steht, wie in Abbildung 1-4 dargestellt. Einige Befehle werden zwar einwandfrei ausgeführt, doch PowerShell kann nicht die Benutzerkontensteuerung (User Access Control, UAC) nutzen. Dies bedeutet, dass es nicht zur Erhöhung der Rechte bei Aufgaben auffordern kann, die die Genehmigung eines Administrators erfordern.
 Die folgende Fehlermeldung wird generiert:
@@ -66,7 +66,7 @@ Auf diese Weise ist mein zweites Domänenbenutzerkonto konfiguriert. Bei Verwend
 
 Schließen Sie PowerShell. Starten Sie die PowerShell-Konsole neu, wobei Sie aber diesmal mit der rechten Maustaste auf die Verknüpfung **Windows PowerShell** klicken, und wählen Sie **Als Administrator ausführen** aus, wie in Abbildung 1-5 dargestellt.
 
-![Abbildung 1-5](media/figure1-5.png)
+![Abbildung 1-5: Option „Als Administrator ausführen“ im Kontextmenü](media/figure1-5.png)
 
 Wenn Sie als normaler Benutzer bei Windows angemeldet sind, werden Sie zur Eingabe von Anmeldeinformationen aufgefordert. Ich gebe die Anmeldeinformationen für mein Benutzerkonto ein, das Domänenbenutzer und lokaler Administrator ist, wie in Abbildung 1-6 dargestellt.
 
@@ -86,11 +86,11 @@ Suchen Sie erneut nach PowerShell, klicken Sie nur diesmal mit der rechten Maust
 
 Klicken Sie mit der rechten Maustaste auf die PowerShell-Verknüpfung, die nun an die Taskleiste angeheftet ist, und wählen Sie „Eigenschaften“ aus, wie in Abbildung 1-9 dargestellt.
 
-![Abbildung 1-9](media/figure1-9.png)
+![Abbildung 1-9: Eingeben von Anmeldeinformationen in der Benutzerkontensteuerung](media/figure1-9.png)
 
 Klicken Sie auf „Erweitert“, wie durch #1 in Abbildung 1-10 markiert, aktivieren Sie dann das Kontrollkästchen „Als Administrator ausführen“, wie durch #2 in Abbildung 1-10 markiert, und klicken Sie dann zweimal auf „OK“, um die Änderungen zu übernehmen und beide Dialogfelder zu schließen.
 
-![Abbildung 1-10](media/figure1-10.png)
+![Abbildung 1-10: Titelleiste mit der Anzeige „Administrator“](media/figure1-10.png)
 
 Sie müssen sich nun keine Gedanken mehr über das Auffinden von PowerShell zu machen oder darüber, ob sie als Administrator ausgeführt wird oder nicht.
 
@@ -217,13 +217,15 @@ In diesem Kapitel haben Sie erfahren, wie Sie PowerShell finden und starten, und
 Wenn Sie weitere Informationen zu den in diesem Kapitel behandelten Themen wünschen, empfehle ich Ihnen, die folgenden PowerShell-Hilfethemen zu lesen.
 
 - [about_Automatic_Variables][]
+- [about_Hash_Tables][]
 - [about_Execution_Policies][]
 
 Im nächsten Kapitel erfahren Sie mehr über die Auffindbarkeit von Befehlen in PowerShell. Einer der Aspekte, der behandelt wird, ist, wie Sie PowerShell so aktualisieren, dass diese Hilfethemen direkt innerhalb der PowerShell angezeigt werden können, anstatt sie im Internet lesen zu müssen.
 
 <!-- link references -->
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
-[about_Execution_Policies]: /powershell//powershell/module/microsoft.powershell.core/about/about_execution_policies
+[about_Hash_Tables]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
+[about_Execution_Policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [Aktualisieren einer vorhandenen Windows PowerShell]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [Installieren von PowerShell]: /powershell/scripting/install/installing-powershell
 [Starten von Windows PowerShell]: /powershell/scripting/windows-powershell/starting-windows-powershell

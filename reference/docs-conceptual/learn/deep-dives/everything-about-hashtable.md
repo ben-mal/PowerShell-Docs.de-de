@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über Hashtabellen wissen wollten
 description: Hashtabellen spielen eine wichtige Rolle in PowerShell, daher sollten Sie mit dem Konzept vertraut sein.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 336c32cca351cc7d87f3300364c075ba7bd8aaeb
-ms.sourcegitcommit: 0b9268e7b92fb76b47169b72e28de43e4bfe7fbf
+ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
+ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85353820"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Alles, was Sie schon immer über Hashtabellen wissen wollten
 
@@ -777,12 +777,13 @@ Auf einen Wert in der Hashtabelle kann nicht immer anhand des zugehörigen Schl�
 
 ```powershell
 $key = $ht.keys[0]
-$ht.$key
+$ht.$($key)
+a
 $ht[$key]
 a
 ```
 
-Die Memberzugriffsnotation (`.`) gibt nichts zurück. Die Arrayindexnotation (`[]`) dagegen funktioniert.
+Stellt der Schlüssel ein Array dar, müssen Sie die `$key`-Variable in einen Teilausdruck einschließen, damit sie mit der Memberzugriffsnotation (`.`) verwendet werden kann. Alternativ dazu können Sie auch die Arrayindexnotation (`[]`) verwenden.
 
 ## <a name="use-in-automatic-variables"></a>Verwenden in automatischen Variablen
 
@@ -962,7 +963,7 @@ Ich habe hier in kurzer Zeit sehr viele Aspekte vorgestellt. Ich hoffe, dass Sie
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [Hashtabellen]: /powershell/module/microsoft.powershell.core/about/about_hash_tables
 [Arrays]: /powershell/module/microsoft.powershell.core/about/about_arrays
-[Wenn Leistung wichtig ist, probier es aus]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best%20Practices/Performance.md
+[Wenn Leistung wichtig ist, probier es aus]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [Splatting]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
 [JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8

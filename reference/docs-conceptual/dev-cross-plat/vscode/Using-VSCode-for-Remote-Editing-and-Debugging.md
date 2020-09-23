@@ -2,12 +2,12 @@
 title: Verwenden von Visual Studio Code für Remotebearbeitung und Remotedebuggen
 description: Verwenden von Visual Studio Code für Remotebearbeitung und Remotedebuggen
 ms.date: 06/13/2019
-ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 0394348b4dfbe813549c02035e9d3b035cba72e4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809276"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784638"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Verwenden von Visual Studio Code für Remotebearbeitung und Remotedebuggen
 
@@ -47,7 +47,7 @@ Von dort aus können wir:
 
 - Fügen Sie Haltepunkte zum Bundsteg hinzu.
 
-  ![Hinzufügen von Haltepunkten zum Bundsteg](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
+  ![Hinzufügen eines Haltepunkts zum Bundsteg](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
 
 - Drücken Sie F5, um das PowerShell-Skript zu debuggen.
 
@@ -73,13 +73,13 @@ Da wir von macOS aus auf eine Ubuntu-VM in Azure zugreifen, verwenden wir SSH f�
 
 Führen Sie zunächst in der integrierten Konsole `Enter-PSSession` aus. Sie sind mit der Remotesitzung verbunden, wenn links neben Ihrer Eingabeaufforderung `[<hostname>]` angezeigt wird.
 
-![Der Aufruf von Enter-PSSession](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
+![Aufrufen von „Enter-PSSession“ zum Herstellen einer Verbindung mit einer Remotesitzung](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
 Jetzt können wir dieselben Schritte ausführen wie beim Bearbeiten eines lokalen Skripts.
 
 1. Führen Sie `Open-EditorFile test.ps1` oder `psedit test.ps1` aus, um die Remotedatei `test.ps1` zu öffnen.
 
-  ![Datei „Open-EditorFile the test.ps1“](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
+  ![Bearbeiten des Skripts im Remotesystem](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
 1. Bearbeiten Sie die Datei bzw. / legen Sie Haltepunkte fest.
 
@@ -87,6 +87,6 @@ Jetzt können wir dieselben Schritte ausführen wie beim Bearbeiten eines lokale
 
 1. Beginnen Sie mit dem Debuggen (F5) der Remotedatei.
 
-   ![Debuggen der Remotedatei](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+   ![Debuggen des Remoteskripts](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
 Zur Lösung eventuell noch auftretender Probleme steht Ihnen das [GitHub-Repository](https://github.com/powershell/vscode-powershell) zur Verfügung.

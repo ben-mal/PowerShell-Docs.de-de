@@ -2,12 +2,12 @@
 ms.date: 10/16/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Inkraftsetzung von Konfigurationen
-ms.openlocfilehash: 3bbe90c7cf09a7e236f6dd14f731ae306f497a0d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277893"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783074"
 ---
 # <a name="enacting-configurations"></a>Inkraftsetzung von Konfigurationen
 
@@ -17,7 +17,7 @@ Es gibt zwei Möglichkeiten, PowerShell DSC-Konfigurationen (Desired State Confi
 
 ## <a name="push-mode"></a>Pushmodus
 
-![Pushmodus](media/enactingConfigurations/pushModel.png "Funktionsweise des Pushmodus")
+![Übersicht über den Pushmodus](media/enactingConfigurations/pushModel.png "Funktionsweise des Pushmodus")
 
 Der Pushmodus bezieht sich auf einen Benutzer, der eine Konfiguration durch Aufrufen des Cmdlets [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) aktiv auf einen Zielknoten anwendet.
 
@@ -28,7 +28,7 @@ Nach dem Erstellen und Kompilieren einer Konfiguration können Sie sie im Pushmo
 
 ## <a name="pull-mode"></a>Pullmodus
 
-![Pullmodus](media/enactingConfigurations/pullModel.png "Funktionsweise des Pullmodus")
+![Übersicht über den Pullmodus](media/enactingConfigurations/pullModel.png "Funktionsweise des Pullmodus")
 
 Im Pullmodus werden Pullclients so konfiguriert, dass sie ihre Konfigurationen des gewünschten Zustands von einem Remotepulldienst erhalten. Der Pulldienst muss so eingerichtet werden, dass er den DSC-Dienst hostet und mit den Konfigurationen und Ressourcen versehen wird, die von den Pullclients benötigt werden. Jeder der Pullclients weist ein geplantes Ereignis auf, das für die Konfiguration auf dem Knoten eine regelmäßige Kompatibilitätsprüfung durchführt. Wenn das Ereignis erstmals ausgelöst wird, sendet der lokale Konfigurations-Manager (LCM) auf dem Pullclient eine Anforderung an den Pulldienst, um die im LCM angegebene Konfiguration abzurufen. Wenn diese Konfiguration auf dem Pulldienst vorhanden ist und anfängliche Überprüfungen besteht, wird die Konfiguration auf den Pullclient heruntergeladen, auf dem sie vom LCM ausgeführt wird.
 
@@ -40,6 +40,6 @@ Weitere Informationen zum Einrichten eines Pulldiensts unter Windows Server find
 
 In den folgenden Themen werden Pulldienst und -clients erläutert:
 
-- [Azure Automation DSC – Übersicht](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
+- [Azure Automation DSC – Übersicht](/azure/automation/automation-dsc-overview)
 - [Einrichten eines SMB-Pullservers](pullServerSMB.md)
 - [Konfigurieren eines Pullclients](pullClientConfigID.md)

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/17/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: ResourceTest-Methode
-ms.openlocfilehash: ff06fd645a94055e79aa0f8d20f2f06e16483720
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7ef65227342091cb2a5063aaf95a2780d217f85a
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954947"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463804"
 ---
 # <a name="resourcetest-method"></a>ResourceTest-Methode
 
@@ -26,13 +26,13 @@ uint32 ResourceTest(
 
 ## <a name="parameters"></a>Parameter
 
-*ResourceType* \[in\] Der Name der aufzurufenden Ressource.
+**ResourceType** \[in\] Der Name der aufzurufenden Ressource.
 
-*ModuleName* \[in\] Der Name des Moduls, das die aufzurufende Ressource enthält.
+**ModuleName** \[in\] Der Name des Moduls, das die aufzurufende Ressource enthält.
 
-*resourceProperty* \[in\] Gibt den Namen der Ressourceneigenschaft und deren Wert in einer Hashtabelle als Schlüssel und Wert an. Verwenden Sie das Cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) zum Ermitteln von Ressourceneigenschaften und deren Typen.
+***resourceProperty** \[in\] Gibt den Namen der Ressourceneigenschaft und deren Wert in einer Hashtabelle als Schlüssel und Wert an. Verwenden Sie das Cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) zum Ermitteln von Ressourceneigenschaften und deren Typen.
 
-*InDesiredState* \[out\] Bei der Rückgabe wird diese Eigenschaft auf **true** festgelegt, wenn sich der Zielknoten im gewünschten Zustand befindet.
+*InDesiredState** \[out\] Bei der Rückgabe wird diese Eigenschaft auf **TRUE** festgelegt, wenn sich der Zielknoten im gewünschten Zustand befindet.
 
 ## <a name="return-value"></a>Rückgabewert
 

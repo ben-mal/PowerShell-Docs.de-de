@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Schreiben einer benutzerdefinierten DSC-Ressource mit PowerShell-Klassen
-ms.openlocfilehash: f96a567253ab4808381c004df243c96886948407
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: b7f6d3135cb1da7ade106f8a4cc41e3afb7306af
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692225"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217558"
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Schreiben einer benutzerdefinierten DSC-Ressource mit PowerShell-Klassen
 
@@ -15,17 +15,19 @@ ms.locfileid: "83692225"
 
 Mit der Einführung der PowerShell-Klassen in Windows PowerShell 5.0 können Sie jetzt eine DSC-Ressourcen durch Erstellen einer Klasse definieren. Die Klasse definiert das Schema und die Implementierung der Ressource, daher besteht keine Notwendigkeit, eine separate MOF-Datei zu erstellen. Die Ordnerstruktur für eine klassenbasierte Ressource ist auch einfacher, da kein **DSCResources**-Ordner erforderlich ist.
 
-In einer klassenbasierten DSC-Ressource wird das Schema als Eigenschaften der Klasse definiert, die mit Attributen für den Eigenschaftstyp geändert werden können. Die Ressource wird mit den Methoden **Get()** , **Set()** und **Test()** implementiert (entspricht den Funktionen **Get-TargetResource**, **Set-TargetResource** und **Test-TargetResource** in einer Skriptressource.
+In einer klassenbasierten DSC-Ressource wird das Schema als Eigenschaften der Klasse definiert, die mit Attributen für den Eigenschaftstyp geändert werden können. Die Ressource wird mit den Methoden `Get()` , `Set()` und `Test()` implementiert (entspricht den Funktionen `Get-TargetResource`, `Set-TargetResource` und `Test-TargetResource` in einer Skriptressource.
 
 In diesem Thema wird eine einfache Ressource mit dem Namen **FileResource** erstellt, die eine Datei unter einem angegebenen Pfad verwaltet.
 
 Weitere Informationen zu DSC-Ressourcen finden Sie unter [Erstellen von benutzerdefinierten Windows PowerShell DSC-Ressourcen](authoringResource.md).
 
->**Hinweis:** Generische Sammlungen werden nicht in auf Klassen basierenden Ressourcen unterstützt.
+> [!Note]
+> Generische Sammlungen werden nicht in auf Klassen basierenden Ressourcen unterstützt.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Ordnerstruktur für eine Klassenressource
 
-Um eine benutzerdefinierte DSC-Ressource mit einer PowerShell-Klasse zu implementieren, erstellen Sie die folgende Ordnerstruktur. Die Klasse wird in **MyDscResource.psm1** und das Modulmanifest in **MyDscResource.psd1** definiert.
+Um eine benutzerdefinierte DSC-Ressource mit einer PowerShell-Klasse zu implementieren, erstellen Sie die folgende Ordnerstruktur.
+Die Klasse wird in `MyDscResource.psm1` und das Modulmanifest in `MyDscResource.psd1` definiert.
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -36,7 +38,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 ## <a name="create-the-class"></a>Erstellen einer Klasse
 
-Sie verwenden das Schlüsselwort „class“ zum Erstellen einer PowerShell-Klasse. Um anzugeben, dass eine Klasse eine DSC-Ressource ist, verwenden Sie das Attribut **DscResource()** . Der Name der Klasse ist der Name der DSC-Ressource.
+Sie verwenden das Schlüsselwort „class“ zum Erstellen einer PowerShell-Klasse. Um anzugeben, dass eine Klasse eine DSC-Ressource ist, verwenden Sie das Attribut `DscResource()` . Der Name der Klasse ist der Name der DSC-Ressource.
 
 ```powershell
 [DscResource()]
@@ -66,10 +68,10 @@ Beachten Sie, dass die Eigenschaften durch Attribute geändert werden. Die Attri
 
 - **DscProperty(Key)** : Die Eigenschaft ist erforderlich. Die Eigenschaft ist ein Schlüssel. Die Werte aller als Schlüssel gekennzeichneten Eigenschaften in Kombination müssen eine Ressourceninstanz in einer Konfiguration eindeutig identifizieren.
 - **DscProperty(Mandatory)** : Die Eigenschaft ist erforderlich.
-- **DscProperty(NotConfigurable)** : Die Eigenschaft ist schreibgeschützt. Eigenschaften, die mit diesem Attribut gekennzeichnet sind, können nicht von einer Konfiguration festgelegt werden, sondern werden durch die Methode **Get()** , wenn vorhanden, aufgefüllt.
+- **DscProperty(NotConfigurable)** : Die Eigenschaft ist schreibgeschützt. Eigenschaften, die mit diesem Attribut gekennzeichnet sind, können nicht von einer Konfiguration festgelegt werden, sondern werden durch die Methode `Get()` , wenn vorhanden, aufgefüllt.
 - **DscProperty()** : Die Eigenschaft ist konfigurierbar, aber nicht erforderlich.
 
-Die Eigenschaften **$Path** und **$SourcePath** sind Zeichenfolgen. **$CreationTime** ist eine [DateTime](/dotnet/api/system.datetime)-Eigenschaft. Die Eigenschaft **$Ensure** ist ein Enumerationstyp, der wie folgt definiert ist:
+Die Eigenschaften `$Path` und `$SourcePath` stellen Zeichenfolgen dar. `$CreationTime` ist eine [DateTime](/dotnet/api/system.datetime)-Eigenschaft. Die Eigenschaft `$Ensure` ist ein Enumerationstyp, der wie folgt definiert ist:
 
 ```powershell
 enum Ensure
@@ -81,9 +83,9 @@ enum Ensure
 
 ### <a name="implementing-the-methods"></a>Implementieren der Methoden
 
-Die Methoden **Get()** , **Set()** und **Test()** werden analog zu den Funktionen **Get-TargetResource**, **Set-TargetResource** und **Test-TargetResource** in einer Skriptressource implementiert.
+Die Methoden `Get()` , `Set()` und `Test()` werden analog zu den Funktionen `Get-TargetResource`, `Set-TargetResource` und `Test-TargetResource` in einer Skriptressource implementiert.
 
-Dieser Code umfasst auch die Funktion „CopyFile()“, eine Hilfsfunktion, die die Datei von **$SourcePath** nach **$Path** kopiert.
+Dieser Code umfasst auch die Hilfsfunktion `CopyFile()`, die die Datei von `$SourcePath` nach `$Path` kopiert.
 
 ```powershell
     <#
@@ -416,7 +418,7 @@ class FileResource
 
 ## <a name="create-a-manifest"></a>Erstellen eines Manifests
 
-Um eine klassenbasierte Ressource für die DSC-Engine verfügbar zu machen, müssen Sie eine **DscResourcesToExport**-Anweisung zur Manifestdatei hinzufügen, die die Engine anweist, die Ressource zu exportieren. Unser Manifest sieht folgendermaßen aus:
+Um eine klassenbasierte Ressource für die DSC-Engine verfügbar zu machen, müssen Sie eine `DscResourcesToExport`-Anweisung zur Manifestdatei hinzufügen, die die Engine anweist, die Ressource zu exportieren. Unser Manifest sieht folgendermaßen aus:
 
 ```powershell
 @{
@@ -473,15 +475,13 @@ Start-DscConfiguration -Wait -Force Test
 
 ## <a name="supporting-psdscrunascredential"></a>Unterstützung von PsDscRunAsCredential
 
->**Hinweis:** **PsDscRunAsCredential** wird in PowerShell 5.0 und höher unterstützt.
+> Hinweis: **PsDscRunAsCredential** wird ab PowerShell 5.0 unterstützt.
 
-Mithilfe der Eigenschaft **PsDscRunAsCredential** kann im Ressourcenblock [DSC configurations](../configurations/configurations.md) angegeben werden, dass die Ressource mit einem festgelegten Satz an Anmeldeinformationen ausgeführt werden soll.
-Weitere Informationen finden Sie unter [Ausführen von DSC mit Benutzeranmeldeinformationen](../configurations/runAsUser.md).
+Mithilfe der Eigenschaft **PsDscRunAsCredential** kann im Ressourcenblock [DSC configurations](../configurations/configurations.md) angegeben werden, dass die Ressource mit einem festgelegten Satz an Anmeldeinformationen ausgeführt werden soll. Weitere Informationen finden Sie unter [Ausführen von DSC mit Benutzeranmeldeinformationen](../configurations/runAsUser.md).
 
 ### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a>Anfordern oder Untersagen von PsDscRunAsCredential für Ihre Ressource
 
-Das Attribut **DscResource()** verwendet einen optionalen Parameter **RunAsCredential**.
-Dieser Parameter kann einen von drei Werten annehmen:
+Das Attribut `DscResource()` verwendet einen optionalen Parameter **RunAsCredential**. Dieser Parameter kann einen von drei Werten annehmen:
 
 - `Optional` **PsDscRunAsCredential** ist optional für Konfigurationen, die diese Ressource aufrufen. Dies ist der Standardwert.
 - `Mandatory` **PsDscRunAsCredential** muss für alle Konfigurationen verwendet werden, die diese Ressource aufrufen.
@@ -511,7 +511,7 @@ Ein Modul kann mehrere klassenbasierte DSC-Ressourcen definieren. Sie können di
            |- SecondResource.psm1
    ```
 
-2. Definieren Sie alle Ressourcen unter dem Ordner **DSCResources**.
+1. Definieren Sie alle Ressourcen unter dem Ordner **DSCResources**.
 
    ```
    $env:ProgramFiles\WindowsPowerShell\Modules (folder)

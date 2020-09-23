@@ -1,16 +1,16 @@
 ---
-title: Alles, was Sie schon immer über die IF-Anweisung wissen wollten
+title: Was Sie schon immer über die if-Anweisung wissen wollten
 description: PowerShell verfügt wie viele andere Sprachen auch über Anweisungen zur bedingten Ausführung von Code in Ihren Skripts.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6ffb70af694e80430d31991045b9fadc1a2cc3f0
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: b6bafb99bfb8ecd0152bae841e5c58d4c27ccd3e
+ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149523"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86469751"
 ---
-# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Alles, was Sie schon immer über die IF-Anweisung wissen wollten
+# <a name="everything-you-wanted-to-know-about-the-if-statement"></a>Was Sie schon immer über die `if`-Anweisung wissen wollten
 
 PowerShell verfügt wie viele andere Sprachen auch über Anweisungen zur bedingten Ausführung von Code in Ihren Skripts. Eine dieser Anweisungen ist die [if][]-Anweisung. In diesem Artikel wird einer der wichtigsten Befehle in PowerShell im Detail erläutert.
 
@@ -22,7 +22,7 @@ PowerShell verfügt wie viele andere Sprachen auch über Anweisungen zur bedingt
 In Ihren Skripts müssen häufig Entscheidungen getroffen werden, welche Logik als Nächstes ausgeführt wird.
 Und genau das ist mit bedingter Ausführung gemeint. Sie verfügen über eine Anweisung oder einen Wert, die bzw. der ausgewertet wird, damit basierend auf dieser Auswertung der nächste Codeabschnitt ausgeführt werden kann. Dieser Schritt wird mit der `if`-Anweisung ausgeführt.
 
-## <a name="the-if-statement"></a>Die IF-Anweisung
+## <a name="the-if-statement"></a>Die Anweisung `if`
 
 Nachfolgend ist ein einfaches Beispiel der `if`-Anweisung gezeigt:
 
@@ -60,7 +60,7 @@ In diesem Beispiel wird verglichen, ob der bekannte Wert `5` mit meinem `$value`
 
 Ein möglicher Anwendungsfall ist die Statusüberprüfung für einen Wert, bevor eine Aktion für diesen Wert durchgeführt wird. Sie können z. B. mit einem Dienst arbeiten und überprüfen, ob er ausgeführt wird, bevor Sie `Restart-Service` für den Dienst aufrufen.
 
-In anderen Sprachen wie C# ist die Verwendung von `==` für Gleichheitsüberprüfungen üblich (z. B.: `5 == $value`). In PowerShell ist dies jedoch nicht möglich. Ein weiterer gängiger Fehler ist, dass das Gleichheitszeichen (z. B.: `5 = $value`) verwendet wird. Dieses Zeichen ist jedoch für das Zuweisen von Werten zu Variablen reserviert. Indem Sie Ihren bekannten Wert auf der linken Seite platzieren, ist dieser Fehler weniger wahrscheinlich.
+In anderen Sprachen wie C# ist die Verwendung von `==` für Gleichheitsüberprüfungen üblich (z. B.: `5 == $value`). In PowerShell ist dies jedoch nicht möglich. Ein weiterer gängiger Fehler ist, dass das Gleichheitszeichen (z. B.: `5 = $value`) verwendet wird. Dieses Zeichen ist jedoch für das Zuweisen von Werten zu Variablen reserviert. Indem Sie den bekannten Wert auf der linken Seite platzieren, ist dieser Fehler weniger wahrscheinlich.
 
 Für diesen (und andere) Operatoren gibt es einige Variationen.
 
@@ -533,7 +533,7 @@ else
 }
 ```
 
-Jeder Skriptblock platziert die Ergebnisse der Befehle oder den Wert in der Pipeline. Anschließend wird das Ergebnis der IF-Anweisung der `$discount`-Variablen zugewiesen. In diesem Beispiel hätten diese Werte genauso einfach direkt der `$discount`-Variablen in jedem Skriptblock zugewiesen werden können. Ich verwende in einem solchen Szenario nicht sehr häufig die `if`-Anweisung, in letzter Zeit ist es jedoch zu einem solchen Fall gekommen.
+Jeder Skriptblock platziert die Ergebnisse der Befehle oder den Wert in der Pipeline. Anschließend wird das Ergebnis der `if`-Anweisung der `$discount`-Variablen zugewiesen. In diesem Beispiel hätten diese Werte genauso einfach direkt der `$discount`-Variablen in jedem Skriptblock zugewiesen werden können. Ich verwende in einem solchen Szenario nicht sehr häufig die `if`-Anweisung, in letzter Zeit ist es jedoch zu einem solchen Fall gekommen.
 
 ### <a name="array-inline"></a>Inlinearray
 
@@ -567,7 +567,7 @@ Sie werden inline innerhalb der Initialisierung meines Arrays ausgewertet. Wenn 
 
 ## <a name="simplify-complex-operations"></a>Vereinfachen von komplexen Vorgängen
 
-Situationen mit einer deutlich zu großen Anzahl von Vergleichen, in denen Ihre IF-Anweisung viel zu weit in den rechten Bildschirmbereich hineinreicht, lassen sich nicht vermeiden.
+Situationen mit einer deutlich zu großen Anzahl von Vergleichen, in denen Ihre `If`-Anweisung viel zu weit in den rechten Bildschirmbereich hineinreicht, lassen sich nicht vermeiden.
 
 ```powershell
 $user = Get-ADUser -Identity $UserName
@@ -599,7 +599,7 @@ Ich greife üblicherweise auf diese Vorgehensweise zurück, wenn ich mehr als zw
 
 ### <a name="pre-calculating-results"></a>Vorabberechnung von Ergebnissen
 
-Diese Anweisung lässt sich außerhalb der IF-Anweisung platzieren, um nur das Ergebnis zu überprüfen.
+Diese Anweisung lässt sich außerhalb der `if`-Anweisung platzieren, um nur das Ergebnis zu überprüfen.
 
 ```powershell
 $needsSecureHomeDrive = $null -ne $user -and
@@ -691,11 +691,11 @@ Nähere Informationen zur Ausnahmebehandlung finden Sie im Artikel [Alles, was S
 Die `if`-Anweisung ist zwar eine einfache Anweisung, jedoch ein zentrales Element von PowerShell. Üblicherweise wird sie in jedem Skript mehrmals verwendet. Ich hoffe, dass Sie nun besser mit dieser Anweisung vertraut sind.
 
 <!-- link references -->
-[Originalversion]: https://powershellexplained.com/2019-08-11-PowerShell-if-then-else-equals-operator/
+[Originalversion]: https://powershellexplained.com/2019-08-11-Powershell-if-then-else-equals-operator/
 [powershellexplained.com]: https://powershellexplained.com/
 [@KevinMarquette]: https://twitter.com/KevinMarquette
 [if]: /powershell/module/microsoft.powershell.core/about/about_if
-[Bitweise Operatoren]: https://powershellexplained.com/powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
+[Bitweise Operatoren]: /powershell/module/microsoft.powershell.core/about/about_arithmetic_operators#bitwise-operators
 [die vielfältigen Verwendungsmöglichkeiten von regulären Ausdrücken]: https://powershellexplained.com/2017-07-31-Powershell-regex-regular-expression/ (Die vielfältigen Verwendungsmöglichkeiten von regulären Ausdrücken)
 [Alles, was Sie schon immer über Ausnahmen wissen wollten]: everything-about-exceptions.md
 [Alles, was Sie schon immer über $null wissen wollten]: everything-about-null.md

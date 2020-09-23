@@ -3,12 +3,12 @@ title: Erstellen eines binären Standardbibliotheksmoduls
 description: Die PowerShell-Standardbibliothek ermöglicht uns, plattformübergreifende Module zu erstellen, die sowohl mit PowerShell Core als auch mit Windows PowerShell 5.1 funktionieren.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 51734fd9232e7c33b11c6c5a6abddbcc1f28413c
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+ms.openlocfilehash: ff6a49f70a3fb77f5a30cc909d53bb77b3cd7d43
+ms.sourcegitcommit: 8c01e56f0c10ff2637955dc892ea78432d563a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149413"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702744"
 ---
 # <a name="how-to-create-a-standard-library-binary-module"></a>Erstellen eines binären Standardbibliotheksmoduls
 
@@ -247,7 +247,7 @@ Von hier aus können wir den Ordner `.\Output\$module` in unserem Verzeichnis `$
 
 Ich habe erfahren, dass das Tool `dotnet` die Vorlage `PSModule` enthält.
 
-Alle von mir beschriebenen Schritte sind immer noch gültig, aber diese Vorlage macht viele davon überflüssig. Es handelt sich nach wie vor um eine ziemlich neue Vorlage, die noch weiter aufpoliert wird. Gehen Sie davon aus, dass sie immer besser wird.
+Alle von mir beschriebenen Schritte sind weiter gültig, doch diese Vorlage macht viele davon überflüssig. Es handelt sich nach wie vor um eine ziemlich neue Vorlage, die noch weiter aufpoliert wird. Gehen Sie davon aus, dass sie immer besser wird.
 
 Die Vorlage PSModule wird folgendermaßen installiert und eingesetzt.
 

@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Erstellen von Get-WinEvent-Abfragen mit FilterHashtable
-ms.openlocfilehash: 485b0cf05489d9add201c71c01fe2ed0c48db387
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 002d84515368663e0e807f48ffe883bd533be1d9
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83563937"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87786644"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Erstellen von Get-WinEvent-Abfragen mit FilterHashtable
 
@@ -97,7 +97,7 @@ Get-WinEvent -FilterHashtable @{
 
 Setzen Sie den Aufbau der Hashtabelle mit dem Schlüssel **ProviderName** fort. Der **ProviderName** ist der Name, der im Feld **Source** in der **Windows-Ereignisanzeige** angezeigt wird. Beispielsweise **.NET Runtime** im folgenden Screenshot:
 
-![Abbildung der Quellen der Windows-Ereignisanzeige.](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
+![Abbildung der Quellen der Windows-Ereignisanzeige](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
 Aktualisieren Sie die Hashtabelle, und schließen Sie das **Schlüssel-Wert**-Paar mit dem Schlüssel **ProviderName** und dem Wert **.NET Runtime** ein.
 
@@ -127,7 +127,7 @@ Für den Schlüssel **Keywords** verwendet PowerShell eine Zahl, nicht eine Zeic
 Öffnen Sie die **Windows-Ereignisanzeige**, und klicken Sie im Bereich **Aktionen** auf **Aktuelles Protokoll filtern**.
 Im Dropdownmenü **Schlüsselwörter** werden die verfügbaren Schlüsselwörter angezeigt, wie im folgenden Screenshot zu sehen:
 
-![Abbildung der Schlüsselwörter der Windows-Ereignisanzeige.](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
+![Abbildung der Schlüsselwörter der Windows-Ereignisanzeige](./media/creating-get-winEvent-queries-with-filterhashtable/keywords.png)
 
 Verwenden Sie den folgenden Befehl, um die Eigenschaftsnamen für `StandardEventKeywords` anzuzeigen.
 

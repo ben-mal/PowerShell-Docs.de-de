@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: DSC-Ressourcen „Archive“
-ms.openlocfilehash: 679de8b965304c149b10321e73e42b224f49ecc5
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: cbe32012c2035fb3e145bd06fadd73cdba93fd3e
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560371"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463787"
 ---
 # <a name="dsc-archive-resource"></a>DSC-Ressourcen „Archive“
 
@@ -23,6 +23,7 @@ Archive [string] #ResourceName
     Destination = [string]
     Path = [string]
     [ Checksum = [string] { CreatedDate | ModifiedDate | SHA-1 | SHA-256 | SHA-512 } ]
+    [ Credential = [PSCredential] ]
     [ Force = [bool] ]
     [ Validate = [bool] ]
     [ Ensure = [string] { Absent | Present } ]
@@ -35,11 +36,12 @@ Archive [string] #ResourceName
 
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
-|Destination |Gibt den Speicherort an, an dem der Archivinhalt einer Datei extrahiert werden soll. |
-|`Path` |Gibt den Quellpfad der Archivdatei an. |
-|Checksum |Definiert den zu verwendenden Typ, wenn bestimmt wird, ob zwei Dateien identisch sind. Wenn **Checksum** nicht angegeben ist, wird nur der Datei- oder Verzeichnisnamen für den Vergleich verwendet. Gültige Werte: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Wenn Sie **Checksum** ohne **Validate** angeben, schlägt die Konfiguration fehl. |
-|Force |Bestimmte Dateioperationen (z. B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist), führen zu einem Fehler. Bei Verwenden der **Force**-Eigenschaft werden solche Fehler überschrieben. Der Standardwert ist **False**. |
-|Überprüfen| Verwendet die Eigenschaft **Checksum**, um zu bestimmen, ob das Archiv der Signatur entspricht. Wenn Sie **Checksum** ohne **Validate** angeben, schlägt die Konfiguration fehl. Wenn Sie **Validate** ohne **Checksum** angeben, wird standardmäßig eine _SHA-256_-**Prüfsumme** verwendet. |
+| Destination | Gibt den Speicherort an, an dem der Archivinhalt einer Datei extrahiert werden soll. |
+| `Path` | Gibt den Quellpfad der Archivdatei an. |
+| Checksum | Definiert den zu verwendenden Typ, wenn bestimmt wird, ob zwei Dateien identisch sind. Wenn **Checksum** nicht angegeben ist, wird nur der Datei- oder Verzeichnisnamen für den Vergleich verwendet. Gültige Werte: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Wenn Sie **Checksum** ohne **Validate** angeben, schlägt die Konfiguration fehl. |
+| Anmeldeinformationen | Die Anmeldeinformationen eines Benutzerkontos mit Zugriffsberechtigung (falls erforderlich) auf den angegebenen Archivpfad und das angegebene Ziel. |
+| Force | Bestimmte Dateioperationen (z. B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist), führen zu einem Fehler. Bei Verwenden der **Force**-Eigenschaft werden solche Fehler überschrieben. Der Standardwert ist **False**. |
+| Überprüfen| Verwendet die Eigenschaft **Checksum**, um zu bestimmen, ob das Archiv der Signatur entspricht. Wenn Sie **Checksum** ohne **Validate** angeben, schlägt die Konfiguration fehl. Wenn Sie **Validate** ohne **Checksum** angeben, wird standardmäßig eine _SHA-256-_ **Prüfsumme** verwendet. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
 
@@ -54,7 +56,7 @@ Archive [string] #ResourceName
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie die Ressource „Archive“ verwenden, um sicherzustellen, dass der Inhalt einer Archivdatei mit dem Namen `Test.zip` vorhanden ist und an einem bestimmten Zielspeicherort extrahiert wird.
+Im folgenden Beispiel wird veranschaulicht, wie Sie die Ressource „Archive“ verwenden, um sicherzustellen, dass der Inhalt einer Archivdatei mit dem Namen `Test.zip` vorhanden ist und an einem bestimmten Zielspeicherort extrahiert, verwendet und autorisiert wird.
 
 ```powershell
 Archive ArchiveExample {

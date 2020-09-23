@@ -1,19 +1,19 @@
 ---
-ms.date: 08/14/2018
+ms.date: 08/21/2020
 keywords: powershell,cmdlet
 title: Ausführen von Remotebefehlen
-ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: ab6d464c31144349ee38cd01e82a2cf1470aaa95
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030313"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799620"
 ---
 # <a name="running-remote-commands"></a>Ausführen von Remotebefehlen
 
 Mit einem einzigen PowerShell-Befehl können Sie Befehle auf einem oder Hunderten von Computern ausführen. Windows PowerShell unterstützt das Remotecomputing mithilfe verschiedener Technologien, unter anderem WMI, RPC und WS-Management.
 
-PowerShell Core unterstützt WMI, WS-Management und SSH-Remoting. RPC wird nicht mehr unterstützt.
+PowerShell Core unterstützt WMI, WS-Management und SSH-Remoting. In PowerShell 6 wird RPC nicht mehr unterstützt. Ab PowerShell 7 wird RPC nur in Windows unterstützt.
 
 Weitere Informationen zu Remoting in PowerShell Core finden Sie in den folgenden Artikeln:
 
@@ -55,8 +55,7 @@ In diesem Artikel werden nur einige davon aufgeführt. Weitere Informationen fin
 
 ### <a name="start-an-interactive-session"></a>Starten einer interaktiven Sitzung
 
-Um eine interaktive Sitzung mit einem einzelnen Remotecomputer zu starten, verwenden Sie das Cmdlet [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
-Um beispielsweise eine interaktive Sitzung mit dem Remotecomputer „Server01“ zu starten, geben Sie Folgendes ein:
+Um eine interaktive Sitzung mit einem einzelnen Remotecomputer zu starten, verwenden Sie das Cmdlet [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession). Um beispielsweise eine interaktive Sitzung mit dem Remotecomputer „Server01“ zu starten, geben Sie Folgendes ein:
 
 ```powershell
 Enter-PSSession Server01
@@ -132,7 +131,7 @@ Windows PowerShell umfasst einen WSMan-Anbieter. Der Anbieter erstellt ein `WSMA
 
 Weitere Informationen zum WSMan-Anbieter finden Sie unter [WS-Management-Anbieter](https://technet.microsoft.com/library/dd819476.aspx) und [Informationen zu WS-Management-Cmdlets](/powershell/module/microsoft.powershell.core/about/about_ws-management_cmdlets). Geben Sie alternativ in der Windows PowerShell-Konsole `Get-Help wsman` ein.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie in folgenden Quellen:
 
 - [Häufig gestellte Fragen zu Remote](https://technet.microsoft.com/library/dd315359.aspx)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)

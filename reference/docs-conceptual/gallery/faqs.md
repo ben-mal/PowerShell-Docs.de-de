@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Häufig gestellte Fragen zum PowerShell-Katalog
-ms.openlocfilehash: 035681e108e1a3e05fe5d659d527ae1ad1c64cf4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 29f930cf552abec8acbbf02f5570c6ac0a14066d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500588"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777825"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -24,8 +24,8 @@ Ein PowerShell-Skript ist eine Reihe von Befehlen, die in einer PS1-Datei gespei
 
 In der Regel sind Module besser für das Teilen, aber wir ermöglichen die Skriptfreigabe, damit Sie Workflows und Skripts leichter zur Community beitragen können. Weitere Informationen finden Sie auf den folgenden Blogs:
 
-- [Don't Write Scripts, Write PowerShell Modules](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
-- [Understanding PowerShell Modules](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
+- [Schreiben Sie keine Skripts, schreiben Sie PowerShell-Module (in englischer Sprache)](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
+- [Grundlegendes zu PowerShell-Modulen (in englischer Sprache)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>Wie kann ich etwas im PowerShell-Katalog veröffentlichen?
 
@@ -59,7 +59,7 @@ Durch Aktivieren eines „Kategorie“-Kontrollkästchens geben Sie an, dass Sie
 Jede Art von PowerShell-Modul (Skriptmodule, binäre Module oder Manifestmodule) können im Katalog veröffentlicht werden. PowerShellGet benötigt zum Veröffentlichen einige Informationen über das Modul, wie z.B. Version, Beschreibung, Autor und Lizenzierung. Diese Informationen werden im Rahmen des Veröffentlichungsprozesses in der *Modulmanifest*-Datei (.psd1) oder aus dem Wert des **LicenseUri**-Parameter des Cmdlets [Publish-Module][] gelesen. Alle im Katalog veröffentlichten Module müssen über Modulmanifeste verfügen. Jedes Modul, das die folgenden Informationen in seinem Manifest enthält, kann im Katalog veröffentlicht werden:
 
 - Version
-- BESCHREIBUNG
+- Beschreibung
 - Autor
 - Ein URI zu den Lizenzbedingungen des Moduls, entweder als Teil des **PrivateData**-Abschnitts des Manifests oder im **LicenseUri**-Parameter des Cmdlets [Publish-Module][].
 
@@ -76,7 +76,7 @@ Verwenden Sie das Cmdlet [Update-ModuleManifest][], um die Felder der Modulmanif
 Jede Art von PowerShell-Skript (Skripts oder Workflows) kann im Katalog veröffentlicht werden. PowerShellGet benötigt zum Veröffentlichen einige Informationen über das Skript, wie z.B. Version, Beschreibung, Autor und Lizenzierung. Diese Informationen werden im Rahmen des Veröffentlichungsprozesses aus dem Abschnitt *PSScriptInfo* der Skriptdatei oder aus dem Wert des **LicenseUri**-Parameters des Cmdlets [Publish-Script][] gelesen. Alle im Katalog veröffentlichten Skripts müssen Metadateninformationen besitzen. Jedes Skript, das die folgenden Informationen im Abschnitt „PSScriptInfo“ enthält, kann im Katalog veröffentlicht werden:
 
 - Version
-- BESCHREIBUNG
+- Beschreibung
 - Autor
 - Ein URI zu den Lizenzbedingungen des Skripts, entweder als Teil des Abschnitts **PSScriptInfo** des Skripts oder im **LicenseUri**-Parameter des Cmdlets [Publish-Script][].
 
@@ -94,7 +94,7 @@ Wenn Sie beispielsweise nach „PowerShellVersion:"2.0"“ suchen, werden die Er
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Wie erstelle ich eine korrekt formatierte Skriptdatei?
 
-Der einfachste Weg, eine korrekt formatierte Skriptdatei zu erstellen, ist das Cmdlet [New-ScriptFileInfo][] auszuführen. In PowerShell 5.0 generiert New-ScriptFileInfo eine korrekt formatierte Skriptdatei mit leeren Feldern für nützliche Metadaten wie **ProjectUri**, **LicenseUri** und **Tags**. Tragen Sie einfach etwas in die leeren Felder ein, oder verwenden Sie das generierte Skript als Beispiel für die richtige Formatierung.
+Am einfachste Weg, eine korrekt formatierte Skriptdatei zu erstellen, ist das Cmdlet [New-ScriptFileInfo][] auszuführen. In PowerShell 5.0 generiert New-ScriptFileInfo eine korrekt formatierte Skriptdatei mit leeren Feldern für nützliche Metadaten wie **ProjectUri**, **LicenseUri** und **Tags**. Tragen Sie einfach etwas in die leeren Felder ein, oder verwenden Sie das generierte Skript als Beispiel für die richtige Formatierung.
 
 Verwenden Sie das Cmdlet [Test-ScriptFileInfo][], um zu überprüfen, ob alle erforderlichen Metadatenfelder ordnungsgemäß ausgefüllt wurden.
 
@@ -114,7 +114,7 @@ PackageManagement ist eine allgemeine Schnittstelle für die Arbeit mit einem be
 
 PowerShellGet ist der Paket-Manager für PowerShell-Pakete. Es gibt einen Anbieter von PSModule-Paketen, der die PowerShellGet-Funktionalität über PackageManagement verfügbar macht. Sie können daher entweder [Install-Module][] oder „Install-Package -Provider PSModule“ ausführen, um ein Modul aus dem PowerShell-Katalog zu installieren. Auf bestimmte PowerShellGet-Funktionen, einschließlich [Update-Module][] und [Publish-Module][], kann nicht über PackageManagement-Befehle zugegriffen werden.
 
-Alles in allem bietet PowerShellGet eine erstklassige Schnittstelle zur Paketverwaltung für PowerShell-Inhalte. PackageManagement dient der Bereitstellung aller Schnittstellungen zur Paketverwaltung mithilfe einiger allgemeiner Tools. Wenn Ihnen diese Antwort nicht geholfen hat, finden Sie eine ausführlichere Hilfestellung am Ende dieses Texts im Abschnitt **Wie beziehen sich PackageManagement und PowerShellGet tatsächlich aufeinander?** .
+Alles in allem bietet PowerShellGet eine erstklassige Schnittstelle zur Paketverwaltung für PowerShell-Inhalte. PackageManagement dient der Bereitstellung aller Schnittstellungen zur Paketverwaltung mithilfe einiger allgemeiner Tools. Wenn Ihnen diese Antwort nicht geholfen hat, finden Sie eine ausführlichere Hilfestellung am Ende dieses Texts im Abschnitt **Wie beziehen sich PackageManagement und PowerShellGet tatsächlich aufeinander?**.
 
 Weitere Informationen finden Sie auf der Projektseite zu [PackageManagement](https://oneget.org/).
 
@@ -137,7 +137,7 @@ Auf der Ebene der PowerShell-Cmdlets ist [Install-Module][] ein einfacher Wrappe
 
 Auf der Ebene des PackageManagement-Paketanbieters ruft der PSModule-Paketanbieter andere PackageManagement-Paketanbieter auf. Wenn Sie beispielsweise mit NuGet-basierten Katalogen arbeiten(z.B. dem PowerShell-Katalog), verwendet der PSModule-Paketanbieter den NuGet-Paketanbieter, um mit dem Repository zu arbeiten.
 
-![PowerShellGet-Architektur](media/faqs/powershellgetArchitecture.png)
+![Diagramm der PowerShellGet-Architektur](media/faqs/powershellgetArchitecture.png)
 
 Abbildung 1: PowerShellGet-Architektur
 
@@ -149,8 +149,8 @@ Für das **PowerShellGet**-Modul ist **PowerShell 3.0 oder neuer** erforderlich.
 
 Aus diesem Grund erfordert **PowerShellGet** eines der folgenden Betriebssysteme:
 
-- Windows 10
-- Windows 8.1 Pro
+- Windows 10
+- Windows 8.1 Pro
 - Windows 8.1 Enterprise
 - Windows 7 SP1
 - Windows Server 2016

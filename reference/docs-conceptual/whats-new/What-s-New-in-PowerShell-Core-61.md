@@ -2,12 +2,12 @@
 title: Neuigkeiten in PowerShell Core 6.1
 description: Neue Funktionen und Änderungen in PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 7a50bc3a909df38d21a604399d590a2805359593
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78277729"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837543"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Neuigkeiten in PowerShell Core 6.1
 
@@ -34,9 +34,9 @@ Nun wurde das Windows Compatibility Pack dem Release von PowerShell Core 6.1 hin
 
 Durch das Windows Compatibility Pack kann PowerShell Core **mehr als 1.900 Cmdlets verwenden, die im Windows Update vom 10. Oktober 2018 und in Windows Server 2019 enthalten sind**.
 
-## <a name="support-for-application-whitelisting"></a>Unterstützung für Anwendungswhitelists
+## <a name="support-for-application-allow-lists"></a>Unterstützung für Anwendungszulassungslisten
 
-PowerShell Core 6.1 verfügt über dieselbe Unterstützung für Anwendungswhitelists von [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) und [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) wie Windows PowerShell 5.1. Mit Anwendungswhitelists können Sie detailliert steuern, welche Binärdateien ausgeführt werden dürfen, wenn PowerShell im [eingeschränkten Sprachmodus](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) verwendet wird.
+PowerShell Core 6.1 verfügt über dieselbe Unterstützung für Anwendungszulassungslisten von [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) und [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) wie Windows PowerShell 5.1. Mit Anwendungszulassungslisten können Sie detailliert steuern, welche Binärdateien ausgeführt werden dürfen, wenn PowerShell im [eingeschränkten Sprachmodus](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) verwendet wird.
 
 ## <a name="performance-improvements"></a>Leistungsverbesserungen
 
@@ -88,12 +88,11 @@ Measure-Command {Get-Content .\foo.json | ConvertFrom-Json}
 | Zeit (in Sek.)   | 0,259                  | 0,577               | 0,125                  |
 | Beschleunigung (in %) | –                    | –122,8 %             | 78,3 % (51,7 % im Vergleich zu WPS) |
 
-## <a name="check-system32-for-compatible-in-box-modules-on-windows"></a>Überprüfen von `system32` nach kompatiblen Modulen unter Windows
+## <a name="check-system32-for-compatible-built-in-modules-on-windows"></a>Überprüfen von `system32` nach kompatiblen integrierten Modulen unter Windows
 
-Im Update 1809 für Windows Update 10 und im Update für Windows Server 2019 wurden eine Reihe von integrierten PowerShell-Modulen aktualisiert, um sie als mit PowerShell Core kompatibel zu kennzeichnen.
+Im Update 1809 für Windows 10 und im Update für Windows Server 2019 wurden eine Reihe von integrierten PowerShell-Modulen aktualisiert, um sie als mit PowerShell Core kompatibel zu kennzeichnen.
 
 Beim Starten von PowerShell Core 6.1 wird automatisch `$windir\System32` als Teil der `PSModulePath`-Umgebungsvariable mit einbezogen. Allerdings werden Module nur dann `Get-Module` und `Import-Module` verfügbar gemacht, wenn `CompatiblePSEdition` als kompatibel mit `Core` gekennzeichnet ist.
-
 
 ```powershell
 Get-Module -ListAvailable
@@ -198,7 +197,7 @@ und [`Invoke-RestMethod`](/powershell/module/microsoft.powershell.utility/invoke
 
 [PowerShell Direct](/virtualization/hyper-v-on-windows/user-guide/powershell-direct) ist eine Funktion von PowerShell und Hyper-V, mit der Sie ohne Netzwerkverbindung oder einem anderen Remoteverwaltungsdienst eine Verbindung zu einem virtuellen Hyper-V-Computer oder Container herstellen können.
 
-Bisher wurde die Verbindung von PowerShell Direct mithilfe der integrierten Windows PowerShell-Instanz auf dem Container hergestellt. Nun versucht PowerShell Direct zunächst, verfügbare `pwsh.exe`-Dateien der `PATH`-Umgebungsvariable dafür zu verwenden. Ist `pwsh.exe` nicht verfügbar, greift PowerShell Direct wieder auf `powershell.exe` zurück.
+Bisher wurde die Verbindung von PowerShell Direct mithilfe der integrierten Windows PowerShell-Instanz im Container hergestellt. Nun versucht PowerShell Direct zunächst, verfügbare `pwsh.exe`-Dateien der `PATH`-Umgebungsvariable dafür zu verwenden. Ist `pwsh.exe` nicht verfügbar, greift PowerShell Direct wieder auf `powershell.exe` zurück.
 
 ### <a name="enable-psremoting-now-creates-separate-remoting-endpoints-for-preview-versions"></a>`Enable-PSRemoting` erstellt jetzt separate Remotingendpunkte für Vorschauversionen
 

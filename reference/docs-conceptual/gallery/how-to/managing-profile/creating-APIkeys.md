@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Verwalten von API-Schlüsseln
-ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278291"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87777588"
 ---
 # <a name="managing-api-keys"></a>Verwalten von API-Schlüsseln
 
@@ -59,7 +59,7 @@ Diese Einstellungen können nicht geändert werden, nachdem der Schlüssel erste
 
 Sie können einige Einstellungen eines vorhandenen Schlüssels ändern. Wie bereits erwähnt, können Sie den Sicherheitsbereich und das Ablaufdatum eines vorhandenen API-Schlüssels nicht ändern. Die Optionen, die geändert werden können, sehen Sie in folgendem Screenshot:
 
-![Abrufen eines neuen API-Schlüsselwerts](media/creating-APIkeys/PSGallery_EditAPIKey.png)
+![Bearbeiten des API-Schlüsselwerts](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 Zum Ändern der Pakete, die durch einen Schlüssel kontrolliert werden, können Sie einzelne Pakete aus der Liste auswählen oder das Globmuster ändern.
 

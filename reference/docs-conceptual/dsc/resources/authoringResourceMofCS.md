@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Erstellen einer DSC-Ressource in C#
-ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 4652d5d99c32685e124f2cd1b718f973380ab16a
+ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417697"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217507"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Erstellen einer DSC-Ressource in C\#
 
@@ -18,6 +18,7 @@ In der Regel wird eine benutzerdefinierte Windows PowerShell DSC-Ressource in ei
 Abgesehen von der Implementierung der Ressource als Cmdlets in C# entsprechen die Schritte zum Erstellen des MOF-Schemas, zum Erstellen der Ordnerstruktur sowie zum Importieren und Verwenden Ihrer benutzerdefinierten DSC-Ressource dem unter [Schreiben einer benutzerdefinierten DSC-Ressource mit MOF](authoringResourceMOF.md) beschriebenen Verfahren.
 
 ## <a name="writing-a-cmdlet-based-resource"></a>Schreiben einer Cmdlet-basierten Ressource
+
 In diesem Beispiel wird eine einfache Ressource implementiert, die eine Textdatei und deren Inhalt verwaltet.
 
 ### <a name="writing-the-mof-schema"></a>Schreiben des MOF-Schemas
@@ -35,6 +36,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 ```
 
 ### <a name="setting-up-the-visual-studio-project"></a>Einrichten des Visual Studio-Projekts
+
 #### <a name="setting-up-a-cmdlet-project"></a>Einrichten eines Cmdlet-Projekts
 
 1. Öffnen Sie Visual Studio.
@@ -46,11 +48,9 @@ class MSFT_XDemoFile : OMI_BaseResource
 
 ### <a name="writing-the-cmdlet-code"></a>Schreiben des Codes des Cmdlets
 
-Der folgende C#-Code implementiert die Cmdlets **Get-TargetResource**, **Set-TargetResource** und **Test-TargetResource**.
+Mit dem folgenden C#-Code werden die Cmdlets `Get-TargetResource`, `Set-TargetResource` und `Test-TargetResource` implementiert.
 
 ```C#
-
-
 namespace cSharpDSCResourceExample
 {
     using System;
@@ -278,7 +278,11 @@ $env: psmodulepath (folder)
 ```
 
 ### <a name="see-also"></a>Weitere Informationen
+
 #### <a name="concepts"></a>Konzepte
+
 [Schreiben einer benutzerdefinierten DSC-Ressource mit MOF](authoringResourceMOF.md)
+
 #### <a name="other-resources"></a>Weitere Ressourcen
+
 [Schreiben eines Windows PowerShell-Cmdlets](/powershell/scripting/developer/windows-powershell)

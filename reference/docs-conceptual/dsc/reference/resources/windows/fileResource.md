@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: DSC-Ressource „File“
-ms.openlocfilehash: 54f4de9b3d337a6b9ad36c143eac70d5ef6b1c15
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: 28e9ea3a590a0972e505912efae4a934bc39ba1d
+ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560473"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88799603"
 ---
 # <a name="dsc-file-resource"></a>DSC-Ressource „File“
 
@@ -46,7 +46,7 @@ File [string] #ResourceName
 |Contents |Nur bei Verwendung mit **Type** **File** gültig. Gibt den Inhalt an, von dem sichergestellt werden soll (**Ensure**), ob er in der Zieldatei vorhanden (**Present**) oder nicht vorhanden (**Absent**) ist. |
 |Anmeldeinformationen |Die Anmeldeinformationen, die für den Zugriff auf Ressourcen wie z.B. Quelldateien erforderlich sind. |
 |Force |Setzt bestimmte Zugriffsoperationen außer Kraft, die zu einem Fehler führen würden (z.B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist). Der Standardwert ist `$false`. |
-|Recurse |Nur bei Verwendung mit **Type** **Directory** gültig. Führt den Statusvorgang rekursiv für alle Unterverzeichnisse aus. Der Standardwert ist `$false`. |
+|Recurse |Nur bei Verwendung mit **Type** **Directory** gültig. Führt den Statusvorgang rekursiv für den gesamten Verzeichnisinhalt, alle Unterverzeichnisse und den gesamten Unterverzeichnisinhalt aus. Der Standardwert ist `$false`. |
 |SourcePath |Der Pfad, aus dem die Datei- oder Ordnerressource kopiert werden soll. |
 |type |Der Typ der zu konfigurierenden Ressource. Gültige Werte sind **Directory** und **File**. Der Standardwert ist **File**. |
 |MatchSource |Bestimmt, ob die Ressource überwachen sollte, ob dem Quellverzeichnis nach der ersten Kopie neue Dateien hinzugefügt werden. Der Wert `$true` gibt an, dass nach Erstellen der ersten Kopie alle neuen Quelldateien in das Ziel kopiert werden sollten. Bei Festlegung auf `$false` speichert die Ressource den Inhalt des Quellverzeichnisses zwischen und ignoriert alle Dateien, die nach der ersten Kopie hinzugefügt werden. Der Standardwert ist `$false`. |
@@ -69,7 +69,8 @@ File [string] #ResourceName
 
 - Wenn Sie nur einen Zielpfad (**DestinationPath**) angeben, stellt die Ressource sicher, ob der Pfad vorhanden (**Present**) oder nicht vorhanden ist (**Absent**).
 - Wenn Sie einen Quellpfad **SourcePath** und einen Zielpfad (**DestinationPath**) mit dem **Type**-Wert **Directory** angeben, kopiert die Ressource das Quellverzeichnis in den Zielpfad. Die Eigenschaften **Recurse**, **Force** und **MatchSource** ändern den Typ des ausgeführten Kopiervorgangs, während **Credential** bestimmt, welches Konto für den Zugriff auf das Quellverzeichnis verwendet wird.
-- Wenn Sie den Wert von **ReadOnly** für die Eigenschaft **Attributes** gemeinsam mit einem Zielpfad (**DestinationPath**) angegeben haben, wird mit der Einstellung **Ensure** **Present** der angegebene Pfad erstellt, während mit **Contents** die Inhalte der Datei festgelegt werden. Bei der Einstellung **Ensure** **Absent** würde die **Attributes**-Eigenschaft vollständig ignoriert und jede Datei im angegebenen Pfad entfernt.
+- Wenn Sie die Eigenschaft **Recurse** beim Kopieren eines Verzeichnisses nicht auf `$true` festlegen, wird keinerlei Inhalt des vorhandenen Verzeichnisses kopiert. Es wird nur das angegebene Verzeichnis kopiert.
+- Wenn Sie den Wert von **ReadOnly** für die Eigenschaft **Attributes** neben einem Zielpfad (**DestinationPath**) angegeben haben, stellen Sie sicher (**Ensure), dass ** **Present** den angegebenen Pfad erstellt, während mit **Contents** die Inhalte der Datei festgelegt werden. Die Einstellung mit **Ensure** **Absent** würde die **Attributes**-Eigenschaft vollständig ignorieren und jede Datei im angegebenen Pfad entfernen.
 
 ## <a name="example"></a>Beispiel
 

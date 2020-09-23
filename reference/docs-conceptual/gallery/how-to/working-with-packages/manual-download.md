@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: Katalog,PowerShell,psgallery
 title: Manuelles Herunterladen des Pakets
-ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 3e29437c4e35e47ab2028a7eea9f408daf1a59e1
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278710"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782853"
 ---
 # <a name="manual-package-download"></a>Manuelles Herunterladen des Pakets
 
@@ -22,7 +22,7 @@ Der PowerShell-Katalog unterstützt das direkte Herunterladen von Paketen von de
 
 Auf jeder Seite gibt es einen Link zum manuellen Download:
 
-![Manueller Download](media/manual-download/packagedisplaypagewithpseditions.png)
+![Paketseite mit Installationsoptionen](media/manual-download/packagedisplaypagewithpseditions.png)
 
 Klicken Sie auf **Download the raw nupkg file** (NUPKG-Rohdatei herunterladen), um das Paket manuell herunterzuladen. Eine Kopie des Pakets mit dem Namen `<name>.<version>.nupkg` wird in den Downloadordner Ihres Browsers heruntergeladen.
 
