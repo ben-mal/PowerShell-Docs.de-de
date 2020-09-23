@@ -2,12 +2,12 @@
 title: Replizieren der ISE-Benutzeroberfläche in Visual Studio Code
 description: Replizieren der ISE-Benutzeroberfläche in Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: 899e1c393fd49b0659631b88d610e80ec885e69e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 6b0b8ce054695d6cc0fc578290c554e2dc1472bc
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809596"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87784621"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Replizieren der ISE-Benutzeroberfläche in Visual Studio Code
 
@@ -25,7 +25,7 @@ Die einfachste Möglichkeit zum Replizieren der ISE-Benutzeroberfläche in Visua
 
 Mit diesem Befehl werden die unten beschriebenen Einstellungen automatisch angewendet. Das Ergebnis sieht wie folgt aus:
 
-![ISE-Modus](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
+![Visual Studio Code im ISE-Modus](media/How-To-Replicate-the-ISE-Experience-In-VSCode/3-ise-mode.png)
 
 ## <a name="ise-mode-configuration-settings"></a>ISE-Modus-Konfigurationseinstellungen
 
@@ -53,7 +53,7 @@ Der ISE-Modus nimmt die folgenden Änderungen an den VS Code-Einstellungen vor.
 
   Durch diese Einstellungen werden die Aktivitätsleiste und die Seitenleiste zum Debuggen innerhalb des unten gezeigten roten Kastens verborgen:
 
-  ![Hervorgehobener Abschnitt mit Aktivitätsleiste und der Seitenleiste zum Debuggen](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+  ![Hervorgehobener Abschnitt mit Aktivitätsleiste und Seitenleiste zum Debuggen](media/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
 
   Das Endergebnis sieht so aus:
 
@@ -122,7 +122,7 @@ Der ISE-Modus nimmt die folgenden Änderungen an den VS Code-Einstellungen vor.
 
 - 4sysops bietet [einen großartigen Artikel][4sysops] zur Konfiguration von VS Code, um der ISE ähnlicher zu sein.
 - Mike F. Robbins hat [einen hervorragenden Beitrag][mikefrobbins] zum Einrichten von VS Code verfasst.
-- Learn PowerShell bietet [eine ausgezeichnete Zusammenfassung][learnpwsh] zur Einrichtung für PowerShell.
+<!-- - Learn PowerShell has [an excellent write up][learnpwsh] setup for PowerShell. -->
 
 ## <a name="vs-code-tips"></a>Tipps für VS Code
 
@@ -138,7 +138,7 @@ Der ISE-Modus nimmt die folgenden Änderungen an den VS Code-Einstellungen vor.
 
 ## <a name="more-settings"></a>Weitere Einstellungen
 
-Wenn Sie weitere Möglichkeiten kennen, wie Sie VS Code für ISE-Benutzer vertrauter gestalten können, tragen Sie zu diesem Dokument bei. Wenn Sie nach einer Kompatibilitätskonfiguration suchen, aber keine Möglichkeit finden, diese zu aktivieren, [Problem erstellen][], und fragen Sie nach einer Lösung!
+Wenn Sie weitere Möglichkeiten kennen, wie Sie VS Code für ISE-Benutzer vertrauter gestalten können, tragen Sie zu diesem Dokument bei. Wenn Sie nach einer Kompatibilitätskonfiguration suchen, aber keine Möglichkeit finden, diese zu aktivieren, [legen Sie ein Issue an][], und fragen Sie nach einer Lösung!
 
 Wir freuen uns immer über PRs und Beiträge!
 
