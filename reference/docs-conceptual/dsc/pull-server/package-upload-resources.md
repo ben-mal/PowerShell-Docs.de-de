@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Verpacken und Hochladen von Ressourcen auf einen Pullserver
-ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278499"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782887"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Verpacken und Hochladen von Ressourcen auf einen Pullserver
 
@@ -20,14 +20,14 @@ Jeder Zielknoten kann zum Herunterladen von Konfigurationen, Ressourcen und soga
 
 ## <a name="package-resource-modules"></a>Verpacken von Ressourcenmodulen
 
-Jede Ressource, die für einen Client zum Herunterladen verfügbar ist, muss in einer ZIP-Datei gespeichert werden. Das folgende Beispiel zeigt die erforderlichen Schritte unter Verwendung der Ressource [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0).
+Jede Ressource, die für einen Client zum Herunterladen verfügbar ist, muss in einer `.zip`-Datei gespeichert werden. Das folgende Beispiel zeigt die erforderlichen Schritte unter Verwendung der Ressource [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0).
 
 > [!NOTE]
-> Wenn ein Client PowerShell 4.0 verwendet, müssen Sie die Ressourcenordnerstruktur vereinfachen und alle Versionsordner entfernen. Weitere Informationen finden Sie unter [Mehrere Ressourcenversionen](../configurations/import-dscresource.md#multiple-resource-versions).
+> Wenn ein Client PowerShell 4.0 verwendet, müssen Sie die Ressourcenordnerstruktur vereinfachen und alle Versionsordner entfernen. Weitere Informationen finden Sie unter [Mehrere Ressourcenversionen](../configurations/import-dscresource.md#multiple-resource-versions).
 
-Sie können das Ressourcenverzeichnis mit einem beliebigen Hilfsprogramm, einem Skript oder einer beliebigen Methode komprimieren. Unter Windows können Sie *mit der rechten Maustaste* auf das Verzeichnis „xPSDesiredStateConfiguration“ klicken und dann „Senden an“ und „Komprimierter Ordner“ auswählen.
+Sie können das Ressourcenverzeichnis mit einem beliebigen Hilfsprogramm, einem Skript oder einer beliebigen Methode komprimieren. Unter Windows können Sie mit der _rechten_ Maustaste auf das Verzeichnis `xPSDesiredStateConfiguration` klicken, **Senden an** auswählen und dann auf **Komprimierter Ordner** klicken.
 
-![Rechtsklick](media/package-upload-resources/right-click.gif)
+![Rechtsklick: Senden an: Komprimierter Ordner](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>Benennen des Ressourcenarchivs
 
@@ -37,11 +37,11 @@ Das Ressourcenarchiv muss im folgenden Format benannt werden:
 {ModuleName}_{Version}.zip
 ```
 
-Im Beispiel oben sollte „xPSDesiredStateConfiguration.zip“ in „xPSDesiredStateConfiguration_8.4.4.0.zip“ umbenannt werden.
+Im obigen Beispiel muss `xPSDesiredStateConfiguration.zip` in `xPSDesiredStateConfiguration_8.4.4.0.zip` umbenannt werden.
 
 ### <a name="create-checksums"></a>Erstellen von Prüfsummen
 
-Sobald das Ressourcenmodul komprimiert und umbenannt wurde, müssen Sie eine **Prüfsumme** erstellen.  Die **CheckSum** wird von LCM auf dem Client verwendet, um festzustellen, ob die Ressource geändert wurde und erneut heruntergeladen werden muss. Sie können mit dem Cmdlet [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) eine **CheckSum** erstellen, wie im folgenden Beispiel gezeigt.
+Sobald das Ressourcenmodul komprimiert und umbenannt wurde, müssen Sie eine **Prüfsumme** erstellen. Die **CheckSum** wird von LCM auf dem Client verwendet, um festzustellen, ob die Ressource geändert wurde und erneut heruntergeladen werden muss. Sie können mit dem Cmdlet [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) eine **CheckSum** erstellen, wie im folgenden Beispiel gezeigt.
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip

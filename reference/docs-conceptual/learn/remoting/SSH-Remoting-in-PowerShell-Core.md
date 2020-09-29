@@ -1,13 +1,13 @@
 ---
 title: PowerShell-Remoting über SSH
 description: Remoting in PowerShell Core mithilfe von SSH
-ms.date: 09/30/2019
-ms.openlocfilehash: 9fe3e22c54a4695a1027f416acf113f2f7fd2cd7
-ms.sourcegitcommit: 7c7f8bb9afdc592d07bf7ff4179d000a48716f13
+ms.date: 07/23/2020
+ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
+ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82174131"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87133468"
 ---
 # <a name="powershell-remoting-over-ssh"></a>PowerShell-Remoting über SSH
 
@@ -25,7 +25,7 @@ Die Cmdlets `New-PSSession`, `Enter-PSSession` und `Invoke-Command` verfügen nu
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Um eine Remotesitzung zu erstellen, geben Sie den Zielcomputer über den `HostName`-Parameter an, und fügen Sie über `UserName` den Benutzernamen hinzu. Wenn Sie die Cmdlets interaktiv ausführen, werden Sie zur Kennworteingabe aufgefordert. Sie können auch die SSH-Schlüsselauthentifizierung mithilfe einer privaten Schlüsseldatei mit dem `KeyFilePath`-Parameter verwenden.
+Um eine Remotesitzung zu erstellen, geben Sie den Zielcomputer mit dem Parameter **HostName** an und fügen mit **UserName** den Benutzernamen hinzu. Wenn Sie die Cmdlets interaktiv ausführen, werden Sie zur Kennworteingabe aufgefordert. Sie können die SSH-Schlüsselauthentifizierung auch mithilfe einer privaten Schlüsseldatei und des Parameters **KeyFilePath** einrichten.
 
 ## <a name="general-setup-information"></a>Allgemeine Setupinformationen
 
@@ -64,7 +64,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    Erstellen Sie das SSH-Subsystem, das einen PowerShell-Prozess auf dem Remotecomputer hostet:
 
    ```
-   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo -NoProfile
+   Subsystem powershell c:/progra~1/powershell/7/pwsh.exe -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -122,7 +122,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    Fügen Sie einen Eintrag für das PowerShell-Subsystem hinzu:
 
    ```
-   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -168,7 +168,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    Fügen Sie einen Eintrag für das PowerShell-Subsystem hinzu:
 
    ```
-   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
+   Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo
    ```
 
    > [!NOTE]
@@ -191,12 +191,14 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
 PowerShell-Remoting über SSH basiert auf dem Authentifizierungsaustausch zwischen dem SSH-Client und dem SSH-Dienst und implementiert selbst keine Authentifizierungsschemas. Infolgedessen werden alle konfigurierten Authentifizierungsschemas, einschließlich der mehrstufigen Authentifizierung, von SSH und unabhängig von PowerShell verarbeitet. Sie können den SSH-Dienst beispielsweise für die Authentifizierung mit öffentlichen Schlüsseln oder die Verwendung eines Einmalkennworts zur Erhöhung der Sicherheit konfigurieren. Die Konfiguration einer mehrstufigen Authentifizierung wird in dieser Dokumentation nicht beschrieben. Bevor Sie versuchen, eine mehrstufige Authentifizierung mit PowerShell-Remoting zu verwenden, informieren Sie sich in der Dokumentation für SSH, wie Sie eine mehrstufige Authentifizierung richtig konfigurieren, und testen Sie, ob diese außerhalb von PowerShell funktioniert.
 
+> [!NOTE]
+> Benutzer behalten dieselben Berechtigungen in Remotesitzungen bei. Das bedeutet, dass Administratoren Zugriff auf eine Shell mit erhöhten Rechten haben und normale Benutzer nicht.
+
 ## <a name="powershell-remoting-example"></a>Beispiel für das PowerShell-Remoting
 
 Sie können das Remoting am einfachsten auf einem einzelnen Computer testen. In diesem Beispiel haben wir eine Remotesitzung mit demselben Linux-Computer erstellt. Wir verwenden PowerShell-Cmdlets interaktiv, damit wir Eingabeaufforderungen von SSH sehen, die zum Überprüfen des Hostcomputers und zur Kennworteingabe auffordern. Sie können dies auch auf einem Windows-Computer durchführen, um sicherzustellen, dass das Remoting funktioniert. Verwenden Sie dann Remoting zwischen Computern, indem Sie den Hostnamen ändern.
 
 ```powershell
-#
 # Linux to Linux
 #
 $session = New-PSSession -HostName UbuntuVM1 -UserName TestUser
@@ -249,7 +251,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName           
 Enter-PSSession -HostName WinVM1 -UserName PTestName
 ```
 
-```Output
+```
 PTestName@WinVM1s password:
 ```
 
@@ -318,9 +320,13 @@ GitCommitId                    v6.0.0-alpha.17
 [WinVM2]: PS C:\Users\PSRemoteUser\Documents>
 ```
 
-### <a name="known-issues"></a>Bekannte Probleme
+### <a name="limitations"></a>Einschränkungen
 
-Der Befehl **sudo** funktioniert bei Remotesitzungen auf Linux-Computern nicht.
+- Der Befehl **sudo** funktioniert bei Remotesitzungen auf Linux-Computern nicht.
+
+- PSRemoting über SSH unterstützt keine Profile und hat keinen Zugriff auf `$PROFILE`. In einer aktiven Sitzung können Sie ein Profil laden, indem Sie das Profil mit dem vollständigen Dateipfad per „dot-source“ angeben. Dies steht nicht im Zusammenhang mit SSH-Profilen. Sie können den SSH-Server so konfigurieren, dass PowerShell als Standardshell verwendet und ein Profil über SSH geladen wird. Weitere Informationen finden Sie in der SSH-Dokumentation.
+
+- Vor PowerShell 7.1 unterstützte das Remoting über SSH keine Remotesitzungen über einen zweiten Hop. Diese Funktion war auf Sitzungen beschränkt, die WinRM verwendeten. PowerShell 7.1 ermöglicht, dass `Enter-PSSession` und `Enter-PSHostProcess` in jeder interaktiven Remotesitzung funktionieren.
 
 ## <a name="see-also"></a>Weitere Informationen
 

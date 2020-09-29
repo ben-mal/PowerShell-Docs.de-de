@@ -3,12 +3,12 @@ title: Übermitteln von Pull Requests
 description: In diesem Artikel wird erläutert, wie Pull Requests an das PowerShell-Docs-Team übermittelt werden.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: b56911dd4703530f31dd077a8d85ac131c82ee65
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+ms.openlocfilehash: 8b392a36c9469b83cf4f088c1799720a091434b4
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690948"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87782649"
 ---
 # <a name="how-to-submit-pull-requests"></a>Übermitteln von Pull Requests
 
@@ -56,9 +56,9 @@ Docs platform, so the values set in these 3 places will be ignored. Please remov
 Sie erkennen das folgende Verhalten:
 
 1. Sie übermitteln einen PR.
-1. Im GitHub-Kommentar, der den Status Ihres PR anzeigt, sehen Sie den für das Repository aktivierten Status von „Überprüfungen“. Beachten Sie, dass in diesem Beispiel zwei Überprüfungen aktiviert sind: „Commit Validation“ und „OpenPublishing.Build“:
+1. Im GitHub-Kommentar, der den Status Ihres Pull Requests anzeigt, sehen Sie den für das Repository aktivierten Zustand „Überprüfungen“. Beachten Sie, dass in diesem Beispiel zwei Überprüfungen aktiviert sind: „Commit Validation“ und „OpenPublishing.Build“:
 
-   ![einige Überprüfungen sind fehlgeschlagen](media/pull-requests/validation-failed.png)
+   ![Überprüfungszustand: einige Überprüfungen sind fehlgeschlagen](media/pull-requests/validation-failed.png)
 
    Der Build kann fortgesetzt werden, auch wenn die Überprüfung des Commits fehlschlägt.
 
@@ -66,7 +66,7 @@ Sie erkennen das folgende Verhalten:
 1. Auf der Seite „Details“ werden alle fehlgeschlagenen Validierungsprüfungen angezeigt, und zwar mit Informationen zur Behebung der Issues.
 1. Wenn die Validierung erfolgreich ist, wird dem PR der folgende Kommentar hinzugefügt:
 
-   ![Buildvalidierung](media/pull-requests/build-validation.png)
+   ![Überprüfungszustand: Erfolg](media/pull-requests/build-validation.png)
 
 > [!NOTE]
 > Wenn Sie ein externer Mitwirkender (kein Mitarbeiter von Microsoft) sind, haben Sie keinen Zugriff auf die detaillierten Buildberichte oder Vorschaulinks.

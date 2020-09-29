@@ -1,13 +1,13 @@
 ---
-ms.date: 09/20/2019
+ms.date: 07/16/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: DSC-Resource „Environment“
-ms.openlocfilehash: 5670646b6e94019f436d85296deff4de8da920f6
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: d8519a66d457767dcbc0e08b01a69a9264997479
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560354"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86464416"
 ---
 # <a name="dsc-environment-resource"></a>DSC-Resource „Environment“
 
@@ -22,6 +22,7 @@ Environment [string] #ResourceName
 {
     Name = [string]
     [ Path = [bool] ]
+    [ Target = [string] { Process | Machine } ]
     [ Value = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
@@ -35,7 +36,8 @@ Environment [string] #ResourceName
 |---|---|
 |Name |Gibt den Namen der Umgebungsvariablen an, für die Sie einen bestimmten Zustand sicherstellen möchten. |
 |`Path` |Definiert die Umgebungsvariable, die konfiguriert wird. Legen Sie diese Eigenschaft auf `$true` fest, wenn die Variable die **Path**-Variable ist. Legen Sie sie andernfalls auf `$false` fest. Der Standardwert lautet `$false`. Wenn die konfigurierte Variable die **Path**-Variable ist, wird der von der **Value**-Eigenschaft bereitgestellte Wert an den vorhandenen Wert angefügt. |
-|value |Der Wert, der der Umgebungsvariablen zugewiesen werden soll. |
+|Ziel| Gibt an, wo die Variable abgerufen werden soll: Computer oder Prozess. Wenn beide angegeben werden, wird nur der Wert des Computers zurückgegeben. Standard sind beide Werte, da dies die Standardeinstellung für den Rest der Ressource ist. |
+|Wert |Der Wert, der der Umgebungsvariablen zugewiesen werden soll. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
 
@@ -50,7 +52,7 @@ Environment [string] #ResourceName
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird sichergestellt, dass „TestEnvironmentVariable“ vorhanden ist und den Wert _TestValue_ hat. Falls sie nicht vorhanden ist, wird sie erstellt.
+Im folgende Beispiel wird sichergestellt, dass TestEnvironmentVariable vorhanden ist und den Wert _TestValue_ hat. Falls sie nicht vorhanden ist, wird sie erstellt.
 
 ```powershell
 Environment EnvironmentExample

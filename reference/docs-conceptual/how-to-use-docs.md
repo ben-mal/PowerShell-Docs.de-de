@@ -1,13 +1,13 @@
 ---
-ms.date: 05/22/2020
+ms.date: 07/29/2020
 keywords: powershell,cmdlet
 title: Verwenden der PowerShell-Dokumentation
-ms.openlocfilehash: 259eb1eea1dc7e8b5ae5730f97c938b838a320bf
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 1cfeb9eea564e7618062e1b8ada4948bd9e22969
+ms.sourcegitcommit: 9f9eb95bc859e9e0fed48101327a602b2ced351d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808264"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821528"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Verwenden der PowerShell-Dokumentation
 
@@ -25,9 +25,9 @@ Standardmäßig ist auf dieser Website die Dokumentation für die neueste veröf
 
 Verwenden Sie die Versionsauswahl oben auf der Seite, um die gewünschte Version von PowerShell auszuwählen.
 
-![Versionsauswahl](media/how-to-use-docs/version-search.gif)
+![Verwenden der Versionsauswahl](media/how-to-use-docs/version-search.gif)
 
-Anhand des Werts `$PSversionTable.PSVersion` können Sie erkennen, welche Version von PowerShell Sie verwenden. Das folgende Beispiel zeigt die Ausgabe für Windows PowerShell v5.1.
+Anhand des Werts `$PSversionTable.PSVersion` können Sie erkennen, welche Version von PowerShell Sie verwenden. Das folgende Beispiel zeigt die Ausgabe für Windows PowerShell 5.1.
 
 ```powershell
 $PSVersionTable.PSVersion
@@ -36,8 +36,10 @@ $PSVersionTable.PSVersion
 ```Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
-5      1      18362  145
+5      1      19041  1
 ```
+
+Wenn Sie noch nicht mit PowerShell vertraut sind und Hilfe zum Verstehen der Befehlssyntax benötigen, finden Sie weitere Informationen unter [about_Command_Syntax](/powershell/module/microsoft.powershell.core/about/about_command_syntax).
 
 ## <a name="finding-articles-for-previous-versions"></a>Suchen von Artikeln für Vorgängerversionen
 

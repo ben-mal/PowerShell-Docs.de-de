@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Informationen zum Verständnis der DSC-Funktion in einer CI/CD-Pipeline
-ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 6df621f45caed3ac8a8b4dd1afa575d413259e0d
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500821"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87783108"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Informationen zum Verständnis der DSC-Funktion in einer CI/CD-Pipeline
 
 In diesem Artikel werden die verschiedenen Ansätze beschrieben, die für das Kombinieren von Konfigurationen und Ressourcen verfügbar sind.
 Die einzelnen Szenarios haben alle das gleiche Ziel: Reduzieren der Komplexität, wenn zum Erreichen des Endstatus einer Serverbereitstellung mehrere Konfigurationen bevorzugt werden. Ein Beispiel hierfür wären mehrere Teams, die zum Ergebnis einer Serverbereitstellung beitragen, wie z.B. ein Anwendungsbesitzer, der den Anwendungszustand beibehält, und ein zentrales Team, das die Änderungen in Sicherheitsbaselines veröffentlicht. Die Einzelheiten der einzelnen Ansätze, einschließlich der Vorteile und Risiken, werden hier näher erläutert.
 
-![Pipeline](media/authoringAdvanced/Pipeline.jpg)
+![Prozessfluss einer CI-/CD-Pipeline](media/authoringAdvanced/Pipeline.jpg)
 
 ## <a name="types-of-collaborative-authoring-techniques"></a>Techniken zur kollaborativen Dokumenterstellung
 
@@ -33,7 +33,7 @@ Beide Lösungen können für die Verwaltung des Ergebnisses einer Serverbereitst
 
 Wenn Sie Teilkonfigurationen verwenden, wird der lokale Konfigurations-Manager so konfiguriert, dass mehrere Konfigurationen unabhängig voneinander verwaltet werden. Konfigurationen werden unabhängig voneinander kompiliert und anschließend dem Knoten zugewiesen. Dies macht erforderlich, dass der lokale Konfigurations-Manager im Vorhinein mit dem Namen der jeweiligen Konfiguration konfiguriert wird.
 
-![PartialConfiguration](media/authoringAdvanced/PartialConfiguration.jpg)
+![Diagramm von Teilkonfigurationen](media/authoringAdvanced/PartialConfiguration.jpg)
 
 Durch Teilkonfigurationen haben mindestens zwei Teams die vollständige Kontrolle über die Konfiguration eines Servers, häufig ist die Kommunikation oder die Zusammenarbeit dabei nicht von Nutzen.
 
@@ -45,7 +45,7 @@ Ferner haben Kunden geäußert, dass es unwahrscheinlich ist, dass bei Verwendun
 
 In der nachfolgenden Abbildung gibt Team B seine Teilkonfiguration für Team A frei. Anschließend führt Team A Tests auf dem Server aus, bei denen beide Konfigurationen angewendet werden. In diesem Modell verfügt nur eine Stelle über die Berechtigung zur Vornahme von Änderungen in der Produktion.
 
-![PartialSinglePipeline](media/authoringAdvanced/PartialSinglePipeline.jpg)
+![Diagramm einer teilweisen einzelnen Pipeline](media/authoringAdvanced/PartialSinglePipeline.jpg)
 
 Wenn Team B Änderungen vornehmen muss, sollte das Team einen Pull Request an die Umgebung für die Quellcodeverwaltung von Team A übermitteln. Anschließend überprüft Team A die Änderungen mithilfe der Testautomatisierung und gibt diese für die Produktion frei, wenn davon auszugehen ist, dass die Änderungen in den Anwendungen oder den vom Server gehosteten Diensten keine Fehler verursachen.
 
@@ -53,7 +53,7 @@ Wenn Team B Änderungen vornehmen muss, sollte das Team einen Pull Request an di
 
 Eine zusammengesetzte Ressource ist eine DSC-Konfiguration, die als Ressource verpackt ist. Bei der Konfiguration des LCM (lokaler Konfigurations-Manager) zum Akzeptieren zusammengesetzter Ressourcen müssen keine besonderen Anforderungen berücksichtigt werden. Die Ressourcen werden in einer neuen Konfiguration verwendet, und eine einzige Kompilierung ergibt eine MOF-Datei.
 
-![CompositeResource](media/authoringAdvanced/CompositeResource.jpg)
+![Diagramm einer zusammengesetzten Ressource](media/authoringAdvanced/CompositeResource.jpg)
 
 Für zusammengesetzte Ressourcen gibt es zwei gängige Szenarios. Das erste Szenario beinhaltet die Verringerung der Komplexität und das Abstrahieren eindeutiger Konzepte. Im zweiten Szenario wird zugelassen, dass Baselines nach dem Bestehen sämtlicher Tests für ein Anwendungsteam verpackt werden, damit diese über die zugehörige Releasepipeline sicher für die Produktion bereitgestellt werden.
 

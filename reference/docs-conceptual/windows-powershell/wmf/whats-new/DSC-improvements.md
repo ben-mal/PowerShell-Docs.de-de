@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,setup
 title: DSC-Verbesserungen in WMF 5.1
-ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.openlocfilehash: 445d0f7bb54c6b21b6af26c4174f3d6422caf6dd
+ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809096"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87771548"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Verbesserungen an DSC (Desired State Configuration) in WMF 5.1
 
@@ -345,12 +345,12 @@ Eine Konfiguration, die über Push bereitgestellt wurde, könnte an ihrer Quelle
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
+  ![Fehler: nicht signierte MOF-Datei gepusht](media/DSC-improvements/PushUnsignedMof.png)
 
 - Signieren Sie die Konfigurationsdatei mithilfe eines Codesignaturzertifikats.
 
-  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
+  ![MOF-Datei signieren](media/DSC-improvements/SignMofFile.png)
 
 - Versuchen Sie, die signierte MOF-Datei mithilfe von Push zu übertragen.
 
-  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)
+  ![Signierte MOF-Datei pushen](media/DSC-improvements/PushSignedMof.png)

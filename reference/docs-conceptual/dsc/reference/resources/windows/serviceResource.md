@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: DSC-Ressource „Service“
-ms.openlocfilehash: acd0710fb4b131876e3edece15b07cff8e9a8a9e
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: f936f58ffd00f84d8c6d5d41d93378eaa8db5879
+ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557004"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86463583"
 ---
 # <a name="dsc-service-resource"></a>DSC-Ressource „Service“
 
@@ -23,14 +23,18 @@ Service [string] #ResourceName
     Name = [string]
     [ BuiltInAccount = [string] { LocalService | LocalSystem | NetworkService }  ]
     [ Credential = [PSCredential] ]
+    [ StartupTimeout = [uint32]]
     [ StartupType = [string] { Automatic | Disabled | Manual }  ]
-    [ State = [string] { Running | Stopped }  ]
+    [ State = [string] { Ignore | Running | Stopped }  ]
+    [ Dependencies = [string[]] ]
     [ Description = [string] ]
+    [ DesktopInteract = [boolean]]
     [ DisplayName = [string] ]
     [ Path = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present } ]
     [ PsDscRunAsCredential = [PSCredential] ]
+    [ TerminateTimeout = [uint32] ]
 }
 ```
 
@@ -41,11 +45,15 @@ Service [string] #ResourceName
 |Name |Gibt den Namen des Diensts an. Beachten Sie, dass sich dieser mitunter vom Anzeigenamen unterscheidet. Mit dem Cmdlet `Get-Service` können Sie eine Liste der Dienste und ihren aktuellen Status abrufen. |
 |BuiltInAccount |Gibt das zu verwendende Anmeldekonto für den Dienst an. Die für diese Eigenschaft zulässigen Werte sind: **LocalService**, **LocalSystem** und **NetworkService**. |
 |Anmeldeinformationen |Gibt die Anmeldeinformationen für das Konto an, unter dem der Dienst ausgeführt wird. Diese Eigenschaft und die **BuiltinAccount**-Eigenschaft können nicht zusammen verwendet werden. |
+|StartupTimeout | Die Zeit (in Millisekunden ), die gewartet werden soll, bis der Dienst ausgeführt wird.|
 |StartupType |Gibt den Starttyp für den Dienst an. Die für diese Eigenschaft zulässigen Werte sind: **Automatic**, **Disabled** und **Manual**. |
 |State |Gibt den Status an, den Sie für den Dienst sicherstellen möchten. Die Werte sind: **Running** oder **Stopped**. |
-|BESCHREIBUNG |Gibt die Beschreibung des Zieldiensts an. |
+|TerminateTimeout |Die Wartezeit (in Millisekunden), die gewartet werden soll, bis der Dienst beendet wird.|
+|Abhängigkeiten | Ein Array mit den Namen der Abhängigkeiten, die der Dienst aufweisen sollte. |
+|Beschreibung |Gibt die Beschreibung des Zieldiensts an. |
+|DesktopInteract | Gibt an, ob der Dienst in der Lage sein soll, mit einem Fenster auf dem Desktop zu kommunizieren. Muss für Dienste, die nicht als LocalSystem ausgeführt werden, FALSE sein.|
 |DisplayName |Gibt den Anzeigenamen des Zieldiensts an. |
-|`Path` |Gibt den Pfad zur Binärdatei eines neuen Diensts an. |
+|Pfad |Gibt den Pfad zur Binärdatei eines neuen Diensts an. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
 

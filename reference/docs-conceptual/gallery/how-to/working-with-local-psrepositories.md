@@ -3,12 +3,12 @@ ms.date: 11/06/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery,psget
 title: Arbeiten mit lokalen PSRepositorys
-ms.openlocfilehash: c1bd905674ae76a3badd3eff50780f0e1bb5fc64
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
+ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75415817"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85837578"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>Arbeiten mit privaten PowerShellGet-Repositorys
 
@@ -109,16 +109,16 @@ Beispiele:
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
-Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey $nuGetApiKey
 ```
+
+> [!IMPORTANT]
+> Um die Sicherheit zu gewährleisten, sollten API-Schlüssel nicht in Skripts hartcodiert sein. Verwenden Sie ein sicheres Schlüsselverwaltungssystem. Bei der manuellen Ausführung eines Befehls dürfen API-Schlüssel nicht als Klartext übergeben werden, um zu vermeiden, dass dieser protokolliert wird. Mit dem Cmdlet `Read-Host` kann der Wert des API-Schlüssels sicher übergeben werden.
 
 ```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'c:\projects\MyModule' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
-
-> [!IMPORTANT]
-> Um die Sicherheit zu gewährleisten, sollten API-Schlüssel nicht in Skripts hartcodiert sein. Verwenden Sie ein sicheres Schlüsselverwaltungssystem.
 
 ### <a name="publishing-a-module-from-the-psgallery"></a>Veröffentlichung eines Moduls aus der PSGallery
 
@@ -126,7 +126,7 @@ Um ein Modul aus der PSGallery in Ihrem lokalen PSRepository zu veröffentlichen
 
 - Geben Sie den Namen des Pakets an
 - Geben Sie „NuGet“ als Anbieter an
-- Geben Sie den PSGallery-Speicherort als Quelle an (https://www.powershellgallery.com/api/v2) )
+- Geben Sie den PSGallery-Speicherort als Quelle an (https://www.powershellgallery.com/api/v2))
 - Geben Sie den Pfad zu Ihrem lokalen Repository an
 
 Beispiel:
@@ -179,18 +179,20 @@ Nach dem Ausführen dieser Befehle können Sie PowerShellGet in Ihrem lokalen Re
 
 ```powershell
 # Publish to a NuGet Server repository using my NuGetAPI key
-Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApiKey 'oy2bi4avlkjolp6bme6azdyssn6ps3iu7ib2qpiudrtbji'
+Publish-Module -Path 'F:\OfflinePowershellGet' -Repository LocalPsRepo -NuGetApiKey $nuGetApiKey
+```
 
+> [!IMPORTANT]
+> Um die Sicherheit zu gewährleisten, sollten API-Schlüssel nicht in Skripts hartcodiert sein. Verwenden Sie ein sicheres Schlüsselverwaltungssystem. Bei der manuellen Ausführung eines Befehls dürfen API-Schlüssel nicht als Klartext übergeben werden, um zu vermeiden, dass dieser protokolliert wird. Mit dem Cmdlet `Read-Host` kann der Wert des API-Schlüssels sicher übergeben werden.
+
+```powershell
 # Publish to a file share repo - the NuGet API key must be a non-blank string
 Publish-Module -Path 'F:\OfflinePowerShellGet' -Repository LocalPsRepo -NuGetApiKey 'AnyStringWillDo'
 ```
 
 ## <a name="use-packaging-solutions-to-host-powershellget-repositories"></a>Verwenden von Paketierungslösungen zum Hosten von PowerShellGet-Repositorys
 
-Sie können auch Paketierungslösungen wie Azure Artifacts verwenden, um ein privates oder öffentliches PowerShellGet-Repository zu hosten. Weitere Informationen und Anweisungen finden Sie in der [Azure Artifacts-Dokumentation](https://docs.microsoft.com/azure/devops/artifacts/tutorials/private-powershell-library).
-
-> [!IMPORTANT]
-> Um die Sicherheit zu gewährleisten, sollten API-Schlüssel nicht in Skripts hartcodiert sein. Verwenden Sie ein sicheres Schlüsselverwaltungssystem.
+Sie können auch Paketierungslösungen wie Azure Artifacts verwenden, um ein privates oder öffentliches PowerShellGet-Repository zu hosten. Weitere Informationen und Anweisungen finden Sie in der [Azure Artifacts-Dokumentation](/azure/devops/artifacts/tutorials/private-powershell-library).
 
 <!-- external links -->
 [OfflinePowerShellGetDeploy]: https://www.powershellgallery.com/packages/OfflinePowerShellGetDeploy/0.1.1
