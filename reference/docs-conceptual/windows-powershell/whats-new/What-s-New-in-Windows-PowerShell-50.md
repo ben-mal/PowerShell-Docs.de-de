@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Neuerungen in Windows PowerShell 5.0
-ms.openlocfilehash: 314be1d4da2d3df967ac8898745b7b1aaf69de2a
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+ms.openlocfilehash: 59ccc83c7d4736181f13b72c4d3725694f80c1c8
+ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216004"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90847033"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Neuerungen in Windows PowerShell 5.0
 
@@ -470,40 +470,74 @@ Windows PowerShell 3.0 umfasst viele Features, die darauf ausgelegt sind, die Sp
 
 Zur Windows PowerShell-Kerninstallation wurden neue Cmdlets hinzugefügt, dazu gehören Cmdlets zur Verwaltung geplanter Aufträge, getrennte Sitzungen, die CIM-Integration und das aktualisierbare Hilfesystem.
 
-|                           |                                 |
-| ------------------------- | ------------------------------- |
-| Add-JobTrigger            | New-JobTrigger                  |
-| Connect-PSSession         | New-PSSessionConfigurationFile  |
-| ConvertFrom-Json          | New-PSTransportOption           |
-| ConvertTo-Json            | New-PSWorkflowExecutionOption   |
-| Disable-JobTrigger        | New-PSWorkflowSession           |
-| Disable-ScheduledJob      | New-ScheduledJobOption          |
-| Disconnect-PSSession      | New-WinEvent                    |
-| Enable-JobTrigger         | Receive-PSSession               |
-| Enable-ScheduledJob       | Register-CimIndicationEvent     |
-| Get-CimAssociatedInstance | Register-ScheduledJob           |
-| Get-CimClass              | Remove-CimInstance              |
-| Get-CimInstance           | Remove-CimSession               |
-| Get-CimSession            | Remove-TypeData                 |
-| Get-ControlPanelItem      | Rename-Computer                 |
-| Get-IseSnippet            | Resume-Job                      |
-| Get-JobTrigger            | Save-Help                       |
-| Get-ScheduledJob          | Set-CimInstance                 |
-| Get-ScheduledJobOption    | Set-JobTrigger                  |
-| Get-TypeData              | Set-ScheduledJob                |
-| Import-IseSnippet         | Set-ScheduledJobOption          |
-| Invoke-AsWorkflow         | Show-Command                    |
-| Invoke-CimMethod          | Show-ControlPanelItem           |
-| Invoke-RestMethod         | Suspend-Job                     |
-| Invoke-WebRequest         | Test-PSSessionConfigurationFile |
-| New-CimInstance           | Unblock-File                    |
-| New-CimSession            | Unregister-ScheduledJob         |
-| New-CimSessionOption      | Update-Help                     |
-| New-IseSnippet            |                                 |
+- CimCmdlets
+  - Get-CimAssociatedInstance
+  - Get-CimClass
+  - Get-CimInstance
+  - Get-CimSession
+  - Invoke-CimMethod
+  - New-CimInstance
+  - New-CimSession
+  - New-CimSessionOption
+  - Register-CimIndicationEvent
+  - Remove-CimInstance
+  - Remove-CimSession
+  - Set-CimInstance
+- Microsoft.PowerShell.Core
+  - Connect-PSSession
+  - Disconnect-PSSession
+  - New-PSSessionConfigurationFile
+  - New-PSTransportOption
+  - Receive-PSSession
+  - Resume-Job
+  - Save-Help
+  - Suspend-Job
+  - Test-PSSessionConfigurationFile
+  - Update-Help
+- Microsoft.PowerShell.Diagnostics
+  - New-WinEvent
+- Microsoft.PowerShell.Management
+  - Get-ControlPanelItem
+  - Rename-Computer
+  - Show-ControlPanelItem
+- Microsoft.PowerShell.Utility
+  - ConvertFrom-Json
+  - ConvertTo-Json
+  - Get-TypeData
+  - Invoke-RestMethod
+  - Invoke-WebRequest
+  - Remove-TypeData
+  - Show-Command
+  - Unblock-File
+- PSScheduledJob
+  - Add-JobTrigger
+  - Disable-JobTrigger
+  - Disable-ScheduledJob
+  - Enable-JobTrigger
+  - Enable-ScheduledJob
+  - Get-JobTrigger
+  - Get-ScheduledJob
+  - Get-ScheduledJobOption
+  - New-JobTrigger
+  - New-ScheduledJobOption
+  - Register-ScheduledJob
+  - Set-JobTrigger
+  - Set-ScheduledJob
+  - Set-ScheduledJobOption
+  - Unregister-ScheduledJob
+- PSWorkflow
+  - New-PSWorkflowExecutionOption
+  - New-PSWorkflowSession
+- PSWorkflowUtility
+  - Invoke-AsWorkflow
+- ISE
+  - Get-IseSnippet
+  - Import-IseSnippet
+  - New-IseSnippet
 
 ### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>Verbesserungen an vorhandenen Core-Cmdlets und Anbietern
 
-Windows PowerShell 3.0 umfasst neue Features für vorhandene Cmdlets, dazu gehören die vereinfachte Syntax und neue Parameter für folgende Cmdlets: Computer-Cmdlets, CSV-Cmdlets, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, Security-Cmdlets, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member und WMI-Cmdlets.
+Windows PowerShell 3.0 umfasst neue Features für vorhandene Cmdlets. Dazu gehören die vereinfachte Syntax und neue Parameter für folgende Cmdlets: Computer-Cmdlets, CSV-Cmdlets, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, Security-Cmdlets, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member und WMI-Cmdlets.
 
 Die Windows PowerShell-Anbieter wurden auch erheblich verbessert, dazu gehört die Unterstützung von Zertifikatanbietern zur Verwaltung von Secure Socket Layer (SSL)-Zertifikaten für das Web-Hosting, die Unterstützung von Anmeldeinformationen, permanente Netzwerklaufwerke, und alternative Datenstreams auf Dateisystemlaufwerken.
 
@@ -527,7 +561,7 @@ Windows PowerShell-Module werden nun automatisch importiert, wenn Sie ein belieb
 
 Der automatische Import von Modulen wird durch Verwenden des Cmdlets in einem Befehl oder durch Ausführen von `Get-Command` für ein Cmdlet ohne Platzhalter oder von `Get-Help` für ein Cmdlet ohne Platzhalter ausgelöst.
 
-Sie können mithilfe der Einstellungsvariablen **$PSModuleAutoLoadingPreference** das automatische Importieren von Modulen aktivieren, deaktivieren und konfigurieren.
+Sie können den mithilfe der **$PSModuleAutoLoadingPreference**-Einstellungsvariable das automatische Importieren von Modulen aktivieren, deaktivieren und konfigurieren.
 
 Weitere Informationen finden Sie unter [about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules), [about_Preference_Variables](/powershell/module/microsoft.powershell.core/about/about_Preference_Variables) und in den Hilfethemen für die Cmdlets `Get-Command` und `Import-Module`.
 
@@ -537,12 +571,12 @@ Mit Windows PowerShell 3.0 erhalten Sie die erweiterte Feature-Unterstützung f�
 
 1. Die Modulprotokollierung für einzelne Module (LogPipelineExecutionDetails) und die neue „Modulprotokollierung aktivieren“-Gruppenrichtlinieneinstellung
 2. Erweiterte Modulobjekte, die die Werte aus dem Modulmanifest verfügbar machen
-3. Die neue **ExportedCommands**-Eigenschaft von Modulen, einschließlich geschachtelter Module, die Befehle aller Typen kombinieren.
-4. Verbesserte Erkennung verfügbarer (nicht importierter) Module, einschließlich Zulassen der Parameter **Path** und **ListAvailable** im selben Befehl.
+3. Die neue **ExportedCommands**-Eigenschaft der Module, darunter geschachtelte Module, die Befehle aller Typen kombinieren
+4. Verbesserte Erkennung verfügbarer (nicht importierter) Module, einschließlich dem Zulassen der **Path**- und **ListAvailable**-Parameter in demselben Befehl
 5. Der neue **DefaultCommandPrefix**-Schlüssel in Modulemanifesten, der Namenskonflikte vermeidet, ohne den Modulcode zu ändern.
 6. Verbesserte Modulvoraussetzungen, einschließlich voll qualifizierter, erforderlicher Module mit Version und GUID sowie dem automatischen Importieren erforderlicher Module
 7. Ruhigerer, optimierter Ablauf des Cmdlets `New-ModuleManifest`.
-8. Neuer **Module**-Parameter für „#Requires“
+8. Neuer **Module**-Parameter für # benötigt
 9. Verbessertes Cmdlet `Import-Module` mit den Parametern **MinimumVersion** und **RequiredVersion**.
 
 ### <a name="simplified-command-discovery"></a>Vereinfachte Ermittlung von Befehlen
@@ -557,7 +591,7 @@ Windows PowerShell 3.0 verbessert die Protokollierungs- und Nachverfolgungsunter
 
 ### <a name="formatting-and-output-improvements"></a>Formatierung und Ausgabeverbesserungen
 
-Neue Formatierungs- und Ausgabeverbesserungen steigern die Effizienz aller Windows PowerShell-Benutzer. Die Verbesserungen umfassen die Umleitung der Ausgabe für alle Datenströme, ein verbessertes Cmdlet „Update-Type“, das Typen dynamisch ohne „Format.ps1xml“-Dateien hinzufügt, Zeilenumbruch in der Ausgabe, Standardformatierungseigenschaften benutzerdefinierter Objekte, den **PSCustomObject**-Typ, verbesserte Formatierung für WMI-Objekte und heterogene Objekte und Unterstützung der Erkennung von Methodenüberladungen.
+Neue Formatierungs- und Ausgabeverbesserungen steigern die Effizienz aller Windows PowerShell-Benutzer. Die Verbesserungen umfassen Ausgabeumleitungen für alle Streams, ein verbessertes Update-Typ-Cmdlet, das Typen dynamisch ohne Format.ps1xml-Dateien hinzufügt, Zeilenumbruch in der Ausgabe, Standard-Formatierungseigenschaften der benutzerdefinierten Objekte, der **PSCustomObject**-Typ, verbesserte Formatierung für WMI-Objekte und heterogene Objekte, und Unterstützung für die Erkennung überlasteter Methoden.
 
 ### <a name="enhanced-console-host-experience"></a>Verbesserte Konsolenhosterfahrung
 
@@ -575,9 +609,9 @@ Die erheblichen Leistungsverbesserungen in Windows PowerShell stammen aus der ne
 
 Windows PowerShell 3.0 bietet Unterstützung der Features „RunAs“ und „SharedHost“.
 
-Das Feature *RunAs* ist für Windows PowerShell Workflow konzipiert. Benutzer einer Sitzungskonfiguration können damit Sitzungen erstellen, die mit der Berechtigung eines freigegebenen Benutzerkontos ausgeführt werden. Dadurch können Benutzer mit weniger Privilegien bestimmte Befehle und Skripts mit Administratorberechtigungen ausführen, außerdem entfällt das Hinzufügen von weniger erfahrenen Benutzern zur Administratorengruppe.
+Das *RunAs*-Feature ist für Windows PowerShell Workflow konzipiert, damit können Benutzer einer Sitzungskonfiguration Sitzungen erstellen, die mit der Berechtigung eines freigegebenen Benutzerkontos ausgeführt werden. Dadurch können Benutzer mit weniger Privilegien bestimmte Befehle und Skripts mit Administratorberechtigungen ausführen, außerdem entfällt das Hinzufügen von weniger erfahrenen Benutzern zur Administratorengruppe.
 
-Mit dem Feature **SharedHost** können mehrere Benutzer auf mehreren Computern gleichzeitig eine Verbindung mit einer Workflowsitzung herstellen und den Status eines Workflows überwachen. Benutzer können einen Workflow auf einem Computer starten und dann auf einem anderen Computer eine Verbindung zur Workflowsitzung herstellen, ohne die Sitzung auf dem ursprünglichen Computer trennen zu müssen. Benutzer müssen über die gleichen Berechtigungen verfügen und die gleiche Sitzungskonfiguration verwenden. Weitere Informationen finden Sie unter „Ausführen eines Windows PowerShell Workflows“ in den ersten Schritten mit Windows PowerShell Workflow.
+Mit dem **SharedHost**-Feature können mehrere Benutzer auf mehreren Computern gleichzeitig eine Verbindung zu einer Workflowsitzung herstellen und den Status eines Workflows überwachen. Benutzer können einen Workflow auf einem Computer starten und dann auf einem anderen Computer eine Verbindung zur Workflowsitzung herstellen, ohne die Sitzung auf dem ursprünglichen Computer trennen zu müssen. Benutzer müssen über die gleichen Berechtigungen verfügen und die gleiche Sitzungskonfiguration verwenden. Weitere Informationen finden Sie unter „Ausführen eines Windows PowerShell Workflows“ in den ersten Schritten mit Windows PowerShell Workflow.
 
 ### <a name="special-character-handling-improvements"></a>Verbesserungen bei der Verarbeitung von Sonderzeichen
 
