@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über Arrays wissen wollten
 description: Arrays sind ein grundlegendes Sprachfeature der meisten Programmiersprachen.
 ms.date: 07/07/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e744878844a3cfd32d6124538a44a29ba90798ab
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 307189bf27d383159d34181eca4dac1f77792e51
+ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092098"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91543371"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Alles, was Sie schon immer über Arrays wissen wollten
 
@@ -752,7 +752,10 @@ if ( -not ( $results -ne 'Passed') )
 
 ## <a name="adding-to-arrays"></a>Hinzufügen zu Arrays
 
-Möglicherweise fragen Sie sich an dieser Stelle, wie Sie Elemente zu einem Array hinzufügen. Die schnelle Antwort lautet: „Gar nicht.“ Ein Array weist im Arbeitsspeicher eine unveränderliche Größe auf. Wenn Sie es erweitern oder ihm ein einzelnes Element hinzufügen müssen, müssen Sie ein neues Array erstellen und die Werte aus dem alten Array hineinkopieren. Das klingt nach viel Arbeit und Rechenaufwand, aber in PowerShell ist das Erstellen des neuen Arrays weniger komplex.
+Möglicherweise fragen Sie sich an dieser Stelle, wie Sie Elemente zu einem Array hinzufügen. Die schnelle Antwort lautet: „Gar nicht.“ Ein Array weist im Arbeitsspeicher eine unveränderliche Größe auf. Wenn Sie es erweitern oder ihm ein einzelnes Element hinzufügen müssen, müssen Sie ein neues Array erstellen und die Werte aus dem alten Array hineinkopieren. Das klingt nach viel Arbeit, aber in PowerShell ist das Erstellen des neuen Arrays weniger komplex. PowerShell implementiert den Additionsoperator (`+`) für Arrays.
+
+> [!NOTE]
+> PowerShell implementiert keinen Subtraktionsoperator. Wenn Sie eine flexible Alternative zu Arrays benötigen, müssen Sie ein [generisches `List`-Objekt](#generic-list) verwenden.
 
 ### <a name="array-addition"></a>Addition eines Arrays
 
@@ -814,8 +817,6 @@ $array = foreach ( $node in (1..5))
     "ATX-SQL-$node"
 }
 ```
-
-Indem wir die Ergebnisse von `foreach` einer Variable zuweisen, erfassen wir alle Objekte und erstellen ein einzelnes Array.
 
 ## <a name="array-types"></a>Arraytypen
 
