@@ -1,14 +1,14 @@
 ---
 title: Alles, was Sie schon immer über Arrays wissen wollten
 description: Arrays sind ein grundlegendes Sprachfeature der meisten Programmiersprachen.
-ms.date: 07/07/2020
+ms.date: 10/08/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 307189bf27d383159d34181eca4dac1f77792e51
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: b26aa11aadbeea1984b2754cfcad061c7fa3ff1e
+ms.sourcegitcommit: 3445a343e0683124652f64abef6fe911f9eb989f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91543371"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91852560"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Alles, was Sie schon immer über Arrays wissen wollten
 
@@ -706,7 +706,7 @@ Ein `$null`-Array ist nicht dasselbe wie ein leeres Array. Wenn Sie wissen, dass
 ```powershell
 if ( $array.count -gt 0 )
 {
-    'Array isn't empty'
+    "Array isn't empty"
 }
 ```
 
@@ -724,7 +724,7 @@ Wenn Sie mit PowerShell 5.1 arbeiten, können Sie das Objekt vor der Überprüf
 ```powershell
 if ( @($array).count -gt 0 )
 {
-    'Array isn't empty'
+    "Array isn't empty"
 }
 ```
 
@@ -733,7 +733,7 @@ Um ganz sicherzugehen, überprüfen Sie zunächst auf `$null` und überprüfen d
 ```powershell
 if ( $null -ne $array -and @($array).count -gt 0 )
 {
-    'Array isn't empty'
+    "Array isn't empty"
 }
 ```
 
