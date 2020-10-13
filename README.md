@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0d91230aa063e58106b35a4ada1d577f316f8f27
-ms.sourcegitcommit: c752ae8d0fa47eaaf3c5eae2a5a770f06c63921c
+ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
+ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840991"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91899265"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open-Source-Verhaltenskodex
 
@@ -21,27 +21,37 @@ Für dieses Projekt gelten die Microsoft-Verhaltensregeln für Open Source ([Mic
 
 ## <a name="powershell-documentation"></a>PowerShell-Dokumentation
 
-Willkommen im Repository der offiziellen PowerShell-Dokumentation.
+Willkommen im Repository „PowerShell-Docs“, der offiziellen PowerShell-Dokumentation.
 
 ## <a name="repository-structure"></a>Repository-Struktur
 
-In diesem Repository befinden sich diese Ordner auf oberster Ebene, die jeweils eine Dokumentenmappe enthalten, die in der [Microsoft-Dokumentation](https://docs.microsoft.com/powershell) veröffentlicht wird.
+Nachfolgend werden die Hauptordner dieses Repositorys beschrieben.
 
-- [/reference/](https://docs.microsoft.com/powershell/scripting/) ist für die konzeptuellen PowerShell-Themen und die Modulreferenz für die Versionen 5.1, 6.0 und 7.0 bestimmt. Dieser Inhalt ist auch die Quelle von Hilfeinhalten, die vom `Get-Help`-Cmdlet abgerufen werden.
-  - [docs-conceptual/](https://docs.microsoft.com/powershell): Dieser Ordner enthält die konzeptionelle Dokumentation und die folgenden Dokumentationen:
-    - [developer/](https://docs.microsoft.com/powershell/scripting/developer/) enthält die Dokumentation des PowerShell SDK (migriert von MSDN).
-    - [dsc/](https://docs.microsoft.com/powershell/scripting/dsc/) ist für das Desired State Configuration-Feature bestimmt.
-    - [gallery/](https://docs.microsoft.com/powershell/scripting/gallery) enthält den [PowerShell-Katalog](https://www.powershellgallery.com/).
-    - [jea/](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/overview) ist für das Feature „Just Enough Administration (JEA)“ bestimmt.
-    - [/wmf](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) enthält Versionshinweise für Windows Management Framework, das Paket, das für die Verteilung neuer Versionen von PowerShell an frühere Versionen von Windows verwendet wird.
+- `.github`: enthält Konfigurationseinstellungen, die von GitHub für dieses Repository verwendet werden
+- `.vscode`: enthält Konfigurationseinstellungen und empfohlene Erweiterungen für Visual Studio Code (VS Code)
+- `assets`: enthält in der Dokumentation verlinkte Dateien, die heruntergeladen werden können
+- `reference`: enthält die Dokumentation, die in [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/) veröffentlicht wurde, einschließlich Referenzinhalten und konzeptionellen Inhalten
+  - `5.1`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 5.1
+  - `6`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 6
+  - `7.0`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 7.0
+  - `7.1`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 7.1
+  - `bread`: enthält das Inhaltsverzeichnis, das für die Brotkrümelnavigation verwendet wird
+  - `docs-conceptual`: enthält die konzeptionellen Artikel, die auf der Docs-Website veröffentlicht werden. In der Regel spiegelt die Ordnerstruktur das Inhaltsverzeichnis wider.
+  - `mapping`: enthält die vom Buildsystem verwendete Konfiguration der Versionszuordnung
+  - `media`: enthält Imagedateien, die in der Dokumentation verwendet werden. Die `docs-conceptual`-Inhalte enthalten häufig Medienordner. Weitere Informationen zur Verwendung von Images in der Dokumentation finden Sie im Leitfaden für Mitwirkende.
+  - `module`: enthält die Markdownquelle für die Seite „Modulbrowser“
+- `tests`: enthält die Pester-Tests, die vom Buildsystem verwendet werden
+- `tools`: enthält andere Tools, die vom Buildsystem verwendet werden
+
+> HINWEIS: Die Referenzinhalte (in den nummerierten Ordnern) werden verwendet, um die Webseiten auf der Dokumentationswebsite sowie die aktualisierbare Hilfe zu erstellen, die von PowerShell verwendet wird.
+> Die Artikel im Ordner `docs-conceptual` werden nur auf der Docs-Website veröffentlicht.
 
 ## <a name="contributing"></a>Mitwirken
 
-Beiträge zu diesem Repository werden aktiv über [Pullanforderungen](https://help.github.com/articles/using-pull-requests/) im _Staging_-Branch zusammengeführt.
-Beachten Sie, dass Sie vor der Übermittlung einer Pullanforderung [einen Beitragslizenzvertrags unterschreiben](https://cla.microsoft.com/) müssen, um sicherzustellen, dass die Community Ihre Einsendungen kostenlos verwenden darf.
+Wir freuen uns über öffentliche Beiträge zu diesem Repository. Verwenden Sie hierfür [Pullanforderungen](https://help.github.com/articles/using-pull-requests/) im _Staging_-Branch.
+Hinweis: Sie müssen unsere [Lizenzvereinbarung für Mitwirkende](https://cla.microsoft.com/) unterschreiben, damit wir Ihre Pull Requests annehmen können. Dies ist eine einmalige Anforderung.
 
-Weitere Informationen zu Beiträgen finden Sie in unserem [Handbuch für Mitwirkende](https://docs.microsoft.com/powershell/scripting/community/contributing/overview).
-Das Handbuch für Mitwirkende enthält ausführliche Informationen zum Erstellen von Beiträgen zur Dokumentation, Stil- und Formatierungsvorgaben sowie Vorschlagen von Tools. Verwenden Sie die Vorlagen für Probleme und Pullanforderungen, um die Dokumentation über Versionen hinweg konsistent zu halten.
+Weitere Informationen zu Beiträgen finden Sie in unserem [Handbuch für Mitwirkende](https://aka.ms/PSDocsContributor). Das Handbuch für Mitwirkende enthält ausführliche Informationen zum Erstellen von Beiträgen zur Dokumentation, Stil- und Formatierungsvorgaben sowie Vorschlagen von Tools. Verwenden Sie die Vorlagen für Probleme und Pullanforderungen, um die Dokumentation über Versionen hinweg konsistent zu halten.
 
 ## <a name="licenses"></a>Lizenzen
 
