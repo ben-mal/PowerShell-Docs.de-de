@@ -1,13 +1,13 @@
 ---
-ms.date: 09/14/2020
+ms.date: 10/15/2020
 title: Verwenden experimenteller Features in PowerShell
 description: In diesem Artikel wird beschrieben, welche experimentellen Features verfügbar sind und wie sie verwendet werden.
-ms.openlocfilehash: 74623240bfb19022ae342a5d23e2ed4f455afa45
-ms.sourcegitcommit: 30c0c1563f8e840f24b65297e907f3583d90e677
+ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
+ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574469"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156574"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Verwenden experimenteller Features in PowerShell
 
@@ -34,9 +34,10 @@ Dieser Artikel beschreibt, welche experimentellen Features verfügbar sind und w
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
 | PSNullConditionalOperators (Mainstream in PS 7.1+)         |         | &check; |         |
 | PSUnixFileStat (nur Nicht-Windows)                          |         | &check; | &check; |
-| PSNativePSPathResolution (Mainstream in PS 7.1+)           |         |         |         |
+| PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
+| PSSubsystemPluginModel                                     |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
 
@@ -153,9 +154,6 @@ Darüber hinaus gilt unter Windows Folgendes: Wenn der Pfad mit `~` beginnt, wir
 - Handelt es sich bei dem Pfad nicht um ein PSDrive oder `~` (unter Windows), erfolgt keine Pfadnormalisierung.
 - Wird der Pfad in einfachen Anführungszeichen angegeben, wird er nicht aufgelöst und als Literal betrachtet.
 
-> [!NOTE]
-> Dieses Feature befindet sich nicht mehr in der experimentellen Phase und wird in PowerShell 7.1 und höher jetzt allgemein unterstützt.
-
 ## <a name="psnotapplyerroractiontostderr"></a>PSNotApplyErrorActionToStderr
 
 Wenn dieses experimentelle Feature aktiviert ist, werden Fehlerdatensätze, die von nativen Befehlen umgeleitet werden, wie bei der Verwendung von Umleitungsoperatoren (`2>&1`), nicht in die `$Error`-Variable geschrieben, und die Einstellungsvariable `$ErrorActionPreference` beeinflusst die umgeleitete Ausgabe nicht.
@@ -228,3 +226,11 @@ Dies funktioniert nur für die Vervollständigung mit der TAB-TASTE (interaktive
 
 > [!NOTE]
 > Dieses Feature befindet sich nicht mehr in der experimentellen Phase und wird in PowerShell 7 und höher jetzt allgemein unterstützt.
+
+## <a name="pssubsystempluginmodel"></a>PSSubsystemPluginModel
+
+Dieses Feature aktiviert das Plug-In-Modell des Subsystems in PowerShell. Es ermöglicht das Trennen von Komponenten von `System.Management.Automation.dll` in einzelne Subsysteme, die sich in einer eigenen Assembly befinden. Diese Trennung reduziert den Speicherbedarf des Datenträgers der Kern-Engine von PowerShell. Zudem werden diese Komponenten zu optionalen Features für eine Minimalinstallation von PowerShell.
+
+Derzeit wird nur das Subsystem **CommandPredictor** unterstützt. Dieses Subsystem wird zusammen mit dem PSReadLine-Modul zum Bereitstellen benutzerdefinierter Vorhersage-Plug-Ins verwendet. Zukünftig können **Job**, **CommandCompleter**, **Remoting** und andere Komponenten in Subsystemassemblys außerhalb von `System.Management.Automation.dll` getrennt werden.
+
+Das experimentelle Feature enthält das neue Cmdlet [Get-PSSubsystem](xref:Microsoft.PowerShell.Core.Get-PSSubsystem). Dieses Cmdlet ist nur verfügbar, wenn das Feature aktiviert ist. Es gibt Informationen zu den Subsystemen zurück, die auf dem System verfügbar sind.
