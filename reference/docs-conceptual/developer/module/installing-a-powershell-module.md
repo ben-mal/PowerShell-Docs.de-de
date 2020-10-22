@@ -1,46 +1,46 @@
 ---
 title: Installieren eines PowerShell-Moduls | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6a4e9ac2884d0b300b5c1ad8b6156525438a1650
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
-ms.translationtype: MT
+ms.openlocfilehash: 201679c97acdccae9aa4c2be641ee1da09a8275c
+ms.sourcegitcommit: d073e69708bd499ea42642b4b923ce5f11cca295
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784859"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197824"
 ---
 # <a name="installing-a-powershell-module"></a>Installieren eines PowerShell-Moduls
 
-Nachdem Sie das PowerShell-Modul erstellt haben, möchten Sie das Modul wahrscheinlich auf einem System installieren, damit Sie von Ihnen oder anderen Benutzern verwendet werden können. Im Allgemeinen besteht dies darin, die Moduldateien (d. psm1. die binäre Assembly, das Modul Manifest und alle zugehörigen Dateien) in ein Verzeichnis auf diesem Computer zu kopieren. Bei einem sehr kleinen Projekt kann dies so einfach sein wie das Kopieren und Einfügen der Dateien mit Windows-Explorer auf einem einzelnen Remote Computer. bei größeren Lösungen möchten Sie jedoch möglicherweise einen komplexeren Installationsprozess verwenden. Unabhängig davon, wie Sie Ihr Modul auf das System übernehmen, kann PowerShell eine Reihe von Techniken verwenden, mit denen Benutzer Ihre Module suchen und verwenden können. Das Hauptproblem bei der Installation besteht daher darin, sicherzustellen, dass PowerShell das Modul finden kann. Weitere Informationen finden Sie unter [Importieren eines PowerShell-Moduls](./importing-a-powershell-module.md).
+Nachdem Sie das PowerShell-Modul erstellt haben, möchten Sie das Modul wahrscheinlich auf einem System installieren, damit Sie oder andere es benutzen können. Im Allgemeinen müssen Sie hierzu die Moduldateien (d. h. die PSM1- oder binäre Assemblydatei, das Modulmanifest und alle zugehörigen Dateien) in ein Verzeichnis auf diesem Computer kopieren. Bei einem sehr kleinen Projekt kann dies so einfach sein wie das Kopieren und Einfügen der Dateien mit Windows Explorer auf einem einzelnen Remotecomputer. Bei größeren Lösungen sollten Sie jedoch einen komplexeren Installationsprozess verwenden. Unabhängig davon, wie Sie Ihr Modul auf das System übertragen, kann PowerShell eine Reihe von Techniken verwenden, mit denen Benutzer Ihre Module suchen und verwenden können. Das Hauptproblem bei der Installation besteht daher darin, sicherzustellen, dass PowerShell das Modul finden kann. Weitere Informationen finden Sie unter [Importieren eines PowerShell-Moduls](./importing-a-powershell-module.md).
 
 ## <a name="rules-for-installing-modules"></a>Regeln für die Installation von Modulen
 
-Die folgenden Informationen beziehen sich auf alle Module, einschließlich der Module, die Sie für Ihre eigene Verwendung erstellen, der Module, die Sie von anderen Anbietern erhalten, sowie von Modulen, die Sie an andere Benutzer verteilen.
+Die folgenden Informationen beziehen sich auf alle Module einschließlich derer, die Sie zur eigenen Verwendung erstellen, der Module, die Sie von anderen Anbietern erhalten, sowie Module, die Sie an andere Benutzer verteilen.
 
-### <a name="install-modules-in-psmodulepath"></a>Installieren von Modulen in psmodulepath
+### <a name="install-modules-in-psmodulepath"></a>Installieren von Modulen in PSModulePath
 
-Installieren Sie nach Möglichkeit alle Module in einem Pfad, der in der **psmodulepath** -Umgebungsvariablen aufgelistet ist, oder fügen Sie den Modulpfad dem Wert der Umgebungsvariablen **psmodulepath** hinzu.
+Installieren Sie nach Möglichkeit alle Module in einem Pfad, der in der **PSModulePath**-Umgebungsvariablen aufgeführt ist, oder fügen Sie den Modulpfad dem Wert der **PSModulePath**-Umgebungsvariablen hinzu.
 
-Die **psmodulepath** -Umgebungsvariable ($env:P smodulepath) enthält die Speicherorte von Windows PowerShell-Modulen. Die Cmdlets basieren auf dem Wert dieser Umgebungsvariablen, um Module zu suchen.
+Die **PSModulePath**-Umgebungsvariable ($Env:PSModulePath) enthält die Speicherorte von Windows PowerShell-Modulen. Cmdlets suchen Module auf Basis des Werts dieser Umgebungsvariablen.
 
-Standardmäßig enthält der Wert der Umgebungsvariablen **psmodulepath** die folgenden System-und Benutzermodul Verzeichnisse, aber Sie können den Wert hinzufügen und bearbeiten.
+Standardmäßig enthält der Wert der Umgebungsvariablen **PSModulePath** die folgenden System- und Benutzermodulverzeichnisse. Sie können den Wert jedoch ergänzen und bearbeiten.
 
-- `$PSHome\Modules`%Windir%\System32\WindowsPowerShell\v1.0\Modules
+- `$PSHome\Modules` (%Windir%\System32\WindowsPowerShell\v1.0\Modules)
 
   > [!WARNING]
   > Dieser Speicherort ist für Module reserviert, die mit Windows ausgeliefert werden. Installieren Sie keine Module an diesem Speicherort.
 
-- `$Home\Documents\WindowsPowerShell\Modules`(%USERPROFILE%\documents\windowspowershell\modules)
+- `$Home\Documents\WindowsPowerShell\Modules` (%UserProfile%\Dokumente\WindowsPowerShell\Modules)
 
-- `$Env:ProgramFiles\WindowsPowerShell\Modules`(%ProgramFiles%\windowspowershell\modules)
+- `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
 
-  Um den Wert der **psmodulepath** -Umgebungsvariablen abzurufen, verwenden Sie einen der folgenden Befehle.
+  Verwenden Sie einen der folgenden Befehle, um den Wert der **PSModulePath**-Umgebungsvariablen abzurufen.
 
   ```powershell
   $Env:PSModulePath
   [Environment]::GetEnvironmentVariable("PSModulePath")
   ```
 
-  Verwenden Sie das folgende Befehls Format, um dem Wert des Umgebungsvariablen Werts **psmodulepath** einen Modulpfad hinzuzufügen. Dieses Format verwendet die Methode "* **tenvironmentvariable** " der Klasse " **System. Environment** ", um eine Sitzungs unabhängige Änderung an der **psmodulepath** -Umgebungsvariablen vorzunehmen.
+  Verwenden Sie das folgende Befehlsformat, um dem Wert der **PSModulePath**-Umgebungsvariablen einen Modulpfad hinzuzufügen. Dieses Format verwendet die **SetEnvironmentVariable**-Methode der **System.Environment**-Klasse, um der Umgebungsvariablen **PSModulePath** einen sitzungsunabhängigen Pfad hinzuzufügen.
 
   ```powershell
   #Save the current value in the $p variable.
@@ -55,15 +55,15 @@ Standardmäßig enthält der Wert der Umgebungsvariablen **psmodulepath** die fo
   ```
 
   > [!IMPORTANT]
-  > Nachdem Sie den Pfad zu **psmodulepath**hinzugefügt haben, sollten Sie eine Umgebungs Meldung über die Änderung übertragen. Durch das Senden der Änderung können andere Anwendungen, wie z. b. die Shell, die Änderung übernehmen. Wenn Sie die Änderung übertragen möchten, lassen Sie den Produkt Installationscode eine **WM_SETTINGCHANGE** Nachricht senden, wobei `lParam` auf die Zeichenfolge "Environment" festgelegt ist. Stellen Sie sicher, dass Sie die Nachricht senden, nachdem der Installationscode des Moduls " **psmodulepath**" aktualisiert hat.
+  > Nachdem Sie **PSModulePath** den Pfad hinzugefügt haben, sollten Sie eine Nachricht über die Änderung an die Umgebung übertragen. Das Übertragen der Änderung ermöglicht anderen Anwendungen wie der Shell, die Änderung zu übernehmen. Um die Änderung zu übertragen, lassen Sie Ihren Produktinstallationscode eine **WM_SETTINGCHANGE**-Nachricht senden, wobei `lParam` auf die Zeichenfolge „Environment“ festgelegt ist. Stellen Sie sicher, dass Sie die Nachricht übertragen, nachdem der Modulinstallationscode **PSModulePath** aktualisiert hat.
 
-### <a name="use-the-correct-module-directory-name"></a>Richtigen Modul Verzeichnisnamen verwenden
+### <a name="use-the-correct-module-directory-name"></a>Verwenden des richtigen Modulverzeichnisnamens
 
-Ein wohl geformtes Modul ist ein Modul, das in einem Verzeichnis gespeichert ist, das denselben Namen wie der Basis Name mindestens einer Datei im Modul Verzeichnis hat. Wenn ein Modul nicht wohl geformt ist, wird es von Windows PowerShell nicht als Modul erkannt.
+Ein wohlgeformtes Modul ist ein Modul, das in einem Verzeichnis gespeichert ist, dessen Name mit dem Basisnamen mindestens einer Datei im Modulverzeichnis identisch ist. Wenn ein Modul nicht wohlgeformt ist, wird es von Windows PowerShell nicht als Modul erkannt.
 
-Der "Basisname" einer Datei ist der Name ohne die Dateinamenerweiterung. In einem wohlgeformten Modul muss der Name des Verzeichnisses, das die Moduldateien enthält, mit dem Basis Namen von mindestens einer Datei im Modul identisch sein.
+Der „Basisname“ einer Datei entspricht dem Dateinamen ohne Erweiterung. In einem wohlgeformten Modul muss der Name des Verzeichnisses, das die Moduldateien enthält, mit dem Basisnamen mindestens einer Datei im Modul identisch sein.
 
-Beispielsweise heißt das Verzeichnis im Fabrikam-Beispielmodul, das die Moduldateien enthält, den Namen Fabrikam, und mindestens eine Datei hat den Basisnamen "Fabrikam". In diesem Fall haben sowohl Fabrikam.psd1 als auch Fabrikam.dll den Basisnamen "Fabrikam".
+Beispielsweise hat das Verzeichnis im Fabrikam-Beispielmodul, das die Moduldateien enthält, den Namen „Fabrikam“, und mindestens eine Datei hat den Basisnamen „Fabrikam“. In diesem Fall haben „Fabrikam.psd1“ und „Fabrikam.dll“ beide den Basisnamen „Fabrikam“.
 
 ```
 C:\Program Files
@@ -76,52 +76,52 @@ C:\Program Files
 
 ```
 
-### <a name="effect-of-incorrect-installation"></a>Auswirkungen falscher Installation
+### <a name="effect-of-incorrect-installation"></a>Auswirkungen einer falschen Installation
 
-Wenn das Modul nicht wohl geformt ist und sein Speicherort nicht im Wert der **psmodulepath** -Umgebungsvariablen enthalten ist, funktionieren die grundlegenden Ermittlungs Features von Windows PowerShell, wie z. b. die folgenden, nicht.
+Wenn das Modul nicht wohlgeformt und sein Speicherort nicht im Wert der **PSModulePath**-Umgebungsvariablen enthalten ist, funktionieren grundlegende Ermittlungsfeatures von Windows PowerShell nicht, z. B. die folgenden.
 
-- Die Funktion zum automatischen Laden von Modulen kann das Modul nicht automatisch importieren.
+- Das Feature „Module Auto-Loading“ kann das Modul nicht automatisch importieren.
 
-- Der `ListAvailable` -Parameter des Cmdlets " [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) " kann das Modul nicht finden.
+- Der `ListAvailable`-Parameter des [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module)-Cmdlets kann das Modul nicht finden.
 
-- Das [Import-Module-](/powershell/module/Microsoft.PowerShell.Core/Import-Module) Cmdlet kann das Modul nicht finden. Zum Importieren des Moduls müssen Sie den vollständigen Pfad zur Stamm Modul Datei oder zur Modul Manifest-Datei angeben.
+- Das [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlet kann das Modul nicht finden. Zum Importieren des Moduls müssen Sie den vollständigen Pfad zur Stammmoduldatei oder zur Modulmanifestdatei angeben.
 
-  Weitere Funktionen, wie z. b. die folgenden, funktionieren nicht, es sei denn, das Modul wird in die Sitzung importiert. In wohlgeformten Modulen in der **psmodulepath** -Umgebungsvariablen funktionieren diese Features auch dann, wenn das Modul nicht in die Sitzung importiert wird.
+  Weitere Features, wie z. B. die folgenden, funktionieren erst, wenn das Modul in die Sitzung importiert wird. In wohlgeformten Modulen in der **PSModulePath**-Umgebungsvariablen funktionieren diese Features auch dann, wenn das Modul nicht in die Sitzung importiert wird.
 
-- Das [Get-Command-](/powershell/module/Microsoft.PowerShell.Core/Get-Command) Cmdlet kann Befehle im Modul nicht finden.
+- Das [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command)-Cmdlet kann keine Befehle im Modul finden.
 
-- Die Cmdlets " [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) " und " [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) " können die Hilfe für das Modul nicht aktualisieren oder speichern.
+- [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help)- und [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help)-Cmdlet können Hilfe für das Modul nicht aktualisieren oder speichern.
 
-- Das Cmdlet " [Show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command) " kann die Befehle im Modul nicht finden und anzeigen.
+- Das [Show-Command](/powershell/module/Microsoft.PowerShell.Utility/Show-Command)-Cmdlet kann die Befehle im Modul nicht finden und anzeigen.
 
-  Die Befehle im Modul fehlen `Show-Command` im Fenster in Windows PowerShell Integrated Scripting Environment (ISE).
+  Die Befehle im Modul fehlen in Windows PowerShell Integrated Scripting Environment (ISE) im `Show-Command`-Fenster.
 
-## <a name="where-to-install-modules"></a>Installationsort von Modulen
+## <a name="where-to-install-modules"></a>Installationsort der Module
 
-In diesem Abschnitt wird erläutert, wo im Dateisystem Windows PowerShell-Module installiert werden. Der Speicherort hängt davon ab, wie das Modul verwendet wird.
+In diesem Abschnitt wird erläutert, wo Windows PowerShell-Module im Dateisystem installiert werden. Der Installationsort hängt davon ab, wie das Modul verwendet wird.
 
 ### <a name="installing-modules-for-a-specific-user"></a>Installieren von Modulen für einen bestimmten Benutzer
 
-Wenn Sie ein eigenes Modul erstellen oder ein Modul von einer anderen Partei (z. b. eine Windows PowerShell-Communitywebsite) erstellen möchten, und Sie möchten, dass das Modul nur für Ihr Benutzerkonto verfügbar ist, installieren Sie das Modul in Ihrem benutzerspezifischen Modul Verzeichnis.
+Wenn Sie ein eigenes Modul erstellen oder ein Modul von einer anderen Partei (z. B. einer Windows PowerShell-Communitywebsite) erhalten, und das Modul soll nur für Ihr Benutzerkonto verfügbar sein, installieren Sie das Modul in Ihrem benutzerspezifischen Modules-Verzeichnis.
 
 `$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
-Das Verzeichnis für benutzerspezifische Module wird standardmäßig dem Wert der **psmodulepath** -Umgebungsvariablen hinzugefügt.
+Das benutzerspezifische Modules-Verzeichnis wird standardmäßig dem Wert der **PSModulePath**-Umgebungsvariablen hinzugefügt.
 
-### <a name="installing-modules-for-all-users-in-program-files"></a>Installieren von Modulen für alle Benutzer in Programmdateien
+### <a name="installing-modules-for-all-users-in-program-files"></a>Installieren von Modulen für alle Benutzer in „Programme“
 
-Wenn Sie möchten, dass ein Modul für alle Benutzerkonten auf dem Computer verfügbar ist, installieren Sie das Modul im Speicherort der Programmdateien.
+Wenn Sie möchten, dass ein Modul für alle Benutzerkonten auf dem Computer verfügbar ist, installieren Sie das Modul im Speicherort „Programme“.
 
 `$Env:ProgramFiles\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
 > [!NOTE]
-> Der Speicherort der Programmdateien wird standardmäßig in Windows PowerShell 4,0 und höher dem Wert der Umgebungsvariablen psmodulepath hinzugefügt. Bei früheren Versionen von Windows PowerShell können Sie den Speicherort der Programmdateien ((%ProgramFiles%\windowspowershell\modules) manuell erstellen und diesen Pfad der Umgebungsvariablen psmodulepath hinzufügen, wie oben beschrieben.
+> Der Speicherort „Programme“ wird dem Wert der Umgebungsvariablen PSModulePath in Windows PowerShell 4.0 und höher standardmäßig hinzugefügt. Für frühere Versionen von Windows PowerShell können Sie den Speicherort „Programme“ (%ProgramFiles%\WindowsPowerShell\Modules) manuell erstellen und diesen Pfad der PSModulePath-Umgebungsvariablen wie oben beschrieben hinzufügen.
 
 ### <a name="installing-modules-in-a-product-directory"></a>Installieren von Modulen in einem Produktverzeichnis
 
-Wenn Sie das Modul an andere Parteien verteilen, verwenden Sie den oben beschriebenen Standard Speicherort für Programmdateien, oder erstellen Sie ein eigenes unternehmensspezifisches oder produktspezifisches Unterverzeichnis des Verzeichnisses "% Program Files%".
+Wenn Sie das Modul an andere Parteien verteilen, verwenden Sie den oben beschriebenen Standardspeicherort „Programme“, oder erstellen Sie ein eigenes unternehmens- oder produktspezifisches Unterverzeichnis des Verzeichnisses „%ProgramFiles%“.
 
-Beispielsweise wird von Fabrikam Technologies, einem fiktiven Unternehmen, ein Windows PowerShell-Modul für das Fabrikam Manager-Produkt versendet. Der modulinstallerinstaller erstellt im Unterverzeichnis "Fabrikam Manager Product" ein Unterverzeichnis "modules".
+Beispielsweise liefert das fiktive Unternehmen Fabrikam Technologies ein Windows PowerShell-Modul für sein Produkt Fabrikam Manager. Das Modulinstallationsprogramm erstellt im Produktunterverzeichnis „Fabrikam Manager“ ein Unterverzeichnis „Modules“.
 
 ```
 C:\Program Files
@@ -134,7 +134,7 @@ C:\Program Files
 
 ```
 
-Zum Aktivieren der Ermittlungs Funktionen des Windows PowerShell-Moduls für die Suche nach dem Modul "Fabrikam" fügt das Installationsprogramm des Fabrikam-Moduls den Speicherort des Moduls dem Wert der **psmodulepath** -Umgebungsvariablen hinzu.
+Damit die Modulermittlungsfeatures des Windows PowerShell-Moduls das Fabrikam-Modul finden können, fügt das Fabrikam-Modulinstallationsprogramm den Speicherort des Moduls dem Wert der Umgebungsvariablen **PSModulePath** hinzu.
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
@@ -142,11 +142,11 @@ $p += ";C:\Program Files\Fabrikam Technologies\Fabrikam Manager\Modules\"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-### <a name="installing-modules-in-the-common-files-directory"></a>Installieren von Modulen im Verzeichnis "gemeinsame Dateien"
+### <a name="installing-modules-in-the-common-files-directory"></a>Installieren von Modulen im Verzeichnis „Gemeinsame Dateien“
 
-Wenn ein Modul von mehreren Komponenten eines Produkts oder von mehreren Produktversionen verwendet wird, installieren Sie das Modul in einem modulspezifischen Unterverzeichnis des Unterverzeichnisses "%ProgramFiles%\Common files\modules".
+Wenn ein Modul von mehreren Komponenten oder Versionen eines Produkts verwendet wird, installieren Sie das Modul in einem modulspezifischen Unterverzeichnis des Unterverzeichnisses „%ProgramFiles%\Gemeinsame Dateien\Modules“.
 
-Im folgenden Beispiel wird das Modul "Fabrikam" in einem Unterverzeichnis "Fabrikam" des `%ProgramFiles%\Common Files\Modules` Unterverzeichnisses installiert. Beachten Sie, dass sich jedes Modul in einem eigenen Unterverzeichnis im Unterverzeichnis "modules" befindet.
+Im folgenden Beispiel wird das Modul „Fabrikam“ in einem Unterverzeichnis „Fabrikam“ des Unterverzeichnisses `%ProgramFiles%\Common Files\Modules` installiert. Beachten Sie, dass sich jedes Modul in einem eigenen Unterverzeichnis des Unterverzeichnisses „Modules“ befindet.
 
 ```
 C:\Program Files
@@ -157,7 +157,7 @@ C:\Program Files
         Fabrikam.dll (module assembly)
 ```
 
-Das Installationsprogramm stellt dann sicher, dass der Wert der **psmodulepath** -Umgebungsvariablen den Pfad des Unterverzeichnisses der allgemeinen Datei Module enthält.
+Das Installationsprogramm stellt dann sicher, dass der Wert der **PSModulePath**-Umgebungsvariablen den Pfad des Unterverzeichnisses von „\Gemeinsame Dateien\Modules“ enthält.
 
 ```powershell
 $m = $env:ProgramFiles + '\Common Files\Modules'
@@ -175,12 +175,12 @@ $p = $q -join ';'
 Wenn Sie mehrere Versionen desselben Moduls installieren möchten, verwenden Sie das folgende Verfahren.
 
 1. Erstellen Sie ein Verzeichnis für jede Version des Moduls. Fügen Sie die Versionsnummer in den Verzeichnisnamen ein.
-2. Erstellen Sie ein Modul Manifest für jede Version des Moduls. Geben Sie im Manifest im Wert des **moduleversion** -Schlüssels die Modulversionsnummer ein. Speichern Sie die Manifest-Datei (. psd1) im Versions spezifischen Verzeichnis für das Modul.
-3. Fügen Sie den Pfad des Modul Stamm Ordners zum Wert der **psmodulepath** -Umgebungsvariablen hinzu, wie in den folgenden Beispielen gezeigt.
+2. Erstellen Sie für jede Version des Moduls ein Modulmanifest. Geben Sie in den Wert des Schlüssels **ModuleVersion** im Manifest die Modulversionsnummer ein. Speichern Sie die Manifestdatei (PSD1) im versionsspezifischen Verzeichnis für das Modul.
+3. Fügen Sie den Stammordnerpfad des Moduls dem Wert der **PSModulePath**-Umgebungsvariablen hinzu, wie in den folgenden Beispielen gezeigt.
 
-Um eine bestimmte Version des Moduls zu importieren, kann der Endbenutzer den- `MinimumVersion` Parameter oder den- `RequiredVersion` Parameter des [Import-Module-](/powershell/module/Microsoft.PowerShell.Core/Import-Module) Cmdlets verwenden.
+Um eine bestimmte Version des Moduls zu importieren, kann der Endbenutzer die Parameter `MinimumVersion` oder `RequiredVersion` des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlets verwenden.
 
-Wenn das Modul Fabrikam beispielsweise in den Versionen 8,0 und 9,0 verfügbar ist, könnte die Fabrikam-Modul Verzeichnisstruktur wie folgt aussehen.
+Wenn das Modul „Fabrikam“ beispielsweise in den Versionen 8.0 und 9.0 verfügbar ist, könnte die Fabrikam-Modulverzeichnisstruktur wie folgt aussehen.
 
  ```
 C:\Program Files
@@ -195,7 +195,7 @@ Fabrikam Manager
       Fabrikam.dll (module assembly)
 ```
 
-Das Installationsprogramm fügt dem Wert der Umgebungsvariablen **psmodulepath** beide Modul Pfade hinzu.
+Das Installationsprogramm fügt dem Wert der **PSModulePath**-Umgebungsvariablen beide Modulpfade hinzu.
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
@@ -203,25 +203,25 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-Wenn diese Schritte ausgeführt werden, ruft der **listavailable** -Parameter des [Get-Module-](/powershell/module/Microsoft.PowerShell.Core/Get-Module) Cmdlets beide Fabrikam-Module ab. Verwenden Sie zum Importieren eines bestimmten Moduls den- `MinimumVersion` Parameter oder den- `RequiredVersion` Parameter des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) -Cmdlets.
+Wenn diese Schritte abgeschlossen sind, ruft der **ListAvailable**-Parameter des [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module)-Cmdlets beide Fabrikam-Module ab. Wenn Sie ein bestimmtes Modul importieren möchten, verwenden Sie die Parameter `MinimumVersion` oder `RequiredVersion` des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlets.
 
-Wenn beide Module in dieselbe Sitzung importiert werden und die Module Cmdlets mit denselben Namen enthalten, sind die zuletzt importierten Cmdlets in der Sitzung gültig.
+Wenn beide Module in dieselbe Sitzung importiert werden und die Module Cmdlets mit identischen Namen enthalten, sind die zuletzt importierten Cmdlets in der Sitzung gültig.
 
-## <a name="handling-command-name-conflicts"></a>Behandeln von Befehlsnamen Konflikten
+## <a name="handling-command-name-conflicts"></a>Behandeln von Konflikten zwischen Befehlsnamen
 
-Konflikte mit Befehlsnamen können auftreten, wenn die Befehle, die ein Modul exportiert, denselben Namen wie die Befehle in der Benutzersitzung haben.
+Konflikte zwischen Befehlsnamen können auftreten, wenn die Befehle, die ein Modul exportiert, dieselben Namen wie die Befehle in der Benutzersitzung haben.
 
-Wenn eine Sitzung zwei Befehle mit demselben Namen enthält, führt Windows PowerShell den Befehlstyp aus, der Vorrang hat. Wenn eine Sitzung zwei Befehle mit demselben Namen und demselben Typ enthält, führt Windows PowerShell den Befehl aus, der der Sitzung zuletzt hinzugefügt wurde. Um einen Befehl auszuführen, der nicht standardmäßig ausgeführt wird, können Benutzer den Befehlsnamen mit dem Modulnamen qualifizieren.
+Wenn eine Sitzung zwei Befehle mit identischen Namen enthält, führt Windows PowerShell den Befehlstyp aus, der Vorrang hat. Wenn eine Sitzung zwei Befehle mit identischen Namen und identischem Typ enthält, führt Windows PowerShell den Befehl aus, der der Sitzung zuletzt hinzugefügt wurde. Um einen Befehl auszuführen, der nicht standardmäßig ausgeführt wird, können Benutzer den Befehlsnamen mit dem Modulnamen qualifizieren.
 
-Wenn die Sitzung z. b. eine `Get-Date` Funktion und das `Get-Date` Cmdlet enthält, führt Windows PowerShell die Funktion standardmäßig aus. Um das Cmdlet auszuführen, stellen Sie dem Befehl den Namen des Moduls voran, z. b.:
+Wenn die Sitzung z. B. eine `Get-Date`-Funktion und das `Get-Date`-Cmdlet enthält, führt Windows PowerShell standardmäßig die Funktion aus. Um das Cmdlet auszuführen, stellen Sie dem Befehl den Namen des Moduls voran, z. B.:
 
 ```powershell
 Microsoft.PowerShell.Utility\Get-Date
 ```
 
-Um Namenskonflikte zu verhindern, können Modul Autoren den **defaultcommandprefix** -Schlüssel im Modul Manifest verwenden, um ein Substantiv-Präfix für alle Befehle anzugeben, die vom Modul exportiert werden.
+Um Namenskonflikte zu verhindern, können Modulentwickler den **DefaultCommandPrefix**-Schlüssel im Modulmanifest verwenden, um ein Nounpräfix für alle Befehle anzugeben, die aus dem Modul exportiert werden.
 
-Benutzer können den **prefix** -Parameter des `Import-Module` Cmdlets verwenden, um ein alternatives Präfix zu verwenden. Der Wert des **prefix** -Parameters hat Vorrang vor dem Wert des **defaultcommandprefix** -Schlüssels.
+Benutzer können den **Prefix**-Parameter des `Import-Module`-Cmdlets verwenden, um ein alternatives Präfix zu verwenden. Der Wert des **Prefix**-Parameters hat Vorrang vor dem Wert des **DefaultCommandPrefix**-Schlüssels.
 
 ## <a name="see-also"></a>Weitere Informationen
 

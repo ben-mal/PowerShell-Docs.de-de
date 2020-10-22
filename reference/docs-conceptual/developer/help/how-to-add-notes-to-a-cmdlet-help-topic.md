@@ -1,32 +1,28 @@
 ---
 title: Hinzufügen von Anmerkungen zu einem Cmdlet-Hilfethema
-ms.date: 09/12/2016
-ms.openlocfilehash: d3679126ea34d7e86bcda700d0d050d8312a7aa2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
-ms.translationtype: MT
+ms.date: 10/20/2020
+ms.openlocfilehash: 7f8be34a82de2c12cfd2a05deed139ddb30da95f
+ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893406"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298308"
 ---
 # <a name="how-to-add-notes-to-a-cmdlet-help-topic"></a>Hinzufügen von Anmerkungen zu einem Cmdlet-Hilfethema
 
-In diesem Abschnitt wird beschrieben, wie Sie einem Hilfethema zu PowerShell-Cmdlets einen Abschnitt **Notizen** hinzufügen. Der Abschnitt " **Notizen** " wird verwendet, um Details zu erläutern, die nicht problemlos in die anderen strukturierten Abschnitte passen, wie z. b. eine ausführlichere Erläuterung eines Parameters. Dieser Inhalt kann Kommentare dazu enthalten, wie das Cmdlet mit einem bestimmten Anbieter funktioniert, einige eindeutige, aber wichtige Verwendungsmöglichkeiten des Cmdlets oder Möglichkeiten, mögliche Fehlerbedingungen zu vermeiden.
+In diesem Abschnitt wird beschrieben, wie Sie einem PowerShell-Cmdlet-Hilfethema einen Abschnitt **NOTES** (Notizen) hinzufügen. Der Abschnitt **NOTES** wird verwendet, um Details zu erläutern, die nicht recht in die anderen strukturierten Abschnitte passen, zum Beispiel ausführlichere Erläuterungen eines Parameters. Dieser Inhalt enthält möglicherweise auch Kommentare zu Themen, wie das Cmdlet mit einem bestimmten Anbieter funktioniert, einige eindeutige aber wichtige Verwendungsmöglichkeiten des Cmdlets oder auch Möglichkeiten zum Vermeiden möglicher Fehlerbedingungen.
 
-Es gibt keine Beschränkung für die Anzahl von Notizen, die Sie zu einem Abschnitt mit Hinweisen hinzufügen können. Fügen Sie für jeden Hinweis dem Knoten ein Tagpaar hinzu `<maml:alert>` `<maml:alertset>` . Der Inhalt der einzelnen Notiz wird in einem Satz von Tags hinzugefügt `<maml:para>` . Verwenden Sie leere `<maml:para>` Tags für den Abstand.
-
-Der folgende XML-Code zeigt einen- `<maml:alertset>` Knoten mit zwei Notizen. Beachten Sie, dass jeder Hinweis über ein optionales `<maml:title>` Tag verfügt (Titel können verwendet werden, um beliebige Tags zu gruppieren `<maml:alert>` ) und dass jede Notiz eine leere Zeile nach dem Inhalt für den Abstand hat.
+Der Abschnitt **NOTES** ist mit einem einzelnen `<maml:alertset>`-Knoten definiert. Es gibt keine Beschränkung für die Anzahl von Notizen, die Sie zu einem „Notes“-Abschnitt hinzufügen können. Fügen Sie für jeden Hinweis dem `<maml:alertset>`-Knoten ein `<maml:alert>`-Tagpaar hinzu. Der Inhalt der einzelnen Notiz wird innerhalb eines `<maml:para>`-Tagpaares hinzugefügt. Verwenden Sie leere `<maml:para>`-Tags für den Abstand.
 
 ```xml
 <maml:alertSet>
-  <maml:title>title for Note 1</maml:title>
+  <maml:title>Optional title for Note</maml:title>
   <maml:alert>
-    <maml:para> Note 1</maml:para>
-    <maml:para></maml:para>
+    <maml:para>Note 1</maml:para>
+    <maml:para>Note a</maml:para>
   </maml:alert>
-  <maml:title>title for Note 2</maml:title>
   <maml:alert>
-    <maml:para> Note 1</maml:para>
-    <maml:para></maml:para>
+    <maml:para>Note 2</maml:para>
   </maml:alert>
 </maml:alertSet>
 ```
