@@ -1,32 +1,28 @@
 ---
 title: Hinzufügen von Anmerkungen zu einem Cmdlet-Hilfethema
-ms.date: 09/12/2016
-ms.openlocfilehash: d3679126ea34d7e86bcda700d0d050d8312a7aa2
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
-ms.translationtype: MT
+ms.date: 10/20/2020
+ms.openlocfilehash: 7f8be34a82de2c12cfd2a05deed139ddb30da95f
+ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893406"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298308"
 ---
-# <a name="how-to-add-notes-to-a-cmdlet-help-topic"></a><span data-ttu-id="bdcb0-102">Hinzufügen von Anmerkungen zu einem Cmdlet-Hilfethema</span><span class="sxs-lookup"><span data-stu-id="bdcb0-102">How to Add Notes to a Cmdlet Help Topic</span></span>
+# <a name="how-to-add-notes-to-a-cmdlet-help-topic"></a><span data-ttu-id="af010-102">Hinzufügen von Anmerkungen zu einem Cmdlet-Hilfethema</span><span class="sxs-lookup"><span data-stu-id="af010-102">How to Add Notes to a Cmdlet Help Topic</span></span>
 
-<span data-ttu-id="bdcb0-103">In diesem Abschnitt wird beschrieben, wie Sie einem Hilfethema zu PowerShell-Cmdlets einen Abschnitt **Notizen** hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-103">This section describes how to add a **NOTES** section to a PowerShell cmdlet Help topic.</span></span> <span data-ttu-id="bdcb0-104">Der Abschnitt " **Notizen** " wird verwendet, um Details zu erläutern, die nicht problemlos in die anderen strukturierten Abschnitte passen, wie z. b. eine ausführlichere Erläuterung eines Parameters.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-104">The **NOTES** section is used to explain details that do not fit easily into the other structured sections, such as a more detailed explanation of a parameter.</span></span> <span data-ttu-id="bdcb0-105">Dieser Inhalt kann Kommentare dazu enthalten, wie das Cmdlet mit einem bestimmten Anbieter funktioniert, einige eindeutige, aber wichtige Verwendungsmöglichkeiten des Cmdlets oder Möglichkeiten, mögliche Fehlerbedingungen zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-105">This content could include comments on how the cmdlet works with a specific provider, some unique, yet important, uses of the cmdlet, or ways to avoid possible error conditions.</span></span>
+<span data-ttu-id="af010-103">In diesem Abschnitt wird beschrieben, wie Sie einem PowerShell-Cmdlet-Hilfethema einen Abschnitt **NOTES** (Notizen) hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="af010-103">This section describes how to add a **NOTES** section to a PowerShell cmdlet Help topic.</span></span> <span data-ttu-id="af010-104">Der Abschnitt **NOTES** wird verwendet, um Details zu erläutern, die nicht recht in die anderen strukturierten Abschnitte passen, zum Beispiel ausführlichere Erläuterungen eines Parameters.</span><span class="sxs-lookup"><span data-stu-id="af010-104">The **NOTES** section is used to explain details that do not fit easily into the other structured sections, such as a more detailed explanation of a parameter.</span></span> <span data-ttu-id="af010-105">Dieser Inhalt enthält möglicherweise auch Kommentare zu Themen, wie das Cmdlet mit einem bestimmten Anbieter funktioniert, einige eindeutige aber wichtige Verwendungsmöglichkeiten des Cmdlets oder auch Möglichkeiten zum Vermeiden möglicher Fehlerbedingungen.</span><span class="sxs-lookup"><span data-stu-id="af010-105">This content could include comments on how the cmdlet works with a specific provider, some unique, yet important, uses of the cmdlet, or ways to avoid possible error conditions.</span></span>
 
-<span data-ttu-id="bdcb0-106">Es gibt keine Beschränkung für die Anzahl von Notizen, die Sie zu einem Abschnitt mit Hinweisen hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-106">There are no limits to the number of notes that you can add to a Notes section.</span></span> <span data-ttu-id="bdcb0-107">Fügen Sie für jeden Hinweis dem Knoten ein Tagpaar hinzu `<maml:alert>` `<maml:alertset>` .</span><span class="sxs-lookup"><span data-stu-id="bdcb0-107">For each note, add a pair of `<maml:alert>` tags to the `<maml:alertset>` node.</span></span> <span data-ttu-id="bdcb0-108">Der Inhalt der einzelnen Notiz wird in einem Satz von Tags hinzugefügt `<maml:para>` .</span><span class="sxs-lookup"><span data-stu-id="bdcb0-108">The content of each note is added within a set of `<maml:para>` tags.</span></span> <span data-ttu-id="bdcb0-109">Verwenden Sie leere `<maml:para>` Tags für den Abstand.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-109">Use blank `<maml:para>` tags for spacing.</span></span>
-
-<span data-ttu-id="bdcb0-110">Der folgende XML-Code zeigt einen- `<maml:alertset>` Knoten mit zwei Notizen.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-110">The following XML shows an `<maml:alertset>` node with two notes.</span></span> <span data-ttu-id="bdcb0-111">Beachten Sie, dass jeder Hinweis über ein optionales `<maml:title>` Tag verfügt (Titel können verwendet werden, um beliebige Tags zu gruppieren `<maml:alert>` ) und dass jede Notiz eine leere Zeile nach dem Inhalt für den Abstand hat.</span><span class="sxs-lookup"><span data-stu-id="bdcb0-111">Notice that each note has an optional `<maml:title>` tag (titles can be used to group any set of `<maml:alert>` tags), and that each note has a blank line following the content for spacing.</span></span>
+<span data-ttu-id="af010-106">Der Abschnitt **NOTES** ist mit einem einzelnen `<maml:alertset>`-Knoten definiert.</span><span class="sxs-lookup"><span data-stu-id="af010-106">The **NOTES** section is defined using a single `<maml:alertset>` node.</span></span> <span data-ttu-id="af010-107">Es gibt keine Beschränkung für die Anzahl von Notizen, die Sie zu einem „Notes“-Abschnitt hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="af010-107">There are no limits to the number of notes that you can add to a Notes section.</span></span> <span data-ttu-id="af010-108">Fügen Sie für jeden Hinweis dem `<maml:alertset>`-Knoten ein `<maml:alert>`-Tagpaar hinzu.</span><span class="sxs-lookup"><span data-stu-id="af010-108">For each note, add a pair of `<maml:alert>` tags to the `<maml:alertset>` node.</span></span> <span data-ttu-id="af010-109">Der Inhalt der einzelnen Notiz wird innerhalb eines `<maml:para>`-Tagpaares hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="af010-109">The content of each note is added within a set of `<maml:para>` tags.</span></span> <span data-ttu-id="af010-110">Verwenden Sie leere `<maml:para>`-Tags für den Abstand.</span><span class="sxs-lookup"><span data-stu-id="af010-110">Use blank `<maml:para>` tags for spacing.</span></span>
 
 ```xml
 <maml:alertSet>
-  <maml:title>title for Note 1</maml:title>
+  <maml:title>Optional title for Note</maml:title>
   <maml:alert>
-    <maml:para> Note 1</maml:para>
-    <maml:para></maml:para>
+    <maml:para>Note 1</maml:para>
+    <maml:para>Note a</maml:para>
   </maml:alert>
-  <maml:title>title for Note 2</maml:title>
   <maml:alert>
-    <maml:para> Note 1</maml:para>
-    <maml:para></maml:para>
+    <maml:para>Note 2</maml:para>
   </maml:alert>
 </maml:alertSet>
 ```
