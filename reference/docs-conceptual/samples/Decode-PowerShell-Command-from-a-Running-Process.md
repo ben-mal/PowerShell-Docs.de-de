@@ -3,17 +3,18 @@ ms.date: 11/13/2018
 keywords: powershell,cmdlet
 title: Decodieren eines PowerShell-Befehls in einem laufenden Prozess
 author: randomnote1
-ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Dieser Artikel zeigt, wie Sie einen Skriptblock decodieren, der aktuell von einem PowerShell-Prozess ausgeführt wird.
+ms.openlocfilehash: 95b4b806665bf8137712ebb183329039bc1e1deb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "66470969"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500486"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Decodieren eines PowerShell-Befehls in einem laufenden Prozess
 
 Gelegentlich wird möglicherweise ein PowerShell-Prozess ausgeführt, der eine große Menge an Ressourcen beansprucht.
-Dieser Prozess kann im Rahmen eines [Aufgabenplanung][]-Auftrags oder eines [SQL Server-Agent][]-Auftrags ausgeführt werden. Wenn mehrere PowerShell-Prozesse ausgeführt werden, kann eine Identifizierung schwierig sein, welcher Prozess das Problem darstellt. Dieser Artikel zeigt, wie Sie einen Skriptblock decodieren, der aktuell von einem PowerShell-Prozess ausgeführt wird.
+Dieser Prozess kann im Rahmen eines [Taskplaner][]-Auftrags oder eines [SQL Server-Agent][]-Auftrags ausgeführt werden. Wenn mehrere PowerShell-Prozesse ausgeführt werden, kann eine Identifizierung schwierig sein, welcher Prozess das Problem darstellt. Dieser Artikel zeigt, wie Sie einen Skriptblock decodieren, der aktuell von einem PowerShell-Prozess ausgeführt wird.
 
 ## <a name="create-a-long-running-process"></a>Erstellen eines zeitintensiven Prozesses
 
@@ -33,7 +34,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>Anzeigen des Prozesses
 
-Der Textkörper des Befehls, den PowerShell ausführt, wird in der Eigenschaft **CommandLine** der Klasse [Win32_Process][] gespeichert. Wenn der Befehl ein codierter Befehl ist, enthält die **CommandLine**-Eigenschaft die Zeichenfolge „EncodedCommand“. Mithilfe dieser Informationen kann der codierte Befehl über den folgenden Prozess entschleiert werden.
+Der Textkörper des Befehls, den PowerShell ausführt, wird in der Eigenschaft **CommandLine** der Klasse [Win32_Process][] gespeichert. Wenn der Befehl ein codierter Befehl ist, enthält die **CommandLine** -Eigenschaft die Zeichenfolge „EncodedCommand“. Mithilfe dieser Informationen kann der codierte Befehl über den folgenden Prozess entschleiert werden.
 
 Starten Sie PowerShell als Administrator. Es ist unerlässlich, dass PowerShell als Administrator ausgeführt wird, da andernfalls bei der Abfrage der ausgeführten Prozesse keine Ergebnisse zurückgegeben werden.
 
@@ -81,7 +82,7 @@ $commandDetails[0]
 
 Der decodierte Befehl kann jetzt durch Auswählen der decodierten Befehlseigenschaft überprüft werden.
 
-```output
+```Output
 ProcessId      : 8752
 EncodedCommand : IAAKAAoACgAgAAoAIAAgACAAIAAkAGkAIAA9ACAAMQAgAAoACgAKACAACgAgACAAIAAgAHcAaABpAGwAZQAgACgAIAAkAGkAIAAtAG
                  wAZQAgADEAMAAgACkAIAAKAAoACgAgAAoAIAAgACAAIAB7ACAACgAKAAoAIAAKACAAIAAgACAAIAAgACAAIABXAHIAaQB0AGUALQBP

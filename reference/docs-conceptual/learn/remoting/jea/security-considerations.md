@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA-Sicherheitsüberlegungen
-ms.openlocfilehash: befc24fec368c4f6d60477daf63bf17e9431133e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Da JEA den Benutzern das Ausführen von Administratorbefehlen ohne vollständigen Administratorzugriff ermöglicht, können Sie diese Benutzer aus Sicherheitsgruppen mit weitreichenden Berechtigungen entfernen.
+ms.openlocfilehash: f65f9d6c6620261de0a9c8de7812637565ca1806
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70017771"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501574"
 ---
 # <a name="jea-security-considerations"></a>JEA-Sicherheitsüberlegungen
 
@@ -15,7 +16,7 @@ JEA unterstützt Sie bei der Verbesserung Ihres Sicherheitsniveaus und reduziert
 
 ## <a name="run-as-account"></a>Ausführendes Konto
 
-Jeder JEA-Endpunkt verfügt über ein designiertes **ausführendes Konto**. Dies ist das Konto, unter dem die Aktionen des Benutzers, der eine Verbindung herstellt, ausgeführt werden. Dieses Konto lässt sich in der [Sitzungskonfigurationsdatei](session-configurations.md) konfigurieren und hat einen erheblichen Einfluss auf die Sicherheit Ihres Endpunkts.
+Jeder JEA-Endpunkt verfügt über ein designiertes **ausführendes Konto** . Dies ist das Konto, unter dem die Aktionen des Benutzers, der eine Verbindung herstellt, ausgeführt werden. Dieses Konto lässt sich in der [Sitzungskonfigurationsdatei](session-configurations.md) konfigurieren und hat einen erheblichen Einfluss auf die Sicherheit Ihres Endpunkts.
 
 Für das Konfigurieren eines **ausführenden Kontos** werden **virtuelle Konten** empfohlen. Virtuelle Konten sind einmalige, temporäre lokale Konten, die während der Dauer der JEA-Sitzung für den Benutzer erstellt werden, der die Verbindung herstellt. Unmittelbar nach Ende der Sitzung wird das virtuelle Konto gelöscht und kann nicht mehr verwendet werden. Der Benutzer, der eine Verbindung herstellt, kennt die Anmeldeinformationen für das virtuelle Konto nicht. Das virtuelle Konto kann nicht verwendet werden, um über andere Wege wie Remotedesktop oder einen uneingeschränkten PowerShell-Endpunkt auf das System zuzugreifen.
 
@@ -31,10 +32,10 @@ In der folgenden Tabelle werden die möglichen Konfigurationsoptionen und die si
 
 |        Computertyp         | Konfiguration virtueller Kontogruppen |                   Lokaler Benutzerkontext                    | Netzwerkbenutzerkontext |
 | ---------------------------- | ----------------------------------- | ------------------------------------------------------- | -------------------- |
-| Domänencontroller            | Standard                             | Domänenbenutzer, Mitglied von „*DOMÄNE*\Domänen-Admins“         | Computerkonto     |
-| Domänencontroller            | Domänengruppen A und B               | Domänenbenutzer, Mitglied von „*DOMAIN*\A“, „*DOMAIN*\B“       | Computerkonto     |
-| Mitgliedsserver oder Arbeitsstation | Standard                             | Lokaler Benutzer, Mitglied von „*BUILTIN*\Administrators“        | Computerkonto     |
-| Mitgliedsserver oder Arbeitsstation | Lokale Gruppen C und D                | Lokale Gruppen, Mitglied von „*COMPUTER*\C“ und „*COMPUTER*\D“ | Computerkonto     |
+| Domänencontroller            | Standard                             | Domänenbenutzer, Mitglied von „ *DOMÄNE* \Domänen-Admins“         | Computerkonto     |
+| Domänencontroller            | Domänengruppen A und B               | Domänenbenutzer, Mitglied von „ *DOMAIN* \A“, „ *DOMAIN* \B“       | Computerkonto     |
+| Mitgliedsserver oder Arbeitsstation | Standard                             | Lokaler Benutzer, Mitglied von „ *BUILTIN* \Administrators“        | Computerkonto     |
+| Mitgliedsserver oder Arbeitsstation | Lokale Gruppen C und D                | Lokale Gruppen, Mitglied von „ *COMPUTER* \C“ und „ *COMPUTER* \D“ | Computerkonto     |
 
 Wenn Sie Sicherheitsüberwachungsereignisse und Anwendungsereignisprotokolle genauer betrachten, erkennen Sie, dass jede JEA-Benutzersitzung über ein eindeutiges virtuelles Konto verfügt. Dadurch können Sie die Benutzeraktionen in einem JEA-Endpunkt zum ursprünglichen Benutzer zurückverfolgen, der den Befehl ausgeführt hat. Virtuelle Kontonamen haben folgendes Format: `WinRM Virtual Users\WinRM_VA_<ACCOUNTNUMBER>_<DOMAIN>_<sAMAccountName>`. Wenn beispielsweise der Benutzer **Alice** in der Domäne **Contoso** einen Dienst in einem JEA-Endpunkt neu startet, so lautet der Benutzername, der einem beliebigen Ereignis eines Dienststeuerungs-Managers zugeordnet ist, `WinRM Virtual Users\WinRM_VA_1_contoso_alice`.
 
@@ -50,7 +51,7 @@ Wenn ein JEA-Endpunkt für die Verwendung von gMSA konfiguriert ist, sieht es au
 
 ## <a name="winrm-endpoint-acl"></a>WinRM-Endpunkt-ACL
 
-Wie reguläre PowerShell-Remoting-Endpunkte verfügt jeder JEA-Endpunkt über eine separate Zugriffssteuerungsliste (ACL), die festlegt, wer für eine Authentifizierung mit dem JEA-Endpunkt berechtigt ist. Bei einer nicht ordnungsgemäßen Konfiguration können vertrauenswürdige Benutzer möglicherweise nicht auf den JEA-Endpunkt zugreifen und nicht vertrauenswürdige Benutzer Zugriff erhalten. Die WinRM-ACL wirkt sich nicht auf die Zuordnung von Benutzern zu JEA-Rollen aus. Dies wird über das **RoleDefinitions**-Feld in der Sitzungskonfigurationsdatei gesteuert, mit der der Endpunkt registriert wurde.
+Wie reguläre PowerShell-Remoting-Endpunkte verfügt jeder JEA-Endpunkt über eine separate Zugriffssteuerungsliste (ACL), die festlegt, wer für eine Authentifizierung mit dem JEA-Endpunkt berechtigt ist. Bei einer nicht ordnungsgemäßen Konfiguration können vertrauenswürdige Benutzer möglicherweise nicht auf den JEA-Endpunkt zugreifen und nicht vertrauenswürdige Benutzer Zugriff erhalten. Die WinRM-ACL wirkt sich nicht auf die Zuordnung von Benutzern zu JEA-Rollen aus. Dies wird über das **RoleDefinitions** -Feld in der Sitzungskonfigurationsdatei gesteuert, mit der der Endpunkt registriert wurde.
 
 Wenn ein JEA-Endpunkt über mehrere Rollenfunktionen verfügt, wird die WinRM-ACL standardmäßig dafür konfiguriert, den Zugriff für alle zugeordneten Benutzer zu ermöglichen. So bietet beispielsweise eine mit den folgenden Befehlen konfigurierte JEA-Sitzung vollen Zugriff auf `CONTOSO\JEA_Lev1` und `CONTOSO\JEA_Lev2`.
 
@@ -90,7 +91,7 @@ Betrachten Sie beispielsweise den folgenden Rollenfunktionseintrag:
 }
 ```
 
-Über diese Rollenfunktion können Benutzer jedes beliebige PowerShell-Cmdlet mit dem Namen **Process** aus dem **Microsoft.PowerShell.Management**-Modul ausführen. Benutzer benötigen möglicherweise Zugriff auf Cmdlets wie `Get-Process`, um zu erfahren, welche Anwendungen auf dem System ausgeführt werden, oder auf `Stop-Process`, um Anwendungen zu beenden, die nicht mehr reagieren. Der Eintrag ermöglicht aber auch den Befehl `Start-Process`, um ein beliebiges Programm mit vollständigen Administratorberechtigungen zu starten. Das Programm muss nicht lokal im System installiert sein. Ein verbundener Benutzer kann aus einer Dateifreigabe ein Programm starten, das ihm lokale Administratorrechte gewährt, Schadsoftware ausführt o. ä.
+Über diese Rollenfunktion können Benutzer jedes beliebige PowerShell-Cmdlet mit dem Namen **Process** aus dem **Microsoft.PowerShell.Management** -Modul ausführen. Benutzer benötigen möglicherweise Zugriff auf Cmdlets wie `Get-Process`, um zu erfahren, welche Anwendungen auf dem System ausgeführt werden, oder auf `Stop-Process`, um Anwendungen zu beenden, die nicht mehr reagieren. Der Eintrag ermöglicht aber auch den Befehl `Start-Process`, um ein beliebiges Programm mit vollständigen Administratorberechtigungen zu starten. Das Programm muss nicht lokal im System installiert sein. Ein verbundener Benutzer kann aus einer Dateifreigabe ein Programm starten, das ihm lokale Administratorrechte gewährt, Schadsoftware ausführt o. ä.
 
 Eine sicherere Version der gleichen Rollenfunktion würde so aussehen:
 
@@ -104,6 +105,6 @@ Verwenden Sie möglichst keine Platzhalter in Rollenfunktionen. [Überprüfen Si
 
 ## <a name="jea-doesnt-protect-against-admins"></a>JEA bietet keinen Schutz vor Administratoren
 
-Eines der wichtigsten Prinzipien von JEA ist, dass auch Nichtadministratoren gewisse Administratoraufgaben ausführen können. JEA bietet keinen Schutz vor Benutzern, die bereits über Administratorberechtigungen verfügen. Benutzer, die zur Gruppe **Domänen-Admins**, zur lokalen Gruppe **Administratoren** oder anderen Gruppen mit vielen Berechtigungen gehören, können die JEA-Schutzmaßnahmen auf andere Weise umgehen. Sie könnten sich z. B. mit RDP anmelden, Remote-MMC-Konsolen verwenden oder eine Verbindung mit uneingeschränkten PowerShell-Endpunkten herstellen. Lokale Administratoren im System können JEA-Konfigurationen ändern und zusätzlichen Benutzern Berechtigungen gewähren oder Rollenfunktionen ändern, um den Spielraum von Benutzern in ihrer JEA-Sitzung zu erweitern. Sie sollten daher die erweiterten Berechtigungen Ihrer JEA-Benutzer unbedingt überprüfen, um festzustellen, ob sie sich auf andere Art und Weise einen privilegierten Zugriff auf das System verschaffen könnten.
+Eines der wichtigsten Prinzipien von JEA ist, dass auch Nichtadministratoren gewisse Administratoraufgaben ausführen können. JEA bietet keinen Schutz vor Benutzern, die bereits über Administratorberechtigungen verfügen. Benutzer, die zur Gruppe **Domänen-Admins** , zur lokalen Gruppe **Administratoren** oder anderen Gruppen mit vielen Berechtigungen gehören, können die JEA-Schutzmaßnahmen auf andere Weise umgehen. Sie könnten sich z. B. mit RDP anmelden, Remote-MMC-Konsolen verwenden oder eine Verbindung mit uneingeschränkten PowerShell-Endpunkten herstellen. Lokale Administratoren im System können JEA-Konfigurationen ändern und zusätzlichen Benutzern Berechtigungen gewähren oder Rollenfunktionen ändern, um den Spielraum von Benutzern in ihrer JEA-Sitzung zu erweitern. Sie sollten daher die erweiterten Berechtigungen Ihrer JEA-Benutzer unbedingt überprüfen, um festzustellen, ob sie sich auf andere Art und Weise einen privilegierten Zugriff auf das System verschaffen könnten.
 
 Üblicherweise wird JEA für regelmäßige tägliche Wartungsaufgaben verwendet. Benutzer können dank dieser privilegierten Just-in-Time-Zugriffsverwaltungslösung in Notfallsituationen vorübergehend zu lokalen Administratoren werden. Dadurch wird sichergestellt, dass Benutzer nicht zu permanenten Administratoren im System werden. Sie erhalten diese Berechtigung nur dann, wenn sie einen Workflow ausführen, der die Verwendung dieser Berechtigungen dokumentiert.

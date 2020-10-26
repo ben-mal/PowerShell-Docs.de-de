@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: Registrieren von JEA-Konfigurationen
-ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Das Registrieren des JEA-Endpunkts beim System stellt den Endpunkt für Benutzer und Automatisierungs-Engines zur Verfügung.
+ms.openlocfilehash: 6e7f8cdc1e7a666bddaa42034d70fcbcf55c1972
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706205"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499908"
 ---
 # <a name="registering-jea-configurations"></a>Registrieren von JEA-Konfigurationen
 
@@ -61,7 +62,7 @@ Um JEA mit DSC bereitzustellen, müssen die folgenden Voraussetzungen erfüllt s
 - Sie verfügen über Anmeldeinformationen, die Verwaltungsaktionen auf allen Computern ermöglichen, oder Sie haben Zugriff auf einen DSC-Pullserver, um die Computer zu verwalten.
 - Sie haben die [JEA-DSC-Ressourcen](https://github.com/powershell/JEA/tree/master/DSC%20Resource) heruntergeladen.
 
-Erstellen Sie auf einem Zielcomputer (oder gegebenenfalls einem Pullserver) eine DSC-Konfiguration für Ihren JEA-Endpunkt. In dieser Konfiguration definiert die **JustEnoughAdministration**-DSC-Ressource die Sitzungskonfigurationsdatei, und die **Dateiressource** kopiert die Rollenfunktionen aus der Dateifreigabe.
+Erstellen Sie auf einem Zielcomputer (oder gegebenenfalls einem Pullserver) eine DSC-Konfiguration für Ihren JEA-Endpunkt. In dieser Konfiguration definiert die **JustEnoughAdministration** -DSC-Ressource die Sitzungskonfigurationsdatei, und die **Dateiressource** kopiert die Rollenfunktionen aus der Dateifreigabe.
 
 Die folgenden Eigenschaften können mithilfe der DSC-Ressource konfiguriert werden:
 
@@ -104,7 +105,7 @@ Configuration JEAMaintenance
 
 Diese Konfiguration wird danach auf einem System angewendet. Dazu müssen Sie den [lokalen Konfigurations-Manager aufrufen ](/powershell/scripting/dsc/managing-nodes/metaConfig) oder die [Pullserverkonfiguration](/powershell/scripting/dsc/pull-server/pullServer) aktualisieren.
 
-Mithilfe der DSC-Ressource können Sie außerdem den **Microsoft.PowerShell**-Standardendpunkt ersetzen. Wenn dieser ersetzt wird, registriert die Ressource automatisch einen Sicherungsendpunkt namens **Microsoft.PowerShell.Restricted**. Der Sicherungsendpunkt verfügt über die Standard-WinRM-ACL, die Remotemanagementbenutzern und Mitgliedern der lokalen Administratorengruppe erlaubt, auf diesen zuzugreifen.
+Mithilfe der DSC-Ressource können Sie außerdem den **Microsoft.PowerShell** -Standardendpunkt ersetzen. Wenn dieser ersetzt wird, registriert die Ressource automatisch einen Sicherungsendpunkt namens **Microsoft.PowerShell.Restricted** . Der Sicherungsendpunkt verfügt über die Standard-WinRM-ACL, die Remotemanagementbenutzern und Mitgliedern der lokalen Administratorengruppe erlaubt, auf diesen zuzugreifen.
 
 ## <a name="unregistering-jea-configurations"></a>Aufheben der Registrierung von JEA-Konfigurationen
 

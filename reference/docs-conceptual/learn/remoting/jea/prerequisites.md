@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA-Voraussetzungen
-ms.openlocfilehash: 5083a9ad4aa87c753799d36f55540342225ecddd
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+description: In diesem Artikel werden die Voraussetzungen erläutert, die erfüllt sein müssen, um JEA verwenden zu können.
+ms.openlocfilehash: 5cc70a06887a2d0a840cc83117f865d3148056e1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556868"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501727"
 ---
 # <a name="prerequisites"></a>Voraussetzungen
 
@@ -82,15 +83,15 @@ Die folgenden Schritte aktivieren die Protokollierung für alle PowerShell-Aktio
 Sie können die Richtlinien für die PowerShell-Modulprotokollierung mithilfe von Gruppenrichtlinien konfigurieren.
 
 1. Öffnen Sie den Editor für lokale Gruppenrichtlinien auf einer Arbeitsstation oder ein Gruppenrichtlinienobjekt in der Gruppenrichtlinien-Verwaltungskonsole auf einem Active Directory-Domänencontroller.
-2. Navigieren Sie zu **Computerkonfiguration\\Administrative Vorlagen\\Windows-Komponenten\\Windows PowerShell**.
-3. Doppelklicken Sie auf **Modulprotokollierung aktivieren**.
-4. Klicken Sie auf **Aktiviert**.
+2. Navigieren Sie zu **Computerkonfiguration\\Administrative Vorlagen\\Windows-Komponenten\\Windows PowerShell** .
+3. Doppelklicken Sie auf **Modulprotokollierung aktivieren** .
+4. Klicken Sie auf **Aktiviert** .
 5. Klicken Sie im Abschnitt „Optionen“ neben den Modulnamen auf **Anzeigen**
 6. Geben Sie `*` im Popupfenster ein, um Befehle aus allen Modulen zu protokollieren.
-7. Klicken Sie auf **OK**, um die Richtlinie festzulegen.
-8. Doppelklicken Sie anschließend auf **Protokollierung von PowerShell-Skriptblöcken aktivieren**.
-9. Klicken Sie auf **Aktiviert**.
-10. Klicken Sie auf **OK**, um die Richtlinie festzulegen.
+7. Klicken Sie auf **OK** , um die Richtlinie festzulegen.
+8. Doppelklicken Sie anschließend auf **Protokollierung von PowerShell-Skriptblöcken aktivieren** .
+9. Klicken Sie auf **Aktiviert** .
+10. Klicken Sie auf **OK** , um die Richtlinie festzulegen.
 11. (Nur in die Domäne eingebundene Computer:) Führen Sie `gpupdate` aus, oder warten Sie, bis die Gruppenrichtlinie die aktualisierte Richtlinie verarbeitet hat und diese Einstellungen anwendet.
 
 Sie können über eine Gruppenrichtlinie auch die systemweite PowerShell-Aufzeichnung aktivieren.
