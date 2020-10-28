@@ -1,16 +1,14 @@
 ---
-title: Genehmigte Verben für PowerShell-Befehle | Microsoft-Dokumentation
 ms.date: 09/07/2018
-helpviewer_keywords:
-- action names [PowerShell SDK]
-- verb names [PowerShell SDK]
-- cmdlets [PowerShell SDK], verb names
-ms.openlocfilehash: 96ba7397f46bfcb7036f0242da1367c3df5d3de9
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.topic: reference
+title: Genehmigte Verben für PowerShell-Befehle
+description: Genehmigte Verben für PowerShell-Befehle
+ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899855"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655818"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Genehmigte Verben für PowerShell-Befehle
 
@@ -18,7 +16,7 @@ PowerShell verwendet Verb-Substantiv-Paare für die Namen von Cmdlets und deren 
 Der Verbteil des Namens bezeichnet die Aktion, die das Cmdlet ausführt. Der Substantivteil des Namens bezeichnet die Entität, für die die Aktion ausgeführt wird. Beispielsweise ruft das Cmdlet `Get-Command` alle Befehle ab, die in PowerShell registriert sind.
 
 > [!NOTE]
-> PowerShell verwendet den Begriff _Verb_, um ein Wort zu beschreiben, das eine Aktion impliziert, auch wenn es sich dabei in der englischen Sprache nicht um ein Verb handelt. Beispielsweise ist der Begriff _New_ ein gültiger PowerShell-Verbname, da er eine Aktion impliziert, auch wenn er im Englischen kein Verb ist.
+> PowerShell verwendet den Begriff _Verb_ , um ein Wort zu beschreiben, das eine Aktion impliziert, auch wenn es sich dabei in der englischen Sprache nicht um ein Verb handelt. Beispielsweise ist der Begriff _New_ ein gültiger PowerShell-Verbname, da er eine Aktion impliziert, auch wenn er im Englischen kein Verb ist.
 
 <!--
 01234567890123456789012345678901234567890123456789012345678901234567890123456789
