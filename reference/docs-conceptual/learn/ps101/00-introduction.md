@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: c48340b2fa6141d207c3f7948063f81971183780
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: Dies ist die Einleitung des Buchs „PowerShell 101“ von Mike F. Robbins.
+ms.openlocfilehash: d85590c2ef34c4e8b5cb7f2707bd9d6dd9b84b89
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438221"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501506"
 ---
 # <a name="introduction"></a>Einführung
 
@@ -38,7 +39,7 @@ Statt eine große Menge an Informationen bereitzustellen, versucht dieses Buch, 
 
 ## <a name="about-the-author"></a>Zum Autor
 
-Mike F. Robbins ist ein ehemaliger Microsoft MVP, Mitautor von _Windows PowerShell TFM, 4. Ausgabe_, sowie mitwirkender Autor des Buchs _PowerShell Deep Dives_. Mike war ein starker Unterstützer der PowerShell-Community und ist jetzt Hauptautor für [Azure PowerShell][] bei Microsoft. Er bloggt auf [mikefrobbins.com][] und ist bei Twitter unter [@mikefrobbins][] zu finden.
+Mike F. Robbins ist ein ehemaliger Microsoft MVP, Mitautor von _Windows PowerShell TFM, 4. Ausgabe_ , sowie mitwirkender Autor des Buchs _PowerShell Deep Dives_ . Mike war ein starker Unterstützer der PowerShell-Community und ist jetzt Hauptautor für [Azure PowerShell][] bei Microsoft. Er bloggt auf [mikefrobbins.com][] und ist bei Twitter unter [@mikefrobbins][] zu finden.
 
 ## <a name="lab-environment"></a>Laborumgebung
 

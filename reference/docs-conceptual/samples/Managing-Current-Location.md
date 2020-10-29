@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Verwalten des aktuellen Speicherorts
-ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In PowerShell wird das Substantiv „Location“ verwendet, um auf das Arbeitsverzeichnis zu verweisen, und es wird eine Reihe von Cmdlets implementiert, mit denen der Speicherort überprüft und geändert werden kann.
+ms.openlocfilehash: 0ce9ed1269921233b0d6b07da832c12e159a84dc
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030206"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500469"
 ---
 # <a name="managing-current-location"></a>Verwalten des aktuellen Speicherorts
 

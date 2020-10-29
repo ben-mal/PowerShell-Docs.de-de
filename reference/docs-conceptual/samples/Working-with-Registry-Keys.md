@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Arbeiten mit Registrierungsschlüsseln
-ms.openlocfilehash: 3feaf6d26db51a507434a6cec1f1095c9013efc8
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird erörtert, wie Sie in PowerShell mit Registrierungsschlüsseln umgehen.
+ms.openlocfilehash: 90e8417fc3454b959dc2a86fc63e722832bdab23
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736844"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501387"
 ---
 # <a name="working-with-registry-keys"></a>Arbeiten mit Registrierungsschlüsseln
 
@@ -63,7 +64,7 @@ Diese Befehle listen nur die direkt enthaltenen Elemente auf, ähnlich dem Befeh
 Get-ChildItem -Path HKCU:\ -Recurse
 ```
 
-`Get-ChildItem` stellt mit den Parametern **Path**, **Filter**, **Include** und **Exclude** komplexe Filterfunktionen zur Verfügung, die allerdings typischerweise nur auf Namen basieren. Zum Durchführen einer komplexen Filterung basierend auf anderen Eigenschaften von Elementen können Sie das Cmdlet `Where-Object` verwenden. Der folgende Befehl sucht alle Schlüssel in `HKCU:\Software`, die nicht mehr als einen Unterschlüssel und zudem genau vier Werte enthalten:
+`Get-ChildItem` stellt mit den Parametern **Path** , **Filter** , **Include** und **Exclude** komplexe Filterfunktionen zur Verfügung, die allerdings typischerweise nur auf Namen basieren. Zum Durchführen einer komplexen Filterung basierend auf anderen Eigenschaften von Elementen können Sie das Cmdlet `Where-Object` verwenden. Der folgende Befehl sucht alle Schlüssel in `HKCU:\Software`, die nicht mehr als einen Unterschlüssel und zudem genau vier Werte enthalten:
 
 ```powershell
 Get-ChildItem -Path HKCU:\Software -Recurse |
@@ -84,7 +85,7 @@ Wenn Sie diesen neuen Schlüssel im Registrierungs-Editor oder über `Get-ChildI
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination HKCU: -Recurse
 ```
 
-Sie können auch weiterhin andere bereits verfügbare Tools verwenden, um Dateisystemkopien auszuführen. Alle Tools zur Bearbeitung der Registrierung – darunter **reg.exe**, **regini.exe**, **regedit.exe** – sowie COM-Objekte, die die Bearbeitung der Registrierung unterstützen (z. B. **WScript.Shell** und die WMI-Klasse **StdRegProv**) können in Windows PowerShell verwendet werden.
+Sie können auch weiterhin andere bereits verfügbare Tools verwenden, um Dateisystemkopien auszuführen. Alle Tools zur Bearbeitung der Registrierung – darunter **reg.exe** , **regini.exe** , **regedit.exe** – sowie COM-Objekte, die die Bearbeitung der Registrierung unterstützen (z. B. **WScript.Shell** und die WMI-Klasse **StdRegProv** ) können in Windows PowerShell verwendet werden.
 
 ## <a name="creating-keys"></a>Erstellen von Schlüsseln
 

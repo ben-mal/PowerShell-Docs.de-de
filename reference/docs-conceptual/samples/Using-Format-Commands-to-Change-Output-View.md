@@ -2,12 +2,13 @@
 ms.date: 11/22/2019
 keywords: powershell,cmdlet
 title: Verwenden von „Format“-Befehlen zum Ändern der Ausgabeanzeige
-ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell verfügt über ein erweiterbares Formatierungssystem, das Ihnen die Darstellung von Ausgaben in Listen, Tabellen oder benutzerdefinierten Layouts ermöglicht.
+ms.openlocfilehash: ebb285a19c7fe1bc80608385f9e2842469e95817
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417591"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500945"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Verwenden von „Format“-Befehlen zum Ändern der Ausgabeanzeige
 
@@ -212,7 +213,7 @@ WinRM               Running Automatic Windows Remote Management (WS-Management) 
 
 Die Verwendung des **Wrap-Parameters** an sich verlangsamt die Verarbeitung kaum. Wenn Sie **AutoSize** für das Formatieren einer rekursiven Dateiliste einer großen Verzeichnisstruktur verwenden, kann dieser Vorgang viel Zeit und Arbeitsspeicher in Anspruch nehmen, bevor die ersten Ausgabeelemente angezeigt werden.
 
-Wenn die Systemauslastung keine Rolle spielt, funktioniert **AutoSize** gut mit dem **Wrap-Parameter**.
+Wenn die Systemauslastung keine Rolle spielt, funktioniert **AutoSize** gut mit dem **Wrap-Parameter** .
 Die ursprünglichen Spalten verwenden weiterhin so viel Breite wie erforderlich, um Elemente in einer Zeile anzuzeigen, aber die letzte Spalte wird ggf. umschlossen.
 
 > [!NOTE]
@@ -224,7 +225,7 @@ Im folgenden Beispiel werden die breitesten Eigenschaften zuerst angegeben.
 Get-Process -Name iexplore | Format-Table -Wrap -AutoSize -Property FileVersion,Path,Name,Id
 ```
 
-Selbst mit Umschließung wird die letzte **Id**-Spalte ausgelassen:
+Selbst mit Umschließung wird die letzte **Id** -Spalte ausgelassen:
 
 ```Output
 FileVersion                          Path                                                  Nam
@@ -240,7 +241,7 @@ FileVersion                          Path                                       
 
 ### <a name="organizing-table-output--groupby"></a>Ordnen von Tabellenausgabe (-GroupBy)
 
-Eine weiterer nützlicher Parameter für das Steuern von tabellarischer Ausgabe ist **GroupBy**. Es kann insbesondere schwierig sein, längere tabellarische Auflistungen zu vergleichen. Mit dem **GroupBy**Parameter wird die Ausgabe anhand eines Eigenschaftswerts gruppiert. Beispielsweise können Dienste zur einfacheren Überprüfung nach **StartType** gruppiert werden. Dadurch wird der **StartType**-Wert aus der Eigenschaftenliste entfernt:
+Eine weiterer nützlicher Parameter für das Steuern von tabellarischer Ausgabe ist **GroupBy** . Es kann insbesondere schwierig sein, längere tabellarische Auflistungen zu vergleichen. Mit dem **GroupBy** Parameter wird die Ausgabe anhand eines Eigenschaftswerts gruppiert. Beispielsweise können Dienste zur einfacheren Überprüfung nach **StartType** gruppiert werden. Dadurch wird der **StartType** -Wert aus der Eigenschaftenliste entfernt:
 
 ```powershell
 Get-Service -Name win* | Sort-Object StartType | Format-Table -GroupBy StartType

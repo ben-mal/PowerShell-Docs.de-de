@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Erstellen einer grafischen Datumsauswahl
-ms.openlocfilehash: b748e301b24ed643488079b547e2da1a5a7a6551
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel erfahren Sie, wie Sie ein benutzerdefiniertes Steuerelement in der Art eines Kalenders unter Verwendung der Funktionen zur Formularerstellung von .NET Framework in Windows PowerShell erstellen.
+ms.openlocfilehash: b73c9ba78817af7c38c20642402752765a7a3674
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77706126"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500503"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Erstellen einer grafischen Datumsauswahl
 
@@ -60,7 +61,7 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 }
 ```
 
-Das Skript beginnt mit dem Laden von zwei .NET Framework-Klassen: **System.Drawing** und **System.Windows.Forms.** Sie starten dann eine neue Instanz der .NET Framework-Klasse **Windows.Forms.Form**. Diese stellt ein leeres Formular oder Fenster bereit, in das Sie Steuerelemente einfügen können.
+Das Skript beginnt mit dem Laden von zwei .NET Framework-Klassen: **System.Drawing** und **System.Windows.Forms** . Sie starten dann eine neue Instanz der .NET Framework-Klasse **Windows.Forms.Form** . Diese stellt ein leeres Formular oder Fenster bereit, in das Sie Steuerelemente einfügen können.
 
 ```powershell
 $form = New-Object Windows.Forms.Form -Property @{
@@ -73,14 +74,14 @@ $form = New-Object Windows.Forms.Form -Property @{
 
 Dieses Beispiel weist vier Eigenschaften dieser Klasse Werte zu, indem es die Eigenschaft **Property** und die Hashtabelle verwendet.
 
-1. **StartPosition**: Wenn Sie diese Eigenschaft nicht hinzufügen, wählt Windows eine Stelle aus, wenn das Formular geöffnet wird. Durch Festlegen dieser Eigenschaft auf **CenterScreen** wird das Formular automatisch bei jedem Laden in der Mitte des Bildschirms angezeigt.
+1. **StartPosition** : Wenn Sie diese Eigenschaft nicht hinzufügen, wählt Windows eine Position aus, wenn das Formular geöffnet wird. Durch Festlegen dieser Eigenschaft auf **CenterScreen** wird das Formular automatisch bei jedem Laden in der Mitte des Bildschirms angezeigt.
 
-2. **Size**: Dies ist die Größe des Formulars, in Pixeln.
-   Dieses Skript erstellt ein Formular, das 243 Pixel breit und 230 Pixel hoch ist.
+2. **Size** : Dies ist die Größe des Formulars, in Pixeln.
+   Dieses Skript erstellt ein Formular, das 243 Pixel breit und 230 Pixel hoch ist.
 
-3. **Text**: Dies wird der Titel des Fensters.
+3. **Text** : Dies wird der Titel des Fensters.
 
-4. **Topmost**: Durch das Festlegen dieser Eigenschaft auf `$true` können Sie erzwingen, dass das Fenster über anderen geöffneten Fenstern und Dialogfeldern geöffnet wird.
+4. **Topmost** : Durch das Festlegen dieser Eigenschaft auf `$true` können Sie erzwingen, dass das Fenster über anderen geöffneten Fenstern und Dialogfeldern geöffnet wird.
 
 Als Nächstes erstellen Sie in Ihrem Formular ein Kalendersteuerelement.
 In diesem Beispiel wird der aktuelle Tag nicht hervorgehoben oder markiert.
@@ -94,7 +95,7 @@ $calendar = New-Object Windows.Forms.MonthCalendar -Property @{
 $form.Controls.Add($calendar)
 ```
 
-Als Nächstes erstellen Sie eine Schaltfläche **OK** für Ihr Formular. Legen Sie die Größe und das Verhalten der Schaltfläche **OK** fest. In diesem Beispiel wird als Position der Schaltfläche 165 Pixel vom oberen Rand des Formulars und 38 Pixel vom linken Rand entfernt festgelegt. Die Schaltflächenhöhe beträgt 23 Pixel und die Schaltflächenlänge 75 Pixel. Das Skript verwendet vordefinierte Windows-Formulartypen zur Bestimmung des Schaltflächenverhaltens.
+Als Nächstes erstellen Sie eine Schaltfläche **OK** für Ihr Formular. Legen Sie die Größe und das Verhalten der Schaltfläche **OK** fest. In diesem Beispiel befindet sich die Schaltfläche 165 Pixel vom oberen Formularrand und 38 Pixel vom linken Rand entfernt. Die Schaltflächenhöhe beträgt 23 Pixel und die Schaltflächenlänge 75 Pixel. Das Skript verwendet vordefinierte Windows-Formulartypen zur Bestimmung des Schaltflächenverhaltens.
 
 ```powershell
 $okButton = New-Object Windows.Forms.Button -Property @{
@@ -107,7 +108,7 @@ $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 ```
 
-In entsprechender Weise erstellen Sie eine Schaltfläche **Abbrechen**.
+In entsprechender Weise erstellen Sie eine Schaltfläche **Abbrechen** .
 Die Position der Schaltfläche **Abbrechen** ist 165 Pixel vom oberen Rand und 113 Pixel vom linken Rand des Fensters entfernt.
 
 ```powershell
@@ -139,4 +140,4 @@ if ($result -eq [Windows.Forms.DialogResult]::OK) {
 ## <a name="see-also"></a>Weitere Informationen
 
 - [GitHub: Dave Wyatt's WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell – Tipp der Woche:  Erstellen einer grafischen Datumsauswahl](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10))
+- [Windows PowerShell-Tipp der Woche: Erstellen einer grafischen Datumsauswahl](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730942(v=technet.10))

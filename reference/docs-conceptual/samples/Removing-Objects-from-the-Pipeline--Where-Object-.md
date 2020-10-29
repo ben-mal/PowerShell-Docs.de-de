@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Entfernen von Objekten aus der Pipeline – Where-Object
-ms.openlocfilehash: 370e7745341b70c0794352a690d5750d21f53ac2
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Mit dem Where-Object-Cmdlet können Sie Objekte filtern, die an die Pipeline übergeben werden.
+ms.openlocfilehash: e744dc671303711f1cbe8cc724a97c3327c1da85
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737184"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500112"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Entfernen von Objekten aus der Pipeline (Where-Object)
 
@@ -49,14 +50,14 @@ In `Where-Object`-Skriptblöcken dient die spezielle Variable `$_` zum Verweisen
 
 Da `$_` auf das aktuelle Pipelineobjekt verweist, können wir für unsere Tests auf seine Eigenschaften zugreifen.
 
-Als Beispiel können wir uns die Klasse **Win32_SystemDriver** in WMI anschauen. Möglicherweise gibt es in einem bestimmten System Hunderte von Systemtreibern, Sie sind aber vielleicht nur an einer bestimmten Auswahl von Systemtreibern interessiert, z. B. an den Treibern, die gerade ausgeführt werden. Für die **Win32_SystemDriver**-Klasse lautet die relevante Eigenschaft **State**. Sie können die Systemtreiber so filtern, dass nur die ausgeführten Treiber ausgewählt werden. Geben Sie dazu Folgendes ein:
+Als Beispiel können wir uns die Klasse **Win32_SystemDriver** in WMI anschauen. Möglicherweise gibt es in einem bestimmten System Hunderte von Systemtreibern, Sie sind aber vielleicht nur an einer bestimmten Auswahl von Systemtreibern interessiert, z. B. an den Treibern, die gerade ausgeführt werden. Für die **Win32_SystemDriver** -Klasse lautet die relevante Eigenschaft **State** . Sie können die Systemtreiber so filtern, dass nur die ausgeführten Treiber ausgewählt werden. Geben Sie dazu Folgendes ein:
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |
   Where-Object {$_.State -eq 'Running'}
 ```
 
-Dies erzeugt immer noch eine lange Liste. Vielleicht möchten Sie die Liste weiter filtern, um nur die Treiber auszuwählen, die automatisch gestartet werden. Hierzu testen Sie zusätzlich den **StartMode**-Wert:
+Dies erzeugt immer noch eine lange Liste. Vielleicht möchten Sie die Liste weiter filtern, um nur die Treiber auszuwählen, die automatisch gestartet werden. Hierzu testen Sie zusätzlich den **StartMode** -Wert:
 
 ```powershell
 Get-CimInstance -Class Win32_SystemDriver |

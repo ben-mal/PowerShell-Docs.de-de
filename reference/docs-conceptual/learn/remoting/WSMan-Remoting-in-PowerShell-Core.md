@@ -2,27 +2,22 @@
 title: WS-Management-Remoting (WSMan) in PowerShell Core
 description: Remoting in PowerShell Core mithilfe von WSMan
 ms.date: 08/06/2018
-ms.openlocfilehash: 7b090e1463808ab10758bbd417d52fcc16c31366
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+ms.openlocfilehash: fdc4159279db28b8ee60bc0853e19512a1f9ec14
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83564512"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501302"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>WS-Management-Remoting (WSMan) in PowerShell Core
 
 ## <a name="instructions-to-create-a-remoting-endpoint"></a>Anweisungen zum Erstellen eines Remoting-Endpunkts
 
-Das PowerShell Core-Paket für Windows enthält ein WinRM-Plug-In (`pwrshplugin.dll`) und ein Installationsskript (`Install-PowerShellRemoting.ps1`) in `$PSHome`.
-Diese Dateien ermöglichen PowerShell eingehende PowerShell-Remoteverbindungen anzunehmen, wenn ihr Endpunkt angegeben ist.
+Das PowerShell Core-Paket für Windows enthält ein WinRM-Plug-In (`pwrshplugin.dll`) und ein Installationsskript (`Install-PowerShellRemoting.ps1`) in `$PSHome`. Diese Dateien ermöglichen PowerShell eingehende PowerShell-Remoteverbindungen anzunehmen, wenn ihr Endpunkt angegeben ist.
 
 ### <a name="motivation"></a>Motivation
 
-Eine PowerShell-Installation kann mithilfe von `New-PSSession` und `Enter-PSSession` PowerShell-Sitzungen mit Remotecomputern erstellen.
-Der Benutzer muss zunächst einen WinRM-Remoting-Endpunkt erstellen, um PowerShell das Annehmen von eingehenden Remoteverbindungen zu erlauben.
-Dies ist ein Szenario mit expliziter Anmeldung, bei dem der Benutzer „Install-PowerShellRemoting.ps1“ ausführt, um den WinRM-Endpunkt zu erstellen.
-Das Installationsskript ist eine kurzfristige Lösung, bis `Enable-PSRemoting` eine zusätzliche Funktion hinzugefügt wird, um diese Aktion auszuführen.
-Weitere Informationen finden Sie im Ticket [#1193](https://github.com/PowerShell/PowerShell/issues/1193).
+Eine PowerShell-Installation kann mithilfe von `New-PSSession` und `Enter-PSSession` PowerShell-Sitzungen mit Remotecomputern erstellen. Der Benutzer muss zunächst einen WinRM-Remoting-Endpunkt erstellen, um PowerShell das Annehmen von eingehenden Remoteverbindungen zu erlauben. Dies ist ein Szenario mit expliziter Anmeldung, bei dem der Benutzer „Install-PowerShellRemoting.ps1“ ausführt, um den WinRM-Endpunkt zu erstellen. Das Installationsskript ist eine kurzfristige Lösung, bis `Enable-PSRemoting` eine zusätzliche Funktion hinzugefügt wird, um diese Aktion auszuführen. Weitere Informationen finden Sie im Ticket [#1193](https://github.com/PowerShell/PowerShell/issues/1193).
 
 ### <a name="script-actions"></a>Skriptaktionen
 
@@ -56,7 +51,8 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**Hinweis:** Das Remoting-Registrierungsskript startet WinRM neu, deshalb werden alle vorhandenen PSRP-Sitzungen sofort beendet, wenn das Skript ausgeführt wurde. Wenn es während einer Remotesitzung ausgeführt wird, wird die Verbindung beendet.
+> [!NOTE]
+> Das Remoting-Registrierungsskript führt einen Neustart von WinRM aus. Alle vorhandenen PSRP-Sitzungen werden sofort nach dem Ausführen des Skripts beendet. Wenn es während einer Remotesitzung ausgeführt wird, beendet das Skript die Verbindung.
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>Herstellen einer Verbindung mit dem neuen Endpunkt
 

@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Umleiten von Daten mit Out-Cmdlets
-ms.openlocfilehash: d4cc14e26bdef0f973f948177d0c1e68929605fa
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Dieser Artikel zeigt, wie die Cmdlets zur Verwaltung der Ausgabe in PowerShell verwendet werden.
+ms.openlocfilehash: 3a9e3b1ac06f5be4e6f3bbc52a15c4afb5b12cef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030082"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500214"
 ---
 # <a name="redirecting-data-with-out--cmdlets"></a>Umleiten von Daten mit Out-*-Cmdlets
 
@@ -62,10 +63,10 @@ Name    : explorer
 ...
 ```
 
-Dies gilt für alle **Out**-Cmdlets. Ein **Out**-Cmdlet sollte immer am Ende einer Pipeline stehen.
+Dies gilt für alle **Out** -Cmdlets. Ein **Out** -Cmdlet sollte immer am Ende einer Pipeline stehen.
 
 > [!NOTE]
-> Alle **Out**-Cmdlets rendern Ausgabe als Text, wobei sie die Formatierung verwenden, die für das Konsolenfenster wirksam ist, einschließlich Längenbeschränkungen für Zeilen.
+>  Alle **Out** -Cmdlets rendern Ausgabe als Text, wobei sie die Formatierung verwenden, die für das Konsolenfenster wirksam ist, einschließlich Längenbeschränkungen für Zeilen.
 
 ## <a name="paging-console-output-out-host"></a>Auslagern von Konsolenausgabe (Out-Host)
 
@@ -75,7 +76,7 @@ Standardmäßig sendet Windows PowerShell Daten an das Hostfenster, und dies ent
 Get-Command | Out-Host -Paging
 ```
 
-Sie können auch die **more**-Funktion verwenden, um Daten auszulagern. In Windows PowerShell ist **more** eine Funktion, die **Out-Host -Paging** aufruft. Mit dem folgenden Befehl wird veranschaulicht, wie die **more**-Funktion verwendet wird, um die Ausgabe von „Get-Command“ auszulagern:
+Sie können auch die **more** -Funktion verwenden, um Daten auszulagern. In Windows PowerShell ist **more** eine Funktion, die **Out-Host -Paging** aufruft. Mit dem folgenden Befehl wird veranschaulicht, wie die **more** -Funktion verwendet wird, um die Ausgabe von „Get-Command“ auszulagern:
 
 ```powershell
 Get-Command | more
@@ -94,7 +95,7 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 
 ## <a name="discarding-output-out-null"></a>Verwerfen von Ausgabe (Out-Null)
 
-Das **Out-Null**-Cmdlet verwirft sofort jegliche Eingabe, die es empfängt. Damit können Sie überflüssige Daten verwerfen, die Sie als Nebeneffekt des Ausführens eines Befehls erhalten. Wenn Sie den folgenden Befehl eingeben, erhalten Sie keinerlei Rückgabe von dem Befehl:
+Das **Out-Null** -Cmdlet verwirft sofort jegliche Eingabe, die es empfängt. Damit können Sie überflüssige Daten verwerfen, die Sie als Nebeneffekt des Ausführens eines Befehls erhalten. Wenn Sie den folgenden Befehl eingeben, erhalten Sie keinerlei Rückgabe von dem Befehl:
 
 ```powershell
 Get-Command | Out-Null
@@ -128,7 +129,7 @@ Get-Process | Out-File -FilePath C:\temp\processlist.txt
 
 Die Ergebnisse, die das Cmdlet **Out-File** bringt, entsprechen möglicherweise nicht Ihrer Erwartung, wenn Sie an herkömmliche Ausgabeumleitung denken. Um dessen Verhalten zu verstehen, müssen Sie den Kontext berücksichtigen, in dem das Cmdlet **Out-File** ausgeführt wird.
 
-Standardmäßig erstellt das Cmdlet **Out-File** eine Unicode-Datei. Dies ist langfristig die beste Standardeinstellung, bedeutet aber, dass die Tools, die ASCII-Dateien erwarten, mit dem Standardausgabeformat nicht ordnungsgemäß funktionieren. Sie können das Standardausgabeformat in ASCII ändern, indem Sie den **Encoding**-Parameter verwenden:
+Standardmäßig erstellt das Cmdlet **Out-File** eine Unicode-Datei. Dies ist langfristig die beste Standardeinstellung, bedeutet aber, dass die Tools, die ASCII-Dateien erwarten, mit dem Standardausgabeformat nicht ordnungsgemäß funktionieren. Sie können das Standardausgabeformat in ASCII ändern, indem Sie den **Encoding** -Parameter verwenden:
 
 ```powershell
 Get-Process | Out-File -FilePath C:\temp\processlist.txt -Encoding ASCII
@@ -150,7 +151,7 @@ Cmdlet          Add-History                     Add-History [[-InputObject] ...
 ...
 ```
 
-Wenn Sie Ausgabe erhalten möchten, die keine Zeilenumbrüche erzwingt, um die Bildschirmbreite einzuhalten, verwenden Sie den **Width**-Parameter, um die Breite anzugeben. Weil **Width** ein 32-Bit-Ganzzahl-Parameter ist, beträgt sein größter Wert 2147483647. Geben Sie Folgendes ein, um die Zeilenbreite auf diesen größten Wert festzulegen:
+Wenn Sie Ausgabe erhalten möchten, die keine Zeilenumbrüche erzwingt, um die Bildschirmbreite einzuhalten, verwenden Sie den **Width** -Parameter, um die Breite anzugeben. Weil **Width** ein 32-Bit-Ganzzahl-Parameter ist, beträgt sein größter Wert 2147483647. Geben Sie Folgendes ein, um die Zeilenbreite auf diesen größten Wert festzulegen:
 
 ```powershell
 Get-Command | Out-File -FilePath c:\temp\output.txt -Width 2147483647

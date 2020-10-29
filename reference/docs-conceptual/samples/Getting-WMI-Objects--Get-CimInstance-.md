@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Abrufen von WMI-Objekten (Get CimInstance)
-ms.openlocfilehash: 4ff47844fd367a49f554c7c05c491bdddf28eabc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel werden mehrere Beispiele zum Abrufen von Instanzen aus WMI-Objekten von einem Computersystem gezeigt.
+ms.openlocfilehash: f7a005bbf39cf141e6474815d3e050314830453c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "77002650"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500452"
 ---
 # <a name="getting-wmi-objects-get-ciminstance"></a>Abrufen von WMI-Objekten (Get-CimInstance)
 
@@ -43,7 +44,7 @@ Win32_ThreadStopTrace
 ...
 ```
 
-Sie können die gleichen Informationen von einem Remotecomputer abrufen, indem Sie den **ComputerName**-Parameter verwenden und für diesen einen Computernamen oder eine IP-Adresse angeben:
+Sie können die gleichen Informationen von einem Remotecomputer abrufen, indem Sie den **ComputerName** -Parameter verwenden und für diesen einen Computernamen oder eine IP-Adresse angeben:
 
 ```powershell
 Get-CimClass -Namespace root/CIMV2 -ComputerName 192.168.1.29
@@ -57,7 +58,7 @@ Die Klassenauflistungen, die von Remotecomputern zurückgegeben werden, können 
 
 ### <a name="displaying-wmi-class-details"></a>Anzeigen von WMI-Klassendetails
 
-Wenn Sie den Namen einer WMI-Klasse bereits kennen, können Sie ihn verwenden, um Informationen sofort abzurufen. Eine der WMI-Klassen, die häufig verwendet werden, um Informationen zu einem Computer abzurufen, ist z.B. **Win32_OperatingSystem**.
+Wenn Sie den Namen einer WMI-Klasse bereits kennen, können Sie ihn verwenden, um Informationen sofort abzurufen. Eine der WMI-Klassen, die häufig verwendet werden, um Informationen zu einem Computer abzurufen, ist z.B. **Win32_OperatingSystem** .
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem
@@ -70,13 +71,13 @@ C:\WINDOWS\system32 Microsoft    18362       USER1          00330-80000-00000-AA
 ```
 
 Obwohl hier alle Parameter gezeigt sind, kann der Befehl auf kompaktere Weise formuliert werden.
-Der **ComputerName**-Parameter ist beim Verbinden mit dem lokalen System nicht erforderlich. Er ist aufgeführt, um den allgemeinsten Fall zu veranschaulichen und Sie an den Parameter zu erinnern. Als **Namespace** wird standardmäßig `root/CIMV2` verwendet, sodass auch dieser Parameter fehlen kann. Grundsätzlich gilt, dass es bei den meisten Cmdlets zulässig ist, die Namen von allgemeinen Parametern wegzulassen. Wird bei `Get-CimInstance` kein Name für den ersten Parameter angegeben, geht PowerShell davon aus, dass es sich um den **Class**-Parameter handelt. Dies bedeutet, dass der letzte Befehl mit folgender Eingabe ausgeführt werden kann:
+Der **ComputerName** -Parameter ist beim Verbinden mit dem lokalen System nicht erforderlich. Er ist aufgeführt, um den allgemeinsten Fall zu veranschaulichen und Sie an den Parameter zu erinnern. Als **Namespace** wird standardmäßig `root/CIMV2` verwendet, sodass auch dieser Parameter fehlen kann. Grundsätzlich gilt, dass es bei den meisten Cmdlets zulässig ist, die Namen von allgemeinen Parametern wegzulassen. Wird bei `Get-CimInstance` kein Name für den ersten Parameter angegeben, geht PowerShell davon aus, dass es sich um den **Class** -Parameter handelt. Dies bedeutet, dass der letzte Befehl mit folgender Eingabe ausgeführt werden kann:
 
 ```powershell
 Get-CimInstance Win32_OperatingSystem
 ```
 
-Die **Win32_OperatingSystem**-Klasse hat viel mehr Eigenschaften als hier aufgeführt sind. Sie können „Get-Member“ verwenden, um alle Eigenschaften anzuzeigen. Die Eigenschaften einer WMI-Klasse sind automatisch wie andere Objekteigenschaften verfügbar:
+Die **Win32_OperatingSystem** -Klasse hat viel mehr Eigenschaften als hier aufgeführt sind. Sie können „Get-Member“ verwenden, um alle Eigenschaften anzuzeigen. Die Eigenschaften einer WMI-Klasse sind automatisch wie andere Objekteigenschaften verfügbar:
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem | Get-Member -MemberType Property
@@ -104,7 +105,7 @@ DataExecutionPrevention_Available         Property   bool DataExecutionPreventio
 
 #### <a name="displaying-non-default-properties-with-format-cmdlets"></a>Anzeigen von Nicht-Standardeigenschaften mit „Format“-Cmdlets
 
-Wenn Sie Informationen anzeigen möchten, die in der **Win32_OperatingSystem**-Klasse enthalten sind, aber nicht standardmäßig angezeigt werden, verwenden Sie die **Format**-Cmdlets. Wenn Sie beispielsweise die verfügbaren Arbeitsspeicherdaten anzeigen möchten, geben Sie Folgendes ein:
+Wenn Sie Informationen anzeigen möchten, die in der **Win32_OperatingSystem** -Klasse enthalten sind, aber nicht standardmäßig angezeigt werden, verwenden Sie die **Format** -Cmdlets. Wenn Sie beispielsweise die verfügbaren Arbeitsspeicherdaten anzeigen möchten, geben Sie Folgendes ein:
 
 ```powershell
 Get-CimInstance -Class Win32_OperatingSystem |

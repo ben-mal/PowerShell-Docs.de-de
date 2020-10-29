@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Breaking Changes in PowerShell Core 6.0
-ms.openlocfilehash: 9ead635232930598634141369fd2cc299f0b1799
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: In diesem Artikel sind die Unterschiede zwischen Windows PowerShell 5.1 und PowerShell 6.0 zusammengefasst.
+ms.openlocfilehash: 7ed6e811b9136cb1c35422a9d682ba2bfaa136a0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158189"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501693"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Breaking Changes in PowerShell 6.x
 
@@ -40,7 +41,7 @@ Wenn für die Fortsetzung eines Skripts nach dem Neustart des Betriebssystems Pr
 
 ### <a name="custom-snap-ins"></a>Benutzerdefinierte Snap-Ins
 
-[PowerShell-Snap-Ins][snapin] sind die Vorgänger von PowerShell-Modulen und in der PowerShell-Community nicht weit verbreitet.
+[PowerShell-Snap-Ins][snapin] sind die Vorgänger von PowerShell-Modulen und sind in der PowerShell-Community nicht weit verbreitet.
 
 Aufgrund der Komplexität der unterstützenden Snap-Ins und der zu geringen Verwendung in der Community werden benutzerdefinierte Snap-Ins in PowerShell Core nicht mehr unterstützt.
 
@@ -141,7 +142,7 @@ Das Windows Presentation Framework wird in CoreCLR nicht unterstützt. Folgende 
 
 - `Show-Command`
 - `Out-GridView`
-- Der **showwindow**-Parameter von `Get-Help`
+- Der **showwindow** -Parameter von `Get-Help`
 
 ### <a name="some-dsc-cmdlets-removed"></a>Einige DSC-Cmdlets wurden entfernt
 
@@ -214,7 +215,7 @@ Zuvor wurde ein `-LiteralPath`-Cmdlet im Hintergrund beendet, wenn ein Platzhalt
 
 Zuvor behielten exportierte Objekte, die `Export-CSV` mit `TypeInformation` verwenden und mit `ConvertFrom-Csv` importiert wurden, die Typinformationen nicht bei. Durch diese Änderung werden die Typinformationen zum Member `PSTypeNames` hinzugefügt, wenn Sie in der CSV-Datei vorhanden sind.
 
-### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>`-NoTypeInformation` sollte standardmäßig auf `Export-Csv` festgelegt sein [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
+### <a name="-notypeinformation-should-be-default-on-export-csv-5131"></a>`-NoTypeInformation` sollte standardmäßig auf  festgelegt sein `Export-Csv` [#5131](https://github.com/PowerShell/PowerShell/issues/5131)
 
 Diese Änderung wurde als Reaktion auf Kundenfeedback zum Standardverhalten von `Export-CSV` durchgeführt, indem Typinformationen eingefügt wurden.
 
@@ -253,11 +254,11 @@ Zuvor konnten Sie bei der programmgesteuerten Erstellung eines PowerShell-Runspa
 
 Die falsche Position eines Parameters führte dazu, dass die Argumente als Eingabe statt als Argumente übergeben wurden.
 
-### <a name="remove-unsupported--showwindow-switch-from-get-help-4903"></a>Nicht unterstützter Schalter `-showwindow` aus `Get-Help` entfernt [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
+### <a name="remove-unsupported--showwindow-switch-from-get-help-4903"></a>Nicht unterstützter Schalter `-showwindow` aus  entfernt `Get-Help` [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
 
 `-showwindow` basiert auf WPF. Dies wird auf CoreCLR nicht unterstützt.
 
-### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866"></a>\* kann jetzt im Registrierungspfad für `Remove-Item` verwendet werden [#4866](https://github.com/PowerShell/PowerShell/issues/4866)
+### <a name="allow--to-be-used-in-registry-path-for-remove-item-4866"></a>* kann jetzt im Registrierungspfad für  verwendet werden `Remove-Item` [#4866](https://github.com/PowerShell/PowerShell/issues/4866)
 
 Zuvor wurde ein `-LiteralPath`-Cmdlet im Hintergrund beendet, wenn ein Platzhalter es wie `-Path` behandelt und dieser keine Dateien findet. Korrekterweise sollte `-LiteralPath` ein Literal sein, sodass ein Fehler angezeigt wird, wenn die Datei nicht vorhanden ist. Die Änderung besteht darin, dass Platzhalter, die mit `-Literal` verwendet werden, als Literal behandelt werden.
 
@@ -279,7 +280,7 @@ Aufgrund von nicht unterstützten APIs wurden das `LocalAccounts`-Modul und die 
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036"></a>Das Ausführen des PowerShell-Skripts mit booleschen Parametern funktioniert nicht [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-Zuvor wurde bei der Verwendung von **powershell.exe** (jetzt **pwsh.exe**), um ein PowerShell-Skript mithilfe von `-File` auszuführen, keine Möglichkeit bereitgestellt, `$true`/`$false` als Parameterwert zu übergeben. Die Unterstützung für `$true`/`$false` als analysierte Werte für Parameter wurde hinzugefügt. Parameterwerte werden ebenfalls unterstützt, da die derzeit dokumentierte Syntax nicht funktioniert.
+Zuvor wurde bei der Verwendung von **powershell.exe** (jetzt **pwsh.exe** ), um ein PowerShell-Skript mithilfe von `-File` auszuführen, keine Möglichkeit bereitgestellt, `$true`/`$false` als Parameterwert zu übergeben. Die Unterstützung für `$true`/`$false` als analysierte Werte für Parameter wurde hinzugefügt. Parameterwerte werden ebenfalls unterstützt, da die derzeit dokumentierte Syntax nicht funktioniert.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027"></a>Entfernung der `ClrVersion`-Eigenschaft aus `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
@@ -344,7 +345,7 @@ Das Übergeben von `$null` an eines der folgenden Cmdlets löst nun einen Fehler
 - `Get-WmiObject -Class`
 - `Get-WmiObject -Property`
 
-### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482"></a>Unterstützung für das erweiterte W3C-Protokolldateiformat in `Import-Csv` hinzugefügt [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
+### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482"></a>Unterstützung für das erweiterte W3C-Protokolldateiformat in  hinzugefügt `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
 
 Zuvor konnte das Cmdlet `Import-Csv` nicht verwendet werden, um die Protokolldateien direkt im erweiterten W3C-Protokollformat zu importieren. Hierfür waren zusätzliche Aktionen erforderlich. Durch diese Änderung wird das erweiterte W3C-Protokollformat unterstützt.
 
@@ -352,7 +353,7 @@ Zuvor konnte das Cmdlet `Import-Csv` nicht verwendet werden, um die Protokolldat
 
 `ValueFromRemainingArguments` gibt nun die Werte als Array statt als Einzelwert, der ein Array darstellt, zurück.
 
-### <a name="buildversion-is-removed-from-psversiontable-1415"></a>`BuildVersion` aus `$PSVersionTable` entfernt [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
+### <a name="buildversion-is-removed-from-psversiontable-1415"></a>`BuildVersion` aus  entfernt `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
 Die `BuildVersion`-Eigenschaft wurde aus `$PSVersionTable` entfernt. Diese Eigenschaft war an die Windows-Buildversion gebunden. Stattdessen wird empfohlen, die genaue Version von PowerShell Core mit `GitCommitId` abzurufen.
 

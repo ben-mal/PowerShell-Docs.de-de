@@ -4,12 +4,13 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: eb23b048a50f10ea83d156c0499772b1be439336
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+description: In diesem Kapitel werden die Konzepte von Ausgabeformatierung, Befehlsaliasen, Anbietern und Vergleichsvorgängen vorgestellt.
+ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438001"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501608"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>Kapitel 5: Formatierung, Aliase, Anbieter, Vergleich
 
@@ -574,7 +575,7 @@ Beachten Sie, dass das Wort „Saturday“ im vorherigen Beispiel nicht ersetzt 
 SQL Sat - Baton Rouge
 ```
 
-Gehen Sie bei der Verwendung von Methoden zum Transformieren von Daten vorsichtig vor, da Sie auf unvorhergesehene Probleme stoßen können, z. B. das Nichtbestehen des _Turkey-Tests_. Ein Beispiel finden Sie in dem Blogartikel [Verwenden von Pester zum Testen von PowerShell-Code mit anderen Kulturen][]. Meine Empfehlung ist es, einen Operator anstelle einer Methode zu verwenden, wenn dies möglich ist, um diese Art von Problemen zu vermeiden.
+Gehen Sie bei der Verwendung von Methoden zum Transformieren von Daten vorsichtig vor, da Sie auf unvorhergesehene Probleme stoßen können, z. B. das Nichtbestehen des _Turkey-Tests_ . Ein Beispiel finden Sie in dem Blogartikel [Verwenden von Pester zum Testen von PowerShell-Code mit anderen Kulturen][]. Meine Empfehlung ist es, einen Operator anstelle einer Methode zu verwenden, wenn dies möglich ist, um diese Art von Problemen zu vermeiden.
 
 Obwohl die Vergleichsoperatoren wie in den vorherigen Beispielen gezeigt verwendet werden können, verwende ich sie doch in der Regel mit dem Cmdlet `Where-Object`, um eine Art von Filterung durchzuführen.
 

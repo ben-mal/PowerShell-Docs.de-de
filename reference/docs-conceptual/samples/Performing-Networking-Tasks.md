@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Ausführen von Netzwerkaufgaben
-ms.openlocfilehash: e0aa3b8ef3d911ab0fe851f6621d70e1265c5bd4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird die Verwendung von WMI-Klassen in PowerShell zum Verwalten von Netzwerk-Konfigurationseinstellungen in Windows erläutert.
+ms.openlocfilehash: 95b05c193f4168cdcdf8414399c4f8c569bff754
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737201"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500248"
 ---
 # <a name="performing-networking-tasks"></a>Ausführen von Netzwerkaufgaben
 
@@ -38,7 +39,7 @@ fe80::60ea:29a7:a233:7cb7
 2601:600:a27f:a470::2ec1
 ```
 
-Untersuchen Sie mithilfe des Cmdlets `Get-Member` die Eigenschaft **IPAddress**, um zu verstehen, warum die geschweiften Klammern angezeigt werden:
+Untersuchen Sie mithilfe des Cmdlets `Get-Member` die Eigenschaft **IPAddress** , um zu verstehen, warum die geschweiften Klammern angezeigt werden:
 
 ```powershell
  Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -52,7 +53,7 @@ Name      MemberType Definition
 IPAddress Property   string[] IPAddress {get;}
 ```
 
-Die „IPAdress“-Eigenschaft für jede Netzwerkkarte ist tatsächlich ein Array. Die geschweiften Klammern in der Definition kennzeichnen, dass **IPAdress** ein **System.String**-Wert ist, allerdings ein Array von **System.String**-Werten.
+Die „IPAdress“-Eigenschaft für jede Netzwerkkarte ist tatsächlich ein Array. Die geschweiften Klammern in der Definition kennzeichnen, dass **IPAdress** ein **System.String** -Wert ist, allerdings ein Array von **System.String** -Werten.
 
 ## <a name="listing-ip-configuration-data"></a>Auflisten von IP-Konfigurationsdaten
 
@@ -81,7 +82,7 @@ Sie können einen einfachen Ping zu einem Computer ausführen, indem Sie **Win32
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'"
 ```
 
-Eine nützlichere Form für Zusammenfassungsinformationen ist eine Anzeige der Eigenschaften „Address“, „ResponseTime“ und „StatusCode“, wie sie vom folgenden Befehl generiert wird. Der **Autosize**-Parameter von `Format-Table` bewirkt eine Breitenänderung der Tabellenspalten, sodass diese ordnungsgemäß in PowerShell angezeigt werden.
+Eine nützlichere Form für Zusammenfassungsinformationen ist eine Anzeige der Eigenschaften „Address“, „ResponseTime“ und „StatusCode“, wie sie vom folgenden Befehl generiert wird. Der **Autosize** -Parameter von `Format-Table` bewirkt eine Breitenänderung der Tabellenspalten, sodass diese ordnungsgemäß in PowerShell angezeigt werden.
 
 ```powershell
 Get-CimInstance -Class Win32_PingStatus -Filter "Address='127.0.0.1'" |
@@ -108,7 +109,7 @@ Sie können ein Array verwenden, um mehrere Computer mit einem einzigen Befehl z
 
 Mit dem gleichen Befehlsformat können Sie alle Computer in einem Subnetz pingen, beispielsweise in einem privaten Netzwerk, in dem die Netzwerknummer 192.168.1.0 und eine standardmäßige Klasse-C-Subnetzmaske (255.255.255.0) verwendet wird. Nur Adressen im Bereich von 192.168.1.1 bis 192.168.1.254 sind zulässige lokale Adressen (0 ist immer für die Netzwerknummer reserviert, und 255 ist eine Subnetz-Broadcastadresse).
 
-Um ein Array der Zahlen von 1 bis 254 in PowerShell darzustellen, verwenden Sie die Anweisung **1..254**.
+Um ein Array der Zahlen von 1 bis 254 in PowerShell darzustellen, verwenden Sie die Anweisung **1..254** .
 Ein vollständiges Subnetz-Ping kann ausgeführt werden, indem das Array erstellt und dann jeder Wert zu einer unvollständigen Adresse in der Ping-Anweisung hinzugefügt wird:
 
 ```powershell
@@ -133,7 +134,7 @@ Get-CimInstance -Class Win32_NetworkAdapter -ComputerName .
 
 ## <a name="assigning-the-dns-domain-for-a-network-adapter"></a>Zuweisen der DNS-Domäne für eine Netzwerkkarte
 
-Wenn Sie die DNS-Domäne für die automatische Namensauflösung zuweisen möchten, verwenden Sie die Methode **SetDNSDomain** von **Win32_NetworkAdapterConfiguration**. Da Sie die DNS-Domäne für jede Netzwerkadapterkonfiguration unabhängig voneinander zuweisen, müssen Sie eine `ForEach-Object`-Anweisung verwenden, um die Domäne jedem Adapter zuzuweisen:
+Wenn Sie die DNS-Domäne für die automatische Namensauflösung zuweisen möchten, verwenden Sie die Methode **SetDNSDomain** von **Win32_NetworkAdapterConfiguration** . Da Sie die DNS-Domäne für jede Netzwerkadapterkonfiguration unabhängig voneinander zuweisen, müssen Sie eine `ForEach-Object`-Anweisung verwenden, um die Domäne jedem Adapter zuzuweisen:
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true |
@@ -186,11 +187,11 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=$true
   ForEach-Object -Process {$_.EnableDHCP()}
 ```
 
-Sie können die **Filter**-Anweisung `IPEnabled=$true and DHCPEnabled=$false` verwenden, um eine DHCP-Aktivierung zu vermeiden, wenn DHCP bereits aktiviert ist. Es wird jedoch kein Fehler verursacht, wenn dieser Schritt ausgelassen wird.
+Sie können die **Filter** -Anweisung `IPEnabled=$true and DHCPEnabled=$false` verwenden, um eine DHCP-Aktivierung zu vermeiden, wenn DHCP bereits aktiviert ist. Es wird jedoch kein Fehler verursacht, wenn dieser Schritt ausgelassen wird.
 
 ### <a name="releasing-and-renewing-dhcp-leases-on-specific-adapters"></a>Freigeben und Erneuern von DHCP-Leases auf bestimmten Netzwerkkarten
 
-Die **Win32_NetworkAdapterConfiguration**-Klasse hat die Methoden **ReleaseDHCPLease** und **RenewDHCPLease**. Beide werden auf die gleiche Weise verwendet. Üblicherweise verwenden Sie diese Methoden, wenn Sie nur Adressen für eine Netzwerkkarte in einem bestimmten Subnetz freigeben oder erneuern müssen. Die einfachste Möglichkeit zum Filtern von Netzwerkkarten in einem Subnetz besteht darin, nur die Netzwerkkartenkonfigurationen auswählen, die das Gateway für das Subnetz verwenden. Beispielsweise gibt der folgende Befehl alle DHCP-Leases auf Netzwerkkarten des lokalen Computers frei, die DHCP-Leases von 192.168.1.254 erhalten:
+Die **Win32_NetworkAdapterConfiguration** -Klasse hat die Methoden **ReleaseDHCPLease** und **RenewDHCPLease** . Beide werden auf die gleiche Weise verwendet. Üblicherweise verwenden Sie diese Methoden, wenn Sie nur Adressen für eine Netzwerkkarte in einem bestimmten Subnetz freigeben oder erneuern müssen. Die einfachste Möglichkeit zum Filtern von Netzwerkkarten in einem Subnetz besteht darin, nur die Netzwerkkartenkonfigurationen auswählen, die das Gateway für das Subnetz verwenden. Beispielsweise gibt der folgende Befehl alle DHCP-Leases auf Netzwerkkarten des lokalen Computers frei, die DHCP-Leases von 192.168.1.254 erhalten:
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true and DHCPEnabled=$true" |
@@ -198,7 +199,7 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
     ForEach-Object -Process {$_.ReleaseDHCPLease()}
 ```
 
-Die einzige Änderung für die Erneuerung einer DHCP-Lease ist die, dass die **RenewDHCPLease**-Methode anstelle der **ReleaseDHCPLease**-Methode verwendet wird:
+Die einzige Änderung für die Erneuerung einer DHCP-Lease ist die, dass die **RenewDHCPLease** -Methode anstelle der **ReleaseDHCPLease** -Methode verwendet wird:
 
 ```powershell
 Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$true and DHCPEnabled=$true" |
@@ -211,23 +212,23 @@ Get-CimInstance -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=$tru
 
 ### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>Freigeben und Erneuern von DHCP-Leases auf allen Netzwerkkarten
 
-Sie können globale DHCP-Adressfreigaben oder -erneuerungen auf allen Netzwerkkarten ausführen, indem Sie die **Win32_NetworkAdapterConfiguration**-Methoden **ReleaseDHCPLeaseAll** und **RenewDHCPLeaseAll** verwenden.
+Sie können globale DHCP-Adressfreigaben oder -erneuerungen auf allen Netzwerkkarten ausführen, indem Sie die **Win32_NetworkAdapterConfiguration** -Methoden **ReleaseDHCPLeaseAll** und **RenewDHCPLeaseAll** verwenden.
 Allerdings muss der Befehl auf die WMI-Klasse statt auf eine bestimmte Netzwerkkarte angewendet werden, weil globales Freigeben und Erneuern von Leases für die Klasse, nicht für eine bestimmte Netzwerkkarte ausgeführt wird.
 
-Sie können einen Verweis auf eine WMI-Klasse anstelle von Klasseninstanzen abrufen, indem Sie alle WMI-Klassen auflisten und dann nur die gewünschte Klasse nach Name auswählen. Beispielsweise gibt der folgende Befehl die **Win32_NetworkAdapterConfiguration**-Klasse zurück:
+Sie können einen Verweis auf eine WMI-Klasse anstelle von Klasseninstanzen abrufen, indem Sie alle WMI-Klassen auflisten und dann nur die gewünschte Klasse nach Name auswählen. Beispielsweise gibt der folgende Befehl die **Win32_NetworkAdapterConfiguration** -Klasse zurück:
 
 ```powershell
 Get-CimInstance -List | Where-Object {$_.Name -eq 'Win32_NetworkAdapterConfiguration'}
 ```
 
-Sie können den gesamten Befehl als die Klasse behandeln und dann die **ReleaseDHCPAdapterLease**-Methode für ihn aufrufen. Im folgenden Befehl wird PowerShell durch die Klammern um die Pipelineelemente `Get-CimInstance` und `Where-Object` angewiesen, diese zuerst auszuwerten:
+Sie können den gesamten Befehl als die Klasse behandeln und dann die **ReleaseDHCPAdapterLease** -Methode für ihn aufrufen. Im folgenden Befehl wird PowerShell durch die Klammern um die Pipelineelemente `Get-CimInstance` und `Where-Object` angewiesen, diese zuerst auszuwerten:
 
 ```powershell
 (Get-CimInstance -List |
   Where-Object {$_.Name -eq 'Win32_NetworkAdapterConfiguration'}).ReleaseDHCPLeaseAll()
 ```
 
-Sie können das gleiche Befehlsformat verwenden, um die **RenewDHCPLeaseAll**-Methode aufzurufen:
+Sie können das gleiche Befehlsformat verwenden, um die **RenewDHCPLeaseAll** -Methode aufzurufen:
 
 ```powershell
 (Get-CimInstance -List |
@@ -236,7 +237,7 @@ Sie können das gleiche Befehlsformat verwenden, um die **RenewDHCPLeaseAll**-Me
 
 ## <a name="creating-a-network-share"></a>Erstellen einer Netzwerkfreigabe
 
-Um eine Netzwerkfreigabe zu erstellen, verwenden Sie die Methode **Create** von **Win32_Share**:
+Um eine Netzwerkfreigabe zu erstellen, verwenden Sie die Methode **Create** von **Win32_Share** :
 
 ```powershell
 (Get-CimInstance -List |
@@ -253,7 +254,7 @@ net share tempshare=c:\temp /users:25 /remark:"test share of the temp folder"
 
 ## <a name="removing-a-network-share"></a>Entfernen einer Netzwerkfreigabe
 
-Sie können eine Netzwerkfreigabe mit **Win32_Share** entfernen, aber der Vorgang unterscheidet sich etwas vom Erstellen einer Freigabe, weil Sie die bestimmte zu entfernende Freigabe anstelle der **Win32_Share**-Klasse abrufen müssen. Mit der folgenden Anweisung wird die Freigabe **TempShare** gelöscht:
+Sie können eine Netzwerkfreigabe mit **Win32_Share** entfernen, aber der Vorgang unterscheidet sich etwas vom Erstellen einer Freigabe, weil Sie die bestimmte zu entfernende Freigabe anstelle der **Win32_Share** -Klasse abrufen müssen. Mit der folgenden Anweisung wird die Freigabe **TempShare** gelöscht:
 
 ```powershell
 (Get-CimInstance -Class Win32_Share -Filter "Name='TempShare'").Delete()
@@ -271,7 +272,7 @@ tempshare was deleted successfully.
 
 ## <a name="connecting-a-windows-accessible-network-drive"></a>Verbinden eines für Windows verfügbaren Netzlaufwerks
 
-Das Cmdlet `New-PSDrive` erstellt ein PowerShell-Laufwerk, aber auf diese Weise erstellte Laufwerke sind nur für PowerShell verfügbar. Um ein neues Netzlaufwerk zu erstellen, können Sie das **WScript.Network**-COM-Objekt verwenden. Durch den folgenden Befehl wird die Freigabe `\\FPS01\users` dem lokalen Laufwerk `B:` zugeordnet:
+Das Cmdlet `New-PSDrive` erstellt ein PowerShell-Laufwerk, aber auf diese Weise erstellte Laufwerke sind nur für PowerShell verfügbar. Um ein neues Netzlaufwerk zu erstellen, können Sie das **WScript.Network** -COM-Objekt verwenden. Durch den folgenden Befehl wird die Freigabe `\\FPS01\users` dem lokalen Laufwerk `B:` zugeordnet:
 
 ```powershell
 (New-Object -ComObject WScript.Network).MapNetworkDrive('B:', '\\FPS01\users')

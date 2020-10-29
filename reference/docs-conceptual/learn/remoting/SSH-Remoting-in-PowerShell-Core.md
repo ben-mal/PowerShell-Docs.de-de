@@ -1,13 +1,13 @@
 ---
 title: PowerShell-Remoting über SSH
-description: Remoting in PowerShell Core mithilfe von SSH
-ms.date: 07/23/2020
-ms.openlocfilehash: cc65db481fcedcafec16093dbf7e6af4975c73db
-ms.sourcegitcommit: 9dddf1d2e91ebcd347fcfb7bf6ef670d49a12ab7
+ms.date: 10/19/2020
+description: Erläutert das Einrichten des SSH-Protokolls für PowerShell-Remoting.
+ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133468"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501336"
 ---
 # <a name="powershell-remoting-over-ssh"></a>PowerShell-Remoting über SSH
 
@@ -25,7 +25,7 @@ Die Cmdlets `New-PSSession`, `Enter-PSSession` und `Invoke-Command` verfügen nu
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Um eine Remotesitzung zu erstellen, geben Sie den Zielcomputer mit dem Parameter **HostName** an und fügen mit **UserName** den Benutzernamen hinzu. Wenn Sie die Cmdlets interaktiv ausführen, werden Sie zur Kennworteingabe aufgefordert. Sie können die SSH-Schlüsselauthentifizierung auch mithilfe einer privaten Schlüsseldatei und des Parameters **KeyFilePath** einrichten.
+Um eine Remotesitzung zu erstellen, geben Sie den Zielcomputer mit dem Parameter **HostName** an und fügen mit **UserName** den Benutzernamen hinzu. Wenn Sie die Cmdlets interaktiv ausführen, werden Sie zur Kennworteingabe aufgefordert. Sie können die SSH-Schlüsselauthentifizierung auch mithilfe einer privaten Schlüsseldatei und des Parameters **KeyFilePath** einrichten. Das Erstellen von Schlüsseln für die SSH-Authentifizierung unterscheidet sich je nach Plattform.
 
 ## <a name="general-setup-information"></a>Allgemeine Setupinformationen
 
@@ -33,9 +33,9 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
 ## <a name="set-up-on-a-windows-computer"></a>Einrichten auf einem Windows-Computer
 
-1. Weitere Informationen zur Installation der neuesten Version von PowerShell finden Sie unter [Installieren von PowerShell Core unter Windows](../../install/installing-powershell-core-on-windows.md#msi).
+1. Installieren Sie die neueste Version von PowerShell. Weitere Informationen finden Sie unter [Installieren von PowerShell Core unter Windows](../../install/installing-powershell-core-on-windows.md#msi).
 
-   Sie können bestätigen, dass PowerShell SSH-Remoting unterstützt, indem Sie die `New-PSSession`-Parametersätze auflisten. Sie werden sehen, dass die Namen einiger Parametersätze mit **SSH** beginnen. Diese Parametersätze enthalten **SSH**-Parameter.
+   Sie können bestätigen, dass PowerShell SSH-Remoting unterstützt, indem Sie die `New-PSSession`-Parametersätze auflisten. Sie werden sehen, dass die Namen einiger Parametersätze mit **SSH** beginnen. Diese Parametersätze enthalten **SSH** -Parameter.
 
    ```powershell
    (Get-Command New-PSSession).ParameterSets.Name
@@ -93,7 +93,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
    Weitere Informationen finden Sie unter [OpenSSH-Schlüsselverwaltung](/windows-server/administration/openssh/openssh_keymanagement).
 
-1. Starten Sie den **sshd**-Dienst neu.
+1. Starten Sie den **sshd** -Dienst neu.
 
    ```powershell
    Restart-Service sshd
@@ -119,6 +119,14 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    PasswordAuthentication yes
    ```
 
+   Aktivieren Sie ggf. die Schlüsselauthentifizierung:
+
+   ```
+   PubkeyAuthentication yes
+   ```
+
+   Weitere Informationen zum Erstellen von SSH-Schlüsseln unter Ubuntu finden Sie auf der manpage für [ssh-keygen](http://manpages.ubuntu.com/manpages/xenial/man1/ssh-keygen.1.html).
+
    Fügen Sie einen Eintrag für das PowerShell-Subsystem hinzu:
 
    ```
@@ -134,15 +142,15 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    PubkeyAuthentication yes
    ```
 
-1. Starten Sie den **sshd**-Dienst neu.
+1. Führen Sie einen Neustart des **SSH** -Diensts aus.
 
    ```bash
-   sudo service sshd restart
+   sudo service ssh restart
    ```
 
 ## <a name="set-up-on-a-macos-computer"></a>Einrichten auf einem macOS-Computer
 
-1. Weitere Informationen zur Installation der neuesten Version von PowerShell finden Sie unter [Installieren von PowerShell Core unter macOS](../../install/installing-powershell-core-on-macos.md).
+1. Installieren Sie die neueste Version von PowerShell. Weitere Informationen finden Sie unter [Installieren von PowerShell Core unter macOS](../../install/installing-powershell-core-on-macos.md).
 
    Vergewissern Sie sich, dass SSH-Remoting aktiviert ist, indem Sie die folgenden Schritte ausführen:
 
@@ -153,7 +161,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
 1. Bearbeiten Sie die Datei `sshd_config` unter `/private/etc/ssh/sshd_config`.
 
-   Verwenden Sie einen Text-Editor, z.B. **nano**:
+   Verwenden Sie einen Text-Editor, z.B. **nano** :
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config
@@ -180,7 +188,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    PubkeyAuthentication yes
    ```
 
-1. Starten Sie den **sshd**-Dienst neu.
+1. Starten Sie den **sshd** -Dienst neu.
 
    ```bash
    sudo launchctl stop com.openssh.sshd

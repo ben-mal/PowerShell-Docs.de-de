@@ -2,16 +2,18 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Sortieren von Objekten
-ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Das Sort-Object-Cmdlet ermöglicht Ihnen das Sortieren einer Sammlung von Objekten nach einer oder mehreren Eigenschaften.
+ms.openlocfilehash: 836207adfc566003e9714e45920d9b4e24a677e9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030770"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501013"
 ---
 # <a name="sorting-objects"></a>Sortieren von Objekten
 
-Sie können angezeigte Daten mithilfe des Cmdlets `Sort-Object` ordnen, damit sie sich einfacher überprüfen lassen. `Sort-Object` erhält den Namen von mindestens einer Eigenschaft, nach der sortiert werden soll, und gibt Daten zurück, die nach den Werten dieser Eigenschaften sortiert sind.
+Sie können angezeigte Daten mithilfe des Cmdlets `Sort-Object` ordnen, damit sie sich einfacher überprüfen lassen.
+`Sort-Object` erhält den Namen von mindestens einer Eigenschaft, nach der sortiert werden soll, und gibt Daten zurück, die nach den Werten dieser Eigenschaften sortiert sind.
 
 ## <a name="basic-sorting"></a>Grundlegende Sortierung
 
@@ -39,7 +41,7 @@ LastWriteTime          Name
 ...
 ```
 
-Sie können die Objekte auch in umgekehrter Reihenfolge sortieren, indem Sie den **Descending**-Umschaltparameter angeben.
+Sie können die Objekte auch in umgekehrter Reihenfolge sortieren, indem Sie den **Descending** -Umschaltparameter angeben.
 
 ```powershell
 Get-ChildItem |
@@ -67,11 +69,11 @@ LastWriteTime          Name
 ## <a name="using-hash-tables"></a>Verwenden von Hashtabellen
 
 Sie können verschiedene Eigenschaften in verschiedenen Reihenfolgen sortieren, indem Sie Hashtabellen in einem Array verwenden.
-Jede Hashtabelle verwendet einen **Expression**-Schlüssel, um den Namen der Eigenschaft als Zeichenfolge anzugeben, und einen **Ascending**- oder **Descending**-Schlüssel, um die Sortierreihenfolge durch `$true` oder `$false` anzugeben.
-Der **Expression**-Schlüssel ist erforderlich.
-Die **Ascending**- oder **Descending**-Schlüssel sind optional.
+Jede Hashtabelle verwendet einen **Expression** -Schlüssel, um den Namen der Eigenschaft als Zeichenfolge anzugeben, und einen **Ascending** - oder **Descending** -Schlüssel, um die Sortierreihenfolge durch `$true` oder `$false` anzugeben.
+Der **Expression** -Schlüssel ist erforderlich.
+Die **Ascending** - oder **Descending** -Schlüssel sind optional.
 
-Das folgende Beispiel sortiert Objekte in absteigender **LastWriteTime**- und aufsteigender **Name**-Reihenfolge.
+Das folgende Beispiel sortiert Objekte in absteigender **LastWriteTime** - und aufsteigender **Name** -Reihenfolge.
 
 ```powershell
 Get-ChildItem |
@@ -91,10 +93,10 @@ LastWriteTime          Name
 ...
 ```
 
-Sie können auch einen Skriptblock auf den **Expression**-Schlüssel festlegen.
+Sie können auch einen Skriptblock auf den **Expression** -Schlüssel festlegen.
 Wenn Sie das Cmdlet `Sort-Object` ausführen, wird der Skriptblock ausgeführt und das Ergebnis für die Sortierung verwendet.
 
-Das folgende Beispiel sortiert Objekte in absteigender Reihenfolge nach der Zeitspanne zwischen **CreationTime** und **LastWriteTime**.
+Das folgende Beispiel sortiert Objekte in absteigender Reihenfolge nach der Zeitspanne zwischen **CreationTime** und **LastWriteTime** .
 
 ```powershell
 Get-ChildItem |
@@ -118,7 +120,7 @@ LastWriteTime          CreationTime
 
 ## <a name="tips"></a>Tipps
 
-Sie können den **Property**-Parameternamen wie folgt auslassen:
+Sie können den **Property** -Parameternamen wie folgt auslassen:
 
 ```powershell
 Sort-Object LastWriteTime, Name
@@ -136,7 +138,7 @@ Die Schlüssel in den Hashtabellen für die Sortierung können wie folgt abgekü
 Sort-Object @{ e = 'LastWriteTime'; d = $true }, @{ e = 'Name'; a = $true }
 ```
 
-In diesem Beispiel steht das **e** für **Expression**, das **d** für **Descending** und das **a** für **Ascending**.
+In diesem Beispiel steht das **e** für **Expression** , das **d** für **Descending** und das **a** für **Ascending** .
 
 Um die Lesbarkeit zu verbessern, können Sie die Hashtabellen in einer separaten Variablen platzieren:
 

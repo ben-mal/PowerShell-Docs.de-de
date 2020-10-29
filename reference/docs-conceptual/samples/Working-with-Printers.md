@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Arbeiten mit Druckern
-ms.openlocfilehash: 1d6b9a57ec61f06af694757dc8017d50b4dd40fe
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird die Verwaltung von Druckern unter Windows mithilfe von WMI-Objekten und COM-Schnittstellen gezeigt.
+ms.openlocfilehash: 2606753783043eeae8e9d461e56f0901149cb8e3
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78935209"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501081"
 ---
 # <a name="working-with-printers-in-windows"></a>Arbeiten mit Druckern in Windows
 
@@ -15,7 +16,7 @@ Sie können Windows PowerShell zum Verwalten von Druckern mit WMI und dem COM-Ob
 
 ## <a name="listing-printer-connections"></a>Auflisten von Druckerverbindungen
 
-Die einfachste Möglichkeit, die auf einem Computer installierten Drucker aufzulisten, ist die Verwendung der WMI-Klasse **Win32_Printer**:
+Die einfachste Möglichkeit, die auf einem Computer installierten Drucker aufzulisten, ist die Verwendung der WMI-Klasse **Win32_Printer** :
 
 ```powershell
 Get-CimInstance -Class Win32_Printer
@@ -31,7 +32,7 @@ Da dieser Befehl eine einfache Zeichenfolgenauflistung von Portnamen und Drucker
 
 ## <a name="adding-a-network-printer"></a>Hinzufügen eines Netzwerkdruckers
 
-Verwenden Sie zum Hinzufügen eines neuen Netzwerkdruckers **WScript.Network**:
+Verwenden Sie zum Hinzufügen eines neuen Netzwerkdruckers **WScript.Network** :
 
 ```powershell
 (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
@@ -39,14 +40,14 @@ Verwenden Sie zum Hinzufügen eines neuen Netzwerkdruckers **WScript.Network**:
 
 ## <a name="setting-a-default-printer"></a>Festlegen eines Standarddruckers
 
-Um mithilfe von WMI den Standarddrucker festzulegen, suchen Sie den Drucker in der **Win32_Printer**-Sammlung, und rufen Sie dann die Methode **SetDefaultPrinter** auf:
+Um mithilfe von WMI den Standarddrucker festzulegen, suchen Sie den Drucker in der **Win32_Printer** -Sammlung, und rufen Sie dann die Methode **SetDefaultPrinter** auf:
 
 ```powershell
 $printer = Get-CimInstance -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'"
 Invoke-CimMethod -InputObject $printer -MethodName SetDefaultPrinter
 ```
 
-**WScript.Network** ist etwas einfacher zu verwenden, da es eine **SetDefaultPrinter**-Methode besitzt, die nur den Druckernamen als Argument akzeptiert:
+**WScript.Network** ist etwas einfacher zu verwenden, da es eine **SetDefaultPrinter** -Methode besitzt, die nur den Druckernamen als Argument akzeptiert:
 
 ```powershell
 (New-Object -ComObject WScript.Network).SetDefaultPrinter('HP LaserJet 5Si')
@@ -54,7 +55,7 @@ Invoke-CimMethod -InputObject $printer -MethodName SetDefaultPrinter
 
 ## <a name="removing-a-printer-connection"></a>Entfernen einer Druckerverbindung
 
-Um eine Druckerverbindung zu entfernen, verwenden Sie die Methode **WScript.Network RemovePrinterConnection**:
+Um eine Druckerverbindung zu entfernen, verwenden Sie die Methode **WScript.Network RemovePrinterConnection** :
 
 ```powershell
 (New-Object -ComObject WScript.Network).RemovePrinterConnection("\\Printserver01\Xerox5")

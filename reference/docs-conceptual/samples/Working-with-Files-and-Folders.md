@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Arbeiten mit Dateien und Ordnern
-ms.openlocfilehash: 8876ff70adbd10c9019f6d80ce7ad327f2932c74
-ms.sourcegitcommit: 08acbea14c69a347f2f46aafcb215a5233c7d830
+description: In diesem Artikel werden bestimmte Aufgaben im Zusammenhang mit der Bearbeitung von Dateien und Ordnern mithilfe von PowerShell erörtert.
+ms.openlocfilehash: c0c3abb082b05296daa480ac06bcbfa3a784e0c9
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82691484"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500027"
 ---
 # <a name="working-with-files-and-folders"></a>Arbeiten mit Dateien und Ordnern
 
-Das Navigieren auf Windows PowerShell-Laufwerken und das Bearbeiten der darauf gespeicherten Elemente gleicht dem Bearbeiten von Dateien und Ordnern auf physischen Windows-Festplattenlaufwerken. In diesem Abschnitt werden bestimmte Aufgaben im Zusammenhang mit der Bearbeitung von Dateien und Ordnern mithilfe von PowerShell erörtert.
+Das Navigieren auf Windows PowerShell-Laufwerken und das Bearbeiten der darauf gespeicherten Elemente gleicht dem Bearbeiten von Dateien und Ordnern auf physischen Windows-Festplattenlaufwerken. In diesem Artikel werden bestimmte Aufgaben im Zusammenhang mit der Bearbeitung von Dateien und Ordnern mithilfe von PowerShell erörtert.
 
 ## <a name="listing-all-the-files-and-folders-within-a-folder"></a>Auflisten aller Dateien und Ordner in einem Ordner
 
@@ -27,7 +28,7 @@ Der Befehl listet nur die Elemente auf, die sich unmittelbar in dem Ordner befin
 Get-ChildItem -Path C:\ -Force -Recurse
 ```
 
-`Get-ChildItem` kann Elemente mithilfe der zugehörigen Parameter **Path**, **Filter**, **Include** und **Exclude** filtern, diese basieren allerdings typischerweise auf Namen. Zum Durchführen einer komplexen Filterung basierend auf anderen Eigenschaften von Elementen können Sie `Where-Object` verwenden.
+`Get-ChildItem` kann Elemente mithilfe der zugehörigen Parameter **Path** , **Filter** , **Include** und **Exclude** filtern, diese basieren allerdings typischerweise auf Namen. Zum Durchführen einer komplexen Filterung basierend auf anderen Eigenschaften von Elementen können Sie `Where-Object` verwenden.
 
 Der folgende Befehl sucht alle ausführbaren Dateien im Ordner „Programme“, die nach dem 1. Oktober 2005 zuletzt geändert wurden und weder kleiner als 1 MB noch größer als 10 MB sind:
 
@@ -43,7 +44,7 @@ Das Kopieren erfolgt mit `Copy-Item`. Der folgende Befehl sichert C:\\boot.ini n
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak
 ```
 
-Wenn die Zieldatei bereits vorhanden ist, schlägt der Kopierversuch fehl. Zum Überschreiben eines vorhandenen Ziels verwenden Sie den Parameter **Force**:
+Wenn die Zieldatei bereits vorhanden ist, schlägt der Kopierversuch fehl. Zum Überschreiben eines vorhandenen Ziels verwenden Sie den Parameter **Force** :
 
 ```powershell
 Copy-Item -Path C:\boot.ini -Destination C:\boot.bak -Force
@@ -86,7 +87,7 @@ New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 ```
 
 > [!IMPORTANT]
-> Wenn Sie den Befehl `New-Item` mit dem Schalter **Force** zum Erstellen eines Ordners verwenden und der Ordner bereits vorhanden ist, wird dieser _nicht_ überschrieben oder ersetzt. Es wird lediglich das vorhandene Ordnerobjekt zurückgegeben. Wenn Sie `New-Item -Force` jedoch für eine Datei verwenden, die bereits vorhanden ist, _wird die Datei vollständig überschrieben_.
+> Wenn Sie den Befehl `New-Item` mit dem Schalter **Force** zum Erstellen eines Ordners verwenden und der Ordner bereits vorhanden ist, wird dieser _nicht_ überschrieben oder ersetzt. Es wird lediglich das vorhandene Ordnerobjekt zurückgegeben. Wenn Sie `New-Item -Force` jedoch für eine Datei verwenden, die bereits vorhanden ist, _wird die Datei vollständig überschrieben_ .
 
 ## <a name="removing-all-files-and-folders-within-a-folder"></a>Entfernen aller Dateien und Ordner in einem Ordner
 
@@ -135,7 +136,7 @@ multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=" Microsoft Windows XP Professional
 with Data Execution Prevention" /noexecute=optin /fastdetect
 ```
 
-`Get-Content` behandelt die aus der Datei gelesenen Daten bereits als Array, mit je einem Element pro Zeile des Dateiinhalts. Sie können dies anhand der Länge (**Length**) des zurückgegebenen Inhalts überprüfen:
+`Get-Content` behandelt die aus der Datei gelesenen Daten bereits als Array, mit je einem Element pro Zeile des Dateiinhalts. Sie können dies anhand der Länge ( **Length** ) des zurückgegebenen Inhalts überprüfen:
 
 ```
 PS> (Get-Content -Path C:\boot.ini).Length

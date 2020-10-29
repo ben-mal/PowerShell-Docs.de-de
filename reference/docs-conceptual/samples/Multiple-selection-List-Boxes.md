@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Listenfelder für Mehrfachauswahl
-ms.openlocfilehash: 7bf71fb76a11f88c4ad4790bf3a2b383d0babb81
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: In diesem Artikel erfahren Sie, wie Sie ein Listenfeld-Steuerelement mit Mehrfachauswahl unter Verwendung der Funktionen zur Formularerstellung von .NET Framework in Windows PowerShell erstellen.
+ms.openlocfilehash: e11d1f545f748e0503b92c02bc7a101d8014bd96
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216072"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500282"
 ---
 # <a name="multiple-selection-list-boxes"></a>Listenfelder für Mehrfachauswahl
 
@@ -73,7 +74,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-Das Skript beginnt mit dem Laden von zwei .NET Framework-Klassen: **System.Drawing** und **System.Windows.Forms**. Sie starten daraufhin eine neue Instanz der .NET Framework-Klasse **System.Windows.Forms.Form**, die ein leeres Formular oder Fenster bereitstellt, zu dem Sie Steuerelemente hinzufügen können.
+Das Skript beginnt mit dem Laden von zwei .NET Framework-Klassen: **System.Drawing** und **System.Windows.Forms** . Sie starten daraufhin eine neue Instanz der .NET Framework-Klasse **System.Windows.Forms.Form** , die ein leeres Formular oder Fenster bereitstellt, zu dem Sie Steuerelemente hinzufügen können.
 
 ```powershell
 $form = New-Object System.Windows.Forms.Form
@@ -83,9 +84,9 @@ Nachdem Sie eine Instanz der Formularklasse erstellt haben, ordnen Sie drei Eige
 
 - **Text.** Dies wird der Titel des Fensters.
 
-- **Size.** Dies ist die Größe des Formulars, in Pixeln. Das vorhergehende Skript erstellt ein Formular, das 300 Pixel breit und 200 Pixel hoch ist.
+- **Size.** Dies ist die Größe des Formulars, in Pixeln. Das vorstehende Skript erstellt ein Formular mit 300 Pixeln Breite und 200 Pixeln Höhe.
 
-- **StartingPosition.** Für diese optionale Eigenschaft ist im Skript oben **CenterScreen** festgelegt. Wenn Sie diese Eigenschaft nicht hinzufügen, wählt Windows eine Stelle aus, wenn das Formular geöffnet wird. Durch Festlegen der **StartingPosition** auf **CenterScreen** wird das Formular automatisch bei jedem Laden in der Mitte des Bildschirms angezeigt.
+- **StartingPosition.** Für diese optionale Eigenschaft ist im Skript oben **CenterScreen** festgelegt. Wenn Sie diese Eigenschaft nicht hinzufügen, wählt Windows eine Position aus, wenn das Formular geöffnet wird. Durch Festlegen der **StartingPosition** auf **CenterScreen** wird das Formular automatisch bei jedem Laden in der Mitte des Bildschirms angezeigt.
 
 ```powershell
 $form.Text = 'Data Entry Form'
@@ -93,7 +94,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = 'CenterScreen'
 ```
 
-Als Nächstes erstellen Sie eine Schaltfläche **OK** für Ihr Formular. Legen Sie die Größe und das Verhalten der Schaltfläche **OK** fest. In diesem Beispiel befindet sich die Schaltfläche 120 Pixel vom oberen Formularrand und 75 Pixel vom linken Rand entfernt. Die Schaltflächenhöhe beträgt 23 Pixel und die Schaltflächenlänge 75 Pixel. Das Skript verwendet vordefinierte Windows-Formulartypen zur Bestimmung des Schaltflächenverhaltens.
+Als Nächstes erstellen Sie eine Schaltfläche **OK** für Ihr Formular. Legen Sie die Größe und das Verhalten der Schaltfläche **OK** fest. In diesem Beispiel befindet sich die Schaltfläche 120 Pixel vom oberen Formularrand und 75 Pixel vom linken Rand entfernt. Die Schaltflächenhöhe beträgt 23 Pixel und die Schaltflächenlänge 75 Pixel. Das Skript verwendet vordefinierte Windows-Formulartypen zur Bestimmung des Schaltflächenverhaltens.
 
 ```powershell
 $OKButton = New-Object System.Windows.Forms.Button
@@ -105,7 +106,7 @@ $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-In entsprechender Weise erstellen Sie eine Schaltfläche **Abbrechen**. Die **Abbrechen**-Schaltfläche ist 120 Pixel vom oberen und 150 Pixel vom linken Rand des Fensters entfernt.
+In entsprechender Weise erstellen Sie eine Schaltfläche **Abbrechen** . Die **Abbrechen** -Schaltfläche ist 120 Pixel vom oberen und 150 Pixel vom linken Rand des Fensters entfernt.
 
 ```powershell
 $CancelButton = New-Object System.Windows.Forms.Button
@@ -170,7 +171,7 @@ Fügen Sie die folgende Codezeile hinzu, um das Formular in Windows anzuzeigen.
 $result = $form.ShowDialog()
 ```
 
-Schließlich weist der Code im **If**-Block Windows an, was mit dem Formular geschehen soll, wenn Benutzer eine oder mehrere Optionen im Listenfeld auswählen und dann auf die Schaltfläche **OK** klicken oder die **EINGABETASTE** drücken.
+Schließlich weist der Code im **If** -Block Windows an, was mit dem Formular geschehen soll, wenn Benutzer eine oder mehrere Optionen im Listenfeld auswählen und dann auf die Schaltfläche **OK** klicken oder die **EINGABETASTE** drücken.
 
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)

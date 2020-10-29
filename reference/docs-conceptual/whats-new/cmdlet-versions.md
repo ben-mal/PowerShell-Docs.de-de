@@ -2,16 +2,17 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Releaseverlauf von Modulen und Cmdlets
-ms.openlocfilehash: 4cb69e9d53151a0a221654f76ad7eb5eeb8fa218
-ms.sourcegitcommit: cae9885e01c13690268151d33efac168536e9287
+description: In diesem Artikel werden die Module und Cmdlets aufgelistet, die in verschiedenen Versionen von PowerShell enthalten sind.
+ms.openlocfilehash: cefd84c5d3785d19670ee649f5af951d5975912c
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83751323"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501659"
 ---
 # <a name="release-history-of-modules-and-cmdlets"></a>Releaseverlauf von Modulen und Cmdlets
 
-In diesem Artikel werden die Module und Cmdlets aufgelistet, die mit verschiedenen Versionen von PowerShell ausgeliefert werden. Dies ist eine Zusammenfassung der Informationen, die in den Versionshinweisen enthalten sind. Ausführliche Informationen finden Sie in den Versionshinweisen:
+In diesem Artikel werden die Module und Cmdlets aufgelistet, die in verschiedenen Versionen von PowerShell enthalten sind. Dies ist eine Zusammenfassung der Informationen, die in den Versionshinweisen enthalten sind. Ausführliche Informationen finden Sie in den Versionshinweisen:
 
 - [Neuigkeiten in PowerShell Core 6.2](what-s-new-in-powershell-core-62.md)
 - [Neuigkeiten in PowerShell Core 6.1](what-s-new-in-powershell-core-61.md)

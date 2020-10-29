@@ -2,12 +2,13 @@
 ms.date: 05/14/2020
 keywords: powershell,cmdlet
 title: Ausführen des zweiten Hops in PowerShell-Remoting
-ms.openlocfilehash: 3a9db11726d4c02dc69e52c45da304f7422def39
-ms.sourcegitcommit: 843756c8277e7afb874867703963248abc8a6c91
+description: In diesem Artikel werden die verschiedenen Methoden zum Konfigurieren der Authentifizierung des zweiten Hops für PowerShell-Remoting behandelt, einschließlich der Auswirkungen auf die Sicherheit und Empfehlungen.
+ms.openlocfilehash: 905b27b4e6c612249c945a741bbe0d2ba9ae28aa
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83439375"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501370"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Ausführen des zweiten Hops in PowerShell-Remoting
 
@@ -33,7 +34,7 @@ Es gibt verschiedene Möglichkeiten, um dieses Problem zu lösen. In der folgend
 ## <a name="credssp"></a>CredSSP
 
 Sie können den [Credential Security Support Provider (CredSSP)][credssp] für die Authentifizierung verwenden.
-CredSSP speichert Anmeldeinformationen auf dem Remoteserver  _ServerB_. Der Server wird dadurch der Gefahr von Angriffen zum Diebstahl der Anmeldeinformationen ausgesetzt. Wenn der Remotecomputer kompromittiert ist, hat der Angreifer Zugriff auf die Anmeldeinformationen des Benutzers. CredSSP ist standardmäßig sowohl auf Client- als auch auf Servercomputern deaktiviert. Sie sollten CredSSP nur in absolut vertrauenswürdigen Umgebungen aktivieren. Beispielsweise wenn ein Domänenadministrator eine Verbindung mit einem Domänencontroller herstellt, weil der Domänencontroller hochgradig vertrauenswürdig ist.
+CredSSP speichert Anmeldeinformationen auf dem Remoteserver  _ServerB_ . Der Server wird dadurch der Gefahr von Angriffen zum Diebstahl der Anmeldeinformationen ausgesetzt. Wenn der Remotecomputer kompromittiert ist, hat der Angreifer Zugriff auf die Anmeldeinformationen des Benutzers. CredSSP ist standardmäßig sowohl auf Client- als auch auf Servercomputern deaktiviert. Sie sollten CredSSP nur in absolut vertrauenswürdigen Umgebungen aktivieren. Beispielsweise wenn ein Domänenadministrator eine Verbindung mit einem Domänencontroller herstellt, weil der Domänencontroller hochgradig vertrauenswürdig ist.
 
 Weitere Informationen zu Sicherheitsaspekten bei der Verwendung von CredSSP für PowerShell-Remoting finden Sie unter [Versehentliche Sabotage: Vorsicht vor CredSSP][beware].
 
@@ -64,7 +65,7 @@ Sie können eingeschränkte Legacydelegierung (nicht ressourcenbasiert) verwende
 
 - keine Unterstützung für den zweiten Hop für WinRM
 - Erfordert Domänenadministratorzugriff für die Konfiguration
-- muss auf dem Active Directory-Objekt des Remoteservers konfiguriert werden (_ServerB_)
+- muss auf dem Active Directory-Objekt des Remoteservers konfiguriert werden ( _ServerB_ )
 - auf einen Server begrenzt; kann Domänen oder Gesamtstrukturen nicht überschreiten
 - erfordert Rechte zum Aktualisieren von Objekten und Dienstprinzipalnamen (SPN)
 - _ServerB_ kann ein Kerberos-Ticket für _ServerC_ im Auftrag des Benutzers abrufen, ohne dass ein Benutzereingriff erforderlich ist.
@@ -104,7 +105,7 @@ Import-Module ActiveDirectory
 Get-Command -ParameterName PrincipalsAllowedToDelegateToAccount
 ```
 
-Mehrere verfügbare Cmdlets haben jetzt einen **PrincipalsAllowedToDelegateToAccount**-Parameter:
+Mehrere verfügbare Cmdlets haben jetzt einen **PrincipalsAllowedToDelegateToAccount** -Parameter:
 
 ```Output
 CommandType Name                 ModuleName
@@ -117,7 +118,7 @@ Cmdlet      Set-ADServiceAccount ActiveDirectory
 Cmdlet      Set-ADUser           ActiveDirectory
 ```
 
-Der Parameter **PrincipalsAllowedToDelegateToAccount** legt das Active Directory-Objektattribut **MsDS-AllowedToActOnBehalfOfOtherIdentity** fest, das eine Zugriffssteuerungsliste (access control list, ACL) enthält. Diese gibt an, welche Konten die Berechtigung zum Delegieren von Anmeldeinformationen für das zugehörige Konto haben (in unserem Beispiel das Computerkonto für _ServerA_).
+Der Parameter **PrincipalsAllowedToDelegateToAccount** legt das Active Directory-Objektattribut **MsDS-AllowedToActOnBehalfOfOtherIdentity** fest, das eine Zugriffssteuerungsliste (access control list, ACL) enthält. Diese gibt an, welche Konten die Berechtigung zum Delegieren von Anmeldeinformationen für das zugehörige Konto haben (in unserem Beispiel das Computerkonto für _ServerA_ ).
 
 Richten Sie nun die Variablen ein, die wir verwenden, um die Server darzustellen:
 
@@ -128,7 +129,7 @@ $ServerB = Get-ADComputer -Identity ServerB
 $ServerC = Get-ADComputer -Identity ServerC
 ```
 
-WinRM (und somit die PowerShell-Remoting) wird standardmäßig als Computerkonto ausgeführt. Dies sehen Sie anhand der **StartName**-Eigenschaft des `winrm`-Diensts:
+WinRM (und somit die PowerShell-Remoting) wird standardmäßig als Computerkonto ausgeführt. Dies sehen Sie anhand der **StartName** -Eigenschaft des `winrm`-Diensts:
 
 ```powershell
 Get-CimInstance Win32_Service -Filter 'Name="winrm"' | Select-Object StartName
@@ -240,13 +241,13 @@ Informationen zu JEA finden Sie unter [Just Enough Administration](/powershell/s
 **Nachteile**
 
 - erfordert WMF 5.0 oder höher
-- erfordert die Konfiguration auf jedem Zwischenserver (_ServerB_).
+- erfordert die Konfiguration auf jedem Zwischenserver ( _ServerB_ ).
 
 ## <a name="pssessionconfiguration-using-runas"></a>PSSessionConfiguration mithilfe von RunAs
 
-Sie können eine Sitzungskonfiguration auf _ServerB_ erstellen und ihren **RunAsCredential**-Parameter festlegen.
+Sie können eine Sitzungskonfiguration auf _ServerB_ erstellen und ihren **RunAsCredential** -Parameter festlegen.
 
-Weitere Informationen zur Verwendung von **PSSessionConfiguration** und **RunAs**, um das zweite Hop-Problem zu lösen, finden Sie unter [Eine weitere Lösung für Multi-Hop-PowerShell-Remoting][pssessionconfig].
+Weitere Informationen zur Verwendung von **PSSessionConfiguration** und **RunAs** , um das zweite Hop-Problem zu lösen, finden Sie unter [Eine weitere Lösung für Multi-Hop-PowerShell-Remoting][pssessionconfig].
 
 **Vorteile**
 
@@ -254,12 +255,12 @@ Weitere Informationen zur Verwendung von **PSSessionConfiguration** und **RunAs*
 
 **Nachteile**
 
-- erfordert die Konfiguration von **PSSessionConfiguration** und **RunAs** auf jedem Zwischenserver (_ServerB_)
-- erfordert Kennwortverwaltungsaufgaben bei Verwendung eines Domänen-**RunAs**-Kontos
+- erfordert die Konfiguration von **PSSessionConfiguration** und **RunAs** auf jedem Zwischenserver ( _ServerB_ )
+- erfordert Kennwortverwaltungsaufgaben bei Verwendung eines Domänen- **RunAs** -Kontos
 
 ## <a name="pass-credentials-inside-an-invoke-command-script-block"></a>Übergeben von Anmeldeinformationen innerhalb eines Invoke-Command-Skriptblocks
 
-Anmeldeinformationen können innerhalb des **ScriptBlock**-Parameters für einen Aufruf des [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command)-Cmdlet übergeben werden.
+Anmeldeinformationen können innerhalb des **ScriptBlock** -Parameters für einen Aufruf des [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command)-Cmdlet übergeben werden.
 
 **Vorteile**
 
@@ -273,7 +274,7 @@ Anmeldeinformationen können innerhalb des **ScriptBlock**-Parameters für einen
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Anmeldeinformationen in einem **Invoke-Command**-Skriptblock übergeben werden:
+Das folgende Beispiel zeigt, wie Anmeldeinformationen in einem **Invoke-Command** -Skriptblock übergeben werden:
 
 ```powershell
 # This works without delegation, passing fresh creds

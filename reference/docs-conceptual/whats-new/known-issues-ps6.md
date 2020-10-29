@@ -2,12 +2,13 @@
 ms.date: 02/03/2020
 keywords: powershell,core
 title: Bekannte Probleme bei PowerShell 6.0
-ms.openlocfilehash: e9550e3db53865cfc2713d1d80665cced6f0d47a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Dies ist eine Zusammenfassung bekannter Probleme oder Einschränkungen in PowerShell 6
+ms.openlocfilehash: 528315eff660167513045542227dce335355a7b8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996102"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501676"
 ---
 # <a name="known-issues-for-powershell-60"></a>Bekannte Probleme bei PowerShell 6.0
 
@@ -98,7 +99,7 @@ Dieses Problem wird unter [#3232](https://github.com/PowerShell/PowerShell/issue
 
 Viele Befehle (Cmdlets), die normalerweise in PowerShell verfügbar sind, sind unter Linux und macOS nicht verfügbar. In vielen Fällen sind diese Befehle auf diesen Plattformen überflüssig, z.B. Befehle für Windows-spezifische Features wie die Registrierung. Andere Befehle wie die zur Steuerung von Diensten (Get/Start/Stop-Service) sind vorhanden, aber nicht funktionsfähig. Diese Probleme werden vielleicht in zukünftigen Releases behoben, indem die fehlerhaften Cmdlets korrigiert und neue hinzugefügt werden.
 
-### <a name="command-availability"></a>Verfügbarkeit von Befehlen
+### <a name="command-availability"></a>Befehlsverfügbarkeit
 
 In der folgenden Tabelle werden die Befehle aufgeführt, die bekanntermaßen nicht in PowerShell unter Linux und macOS funktionieren.
 

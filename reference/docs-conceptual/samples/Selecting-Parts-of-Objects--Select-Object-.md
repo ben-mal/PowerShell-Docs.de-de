@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Auswählen von Objektteilen – Select-Object
-ms.openlocfilehash: 06b92c7c4c5098c707a7d9f9d9a96e6b6a897f80
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Sie können das Cmdlet `Select-Object` verwenden, um neue, angepasste PowerShell-Objekte zu erstellen, die ausgewählte Eigenschaften der Objekte in der Pipeline enthalten.
+ms.openlocfilehash: 92635ac54ea1469739bcb228c5e9a0a8dbfc648b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737167"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501030"
 ---
 # <a name="selecting-parts-of-objects-select-object"></a>Auswählen von Objektteilen (Select-Object)
 

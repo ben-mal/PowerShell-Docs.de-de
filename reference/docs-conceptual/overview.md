@@ -2,12 +2,13 @@
 ms.date: 05/22/2020
 keywords: powershell,cmdlet
 title: Was ist PowerShell?
-ms.openlocfilehash: 267b2938a0892c99c3a961bc7107f573df40a683
-ms.sourcegitcommit: 38215ad49e237b219e62bb5a5f0eb3b6b048df1e
+description: Dieser Artikel stellt eine Einführung in die PowerShell-Skriptumgebung und ihre Features dar.
+ms.openlocfilehash: 91fc580af9a3adf43a24c40b4aaf3f1843882705
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868478"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500775"
 ---
 # <a name="what-is-powershell"></a>Was ist PowerShell?
 
@@ -44,7 +45,7 @@ Wenn Sie in schon mal ein Textverarbeitungsprogramm zum Verarbeiten von Daten ve
 
 Schnittstellen wie `cmd.exe` bieten keine Möglichkeit zur direkten Erweiterung des integrierten Befehlssatzes. Sie können externe Befehlszeilentools erstellen, die in `cmd.exe` ausgeführt werden. Aber diese externen Tools umfassen keine Dienste wie z.B. eine integrierte Hilfe. `cmd.exe` weiß nicht automatisch, dass es sich bei diesen externen Tools um gültige Befehle handelt.
 
-Die Befehle in PowerShell werden als _Cmdlets_ bezeichnet. Sie können jedes Cmdlet einzeln verwenden, aber deren Leistungsfähigkeit wird freigesetzt, wenn Sie diese kombinieren, um komplexe Aufgaben auszuführen. Ähnlich wie viele Shells ermöglicht PowerShell Ihnen Zugriff auf das Dateisystem auf dem Computer. Mit PowerShell-_Anbietern_ haben Sie die Möglichkeit, auf andere Datenspeicher, etwa die Registrierung und den Zertifikatspeicher, so einfach zuzugreifen wie auf das Dateisystem.
+Die Befehle in PowerShell werden als _Cmdlets_ bezeichnet. Sie können jedes Cmdlet einzeln verwenden, aber deren Leistungsfähigkeit wird freigesetzt, wenn Sie diese kombinieren, um komplexe Aufgaben auszuführen. Ähnlich wie viele Shells ermöglicht PowerShell Ihnen Zugriff auf das Dateisystem auf dem Computer. Mit PowerShell- _Anbietern_ haben Sie die Möglichkeit, auf andere Datenspeicher, etwa die Registrierung und den Zertifikatspeicher, so einfach zuzugreifen wie auf das Dateisystem.
 
 Mithilfe von kompiliertem Code oder Skripts können Sie eigene Cmdlets und Funktionsmodule erstellen. Mit Modulen können der Shell Cmdlets und Anbieter hinzugefügt werden. PowerShell bietet außerdem Unterstützung für Skripts, analog zu UNIX-Shellskripts und `cmd.exe`-Batchdateien.
 
@@ -141,7 +142,7 @@ Provider     Property   System.Management.Automation.ProviderInfo Provider {get;
 ProviderPath Property   string ProviderPath {get;}
 ```
 
-`Get-Location` gibt ein **PathInfo**-Objekt zurück, das den aktuellen Pfad und andere Informationen enthält.
+`Get-Location` gibt ein **PathInfo** -Objekt zurück, das den aktuellen Pfad und andere Informationen enthält.
 
 ## <a name="built-in-help-system"></a>Integriertes Hilfesystem
 

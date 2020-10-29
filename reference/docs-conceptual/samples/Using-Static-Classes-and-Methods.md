@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Verwenden von statischen Klassen und Methoden
-ms.openlocfilehash: 437e7b430f37224de7c617e120e37c3efcd7787a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Dieser Artikel erläutert das Bestimmen und Verwenden der Eigenschaften und Methoden statischer .NET-Klassen.
+ms.openlocfilehash: 2e83fe442f7b3fdf62ceaab587450251ac4e7958
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030734"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501251"
 ---
 # <a name="using-static-classes-and-methods"></a>Verwenden von statischen Klassen und Methoden
 
-Nicht alle .NET Framework-Klassen können mit **New-Object** erstellt werden. Wenn Sie beispielsweise versuchen, ein **System.Environment**- oder ein **System.Math**-Objekt mit **New-Object** zu erstellen, erhalten Sie die folgenden Fehlermeldungen:
+Nicht alle .NET Framework-Klassen können mit **New-Object** erstellt werden. Wenn Sie beispielsweise versuchen, ein **System.Environment** - oder ein **System.Math** -Objekt mit **New-Object** zu erstellen, erhalten Sie die folgenden Fehlermeldungen:
 
 ```
 PS> New-Object System.Environment
@@ -48,9 +49,9 @@ True     False    Environment                              System.Object
 > [!NOTE]
 > Wie bereits erwähnt wurde, setzt Windows PowerShell automatisch **System.** vor die Typnamen, wenn Sie **New-Object** verwenden. Das gleiche passiert, wenn Sie einen in Klammern stehenden Namen verwenden, d.h., Sie können **\[System.Environment]** als **\[Environment]** angeben.
 
-Die **System.Environment**-Klasse enthält allgemeine Informationen über die Arbeitsumgebung des aktuellen Prozesses, der „powershell.exe“ ist, wenn Sie in Windows PowerShell arbeiten.
+Die **System.Environment** -Klasse enthält allgemeine Informationen über die Arbeitsumgebung des aktuellen Prozesses, der „powershell.exe“ ist, wenn Sie in Windows PowerShell arbeiten.
 
-Wenn Sie versuchen, die Details dieser Klasse anzuzeigen, indem Sie **\[System.Environment] | Get-Member** eingeben, wird der Objekttyp als **System.RuntimeType**, nicht als **System.Environment** mitgeteilt:
+Wenn Sie versuchen, die Details dieser Klasse anzuzeigen, indem Sie **\[System.Environment] | Get-Member** eingeben, wird der Objekttyp als **System.RuntimeType** , nicht als **System.Environment** mitgeteilt:
 
 ```
 PS> [System.Environment] | Get-Member
@@ -58,7 +59,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-Wenn Sie statische Member mit „Get-Member“ anzeigen möchten, geben Sie den **Static**-Parameter an:
+Wenn Sie statische Member mit „Get-Member“ anzeigen möchten, geben Sie den **Static** -Parameter an:
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -93,7 +94,7 @@ Nun können Sie anzuzeigende Eigenschaften aus „System.Environment“ auswähl
 
 ### <a name="displaying-static-properties-of-systemenvironment"></a>Anzeigen von statischen Eigenschaften von „System.Environment“
 
-Die Eigenschaften von „System.Environment“ sind ebenfalls statisch und müssen auf andere Weise angegeben werden als normale Eigenschaften. Es wird **::** verwendet, um für Windows PowerShell anzugeben, dass mit einer statischen Methode oder Eigenschaft gearbeitet werden soll. Um den Befehl anzuzeigen, mit dem Windows PowerShell gestartet wurde, wird die **CommandLine**-Eigenschaft geprüft, indem Folgendes eingegeben wird:
+Die Eigenschaften von „System.Environment“ sind ebenfalls statisch und müssen auf andere Weise angegeben werden als normale Eigenschaften. Es wird **::** verwendet, um für Windows PowerShell anzugeben, dass mit einer statischen Methode oder Eigenschaft gearbeitet werden soll. Um den Befehl anzuzeigen, mit dem Windows PowerShell gestartet wurde, wird die **CommandLine** -Eigenschaft geprüft, indem Folgendes eingegeben wird:
 
 ```
 PS> [System.Environment]::Commandline
@@ -110,7 +111,7 @@ PS> [System.Environment]::OSVersion
             Win32NT Service Pack 2      5.1.2600.131072     Microsoft Windows...
 ```
 
-Durch Anzeigen der **HasShutdownStarted**-Eigenschaft können Sie überprüfen, ob der Computer momentan heruntergefahren wird:
+Durch Anzeigen der **HasShutdownStarted** -Eigenschaft können Sie überprüfen, ob der Computer momentan heruntergefahren wird:
 
 ```
 PS> [System.Environment]::HasShutdownStarted
@@ -124,7 +125,7 @@ Mit der statischen „System.Math“-Klasse können einige mathematische Operati
 > [!NOTE]
 > „System.Math“ hat mehrere Methoden mit demselben Namen, diese werden aber durch die Typen ihrer Parameter unterschieden.
 
-Geben Sie den folgenden Befehl aus, um die Methoden der **System.Math**-Klasse aufzulisten.
+Geben Sie den folgenden Befehl aus, um die Methoden der **System.Math** -Klasse aufzulisten.
 
 ```
 PS> [System.Math] | Get-Member -Static -MemberType Methods

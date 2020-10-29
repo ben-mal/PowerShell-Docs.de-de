@@ -1,12 +1,13 @@
 ---
 title: Kompatibilität von PowerShell 7-Modulen
 ms.date: 02/03/2020
-ms.openlocfilehash: d618f9e55f5997bfd724a4e58bb94c348bd681ce
-ms.sourcegitcommit: 56463fb628a7d83dec4364e89417d83316c3e53b
+description: In diesem Artikel wird der Status von PowerShell 7 zusammen mit Powershell-Modulen aufgelistet, die für andere Microsoft-Produkte entwickelt wurden.
+ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84722812"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501625"
 ---
 # <a name="powershell-7-module-compatibility"></a>Kompatibilität von PowerShell 7-Modulen
 

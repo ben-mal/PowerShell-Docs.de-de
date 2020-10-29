@@ -2,16 +2,17 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Anzeigen einer Objektstruktur (Get-Member)
-ms.openlocfilehash: 80b36abd303a708195f12d96511e616178d11b5a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: „Get-Member“ ist ein leistungsfähiges Tool, das Ihnen das Anzeigen von Typ und Struktur von Objekten in PowerShell ermöglicht.
+ms.openlocfilehash: 3c294fe47294e2cf8daf125aac55661dd38cf9bb
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "67030704"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501217"
 ---
 # <a name="viewing-object-structure-get-member"></a>Anzeigen einer Objektstruktur (Get-Member)
 
-Weil Objekte in Windows PowerShell eine so zentrale Rolle spielen, gibt es mehrere systemeigene Befehle, die zum Arbeiten mit beliebigen Objekttypen vorgesehen sind. Der wichtigste dieser Befehle ist der Befehl **Get-Member**.
+Weil Objekte in Windows PowerShell eine so zentrale Rolle spielen, gibt es mehrere systemeigene Befehle, die zum Arbeiten mit beliebigen Objekttypen vorgesehen sind. Der wichtigste dieser Befehle ist der Befehl **Get-Member** .
 
 Die einfachste Methode zum Analysieren der Objekte, die von einem Befehl zurückgegeben werden, besteht darin, die Ausgabe dieses Befehls an das Cmdlet **Get-Member** weiterzuleiten. Das Cmdlet **Get-Member** zeigt den formalen Objekttypnamen sowie eine vollständige Liste der Member des Objekts an. Die Anzahl von zurückgegebenen Elementen kann manchmal überwältigend sein. Beispielsweise kann ein Prozessobjekt mehr als 100 Member haben.
 
@@ -23,7 +24,7 @@ Get-Process | Get-Member | Out-Host -Paging
 
 Die Ausgabe dieses Befehls sieht in etwa wie folgt aus:
 
-```output
+```Output
 TypeName: System.Diagnostics.Process
 
 Name                           MemberType     Definition
@@ -38,7 +39,7 @@ add_Disposed                   Method         System.Void add_Disposed(Event...
 ...
 ```
 
-Diese lange Liste von Informationen lässt sich nutzbarer machen, indem Sie nach den jeweils gewünschten Elementen filtern. Der Befehl **Get-Member** ermöglicht es Ihnen, nur Member aufzulisten, die Eigenschaften sind. Es gibt mehrere Typen von Eigenschaften. Das Cmdlet zeigt die Eigenschaften eines beliebigen Typs an, wenn Sie den **Get-Member MemberType**-Parameter auf den Wert **Eigenschaften** festlegen. Die Ergebnisliste ist immer noch sehr lang, aber etwas besser zu handhaben:
+Diese lange Liste von Informationen lässt sich nutzbarer machen, indem Sie nach den jeweils gewünschten Elementen filtern. Der Befehl **Get-Member** ermöglicht es Ihnen, nur Member aufzulisten, die Eigenschaften sind. Es gibt mehrere Typen von Eigenschaften. Das Cmdlet zeigt die Eigenschaften eines beliebigen Typs an, wenn Sie den **Get-Member MemberType** -Parameter auf den Wert **Eigenschaften** festlegen. Die Ergebnisliste ist immer noch sehr lang, aber etwas besser zu handhaben:
 
 ```
 PS> Get-Process | Get-Member -MemberType Properties

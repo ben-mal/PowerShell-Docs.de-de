@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Arbeiten mit Softwareinstallationen
-ms.openlocfilehash: f3023d8819d6cdcc9f55befcfedb21e6ff9d282c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird die Verwendung von WMI zum Verwalten von Software gezeigt, die unter Windows installiert wurde.
+ms.openlocfilehash: 3cf8e3c58e9f2814e2551b3602bd7b47b375aed8
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "76996122"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500877"
 ---
 # <a name="working-with-software-installations"></a>Arbeiten mit Softwareinstallationen
 
@@ -75,7 +76,7 @@ CimInstanceProperties : {Caption, Description, IdentifyingNumber, Name...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-Verwenden Sie alternativ den `Get-CimInstance` **Filter**-Parameter, um nur Microsoft .NET Runtime 2.0 auszuwählen. Der Wert des **Filter**-Parameters verwendet die Syntax der WMI-Abfragesprache (WMI Query Language, WQL) und nicht die Windows PowerShell-Syntax. Beispiel:
+Verwenden Sie alternativ den `Get-CimInstance` **Filter** -Parameter, um nur Microsoft .NET Runtime 2.0 auszuwählen. Der Wert des **Filter** -Parameters verwendet die Syntax der WMI-Abfragesprache (WMI Query Language, WQL) und nicht die Windows PowerShell-Syntax. Beispiel:
 
 ```powershell
 Get-CimInstance -Class Win32_Product -Filter "Name='Microsoft .NET Core Runtime - 2.1.5 (x64)'" |

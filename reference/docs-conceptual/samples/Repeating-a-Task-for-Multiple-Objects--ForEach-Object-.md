@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Wiederholen einer Aufgabe für mehrere Objekte
-ms.openlocfilehash: bf89070fd9b006fa9b0b262ab63ffadd81072ecc
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Mithilfe von „ForEach-Object“ können Sie eine Reihe von Befehlen für jedes über die Pipeline übergebene Objekt wiederholen.
+ms.openlocfilehash: 7353be833dc8bf77dd18b7fc45bdd97e092ff6ef
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736878"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499956"
 ---
 # <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>Wiederholen einer Aufgabe für mehrere Objekte (ForEach-Object)
 
@@ -25,7 +26,7 @@ DeviceID DriveType ProviderName VolumeName Size          FreeSpace
 C:       3                      Local Disk 203912880128  50665070592
 ```
 
-Der **FreeSpace**-Wert kann durch Division der einzelnen Werte durch 1 MB in Megabyte konvertiert werden. Sie können dazu einen `ForEach-Object`-Skriptblock verwenden, indem Sie Folgendes eingeben:
+Der **FreeSpace** -Wert kann durch Division der einzelnen Werte durch 1 MB in Megabyte konvertiert werden. Sie können dazu einen `ForEach-Object`-Skriptblock verwenden, indem Sie Folgendes eingeben:
 
 ```powershell
 Get-CimInstance -Class Win32_LogicalDisk |

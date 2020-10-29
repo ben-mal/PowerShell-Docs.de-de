@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Arbeiten mit Registrierungseinträge
-ms.openlocfilehash: 7f8ee87cebb8b220570bcb969445071a72a68526
-ms.sourcegitcommit: d3f78120bdc9096c72aa0dfdbdd91efaf254c738
+description: In diesem Artikel wird erörtert, wie Sie in PowerShell mit Registrierungseinträgen umgehen.
+ms.openlocfilehash: 65f8b4ed7b2f9af26bfd22f34577a4bd52f35e70
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758481"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501455"
 ---
 # <a name="working-with-registry-entries"></a>Arbeiten mit Registrierungseinträge
 
@@ -57,7 +58,7 @@ PF_AccessoriesName  : Accessories
 (default)           :
 ```
 
-Die Windows PowerShell-bezogenen Eigenschaften für den Schüssel verfügen alle über das Präfix „PS“, z.B. **PSPath**, **PSParentPath**, **PSChildName** und **PSProvider**.
+Die Windows PowerShell-bezogenen Eigenschaften für den Schüssel verfügen alle über das Präfix „PS“, z.B. **PSPath** , **PSParentPath** , **PSChildName** und **PSProvider** .
 
 Sie können die Notation `*.*` zum Verweisen auf den aktuellen Speicherort verwenden. Sie können `Set-Location` verwenden, um zuerst in den Registrierungscontainer **CurrentVersion** zu wechseln:
 
@@ -91,7 +92,7 @@ Die Pfaderweiterung funktioniert genauso wie innerhalb des Dateisystems. Sie kö
 
 Wenn Sie einen bestimmten Eintrag in einem Registrierungsschlüssel abrufen möchten, stehen verschiedene Möglichkeiten zur Verfügung. In diesem Beispiel wird der Wert von **DevicePath** in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion` gesucht.
 
-Verwenden Sie mit `Get-ItemProperty` den Parameter **Path**, um den Namen des Schlüssels anzugeben, und den Parameter **Name**, um den Namen des Eintrags **DevicePath** anzugeben.
+Verwenden Sie mit `Get-ItemProperty` den Parameter **Path** , um den Namen des Schlüssels anzugeben, und den Parameter **Name** , um den Namen des Eintrags **DevicePath** anzugeben.
 
 ```powershell
 Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion -Name DevicePath
@@ -111,7 +112,7 @@ DevicePath   : C:\WINDOWS\inf
 Dieser Befehl gibt die standardmäßigen Windows PowerShell-Eigenschaften sowie die Eigenschaft **DevicePath** aus.
 
 > [!NOTE]
-> Obwohl `Get-ItemProperty` die Parameter **Filter**, **Include** und **Exclude** aufweist, können sie nicht zum Filtern nach dem Namen der Eigenschaft verwendet werden. Diese Parameter verweisen auf Registrierungsschlüssel (Elementpfade) und nicht auf Registrierungseinträge (Elementeigenschaften).
+> Obwohl `Get-ItemProperty` die Parameter **Filter** , **Include** und **Exclude** aufweist, können sie nicht zum Filtern nach dem Namen der Eigenschaft verwendet werden. Diese Parameter verweisen auf Registrierungsschlüssel (Elementpfade) und nicht auf Registrierungseinträge (Elementeigenschaften).
 
 Eine weitere Option ist die Verwendung des Befehlszeilentools „Reg.exe“. Um Hilfe zu „reg.exe“ zu erhalten, geben Sie an einer Eingabeaufforderung `reg.exe /?` ein. Mithilfe von „reg.exe“ finden Sie den Eintrag „DevicePath“, wie im folgenden Befehl gezeigt:
 
@@ -151,7 +152,7 @@ Set-ItemProperty -Path HKCU:\Environment -Name Path -Value $newpath
 ```
 
 > [!NOTE]
-> Obwohl `Set-ItemProperty` die Parameter **Filter**, **Include** und **Exclude** aufweist, können sie nicht zum Filtern nach dem Namen der Eigenschaft verwendet werden. Diese Parameter verweisen auf Registrierungsschlüssel (das sind Elementpfade und keine Registrierungseinträge), die Elementeigenschaften sind.
+> Obwohl `Set-ItemProperty` die Parameter **Filter** , **Include** und **Exclude** aufweist, können sie nicht zum Filtern nach dem Namen der Eigenschaft verwendet werden. Diese Parameter verweisen auf Registrierungsschlüssel (das sind Elementpfade und keine Registrierungseinträge), die Elementeigenschaften sind.
 
 Eine weitere Option ist die Verwendung des Befehlszeilentools „Reg.exe“. Um Hilfe zu „reg.exe“ zu erhalten, geben Sie **reg.exe /?** an einer Eingabeaufforderung ein.
 an einer Eingabeaufforderung.
@@ -188,7 +189,7 @@ PSProvider     : Microsoft.PowerShell.Core\Registry
 PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 ```
 
-**PropertyType** muss der Namen eines **Microsoft.Win32.RegistryValueKind**-Aufzählungselements aus der folgenden Tabelle sein:
+**PropertyType** muss der Namen eines **Microsoft.Win32.RegistryValueKind** -Aufzählungselements aus der folgenden Tabelle sein:
 
 |PropertyType-Wert|Bedeutung|
 |----------------------|-----------|

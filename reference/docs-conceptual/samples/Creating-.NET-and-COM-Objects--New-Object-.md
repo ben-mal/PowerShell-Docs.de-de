@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Erstellen von .NET- und COM-Objekten – New-Object
-ms.openlocfilehash: 6e98a159451bc7da4ba3b37eaeb813eb71590d2b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Als objektorientierte Skriptsprache unterstützt PowerShell sowohl .NET- als auch COM-basierte Objekte. In diesem Artikel erfahren Sie, wie Sie diese Objekte erstellen und mit ihnen interagieren.
+ms.openlocfilehash: e6189ba465749dd045add7015fc82223c31c7e32
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71325164"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500571"
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Erstellen von .NET- und COM-Objekten (New-Object)
 
@@ -15,7 +16,7 @@ Es gibt Softwarekomponenten mit .NET Framework- und COM-Schnittstellen, mit dene
 
 ## <a name="using-new-object-for-event-log-access"></a>Verwenden von „New-Object“ für den Zugriff auf das Ereignisprotokoll
 
-Die .NET Framework-Klassenbibliothek enthält eine Klasse namens **System.Diagnostics.EventLog**, die zum Verwalten von Ereignisprotokollen verwendet werden kann. Zum Erstellen einer neuen Instanz einer .NET Framework-Klasse können Sie das Cmdlet **New-Object** mit dem Parameter **TypeName** verwenden. Der folgende Befehl erstellt z. B. einen Ereignisprotokollverweis:
+Die .NET Framework-Klassenbibliothek enthält eine Klasse namens **System.Diagnostics.EventLog** , die zum Verwalten von Ereignisprotokollen verwendet werden kann. Zum Erstellen einer neuen Instanz einer .NET Framework-Klasse können Sie das Cmdlet **New-Object** mit dem Parameter **TypeName** verwenden. Der folgende Befehl erstellt z. B. einen Ereignisprotokollverweis:
 
 ```
 PS> New-Object -TypeName System.Diagnostics.EventLog
@@ -28,7 +29,7 @@ Obwohl der Befehl eine Instanz der EventLog-Klasse erstellt hat, enthält die In
 
 ### <a name="using-constructors-with-new-object"></a>Verwenden von Konstruktoren mit „New-Object“
 
-Um auf ein bestimmtes Ereignisprotokoll zu verweisen, müssen Sie den Namen des Protokolls angeben. **New-Object** verfügt über einen **ArgumentList**-Parameter. Die Argumente, die Sie als Werte an diesen Parameter übergeben, werden von einer speziellen Startmethode des Objekts verwendet. Die Methode wird als *Konstruktor* bezeichnet, da sie zum Konstruieren des Objekts dient. Um beispielsweise einen Verweis auf das Anwendungsprotokoll zu erhalten, geben Sie die Zeichenfolge „Application“ als Argument ein:
+Um auf ein bestimmtes Ereignisprotokoll zu verweisen, müssen Sie den Namen des Protokolls angeben. **New-Object** verfügt über einen **ArgumentList** -Parameter. Die Argumente, die Sie als Werte an diesen Parameter übergeben, werden von einer speziellen Startmethode des Objekts verwendet. Die Methode wird als *Konstruktor* bezeichnet, da sie zum Konstruieren des Objekts dient. Um beispielsweise einen Verweis auf das Anwendungsprotokoll zu erhalten, geben Sie die Zeichenfolge „Application“ als Argument ein:
 
 ```
 PS> New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Application
@@ -122,7 +123,7 @@ Sie können **New-Object** verwenden, um mit Component Object Model-Komponenten 
 
 **New-Object** verwendet zum Erstellen von COM-Objekten .NET Framework Runtime Callable Wrapper, es gelten somit die gleichen Einschränkungen wie für .NET Framework beim Aufrufen von COM-Objekten. Zum Erstellen eines COM-Objekts müssen Sie den Parameter **ComObject** mit dem programmatischen Bezeichner bzw. der *ProgId* der COM-Klasse angeben, die Sie verwenden möchten. Eine vollständige Erläuterung der Einschränkungen der COM-Verwendung und Informationen zu den auf einem System verfügbaren ProgIDs würden den Rahmen dieses Handbuchs sprengen, aber die meisten bekannten Objekte aus Umgebungen wie WSH können in Windows PowerShell verwendet werden.
 
-Sie können die WSH-Objekte erstellen, indem Sie diese ProgIDs angeben: **WScript.Shell**, **WScript.Network**, **Scripting.Dictionary** und **Scripting.FileSystemObject**. Mit den folgenden Befehlen werden diese Objekte erstellt:
+Sie können die WSH-Objekte erstellen, indem Sie diese ProgIDs angeben: **WScript.Shell** , **WScript.Network** , **Scripting.Dictionary** und **Scripting.FileSystemObject** . Mit den folgenden Befehlen werden diese Objekte erstellt:
 
 ```powershell
 New-Object -ComObject WScript.Shell
@@ -155,7 +156,7 @@ CreateShortcut           Method                IDispatch CreateShortcut (str...
 ...
 ```
 
-**Get-Member** verfügt über einen optionalen **InputObject**-Parameter, den Sie anstelle von Piping als Eingabe für **Get-Member** verwenden können. Dieselbe Ausgabe wie oben hätten Sie auch über den Befehl **Get-Member -InputObject $WshShell** erhalten. Wenn Sie **InputObject** verwenden, wird das Argument als ein einzelnes Element behandelt. Dies bedeutet, dass bei mehreren Objekte in einer Variablen diese von **Get-Member** als ein Array von Objekten behandelt werden. Beispiel:
+**Get-Member** verfügt über einen optionalen **InputObject** -Parameter, den Sie anstelle von Piping als Eingabe für **Get-Member** verwenden können. Dieselbe Ausgabe wie oben hätten Sie auch über den Befehl **Get-Member -InputObject $WshShell** erhalten. Wenn Sie **InputObject** verwenden, wird das Argument als ein einzelnes Element behandelt. Dies bedeutet, dass bei mehreren Objekte in einer Variablen diese von **Get-Member** als ein Array von Objekten behandelt werden. Beispiel:
 
 ```
 PS> $a = 1,2,"three"
@@ -167,7 +168,7 @@ Count              AliasProperty Count = Length
 ...
 ```
 
-Die Methode **WScript.Shell CreateShortcut** akzeptiert ein einziges Argument, und zwar, den Pfad zur zu erstellenden Verknüpfungsdatei. Wir könnten den vollständigen Pfad zum Desktop eingeben, aber es gibt einen einfacheren Weg. Der Desktop wird normalerweise durch einen Ordner namens „Desktop“ im Basisordner des aktuellen Benutzers dargestellt. Windows PowerShell verfügt über eine Variable **$Home**, die den Pfad zu diesem Ordner enthält. Sie können den Pfad zum Basisordner mithilfe dieser Variablen angeben und dann den Namen des Ordners „Desktop“ sowie den Namen für die zu erstellende Verknüpfung hinzufügen. Geben Sie dazu Folgendes ein:
+Die Methode **WScript.Shell CreateShortcut** akzeptiert ein einziges Argument, und zwar, den Pfad zur zu erstellenden Verknüpfungsdatei. Wir könnten den vollständigen Pfad zum Desktop eingeben, aber es gibt einen einfacheren Weg. Der Desktop wird normalerweise durch einen Ordner namens „Desktop“ im Basisordner des aktuellen Benutzers dargestellt. Windows PowerShell verfügt über eine Variable **$Home** , die den Pfad zu diesem Ordner enthält. Sie können den Pfad zum Basisordner mithilfe dieser Variablen angeben und dann den Namen des Ordners „Desktop“ sowie den Namen für die zu erstellende Verknüpfung hinzufügen. Geben Sie dazu Folgendes ein:
 
 ```powershell
 $lnk = $WshShell.CreateShortcut("$Home\Desktop\PSHome.lnk")
@@ -182,7 +183,7 @@ PS> '$Home\Desktop\PSHome.lnk'
 $Home\Desktop\PSHome.lnk
 ```
 
-Wir verfügen jetzt über eine Variable namens **$lnk**, die einen neuen Verknüpfungsverweis enthält. Wenn Sie die zugehörigen Elemente anzeigen möchten, können Sie sie über die Pipeline an **Get-Member** übergeben. In der folgenden Ausgabe werden die zum Abschließen der Erstellung unserer Verknüpfung zu verwendenden Elemente angezeigt:
+Wir verfügen jetzt über eine Variable namens **$lnk** , die einen neuen Verknüpfungsverweis enthält. Wenn Sie die zugehörigen Elemente anzeigen möchten, können Sie sie über die Pipeline an **Get-Member** übergeben. In der folgenden Ausgabe werden die zum Abschließen der Erstellung unserer Verknüpfung zu verwendenden Elemente angezeigt:
 
 ```
 PS> $lnk | Get-Member
@@ -206,7 +207,7 @@ $lnk.Save()
 
 Viele Anwendungen (einschließlich der Microsoft Office-Anwendungen und Internet Explorer) können mithilfe von COM automatisiert werden. Internet Explorer verdeutlicht einige der typischen Techniken und Probleme im Zusammenhang mit COM-basierten Anwendungen.
 
-Sie erstellen eine Internet Explorer-Instanz, indem Sie die ProgID von Internet Explorer angeben, **InternetExplorer.Application**:
+Sie erstellen eine Internet Explorer-Instanz, indem Sie die ProgID von Internet Explorer angeben, **InternetExplorer.Application** :
 
 ```powershell
 $ie = New-Object -ComObject InternetExplorer.Application
@@ -215,7 +216,7 @@ $ie = New-Object -ComObject InternetExplorer.Application
 Dieser Befehl startet Internet Explorer, zeigt die Anwendung macht aber nicht an. Wenn Sie „Get-Process“ eingeben, können Sie sehen, dass ein Prozess mit dem Namen „iexplore“ ausgeführt wird. Auch wenn Sie Windows PowerShell beenden, wird der Prozess weiterhin ausgeführt. Sie müssen den Computer neu starten oder ein Tool wie Task-Manager verwenden, um den Prozess „iexplore“ zu beenden.
 
 > [!NOTE]
-> Für COM-Objekte, die als separate Prozesse gestartet werden, so genannte *ActiveX-EXE-Dateien*, kann beim Start ein Benutzeroberflächenfenster angezeigt werden, muss aber nicht. Wenn ein Objekt ein Fenster erstellt, dieses aber nicht anzeigt, wie Internet Explorer, geht der Fokus in der Regel an den Windows-Desktop, und Sie müssen das Fenster einblenden, um mit ihm zu interagieren.
+> Für COM-Objekte, die als separate Prozesse gestartet werden, so genannte *ActiveX-EXE-Dateien* , kann beim Start ein Benutzeroberflächenfenster angezeigt werden, muss aber nicht. Wenn ein Objekt ein Fenster erstellt, dieses aber nicht anzeigt, wie Internet Explorer, geht der Fokus in der Regel an den Windows-Desktop, und Sie müssen das Fenster einblenden, um mit ihm zu interagieren.
 
 Durch Eingabe von **$ie | Get-Member** können Sie Eigenschaften und Methoden für Internet Explorer anzeigen. Um das Internet Explorer-Fenster anzuzeigen, legen Sie die Eigenschaft „Visible“ auf „$true“ fest. Geben Sie dazu Folgendes ein:
 
@@ -263,7 +264,7 @@ Remove-Variable ie
 
 ## <a name="getting-warnings-about-net-framework-wrapped-com-objects"></a>Abrufen von Warnungen zu von .NET Framework umschlossenen COM-Objekten
 
-In einigen Fällen verfügt ein COM-Objekt möglicherweise über einen zugeordneten .NET Framework *Runtime-Callable Wrapper* oder RCW, und dieser wird von **New-Object** verwendet. Da das Verhalten des RCW möglicherweise vom Verhalten des normalen COM-Objekts abweicht, verfügt **New-Object** über einen **Strict**-Parameter, der Sie auf den RCW-Zugriff hinweist. Wenn Sie den Parameter **Strict** angeben und dann ein COM-Objekt erstellen, das einen RCW verwendet, wird eine Warnung angezeigt:
+In einigen Fällen verfügt ein COM-Objekt möglicherweise über einen zugeordneten .NET Framework *Runtime-Callable Wrapper* oder RCW, und dieser wird von **New-Object** verwendet. Da das Verhalten des RCW möglicherweise vom Verhalten des normalen COM-Objekts abweicht, verfügt **New-Object** über einen **Strict** -Parameter, der Sie auf den RCW-Zugriff hinweist. Wenn Sie den Parameter **Strict** angeben und dann ein COM-Objekt erstellen, das einen RCW verwendet, wird eine Warnung angezeigt:
 
 ```
 PS> $xl = New-Object -ComObject Excel.Application -Strict

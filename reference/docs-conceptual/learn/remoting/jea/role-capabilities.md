@@ -2,12 +2,13 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,security
 title: JEA-Rollenfunktionen
-ms.openlocfilehash: 5b5b5977d4fec1ed850f1146fe7c09463908651b
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Eine Rollenfunktion ist eine PowerShell-Datendatei mit der Erweiterung PSRC. Sie enthält alle Cmdlets, Funktionen, Anbieter und externen Programme für Benutzer, die eine Verbindung herstellen.
+ms.openlocfilehash: 233d9081f4a8f977f0959addb5573c4566f885d0
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79402397"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499993"
 ---
 # <a name="jea-role-capabilities"></a>JEA-Rollenfunktionen
 
@@ -41,7 +42,7 @@ In der folgenden Tabelle finden Sie Beispiele für Befehle, die böswillig verwe
 
 ## <a name="create-a-role-capability-file"></a>Erstellen einer Rollenfunktionsdatei
 
-Sie können eine neue PowerShell-Rollenfunktionsdatei mit dem [New-PSRoleCapabilityFile](/powershell/module/microsoft.powershell.core/new-psrolecapabilityfile?view=powershell-6)-Cmdlet erstellen.
+Sie können eine neue PowerShell-Rollenfunktionsdatei mit dem [New-PSRoleCapabilityFile](/powershell/module/microsoft.powershell.core/new-psrolecapabilityfile)-Cmdlet erstellen.
 
 ```powershell
 New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
@@ -51,7 +52,7 @@ Die resultierende Rollenfunktionsdatei sollte bearbeitet werden, um die für die
 
 ### <a name="allowing-powershell-cmdlets-and-functions"></a>Zulassen von PowerShell-Cmdlets und -Funktionen
 
-Fügen Sie den Feldern „VisibleCmdlets“ oder „VisibleFunctions“ den Cmdlet- oder Funktionsnamen hinzu, um Benutzern das Ausführen von PowerShell-Cmdlets oder -Funktionen zu ermöglichen. Wenn Sie nicht sicher sind, ob es sich um einen Befehl für ein Cmdlet oder eine Funktion handelt, können Sie `Get-Command <name>` ausführen und die **CommandType**-Eigenschaft in der Ausgabe überprüfen.
+Fügen Sie den Feldern „VisibleCmdlets“ oder „VisibleFunctions“ den Cmdlet- oder Funktionsnamen hinzu, um Benutzern das Ausführen von PowerShell-Cmdlets oder -Funktionen zu ermöglichen. Wenn Sie nicht sicher sind, ob es sich um einen Befehl für ein Cmdlet oder eine Funktion handelt, können Sie `Get-Command <name>` ausführen und die **CommandType** -Eigenschaft in der Ausgabe überprüfen.
 
 ```powershell
 VisibleCmdlets = 'Restart-Computer', 'Get-NetIPAddress'
@@ -90,11 +91,11 @@ Sie können alle unten aufgeführten Cmdlets und Funktionen im Feld **VisibleCmd
 > [!WARNING]
 > Bewährten Sicherheitsmaßnahmen zufolge wird bei der Definition sichtbarer Cmdlets und Funktionen empfohlen, keine Platzhalter zu verwenden. Stattdessen sollten Sie jeden vertrauenswürdigen Befehl einzeln aufführen, um sicherzustellen, dass Befehle, die dem gleichen Namensschema folgen, nicht unbeabsichtigt autorisiert werden.
 
-Sie können nicht gleichzeitig ein **ValidatePattern**- und ein **ValidateSet**-Attribut auf das gleiche Cmdlet oder die gleiche Funktion anwenden.
+Sie können nicht gleichzeitig ein **ValidatePattern** - und ein **ValidateSet** -Attribut auf das gleiche Cmdlet oder die gleiche Funktion anwenden.
 
-Andernfalls wird das **ValidateSet**-Attribut vom **ValidatePattern**-Attribut überschrieben.
+Andernfalls wird das **ValidateSet** -Attribut vom **ValidatePattern** -Attribut überschrieben.
 
-Weitere Informationen zum **ValidatePattern**-Attribut finden Sie [im englischsprachigen Blogbeitrag *Hey, Scripting Guy!* ](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/) und im Referenzmaterial [PowerShell Regular Expressions](/powershell/module/microsoft.powershell.core/about/about_regular_expressions) (Reguläre Ausdrücke in PowerShell).
+Weitere Informationen zum **ValidatePattern** -Attribut finden Sie [im englischsprachigen Blogbeitrag *Hey, Scripting Guy!* ](https://devblogs.microsoft.com/scripting/validate-powershell-parameters-before-running-the-script/) und im Referenzmaterial [PowerShell Regular Expressions](/powershell/module/microsoft.powershell.core/about/about_regular_expressions) (Reguläre Ausdrücke in PowerShell).
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>Zulassen von externen Befehlen und PowerShell-Skripts
 
@@ -153,7 +154,7 @@ Funktionen, die in Rollenfunktionsdateien definiert werden, unterliegen weiterhi
 
 `Select-Object` ist standardmäßig in allen JEA-Sitzungen ein eingeschränktes Cmdlet, das eine Auswahl beliebiger Eigenschaften für Objekte nicht zulässt. Um `Select-Object` uneingeschränkt in Funktionen verwenden zu können, müssen Sie die vollständige Implementierung explizit durch Angabe der FQMN anfordern. Alle eingeschränkten Cmdlets in einer JEA-Sitzung haben die gleichen Einschränkungen, wenn sie aus einer Funktion aufgerufen werden. Weitere Informationen finden Sie unter [about_Command_Precedence](/powershell/module/microsoft.powershell.core/about/about_command_precedence).
 
-Wenn Sie mehrere benutzerdefinierte Funktionen schreiben, ist es einfacher, diese in einem PowerShell-Skriptmodul zu speichern. Sie können diese Funktionen anschließend in der JEA-Sitzung mithilfe des **VisibleFunctions**-Felds genauso sichtbar machen wie integrierte und Drittanbietermodule.
+Wenn Sie mehrere benutzerdefinierte Funktionen schreiben, ist es einfacher, diese in einem PowerShell-Skriptmodul zu speichern. Sie können diese Funktionen anschließend in der JEA-Sitzung mithilfe des **VisibleFunctions** -Felds genauso sichtbar machen wie integrierte und Drittanbietermodule.
 
 Damit die Registerkartenvervollständigung in JEA-Sitzungen ordnungsgemäß funktioniert, müssen Sie die integrierte Funktion `tabexpansion2` in die Liste **VisibleFunctions** einbeziehen.
 

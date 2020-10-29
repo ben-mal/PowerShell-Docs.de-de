@@ -1,12 +1,13 @@
 ---
 title: Ausführliche Betrachtungen
 ms.date: 05/23/2020
-ms.openlocfilehash: 9ba687c81f5bdc64881fa78a6e4ebbe051320358
-ms.sourcegitcommit: ed4a895d672334c7b02fb7ef6e950dbc2ba4a197
+description: Der Abschnitt „Ausführliche Betrachtungen“ der Dokumentation enthält Artikel, die mehr Details und Beispiele als die Cmdlet-Referenz bieten.
+ms.openlocfilehash: da42df8ff4590d12be88132ebc98278821d4f9ee
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149403"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92501064"
 ---
 # <a name="deep-dive-articles"></a>Artikel mit ausführlichen Betrachtungen
 

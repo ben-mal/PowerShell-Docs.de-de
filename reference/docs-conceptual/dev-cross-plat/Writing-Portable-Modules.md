@@ -1,13 +1,14 @@
 ---
-ms.date: 01/10/2020
+ms.date: 10/21/2020
 keywords: powershell,cmdlet
 title: Schreiben von portablen Modulen
-ms.openlocfilehash: a6b2f8b263e71b6c9dbd50900536cb5072597e71
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
+description: In diesem Artikel wird das Erstellen neuer Module oder das Aktualisieren vorhandener Module zu dem Zweck erläutert, dass sie übergreifend auf allen von PowerShell unterstützten Plattformen funktionieren.
+ms.openlocfilehash: 6d5c36263c3c6d1219f963cea2e94ae92b07e863
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158121"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500792"
 ---
 # <a name="portable-modules"></a>Portable Module
 
@@ -17,12 +18,11 @@ Windows PowerShell ist für [.NET Framework][] geschrieben, PowerShell Core hing
 
 ### <a name="porting-a-pssnapin"></a>Portieren eines PSSnapIn
 
-PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) werden in PowerShell Core nicht unterstützt. Es ist jedoch einfach, ein PSSnapIn in ein PowerShell-Modul zu konvertieren. In der Regel befindet sich der PSSnapIn-Registrierungscode in einer einzelnen Quelldatei einer Klasse, die von [PSSnapIn][] abgeleitet ist.
-Entfernen Sie diese Quelldatei aus dem Build, denn sie ist nicht mehr erforderlich.
+PowerShell [SnapIns](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) werden in PowerShell Core nicht unterstützt. Es ist jedoch einfach, ein PSSnapIn in ein PowerShell-Modul zu konvertieren. In der Regel befindet sich der PSSnapIn-Registrierungscode in einer einzelnen Quelldatei einer Klasse, die von [PSSnapIn][] abgeleitet ist. Entfernen Sie diese Quelldatei aus dem Build, denn sie ist nicht mehr erforderlich.
 
-Erstellen Sie mit [New-ModuleManifest][] ein neues Modulmanifest, das den PSSnapIn-Registrierungscode überflüssig macht. Einige der Werte aus dem **PSSnapIn** (z.B. **Description**) können innerhalb des Modulmanifests wiederverwendet werden.
+Erstellen Sie mit [New-ModuleManifest][] ein neues Modulmanifest, das den PSSnapIn-Registrierungscode überflüssig macht. Einige der Werte aus dem **PSSnapIn** (z.B. **Description** ) können innerhalb des Modulmanifests wiederverwendet werden.
 
-Die **RootModule**-Eigenschaft im Modulmanifest sollte auf den Namen der Assembly (DLL) festgelegt werden, die die Cmdlets implementiert.
+Die **RootModule** -Eigenschaft im Modulmanifest sollte auf den Namen der Assembly (DLL) festgelegt werden, die die Cmdlets implementiert.
 
 ### <a name="the-net-portability-analyzer-aka-apiport"></a>Der .NET Portability Analyzer (auch bekannt als APIPort)
 
@@ -65,11 +65,11 @@ Options:
   -lang, --language   Filters templates based on language and specifies the language of the template to create.
 
 
-Templates                                         Short Name         Language          Tags
-----------------------------------------------------------------------------------------------------------------------------
-Console Application                               console            [C#], F#, VB      Common/Console
-Class library                                     classlib           [C#], F#, VB      Common/Library
-PowerShell Standard Module                        psmodule           [C#]              Library/PowerShell/Module
+Templates                        Short Name         Language          Tags
+-----------------------------------------------------------------------------------------------
+Console Application              console            [C#], F#, VB      Common/Console
+Class library                    classlib           [C#], F#, VB      Common/Library
+PowerShell Standard Module       psmodule           [C#]              Library/PowerShell/Module
 ...
 ```
 
@@ -156,9 +156,15 @@ FavoriteNumber FavoritePet
              7 Cat
 ```
 
+### <a name="debugging-the-module"></a>Debuggen des Moduls
+
+Eine Anleitung zum Einrichten von Visual Studio Code zum Debuggen des Moduls finden Sie unter [Verwenden von Visual Studio Code zum Debuggen kompilierter Cmdlets][].
+
+## <a name="supporting-technologies"></a>Unterstützende Technologien
+
 In den folgenden Abschnitten werden einige der von dieser Vorlage verwendeten Technologien ausführlich beschrieben.
 
-## <a name="net-standard-library"></a>.NET Standard-Bibliothek
+### <a name="net-standard-library"></a>.NET Standard-Bibliothek
 
 [.NET Standard][] ist eine formale Spezifikation von .NET-APIs, die in allen .NET-Implementierungen verfügbar sind. Für .NET Standard bestimmter verwalteter Code kann mit den Versionen von .NET Framework und .NET Core verwendet werden, die mit dieser Version von .NET Standard kompatibel sind.
 
@@ -170,7 +176,7 @@ Die Orientierung an .NET Standard stellt sicher, dass bei der Weiterentwicklung 
 
 Solange Sie kompatible APIs verwenden, ist eine Orientierung an .NET Standard allerdings nicht erforderlich, damit ein Modul mit Windows PowerShell und PowerShell Core funktioniert. Die Zwischensprache (Intermediate Language, IL) ist mit beiden Runtimes kompatibel. Sie können sich an .NET Framework 4.6.1 orientieren, das mit .NET Standard 2.0 kompatibel ist. Wenn Sie außerhalb von .NET Standard 2.0 keine APIs verwenden, funktioniert Ihr Modul ohne erneute Kompilierung mit PowerShell Core 6.
 
-## <a name="powershell-standard-library"></a>PowerShell Standard-Bibliothek
+### <a name="powershell-standard-library"></a>PowerShell Standard-Bibliothek
 
 Die [PowerShell Standard][]-Bibliothek ist eine formale Spezifikation von PowerShell-APIs, die in allen PowerShell-Versionen verfügbar sind, die der Version dieses Standards entsprechen oder höher sind.
 
@@ -179,19 +185,19 @@ Die [PowerShell Standard][]-Bibliothek ist eine formale Spezifikation von PowerS
 Sie sollten Ihr Modul mit der PowerShell Standard-Bibliothek kompilieren. Die Bibliothek stellt sicher, dass die APIs verfügbar und sowohl in Windows PowerShell als auch PowerShell Core 6 implementiert sind.
 PowerShell Standard soll stets aufwärtskompatibel sein. Ein mithilfe der PowerShell Standard-Bibliothek 5.1 erstelltes Modul ist immer mit zukünftigen Versionen von PowerShell kompatibel.
 
-## <a name="module-manifest"></a>Modulmanifest
+### <a name="module-manifest"></a>Modulmanifest
 
-### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Angeben der Kompatibilität mit Windows PowerShell und PowerShell Core
+#### <a name="indicating-compatibility-with-windows-powershell-and-powershell-core"></a>Angeben der Kompatibilität mit Windows PowerShell und PowerShell Core
 
 Nachdem Sie überprüft haben, ob Ihr Modul sowohl mit Windows PowerShell als auch PowerShell Core funktioniert, sollte das Modulmanifest explizit mit der [CompatiblePSEditions][]-Eigenschaft die Kompatibilität angeben. Der Wert `Desktop` bedeutet, dass das Modul mit Windows PowerShell kompatibel ist, während der Wert `Core` bedeutet, dass das Modul mit PowerShell Core kompatibel ist. Sowohl `Desktop` als auch `Core` einzubeziehen bedeutet, dass das Modul mit Windows PowerShell und PowerShell Core kompatibel ist.
 
 > [!NOTE]
 > `Core` bedeutet nicht automatisch, dass das Modul mit Windows, Linux und macOS kompatibel ist.
-> Die **CompatiblePSEditions**-Eigenschaft wurde in PowerShell v5 eingeführt. Bei Modulmanifesten, die die **CompatiblePSEditions**-Eigenschaft verwenden, tritt in Versionen vor PowerShell v5 beim Laden ein Fehler auf.
+> Die **CompatiblePSEditions** -Eigenschaft wurde in PowerShell v5 eingeführt. Bei Modulmanifesten, die die **CompatiblePSEditions** -Eigenschaft verwenden, tritt in Versionen vor PowerShell v5 beim Laden ein Fehler auf.
 
 ### <a name="indicating-os-compatibility"></a>Angeben der Betriebssystemkompatibilität
 
-Überprüfen Sie zunächst, ob Ihr Modul unter Linux und macOS funktioniert. Geben Sie als Nächstes die Kompatibilität mit diesen Betriebssystemen im Modulmanifest an. Dies erleichtert den Benutzern, die mit ihren Betriebssystemen kompatiblen Versionen Ihres Moduls zu finden, wenn es im [PowerShell Gallery][] veröffentlicht wird.
+Überprüfen Sie zunächst, ob Ihr Modul unter Linux und macOS funktioniert. Geben Sie als Nächstes die Kompatibilität mit diesen Betriebssystemen im Modulmanifest an. Dies erleichtert den Benutzern, die mit ihren Betriebssystemen kompatiblen Versionen Ihres Moduls zu finden, wenn es im [PowerShell-Katalog][] veröffentlicht wird.
 
 Im Modulmanifest hat die `PrivateData`-Eigenschaft eine `PSData`-Untereigenschaft. Die optionale `Tags`-Eigenschaft von `PSData` akzeptiert ein Array von Werten, die im PowerShell-Katalog angezeigt werden. Der PowerShell-Katalog unterstützt die folgenden Kompatibilitätswerte:
 
@@ -249,7 +255,7 @@ Beispiel:
 }
 ```
 
-## <a name="dependency-on-native-libraries"></a>Abhängigkeit von nativen Bibliotheken
+### <a name="dependency-on-native-libraries"></a>Abhängigkeit von nativen Bibliotheken
 
 Bei Modulen, die für die Verwendung über verschiedene Betriebssysteme oder Prozessorarchitekturen hinweg konzipiert sind, besteht möglicherweise eine Abhängigkeit von einer verwalteten Bibliothek, die ihrerseits selbst von einigen nativen Bibliotheken abhängig ist.
 
@@ -259,33 +265,33 @@ Ab PowerShell 7 wird in Unterordnern des Speicherorts der verwalteten Bibliothe
 
 ```
 managed.dll folder
-                |
-                |--- 'win-x64' folder
-                |       |--- native.dll
-                |
-                |--- 'win-x86' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm' folder
-                |       |--- native.dll
-                |
-                |--- 'win-arm64' folder
-                |       |--- native.dll
-                |
-                |--- 'linux-x64' folder
-                |       |--- native.so
-                |
-                |--- 'linux-x86' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm' folder
-                |       |--- native.so
-                |
-                |--- 'linux-arm64' folder
-                |       |--- native.so
-                |
-                |--- 'osx-x64' folder
-                |       |--- native.dylib
+    |
+    |--- 'win-x64' folder
+    |       |--- native.dll
+    |
+    |--- 'win-x86' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm' folder
+    |       |--- native.dll
+    |
+    |--- 'win-arm64' folder
+    |       |--- native.dll
+    |
+    |--- 'linux-x64' folder
+    |       |--- native.so
+    |
+    |--- 'linux-x86' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm' folder
+    |       |--- native.so
+    |
+    |--- 'linux-arm64' folder
+    |       |--- native.so
+    |
+    |--- 'osx-x64' folder
+    |       |--- native.dylib
 ```
 
 <!-- reference links -->
@@ -295,6 +301,7 @@ managed.dll folder
 [New-ModuleManifest]: /powershell/module/microsoft.powershell.core/new-modulemanifest
 [Runtimeüberprüfungen]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [.NET CLI]: /dotnet/core/tools/?tabs=netcore2x
+[Verwenden von Visual Studio Code zum Debuggen kompilierter Cmdlets]: vscode/using-vscode-for-debugging-compiled-cmdlets.md
 [.NET Standard]: /dotnet/standard/net-standard
 [PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0

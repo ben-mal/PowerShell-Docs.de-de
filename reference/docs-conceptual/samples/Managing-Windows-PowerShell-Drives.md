@@ -2,18 +2,19 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Verwalten von Windows PowerShell-Laufwerken
-ms.openlocfilehash: 5d1aba459caeaab2542e17e74534da6713b0faa9
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Ein PowerShell-Laufwerk ist ein Speicherort für Daten, auf den Sie wie auf ein Dateisystemlaufwerk in PowerShell zugreifen können. PowerShell enthält standardmäßig Anbieter, die das Dateisystem, die Registrierung, Zertifikatspeicher und andere unterstützen.
+ms.openlocfilehash: e4e5347c3f3458f25cea31c8e5a499474985220a
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "70215509"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500333"
 ---
 # <a name="managing-windows-powershell-drives"></a>Verwalten von Windows PowerShell-Laufwerken
 
 Ein *Windows PowerShell-Laufwerk* ist ein Speicherort für Daten, auf den Sie wie auf ein Dateisystemlaufwerk in Windows PowerShell zugreifen können. Die Windows PowerShell-Anbieter erstellen einige Laufwerke für Sie, z. B. die Dateisystemlaufwerke (einschließlich C: und D:), die Registrierungslaufwerke (HKCU: und HKLM:) und das Zertifikatlaufwerk (Cert:). Sie können auch eigene Windows PowerShell-Laufwerke erstellen. Diese Laufwerke sind sehr nützlich, aber nur in Windows PowerShell verfügbar. Sie können darauf nicht mit anderen Windows-Tools, z. B. Datei-Explorer oder „Cmd.exe“, zugreifen.
 
-Windows PowerShell verwendet das Nomen **PSDrive** für Befehle, die mit Windows PowerShell-Laufwerken arbeiten. Verwenden Sie zum Anzeigen einer Liste der Windows PowerShell-Laufwerke in Ihrer Windows PowerShell-Sitzung das Cmdlet **Get-PSDrive**.
+Windows PowerShell verwendet das Nomen **PSDrive** für Befehle, die mit Windows PowerShell-Laufwerken arbeiten. Verwenden Sie zum Anzeigen einer Liste der Windows PowerShell-Laufwerke in Ihrer Windows PowerShell-Sitzung das Cmdlet **Get-PSDrive** .
 
 ```
 PS> Get-PSDrive
@@ -58,7 +59,7 @@ C          FileSystem    C:\                           ...nd Settings\PowerUser
 D          FileSystem    D:\
 ```
 
-Um die Windows PowerShell-Laufwerke anzuzeigen, die Registrierungsstrukturen darstellen, verwenden Sie den Parameter **PSProvider**, damit nur die Windows PowerShell-Laufwerke angezeigt werden, die vom Windows PowerShell-Anbieter „Registry“ unterstützt werden:
+Um die Windows PowerShell-Laufwerke anzuzeigen, die Registrierungsstrukturen darstellen, verwenden Sie den Parameter **PSProvider** , damit nur die Windows PowerShell-Laufwerke angezeigt werden, die vom Windows PowerShell-Anbieter „Registry“ unterstützt werden:
 
 ```
 PS> Get-PSDrive -PSProvider Registry
@@ -102,7 +103,7 @@ Um ein neues Windows PowerShell-Laufwerk zu erstellen, müssen Sie drei Paramete
 
 - Das Stammelement, d.h. den Pfad zum Stamm des neuen Laufwerks
 
-Sie können beispielsweise ein Laufwerk namens „Office“ erstellen, das dem Ordner zugeordnet ist, der die Microsoft Office-Anwendungen auf Ihrem Computer enthält, z.B. **C:\\Programme\\Microsoft Office\\OFFICE11**. Geben Sie zum Erstellen des Laufwerks den folgenden Befehl ein:
+Sie können beispielsweise ein Laufwerk namens „Office“ erstellen, das dem Ordner zugeordnet ist, der die Microsoft Office-Anwendungen auf Ihrem Computer enthält, z.B. **C:\\Programme\\Microsoft Office\\OFFICE11** . Geben Sie zum Erstellen des Laufwerks den folgenden Befehl ein:
 
 ```
 PS> New-PSDrive -Name Office -PSProvider FileSystem -Root "C:\Program Files\Microsoft Office\OFFICE11"
@@ -117,7 +118,7 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 
 Sie verweisen auf das neue Windows PowerShell-Laufwerk wie auf alle Windows PowerShell-Laufwerke – über den Namen gefolgt von einem Doppelpunkt ( **:** ).
 
-Ein Windows PowerShell-Laufwerk kann viele Aufgaben einfacher machen. Beispielsweise haben einige der wichtigsten Schlüssel in der Windows-Registrierung äußerst lange Pfade, die den Zugriff darauf mühsam machen und schwer zu merken sind. Wichtige Konfigurationsinformationen befinden sich unter **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Zum Anzeigen und Ändern von Elementen im Registrierungsschlüssel „CurrentVersion“ können Sie ein Windows PowerShell-Laufwerk mit dem Stamm in diesem Schlüssel erstellen, indem Sie Folgendes eingeben:
+Ein Windows PowerShell-Laufwerk kann viele Aufgaben einfacher machen. Beispielsweise haben einige der wichtigsten Schlüssel in der Windows-Registrierung äußerst lange Pfade, die den Zugriff darauf mühsam machen und schwer zu merken sind. Wichtige Konfigurationsinformationen befinden sich unter **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion** . Zum Anzeigen und Ändern von Elementen im Registrierungsschlüssel „CurrentVersion“ können Sie ein Windows PowerShell-Laufwerk mit dem Stamm in diesem Schlüssel erstellen, indem Sie Folgendes eingeben:
 
 ```
 PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\Windows\CurrentVersion
@@ -143,7 +144,7 @@ Path
 cvkey:\
 ```
 
-Das Cmdlet „New-PsDrive“ fügt das neue Laufwerk nur für die aktuelle Windows PowerShell-Sitzung hinzu. Wenn Sie das Windows PowerShell-Fenster schließen, geht das neue Laufwerk verloren. Wenn Sie ein Windows PowerShell-Laufwerk speichern möchten, verwenden Sie das Cmdlet „Export-Console“, um die aktuelle Windows PowerShell-Sitzung zu exportieren, und verwenden Sie dann den „PowerShell.exe“-Parameter **PSConsoleFile**, um sie zu importieren. Sie können auch das neue Laufwerk Ihrem Windows PowerShell-Profil hinzufügen.
+Das Cmdlet „New-PsDrive“ fügt das neue Laufwerk nur für die aktuelle Windows PowerShell-Sitzung hinzu. Wenn Sie das Windows PowerShell-Fenster schließen, geht das neue Laufwerk verloren. Wenn Sie ein Windows PowerShell-Laufwerk speichern möchten, verwenden Sie das Cmdlet „Export-Console“, um die aktuelle Windows PowerShell-Sitzung zu exportieren, und verwenden Sie dann den „PowerShell.exe“-Parameter **PSConsoleFile** , um sie zu importieren. Sie können auch das neue Laufwerk Ihrem Windows PowerShell-Profil hinzufügen.
 
 ## <a name="deleting-windows-powershell-drives-remove-psdrive"></a>Löschen von Windows PowerShell-Laufwerken (Remove-PSDrive)
 

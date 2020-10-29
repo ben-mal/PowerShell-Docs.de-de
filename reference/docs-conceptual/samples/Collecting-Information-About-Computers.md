@@ -2,12 +2,13 @@
 ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Erfassen von Informationen über Computer
-ms.openlocfilehash: 9407ff15b3c3ca6b3adab60d4d01d957c599e79e
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird beschrieben, wie Sie mithilfe von WMI- und CIM-Cmdlets Informationen zur Computerkonfiguration sammeln.
+ms.openlocfilehash: 5088960ab7c049085a9d7c05ec4571b6fd7e3545
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75737235"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500588"
 ---
 # <a name="collecting-information-about-computers"></a>Erfassen von Informationen über Computer
 
@@ -50,7 +51,7 @@ Sie können allgemeine Prozessorinformationen mithilfe der WMI-Klasse **Win32_Pr
 Get-CimInstance -ClassName Win32_Processor | Select-Object -ExcludeProperty "CIM*"
 ```
 
-Wenn Sie eine Zeichenfolge mit einer allgemeinen Beschreibung der Prozessorfamilie erhalten möchten, lassen Sie die **SystemType**-Eigenschaft zurückgeben:
+Wenn Sie eine Zeichenfolge mit einer allgemeinen Beschreibung der Prozessorfamilie erhalten möchten, lassen Sie die **SystemType** -Eigenschaft zurückgeben:
 
 ```powershell
 Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object -Property SystemType
@@ -92,7 +93,7 @@ Source Description     HotFixID  InstalledBy   InstalledOn PSComputerName
        Security Update KB4048951 Administrator 12/16/2017  .
 ```
 
-Wenn Sie eine kompaktere Ausgabe erhalten möchten, können Sie bestimmte Eigenschaften ausschließen. Sie können zwar den `Get-CimInstance`Property **-Parameter von**  verwenden, um nur die **HotFixID** auszuwählen. Dennoch werden weitere Informationen zurückgegeben, da standardmäßig alle Metadaten angezeigt werden:
+Wenn Sie eine kompaktere Ausgabe erhalten möchten, können Sie bestimmte Eigenschaften ausschließen. Sie können zwar den `Get-CimInstance`Property **-Parameter von** verwenden, um nur die **HotFixID** auszuwählen. Dennoch werden weitere Informationen zurückgegeben, da standardmäßig alle Metadaten angezeigt werden:
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixID
@@ -117,7 +118,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ...
 ```
 
-Die zusätzlichen Daten werden zurückgegeben, weil der **Property**-Parameter in `Get-CimInstance` die von WMI-Klasseninstanzen zurückgegebenen Eigenschaften, nicht aber das an die PowerShell zurückgegebene Objekt einschränkt. Um die Ausgabe zu verringern, verwenden Sie `Select-Object`:
+Die zusätzlichen Daten werden zurückgegeben, weil der **Property** -Parameter in `Get-CimInstance` die von WMI-Klasseninstanzen zurückgegebenen Eigenschaften, nicht aber das an die PowerShell zurückgegebene Objekt einschränkt. Um die Ausgabe zu verringern, verwenden Sie `Select-Object`:
 
 ```powershell
 Get-CimInstance -ClassName Win32_QuickFixEngineering -Property HotFixId | Select-Object -Property HotFixId
@@ -138,7 +139,7 @@ Get-CimInstance -ClassName Win32_OperatingSystem |
   Select-Object -Property BuildNumber,BuildType,OSType,ServicePackMajorVersion,ServicePackMinorVersion
 ```
 
-Sie können mit dem **Property**-Parameter von `Select-Object` auch Platzhalterzeichen verwenden. Da alle Eigenschaften, die entweder mit **Build** oder **Service Pack** beginnen, hier wichtig sind, können wir das Beispiel auf das folgende Format kürzen:
+Sie können mit dem **Property** -Parameter von `Select-Object` auch Platzhalterzeichen verwenden. Da alle Eigenschaften, die entweder mit **Build** oder **Service Pack** beginnen, hier wichtig sind, können wir das Beispiel auf das folgende Format kürzen:
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -Property Build*,OSType,ServicePack*
@@ -154,7 +155,7 @@ ServicePackMinorVersion : 0
 
 ## <a name="listing-local-users-and-owner"></a>Auflisten der lokalen Benutzer und des Besitzers
 
-Allgemeine lokale Benutzerinformationen (z. B. Anzahl lizenzierter Benutzer, aktuelle Anzahl von Benutzern und Besitzername) können Sie mit einer Auswahl von **Win32_OperatingSystem**-Klasseneigenschaften suchen. Sie können die anzuzeigenden Eigenschaften wie folgt explizit auswählen:
+Allgemeine lokale Benutzerinformationen (z. B. Anzahl lizenzierter Benutzer, aktuelle Anzahl von Benutzern und Besitzername) können Sie mit einer Auswahl von **Win32_OperatingSystem** -Klasseneigenschaften suchen. Sie können die anzuzeigenden Eigenschaften wie folgt explizit auswählen:
 
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem |
@@ -236,7 +237,7 @@ PSComputerName :
 
 ## <a name="displaying-service-status"></a>Anzeigen des Dienststatus
 
-Zum Anzeigen des Status aller Dienste auf einem bestimmten Computer können Sie das Cmdlet `Get-Service` verwenden. Für Remotesysteme können Sie die Klasse **WMI-Win32_Service** verwenden. Wenn Sie die Ergebnisse außerdem mit `Select-Object` nach **Status**, **Name** und **DisplayName** filtern, ist das Ausgabeformat fast identisch mit dem von `Get-Service`:
+Zum Anzeigen des Status aller Dienste auf einem bestimmten Computer können Sie das Cmdlet `Get-Service` verwenden. Für Remotesysteme können Sie die Klasse **WMI-Win32_Service** verwenden. Wenn Sie die Ergebnisse außerdem mit `Select-Object` nach **Status** , **Name** und **DisplayName** filtern, ist das Ausgabeformat fast identisch mit dem von `Get-Service`:
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service | Select-Object -Property Status,Name,DisplayName

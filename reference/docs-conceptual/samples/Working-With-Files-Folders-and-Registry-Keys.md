@@ -2,12 +2,13 @@
 ms.date: 07/28/2020
 keywords: powershell,cmdlet
 title: Arbeiten mit Dateien, Ordnern und Registrierungsschlüsseln
-ms.openlocfilehash: 7ead5d0e82feb852845468fb3a012a0908a4ce75
-ms.sourcegitcommit: 339e5fc8a4cc18b4ff6956fe5180343588e40e30
+description: In diesem Artikel wird erörtert, wie Sie in PowerShell mit Änderungsaufgaben an Registrierungsschlüsseln umgehen.
+ms.openlocfilehash: 6f653c1fb409a238aa05658e89261a12e96f6fe1
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410188"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499976"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Arbeiten mit Dateien, Ordnern und Registrierungsschlüsseln
 

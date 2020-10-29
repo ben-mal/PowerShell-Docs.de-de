@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Verwalten von Prozessen mit „Process“-Cmdlets
-ms.openlocfilehash: 8de0cbae508958bf7970ce69e03257ea0a8dca6f
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: PowerShell bietet mehrere Cmdlets, die die Verwaltung von Prozessen auf lokalen und Remotecomputern unterstützen.
+ms.openlocfilehash: 977a3459eeac22536341753ccd59357d718745f2
+ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870743"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92500435"
 ---
 # <a name="managing-processes-with-process-cmdlets"></a>Verwalten von Prozessen mit „Process“-Cmdlets
 
@@ -121,7 +122,7 @@ At line:1 char:13
 + Stop-Process  <<<< -Name Idle
 ```
 
-Mit dem **Force**-Parameter können Sie auch eine Eingabeaufforderung erzwingen. Dieser Parameter ist insbesondere nützlich, wenn Sie für die Angabe des Prozessnamens einen Platzhalter verwenden, denn möglicherweise ergibt sich versehentlich eine Übereinstimmung für einige Prozesse, die Sie nicht beenden möchten:
+Mit dem **Force** -Parameter können Sie auch eine Eingabeaufforderung erzwingen. Dieser Parameter ist insbesondere nützlich, wenn Sie für die Angabe des Prozessnamens einen Platzhalter verwenden, denn möglicherweise ergibt sich versehentlich eine Übereinstimmung für einige Prozesse, die Sie nicht beenden möchten:
 
 ```
 PS> Stop-Process -Name t*,e* -Confirm
@@ -143,7 +144,7 @@ Komplexe Prozessverarbeitung ist möglich, indem Sie einige der Cmdlets zur Obje
 Get-Process | Where-Object -FilterScript {$_.Responding -eq $false} | Stop-Process
 ```
 
-Sie können die gleiche Vorgehensweise in anderen Situationen verwenden. Nehmen Sie beispielsweise an, dass automatisch eine sekundäre Anwendung für den Infobereich ausgeführt wird, wenn der Benutzer eine andere Anwendung startet. Sie stellen möglicherweise fest, dass dies in Terminaldienstesitzungen nicht ordnungsgemäß funktioniert, aber Sie möchten es in Sitzungen beibehalten, die in der Konsole des physischen Computers ausgeführt werden. Sitzungen, die mit dem Desktop eines physischen Computers verbunden sind, haben immer die Sitzungs-ID „0“, also können Sie alle Instanzen des Prozesses, die sich in anderen Sitzungen befinden, beenden, indem Sie **Where-Object** und die Prozesssitzungs-ID (**SessionId**) verwenden:
+Sie können die gleiche Vorgehensweise in anderen Situationen verwenden. Nehmen Sie beispielsweise an, dass automatisch eine sekundäre Anwendung für den Infobereich ausgeführt wird, wenn der Benutzer eine andere Anwendung startet. Sie stellen möglicherweise fest, dass dies in Terminaldienstesitzungen nicht ordnungsgemäß funktioniert, aber Sie möchten es in Sitzungen beibehalten, die in der Konsole des physischen Computers ausgeführt werden. Sitzungen, die mit dem Desktop eines physischen Computers verbunden sind, haben immer die Sitzungs-ID „0“, also können Sie alle Instanzen des Prozesses, die sich in anderen Sitzungen befinden, beenden, indem Sie **Where-Object** und die Prozesssitzungs-ID ( **SessionId** ) verwenden:
 
 ```powershell
 Get-Process -Name BadApp | Where-Object -FilterScript {$_.SessionId -neq 0} | Stop-Process
@@ -159,7 +160,7 @@ Invoke-Command -ComputerName Server01 {Stop-Process Powershell}
 
 Gelegentlich kann es nützlich sein, alle aktiven Windows PowerShell-Sitzungen mit Ausnahme der aktuellen Sitzung zu beenden. Wenn eine Sitzung zu viele Ressourcen verwendet, oder wenn nicht mehr auf sie zugegriffen werden kann (sie wird möglicherweise remote oder in einer anderen Desktopsitzung ausgeführt), kann es sein, dass Sie sie nicht direkt beenden können. Wenn Sie aber versuchen, alle aktiven Sitzungen zu beenden, wird möglicherweise stattdessen die aktuelle Sitzung beendet.
 
-Jede Windows PowerShell-Sitzung hat die Umgebungsvariable PID, die die ID des jeweiligen Windows PowerShell-Prozesses enthält. Sie können die $PID mit der ID jeder Sitzung abgleichen und nur die Windows PowerShell-Sitzungen beenden, die eine andere ID haben. Im folgenden Pipelinebefehl wird dies ausgeführt und die Liste der beendeten Sitzungen zurückgegeben (weil der **PassThru**-Parameter verwendet wird):
+Jede Windows PowerShell-Sitzung hat die Umgebungsvariable PID, die die ID des jeweiligen Windows PowerShell-Prozesses enthält. Sie können die $PID mit der ID jeder Sitzung abgleichen und nur die Windows PowerShell-Sitzungen beenden, die eine andere ID haben. Im folgenden Pipelinebefehl wird dies ausgeführt und die Liste der beendeten Sitzungen zurückgegeben (weil der **PassThru** -Parameter verwendet wird):
 
 ```
 PS> Get-Process -Name powershell | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -PassThru
