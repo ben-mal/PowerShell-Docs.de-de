@@ -2,19 +2,20 @@
 ms.date: 04/11/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Einrichten eines DSC-SMB-Pullservers
-ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Ein DSC-SMB-Pullserver ist ein Computer, der als Host einer SMB-Dateifreigabe fungiert, mit der DSC-Konfigurationsdateien und DSC-Ressourcen für Zielknoten zur Verfügung gestellt werden, wenn sie von diesen Knoten angefordert werden.
+ms.openlocfilehash: 4ac1b0db719fa124d6fa9a654acb64ec24d9ea41
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500702"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658431"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Einrichten eines DSC-SMB-Pullservers
 
 Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> Der Pull-Server (Windows-Feature *DSC-Dienst*) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
+> Der Pull-Server (Windows-Feature *DSC-Dienst* ) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
 
 Ein DSC-[SMB](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))-Pullserver ist ein Computer, der als Host einer SMB-Dateifreigabe fungiert, mit der DSC-Konfigurationsdateien und DSC-Ressourcen für Zielknoten zur Verfügung gestellt werden, wenn sie von diesen Knoten angefordert werden.
 
@@ -33,11 +34,11 @@ Rufen Sie das Cmdlet [Install-Module](/powershell/module/PowershellGet/Install-M
 
 > [!NOTE]
 > `Install-Module` ist im Modul **PowerShellGet** enthalten, das Bestandteil von PowerShell 5.0 ist.
-> **xSmbShare** enthält die DSC-Ressource **xSmbShare**, mit der Sie eine SMB-Dateifreigabe erstellen können.
+> **xSmbShare** enthält die DSC-Ressource **xSmbShare** , mit der Sie eine SMB-Dateifreigabe erstellen können.
 
 ### <a name="create-the-directory-and-file-share"></a>Erstellen des Verzeichnisses und der Dateifreigabe
 
-Die folgende Konfiguration verwendet die **File**-Ressource zum Erstellen des Verzeichnisses für die Freigabe und die **xSmbShare**-Ressource zum Einrichten der SMB-Freigabe:
+Die folgende Konfiguration verwendet die **File** -Ressource zum Erstellen des Verzeichnisses für die Freigabe und die **xSmbShare** -Ressource zum Einrichten der SMB-Freigabe:
 
 ```powershell
 Configuration SmbShare
@@ -76,8 +77,8 @@ Mit der Konfiguration wird das Verzeichnis `C:\DscSmbShare` erstellt, wenn es no
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Gewähren von Dateisystemzugriff für den Pullclient
 
-Indem Sie einem Clientknoten **ReadAccess** gewähren, kann dieser Knoten auf die SMB-Freigabe zugreifen, aber nicht auf Dateien oder Ordner innerhalb der Freigabe. Sie müssen Clientknoten explizit Zugriff auf den SMB-Freigabeordner und dessen Unterordner gewähren. In DSC erfolgt dies mithilfe der Ressource **cNtfsPermissionEntry**, die im Modul [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) enthalten ist.
-Die folgende Konfiguration fügt einen **cNtfsPermissionEntry**-Block hinzu, der dem Pullclient „ReadAndExecute“-Zugriff gewährt:
+Indem Sie einem Clientknoten **ReadAccess** gewähren, kann dieser Knoten auf die SMB-Freigabe zugreifen, aber nicht auf Dateien oder Ordner innerhalb der Freigabe. Sie müssen Clientknoten explizit Zugriff auf den SMB-Freigabeordner und dessen Unterordner gewähren. In DSC erfolgt dies mithilfe der Ressource **cNtfsPermissionEntry** , die im Modul [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0) enthalten ist.
+Die folgende Konfiguration fügt einen **cNtfsPermissionEntry** -Block hinzu, der dem Pullclient „ReadAndExecute“-Zugriff gewährt:
 
 ```powershell
 Configuration DSCSMB
@@ -131,7 +132,7 @@ Configuration DSCSMB
 
 Speichern Sie alle MOF-Konfigurationsdateien und/oder DSC-Ressourcen, die von Clientknoten per Pull abgerufen werden sollen, im SMB-Freigabeordner.
 
-Alle MOF-Konfigurationsdateien müssen den Namen *ConfigurationID*.mof haben, wobei *ConfigurationID* der Wert der **ConfigurationID**-Eigenschaft des LCM des Zielknotens ist. Weitere Informationen zum Einrichten von Pullclients finden Sie unter [Einrichten eines DSC-Pullclients mithilfe einer Konfigurations-ID](pullClientConfigID.md).
+Alle MOF-Konfigurationsdateien müssen den Namen *ConfigurationID* .mof haben, wobei *ConfigurationID* der Wert der **ConfigurationID** -Eigenschaft des LCM des Zielknotens ist. Weitere Informationen zum Einrichten von Pullclients finden Sie unter [Einrichten eines DSC-Pullclients mithilfe einer Konfigurations-ID](pullClientConfigID.md).
 
 > [!NOTE]
 > Sie müssen Konfigurations-IDs verwenden, wenn Sie einen SMB-Pullserver verwenden. Konfigurationsnamen werden für SMB nicht unterstützt.
@@ -154,7 +155,7 @@ Die Prüfsummendatei muss sich im gleichen Verzeichnis wie die MOF-Konfiguration
 
 ## <a name="setting-up-a-pull-client-for-smb"></a>Einrichten eines Pullclients für SMB
 
-Zum Einrichten eines Clients, der Konfigurationen und/oder der Ressourcen von einer SMB-Freigabe abruft, konfigurieren Sie den lokalen Konfigurations-Manager (Local Configuration Manager, LCM) des Clients mit den Codeblöcken **ConfigurationRepositoryShare** und **ResourceRepositoryShare**, die die Freigabe angeben, aus der Pullkonfigurationen und DSC-Ressourcen abgerufen werden sollen.
+Zum Einrichten eines Clients, der Konfigurationen und/oder der Ressourcen von einer SMB-Freigabe abruft, konfigurieren Sie den lokalen Konfigurations-Manager (Local Configuration Manager, LCM) des Clients mit den Codeblöcken **ConfigurationRepositoryShare** und **ResourceRepositoryShare** , die die Freigabe angeben, aus der Pullkonfigurationen und DSC-Ressourcen abgerufen werden sollen.
 
 Weitere Informationen zum Konfigurieren des LCM finden Sie unter [Einrichten eines DSC-Pullclients mithilfe einer Konfigurations-ID](pullClientConfigID.md).
 
@@ -216,4 +217,4 @@ Besonderer Dank gilt den folgenden Personen:
 
 [Inkraftsetzung von Konfigurationen](enactingConfigurations.md)
 
-[Einrichten eines Pullclients mithilfe einer Konfigurations-ID](pullClientConfigID.md)
+[Einrichten eines DSC-Pullclients mithilfe einer Konfigurations-ID](pullClientConfigID.md)

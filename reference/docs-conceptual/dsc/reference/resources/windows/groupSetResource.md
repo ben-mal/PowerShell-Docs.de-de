@@ -1,14 +1,14 @@
 ---
 ms.date: 09/20/2019
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
-description: Stellt einen Mechanismus zum Verwalten lokaler Gruppen auf dem Zielknoten zur Verfügung.
+ms.topic: reference
 title: DSC-Ressource „GroupSet“
-ms.openlocfilehash: 90e0c3f0e09c6a300988869265dfdb432ed5d217
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „GroupSet“
+ms.openlocfilehash: a9d1803aca40ac3571d42a5fd762489c03ed274e
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464194"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142887"
 ---
 # <a name="dsc-groupset-resource"></a>DSC-Ressource „GroupSet“
 
@@ -18,10 +18,12 @@ Die Ressource **GroupSet** in Windows PowerShell DSC bietet einen Mechanismus zu
 
 Verwenden Sie diese Ressource, wenn Sie dieselbe Liste von Mitgliedern mehreren Gruppen hinzufügen oder aus diesen entfernen möchten, mehr als eine Gruppe entfernen möchten oder mehr als eine Gruppe mit derselben Liste von Mitgliedern hinzufügen möchten.
 
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
 ## <a name="syntax"></a>Syntax
 
 ```Syntax
-Group [string] #ResourceName
+GroupSet [string] #ResourceName
 {
     GroupName = [string[]]
     [ MembersToInclude = [string[]] ]
@@ -38,7 +40,7 @@ Group [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |GroupName |Die Namen der Gruppen, für die Sie einen bestimmten Zustand sicherstellen möchten. |
-|Members |Verwenden Sie diese Eigenschaft, um die aktuelle Gruppenmitgliedschaft durch die angegebenen Member zu ersetzen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festlegen, verwenden Sie weder die Eigenschaft **MembersToExclude** noch die Eigenschaft **MembersToInclude**. Andernfalls wird ein Fehler generiert. |
+|Members |Verwenden Sie diese Eigenschaft, um die aktuelle Gruppenmitgliedschaft durch die angegebenen Member zu ersetzen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festlegen, verwenden Sie weder die Eigenschaft **MembersToExclude** noch die Eigenschaft **MembersToInclude** . Andernfalls wird ein Fehler generiert. |
 |MembersToInclude |Verwenden Sie diese Eigenschaft, um Member zur vorhandenen Gruppenmitgliedschaft hinzuzufügen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festgelegt haben, verwenden Sie die Eigenschaft **Members** nicht. Andernfalls wird ein Fehler generiert. |
 |MembersToExclude |Verwenden Sie diese Eigenschaft, um Mitglieder aus der vorhandenen Gruppenmitgliedschaft zu entfernen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festgelegt haben, verwenden Sie die Eigenschaft **Members** nicht. Andernfalls wird ein Fehler generiert. |
 |Anmeldeinformationen |Die Anmeldeinformationen für den Zugriff auf Remoteressourcen. Dieses Konto muss die entsprechenden Active Directory-Berechtigungen aufweisen, um alle nicht lokalen Konten zur Gruppe hinzuzufügen. Andernfalls tritt ein Fehler auf. |
@@ -48,7 +50,7 @@ Group [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Gibt an, ob die Gruppen vorhanden sind. Legen Sie diese Eigenschaft auf **Absent** fest, um sicherzustellen, dass die Gruppen nicht vorhanden sind. Das Festlegen auf **Present** stellt sicher, dass die Gruppen vorhanden sind. Der Standardwert ist **Present**. |
+|Ensure |Gibt an, ob die Gruppen vorhanden sind. Legen Sie diese Eigenschaft auf **Absent** fest, um sicherzustellen, dass die Gruppen nicht vorhanden sind. Das Festlegen auf **Present** stellt sicher, dass die Gruppen vorhanden sind. Der Standardwert ist **Present** . |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |
 
 > [!NOTE]

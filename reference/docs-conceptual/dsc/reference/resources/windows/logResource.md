@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „Log“
-ms.openlocfilehash: bc59bb2670561306a039d024fcff5e0746a659f2
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „Log“
+ms.openlocfilehash: 281d1f8aeeb4d075f073419ac02a0f81888ed2b5
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464025"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142462"
 ---
 # <a name="dsc-log-resource"></a>DSC-Ressource „Log“
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Die Ressource **Log** in Windows PowerShell DSC bietet einen Mechanismus zum Schreiben von Meldungen in das Ereignisprotokoll „Microsoft Windows Desired State Configuration/Analyse“.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +53,7 @@ Log [string] #ResourceName
 Im folgenden Beispiel wird veranschaulicht, wie Sie eine Meldung in das Ereignisprotokoll „Microsoft Windows Desired State Configuration/Analyse“ einschließen.
 
 > [!NOTE]
-> Wenn Sie [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration?view=powershell-5.1) mit dieser konfigurierten Ressource ausführen, wird stets **$false** zurückgegeben.
+> Wenn Sie [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration) mit dieser konfigurierten Ressource ausführen, wird stets **$false** zurückgegeben.
 
 ```powershell
 Configuration logResourceTest

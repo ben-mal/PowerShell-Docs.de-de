@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „WindowsProcess“
-ms.openlocfilehash: a1f8840a5894049efd27c5d213a66363cd8dbebc
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „WindowsProcess“
+ms.openlocfilehash: 3076e9cb857b78953c164253351b23e7da9b40c6
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464127"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143006"
 ---
 # <a name="dsc-windowsprocess-resource"></a>DSC-Ressource „WindowsProcess“
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Die Ressource **WindowsProcess** in Windows PowerShell DSC bietet einen Mechanismus zum Konfigurieren von Prozessen auf einem Zielknoten.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,5 +53,5 @@ WindowsProcess [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Gibt an, ob der Prozess vorhanden ist. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass der Prozess vorhanden ist. Legen Sie sie andernfalls auf **Absent** fest. Der Standardwert ist **Present**. |
+|Ensure |Gibt an, ob der Prozess vorhanden ist. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass der Prozess vorhanden ist. Legen Sie sie andernfalls auf **Absent** fest. Der Standardwert ist **Present** . |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |

@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: Das ISEEditor-Objekt
-ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Ein ISEEditor-Objekt ist eine Instanz der Microsoft.PowerShell.Host.ISE.ISEEditor-Klasse. Der Konsolenbereich ist ein ISEEditor-Objekt.
+ms.openlocfilehash: ffcb6e35e1160beab6efb29cc84847fa9ffd012b
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809696"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654066"
 ---
 # <a name="the-iseeditor-object"></a>Das ISEEditor-Objekt
 
-Ein **ISEEditor**-Objekt ist eine Instanz der Microsoft.PowerShell.Host.ISE.ISEEditor-Klasse. Der Konsolenbereich ist ein **ISEEditor**-Objekt. Jedes [ISEFile](The-ISEFile-Object.md)-Objekt verfügt über ein zugeordnetes **ISEEditor**-Objekt. In den folgenden Abschnitten werden die Methoden und Eigenschaften eines **ISEEditor**-Objekts aufgeführt.
+Ein **ISEEditor** -Objekt ist eine Instanz der Microsoft.PowerShell.Host.ISE.ISEEditor-Klasse. Der Konsolenbereich ist ein **ISEEditor** -Objekt. Jedes [ISEFile](The-ISEFile-Object.md)-Objekt verfügt über ein zugeordnetes **ISEEditor** -Objekt. In den folgenden Abschnitten werden die Methoden und Eigenschaften eines **ISEEditor** -Objekts aufgeführt.
 
 ## <a name="methods"></a>Methoden
 
@@ -30,7 +30,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Führt einen Bildlauf im Editor aus, sodass die Zeile, die dem angegebenen Wert des **lineNumber**-Parameters entspricht, angezeigt wird. Es wird eine Ausnahme ausgelöst, wenn die angegebene Zeilennummer nicht zwischen 1 und der Nummer der letzten Zeile liegt. Dieser Bereich definiert die gültigen Zeilennummern.
+Führt einen Bildlauf im Editor aus, sodass die Zeile, die dem angegebenen Wert des **lineNumber** -Parameters entspricht, angezeigt wird. Es wird eine Ausnahme ausgelöst, wenn die angegebene Zeilennummer nicht zwischen 1 und der Nummer der letzten Zeile liegt. Dieser Bereich definiert die gültigen Zeilennummern.
 
 **lineNumber** Die Nummer der Zeile, die angezeigt werden soll.
 
@@ -69,7 +69,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
 In Windows PowerShell ISE 3.0 und höher unterstützt, in früheren Versionen nicht enthalten.
 
-Verschiebt den Textcursor zum entsprechenden Zeichen, wenn die Eigenschaft **CanGoToMatch** des Editorobjekts `$true` ist. Dies ist der Fall, wenn sich der Textcursor direkt vor einer öffnenden, eckigen oder geschweiften Klammer – `(`,`[`,`{` – oder unmittelbar nach einer schließenden, eckigen oder geschweiften Klammer befindet – `)`,`]`,`}`. Der Textcursor wird vor einer öffnenden bzw. nach einer schließenden Klammer platziert. Wenn die **CanGoToMatch**-Eigenschaft `$false` lautet, wird mit dieser Methode keine Aktion ausgeführt.
+Verschiebt den Textcursor zum entsprechenden Zeichen, wenn die Eigenschaft **CanGoToMatch** des Editorobjekts `$true` ist. Dies ist der Fall, wenn sich der Textcursor direkt vor einer öffnenden, eckigen oder geschweiften Klammer – `(`,`[`,`{` – oder unmittelbar nach einer schließenden, eckigen oder geschweiften Klammer befindet – `)`,`]`,`}`. Der Textcursor wird vor einer öffnenden bzw. nach einer schließenden Klammer platziert. Wenn die **CanGoToMatch** -Eigenschaft `$false` lautet, wird mit dieser Methode keine Aktion ausgeführt.
 
 ```powershell
 # Goes to the matching character if CanGoToMatch() is $true
@@ -82,7 +82,7 @@ In Windows PowerShell ISE 2.0 und höher unterstützt.
 
 Ersetzt die Markierung durch Text oder fügt Text an der aktuellen Position des Textcursors ein.
 
-**text**: Zeichenfolge – der einzufügende Text.
+**text** : Zeichenfolge – der einzufügende Text.
 
 Weitere Informationen finden Sie im [Beispielskript](#scripting-example) weiter unten in diesem Thema.
 
@@ -90,15 +90,15 @@ Weitere Informationen finden Sie im [Beispielskript](#scripting-example) weiter 
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Wählt den Text anhand der Parameter **startLine**, **startColumn**, **endLine** und **endColumn** aus.
+Wählt den Text anhand der Parameter **startLine** , **startColumn** , **endLine** und **endColumn** aus.
 
-**startLine**: ganze Zahl – die Zeile, in der die Auswahl beginnt.
+**startLine** : ganze Zahl – die Zeile, in der die Auswahl beginnt.
 
-**startColumn**: ganze Zahl – die Spalte in der Startzeile, in der die Auswahl beginnt.
+**startColumn** : ganze Zahl – die Spalte in der Startzeile, in der die Auswahl beginnt.
 
-**endLine**: ganze Zahl – die Zeile, in der die Auswahl endet.
+**endLine** : ganze Zahl – die Zeile, in der die Auswahl endet.
 
-**endColumn**: ganze Zahl – die Spalte in der Endzeile, in der die Auswahl endet.
+**endColumn** : ganze Zahl – die Spalte in der Endzeile, in der die Auswahl endet.
 
 Weitere Informationen finden Sie im [Beispielskript](#scripting-example) weiter unten in diesem Thema.
 
@@ -121,9 +121,9 @@ In Windows PowerShell ISE 2.0 und höher unterstützt.
 
 Legt die Position des Textcursors auf die Zeilennummer und die Spaltennummer fest. Es wird eine Ausnahme ausgelöst, wenn die Zeilennummer des Textcursors oder die Spaltennummer des Textcursors außerhalb des jeweils gültigen Bereichs liegt.
 
-**lineNumber**: ganze Zahl – die Zeilennummer des Textcursors.
+**lineNumber** : ganze Zahl – die Zeilennummer des Textcursors.
 
-**columnNumber**: ganze Zahl – die Spaltennummer des Textcursors.
+**columnNumber** : ganze Zahl – die Spaltennummer des Textcursors.
 
 ```powershell
 # Set the CaretPosition.

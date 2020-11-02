@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: WaitForAll-Ressource in DSC
-ms.openlocfilehash: a0cf553af96ecc3df4968581f8f393b72fc3dabf
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: WaitForAll-Ressource in DSC
+ms.openlocfilehash: a477584cf97a56815bda9973cb2befc9b71d14d1
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464365"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143108"
 ---
 # <a name="dsc-waitforall-resource"></a>WaitForAll-Ressource in DSC
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464365"
 
 Die DSC-Ressource (Desired State Configuration) **WaitForAll** kann innerhalb eines Knotenblocks in einer [DSC-Konfiguration](../../../configurations/configurations.md) verwendet werden, um Abhängigkeiten von Konfigurationen auf anderen Knoten anzugeben.
 
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
 Diese Ressource ist erfolgreich, wenn sich die mit der Eigenschaft **ResourceName** angegebene Ressource auf allen in der Eigenschaft **NodeName** definierten Zielknoten im gewünschten Zustand befindet.
 
 > [!NOTE]
-> Die Ressource **WaitForAll** verwendet die Windows-Remoteverwaltung, um den Status anderer Knoten zu überprüfen. Weitere Informationen zu Anforderungen zur Portierung und Sicherheit für WinRM finden Sie unter [Sicherheitsaspekte von PowerShell-Remoting](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> Die Ressource **WaitForAll** verwendet die Windows-Remoteverwaltung, um den Status anderer Knoten zu überprüfen. Weitere Informationen zu Anforderungen zur Portierung und Sicherheit für WinRM finden Sie unter [Sicherheitsaspekte von PowerShell-Remoting](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Syntax
 

@@ -1,23 +1,26 @@
 ---
 ms.date: 07/15/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „PackageManagementSource“
-ms.openlocfilehash: b24558574f192347aace5a809d57385e01d9acb3
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „PackageManagementSource“
+ms.openlocfilehash: 495b6548ef86f639e93b914ec8bd8ea7818ff8dd
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463889"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142853"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>DSC-Ressource „PackageManagementSource“
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Die Ressource **PackageManagementSource** in Windows PowerShell Desired State Configuration (DSC) bietet einen Mechanismus zum Registrieren von Paketverwaltungsquellen auf einem Zielknoten sowie zum Aufheben der Registrierung.
-**Auf diese Weise registrierte Verwaltungspaketquellen werden im Systemkontext registriert und können vom Systemkonto oder der DSC-Engine verwendet werden.** Diese Ressource erfordert das Modul **PackageManagement**, das im [PowerShell-Katalog](https://PowerShellGallery.com) verfügbar ist.
+**Auf diese Weise registrierte Verwaltungspaketquellen werden im Systemkontext registriert und können vom Systemkonto oder der DSC-Engine verwendet werden.** Diese Ressource erfordert das Modul **PackageManagement** , das im [PowerShell-Katalog](https://PowerShellGallery.com) verfügbar ist.
 
 > [!IMPORTANT]
-> Die folgenden Eigenschaftsinformationen gelten nur für das **PackageManagement**-Modul Version 1.1.7.0 oder höher.
+> Die folgenden Eigenschaftsinformationen gelten nur für das **PackageManagement** -Modul Version 1.1.7.0 oder höher.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +53,7 @@ PackageManagementSource [String] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Bestimmt, ob die Paketquelle registriert oder die Registrierung aufgehoben werden soll. Der Standardwert ist **Present**. |
+|Ensure |Bestimmt, ob die Paketquelle registriert oder die Registrierung aufgehoben werden soll. Der Standardwert ist **Present** . |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |
 
 > [!NOTE]
@@ -58,7 +61,7 @@ PackageManagementSource [String] #ResourceName
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel registriert die Paketquelle `https://nuget.org` mithilfe der DSC-Ressource **PackageManagementSource**.
+Dieses Beispiel registriert die Paketquelle `https://nuget.org` mithilfe der DSC-Ressource **PackageManagementSource** .
 
 ```powershell
 Configuration PackageManagementSourceTest

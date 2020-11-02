@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: Erstellen einer PowerShell-Registerkarte in Windows PowerShell ISE
-ms.openlocfilehash: 39df0b76c337bb7c02d36d66b325c5396afbbe00
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Registerkarten in Windows PowerShell Integrated Scripting Environment (ISE) ermöglichen Ihnen, mehrere Ausführungsumgebungen innerhalb derselben Anwendung gleichzeitig zu erstellen und zu verwenden. Jede PowerShell-Registerkarte entspricht einer separaten Ausführungsumgebung bzw. Sitzung.
+ms.openlocfilehash: 62054014be9890b3fa0296f717f65a85534628d8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808836"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663784"
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Erstellen einer PowerShell-Registerkarte in Windows PowerShell ISE
 
@@ -20,7 +20,7 @@ Gehen Sie folgendermaßen vor, um eine Registerkarte in Windows PowerShell zu ö
 
 ## <a name="to-create-and-use-a-new-powershell-tab"></a>So erstellen und verwenden Sie eine neue PowerShell-Registerkarte
 
-Klicken Sie im Menü **Datei** auf **Neue PowerShell-Registerkarte**. Die neue PowerShell-Registerkarte wird immer als aktives Fenster geöffnet. PowerShell-Registerkarten sind in der Reihenfolge ihres Öffnens aufsteigend nummeriert. Jede Registerkarte ist einem eigenen Windows PowerShell-Konsolenfenster zugeordnet. Sie können bis zu 32 PowerShell-Registerkarten mit jeweils eigener Sitzung gleichzeitig geöffnet haben (bei Windows PowerShell ISE 2.0 maximal 8.)
+Klicken Sie im Menü **Datei** auf **Neue PowerShell-Registerkarte** . Die neue PowerShell-Registerkarte wird immer als aktives Fenster geöffnet. PowerShell-Registerkarten sind in der Reihenfolge ihres Öffnens aufsteigend nummeriert. Jede Registerkarte ist einem eigenen Windows PowerShell-Konsolenfenster zugeordnet. Sie können bis zu 32 PowerShell-Registerkarten mit jeweils eigener Sitzung gleichzeitig geöffnet haben (bei Windows PowerShell ISE 2.0 maximal 8.)
 
 Beachten Sie, dass durch Klicken auf die Symbole **Neu** oder **Öffnen** auf der Symbolleiste keine neue Registerkarte mit einer separaten Sitzung erstellt wird. Über diese Schaltflächen wird stattdessen eine neue oder vorhandene Skriptdatei auf der derzeit in einer Sitzung aktiven Registerkarte geöffnet. Auf jeder Registerkarte und in jeder Sitzung können mehrere Skriptdateien geöffnet sein. Die Skriptregisterkarten für eine Sitzung werden nur unter den Sitzungsregisterkarten angezeigt, wenn die zugehörige Sitzung aktiv ist.
 
@@ -28,7 +28,7 @@ Um eine PowerShell-Registerkarte zu aktivieren, klicken Sie auf die Registerkart
 
 ## <a name="to-create-and-use-a-new-remote-powershell-tab"></a>So erstellen und verwenden Sie eine Remote-PowerShell-Registerkarte
 
-Klicken Sie im Menü **Datei** auf **Neue Remote-PowerShell-Registerkarte**, um eine Sitzung auf einem Remotecomputer zu starten. Ein Dialogfeld wird angezeigt und fordert Sie zur Eingabe von Details auf, die zum Herstellen der Remoteverbindung erforderlich sind. Die Remoteregisterkarte funktioniert wie eine lokale PowerShell-Registerkarte, doch die Befehle und Skripts werden auf dem Remotecomputer ausgeführt.
+Klicken Sie im Menü **Datei** auf **Neue Remote-PowerShell-Registerkarte** , um eine Sitzung auf einem Remotecomputer zu starten. Ein Dialogfeld wird angezeigt und fordert Sie zur Eingabe von Details auf, die zum Herstellen der Remoteverbindung erforderlich sind. Die Remoteregisterkarte funktioniert wie eine lokale PowerShell-Registerkarte, doch die Befehle und Skripts werden auf dem Remotecomputer ausgeführt.
 
 ## <a name="to-close-a-powershell-tab"></a>So schließen Sie eine PowerShell-Registerkarte
 
@@ -36,7 +36,7 @@ Zum Schließen einer Registerkarte können Sie eine der folgenden Methoden verwe
 
 - Klicken Sie auf die Registerkarte, die Sie schließen möchten.
 
-- Klicken Sie im Menü **Datei** auf **PowerShell-Registerkarte schließen**, oder klicken Sie auf einer aktiven Registerkarte auf die Schaltfläche „Schließen“ (**X**), um sie zu schließen.
+- Klicken Sie im Menü **Datei** auf **PowerShell-Registerkarte schließen** , oder klicken Sie auf einer aktiven Registerkarte auf die Schaltfläche „Schließen“ ( **X** ), um sie zu schließen.
 
 Wenn Sie auf der PowerShell-Registerkarte nicht gespeicherte Dateien geöffnet sind, werden Sie aufgefordert, sie zu speichern oder zu verwerfen. Weitere Informationen zum Speichern eines Skripts finden Sie unter [Speichern eines Skripts](How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md#how-to-save-a-script).
 

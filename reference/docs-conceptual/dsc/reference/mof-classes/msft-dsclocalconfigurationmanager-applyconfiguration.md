@@ -1,13 +1,14 @@
 ---
 ms.date: 07/14/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: ApplyConfiguration-Methode
-ms.openlocfilehash: bec74ccd6f75448484adfd26bf8a4af4e224eb3f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: ApplyConfiguration-Methode
+ms.openlocfilehash: aa99221b33d39c3ecc70156a11eaee10b540e2dc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463838"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664282"
 ---
 # <a name="applyconfiguration-method"></a>ApplyConfiguration-Methode
 
@@ -19,7 +20,7 @@ Wenn keine ausstehende Konfiguration vorhanden ist, wendet diese Methode die akt
 
 ```mof
 uint32 ApplyConfiguration(
-  [in] boolean force
+  [in] boolean force
 );
 ```
 
@@ -33,16 +34,16 @@ Wenn dies **true** ist, wird die aktuelle Konfiguration erneut angewendet, auch 
 
 Gibt bei Erfolg null zurück, andernfalls einen Fehlercode.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Dies ist eine statische Methode.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [**MSFT_DSCLocalConfigurationManager-Klasse**](msft-dsclocalconfigurationmanager.md)

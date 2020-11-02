@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „Package“
-ms.openlocfilehash: faeebc5bac7caad733600720f1c9f3d916d4c0a8
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „Package“
+ms.openlocfilehash: 4bcc6dc68a37ebe434e30339452cd7269f984ae9
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464008"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142870"
 ---
 # <a name="dsc-package-resource"></a>DSC-Ressource „Package“
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Die Ressource **Package** in Windows PowerShell DSC bietet einen Mechanismus zum Installieren oder Deinstallieren von Paketen, wie z. B. Windows Installer und „Setup.exe“-Pakete, auf einem Zielknoten.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +53,7 @@ Package [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Gibt an, ob das Paket installiert ist. Legen Sie diese Eigenschaft auf **Absent** fest, um sicherzustellen, dass das Paket nicht installiert wird (oder deinstalliert wird, wenn es installiert ist). Legen Sie sie auf **Present** fest, um sicherzustellen, dass das Paket installiert wird. Der Standardwert ist **Present**. |
+|Ensure |Gibt an, ob das Paket installiert ist. Legen Sie diese Eigenschaft auf **Absent** fest, um sicherzustellen, dass das Paket nicht installiert wird (oder deinstalliert wird, wenn es installiert ist). Legen Sie sie auf **Present** fest, um sicherzustellen, dass das Paket installiert wird. Der Standardwert ist **Present** . |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |
 
 > [!NOTE]

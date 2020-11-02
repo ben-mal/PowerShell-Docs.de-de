@@ -2,34 +2,30 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Verwenden von Konfigurationsdaten
-ms.openlocfilehash: 5eb7fedec9a0abece1068496cdf5cb940eae3340
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
+description: In diesem Thema wird die Struktur der Hashtabelle ConfigurationData beschrieben. Dadurch können Sie eine einzige Konfiguration erstellen, die für mehrere Knoten oder für unterschiedliche Umgebungen verwendet werden kann.
+ms.openlocfilehash: aa4a0545aec529dbc923908612d2e1f9e60b3c9c
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83557038"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647111"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Verwenden von Konfigurationsdaten in DSC
 
-> Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Mithilfe des integrierten DSC-Parameters **ConfigurationData** können Sie Daten definieren, die innerhalb einer Konfiguration verwendet werden können.
-Dadurch können Sie eine einzige Konfiguration erstellen, die für mehrere Knoten oder für unterschiedliche Umgebungen verwendet werden kann.
-Wenn Sie z.B. eine Anwendung entwickeln, können Sie eine Konfiguration für die Entwicklungs-und die Produktionsumgebung verwenden und mithilfe von Konfigurationsdaten Daten für jede Umgebung angeben.
+Mithilfe des integrierten DSC-Parameters **ConfigurationData** können Sie Daten definieren, die innerhalb einer Konfiguration verwendet werden können. Dadurch können Sie eine einzige Konfiguration erstellen, die für mehrere Knoten oder für unterschiedliche Umgebungen verwendet werden kann. Wenn Sie z.B. eine Anwendung entwickeln, können Sie eine Konfiguration für die Entwicklungs-und die Produktionsumgebung verwenden und mithilfe von Konfigurationsdaten Daten für jede Umgebung angeben.
 
-In diesem Thema wird die Struktur der Hashtabelle **ConfigurationData** beschrieben.
-Beispiele zur Verwendung von Konfigurationsdaten finden Sie unter [Trennen von Konfigurations- und Umgebungsdaten](separatingEnvData.md).
+In diesem Thema wird die Struktur der Hashtabelle **ConfigurationData** beschrieben. Beispiele zur Verwendung von Konfigurationsdaten finden Sie unter [Trennen von Konfigurations- und Umgebungsdaten](separatingEnvData.md).
 
 ## <a name="the-configurationdata-common-parameter"></a>Der allgemeine Parameter „ConfigurationData“
 
-Eine DSC-Konfiguration umfasst einen allgemeinen Parameter namens **ConfigurationData**, den Sie beim Kompilieren der Konfiguration angeben.
-Informationen zum Kompilieren von Konfigurationen finden Sie unter [DSC-Konfigurationen](configurations.md).
+Eine DSC-Konfiguration umfasst einen allgemeinen Parameter namens **ConfigurationData** , den Sie beim Kompilieren der Konfiguration angeben. Informationen zum Kompilieren von Konfigurationen finden Sie unter [DSC-Konfigurationen](configurations.md).
 
-Der Parameter **ConfigurationData** ist eine Hashtabelle, die mindestens einen Schlüssel namens **AllNodes** benötigt.
-Die Hashtabelle kann außerdem noch weitere Schlüssel umfassen.
+Der Parameter **ConfigurationData** ist eine Hashtabelle, die mindestens einen Schlüssel namens **AllNodes** benötigt. Die Hashtabelle kann außerdem noch weitere Schlüssel umfassen.
 
 > [!NOTE]
-> In den Beispielen in diesem Artikel wird (neben dem Schlüssel **AllNodes**) nur ein einziger zusätzlicher Schlüssel verwendet. Dieser trägt den Namen `NonNodeData`. Sie können jedoch eine beliebige Anzahl zusätzlicher Schlüssel verwenden und diese nach Wunsch benennen.
+> In den Beispielen in diesem Artikel wird (neben dem Schlüssel **AllNodes** ) nur ein einziger zusätzlicher Schlüssel verwendet. Dieser trägt den Namen `NonNodeData`. Sie können jedoch eine beliebige Anzahl zusätzlicher Schlüssel verwenden und diese nach Wunsch benennen.
 
 ```powershell
 $MyData =
@@ -39,7 +35,7 @@ $MyData =
 }
 ```
 
-Der Wert des **AllNodes**-Schlüssels ist ein Array. Jedes Element dieses Arrays ist ebenfalls eine Hashtabelle, die mindestens einen Schlüssel namens **NodeName** benötigt:
+Der Wert des **AllNodes** -Schlüssels ist ein Array. Jedes Element dieses Arrays ist ebenfalls eine Hashtabelle, die mindestens einen Schlüssel namens **NodeName** benötigt:
 
 ```powershell
 $MyData =
@@ -94,8 +90,7 @@ $MyData =
 }
 ```
 
-Um allen Knoten eine Eigenschaft zuzuweisen, können Sie ein Member des **AllNodes**-Arrays erstellen, dessen **NodeName** gleich `*` ist.
-Verwenden Sie z.B. folgenden Code, um allen Knoten die Eigenschaft `LogPath` zuzuweisen:
+Um allen Knoten eine Eigenschaft zuzuweisen, können Sie ein Member des **AllNodes** -Arrays erstellen, dessen **NodeName** gleich `*` ist. Verwenden Sie z.B. folgenden Code, um allen Knoten die Eigenschaft `LogPath` zuzuweisen:
 
 ```powershell
 $MyData =
@@ -136,8 +131,7 @@ Dies entspricht dem Hinzufügen einer Eigenschaft namens `LogPath` mit einem Wer
 
 ## <a name="defining-the-configurationdata-hashtable"></a>Definieren der ConfigurationData-Hashtabelle
 
-Sie können **ConfigurationData** entweder als eine Variable innerhalb derselben Skriptdatei als Konfiguration (wie in unseren bisherigen Beispielen) oder in einer separaten `.psd1`-Datei definieren.
-Erstellen Sie zum Definieren von **ConfigurationData** in einer `.psd1`-Datei eine Datei, die nur die Hashtabelle enthält, die die Konfigurationsdaten darstellt.
+Sie können **ConfigurationData** entweder als eine Variable innerhalb derselben Skriptdatei als Konfiguration (wie in unseren bisherigen Beispielen) oder in einer separaten `.psd1`-Datei definieren. Erstellen Sie zum Definieren von **ConfigurationData** in einer `.psd1`-Datei eine Datei, die nur die Hashtabelle enthält, die die Konfigurationsdaten darstellt.
 
 Sie könnten z.B. eine Datei namens `MyData.psd1` mit folgendem Inhalt erstellen:
 
@@ -160,16 +154,15 @@ Sie könnten z.B. eine Datei namens `MyData.psd1` mit folgendem Inhalt erstellen
 
 ## <a name="compiling-a-configuration-with-configuration-data"></a>Kompilieren einer Konfiguration mit Konfigurationsdaten
 
-Um eine Konfiguration zu kompilieren, für die Sie Konfigurationsdaten definiert haben, übergeben Sie die Konfigurationsdaten als Wert des Parameters **ConfigurationData**.
+Um eine Konfiguration zu kompilieren, für die Sie Konfigurationsdaten definiert haben, übergeben Sie die Konfigurationsdaten als Wert des Parameters **ConfigurationData** .
 
-Auf diese Weise wird für jeden Eintrag im **AllNodes**-Array eine MOF-Datei erstellt.
-Jede MOF-Datei wird nach der `NodeName`-Eigenschaft des zugehörigen Arrayeintrags benannt.
+Auf diese Weise wird für jeden Eintrag im **AllNodes** -Array eine MOF-Datei erstellt. Jede MOF-Datei wird nach der `NodeName`-Eigenschaft des zugehörigen Arrayeintrags benannt.
 
 Wenn Sie beispielsweise Konfigurationsdaten wie in der vorstehenden `MyData.psd1`-Datei definieren, werden beim Kompilieren einer Konfiguration sowohl `VM-1.mof`- als auch `VM-2.mof`-Dateien erstellt.
 
 ### <a name="compiling-a-configuration-with-configuration-data-using-a-variable"></a>Kompilieren einer Konfiguration mit Konfigurationsdaten unter Verwendung einer Variablen
 
-Um Konfigurationsdaten zu verwenden, die in derselben `.ps1`-Datei wie die Konfiguration als Variable definiert sind, übergeben Sie den Variablennamen beim Kompilieren der Konfiguration als Wert des Parameters **ConfigurationData**:
+Um Konfigurationsdaten zu verwenden, die in derselben `.ps1`-Datei wie die Konfiguration als Variable definiert sind, übergeben Sie den Variablennamen beim Kompilieren der Konfiguration als Wert des Parameters **ConfigurationData** :
 
 ```powershell
 MyDscConfiguration -ConfigurationData $MyData
@@ -177,7 +170,7 @@ MyDscConfiguration -ConfigurationData $MyData
 
 ### <a name="compiling-a-configuration-with-configuration-data-using-a-data-file"></a>Kompilieren einer Konfiguration mit Konfigurationsdaten unter Verwendung einer Datendatei
 
-Um Konfigurationsdaten zu verwenden, die in einer PSD1-Datei definiert sind, übergeben Sie Pfad und Namen der Datei bei der Kompilierung der Konfiguration als Wert des Parameters **ConfigurationData**:
+Um Konfigurationsdaten zu verwenden, die in einer PSD1-Datei definiert sind, übergeben Sie Pfad und Namen der Datei bei der Kompilierung der Konfiguration als Wert des Parameters **ConfigurationData** :
 
 ```powershell
 MyDscConfiguration -ConfigurationData .\MyData.psd1
@@ -187,17 +180,15 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 DSC stellt die folgenden speziellen Variablen bereit, die in einem Skript verwendet werden können:
 
-- **$AllNodes** bezieht sich auf die gesamte, in **ConfigurationData** definierte Knotensammlung. Sie können die **AllNodes**-Sammlung mit **.Where()** und **.ForEach()** filtern.
+- **$AllNodes** bezieht sich auf die gesamte, in **ConfigurationData** definierte Knotensammlung. Sie können die **AllNodes** -Sammlung mit **.Where()** und **.ForEach()** filtern.
 - **ConfigurationData** bezieht sich auf die gesamte Hashtabelle, die beim Kompilieren einer Konfiguration als Parameter übergeben wird.
 - **MyTypeName** enthält den [Namen der Konfiguration](configurations.md), in der die Variable verwendet wird. In der Konfiguration `MyDscConfiguration` weist `$MyTypeName` beispielsweise den Wert `MyDscConfiguration` auf.
-- **Nodes** bezieht sich auf einen bestimmten Eintrag in der **AllNodes**-Sammlung, nachdem sie mithilfe von **.Where()** oder **.ForEach()** gefiltert wurde.
+- **Nodes** bezieht sich auf einen bestimmten Eintrag in der **AllNodes** -Sammlung, nachdem sie mithilfe von **.Where()** oder **.ForEach()** gefiltert wurde.
   - Weitere Informationen zu diesen Methoden finden Sie unter [about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays).
 
 ## <a name="using-non-node-data"></a>Verwenden von Daten ohne Knoten
 
-Wie wir in den vorherigen Beispielen gesehen haben, kann die Hashtabelle **ConfigurationData** neben dem erforderlichen Schlüssel **AllNodes** weitere Schlüssel aufweisen.
-In den Beispielen in diesem Thema wurde nur ein einziger zusätzlicher Knoten namens `NonNodeData` verwendet.
-Sie können jedoch eine beliebige Anzahl von zusätzlichen Schlüsseln definieren und diese nach Wunsch benennen.
+Wie wir in den vorherigen Beispielen gesehen haben, kann die Hashtabelle **ConfigurationData** neben dem erforderlichen Schlüssel **AllNodes** weitere Schlüssel aufweisen. In den Beispielen in diesem Thema wurde nur ein einziger zusätzlicher Knoten namens `NonNodeData` verwendet. Sie können jedoch eine beliebige Anzahl von zusätzlichen Schlüsseln definieren und diese nach Wunsch benennen.
 
 Ein Beispiel für die Verwendung von Nicht-Knotendaten finden Sie unter [Trennen von Konfigurations- und Umgebungsdaten](separatingEnvData.md).
 

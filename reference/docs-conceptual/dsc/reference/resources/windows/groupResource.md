@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „Group“
-ms.openlocfilehash: 5570d46d872e205917eef49bfa869419b20a77b0
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „Group“
+ms.openlocfilehash: 8e2d1139c9573d7e310fec2410b14df04b79e1b2
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464212"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142445"
 ---
 # <a name="dsc-group-resource"></a>DSC-Ressource „Group“
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Die Ressource **Group** in Windows PowerShell DSC bietet einen Mechanismus zum Verwalten lokaler Gruppen auf dem Zielknoten.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +42,7 @@ Group [string] #ResourceName
 |GroupName |Der Name der Gruppe, für die Sie einen bestimmten Zustand sicherstellen möchten. |
 |Anmeldeinformationen |Die Anmeldeinformationen für den Zugriff auf Remoteressourcen. Dieses Konto muss die entsprechenden Active Directory-Berechtigungen aufweisen, um alle nicht lokalen Konten zur Gruppe hinzuzufügen. Andernfalls tritt ein Fehler auf, wenn die Konfiguration auf dem Zielknoten ausgeführt wird.
 |BESCHREIBUNG |Die Beschreibung der Gruppe. |
-|Members |Verwenden Sie diese Eigenschaft, um die aktuelle Gruppenmitgliedschaft durch die angegebenen Member zu ersetzen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festlegen, verwenden Sie weder die Eigenschaft **MembersToExclude** noch die Eigenschaft **MembersToInclude**. Andernfalls kommt es zu einem Fehler. |
+|Members |Verwenden Sie diese Eigenschaft, um die aktuelle Gruppenmitgliedschaft durch die angegebenen Member zu ersetzen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festlegen, verwenden Sie weder die Eigenschaft **MembersToExclude** noch die Eigenschaft **MembersToInclude** . Andernfalls kommt es zu einem Fehler. |
 |MembersToExclude |Verwenden Sie diese Eigenschaft, um Member aus der vorhandenen Gruppenmitgliedschaft zu entfernen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festgelegt haben, verwenden Sie die Eigenschaft **Members** nicht. Andernfalls kommt es zu einem Fehler. |
 |MembersToInclude |Verwenden Sie diese Eigenschaft, um Member zur vorhandenen Gruppenmitgliedschaft hinzuzufügen. Der Wert dieser Eigenschaft ist ein Zeichenfolgenarray im Format `Domain\UserName`. Wenn Sie diese Eigenschaft in einer Konfiguration festgelegt haben, verwenden Sie die Eigenschaft **Members** nicht. Andernfalls wird ein Fehler generiert. |
 
@@ -48,7 +51,7 @@ Group [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Gibt an, ob die Gruppe vorhanden ist. Legen Sie diese Eigenschaft auf **Absent** fest, um sicherzustellen, dass die Gruppe nicht vorhanden ist. Das Festlegen auf **Present** stellt sicher, dass die Gruppe vorhanden ist. Der Standardwert ist **Present**. |
+|Ensure |Gibt an, ob die Gruppe vorhanden ist. Legen Sie diese Eigenschaft auf **Absent** fest, um sicherzustellen, dass die Gruppe nicht vorhanden ist. Das Festlegen auf **Present** stellt sicher, dass die Gruppe vorhanden ist. Der Standardwert ist **Present** . |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |
 
 > [!NOTE]

@@ -1,17 +1,17 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: Das PowerShellTabCollection-Objekt
-ms.openlocfilehash: 0aad885afd3ba3ae3b00f5c11d2c62a9ff303798
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Das PowerShellTab-Sammlungsobjekt ist eine Sammlung von PowerShellTab-Objekten. Jedes PowerShellTab-Objekt fungiert als eine separate Laufzeitumgebung.
+ms.openlocfilehash: 60f8001f096b50bd8433a5685f1f70a350f07f61
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808566"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658274"
 ---
 # <a name="the-powershelltabcollection-object"></a>Das PowerShellTabCollection-Objekt
 
-Das **PowerShellTab**-Sammlungsobjekt ist eine Sammlung von **PowerShellTab**-Objekten. Jedes **PowerShellTab**-Objekt fungiert als eine separate Laufzeitumgebung. Dies ist eine Instanz der Microsoft.PowerShell.Host.ISE.PowerShellTabs-Klasse. Ein Beispiel ist das `$psISE.PowerShellTabs`-Objekt.
+Das **PowerShellTab** -Sammlungsobjekt ist eine Sammlung von **PowerShellTab** -Objekten. Jedes **PowerShellTab** -Objekt fungiert als eine separate Laufzeitumgebung. Dies ist eine Instanz der Microsoft.PowerShell.Host.ISE.PowerShellTabs-Klasse. Ein Beispiel ist das `$psISE.PowerShellTabs`-Objekt.
 
 ## <a name="methods"></a>Methoden
 
@@ -30,7 +30,7 @@ $newTab.DisplayName = 'Brand New Tab'
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Entfernt die Registerkarte, die durch den **psTab**-Parameter angegeben wird.
+Entfernt die Registerkarte, die durch den **psTab** -Parameter angegeben wird.
 
 **psTab** Die zu entfernende PowerShell-Registerkarte.
 
@@ -46,7 +46,7 @@ $psISE.PowerShellTabs.Remove($newTab)
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Wählt die PowerShell-Registerkarte aus, die durch den **psTab**-Parameter angegeben wird, um diese als aktuell aktive PowerShell-Registerkarte festzulegen.
+Wählt die PowerShell-Registerkarte aus, die durch den **psTab** -Parameter angegeben wird, um diese als aktuell aktive PowerShell-Registerkarte festzulegen.
 
 **psTab** Die auszuwählende PowerShell-Registerkarte.
 

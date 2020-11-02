@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „Script“
-ms.openlocfilehash: 9b89981c17e87b3681c6416c7dee44a75c432ea1
-ms.sourcegitcommit: eb6a7c01e6385809656ac828b9211683e0b1a6fe
+description: DSC-Ressource „Script“
+ms.openlocfilehash: f404bf3137caa9f57ad56034895cb15c8944ec07
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89041128"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142972"
 ---
 # <a name="dsc-script-resource"></a>DSC-Ressource „Script“
 
@@ -15,6 +16,8 @@ ms.locfileid: "89041128"
 
 Die Ressource `Script` in Windows PowerShell DSC bietet einen Mechanismus zum Anwenden von Windows PowerShell-Skriptblöcken auf Zielknoten. Die Ressource `Script` verwendet die Eigenschaften `GetScript`
 `SetScript` und `TestScript`, die von Ihnen definierte Skriptblöcke enthalten, um die entsprechenden DSC-Zustandsvorgänge auszuführen.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +59,7 @@ Script [string] #ResourceName
 
 #### <a name="getscript"></a>GetScript
 
-DSC verwendet die Ausgabe von `GetScript` nicht. Das Cmdlet [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) führt `GetScript` aus, um den aktuellen Zustand eines Knotens abzurufen. Ein Rückgabewert von `GetScript` ist nicht erforderlich. Wenn Sie einen Rückgabewert angeben, muss es eine Hashtabelle mit einem **Result**-Schlüssel sein, dessen Wert eine Zeichenfolge darstellt.
+DSC verwendet die Ausgabe von `GetScript` nicht. Das Cmdlet [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) führt `GetScript` aus, um den aktuellen Zustand eines Knotens abzurufen. Ein Rückgabewert von `GetScript` ist nicht erforderlich. Wenn Sie einen Rückgabewert angeben, muss es eine Hashtabelle mit einem **Result** -Schlüssel sein, dessen Wert eine Zeichenfolge darstellt.
 
 #### <a name="testscript"></a>TestScript
 

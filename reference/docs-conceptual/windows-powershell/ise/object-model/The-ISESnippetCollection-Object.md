@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: Das ISESnippetCollection-Objekt
-ms.openlocfilehash: 6cdc43dd1d82e94f66122d7f7b313c02e755fed7
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Das ISESnippetCollection-Objekt ist eine Sammlung von ISESnippet-Objekten. Die einem PowerShellTab-Objekt zugeordnete Dateisammlung ist ein Member dieser Klasse.
+ms.openlocfilehash: e6170ddf72d5ead840aa3015d4de1dcb21dbfeff
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808576"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655961"
 ---
 # <a name="the-isesnippetcollection-object"></a>Das ISESnippetCollection-Objekt
 
-Das **ISESnippetCollection**-Objekt ist eine Sammlung von **ISESnippet**-Objekten. Die einem **PowerShellTab**-Objekt zugeordnete Dateisammlung ist ein Member dieser Klasse. Ein Beispiel ist die `$psISE.CurrentPowerShellTab.Files`-Auflistung.
+Das **ISESnippetCollection** -Objekt ist eine Sammlung von **ISESnippet** -Objekten. Die einem **PowerShellTab** -Objekt zugeordnete Dateisammlung ist ein Member dieser Klasse. Ein Beispiel ist die `$psISE.CurrentPowerShellTab.Files`-Auflistung.
 
 ## <a name="methods"></a>Methoden
 

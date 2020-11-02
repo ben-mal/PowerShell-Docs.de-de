@@ -1,19 +1,22 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Resource „Environment“
-ms.openlocfilehash: d8519a66d457767dcbc0e08b01a69a9264997479
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Resource „Environment“
+ms.openlocfilehash: c7995fc5e7efdfb9a1dbae3da9f824d33c67085c
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464416"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142581"
 ---
 # <a name="dsc-environment-resource"></a>DSC-Resource „Environment“
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.x
 
 Die Ressource **Environment** in Windows PowerShell DSC bietet einen Mechanismus zum Verwalten von Systemumgebungsvariablen.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -22,7 +25,6 @@ Environment [string] #ResourceName
 {
     Name = [string]
     [ Path = [bool] ]
-    [ Target = [string] { Process | Machine } ]
     [ Value = [string] ]
     [ DependsOn = [string[]] ]
     [ Ensure = [string] { Absent | Present }  ]
@@ -35,8 +37,7 @@ Environment [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |Name |Gibt den Namen der Umgebungsvariablen an, für die Sie einen bestimmten Zustand sicherstellen möchten. |
-|`Path` |Definiert die Umgebungsvariable, die konfiguriert wird. Legen Sie diese Eigenschaft auf `$true` fest, wenn die Variable die **Path**-Variable ist. Legen Sie sie andernfalls auf `$false` fest. Der Standardwert lautet `$false`. Wenn die konfigurierte Variable die **Path**-Variable ist, wird der von der **Value**-Eigenschaft bereitgestellte Wert an den vorhandenen Wert angefügt. |
-|Ziel| Gibt an, wo die Variable abgerufen werden soll: Computer oder Prozess. Wenn beide angegeben werden, wird nur der Wert des Computers zurückgegeben. Standard sind beide Werte, da dies die Standardeinstellung für den Rest der Ressource ist. |
+|`Path` |Definiert die Umgebungsvariable, die konfiguriert wird. Legen Sie diese Eigenschaft auf `$true` fest, wenn die Variable die **Path** -Variable ist. Legen Sie sie andernfalls auf `$false` fest. Der Standardwert lautet `$false`. Wenn die konfigurierte Variable die **Path** -Variable ist, wird der von der **Value** -Eigenschaft bereitgestellte Wert an den vorhandenen Wert angefügt. |
 |Wert |Der Wert, der der Umgebungsvariablen zugewiesen werden soll. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
@@ -44,7 +45,7 @@ Environment [string] #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Gibt an, ob eine Variable vorhanden ist. Legen Sie diese Eigenschaft auf **Present** fest, um die Umgebungsvariable zu erstellen, falls sie noch nicht vorhanden ist, oder um sicherzustellen, dass ihr Wert der Angabe durch die **Value**-Eigenschaft entspricht, wenn die Variable bereits vorhanden ist. Legen Sie sie auf **Absent** fest, um die Variable zu löschen, falls sie vorhanden ist. |
+|Ensure |Gibt an, ob eine Variable vorhanden ist. Legen Sie diese Eigenschaft auf **Present** fest, um die Umgebungsvariable zu erstellen, falls sie noch nicht vorhanden ist, oder um sicherzustellen, dass ihr Wert der Angabe durch die **Value** -Eigenschaft entspricht, wenn die Variable bereits vorhanden ist. Legen Sie sie auf **Absent** fest, um die Variable zu löschen, falls sie vorhanden ist. |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |
 
 > [!NOTE]

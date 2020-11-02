@@ -1,22 +1,25 @@
 ---
 ms.date: 07/15/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC-Ressource „PackageManagement“
-ms.openlocfilehash: 983a288398f710ecc5d2bc557028282ccd58561b
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC-Ressource „PackageManagement“
+ms.openlocfilehash: 83839adbef8bd8d3265a06b44a3101108b2a4486
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464263"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142904"
 ---
 # <a name="dsc-packagemanagement-resource"></a>DSC-Ressource „PackageManagement“
 
 Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
-Die Ressource **PackageManagement** in Windows PowerShell Desired State Configuration (DSC) bietet einen Mechanismus zum Installieren oder Deinstallieren von Paketverwaltungspaketen auf einem Zielknoten. Diese Ressource erfordert das Modul **PackageManagement**, das unter [https://PowerShellGallery.com](https://PowerShellGallery.com) verfügbar ist.
+Die Ressource **PackageManagement** in Windows PowerShell Desired State Configuration (DSC) bietet einen Mechanismus zum Installieren oder Deinstallieren von Paketverwaltungspaketen auf einem Zielknoten. Diese Ressource erfordert das Modul **PackageManagement** , das unter [https://PowerShellGallery.com](https://PowerShellGallery.com) verfügbar ist.
 
 > [!IMPORTANT]
-> Die folgenden Eigenschaftsinformationen gelten nur für das **PackageManagement**-Modul Version 1.1.7.0 oder höher.
+> Die folgenden Eigenschaftsinformationen gelten nur für das **PackageManagement** -Modul Version 1.1.7.0 oder höher.
+
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,7 +67,7 @@ In der folgenden Tabelle sind die Optionen für die Eigenschaft „AdditionalPar
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Bestimmt, ob das Paket installiert oder deinstalliert werden soll. Der Standardwert ist **Present**. |
+|Ensure |Bestimmt, ob das Paket installiert oder deinstalliert werden soll. Der Standardwert ist **Present** . |
 |PsDscRunAsCredential |Legt die Anmeldeinformationen für die Ausführung der gesamten Ressource fest. |
 
 > [!NOTE]
@@ -72,7 +75,7 @@ In der folgenden Tabelle sind die Optionen für die Eigenschaft „AdditionalPar
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden das NuGet-Paket **JQuery** und das PowerShell-Modul **GistProvider** mithilfe der DSC-Ressource **PackageManagement** installiert. In diesem Beispiel wird zunächst sichergestellt, dass die erforderlichen Paketquellen verfügbar sind. Anschließend wird der erwartete Zustand der **JQuery**- und **GistProvider**-Pakete (NuGet bzw. PowerShell) definiert.
+In diesem Beispiel werden das NuGet-Paket **JQuery** und das PowerShell-Modul **GistProvider** mithilfe der DSC-Ressource **PackageManagement** installiert. In diesem Beispiel wird zunächst sichergestellt, dass die erforderlichen Paketquellen verfügbar sind. Anschließend wird der erwartete Zustand der **JQuery** - und **GistProvider** -Pakete (NuGet bzw. PowerShell) definiert.
 
 ```powershell
 Configuration PackageTest

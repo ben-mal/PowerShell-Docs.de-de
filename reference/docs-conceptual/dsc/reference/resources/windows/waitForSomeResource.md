@@ -1,13 +1,14 @@
 ---
 ms.date: 07/16/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: WaitForSome-Ressource in DSC
-ms.openlocfilehash: ea2618fbb77dd24a0c73fd9357e87862da514b66
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: WaitForSome-Ressource in DSC
+ms.openlocfilehash: bc9c3df2b476e7046ccfe6257acc1d1641e7594b
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464382"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93143091"
 ---
 # <a name="dsc-waitforsome-resource"></a>WaitForSome-Ressource in DSC
 
@@ -15,10 +16,12 @@ ms.locfileid: "86464382"
 
 Die DSC-Ressource (Desired State Configuration) **WaitForSome** kann innerhalb eines Knotenblocks in einer [DSC-Konfiguration](../../../configurations/configurations.md) verwendet werden, um Abhängigkeiten von Konfigurationen auf anderen Knoten anzugeben.
 
-Diese Ressource ist erfolgreich, wenn sich die mit der Eigenschaft **ResourceName** angegebene Ressource auf einer Mindestanzahl von Knoten (angegeben durch **NodeCount**), die durch die Eigenschaft **NodeName** definiert sind, im gewünschten Zustand befindet.
+[!INCLUDE [Updated DSC Resources](../../../../../includes/dsc-resources.md)]
+
+Diese Ressource ist erfolgreich, wenn sich die mit der Eigenschaft **ResourceName** angegebene Ressource auf einer Mindestanzahl von Knoten (angegeben durch **NodeCount** ), die durch die Eigenschaft **NodeName** definiert sind, im gewünschten Zustand befindet.
 
 > [!NOTE]
-> Die Ressource **WaitForSome** verwendet die Windows-Remoteverwaltung, um den Status anderer Knoten zu überprüfen. Weitere Informationen zu Anforderungen zur Portierung und Sicherheit für WinRM finden Sie unter [Sicherheitsaspekte von PowerShell-Remoting](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> Die Ressource **WaitForSome** verwendet die Windows-Remoteverwaltung, um den Status anderer Knoten zu überprüfen. Weitere Informationen zu Anforderungen zur Portierung und Sicherheit für WinRM finden Sie unter [Sicherheitsaspekte von PowerShell-Remoting](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="syntax"></a>Syntax
 

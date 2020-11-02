@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Trennen von Konfiguration und Umgebungsdaten
-ms.openlocfilehash: 076e17054cfa20fad5ca925df126e239a77268db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: Es kann sinnvoll sein, die in einer DSC-Konfiguration verwendeten Daten unter Verwendung der Konfigurationsdaten von der Konfiguration selbst zu trennen. Auf diese Weise können Sie eine einzelne Konfiguration für mehrere Umgebungen verwenden.
+ms.openlocfilehash: 84ca4e4945a36111d23116524fd8f98c04e16d32
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692420"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645070"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Trennen von Konfiguration und Umgebungsdaten
 
->Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Es kann sinnvoll sein, die in einer DSC-Konfiguration verwendeten Daten unter Verwendung der Konfigurationsdaten von der Konfiguration selbst zu trennen.
-Auf diese Weise können Sie eine einzelne Konfiguration für mehrere Umgebungen verwenden.
+Es kann sinnvoll sein, die in einer DSC-Konfiguration verwendeten Daten unter Verwendung der Konfigurationsdaten von der Konfiguration selbst zu trennen. Auf diese Weise können Sie eine einzelne Konfiguration für mehrere Umgebungen verwenden.
 
 Wenn Sie z.B. eine Anwendung entwickeln, können Sie eine Konfiguration für die Entwicklungs-und die Produktionsumgebung verwenden und mithilfe von Konfigurationsdaten Daten für jede Umgebung angeben.
 
@@ -26,8 +26,7 @@ Eine ausführliche Beschreibung der Hashtabelle **ConfigurationData** finden Sie
 
 ## <a name="a-simple-example"></a>Ein einfaches Beispiel
 
-Sehen wir uns ein sehr einfaches Beispiel zur Funktionsweise an.
-Wir erstellen eine einzelne Konfiguration, die sicherstellt, dass auf einigen Knoten **IIS** und auf anderen **Hyper-V** vorliegt:
+Sehen wir uns ein sehr einfaches Beispiel zur Funktionsweise an. Wir erstellen eine einzelne Konfiguration, die sicherstellt, dass auf einigen Knoten **IIS** und auf anderen **Hyper-V** vorliegt:
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -82,7 +81,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof
 ```
 
-`$MyData` gibt die zwei verschiedene Knoten an, jeweils mit eigenem `NodeName` und `Role`. Die Konfiguration erstellt dynamisch **Node**-Blöcke, indem Sie die von `$MyData` (insbesondere `$AllNodes`) erhaltene Sammlung von Knoten nach der `Role`-Eigenschaft filtert.
+`$MyData` gibt die zwei verschiedene Knoten an, jeweils mit eigenem `NodeName` und `Role`. Die Konfiguration erstellt dynamisch **Node** -Blöcke, indem Sie die von `$MyData` (insbesondere `$AllNodes`) erhaltene Sammlung von Knoten nach der `Role`-Eigenschaft filtert.
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>Verwenden von Konfigurationsdaten für die Definition der Entwicklungs- und Produktionsumgebungen
 
@@ -129,13 +128,11 @@ Wir definieren die Entwicklungs- und die Produktionsumgebungsdaten in einer Date
 
 ### <a name="configuration-script-file"></a>Konfiguration einer Skriptdatei
 
-In der Konfiguration, die in einer `.ps1`-Datei definiert ist, filtern wir nun die in `DevProdEnvData.psd1` definierten Knoten nach ihrer Rolle (`MSSQL`, `Dev` oder beides) und konfigurieren sie entsprechend.
-In der Entwicklungsumgebung sind SQL Server und IIS auf demselben Knoten installiert, während sie sich in der Produktionsumgebung auf zwei verschiedenen Knoten befinden.
-Die Inhalte von „Site“ unterscheiden sich also gemäß der `SiteContents`-Eigenschaften.
+In der Konfiguration, die in einer `.ps1`-Datei definiert ist, filtern wir nun die in `DevProdEnvData.psd1` definierten Knoten nach ihrer Rolle (`MSSQL`, `Dev` oder beides) und konfigurieren sie entsprechend. In der Entwicklungsumgebung sind SQL Server und IIS auf demselben Knoten installiert, während sie sich in der Produktionsumgebung auf zwei verschiedenen Knoten befinden. Die Inhalte von „Site“ unterscheiden sich also gemäß der `SiteContents`-Eigenschaften.
 
 Am Ende des Konfigurationsskripts, rufen wir die Konfiguration auf (kompilieren sie in einem MOF-Dokument) und übergeben `DevProdEnvData.psd1` als `$ConfigurationData`-Parameter.
 
->**Hinweis:** Für diese Konfiguration müssen die Module `xSqlPs` und `xWebAdministration` auf dem Zielknoten installiert sein.
+> **Hinweis:** Für diese Konfiguration müssen die Module `xSqlPs` und `xWebAdministration` auf dem Zielknoten installiert sein.
 
 Definieren wir nun die Konfiguration in einer Datei namens `MyWebApp.ps1`:
 
@@ -229,7 +226,7 @@ Configuration MyWebApp
 MyWebApp -ConfigurationData DevProdEnvData.psd1
 ```
 
-Wenn Sie diese Konfiguration ausführen, werden drei MOF-Dateien erstellt (für jeden benannten Eintrag im **AllNodes**-Array):
+Wenn Sie diese Konfiguration ausführen, werden drei MOF-Dateien erstellt (für jeden benannten Eintrag im **AllNodes** -Array):
 
 ```
     Directory: C:\DscTests\MyWebApp
@@ -244,15 +241,9 @@ Mode                LastWriteTime         Length Name
 
 ## <a name="using-non-node-data"></a>Verwenden von Daten ohne Knoten
 
-Sie können zusätzliche Schlüssel zur Hashtabelle **ConfigurationData** für Daten hinzufügen, die nicht knotenspezifisch sind.
-Die folgende Konfiguration gewährleistet das Vorhandensein von zwei Websites.
-Daten für jede Website sind im **AllNodes**-Array definiert.
-Die Datei `Config.xml` wird für beide Websites verwendet, sodass wir sie in einem zusätzlichen Schlüssel mit dem Namen `NonNodeData` definieren.
-Beachten Sie, dass Sie über beliebig viele zusätzliche Schlüssel verfügen und diese beliebig benennen können.
-`NonNodeData` ist kein reserviertes Wort, sondern einfach der Name, für den wir uns bei dem zusätzlichen Schlüssel entschieden haben.
+Sie können zusätzliche Schlüssel zur Hashtabelle **ConfigurationData** für Daten hinzufügen, die nicht knotenspezifisch sind. Die folgende Konfiguration gewährleistet das Vorhandensein von zwei Websites. Daten für jede Website sind im **AllNodes** -Array definiert. Die Datei `Config.xml` wird für beide Websites verwendet, sodass wir sie in einem zusätzlichen Schlüssel mit dem Namen `NonNodeData` definieren. Beachten Sie, dass Sie über beliebig viele zusätzliche Schlüssel verfügen und diese beliebig benennen können. `NonNodeData` ist kein reserviertes Wort, sondern einfach der Name, für den wir uns bei dem zusätzlichen Schlüssel entschieden haben.
 
-Mit der speziellen Variable **$ConfigurationData** können Sie auf zusätzliche Schlüssel zugreifen.
-In diesem Beispiel erfolgt der Zugriff auf `ConfigFileContents` mit der Zeile:
+Mit der speziellen Variable **$ConfigurationData** können Sie auf zusätzliche Schlüssel zugreifen. In diesem Beispiel erfolgt der Zugriff auf `ConfigFileContents` mit der Zeile:
 
 ```powershell
  Contents = $ConfigurationData.NonNodeData.ConfigFileContents
@@ -263,52 +254,52 @@ In diesem Beispiel erfolgt der Zugriff auf `ConfigFileContents` mit der Zeile:
 ```powershell
 $MyData =
 @{
-    AllNodes =
-    @(
-        @{
-            NodeName           = "*"
-            LogPath            = "C:\Logs"
-        },
+    AllNodes =
+    @(
+        @{
+            NodeName           = "*"
+            LogPath            = "C:\Logs"
+        },
 
-        @{
-            NodeName = "VM-1"
-            SiteContents = "C:\Site1"
-            SiteName = "Website1"
-        },
+        @{
+            NodeName = "VM-1"
+            SiteContents = "C:\Site1"
+            SiteName = "Website1"
+        },
 
 
-        @{
-            NodeName = "VM-2"
-            SiteContents = "C:\Site2"
-            SiteName = "Website2"
-        }
-    );
+        @{
+            NodeName = "VM-2"
+            SiteContents = "C:\Site2"
+            SiteName = "Website2"
+        }
+    );
 
-    NonNodeData =
-    @{
-        ConfigFileContents = (Get-Content C:\Template\Config.xml)
-     }
+    NonNodeData =
+    @{
+        ConfigFileContents = (Get-Content C:\Template\Config.xml)
+     }
 }
 
 configuration WebsiteConfig
 {
-    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
+    Import-DscResource -ModuleName xWebAdministration -Name MSFT_xWebsite
 
-    node $AllNodes.NodeName
-    {
-        xWebsite Site
-        {
-            Name         = $Node.SiteName
-            PhysicalPath = $Node.SiteContents
-            Ensure       = "Present"
-        }
+    node $AllNodes.NodeName
+    {
+        xWebsite Site
+        {
+            Name         = $Node.SiteName
+            PhysicalPath = $Node.SiteContents
+            Ensure       = "Present"
+        }
 
-        File ConfigFile
-        {
-            DestinationPath = $Node.SiteContents + "\\config.xml"
-            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
-        }
-    }
+        File ConfigFile
+        {
+            DestinationPath = $Node.SiteContents + "\\config.xml"
+            Contents = $ConfigurationData.NonNodeData.ConfigFileContents
+        }
+    }
 }
 ```
 

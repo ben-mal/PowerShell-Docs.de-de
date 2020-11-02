@@ -2,12 +2,13 @@
 ms.date: 10/11/2019
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: 'Desired State Configuration (DSC): Übersicht für Entscheidungsträger'
-ms.openlocfilehash: bb73ee8fe636272f99989aa45712fe34fedad617
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Dieses Dokument ist keine technische Anleitung, sondern beschreibt die geschäftlichen Vorteile von PowerShell Desired State Configuration (DSC).
+ms.openlocfilehash: fc28c9290c993131fc7bf2046eb64b144d3da609
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75870794"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654140"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Desired State Configuration (DSC): Übersicht für Entscheidungsträger
 
