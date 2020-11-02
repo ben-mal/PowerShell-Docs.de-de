@@ -2,17 +2,17 @@
 ms.date: 08/15/2019
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Erste Schritte mit Desired State Configuration (DSC) für Windows
-ms.openlocfilehash: 00e1cf545b19f054b4b1ff468c9f6ad94e5cef55
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: In diesem Thema werden die ersten Schritte mit PowerShell Desired State Configuration (DSC) für Windows erläutert.
+ms.openlocfilehash: 2b9ddba2023a3933e3ad70d7bfee798ff07f0484
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236321"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662808"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-windows"></a>Erste Schritte mit Desired State Configuration (DSC) für Windows
 
-In diesem Thema werden die ersten Schritte mit PowerShell Desired State Configuration (DSC) für Windows erläutert.
-Allgemeine Informationen zu DSC finden Sie unter [Erste Schritte mit Windows PowerShell DSC](../overview/overview.md).
+In diesem Thema werden die ersten Schritte mit PowerShell Desired State Configuration (DSC) für Windows erläutert. Allgemeine Informationen zu DSC finden Sie unter [Erste Schritte mit Windows PowerShell DSC](../overview/overview.md).
 
 ## <a name="supported-windows-operation-system-versions"></a>Unterstützte Windows-Betriebssystemversionen
 
@@ -115,8 +115,7 @@ Remove-DscConfigurationDocument -Stage Current -Verbose
 
 #### <a name="configure-settings-in-local-configuration-manager"></a>Konfigurieren der Einstellungen im lokalen Konfigurations-Manager
 
-Wenden Sie mit dem Cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) eine MOF-Metakonfigurationsdatei auf den Computer an.
-Erfordert die Angabe des Pfads zur MOF-Metakonfigurationsdatei.
+Wenden Sie mit dem Cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) eine MOF-Metakonfigurationsdatei auf den Computer an. Erfordert die Angabe des Pfads zur MOF-Metakonfigurationsdatei.
 
 ```powershell
 Set-DSCLocalConfigurationManager -Path 'c:\metaconfig\localhost.meta.mof' -Verbose

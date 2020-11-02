@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC für Linux-Resource „nxEnvironment“
-ms.openlocfilehash: 2f673dfbc3b6e93d7e186e4a63b75d16a31b5181
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC für Linux-Resource „nxEnvironment“
+ms.openlocfilehash: 86ed538732254967cb4a3bb55af4f6b179947e52
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463685"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644666"
 ---
 # <a name="dsc-for-linux-nxenvironment-resource"></a>DSC für Linux-Resource „nxEnvironment“
 
@@ -32,14 +33,14 @@ nxEnvironment <string> #ResourceName
 |---|---|
 |Name |Gibt den Namen der Umgebungsvariablen an, für die Sie einen bestimmten Zustand sicherstellen möchten. |
 |value |Der Wert, der der Umgebungsvariablen zugewiesen werden soll. |
-|`Path` |Definiert die Umgebungsvariable, die konfiguriert wird. Legen Sie diese Eigenschaft auf `$true` fest, wenn die Variable die **Path**-Variable ist. Legen Sie sie andernfalls auf `$false` fest. Der Standardwert lautet `$false`. Wenn die konfigurierte Variable die **Path**-Variable ist, wird der von der **Value**-Eigenschaft bereitgestellte Wert an den vorhandenen Wert angefügt. |
+|`Path` |Definiert die Umgebungsvariable, die konfiguriert wird. Legen Sie diese Eigenschaft auf `$true` fest, wenn die Variable die **Path** -Variable ist. Legen Sie sie andernfalls auf `$false` fest. Der Standardwert lautet `$false`. Wenn die konfigurierte Variable die **Path** -Variable ist, wird der von der **Value** -Eigenschaft bereitgestellte Wert an den vorhandenen Wert angefügt. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
 
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Bestimmt, ob das Vorhandensein der Variablen geprüft werden soll. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass die Variable vorhanden ist. Legen Sie sie auf **Absent** fest, um sicherzustellen, dass die Variable nicht vorhanden ist. Der Standardwert ist **Present**. |
+|Ensure |Bestimmt, ob das Vorhandensein der Variablen geprüft werden soll. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass die Variable vorhanden ist. Legen Sie sie auf **Absent** fest, um sicherzustellen, dass die Variable nicht vorhanden ist. Der Standardwert ist **Present** . |
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 

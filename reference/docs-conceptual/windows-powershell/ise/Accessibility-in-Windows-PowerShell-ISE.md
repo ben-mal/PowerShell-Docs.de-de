@@ -1,13 +1,13 @@
 ---
 ms.date: 12/19/2019
-keywords: powershell,cmdlet
 title: Barrierefreiheit in Windows PowerShell ISE
-ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesen Thema werden die Barrierefreiheitsfeatures von Windows PowerShell Integrated Scripting Environment (ISE) geschrieben, die Sie ggf. hilfreich finden.
+ms.openlocfilehash: 18acf447965eaaa7f93bb4c443a304b37216a9ba
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808516"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663853"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Barrierefreiheit in Windows PowerShell ISE
 
@@ -52,9 +52,9 @@ Führen Sie eines der folgenden Verfahren aus:
 
 - Drücken Sie zum Maximieren des Skriptbereichs <kbd>STRG</kbd>+<kbd>3</kbd>. Alternativ können Sie auf der Symbolleiste auf das Symbol **Skriptbereich maximiert anzeigen** oder im Menü **Ansicht** auf **Skriptbereich maximiert anzeigen** klicken.
 
-- Klicken Sie zum Maximieren des Konsolenbereichs und Ausblenden des Skriptbereich ganz rechts in der Reihe der Registerkarten auf das Symbol **Skriptbereich ausblenden**. Oder deaktivieren Sie im Menü **Ansicht** die Option **Skriptbereich anzeigen**.
+- Klicken Sie zum Maximieren des Konsolenbereichs und Ausblenden des Skriptbereich ganz rechts in der Reihe der Registerkarten auf das Symbol **Skriptbereich ausblenden** . Oder deaktivieren Sie im Menü **Ansicht** die Option **Skriptbereich anzeigen** .
 
-- Klicken Sie Anzeigen des Skriptbereichs, wenn der Konsolenbereich maximiert ist, ganz rechts in der Reihe der Registerkarten auf das Symbol **Skriptbereich anzeigen**. Oder aktivieren Sie im Menü **Ansicht** die Option **Skriptbereich anzeigen**.
+- Klicken Sie Anzeigen des Skriptbereichs, wenn der Konsolenbereich maximiert ist, ganz rechts in der Reihe der Registerkarten auf das Symbol **Skriptbereich anzeigen** . Oder aktivieren Sie im Menü **Ansicht** die Option **Skriptbereich anzeigen** .
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Tastenkombinationen zum Bearbeiten von Text
 
@@ -129,7 +129,7 @@ Sie können die folgenden Tastenkombinationen verwenden, wenn Sie Skripts debugg
 | **Einzelschritt**                           | <kbd>S</kbd>                 | Konsolenbereich, wenn ein Skript debuggt wird |
 | **Überspringen**                           | <kbd>B</kbd>                 | Konsolenbereich, wenn ein Skript debuggt wird |
 | **Rücksprung**                            | <kbd>O</kbd>                 | Konsolenbereich, wenn ein Skript debuggt wird |
-| **Letzten Befehl wiederholen**(Einzelschritt/Überspringen) | <kbd>EINGABETASTE</kbd>             | Konsolenbereich, wenn ein Skript debuggt wird |
+| **Letzten Befehl wiederholen** (Einzelschritt/Überspringen) | <kbd>EINGABETASTE</kbd>             | Konsolenbereich, wenn ein Skript debuggt wird |
 | **Aufrufliste anzeigen**                  | <kbd>K</kbd>                 | Konsolenbereich, wenn ein Skript debuggt wird |
 | **Debuggen beenden**                      | <kbd>Q</kbd>                 | Konsolenbereich, wenn ein Skript debuggt wird |
 | **Das Skript auflisten**                     | <kbd>L</kbd>                 | Konsolenbereich, wenn ein Skript debuggt wird |
@@ -148,7 +148,7 @@ Sie können die folgenden Tastenkombinationen verwenden, wenn Sie Windows PowerS
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Tastenkombinationen für Starten und Beenden
 
-Sie können die folgenden Tastenkombinationen verwenden, um die Windows PowerShell-Konsole (**PowerShell.exe**) zu starten oder Windows PowerShell ISE zu beenden.
+Sie können die folgenden Tastenkombinationen verwenden, um die Windows PowerShell-Konsole ( **PowerShell.exe** ) zu starten oder Windows PowerShell ISE zu beenden.
 
 |                        Aktion                         |               Tastenkombination               |
 | ----------------------------------------------------- | --------------------------------------------- |

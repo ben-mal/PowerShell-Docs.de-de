@@ -1,13 +1,14 @@
 ---
 ms.date: 07/14/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: MSFT_DSCLocalConfigurationManager-Klasse
-ms.openlocfilehash: 20c9ac5128fcfbbcb2113b89d9e5b53693744b45
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: MSFT_DSCLocalConfigurationManager-Klasse
+ms.openlocfilehash: 31112c7d15884699171ec732ac20b6960b0858a9
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464280"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644816"
 ---
 # <a name="msft_dsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager-Klasse
 
@@ -26,28 +27,28 @@ class MSFT_DSCLocalConfigurationManager
 
 ## <a name="members"></a>Members
 
-Die **MSFT_DSCLocalConfigurationManager**-Klasse hat folgende Member:
+Die **MSFT_DSCLocalConfigurationManager** -Klasse hat folgende Member:
 
 - [Methoden][]
 
 ### <a name="methods"></a>Methoden
 
-Die **MSFT_DSCLocalConfigurationManager**-Klasse enthält diese Methoden.
+Die **MSFT_DSCLocalConfigurationManager** -Klasse enthält diese Methoden.
 
 |Methoden |BESCHREIBUNG |
 |:--- |:---|
 | [ApplyConfiguration(boolean)](msft-dsclocalconfigurationmanager-applyconfiguration.md)| Verwendet den Konfigurations-Agent, um die ausstehende Konfiguration anzuwenden.|
 | [DisableDebugConfiguration()](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)| Deaktiviert das Debuggen von DSC-Ressourcen.|
 | [EnableDebugConfiguration(boolean)](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)| Aktiviert das Debuggen von DSC-Ressourcen.|
-| [GetConfiguration()](msft-dsclocalconfigurationmanager-getconfiguration.md)| Sendet das Konfigurationsdokument an den verwalteten Knoten und verwendet die **Get**-Methode des Konfigurations-Agents, um die Konfiguration anzuwenden.|
+| [GetConfiguration()](msft-dsclocalconfigurationmanager-getconfiguration.md)| Sendet das Konfigurationsdokument an den verwalteten Knoten und verwendet die **Get** -Methode des Konfigurations-Agents, um die Konfiguration anzuwenden.|
 | [GetConfigurationResultOutput](msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md)| Ruft die Konfigurations-Agent-Ausgabe im Zusammenhang mit einem bestimmten Auftrag ab.|
 | [GetConfigurationStatus](msft-dsclocalconfigurationmanager-getconfigurationstatus.md)| Abrufen des Konfigurationsstatusverlaufs.|
 | [GetMetaConfiguration](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)| Ruft die Einstellungen des lokalen Konfigurations-Managers ab, die zur Steuerung des Konfigurations-Agents verwendet werden.|
 | [PerformRequiredConfigurationChecks](msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)| Startet die Konsistenzprüfung.|
 | [RemoveConfiguration](msft-dsclocalconfigurationmanager-removeconfiguration.md)| Entfernt die Konfigurationsdateien.|
-| [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Ruft direkt die **Get**-Methode einer DSC-Ressource auf.|
-| [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Ruft direkt die **Set**-Methode einer DSC-Ressource auf.|
-| [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Ruft direkt die **Test**-Methode einer DSC-Ressource auf.|
+| [ResourceGet](msft-dsclocalconfigurationmanager-resourceget.md)| Ruft direkt die **Get** -Methode einer DSC-Ressource auf.|
+| [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Ruft direkt die **Set** -Methode einer DSC-Ressource auf.|
+| [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Ruft direkt die **Test** -Methode einer DSC-Ressource auf.|
 | [RollBack](msft-dsclocalconfigurationmanager-rollback.md)| Führt einen Rollback zu einer vorherigen Konfiguration aus.|
 | [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Sendet das Konfigurationsdokument an den verwalteten Knoten und speichert es als ausstehende Änderung.|
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Sendet das Konfigurationsdokument an den verwalteten Knoten und verwendet den Konfigurations-Agent zum Anwenden der Konfiguration.|
@@ -60,4 +61,4 @@ Die **MSFT_DSCLocalConfigurationManager**-Klasse enthält diese Methoden.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration

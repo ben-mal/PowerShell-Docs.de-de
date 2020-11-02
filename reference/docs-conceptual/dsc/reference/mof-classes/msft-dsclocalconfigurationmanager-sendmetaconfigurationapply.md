@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: SendMetaConfigurationApply-Methode
-ms.openlocfilehash: 896afe2f3370e108b48583aafb33ee7b0eb1301b
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: SendMetaConfigurationApply-Methode
+ms.openlocfilehash: 27c58819c0249ace011c475e500e565e5daed9bb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463719"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648950"
 ---
 # <a name="sendmetaconfigurationapply-method"></a>SendMetaConfigurationApply-Methode
 
@@ -17,8 +18,8 @@ Legt die Einstellungen des lokalen Konfigurations-Managers fest, die zur Steueru
 
 ```mof
 uint32 SendMetaConfigurationApply(
-  [in] uint8   ConfigurationData[],
-  [in] boolean force
+  [in] uint8   ConfigurationData[],
+  [in] boolean force
 );
 ```
 
@@ -26,7 +27,7 @@ uint32 SendMetaConfigurationApply(
 
 **ConfigurationData** \[in\] Die Umgebungsdaten für die Konfiguration.
 
-**force** \[in\] **true**, um das Beenden der Konfiguration zu erzwingen.
+**force** \[in\] **true** , um das Beenden der Konfiguration zu erzwingen.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -40,7 +41,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

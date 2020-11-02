@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Ressourcenabhängigkeiten mithilfe von DependsOn
-ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Wenn Ihre Konfiguration größer und komplexer wird, können Sie den `DependsOn`-Schlüssel verwenden, um die Reihenfolge der Anwendung Ihrer Ressourcen zu ändern, indem Sie angeben, dass eine Ressource von einer anderen abhängt.
+ms.openlocfilehash: 18f19a3606834ede0737213930e6af0e251225ab
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954477"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645094"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Ressourcenabhängigkeiten mithilfe von DependsOn
 
@@ -118,13 +119,13 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 15.385 seconds
 ```
 
-Dadurch wird auch sichergestellt, dass der **Firewall**-Block nicht ausgeführt wird, wenn es aus irgendeinem Grund zu einem Fehler mit der **FirewallProfile**-Ressource kommt, obwohl dieser Block zuerst angegeben wurde. Der `DependsOn`-Schlüssel bietet mehr Flexibilität dabei, Ressourcenblöcke zu gruppieren und dafür zu sorgen, dass Abhängigkeiten aufgelöst werden, bevor eine Ressource ausgeführt wird.
+Dadurch wird auch sichergestellt, dass der **Firewall** -Block nicht ausgeführt wird, wenn es aus irgendeinem Grund zu einem Fehler mit der **FirewallProfile** -Ressource kommt, obwohl dieser Block zuerst angegeben wurde. Der `DependsOn`-Schlüssel bietet mehr Flexibilität dabei, Ressourcenblöcke zu gruppieren und dafür zu sorgen, dass Abhängigkeiten aufgelöst werden, bevor eine Ressource ausgeführt wird.
 
 In komplexeren Konfigurationen können Sie auch [knotenübergreifende Abhängigkeiten](crossNodeDependencies.md) verwenden, um eine noch feiner abgestimmte Kontrolle zu ermöglichen, z. B., um sicherzustellen, dass ein Domänencontroller konfiguriert wird, bevor der Domäne ein Client hinzugefügt wird.
 
 ## <a name="cleaning-up"></a>Bereinigung
 
-Wenn Sie die obige Konfiguration angewendet haben, können Sie Schlüssel umkehren, um Änderungen rückgängig zu machen. Im obigen Beispiel wird die Firewallregel und das Firewallprofil deaktiviert, wenn der **Enabled**-Schlüssel (Aktiviert) auf „False“ festgelegt wird. Sie sollten das Beispiel Ihren Bedürfnissen anpassen, damit es mit dem zuvor konfigurierten Zustand Ihres Zielknotens übereinstimmt.
+Wenn Sie die obige Konfiguration angewendet haben, können Sie Schlüssel umkehren, um Änderungen rückgängig zu machen. Im obigen Beispiel wird die Firewallregel und das Firewallprofil deaktiviert, wenn der **Enabled** -Schlüssel (Aktiviert) auf „False“ festgelegt wird. Sie sollten das Beispiel Ihren Bedürfnissen anpassen, damit es mit dem zuvor konfigurierten Zustand Ihres Zielknotens übereinstimmt.
 
 ```powershell
         Firewall Firewall

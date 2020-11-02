@@ -1,14 +1,14 @@
 ---
 ms.date: 06/12/2017
 ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: Bekannte Probleme in WMF 5.1
-ms.openlocfilehash: 4f4c85e1f4984d9e91ea74ba65fdbf7188c5c7ab
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Bekannte Probleme in WMF 5.1
+ms.openlocfilehash: 7d27bc570108a0ae1470ae06f5bdf5fcd7849d16
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808706"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663315"
 ---
 # <a name="known-issues-in-wmf-51"></a>Bekannte Probleme in WMF 5.1
 
@@ -20,7 +20,7 @@ Nach der Installation von WMF erhalten Sie möglicherweise eine Fehlermeldung �
 
 In diesem Release treten zwei Probleme auf, derer Sie sich bewusst sein sollten, wenn Sie Pester auf Nano Server verwenden:
 
-- Wenn Pester selbst getestet wird, treten einige Fehler aufgrund von Unterschieden zwischen FullCLR und CoreCLR auf. Insbesondere die **Validate**-Methode ist für den Typ **XmlDocument** nicht verfügbar. Sechs Tests, die versuchen, das Schema der NUnit-Ausgabeprotokolle zu überprüfen, sind dafür bekannt, dass sie Fehler ausgeben.
+- Wenn Pester selbst getestet wird, treten einige Fehler aufgrund von Unterschieden zwischen FullCLR und CoreCLR auf. Insbesondere die **Validate** -Methode ist für den Typ **XmlDocument** nicht verfügbar. Sechs Tests, die versuchen, das Schema der NUnit-Ausgabeprotokolle zu überprüfen, sind dafür bekannt, dass sie Fehler ausgeben.
 - Bei einem Code Coverage-Test tritt ein Fehler auf, da die DSC-Ressource **WindowsFeature** auf Nano Server nicht vorhanden ist. Diese Fehler haben in der Regel jedoch keine Auswirkungen und können ohne Weiteres ignoriert werden.
 
 ## <a name="operation-validation"></a>Überprüfung des Vorgangs

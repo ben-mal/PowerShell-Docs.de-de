@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: Informationsdatenstrom
-ms.openlocfilehash: 1a8df66f7489910b964ec398e90b76e9f30cd2e2
-ms.sourcegitcommit: 87b9b989f261b52969e99159e99ee28ad8d8839a
+description: PowerShell 5.0 fügt einen neuen strukturierten **Informations** datenstrom hinzu, um strukturierte Daten zwischen einem Skript und seinem Host zu übertragen.
+ms.openlocfilehash: 818c99ce281f5ada596ff92cd7bafb8b7cacf709
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86567840"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646717"
 ---
 # <a name="information-stream"></a>Informationsdatenstrom
 
-PowerShell 5.0 fügt einen neuen strukturierten **Informations**datenstrom hinzu, um strukturierte Daten zwischen einem Skript und seinem Host zu übertragen. `Write-Host` wurde auch so aktualisiert, dass seine Ausgabe in **den Informations**datenstrom erfolgt, in dem Sie sie nun erfassen oder unterdrücken können. Das neue Cmdlet `Write-Information`, wenn es zusammen mit den allgemeinen Parametern **InformationVariable** und **InformationAction** verwendet wird, bietet mehr Flexibilität und Funktionalität.
+PowerShell 5.0 fügt einen neuen strukturierten **Informations** datenstrom hinzu, um strukturierte Daten zwischen einem Skript und seinem Host zu übertragen. `Write-Host` wurde auch so aktualisiert, dass seine Ausgabe in **den Informations** datenstrom erfolgt, in dem Sie sie nun erfassen oder unterdrücken können. Das neue Cmdlet `Write-Information`, wenn es zusammen mit den allgemeinen Parametern **InformationVariable** und **InformationAction** verwendet wird, bietet mehr Flexibilität und Funktionalität.
 
-Die folgende Funktion verwendet Cmdlets, die den neuen **Informations**datenstrom nutzen.
+Die folgende Funktion verwendet Cmdlets, die den neuen **Informations** datenstrom nutzen.
 
 ```powershell
 function OutputGusher {
@@ -60,7 +60,7 @@ $r.Id
 4008
 ```
 
-Im Gegensatz zum Cmdlet `Write-Host` ermöglicht Ihnen die Verwendung des Parameters **InformationVariable** von `Write-Information` die Erfassung der Ausgabe in einer Variablen. Mithilfe des **Tag**s können Sie getrennte Kanäle für die an den **Informations**datenstrom gesendete Nachricht erstellen.
+Im Gegensatz zum Cmdlet `Write-Host` ermöglicht Ihnen die Verwendung des Parameters **InformationVariable** von `Write-Information` die Erfassung der Ausgabe in einer Variablen. Mithilfe des **Tag** s können Sie getrennte Kanäle für die an den **Informations** datenstrom gesendete Nachricht erstellen.
 
 ```powershell
 $r = OutputGusher -InformationVariable iv
@@ -83,7 +83,7 @@ Process              {System.Diagnostics.Process (powershell)}
 PSHOST               {Preparing to give you output!, =============================, I , <3 ...}
 ```
 
-Beim Senden einer Nachricht an den **Informations**datenstrom mit einem Tag, wird diese Nachricht nicht in der Hostanwendung angezeigt, kann aber mithilfe des Tagnamens abgerufen werden. Beispiel:
+Beim Senden einer Nachricht an den **Informations** datenstrom mit einem Tag, wird diese Nachricht nicht in der Hostanwendung angezeigt, kann aber mithilfe des Tagnamens abgerufen werden. Beispiel:
 
 ```powershell
 $iv | where Tags -eq 'LogHigh'

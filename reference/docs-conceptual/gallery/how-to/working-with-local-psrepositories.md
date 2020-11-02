@@ -1,14 +1,13 @@
 ---
 ms.date: 11/06/2018
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery,psget
 title: Arbeiten mit lokalen PSRepositorys
-ms.openlocfilehash: 421b73c141c7551224e2298f51464a19bc736d0e
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
+description: Das PowerShellGet-Modul unterstützt andere Repositorys als den PowerShell-Katalog. Dieser Artikel beschreibt, wie Sie ein lokales PowerShell-Repository einrichten.
+ms.openlocfilehash: 24a2fd23124b3897952d64a347d103d9ee10248f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837578"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662353"
 ---
 # <a name="working-with-private-powershellget-repositories"></a>Arbeiten mit privaten PowerShellGet-Repositorys
 

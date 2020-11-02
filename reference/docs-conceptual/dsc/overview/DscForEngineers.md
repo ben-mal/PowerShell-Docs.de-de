@@ -2,12 +2,13 @@
 ms.date: 10/13/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: 'Desired State Configuration (DSC): Übersicht für Ingenieure'
-ms.openlocfilehash: dbed274d5333c216970247b88d2a0956025e969d
-ms.sourcegitcommit: a5e945e0889d0635b7af767d80d6a13bc5526269
+description: Dieses Dokumente richtet sich an Ingenieure und Betriebsteams, um die Vorteile der Desired State Configuration (DSC) von PowerShell kennenzulernen.
+ms.openlocfilehash: c98295d0e78f4dc89e5df429e3c1de9a0c024054
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82584495"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646931"
 ---
 # <a name="desired-state-configuration-overview-for-engineers"></a>Desired State Configuration (DSC): Übersicht für Ingenieure
 
@@ -67,7 +68,7 @@ else
 }
 ```
 
-Dieses Skript ist komplexer, mit sehr viel Logik und Fehlerbehandlung. Das Skript ist komplexer, da Ihnen nicht mehr angezeigt wird, was geschehen soll, jedoch _wie es funktioniert_.
+Dieses Skript ist komplexer, mit sehr viel Logik und Fehlerbehandlung. Das Skript ist komplexer, da Ihnen nicht mehr angezeigt wird, was geschehen soll, jedoch _wie es funktioniert_ .
 
 Mit DSC können Sie angeben, was Sie tun möchten, und die zugrunde liegende Logik wird entfernt.
 

@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: RemoveConfiguration-Methode
-ms.openlocfilehash: ef15c873d8dfaf28e5cdeb611b72a70921c099be
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: RemoveConfiguration-Methode
+ms.openlocfilehash: d5988ac014c457407c56a097c9a376427376eb3f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464348"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650718"
 ---
 # <a name="removeconfiguration-method"></a>RemoveConfiguration-Methode
 
@@ -17,8 +18,8 @@ Entfernt die Konfigurationsdateien.
 
 ```mof
 uint32 RemoveConfiguration(
-  [in] uint32  Stage,
-  [in] boolean Force
+  [in] uint32  Stage,
+  [in] boolean Force
 );
 ```
 
@@ -32,7 +33,7 @@ uint32 RemoveConfiguration(
 |**2** | Das **ausstehende** (Pending) Konfigurationsdokument (pending.mof).  |
 |**4** | Das **vorherige** (Previous) Konfigurationsdokument (previous.mof). |
 
-*Force* \[in\] **true**, um das Entfernen der Konfiguration zu erzwingen.
+*Force* \[in\] **true** , um das Entfernen der Konfiguration zu erzwingen.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -46,7 +47,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

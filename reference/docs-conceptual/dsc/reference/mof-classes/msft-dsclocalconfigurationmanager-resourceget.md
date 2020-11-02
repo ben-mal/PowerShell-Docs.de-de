@@ -1,26 +1,27 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: ResourceGet-Methode
-ms.openlocfilehash: aa7671989db6f4a98d879fd449d09503eddbeda3
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: ResourceGet-Methode
+ms.openlocfilehash: bff737f04e02740fa09fd82d7b27c75b11303dad
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463957"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650766"
 ---
 # <a name="resourceget-method"></a>ResourceGet-Methode
 
-Ruft direkt die **Get**-Methode einer DSC-Ressource auf.
+Ruft direkt die **Get** -Methode einer DSC-Ressource auf.
 
 ## <a name="syntax"></a>Syntax
 
 ```mof
 uint32 ResourceGet(
-  [in]  string           ResourceType,
-  [in]  string           ModuleName,
-  [in]  uint8            resourceProperty[],
-  [out] OMI_BaseResource configurations
+  [in]  string           ResourceType,
+  [in]  string           ModuleName,
+  [in]  uint8            resourceProperty[],
+  [out] OMI_BaseResource configurations
 );
 ```
 
@@ -46,7 +47,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

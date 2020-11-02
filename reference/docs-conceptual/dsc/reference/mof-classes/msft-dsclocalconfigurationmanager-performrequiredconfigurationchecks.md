@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: PerformRequiredConfigurationChecks-Methode
-ms.openlocfilehash: ea4294ffdcb2580fa7b39b18966b642d58073eb6
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: PerformRequiredConfigurationChecks-Methode
+ms.openlocfilehash: c5e847cda6376f4266cc771dc947032a279e25f4
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464450"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650832"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>PerformRequiredConfigurationChecks-Methode
 
@@ -17,13 +18,13 @@ Startet eine Konsistenzprüfung unter Verwendung des Taskplaners.
 
 ```mof
 uint32 PerformRequiredConfigurationChecks(
-  [in] uint32 Flags
+  [in] uint32 Flags
 );
 ```
 
 ## <a name="parameters"></a>Parameter
 
-**Flags** \[in\] Eine Bitmaske, die den Typ der auszuführenden Konsistenzprüfung angibt. Die folgenden Werte sind gültig und können mit einem bitweisen **ODER**-Vorgang kombiniert werden:
+**Flags** \[in\] Eine Bitmaske, die den Typ der auszuführenden Konsistenzprüfung angibt. Die folgenden Werte sind gültig und können mit einem bitweisen **ODER** -Vorgang kombiniert werden:
 
 |Wert |BESCHREIBUNG |
 |:--- |:---|
@@ -44,7 +45,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

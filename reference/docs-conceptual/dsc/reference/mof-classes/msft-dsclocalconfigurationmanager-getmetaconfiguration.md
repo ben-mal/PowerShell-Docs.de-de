@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: GetMetaConfiguration-Methode
-ms.openlocfilehash: 5111cb3b15e0fba0bf71b412580efdd3cd95b2dc
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetMetaConfiguration-Methode
+ms.openlocfilehash: deca6b8ec342a34543bbe0e1fabbc2a740a88feb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463974"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644723"
 ---
 # <a name="getmetaconfiguration-method"></a>GetMetaConfiguration-Methode
 
@@ -17,13 +18,13 @@ Ruft die Einstellungen des lokalen Konfigurations-Managers ab, die zur Steuerung
 
 ```mof
 uint32 GetMetaConfiguration(
-  [out] MSFT_DSCMetaConfiguration MetaConfiguration
+  [out] MSFT_DSCMetaConfiguration MetaConfiguration
 );
 ```
 
 ## <a name="parameters"></a>Parameter
 
-**MetaConfiguration** \[out\] Enthält bei der Rückgabe eine eingebettete Instanz der **MSFT_DSCMetaConfiguration**-Klasse, die die Einstellungen definiert.
+**MetaConfiguration** \[out\] Enthält bei der Rückgabe eine eingebettete Instanz der **MSFT_DSCMetaConfiguration** -Klasse, die die Einstellungen definiert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -37,7 +38,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

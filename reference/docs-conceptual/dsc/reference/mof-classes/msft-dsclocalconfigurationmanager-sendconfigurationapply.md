@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: SendConfigurationApply-Methode
-ms.openlocfilehash: 9b684790e5a7d6c7bdf074caca6040e13807f1ca
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: SendConfigurationApply-Methode
+ms.openlocfilehash: 9bd63220644e096b348f71ee9d4ac216af6a7ccc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464314"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648975"
 ---
 # <a name="sendconfigurationapply-method"></a>SendConfigurationApply-Methode
 
@@ -17,8 +18,8 @@ Sendet das Konfigurationsdokument an den verwalteten Knoten und verwendet den Ko
 
 ```mof
 uint32 SendConfigurationApply(
-  [in] uint8   ConfigurationData[],
-  [in] boolean force
+  [in] uint8   ConfigurationData[],
+  [in] boolean force
 );
 ```
 
@@ -26,7 +27,7 @@ uint32 SendConfigurationApply(
 
 **ConfigurationData** \[in\] Die Umgebungsdaten für die Konfiguration.
 
-**force** \[in\] **true**, um das Beenden der Konfiguration zu erzwingen.
+**force** \[in\] **true** , um das Beenden der Konfiguration zu erzwingen.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -40,7 +41,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

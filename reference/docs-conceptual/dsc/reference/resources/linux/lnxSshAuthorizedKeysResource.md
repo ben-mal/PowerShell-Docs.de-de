@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC für Linux-Ressource „nxSshAuthorizedKeys“
-ms.openlocfilehash: 3a62bb7a3dbdebae4f0ca6084db1624c1b76ab1f
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC für Linux-Ressource „nxSshAuthorizedKeys“
+ms.openlocfilehash: 881e94aa583a745cdac7f01b6e445352ef4ca937
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464467"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662769"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>DSC für Linux-Ressource „nxSshAuthorizedKeys“
 
@@ -31,7 +32,7 @@ nxAuthorizedKeys <string> #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |KeyComment |Ein eindeutiger Kommentar für den Schlüssel. Dieser wird verwendet, um Schlüssel eindeutig zu identifizieren. |
-|Username |Der Benutzername, für den die autorisierten SSH-Schlüssel verwaltet werden sollen. Falls nicht definiert, ist der Standardbenutzer **root**. |
+|Username |Der Benutzername, für den die autorisierten SSH-Schlüssel verwaltet werden sollen. Falls nicht definiert, ist der Standardbenutzer **root** . |
 |Key |Der Inhalt des Schlüssels. Ist erforderlich, wenn **Ensure** auf **Present** festgelegt ist.|
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften

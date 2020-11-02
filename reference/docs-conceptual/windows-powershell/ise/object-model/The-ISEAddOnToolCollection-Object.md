@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: Das ISEAddOnToolCollection-Objekt
-ms.openlocfilehash: e07a47169381307b50ac190165307c926b4ad94e
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Das ISEAddOnToolCollection-Objekt ist eine Sammlung von **ISEAddOnTool** -Objekten.
+ms.openlocfilehash: ba08ffd82a7ff2fa469540a5ea542abee8d4dc82
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809716"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658300"
 ---
 # <a name="the-iseaddontoolcollection-object"></a>Das ISEAddOnToolCollection-Objekt
 
-Das **ISEAddOnToolCollection**-Objekt ist eine Sammlung von **ISEAddOnTool**-Objekten. Ein Beispiel ist das `$psISE.CurrentPowerShellTab.VerticalAddOnTools`-Objekt.
+Das **ISEAddOnToolCollection** -Objekt ist eine Sammlung von **ISEAddOnTool** -Objekten. Ein Beispiel ist das `$psISE.CurrentPowerShellTab.VerticalAddOnTools`-Objekt.
 
 ## <a name="methods"></a>Methoden
 
@@ -51,7 +51,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
 In Windows PowerShell ISE 3.0 und höher unterstützt, in früheren Versionen nicht enthalten.
 
-Wählt die PowerShell-Registerkarte aus, die vom **psTab**-Parameter angegeben wird.
+Wählt die PowerShell-Registerkarte aus, die vom **psTab** -Parameter angegeben wird.
 
 **psTab** – Microsoft.PowerShell.Host.ISE.PowerShellTab – die auszuwählende PowerShell-Registerkarte
 
@@ -65,7 +65,7 @@ $newTab.DisplayName = 'Brand New Tab'
 
 In Windows PowerShell ISE 3.0 und höher unterstützt, in früheren Versionen nicht enthalten.
 
-Entfernt die PowerShell Registerkarte, die vom **psTab**-Parameter angegeben wird.
+Entfernt die PowerShell Registerkarte, die vom **psTab** -Parameter angegeben wird.
 
 **psTab** – Microsoft.PowerShell.Host.ISE.PowerShellTab – die zu entfernende PowerShell-Registerkarte
 

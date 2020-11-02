@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: GetConfigurationStatus-Methode
-ms.openlocfilehash: c2c478151428052d656832fb4079f12d666a910d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetConfigurationStatus-Methode
+ms.openlocfilehash: fe25d17069d9011e931ac50fec27cb9ebafba365
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464048"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92650859"
 ---
 # <a name="getconfigurationstatus-method"></a>GetConfigurationStatus-Methode
 
@@ -17,16 +18,16 @@ Abrufen des Konfigurationsstatusverlaufs.
 
 ```mof
 uint32 GetConfigurationStatus(
-  [in]  boolean                     All,
-  [out] MSFT_DSCConfigurationStatus configurationStatus[]
+  [in]  boolean                     All,
+  [out] MSFT_DSCConfigurationStatus configurationStatus[]
 );
 ```
 
 ## <a name="parameters"></a>Parameter
 
-**All** \[in\] **true**, wenn diese Methode Informationen zu allen Konfigurationsausführungen auf dem Computer zurückgeben soll, einschließlich der Konfigurationsanwendung und der Konsistenzprüfung.
+**All** \[in\] **true** , wenn diese Methode Informationen zu allen Konfigurationsausführungen auf dem Computer zurückgeben soll, einschließlich der Konfigurationsanwendung und der Konsistenzprüfung.
 
-**configurationStatus** \[out\] Enthält bei der Rückgabe eine eingebettete Instanz der **MSFT_DSCConfigurationStatus**-Klasse, die die Einstellungen definiert.
+**configurationStatus** \[out\] Enthält bei der Rückgabe eine eingebettete Instanz der **MSFT_DSCConfigurationStatus** -Klasse, die die Einstellungen definiert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -40,7 +41,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

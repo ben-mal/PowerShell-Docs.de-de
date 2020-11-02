@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC für Linux-Resource „nxArchive“
-ms.openlocfilehash: 386378fa6e1608117d6934b983dcebe23e55d60d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC für Linux-Resource „nxArchive“
+ms.openlocfilehash: 2705829ccae0c1baa27324030433340e7f3949c1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464246"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648861"
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a>DSC für Linux-Resource „nxArchive“
 
@@ -33,15 +34,15 @@ nxArchive <string> #ResourceName
 |---|---|
 |SourcePath |Gibt den Quellpfad der Archivdatei an. Dies muss eine Datei des Typs „.tar“, „.zip“ oder „.tar.gz“ sein. |
 |DestinationPath |Gibt den Speicherort an, an dem der Archivinhalt einer Datei extrahiert werden soll. |
-|Checksum |Definiert den zu verwendenden Typ, wenn bestimmt wird, ob das Quellarchiv aktualisiert wurde. Werte sind: **ctime**, **mtime** oder **md5**. Der Standardwert ist **md5**. |
-|Force |Bestimmte Dateioperationen (z. B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist), führen zu einem Fehler. Bei Verwenden der **Force**-Eigenschaft werden solche Fehler überschrieben. Standardwert: `$false`. |
+|Checksum |Definiert den zu verwendenden Typ, wenn bestimmt wird, ob das Quellarchiv aktualisiert wurde. Werte sind: **ctime** , **mtime** oder **md5** . Der Standardwert ist **md5** . |
+|Force |Bestimmte Dateioperationen (z. B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist), führen zu einem Fehler. Bei Verwenden der **Force** -Eigenschaft werden solche Fehler überschrieben. Standardwert: `$false`. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
 
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Bestimmt, ob geprüft wird, ob der Inhalt der Archivdatei am **Ziel** vorhanden ist. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass der Inhalt vorhanden ist. Legen Sie sie auf **Absent** fest, um sicherzustellen, dass der Inhalt nicht vorhanden ist. Der Standardwert ist **Present**. |
+|Ensure |Bestimmt, ob geprüft wird, ob der Inhalt der Archivdatei am **Ziel** vorhanden ist. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass der Inhalt vorhanden ist. Legen Sie sie auf **Absent** fest, um sicherzustellen, dass der Inhalt nicht vorhanden ist. Der Standardwert ist **Present** . |
 
 ## <a name="example"></a>Beispiel
 

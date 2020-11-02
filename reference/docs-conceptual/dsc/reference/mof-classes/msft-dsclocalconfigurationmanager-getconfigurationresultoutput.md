@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: GetConfigurationResultOutput-Methode
-ms.openlocfilehash: 9c81082c28b2ffcc329264d29784782deaa9779d
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: GetConfigurationResultOutput-Methode
+ms.openlocfilehash: 7c885109b3078189b7ac653733a5fb24db66312e
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464076"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644691"
 ---
 # <a name="getconfigurationresultoutput-method"></a>GetConfigurationResultOutput-Methode
 
@@ -17,9 +18,9 @@ Ruft die Konfigurations-Agent-Ausgabe im Zusammenhang mit einem bestimmten Auftr
 
 ```mof
 uint32 GetConfigurationResultOutput(
-  [in]  string                      jobId,
-  [in]  uint8                       resumeOutputBookmark[],
-  [out] MSFT_DSCConfigurationOutput output[]
+  [in]  string                      jobId,
+  [in]  uint8                       resumeOutputBookmark[],
+  [out] MSFT_DSCConfigurationOutput output[]
 );
 ```
 
@@ -43,7 +44,7 @@ Dies ist eine statische Methode.
 
 **MOF:** DscCore.mof
 
-**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration
+**Namespace** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Weitere Informationen
 

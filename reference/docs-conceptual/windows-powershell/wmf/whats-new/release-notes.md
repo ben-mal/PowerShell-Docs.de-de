@@ -1,20 +1,19 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: Versionshinweise zu WMF 5.x
-ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Versionshinweise zu WMF 5.x
+ms.openlocfilehash: d783592104262b08815b12bd8de01adf13b60372
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809876"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655850"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Windows Management Framework (WMF) 5.x – Anmerkungen zu dieser Version
 
 ## <a name="wmf-50-changes"></a>WMF 5.0-Änderungen
 
-- Mit PowerShell 5.0 wird ein neuer strukturierter **Information**sdatenstrom hinzugefügt.
+- Mit PowerShell 5.0 wird ein neuer strukturierter **Information** sdatenstrom hinzugefügt.
 - Verbesserungen an DSC umfassen vier neue DSC-Ressourcen:
   - WindowsFeatureSet
   - WindowsOptionalFeatureSet
@@ -92,7 +91,7 @@ Zuvor gab es keine Möglichkeit, eine bestimmte Modulversion anzugeben. Wenn meh
 
 In WMF 5.1:
 
-- Sie können den [Konstruktor „ModuleSpecification“ (Hashtabelle)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_) verwenden.
+- Sie können den [Konstruktor „ModuleSpecification“ (Hashtabelle)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_) verwenden.
 
   Diese Hashtabelle hat das gleiche Format wie `Get-Module -FullyQualifiedName`.
 

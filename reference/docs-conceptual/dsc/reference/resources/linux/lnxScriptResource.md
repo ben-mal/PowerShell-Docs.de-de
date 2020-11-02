@@ -1,13 +1,14 @@
 ---
 ms.date: 07/17/2020
-keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
+ms.topic: reference
 title: DSC für Linux-Resource „nxScript“
-ms.openlocfilehash: e39808e110d5ee4bf9d0ccd418ca3b15ac9fe420
-ms.sourcegitcommit: 41e1acbd9ce0f49a23c6eb99facd2c280d836836
+description: DSC für Linux-Resource „nxScript“
+ms.openlocfilehash: c92d7ac76323d39167512734ef743c299857c9a6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86463651"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92648809"
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>DSC für Linux-Resource „nxScript“
 
@@ -32,8 +33,8 @@ nxScript <string> #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |GetScript |Stellt ein Skript bereit, um den aktuellen Status des Computers zurückzugeben. Dieses Skript wird ausgeführt, wenn Sie das Skript [GetDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen. Das Skript muss mit einem Shebang, z. B. `#!/bin/bash`, beginnen. |
-|SetScript |Stellt ein Skript bereit, das den Computer in den richtigen Zustand versetzt. Wenn Sie das Skript [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen, wird **TestScript** zuerst ausgeführt. Wenn der **TestScript**-Block einen Exitcode ungleich 0 zurückgibt, wird der **SetScript**-Block ausgeführt. Wenn der **TestScript**-Block den Exitcode 0 zurückgibt, wird der **SetScript**-Block nicht ausgeführt. Das Skript muss mit einem Shebang, z. B. `#!/bin/bash`, beginnen. |
-|TestScript |Stellt ein Skript bereit, das auswertet, ob sich der Knoten derzeit im richtigen Zustand befindet. Wenn Sie das Skript [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen, wird dieses Skript ausgeführt. Wenn es einen Exitcode ungleich 0 zurückgibt, wird der **SetScript**-Block ausgeführt. Wenn es den Exitcode 0 zurückgibt, wird der **SetScript**-Block nicht ausgeführt. **TestScript** wird auch ausgeführt, wenn Sie das Skript [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen. In diesem Fall wird der **SetScript**-Block jedoch nicht ausgeführt, ganz gleich, welcher Exitcode vom **TestScript**-Block zurückgegeben wird. **TestScript** muss Inhalte enthalten und den Exitcode 0 zurückgeben, wenn die tatsächliche Konfiguration der aktuellen Konfiguration des gewünschten Zustands entspricht. Andernfalls muss ein Exitcode ungleich 0 zurückgegeben werden. Die aktuelle Konfiguration des gewünschten Zustands ist die letzte Konfiguration, die auf den Knoten angewendet wurde, der DSC verwendet. Das Skript muss mit einem Shebang, z. B. `#!/bin/bash`, beginnen. |
+|SetScript |Stellt ein Skript bereit, das den Computer in den richtigen Zustand versetzt. Wenn Sie das Skript [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen, wird **TestScript** zuerst ausgeführt. Wenn der **TestScript** -Block einen Exitcode ungleich 0 zurückgibt, wird der **SetScript** -Block ausgeführt. Wenn der **TestScript** -Block den Exitcode 0 zurückgibt, wird der **SetScript** -Block nicht ausgeführt. Das Skript muss mit einem Shebang, z. B. `#!/bin/bash`, beginnen. |
+|TestScript |Stellt ein Skript bereit, das auswertet, ob sich der Knoten derzeit im richtigen Zustand befindet. Wenn Sie das Skript [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen, wird dieses Skript ausgeführt. Wenn es einen Exitcode ungleich 0 zurückgibt, wird der **SetScript** -Block ausgeführt. Wenn es den Exitcode 0 zurückgibt, wird der **SetScript** -Block nicht ausgeführt. **TestScript** wird auch ausgeführt, wenn Sie das Skript [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer) aufrufen. In diesem Fall wird der **SetScript** -Block jedoch nicht ausgeführt, ganz gleich, welcher Exitcode vom **TestScript** -Block zurückgegeben wird. **TestScript** muss Inhalte enthalten und den Exitcode 0 zurückgeben, wenn die tatsächliche Konfiguration der aktuellen Konfiguration des gewünschten Zustands entspricht. Andernfalls muss ein Exitcode ungleich 0 zurückgegeben werden. Die aktuelle Konfiguration des gewünschten Zustands ist die letzte Konfiguration, die auf den Knoten angewendet wurde, der DSC verwendet. Das Skript muss mit einem Shebang, z. B. `#!/bin/bash`, beginnen. |
 |Benutzer |Der Benutzer, der das Skript ausführt. |
 |Group |Die Gruppe, die das Skript ausführt. |
 
@@ -45,7 +46,7 @@ nxScript <string> #ResourceName
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung der Ressource **nxScript**, um zusätzliche Konfigurationsschritte auszuführen.
+Das folgende Beispiel veranschaulicht die Verwendung der Ressource **nxScript** , um zusätzliche Konfigurationsschritte auszuführen.
 
 ```powershell
 Import-DSCResource -Module nx

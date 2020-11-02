@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Veröffentlichen auf einem Pullserver mithilfe von Konfigurations-IDs (v4/v5)
-ms.openlocfilehash: 99c5b89e7d556fa72eaa6a3ba1654936f96a0b9d
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird erläutert, wie Sie Ressourcen hochladen können, damit sie zum Download zur Verfügung stehen. Außerdem erfahren Sie, wie Sie Clients so konfigurieren, dass sie Ressourcen automatisch herunterladen.
+ms.openlocfilehash: 20e12e3cac6b6e4a86563576f4a915429b18aadb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500746"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646837"
 ---
 # <a name="publish-to-a-pull-server-using-configuration-ids-v4v5"></a>Veröffentlichen auf einem Pullserver mithilfe von Konfigurations-IDs (v4/v5)
 
@@ -105,7 +106,7 @@ Wenn Sie Ihren HTTP-Pullserver einrichten (wie unter [Einrichten eines DSC-HTTP-
 ### <a name="on-an-smb-share"></a>In einer SMB-Freigabe
 
 Wenn Sie einen Pullclient für die Verwendung einer SMB-Freigabe einrichten, geben Sie eine **ConfigurationRepositoryShare** an.
-Alle `.mof`- und `.checksum`-Dateien müssen im Verzeichnis **SourcePath** aus dem **ConfigurationRepositoryShare**-Block gespeichert werden.
+Alle `.mof`- und `.checksum`-Dateien müssen im Verzeichnis **SourcePath** aus dem **ConfigurationRepositoryShare** -Block gespeichert werden.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
