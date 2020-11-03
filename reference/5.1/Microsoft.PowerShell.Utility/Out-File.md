@@ -1,0 +1,355 @@
+---
+external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+keywords: powershell,cmdlet
+Locale: en-US
+Module Name: Microsoft.PowerShell.Utility
+ms.date: 09/21/2020
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-file?view=powershell-5.1&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Out-File
+ms.openlocfilehash: 71602cb0621c835257f556a0a9db15bd754a3aee
+ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "93220079"
+---
+# <span data-ttu-id="2d9a6-103">Out-File</span><span class="sxs-lookup"><span data-stu-id="2d9a6-103">Out-File</span></span>
+
+## <span data-ttu-id="2d9a6-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="2d9a6-104">SYNOPSIS</span></span>
+<span data-ttu-id="2d9a6-105">Sendet die Ausgabe an eine Datei.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-105">Sends output to a file.</span></span>
+
+## <span data-ttu-id="2d9a6-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2d9a6-106">SYNTAX</span></span>
+
+### <span data-ttu-id="2d9a6-107">Bypath (Standard)</span><span class="sxs-lookup"><span data-stu-id="2d9a6-107">ByPath (Default)</span></span>
+
+```
+Out-File [-FilePath] <string> [[-Encoding] <string>] [-Append] [-Force] [-NoClobber] [-Width <int>]
+ [-NoNewline] [-InputObject <psobject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="2d9a6-108">Byliteralpath</span><span class="sxs-lookup"><span data-stu-id="2d9a6-108">ByLiteralPath</span></span>
+
+```
+Out-File [[-Encoding] <string>] -LiteralPath <string> [-Append] [-Force] [-NoClobber] [-Width <int>]
+ [-NoNewline] [-InputObject <psobject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="2d9a6-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="2d9a6-109">DESCRIPTION</span></span>
+
+<span data-ttu-id="2d9a6-110">Das- `Out-File` Cmdlet sendet die Ausgabe an eine Datei.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-110">The `Out-File` cmdlet sends output to a file.</span></span> <span data-ttu-id="2d9a6-111">Er verwendet implizit das-Formatierungs System von PowerShell, um in die Datei zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-111">It implicitly uses PowerShell's formatting system to write to the file.</span></span> <span data-ttu-id="2d9a6-112">Die Datei erhält dieselbe Anzeige Darstellung wie das Terminal.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-112">The file receives the same display representation as the terminal.</span></span> <span data-ttu-id="2d9a6-113">Dies bedeutet, dass die Ausgabe möglicherweise für die programmgesteuerte Verarbeitung nicht ideal ist, wenn nicht alle Eingabe Objekte Zeichen folgen sind.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-113">This means that the output may not be ideal for programmatic processing unless all input objects are strings.</span></span>
+<span data-ttu-id="2d9a6-114">Wenn Sie Parameter für die Ausgabe angeben müssen, verwenden Sie `Out-File` anstelle des Umleitungs Operators ( `>` ).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-114">When you need to specify parameters for the output, use `Out-File` rather than the redirection operator (`>`).</span></span> <span data-ttu-id="2d9a6-115">Weitere Informationen zur Umleitung finden Sie unter [about_Redirection](../Microsoft.PowerShell.Core/About/about_Redirection.md).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-115">For more information about redirection, see [about_Redirection](../Microsoft.PowerShell.Core/About/about_Redirection.md).</span></span>
+
+## <span data-ttu-id="2d9a6-116">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="2d9a6-116">EXAMPLES</span></span>
+
+### <span data-ttu-id="2d9a6-117">Beispiel 1: Senden der Ausgabe und Erstellen einer Datei</span><span class="sxs-lookup"><span data-stu-id="2d9a6-117">Example 1: Send output and create a file</span></span>
+
+<span data-ttu-id="2d9a6-118">In diesem Beispiel wird gezeigt, wie eine Liste der Prozesse des lokalen Computers an eine Datei gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-118">This example shows how to send a list of the local computer's processes to a file.</span></span> <span data-ttu-id="2d9a6-119">Wenn die Datei nicht vorhanden ist, `Out-File` erstellt die Datei im angegebenen Pfad.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-119">If the file does not exist, `Out-File` creates the file in the specified path.</span></span>
+
+```powershell
+Get-Process | Out-File -FilePath .\Process.txt
+Get-Content -Path .\Process.txt
+```
+
+```Output
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+     29    22.39      35.40      10.98   42764   9 Application
+     53    99.04     113.96       0.00   32664   0 CcmExec
+     27    96.62     112.43     113.00   17720   9 Code
+```
+
+<span data-ttu-id="2d9a6-120">Mit dem- `Get-Process` Cmdlet wird die Liste der Prozesse abgerufen, die auf dem lokalen Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-120">The `Get-Process` cmdlet gets the list of processes running on the local computer.</span></span> <span data-ttu-id="2d9a6-121">Die **Prozess** Objekte werden über die Pipeline an das `Out-File` Cmdlet gesendet.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-121">The **Process** objects are sent down the pipeline to the `Out-File` cmdlet.</span></span> <span data-ttu-id="2d9a6-122">`Out-File` verwendet den **FilePath** -Parameter und erstellt eine Datei im aktuellen Verzeichnis mit dem Namen **Process.txt**.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-122">`Out-File` uses the **FilePath** parameter and creates a file in the current directory named **Process.txt**.</span></span> <span data-ttu-id="2d9a6-123">Der `Get-Content` Befehl ruft Inhalt aus der Datei ab und zeigt ihn in der PowerShell-Konsole an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-123">The `Get-Content` command gets content from the file and displays it in the PowerShell console.</span></span>
+
+### <span data-ttu-id="2d9a6-124">Beispiel 2: verhindern, dass eine vorhandene Datei überschrieben wird</span><span class="sxs-lookup"><span data-stu-id="2d9a6-124">Example 2: Prevent an existing file from being overwritten</span></span>
+
+<span data-ttu-id="2d9a6-125">In diesem Beispiel wird verhindert, dass eine vorhandene Datei überschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-125">This example prevents an existing file from being overwritten.</span></span> <span data-ttu-id="2d9a6-126">Standardmäßig `Out-File` überschreibt vorhandene Dateien.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-126">By default, `Out-File` overwrites existing files.</span></span>
+
+```powershell
+Get-Process | Out-File -FilePath .\Process.txt -NoClobber
+```
+
+```Output
+Out-File : The file 'C:\Test\Process.txt' already exists.
+At line:1 char:15
++ Get-Process | Out-File -FilePath .\Process.txt -NoClobber
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+<span data-ttu-id="2d9a6-127">Mit dem- `Get-Process` Cmdlet wird die Liste der Prozesse abgerufen, die auf dem lokalen Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-127">The `Get-Process` cmdlet gets the list of processes running on the local computer.</span></span> <span data-ttu-id="2d9a6-128">Die **Prozess** Objekte werden über die Pipeline an das `Out-File` Cmdlet gesendet.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-128">The **Process** objects are sent down the pipeline to the `Out-File` cmdlet.</span></span> <span data-ttu-id="2d9a6-129">`Out-File` verwendet den **FilePath** -Parameter und versucht, in eine Datei im aktuellen Verzeichnis namens **Process.txt** zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-129">`Out-File` uses the **FilePath** parameter and attempts to write to a file in the current directory named **Process.txt**.</span></span> <span data-ttu-id="2d9a6-130">Der **noClobber** -Parameter verhindert, dass die Datei überschrieben wird, und zeigt eine Meldung an, dass die Datei bereits vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-130">The **NoClobber** parameter prevents the file from being overwritten and displays a message that the file already exists.</span></span>
+
+### <span data-ttu-id="2d9a6-131">Beispiel 3: Senden der Ausgabe an eine Datei im ASCII-Format</span><span class="sxs-lookup"><span data-stu-id="2d9a6-131">Example 3: Send output to a file in ASCII format</span></span>
+
+<span data-ttu-id="2d9a6-132">Dieses Beispiel zeigt, wie Sie die Ausgabe mit einem bestimmten Codierungstyp codieren.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-132">This example shows how to encode output with a specific encoding type.</span></span>
+
+```powershell
+$Procs = Get-Process
+Out-File -FilePath .\Process.txt -InputObject $Procs -Encoding ASCII -Width 50
+```
+
+<span data-ttu-id="2d9a6-133">Mit dem- `Get-Process` Cmdlet wird die Liste der Prozesse abgerufen, die auf dem lokalen Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-133">The `Get-Process` cmdlet gets the list of processes running on the local computer.</span></span> <span data-ttu-id="2d9a6-134">Die **Prozess** Objekte werden in der Variablen gespeichert `$Procs` .</span><span class="sxs-lookup"><span data-stu-id="2d9a6-134">The **Process** objects are stored in the variable, `$Procs`.</span></span> <span data-ttu-id="2d9a6-135">`Out-File` verwendet den **FilePath** -Parameter und erstellt eine Datei im aktuellen Verzeichnis mit dem Namen **Process.txt**.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-135">`Out-File` uses the **FilePath** parameter and creates a file in the current directory named **Process.txt**.</span></span> <span data-ttu-id="2d9a6-136">Der **Inputobject** -Parameter übergibt die Prozess Objekte an `$Procs` die Datei **Process.txt**.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-136">The **InputObject** parameter passes the process objects in `$Procs` to the file **Process.txt**.</span></span> <span data-ttu-id="2d9a6-137">Mit dem **Encoding** -Parameter wird die Ausgabe in das **ASCII** -Format konvertiert.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-137">The **Encoding** parameter converts the output to **ASCII** format.</span></span> <span data-ttu-id="2d9a6-138">Der **Width** -Parameter schränkt jede Zeile in der Datei auf 50 Zeichen ein, sodass einige Daten abgeschnitten werden können.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-138">The **Width** parameter limits each line in the file to 50 characters so some data might be truncated.</span></span>
+
+### <span data-ttu-id="2d9a6-139">Beispiel 4: Verwenden eines Anbieters und Senden der Ausgabe an eine Datei</span><span class="sxs-lookup"><span data-stu-id="2d9a6-139">Example 4: Use a provider and send output to a file</span></span>
+
+<span data-ttu-id="2d9a6-140">In diesem Beispiel wird gezeigt, wie das `Out-File` Cmdlet verwendet wird, wenn Sie sich nicht in einem **File System** -Anbieter Laufwerk befinden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-140">This example shows how to use the `Out-File` cmdlet when you are not in a **FileSystem** provider drive.</span></span> <span data-ttu-id="2d9a6-141">Verwenden `Get-PSProvider` Sie das Cmdlet, um die Anbieter auf dem lokalen Computer anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-141">Use the `Get-PSProvider` cmdlet to view the providers on your local computer.</span></span> <span data-ttu-id="2d9a6-142">Weitere Informationen finden Sie unter [about_Providers](../Microsoft.Powershell.Core/About/about_Providers.md).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-142">For more information, see [about_Providers](../Microsoft.Powershell.Core/About/about_Providers.md).</span></span>
+
+```
+PS> Set-Location -Path Alias:
+
+PS> Get-Location
+
+Path
+----
+Alias:\
+
+PS> Get-ChildItem | Out-File -FilePath C:\TestDir\AliasNames.txt
+
+PS> Get-Content -Path C:\TestDir\AliasNames.txt
+
+CommandType     Name
+-----------     ----
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           cat -> Get-Content
+```
+
+<span data-ttu-id="2d9a6-143">Der `Set-Location` Befehl verwendet den **path** -Parameter, um den aktuellen Speicherort auf den Registrierungs Anbieter festzulegen `Alias:` .</span><span class="sxs-lookup"><span data-stu-id="2d9a6-143">The `Set-Location` command uses the **Path** parameter to set the current location to the registry provider `Alias:`.</span></span> <span data-ttu-id="2d9a6-144">Das- `Get-Location` Cmdlet zeigt den gesamten Pfad für an `Alias:` .</span><span class="sxs-lookup"><span data-stu-id="2d9a6-144">The `Get-Location` cmdlet displays the complete path for `Alias:`.</span></span>
+<span data-ttu-id="2d9a6-145">`Get-ChildItem` sendet Objekte über die Pipeline an das `Out-File` Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-145">`Get-ChildItem` sends objects down the pipeline to the `Out-File` cmdlet.</span></span> <span data-ttu-id="2d9a6-146">`Out-File` verwendet den **FilePath** -Parameter, um den gesamten Pfad und den Dateinamen für die Ausgabe anzugeben, **C:\TestDir\AliasNames.txt**.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-146">`Out-File` uses the **FilePath** parameter to specify the complete path and filename for the output, **C:\TestDir\AliasNames.txt**.</span></span> <span data-ttu-id="2d9a6-147">Das `Get-Content` Cmdlet verwendet den **path** -Parameter und zeigt den Inhalt der Datei in der PowerShell-Konsole an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-147">The `Get-Content` cmdlet uses the **Path** parameter and displays the file's content in the PowerShell console.</span></span>
+
+## <span data-ttu-id="2d9a6-148">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2d9a6-148">PARAMETERS</span></span>
+
+### <span data-ttu-id="2d9a6-149">-Anfügen</span><span class="sxs-lookup"><span data-stu-id="2d9a6-149">-Append</span></span>
+
+<span data-ttu-id="2d9a6-150">Fügt die Ausgabe am Ende einer vorhandenen Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-150">Adds the output to the end of an existing file.</span></span> <span data-ttu-id="2d9a6-151">Wenn keine **Codierung** angegeben ist, verwendet das Cmdlet die Standard Codierung.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-151">If no **Encoding** is specified, the cmdlet uses the default encoding.</span></span> <span data-ttu-id="2d9a6-152">Diese Codierung entspricht möglicherweise nicht der Codierung der Zieldatei.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-152">That encoding may not match the encoding of the target file.</span></span> <span data-ttu-id="2d9a6-153">Dies ist das gleiche Verhalten wie der Umleitungs Operator ( `>>` ).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-153">This is the same behavior as the redirection operator (`>>`).</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-154">-Codierung</span><span class="sxs-lookup"><span data-stu-id="2d9a6-154">-Encoding</span></span>
+
+<span data-ttu-id="2d9a6-155">Gibt den Typ der Codierung für die Zieldatei an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-155">Specifies the type of encoding for the target file.</span></span> <span data-ttu-id="2d9a6-156">Der Standardwert ist `unicode`.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-156">The default value is `unicode`.</span></span>
+
+<span data-ttu-id="2d9a6-157">Die zulässigen Werte für diesen Parameter lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="2d9a6-157">The acceptable values for this parameter are as follows:</span></span>
+
+- <span data-ttu-id="2d9a6-158">`ascii` Verwendet den ASCII-Zeichensatz (7-Bit).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-158">`ascii` Uses ASCII (7-bit) character set.</span></span>
+- <span data-ttu-id="2d9a6-159">`bigendianunicode` Verwendet UTF-16 mit der Big-Endian-Byte Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-159">`bigendianunicode` Uses UTF-16 with the big-endian byte order.</span></span>
+- <span data-ttu-id="2d9a6-160">`default` Verwendet die Codierung, die der aktiven Codepage des Systems entspricht (normalerweise ANSI).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-160">`default` Uses the encoding that corresponds to the system's active code page (usually ANSI).</span></span>
+- <span data-ttu-id="2d9a6-161">`oem` Verwendet die Codierung, die der aktuellen OEM-Codepage des Systems entspricht.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-161">`oem` Uses the encoding that corresponds to the system's current OEM code page.</span></span>
+- <span data-ttu-id="2d9a6-162">`string` Identisch mit `unicode`.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-162">`string` Same as `unicode`.</span></span>
+- <span data-ttu-id="2d9a6-163">`unicode` Verwendet UTF-16 mit der Little-Endian-Byte Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-163">`unicode` Uses UTF-16 with the little-endian byte order.</span></span>
+- <span data-ttu-id="2d9a6-164">`unknown` Identisch mit `unicode`.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-164">`unknown` Same as `unicode`.</span></span>
+- <span data-ttu-id="2d9a6-165">`utf7` Verwendet UTF-7.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-165">`utf7` Uses UTF-7.</span></span>
+- <span data-ttu-id="2d9a6-166">`utf8` Verwendet UTF-8.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-166">`utf8` Uses UTF-8.</span></span>
+- <span data-ttu-id="2d9a6-167">`utf32` Verwendet UTF-32 mit der Little-Endian-Byte Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-167">`utf32` Uses UTF-32 with the little-endian byte order.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: ASCII, BigEndianUnicode, Default, OEM, String, Unicode, Unknown, UTF7, UTF8, UTF32
+
+Required: False
+Position: 1
+Default value: Unicode
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-168">-FilePath</span><span class="sxs-lookup"><span data-stu-id="2d9a6-168">-FilePath</span></span>
+
+<span data-ttu-id="2d9a6-169">Gibt den Pfad zur Ausgabedatei an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-169">Specifies the path to the output file.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByPath
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-170">-Force</span><span class="sxs-lookup"><span data-stu-id="2d9a6-170">-Force</span></span>
+
+<span data-ttu-id="2d9a6-171">Überschreibt das schreibgeschützte Attribut und überschreibt eine vorhandene schreibgeschützte Datei.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-171">Overrides the read-only attribute and overwrites an existing read-only file.</span></span> <span data-ttu-id="2d9a6-172">Der **Force** -Parameter überschreibt keine Sicherheitseinschränkungen.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-172">The **Force** parameter does not override security restrictions.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-173">-InputObject</span><span class="sxs-lookup"><span data-stu-id="2d9a6-173">-InputObject</span></span>
+
+<span data-ttu-id="2d9a6-174">Gibt die in die Datei zu schreibenden Objekte an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-174">Specifies the objects to be written to the file.</span></span> <span data-ttu-id="2d9a6-175">Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, durch den die Objekte abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-175">Enter a variable that contains the objects or type a command or expression that gets the objects.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-176">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="2d9a6-176">-LiteralPath</span></span>
+
+<span data-ttu-id="2d9a6-177">Gibt den Pfad zur Ausgabedatei an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-177">Specifies the path to the output file.</span></span> <span data-ttu-id="2d9a6-178">Der **literalpath** -Parameter wird genau so verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-178">The **LiteralPath** parameter is used exactly as it is typed.</span></span>
+<span data-ttu-id="2d9a6-179">Platzhalter Zeichen werden nicht akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-179">Wildcard characters are not accepted.</span></span> <span data-ttu-id="2d9a6-180">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-180">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="2d9a6-181">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-181">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span> <span data-ttu-id="2d9a6-182">Weitere Informationen finden Sie unter [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-182">For more information, see [about_Quoting_Rules](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md).</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: ByLiteralPath
+Aliases: PSPath
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-183">-NoClobber</span><span class="sxs-lookup"><span data-stu-id="2d9a6-183">-NoClobber</span></span>
+
+<span data-ttu-id="2d9a6-184">**NoClobber** verhindert, dass eine vorhandene Datei überschrieben wird, und zeigt eine Meldung an, dass die Datei bereits vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-184">**NoClobber** prevents an existing file from being overwritten and displays a message that the file already exists.</span></span> <span data-ttu-id="2d9a6-185">Wenn eine Datei im angegebenen Pfad vorhanden ist, wird `Out-File` die Datei standardmäßig ohne Warnung überschrieben.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-185">By default, if a file exists in the specified path, `Out-File` overwrites the file without warning.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: NoOverwrite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-186">-Nonewline</span><span class="sxs-lookup"><span data-stu-id="2d9a6-186">-NoNewline</span></span>
+
+<span data-ttu-id="2d9a6-187">Gibt an, dass der Inhalt, der in die Datei geschrieben wird, nicht mit einem Zeilen Umleitungs Zeichen endet.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-187">Specifies that the content written to the file does not end with a newline character.</span></span> <span data-ttu-id="2d9a6-188">Die Zeichen folgen Darstellungen der Eingabe Objekte werden verkettet, um die Ausgabe zu bilden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-188">The string representations of the input objects are concatenated to form the output.</span></span> <span data-ttu-id="2d9a6-189">Zwischen den Ausgabe Zeichenfolgen werden keine Leerzeichen oder Zeilenumbrüche eingefügt.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-189">No spaces or newlines are inserted between the output strings.</span></span> <span data-ttu-id="2d9a6-190">Nach der letzten Ausgabe Zeichenfolge wird kein Zeilen Vorstrich hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-190">No newline is added after the last output string.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-191">-Breite</span><span class="sxs-lookup"><span data-stu-id="2d9a6-191">-Width</span></span>
+
+<span data-ttu-id="2d9a6-192">Gibt die Anzahl der Zeichen in jeder Zeile der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-192">Specifies the number of characters in each line of output.</span></span> <span data-ttu-id="2d9a6-193">Alle zusätzlichen Zeichen werden abgeschnitten und nicht umgebrochen.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-193">Any additional characters are truncated, not wrapped.</span></span> <span data-ttu-id="2d9a6-194">Wenn dieser Parameter nicht verwendet wird, wird die Breite durch die Merkmale des Hosts bestimmt.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-194">If this parameter is not used, the width is determined by the characteristics of the host.</span></span> <span data-ttu-id="2d9a6-195">Der Standardwert für die PowerShell-Konsole ist 80 Zeichen.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-195">The default for the PowerShell console is 80 characters.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-196">-Confirm</span><span class="sxs-lookup"><span data-stu-id="2d9a6-196">-Confirm</span></span>
+
+<span data-ttu-id="2d9a6-197">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-197">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-198">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="2d9a6-198">-WhatIf</span></span>
+
+<span data-ttu-id="2d9a6-199">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-199">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="2d9a6-200">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-200">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2d9a6-201">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2d9a6-201">CommonParameters</span></span>
+
+<span data-ttu-id="2d9a6-202">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-202">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2d9a6-203">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="2d9a6-203">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="2d9a6-204">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="2d9a6-204">INPUTS</span></span>
+
+### <span data-ttu-id="2d9a6-205">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="2d9a6-205">System.Management.Automation.PSObject</span></span>
+
+<span data-ttu-id="2d9a6-206">Sie können jedes beliebige Objekt an die Pipeline übergeben `Out-File` .</span><span class="sxs-lookup"><span data-stu-id="2d9a6-206">You can pipe any object to `Out-File`.</span></span>
+
+## <span data-ttu-id="2d9a6-207">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="2d9a6-207">OUTPUTS</span></span>
+
+### <span data-ttu-id="2d9a6-208">Keine</span><span class="sxs-lookup"><span data-stu-id="2d9a6-208">None</span></span>
+
+<span data-ttu-id="2d9a6-209">`Out-File` generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-209">`Out-File` does not generate any output.</span></span>
+
+## <span data-ttu-id="2d9a6-210">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="2d9a6-210">NOTES</span></span>
+
+<span data-ttu-id="2d9a6-211">Eingabe Objekte werden automatisch wie im Terminal formatiert, Sie können jedoch ein `Format-*` Cmdlet verwenden, um die Formatierung der Ausgabe in der Datei explizit zu steuern.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-211">Input objects are automatically formatted as they would be in the terminal, but you can use a `Format-*` cmdlet to explicitly control the formatting of the output to the file.</span></span> <span data-ttu-id="2d9a6-212">Zum Beispiel, `Get-Date | Format-List | Out-File out.txt`</span><span class="sxs-lookup"><span data-stu-id="2d9a6-212">For example, `Get-Date | Format-List | Out-File out.txt`</span></span>
+
+<span data-ttu-id="2d9a6-213">Verwenden Sie die Pipeline, um die Ausgabe eines PowerShell-Befehls an das `Out-File` Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-213">To send a PowerShell command's output to the `Out-File` cmdlet, use the pipeline.</span></span> <span data-ttu-id="2d9a6-214">Alternativ können Sie Daten in einer Variablen speichern und den **Inputobject** -Parameter verwenden, um Daten an das `Out-File` Cmdlet zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-214">Alternatively, you can store data in a variable and use the **InputObject** parameter to pass data to the `Out-File` cmdlet.</span></span>
+
+<span data-ttu-id="2d9a6-215">`Out-File` speichert Daten in einer Datei, erzeugt aber keine Ausgabe Objekte in der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="2d9a6-215">`Out-File` saves data to a file but it does not produce any output objects to the pipeline.</span></span>
+
+## <span data-ttu-id="2d9a6-216">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="2d9a6-216">RELATED LINKS</span></span>
+
+[<span data-ttu-id="2d9a6-217">about_Providers</span><span class="sxs-lookup"><span data-stu-id="2d9a6-217">about_Providers</span></span>](../Microsoft.Powershell.Core/About/about_Providers.md)
+
+[<span data-ttu-id="2d9a6-218">about_Quoting_Rules</span><span class="sxs-lookup"><span data-stu-id="2d9a6-218">about_Quoting_Rules</span></span>](../Microsoft.Powershell.Core/About/about_Quoting_Rules.md)
+
+[<span data-ttu-id="2d9a6-219">Out-Default</span><span class="sxs-lookup"><span data-stu-id="2d9a6-219">Out-Default</span></span>](../Microsoft.PowerShell.Core/Out-Default.md)
+
+[<span data-ttu-id="2d9a6-220">Out-GridView</span><span class="sxs-lookup"><span data-stu-id="2d9a6-220">Out-GridView</span></span>](Out-GridView.md)
+
+[<span data-ttu-id="2d9a6-221">Out-Host</span><span class="sxs-lookup"><span data-stu-id="2d9a6-221">Out-Host</span></span>](../Microsoft.PowerShell.Core/Out-Host.md)
+
+[<span data-ttu-id="2d9a6-222">Out-Null</span><span class="sxs-lookup"><span data-stu-id="2d9a6-222">Out-Null</span></span>](../Microsoft.PowerShell.Core/Out-Null.md)
+
+[<span data-ttu-id="2d9a6-223">Out-Printer</span><span class="sxs-lookup"><span data-stu-id="2d9a6-223">Out-Printer</span></span>](Out-Printer.md)
+
+[<span data-ttu-id="2d9a6-224">Out-String</span><span class="sxs-lookup"><span data-stu-id="2d9a6-224">Out-String</span></span>](Out-String.md)
+
+[<span data-ttu-id="2d9a6-225">Tee-Object</span><span class="sxs-lookup"><span data-stu-id="2d9a6-225">Tee-Object</span></span>](Tee-Object.md)
