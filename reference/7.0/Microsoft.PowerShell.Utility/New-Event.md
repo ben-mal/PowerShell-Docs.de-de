@@ -14,43 +14,43 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/03/2020
 ms.locfileid: "93209695"
 ---
-# <span data-ttu-id="8d3ea-103">New-Event</span><span class="sxs-lookup"><span data-stu-id="8d3ea-103">New-Event</span></span>
+# <span data-ttu-id="62f0d-103">New-Event</span><span class="sxs-lookup"><span data-stu-id="62f0d-103">New-Event</span></span>
 
-## <span data-ttu-id="8d3ea-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="8d3ea-104">SYNOPSIS</span></span>
-<span data-ttu-id="8d3ea-105">Erstellt ein neues Ereignis.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-105">Creates a new event.</span></span>
+## <span data-ttu-id="62f0d-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="62f0d-104">SYNOPSIS</span></span>
+<span data-ttu-id="62f0d-105">Erstellt ein neues Ereignis.</span><span class="sxs-lookup"><span data-stu-id="62f0d-105">Creates a new event.</span></span>
 
-## <span data-ttu-id="8d3ea-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8d3ea-106">SYNTAX</span></span>
+## <span data-ttu-id="62f0d-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="62f0d-106">SYNTAX</span></span>
 
 ```
 New-Event [-SourceIdentifier] <String> [[-Sender] <PSObject>] [[-EventArguments] <PSObject[]>]
  [[-MessageData] <PSObject>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="8d3ea-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8d3ea-107">DESCRIPTION</span></span>
+## <span data-ttu-id="62f0d-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="62f0d-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="8d3ea-108">Das **New-Event-** Cmdlet erstellt ein neues benutzerdefiniertes Ereignis.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-108">The **New-Event** cmdlet creates a new custom event.</span></span>
+<span data-ttu-id="62f0d-108">Das **New-Event-** Cmdlet erstellt ein neues benutzerdefiniertes Ereignis.</span><span class="sxs-lookup"><span data-stu-id="62f0d-108">The **New-Event** cmdlet creates a new custom event.</span></span>
 
-<span data-ttu-id="8d3ea-109">Mit benutzerdefinierten Ereignissen können Sie die Benutzer über Statusänderungen in Ihrem Programm und jede Änderung benachrichtigen, die das Programm erkennen kann, einschließlich Hardware- oder Systembedingungen, Anwendungsstatus, Datenträgerstatus, Netzwerkstatus oder den Abschluss eines Auftrags im Hintergrund.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-109">You can use custom events to notify users about state changes in your program and any change that your program can detect, including hardware or system conditions, application status, disk status, network status, or the completion of a background job.</span></span>
+<span data-ttu-id="62f0d-109">Mit benutzerdefinierten Ereignissen können Sie die Benutzer über Statusänderungen in Ihrem Programm und jede Änderung benachrichtigen, die das Programm erkennen kann, einschließlich Hardware- oder Systembedingungen, Anwendungsstatus, Datenträgerstatus, Netzwerkstatus oder den Abschluss eines Auftrags im Hintergrund.</span><span class="sxs-lookup"><span data-stu-id="62f0d-109">You can use custom events to notify users about state changes in your program and any change that your program can detect, including hardware or system conditions, application status, disk status, network status, or the completion of a background job.</span></span>
 
-<span data-ttu-id="8d3ea-110">Benutzerdefinierte Ereignisse werden bei ihrer Auslösung automatisch der Warteschlange in der Sitzung hinzugefügt. Es ist kein Abonnement erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-110">Custom events are automatically added to the event queue in your session whenever they are raised; you do not need to subscribe to them.</span></span>
-<span data-ttu-id="8d3ea-111">Wenn Sie ein Ereignis jedoch an die lokale Sitzung weiterleiten oder eine Aktion zur Reaktion auf das Ereignis angeben möchten, verwenden Sie das Register-EngineEvent-Cmdlet, um das benutzerdefinierte Ereignis zu abonnieren.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-111">However, if you want to forward an event to the local session or specify an action to respond to the event, use the Register-EngineEvent cmdlet to subscribe to the custom event.</span></span>
+<span data-ttu-id="62f0d-110">Benutzerdefinierte Ereignisse werden bei ihrer Auslösung automatisch der Warteschlange in der Sitzung hinzugefügt. Es ist kein Abonnement erforderlich.</span><span class="sxs-lookup"><span data-stu-id="62f0d-110">Custom events are automatically added to the event queue in your session whenever they are raised; you do not need to subscribe to them.</span></span>
+<span data-ttu-id="62f0d-111">Wenn Sie ein Ereignis jedoch an die lokale Sitzung weiterleiten oder eine Aktion zur Reaktion auf das Ereignis angeben möchten, verwenden Sie das Register-EngineEvent-Cmdlet, um das benutzerdefinierte Ereignis zu abonnieren.</span><span class="sxs-lookup"><span data-stu-id="62f0d-111">However, if you want to forward an event to the local session or specify an action to respond to the event, use the Register-EngineEvent cmdlet to subscribe to the custom event.</span></span>
 
-<span data-ttu-id="8d3ea-112">Wenn Sie ein benutzerdefiniertes Ereignis abonnieren, wird der Ereignisabonnent Ihrer Sitzung hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-112">When you subscribe to a custom event, the event subscriber is added to your session.</span></span>
-<span data-ttu-id="8d3ea-113">Wenn Sie das Ereignisabonnement mithilfe des Unregister-Event-Cmdlets stornieren, werden der Ereignisabonnent und das benutzerdefinierte Ereignis aus der Sitzung gelöscht.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-113">If you cancel the event subscription by using the Unregister-Event cmdlet, the event subscriber and custom event are deleted from the session.</span></span>
-<span data-ttu-id="8d3ea-114">Wenn Sie das benutzerdefinierte Ereignis nicht abonnieren, müssen Sie zum Löschen des Ereignisses die Programmbedingungen ändern oder die PowerShell-Sitzung schließen.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-114">If you do not subscribe to the custom event, to delete the event, you must change the program conditions or close the PowerShell session.</span></span>
+<span data-ttu-id="62f0d-112">Wenn Sie ein benutzerdefiniertes Ereignis abonnieren, wird der Ereignisabonnent Ihrer Sitzung hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="62f0d-112">When you subscribe to a custom event, the event subscriber is added to your session.</span></span>
+<span data-ttu-id="62f0d-113">Wenn Sie das Ereignisabonnement mithilfe des Unregister-Event-Cmdlets stornieren, werden der Ereignisabonnent und das benutzerdefinierte Ereignis aus der Sitzung gelöscht.</span><span class="sxs-lookup"><span data-stu-id="62f0d-113">If you cancel the event subscription by using the Unregister-Event cmdlet, the event subscriber and custom event are deleted from the session.</span></span>
+<span data-ttu-id="62f0d-114">Wenn Sie das benutzerdefinierte Ereignis nicht abonnieren, müssen Sie zum Löschen des Ereignisses die Programmbedingungen ändern oder die PowerShell-Sitzung schließen.</span><span class="sxs-lookup"><span data-stu-id="62f0d-114">If you do not subscribe to the custom event, to delete the event, you must change the program conditions or close the PowerShell session.</span></span>
 
-## <span data-ttu-id="8d3ea-115">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="8d3ea-115">EXAMPLES</span></span>
+## <span data-ttu-id="62f0d-115">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="62f0d-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="8d3ea-116">Beispiel 1: Erstellen eines neuen Ereignisses in der Ereignis Warteschlange</span><span class="sxs-lookup"><span data-stu-id="8d3ea-116">Example 1: Create a new event in the event queue</span></span>
+### <span data-ttu-id="62f0d-116">Beispiel 1: Erstellen eines neuen Ereignisses in der Ereignis Warteschlange</span><span class="sxs-lookup"><span data-stu-id="62f0d-116">Example 1: Create a new event in the event queue</span></span>
 
 ```
 PS C:\> New-Event -SourceIdentifier Timer -Sender windows.timer -MessageData "Test"
 ```
 
-<span data-ttu-id="8d3ea-117">Dieser Befehl erstellt ein neues Ereignis in der PowerShell-Ereignis Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-117">This command creates a new event in the PowerShell event queue.</span></span>
-<span data-ttu-id="8d3ea-118">Er verwendet ein **Windows. Timer** -Objekt, um das Ereignis zu senden.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-118">It uses a **Windows.Timer** object to send the event.</span></span>
+<span data-ttu-id="62f0d-117">Dieser Befehl erstellt ein neues Ereignis in der PowerShell-Ereignis Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="62f0d-117">This command creates a new event in the PowerShell event queue.</span></span>
+<span data-ttu-id="62f0d-118">Er verwendet ein **Windows. Timer** -Objekt, um das Ereignis zu senden.</span><span class="sxs-lookup"><span data-stu-id="62f0d-118">It uses a **Windows.Timer** object to send the event.</span></span>
 
-### <span data-ttu-id="8d3ea-119">Beispiel 2: Ausführen eines Ereignisses als Reaktion auf ein anderes Ereignis</span><span class="sxs-lookup"><span data-stu-id="8d3ea-119">Example 2: Raise an event in response to another event</span></span>
+### <span data-ttu-id="62f0d-119">Beispiel 2: Ausführen eines Ereignisses als Reaktion auf ein anderes Ereignis</span><span class="sxs-lookup"><span data-stu-id="62f0d-119">Example 2: Raise an event in response to another event</span></span>
 
 ```
 PS C:\> function Enable-ProcessCreationEvent
@@ -65,17 +65,17 @@ PS C:\> function Enable-ProcessCreationEvent
 }
 ```
 
-<span data-ttu-id="8d3ea-120">Diese Beispiel Funktion verwendet das **New-Event-** Cmdlet, um ein Ereignis als Reaktion auf ein anderes Ereignis aufzurichten.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-120">This sample function uses the **New-Event** cmdlet to raise an event in response to another event.</span></span>
-<span data-ttu-id="8d3ea-121">Der Befehl verwendet das Register-ObjectEvent-Cmdlet zum Abonnieren des Ereignisses der Windows-Verwaltungsinstrumentation (WMI), das beim Erstellen eines neuen Prozesses ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-121">The command uses the Register-ObjectEvent cmdlet to subscribe to the Windows Management Instrumentation (WMI) event that is raised when a new process is created.</span></span>
-<span data-ttu-id="8d3ea-122">Der Befehl verwendet den *Action* -Parameter des Cmdlets, um das **New-Event-** Cmdlet aufzurufen, das das neue Ereignis erstellt.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-122">The command uses the *Action* parameter of the cmdlet to call the **New-Event** cmdlet, which creates the new event.</span></span>
+<span data-ttu-id="62f0d-120">Diese Beispiel Funktion verwendet das **New-Event-** Cmdlet, um ein Ereignis als Reaktion auf ein anderes Ereignis aufzurichten.</span><span class="sxs-lookup"><span data-stu-id="62f0d-120">This sample function uses the **New-Event** cmdlet to raise an event in response to another event.</span></span>
+<span data-ttu-id="62f0d-121">Der Befehl verwendet das Register-ObjectEvent-Cmdlet zum Abonnieren des Ereignisses der Windows-Verwaltungsinstrumentation (WMI), das beim Erstellen eines neuen Prozesses ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="62f0d-121">The command uses the Register-ObjectEvent cmdlet to subscribe to the Windows Management Instrumentation (WMI) event that is raised when a new process is created.</span></span>
+<span data-ttu-id="62f0d-122">Der Befehl verwendet den *Action* -Parameter des Cmdlets, um das **New-Event-** Cmdlet aufzurufen, das das neue Ereignis erstellt.</span><span class="sxs-lookup"><span data-stu-id="62f0d-122">The command uses the *Action* parameter of the cmdlet to call the **New-Event** cmdlet, which creates the new event.</span></span>
 
-<span data-ttu-id="8d3ea-123">Da die von **New-Event ausgelösten** Ereignisse der PowerShell-Ereignis Warteschlange automatisch hinzugefügt werden, müssen Sie sich für dieses Ereignis nicht registrieren.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-123">Because the events that **New-Event** raises are automatically added to the PowerShell event queue, you do not need to register for that event.</span></span>
+<span data-ttu-id="62f0d-123">Da die von **New-Event ausgelösten** Ereignisse der PowerShell-Ereignis Warteschlange automatisch hinzugefügt werden, müssen Sie sich für dieses Ereignis nicht registrieren.</span><span class="sxs-lookup"><span data-stu-id="62f0d-123">Because the events that **New-Event** raises are automatically added to the PowerShell event queue, you do not need to register for that event.</span></span>
 
-## <span data-ttu-id="8d3ea-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8d3ea-124">PARAMETERS</span></span>
+## <span data-ttu-id="62f0d-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="62f0d-124">PARAMETERS</span></span>
 
-### <span data-ttu-id="8d3ea-125">-Eventarguments</span><span class="sxs-lookup"><span data-stu-id="8d3ea-125">-EventArguments</span></span>
+### <span data-ttu-id="62f0d-125">-Eventarguments</span><span class="sxs-lookup"><span data-stu-id="62f0d-125">-EventArguments</span></span>
 
-<span data-ttu-id="8d3ea-126">Gibt ein Objekt an, das Optionen für das Ereignis enthält.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-126">Specifies an object that contains options for the event.</span></span>
+<span data-ttu-id="62f0d-126">Gibt ein Objekt an, das Optionen für das Ereignis enthält.</span><span class="sxs-lookup"><span data-stu-id="62f0d-126">Specifies an object that contains options for the event.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject[]
@@ -89,10 +89,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8d3ea-127">-MessageData</span><span class="sxs-lookup"><span data-stu-id="8d3ea-127">-MessageData</span></span>
+### <span data-ttu-id="62f0d-127">-MessageData</span><span class="sxs-lookup"><span data-stu-id="62f0d-127">-MessageData</span></span>
 
-<span data-ttu-id="8d3ea-128">Gibt zusätzliche Daten an, die dem Ereignis zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-128">Specifies additional data associated with the event.</span></span>
-<span data-ttu-id="8d3ea-129">Der Wert dieses Parameters wird in der **MessageData** -Eigenschaft des Ereignisobjekts angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-129">The value of this parameter appears in the **MessageData** property of the event object.</span></span>
+<span data-ttu-id="62f0d-128">Gibt zusätzliche Daten an, die dem Ereignis zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="62f0d-128">Specifies additional data associated with the event.</span></span>
+<span data-ttu-id="62f0d-129">Der Wert dieses Parameters wird in der **MessageData** -Eigenschaft des Ereignisobjekts angezeigt.</span><span class="sxs-lookup"><span data-stu-id="62f0d-129">The value of this parameter appears in the **MessageData** property of the event object.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -106,10 +106,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8d3ea-130">-Absender</span><span class="sxs-lookup"><span data-stu-id="8d3ea-130">-Sender</span></span>
+### <span data-ttu-id="62f0d-130">-Absender</span><span class="sxs-lookup"><span data-stu-id="62f0d-130">-Sender</span></span>
 
-<span data-ttu-id="8d3ea-131">Gibt das Objekt an, das das Ereignis auslöst.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-131">Specifies the object that raises the event.</span></span>
-<span data-ttu-id="8d3ea-132">Der Standardwert ist das PowerShell-Modul.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-132">The default is the PowerShell engine.</span></span>
+<span data-ttu-id="62f0d-131">Gibt das Objekt an, das das Ereignis auslöst.</span><span class="sxs-lookup"><span data-stu-id="62f0d-131">Specifies the object that raises the event.</span></span>
+<span data-ttu-id="62f0d-132">Der Standardwert ist das PowerShell-Modul.</span><span class="sxs-lookup"><span data-stu-id="62f0d-132">The default is the PowerShell engine.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -123,12 +123,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8d3ea-133">-SourceIdentifier</span><span class="sxs-lookup"><span data-stu-id="8d3ea-133">-SourceIdentifier</span></span>
+### <span data-ttu-id="62f0d-133">-SourceIdentifier</span><span class="sxs-lookup"><span data-stu-id="62f0d-133">-SourceIdentifier</span></span>
 
-<span data-ttu-id="8d3ea-134">Gibt einen Namen für das neue Ereignis an.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-134">Specifies a name for the new event.</span></span>
-<span data-ttu-id="8d3ea-135">Dieser Parameter ist erforderlich und muss in der Sitzung eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-135">This parameter is required, and it must be unique in the session.</span></span>
+<span data-ttu-id="62f0d-134">Gibt einen Namen für das neue Ereignis an.</span><span class="sxs-lookup"><span data-stu-id="62f0d-134">Specifies a name for the new event.</span></span>
+<span data-ttu-id="62f0d-135">Dieser Parameter ist erforderlich und muss in der Sitzung eindeutig sein.</span><span class="sxs-lookup"><span data-stu-id="62f0d-135">This parameter is required, and it must be unique in the session.</span></span>
 
-<span data-ttu-id="8d3ea-136">Der Wert dieses Parameters wird in der **SourceIdentifier** -Eigenschaft der Ereignisse angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-136">The value of this parameter appears in the **SourceIdentifier** property of the events.</span></span>
+<span data-ttu-id="62f0d-136">Der Wert dieses Parameters wird in der **SourceIdentifier** -Eigenschaft der Ereignisse angezeigt.</span><span class="sxs-lookup"><span data-stu-id="62f0d-136">The value of this parameter appears in the **SourceIdentifier** property of the events.</span></span>
 
 ```yaml
 Type: System.String
@@ -142,34 +142,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8d3ea-137">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8d3ea-137">CommonParameters</span></span>
+### <span data-ttu-id="62f0d-137">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="62f0d-137">CommonParameters</span></span>
 
-<span data-ttu-id="8d3ea-138">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-138">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8d3ea-139">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8d3ea-139">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="62f0d-138">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="62f0d-138">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="62f0d-139">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="62f0d-139">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="8d3ea-140">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="8d3ea-140">INPUTS</span></span>
+## <span data-ttu-id="62f0d-140">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="62f0d-140">INPUTS</span></span>
 
-### <span data-ttu-id="8d3ea-141">Keine</span><span class="sxs-lookup"><span data-stu-id="8d3ea-141">None</span></span>
+### <span data-ttu-id="62f0d-141">Keine</span><span class="sxs-lookup"><span data-stu-id="62f0d-141">None</span></span>
 
-<span data-ttu-id="8d3ea-142">Eingaben können nicht an dieses Cmdlet weitergereicht werden.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-142">You cannot pipe input to this cmdlet.</span></span>
+<span data-ttu-id="62f0d-142">Eingaben können nicht an dieses Cmdlet weitergereicht werden.</span><span class="sxs-lookup"><span data-stu-id="62f0d-142">You cannot pipe input to this cmdlet.</span></span>
 
-## <span data-ttu-id="8d3ea-143">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="8d3ea-143">OUTPUTS</span></span>
+## <span data-ttu-id="62f0d-143">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="62f0d-143">OUTPUTS</span></span>
 
-### <span data-ttu-id="8d3ea-144">System. Management. Automation. psiebziger args</span><span class="sxs-lookup"><span data-stu-id="8d3ea-144">System.Management.Automation.PSEventArgs</span></span>
+### <span data-ttu-id="62f0d-144">System. Management. Automation. psiebziger args</span><span class="sxs-lookup"><span data-stu-id="62f0d-144">System.Management.Automation.PSEventArgs</span></span>
 
-## <span data-ttu-id="8d3ea-145">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="8d3ea-145">NOTES</span></span>
+## <span data-ttu-id="62f0d-145">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="62f0d-145">NOTES</span></span>
 
-<span data-ttu-id="8d3ea-146">Das neue benutzerdefinierte Ereignis, das Ereignisabonnement und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-146">The new custom event, the event subscription, and the event queue exist only in the current session.</span></span> <span data-ttu-id="8d3ea-147">Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="8d3ea-147">If you close the current session, the event queue is discarded and the event subscription is canceled.</span></span>
+<span data-ttu-id="62f0d-146">Das neue benutzerdefinierte Ereignis, das Ereignisabonnement und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden.</span><span class="sxs-lookup"><span data-stu-id="62f0d-146">The new custom event, the event subscription, and the event queue exist only in the current session.</span></span> <span data-ttu-id="62f0d-147">Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="62f0d-147">If you close the current session, the event queue is discarded and the event subscription is canceled.</span></span>
 
-## <span data-ttu-id="8d3ea-148">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="8d3ea-148">RELATED LINKS</span></span>
+## <span data-ttu-id="62f0d-148">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="62f0d-148">RELATED LINKS</span></span>
 
-[<span data-ttu-id="8d3ea-149">Get-Event</span><span class="sxs-lookup"><span data-stu-id="8d3ea-149">Get-Event</span></span>](Get-Event.md)
+[<span data-ttu-id="62f0d-149">Get-Event</span><span class="sxs-lookup"><span data-stu-id="62f0d-149">Get-Event</span></span>](Get-Event.md)
 
-[<span data-ttu-id="8d3ea-150">Register-EngineEvent</span><span class="sxs-lookup"><span data-stu-id="8d3ea-150">Register-EngineEvent</span></span>](Register-EngineEvent.md)
+[<span data-ttu-id="62f0d-150">Register-EngineEvent</span><span class="sxs-lookup"><span data-stu-id="62f0d-150">Register-EngineEvent</span></span>](Register-EngineEvent.md)
 
-[<span data-ttu-id="8d3ea-151">Register-ObjectEvent</span><span class="sxs-lookup"><span data-stu-id="8d3ea-151">Register-ObjectEvent</span></span>](Register-ObjectEvent.md)
+[<span data-ttu-id="62f0d-151">Register-ObjectEvent</span><span class="sxs-lookup"><span data-stu-id="62f0d-151">Register-ObjectEvent</span></span>](Register-ObjectEvent.md)
 
-[<span data-ttu-id="8d3ea-152">Remove-Event</span><span class="sxs-lookup"><span data-stu-id="8d3ea-152">Remove-Event</span></span>](Remove-Event.md)
+[<span data-ttu-id="62f0d-152">Remove-Event</span><span class="sxs-lookup"><span data-stu-id="62f0d-152">Remove-Event</span></span>](Remove-Event.md)
 
-[<span data-ttu-id="8d3ea-153">Unregister-Event</span><span class="sxs-lookup"><span data-stu-id="8d3ea-153">Unregister-Event</span></span>](Unregister-Event.md)
+[<span data-ttu-id="62f0d-153">Unregister-Event</span><span class="sxs-lookup"><span data-stu-id="62f0d-153">Unregister-Event</span></span>](Unregister-Event.md)
 
-[<span data-ttu-id="8d3ea-154">Wait-Event</span><span class="sxs-lookup"><span data-stu-id="8d3ea-154">Wait-Event</span></span>](Wait-Event.md)
+[<span data-ttu-id="62f0d-154">Wait-Event</span><span class="sxs-lookup"><span data-stu-id="62f0d-154">Wait-Event</span></span>](Wait-Event.md)

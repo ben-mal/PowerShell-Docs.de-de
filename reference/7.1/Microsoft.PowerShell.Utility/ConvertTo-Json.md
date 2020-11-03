@@ -14,12 +14,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "93215863"
 ---
-# <span data-ttu-id="73169-103">ConvertTo-Json</span><span class="sxs-lookup"><span data-stu-id="73169-103">ConvertTo-Json</span></span>
+# <span data-ttu-id="71c04-103">ConvertTo-Json</span><span class="sxs-lookup"><span data-stu-id="71c04-103">ConvertTo-Json</span></span>
 
-## <span data-ttu-id="73169-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="73169-104">SYNOPSIS</span></span>
-<span data-ttu-id="73169-105">Konvertiert ein Objekt in eine JSON-formatierte Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="73169-105">Converts an object to a JSON-formatted string.</span></span>
+## <span data-ttu-id="71c04-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="71c04-104">SYNOPSIS</span></span>
+<span data-ttu-id="71c04-105">Konvertiert ein Objekt in eine JSON-formatierte Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="71c04-105">Converts an object to a JSON-formatted string.</span></span>
 
-## <span data-ttu-id="73169-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="73169-106">SYNTAX</span></span>
+## <span data-ttu-id="71c04-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="71c04-106">SYNTAX</span></span>
 
 ```
 ConvertTo-Json [-InputObject] <Object> [-Depth <Int32>] [-Compress]
@@ -27,19 +27,19 @@ ConvertTo-Json [-InputObject] <Object> [-Depth <Int32>] [-Compress]
 [<CommonParameters>]
 ```
 
-## <span data-ttu-id="73169-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="73169-107">DESCRIPTION</span></span>
+## <span data-ttu-id="71c04-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="71c04-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="73169-108">Mit dem- `ConvertTo-Json` Cmdlet wird ein beliebiges .NET-Objekt in eine Zeichenfolge im JSON-Format (JavaScript Object Notation) konvertiert.</span><span class="sxs-lookup"><span data-stu-id="73169-108">The `ConvertTo-Json` cmdlet converts any .NET object to a string in JavaScript Object Notation (JSON) format.</span></span> <span data-ttu-id="73169-109">Die Eigenschaften werden in Feldnamen konvertiert, die Feldwerte werden in Eigenschaftswerte konvertiert, und die Methoden werden entfernt.</span><span class="sxs-lookup"><span data-stu-id="73169-109">The properties are converted to field names, the field values are converted to property values, and the methods are removed.</span></span>
+<span data-ttu-id="71c04-108">Mit dem- `ConvertTo-Json` Cmdlet wird ein beliebiges .NET-Objekt in eine Zeichenfolge im JSON-Format (JavaScript Object Notation) konvertiert.</span><span class="sxs-lookup"><span data-stu-id="71c04-108">The `ConvertTo-Json` cmdlet converts any .NET object to a string in JavaScript Object Notation (JSON) format.</span></span> <span data-ttu-id="71c04-109">Die Eigenschaften werden in Feldnamen konvertiert, die Feldwerte werden in Eigenschaftswerte konvertiert, und die Methoden werden entfernt.</span><span class="sxs-lookup"><span data-stu-id="71c04-109">The properties are converted to field names, the field values are converted to property values, and the methods are removed.</span></span>
 
-<span data-ttu-id="73169-110">Sie können dann mit dem `ConvertFrom-Json` Cmdlet eine JSON-formatierte Zeichenfolge in ein JSON-Objekt konvertieren, das leicht in PowerShell verwaltet werden kann.</span><span class="sxs-lookup"><span data-stu-id="73169-110">You can then use the `ConvertFrom-Json` cmdlet to convert a JSON-formatted string to a JSON object, which is easily managed in PowerShell.</span></span>
+<span data-ttu-id="71c04-110">Sie können dann mit dem `ConvertFrom-Json` Cmdlet eine JSON-formatierte Zeichenfolge in ein JSON-Objekt konvertieren, das leicht in PowerShell verwaltet werden kann.</span><span class="sxs-lookup"><span data-stu-id="71c04-110">You can then use the `ConvertFrom-Json` cmdlet to convert a JSON-formatted string to a JSON object, which is easily managed in PowerShell.</span></span>
 
-<span data-ttu-id="73169-111">Viele Websites verwenden JSON statt XML, um Daten für die Kommunikation zwischen Servern und webbasierten Apps zu serialisieren.</span><span class="sxs-lookup"><span data-stu-id="73169-111">Many web sites use JSON instead of XML to serialize data for communication between servers and web-based apps.</span></span>
+<span data-ttu-id="71c04-111">Viele Websites verwenden JSON statt XML, um Daten für die Kommunikation zwischen Servern und webbasierten Apps zu serialisieren.</span><span class="sxs-lookup"><span data-stu-id="71c04-111">Many web sites use JSON instead of XML to serialize data for communication between servers and web-based apps.</span></span>
 
-<span data-ttu-id="73169-112">Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="73169-112">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="71c04-112">Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="71c04-112">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
 
-## <span data-ttu-id="73169-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="73169-113">EXAMPLES</span></span>
+## <span data-ttu-id="71c04-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="71c04-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="73169-114">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="73169-114">Example 1</span></span>
+### <span data-ttu-id="71c04-114">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="71c04-114">Example 1</span></span>
 
 ```powershell
 (Get-UICulture).Calendar | ConvertTo-Json
@@ -59,9 +59,9 @@ ConvertTo-Json [-InputObject] <Object> [-Depth <Int32>] [-Compress]
 }
 ```
 
-<span data-ttu-id="73169-115">Dieser Befehl verwendet das `ConvertTo-Json` Cmdlet, um ein GregorianCalendar-Objekt in eine JSON-formatierte Zeichenfolge zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="73169-115">This command uses the `ConvertTo-Json` cmdlet to convert a GregorianCalendar object to a JSON-formatted string.</span></span>
+<span data-ttu-id="71c04-115">Dieser Befehl verwendet das `ConvertTo-Json` Cmdlet, um ein GregorianCalendar-Objekt in eine JSON-formatierte Zeichenfolge zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="71c04-115">This command uses the `ConvertTo-Json` cmdlet to convert a GregorianCalendar object to a JSON-formatted string.</span></span>
 
-### <span data-ttu-id="73169-116">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="73169-116">Example 2</span></span>
+### <span data-ttu-id="71c04-116">Beispiel 2</span><span class="sxs-lookup"><span data-stu-id="71c04-116">Example 2</span></span>
 
 ```powershell
 Get-Date | ConvertTo-Json; Get-Date | ConvertTo-Json -AsArray
@@ -82,9 +82,9 @@ Get-Date | ConvertTo-Json; Get-Date | ConvertTo-Json -AsArray
 ]
 ```
 
-<span data-ttu-id="73169-117">Dieses Beispiel zeigt die Ausgabe des `ConvertTo-Json` Cmdlets mit und ohne den **asarray** -Switch-Parameter.</span><span class="sxs-lookup"><span data-stu-id="73169-117">This example shows the output from `ConvertTo-Json` cmdlet with and without the **AsArray** switch parameter.</span></span> <span data-ttu-id="73169-118">Sie können sehen, dass der zweite Teil der Ausgabe in eckige Klammern eingeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="73169-118">You can see the second portion of the output is wrapped in array brackets.</span></span>
+<span data-ttu-id="71c04-117">Dieses Beispiel zeigt die Ausgabe des `ConvertTo-Json` Cmdlets mit und ohne den **asarray** -Switch-Parameter.</span><span class="sxs-lookup"><span data-stu-id="71c04-117">This example shows the output from `ConvertTo-Json` cmdlet with and without the **AsArray** switch parameter.</span></span> <span data-ttu-id="71c04-118">Sie können sehen, dass der zweite Teil der Ausgabe in eckige Klammern eingeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="71c04-118">You can see the second portion of the output is wrapped in array brackets.</span></span>
 
-### <span data-ttu-id="73169-119">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="73169-119">Example 3</span></span>
+### <span data-ttu-id="71c04-119">Beispiel 3</span><span class="sxs-lookup"><span data-stu-id="71c04-119">Example 3</span></span>
 
 ```powershell
 @{Account="User01";Domain="Domain01";Admin="True"} | ConvertTo-Json -Compress
@@ -94,9 +94,9 @@ Get-Date | ConvertTo-Json; Get-Date | ConvertTo-Json -AsArray
 {"Domain":"Domain01","Account":"User01","Admin":"True"}
 ```
 
-<span data-ttu-id="73169-120">Dieser Befehl zeigt die Auswirkung der Verwendung des Parameters " **Compress** " von `ConvertTo-Json` .</span><span class="sxs-lookup"><span data-stu-id="73169-120">This command shows the effect of using the **Compress** parameter of `ConvertTo-Json`.</span></span> <span data-ttu-id="73169-121">Die Komprimierung wirkt sich nur auf die Darstellung der Zeichenfolge, nicht auf ihre Gültigkeit aus.</span><span class="sxs-lookup"><span data-stu-id="73169-121">The compression affects only the appearance of the string, not its validity.</span></span>
+<span data-ttu-id="71c04-120">Dieser Befehl zeigt die Auswirkung der Verwendung des Parameters " **Compress** " von `ConvertTo-Json` .</span><span class="sxs-lookup"><span data-stu-id="71c04-120">This command shows the effect of using the **Compress** parameter of `ConvertTo-Json`.</span></span> <span data-ttu-id="71c04-121">Die Komprimierung wirkt sich nur auf die Darstellung der Zeichenfolge, nicht auf ihre Gültigkeit aus.</span><span class="sxs-lookup"><span data-stu-id="71c04-121">The compression affects only the appearance of the string, not its validity.</span></span>
 
-### <span data-ttu-id="73169-122">Beispiel 4</span><span class="sxs-lookup"><span data-stu-id="73169-122">Example 4</span></span>
+### <span data-ttu-id="71c04-122">Beispiel 4</span><span class="sxs-lookup"><span data-stu-id="71c04-122">Example 4</span></span>
 
 ```powershell
 Get-Date | Select-Object -Property * | ConvertTo-Json
@@ -134,9 +134,9 @@ Get-Date | Select-Object -Property * | ConvertTo-Json
 }
 ```
 
-<span data-ttu-id="73169-123">In diesem Beispiel wird das- `ConvertTo-Json` Cmdlet zum Konvertieren eines **System. DateTime** -Objekts aus dem `Get-Date` Cmdlet in eine JSON-formatierte Zeichenfolge verwendet.</span><span class="sxs-lookup"><span data-stu-id="73169-123">This example uses the `ConvertTo-Json` cmdlet to convert a **System.DateTime** object from the `Get-Date` cmdlet to a JSON-formatted string.</span></span> <span data-ttu-id="73169-124">Der Befehl verwendet das `Select-Object` Cmdlet, um alle ( `*` ) der Eigenschaften des **DateTime** -Objekts zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="73169-124">The command uses the `Select-Object` cmdlet to get all (`*`) of the properties of the **DateTime** object.</span></span> <span data-ttu-id="73169-125">Die Ausgabe zeigt die JSON-Zeichenfolge, die `ConvertTo-Json` zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="73169-125">The output shows the JSON string that `ConvertTo-Json` returned.</span></span>
+<span data-ttu-id="71c04-123">In diesem Beispiel wird das- `ConvertTo-Json` Cmdlet zum Konvertieren eines **System. DateTime** -Objekts aus dem `Get-Date` Cmdlet in eine JSON-formatierte Zeichenfolge verwendet.</span><span class="sxs-lookup"><span data-stu-id="71c04-123">This example uses the `ConvertTo-Json` cmdlet to convert a **System.DateTime** object from the `Get-Date` cmdlet to a JSON-formatted string.</span></span> <span data-ttu-id="71c04-124">Der Befehl verwendet das `Select-Object` Cmdlet, um alle ( `*` ) der Eigenschaften des **DateTime** -Objekts zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="71c04-124">The command uses the `Select-Object` cmdlet to get all (`*`) of the properties of the **DateTime** object.</span></span> <span data-ttu-id="71c04-125">Die Ausgabe zeigt die JSON-Zeichenfolge, die `ConvertTo-Json` zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="71c04-125">The output shows the JSON string that `ConvertTo-Json` returned.</span></span>
 
-### <span data-ttu-id="73169-126">Beispiel 5</span><span class="sxs-lookup"><span data-stu-id="73169-126">Example 5</span></span>
+### <span data-ttu-id="71c04-126">Beispiel 5</span><span class="sxs-lookup"><span data-stu-id="71c04-126">Example 5</span></span>
 
 ```powershell
 Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json
@@ -162,29 +162,13 @@ TimeOfDay   : @{Ticks=825527683372; Days=0; Hours=22; Milliseconds=768; Minutes=
 Year        : 2018
 ```
 
-<span data-ttu-id="73169-127">In diesem Beispiel wird gezeigt, wie `ConvertTo-Json` die `ConvertFrom-Json` Cmdlets und verwendet werden, um ein Objekt in eine JSON-Zeichenfolge und ein JSON-Objekt zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="73169-127">This example shows how to use the `ConvertTo-Json` and `ConvertFrom-Json` cmdlets to convert an object to a JSON string and a JSON object.</span></span>
+<span data-ttu-id="71c04-127">In diesem Beispiel wird gezeigt, wie `ConvertTo-Json` die `ConvertFrom-Json` Cmdlets und verwendet werden, um ein Objekt in eine JSON-Zeichenfolge und ein JSON-Objekt zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="71c04-127">This example shows how to use the `ConvertTo-Json` and `ConvertFrom-Json` cmdlets to convert an object to a JSON string and a JSON object.</span></span>
 
-## <span data-ttu-id="73169-128">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="73169-128">PARAMETERS</span></span>
+## <span data-ttu-id="71c04-128">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="71c04-128">PARAMETERS</span></span>
 
-### <span data-ttu-id="73169-129">-Asarray</span><span class="sxs-lookup"><span data-stu-id="73169-129">-AsArray</span></span>
+### <span data-ttu-id="71c04-129">-Asarray</span><span class="sxs-lookup"><span data-stu-id="71c04-129">-AsArray</span></span>
 
-<span data-ttu-id="73169-130">Gibt das-Objekt in Array Klammern aus, auch wenn die Eingabe ein einzelnes Objekt ist.</span><span class="sxs-lookup"><span data-stu-id="73169-130">Outputs the object in array brackets, even if the input is a single object.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="73169-131">-Komprimieren</span><span class="sxs-lookup"><span data-stu-id="73169-131">-Compress</span></span>
-
-<span data-ttu-id="73169-132">Lässt Leerstellen und eingerückte Formatierungen in der Ausgabezeichenfolge aus.</span><span class="sxs-lookup"><span data-stu-id="73169-132">Omits white space and indented formatting in the output string.</span></span>
+<span data-ttu-id="71c04-130">Gibt das-Objekt in Array Klammern aus, auch wenn die Eingabe ein einzelnes Objekt ist.</span><span class="sxs-lookup"><span data-stu-id="71c04-130">Outputs the object in array brackets, even if the input is a single object.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -198,9 +182,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="73169-133">-Tiefe</span><span class="sxs-lookup"><span data-stu-id="73169-133">-Depth</span></span>
+### <span data-ttu-id="71c04-131">-Komprimieren</span><span class="sxs-lookup"><span data-stu-id="71c04-131">-Compress</span></span>
 
-<span data-ttu-id="73169-134">Gibt an, wie viele Ebenen der enthaltenen Objekte in der JSON-Darstellung enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="73169-134">Specifies how many levels of contained objects are included in the JSON representation.</span></span> <span data-ttu-id="73169-135">Der Standardwert ist 2.</span><span class="sxs-lookup"><span data-stu-id="73169-135">The default value is 2.</span></span>
+<span data-ttu-id="71c04-132">Lässt Leerstellen und eingerückte Formatierungen in der Ausgabezeichenfolge aus.</span><span class="sxs-lookup"><span data-stu-id="71c04-132">Omits white space and indented formatting in the output string.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="71c04-133">-Tiefe</span><span class="sxs-lookup"><span data-stu-id="71c04-133">-Depth</span></span>
+
+<span data-ttu-id="71c04-134">Gibt an, wie viele Ebenen der enthaltenen Objekte in der JSON-Darstellung enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="71c04-134">Specifies how many levels of contained objects are included in the JSON representation.</span></span> <span data-ttu-id="71c04-135">Der Standardwert ist 2.</span><span class="sxs-lookup"><span data-stu-id="71c04-135">The default value is 2.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -214,9 +214,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="73169-136">-Enumsasstrings</span><span class="sxs-lookup"><span data-stu-id="73169-136">-EnumsAsStrings</span></span>
+### <span data-ttu-id="71c04-136">-Enumsasstrings</span><span class="sxs-lookup"><span data-stu-id="71c04-136">-EnumsAsStrings</span></span>
 
-<span data-ttu-id="73169-137">Stellt eine Alternative Serialisierungsoption bereit, die alle Enumerationen in ihre Zeichen folgen Darstellung konvertiert.</span><span class="sxs-lookup"><span data-stu-id="73169-137">Provides an alternative serialization option that converts all enumerations to their string representation.</span></span>
+<span data-ttu-id="71c04-137">Stellt eine Alternative Serialisierungsoption bereit, die alle Enumerationen in ihre Zeichen folgen Darstellung konvertiert.</span><span class="sxs-lookup"><span data-stu-id="71c04-137">Provides an alternative serialization option that converts all enumerations to their string representation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -230,17 +230,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="73169-138">-Escapehanding</span><span class="sxs-lookup"><span data-stu-id="73169-138">-EscapeHandling</span></span>
+### <span data-ttu-id="71c04-138">-Escapehanding</span><span class="sxs-lookup"><span data-stu-id="71c04-138">-EscapeHandling</span></span>
 
-<span data-ttu-id="73169-139">Steuert, wie bestimmte Zeichen in der resultierenden JSON-Ausgabe mit Escapezeichen versehen werden.</span><span class="sxs-lookup"><span data-stu-id="73169-139">Controls how certain characters are escaped in the resulting JSON output.</span></span> <span data-ttu-id="73169-140">Standardmäßig werden nur Steuerzeichen mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="73169-140">By default, only control characters (like newline) are escaped.</span></span>
+<span data-ttu-id="71c04-139">Steuert, wie bestimmte Zeichen in der resultierenden JSON-Ausgabe mit Escapezeichen versehen werden.</span><span class="sxs-lookup"><span data-stu-id="71c04-139">Controls how certain characters are escaped in the resulting JSON output.</span></span> <span data-ttu-id="71c04-140">Standardmäßig werden nur Steuerzeichen mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="71c04-140">By default, only control characters (like newline) are escaped.</span></span>
 
-<span data-ttu-id="73169-141">Zulässige Werte sind:</span><span class="sxs-lookup"><span data-stu-id="73169-141">Acceptable values are:</span></span>
+<span data-ttu-id="71c04-141">Zulässige Werte sind:</span><span class="sxs-lookup"><span data-stu-id="71c04-141">Acceptable values are:</span></span>
 
-- <span data-ttu-id="73169-142">Nur-Standard Steuerzeichen werden mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="73169-142">Default - Only control characters are escaped.</span></span>
-- <span data-ttu-id="73169-143">Escapesonascii-alle nicht-ASCII-und-Steuerzeichen werden mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="73169-143">EscapeNonAscii - All non-ASCII and control characters are escaped.</span></span>
-- <span data-ttu-id="73169-144">EscapeHtml-HTML ( `<` , `>` , `&` , `'` , `"` ) und Steuerzeichen werden mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="73169-144">EscapeHtml - HTML (`<`, `>`, `&`, `'`, `"`) and control characters are escaped.</span></span>
+- <span data-ttu-id="71c04-142">Nur-Standard Steuerzeichen werden mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="71c04-142">Default - Only control characters are escaped.</span></span>
+- <span data-ttu-id="71c04-143">Escapesonascii-alle nicht-ASCII-und-Steuerzeichen werden mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="71c04-143">EscapeNonAscii - All non-ASCII and control characters are escaped.</span></span>
+- <span data-ttu-id="71c04-144">EscapeHtml-HTML ( `<` , `>` , `&` , `'` , `"` ) und Steuerzeichen werden mit Escapezeichen versehen.</span><span class="sxs-lookup"><span data-stu-id="71c04-144">EscapeHtml - HTML (`<`, `>`, `&`, `'`, `"`) and control characters are escaped.</span></span>
 
-<span data-ttu-id="73169-145">Dieser Parameter wurde in PowerShell 6,2 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="73169-145">This parameter was introduced in PowerShell 6.2.</span></span>
+<span data-ttu-id="71c04-145">Dieser Parameter wurde in PowerShell 6,2 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="71c04-145">This parameter was introduced in PowerShell 6.2.</span></span>
 
 ```yaml
 Type: Newtonsoft.Json.StringEscapeHandling
@@ -254,12 +254,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="73169-146">-InputObject</span><span class="sxs-lookup"><span data-stu-id="73169-146">-InputObject</span></span>
+### <span data-ttu-id="71c04-146">-InputObject</span><span class="sxs-lookup"><span data-stu-id="71c04-146">-InputObject</span></span>
 
-<span data-ttu-id="73169-147">Gibt die Objekte an, die in das JSON-Format konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="73169-147">Specifies the objects to convert to JSON format.</span></span> <span data-ttu-id="73169-148">Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="73169-148">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span> <span data-ttu-id="73169-149">Sie können ein Objekt auch über die Pipeline an übergeben `ConvertTo-Json` .</span><span class="sxs-lookup"><span data-stu-id="73169-149">You can also pipe an object to `ConvertTo-Json`.</span></span>
+<span data-ttu-id="71c04-147">Gibt die Objekte an, die in das JSON-Format konvertiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="71c04-147">Specifies the objects to convert to JSON format.</span></span> <span data-ttu-id="71c04-148">Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="71c04-148">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span> <span data-ttu-id="71c04-149">Sie können ein Objekt auch über die Pipeline an übergeben `ConvertTo-Json` .</span><span class="sxs-lookup"><span data-stu-id="71c04-149">You can also pipe an object to `ConvertTo-Json`.</span></span>
 
-<span data-ttu-id="73169-150">Der **Inputobject** -Parameter ist erforderlich, aber sein Wert kann NULL ( `$null` ) oder eine leere Zeichenfolge sein.</span><span class="sxs-lookup"><span data-stu-id="73169-150">The **InputObject** parameter is required, but its value can be null (`$null`) or an empty string.</span></span>
-<span data-ttu-id="73169-151">Wenn das Eingabe Objekt ist `$null` , `ConvertTo-Json` generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="73169-151">When the input object is `$null`, `ConvertTo-Json` does not generate any output.</span></span> <span data-ttu-id="73169-152">Wenn das Eingabe Objekt eine leere Zeichenfolge ist, wird `ConvertTo-Json` eine leere Zeichenfolge zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="73169-152">When the input object is an empty string, `ConvertTo-Json` returns an empty string.</span></span>
+<span data-ttu-id="71c04-150">Der **Inputobject** -Parameter ist erforderlich, aber sein Wert kann NULL ( `$null` ) oder eine leere Zeichenfolge sein.</span><span class="sxs-lookup"><span data-stu-id="71c04-150">The **InputObject** parameter is required, but its value can be null (`$null`) or an empty string.</span></span>
+<span data-ttu-id="71c04-151">Wenn das Eingabe Objekt ist `$null` , `ConvertTo-Json` generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="71c04-151">When the input object is `$null`, `ConvertTo-Json` does not generate any output.</span></span> <span data-ttu-id="71c04-152">Wenn das Eingabe Objekt eine leere Zeichenfolge ist, wird `ConvertTo-Json` eine leere Zeichenfolge zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="71c04-152">When the input object is an empty string, `ConvertTo-Json` returns an empty string.</span></span>
 
 ```yaml
 Type: System.Object
@@ -273,37 +273,37 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="73169-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="73169-153">CommonParameters</span></span>
+### <span data-ttu-id="71c04-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="71c04-153">CommonParameters</span></span>
 
-<span data-ttu-id="73169-154">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="73169-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="73169-155">Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="73169-155">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="71c04-154">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="71c04-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="71c04-155">Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="71c04-155">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
 
-## <span data-ttu-id="73169-156">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="73169-156">INPUTS</span></span>
+## <span data-ttu-id="71c04-156">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="71c04-156">INPUTS</span></span>
 
-### <span data-ttu-id="73169-157">System.Object</span><span class="sxs-lookup"><span data-stu-id="73169-157">System.Object</span></span>
+### <span data-ttu-id="71c04-157">System.Object</span><span class="sxs-lookup"><span data-stu-id="71c04-157">System.Object</span></span>
 
-<span data-ttu-id="73169-158">Sie können jedes beliebige Objekt an die Pipeline übergeben `ConvertTo-Json` .</span><span class="sxs-lookup"><span data-stu-id="73169-158">You can pipe any object to `ConvertTo-Json`.</span></span>
+<span data-ttu-id="71c04-158">Sie können jedes beliebige Objekt an die Pipeline übergeben `ConvertTo-Json` .</span><span class="sxs-lookup"><span data-stu-id="71c04-158">You can pipe any object to `ConvertTo-Json`.</span></span>
 
-## <span data-ttu-id="73169-159">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="73169-159">OUTPUTS</span></span>
+## <span data-ttu-id="71c04-159">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="71c04-159">OUTPUTS</span></span>
 
-### <span data-ttu-id="73169-160">System.String</span><span class="sxs-lookup"><span data-stu-id="73169-160">System.String</span></span>
+### <span data-ttu-id="71c04-160">System.String</span><span class="sxs-lookup"><span data-stu-id="71c04-160">System.String</span></span>
 
-## <span data-ttu-id="73169-161">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="73169-161">NOTES</span></span>
+## <span data-ttu-id="71c04-161">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="71c04-161">NOTES</span></span>
 
-<span data-ttu-id="73169-162">Das `ConvertTo-Json` Cmdlet wird mithilfe von [newtonsoft JSON.net](https://www.newtonsoft.com/json)implementiert.</span><span class="sxs-lookup"><span data-stu-id="73169-162">The `ConvertTo-Json` cmdlet is implemented using [Newtonsoft Json.NET](https://www.newtonsoft.com/json).</span></span>
+<span data-ttu-id="71c04-162">Das `ConvertTo-Json` Cmdlet wird mithilfe von [newtonsoft JSON.net](https://www.newtonsoft.com/json)implementiert.</span><span class="sxs-lookup"><span data-stu-id="71c04-162">The `ConvertTo-Json` cmdlet is implemented using [Newtonsoft Json.NET](https://www.newtonsoft.com/json).</span></span>
 
-## <span data-ttu-id="73169-163">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="73169-163">RELATED LINKS</span></span>
+## <span data-ttu-id="71c04-163">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="71c04-163">RELATED LINKS</span></span>
 
-<span data-ttu-id="73169-164">[Eine Einführung in JavaScript Object Notation (JSON) in JavaScript und .net](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span><span class="sxs-lookup"><span data-stu-id="73169-164">[An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span></span>
+<span data-ttu-id="71c04-164">[Eine Einführung in JavaScript Object Notation (JSON) in JavaScript und .net](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span><span class="sxs-lookup"><span data-stu-id="71c04-164">[An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET](/previous-versions/dotnet/articles/bb299886(v=msdn.10))</span></span>
 
-[<span data-ttu-id="73169-165">ConvertFrom-Json</span><span class="sxs-lookup"><span data-stu-id="73169-165">ConvertFrom-Json</span></span>](ConvertFrom-Json.md)
+[<span data-ttu-id="71c04-165">ConvertFrom-Json</span><span class="sxs-lookup"><span data-stu-id="71c04-165">ConvertFrom-Json</span></span>](ConvertFrom-Json.md)
 
-[<span data-ttu-id="73169-166">Get-Content</span><span class="sxs-lookup"><span data-stu-id="73169-166">Get-Content</span></span>](../Microsoft.PowerShell.Management/Get-Content.md)
+[<span data-ttu-id="71c04-166">Get-Content</span><span class="sxs-lookup"><span data-stu-id="71c04-166">Get-Content</span></span>](../Microsoft.PowerShell.Management/Get-Content.md)
 
-[<span data-ttu-id="73169-167">Get-UICulture</span><span class="sxs-lookup"><span data-stu-id="73169-167">Get-UICulture</span></span>](Get-UICulture.md)
+[<span data-ttu-id="71c04-167">Get-UICulture</span><span class="sxs-lookup"><span data-stu-id="71c04-167">Get-UICulture</span></span>](Get-UICulture.md)
 
-[<span data-ttu-id="73169-168">Invoke-WebRequest</span><span class="sxs-lookup"><span data-stu-id="73169-168">Invoke-WebRequest</span></span>](Invoke-WebRequest.md)
+[<span data-ttu-id="71c04-168">Invoke-WebRequest</span><span class="sxs-lookup"><span data-stu-id="71c04-168">Invoke-WebRequest</span></span>](Invoke-WebRequest.md)
 
-[<span data-ttu-id="73169-169">Invoke-RestMethod</span><span class="sxs-lookup"><span data-stu-id="73169-169">Invoke-RestMethod</span></span>](Invoke-RestMethod.md)
+[<span data-ttu-id="71c04-169">Invoke-RestMethod</span><span class="sxs-lookup"><span data-stu-id="71c04-169">Invoke-RestMethod</span></span>](Invoke-RestMethod.md)
 
-[<span data-ttu-id="73169-170">NewtonSoft.Js. Stringescapehanding</span><span class="sxs-lookup"><span data-stu-id="73169-170">NewtonSoft.Json.StringEscapeHandling</span></span>](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm)
+[<span data-ttu-id="71c04-170">NewtonSoft.Js. Stringescapehanding</span><span class="sxs-lookup"><span data-stu-id="71c04-170">NewtonSoft.Json.StringEscapeHandling</span></span>](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm)
 

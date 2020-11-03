@@ -14,24 +14,24 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "93215695"
 ---
-# <span data-ttu-id="e65f4-103">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="e65f4-103">Get-PSRepository</span></span>
+# <span data-ttu-id="5f1ff-103">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="5f1ff-103">Get-PSRepository</span></span>
 
-## <span data-ttu-id="e65f4-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="e65f4-104">SYNOPSIS</span></span>
-<span data-ttu-id="e65f4-105">Ruft PowerShell-Repository ab.</span><span class="sxs-lookup"><span data-stu-id="e65f4-105">Gets PowerShell repositories.</span></span>
+## <span data-ttu-id="5f1ff-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="5f1ff-104">SYNOPSIS</span></span>
+<span data-ttu-id="5f1ff-105">Ruft PowerShell-Repository ab.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-105">Gets PowerShell repositories.</span></span>
 
-## <span data-ttu-id="e65f4-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="e65f4-106">SYNTAX</span></span>
+## <span data-ttu-id="5f1ff-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="5f1ff-106">SYNTAX</span></span>
 
 ```
 Get-PSRepository [[-Name] <String[]>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="e65f4-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="e65f4-107">DESCRIPTION</span></span>
+## <span data-ttu-id="5f1ff-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="5f1ff-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="e65f4-108">Mit dem Cmdlet " **Get-psrepository** " werden PowerShell-moduldepots abgerufen, die für den aktuellen Benutzer registriert sind.</span><span class="sxs-lookup"><span data-stu-id="e65f4-108">The **Get-PSRepository** cmdlet gets PowerShell module repositories that are registered for the current user.</span></span>
+<span data-ttu-id="5f1ff-108">Mit dem Cmdlet " **Get-psrepository** " werden PowerShell-moduldepots abgerufen, die für den aktuellen Benutzer registriert sind.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-108">The **Get-PSRepository** cmdlet gets PowerShell module repositories that are registered for the current user.</span></span>
 
-## <span data-ttu-id="e65f4-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="e65f4-109">EXAMPLES</span></span>
+## <span data-ttu-id="5f1ff-109">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="5f1ff-109">EXAMPLES</span></span>
 
-### <span data-ttu-id="e65f4-110">Beispiel 1: alle modultrepositorys</span><span class="sxs-lookup"><span data-stu-id="e65f4-110">Example 1: Get all module repositories</span></span>
+### <span data-ttu-id="5f1ff-110">Beispiel 1: alle modultrepositorys</span><span class="sxs-lookup"><span data-stu-id="5f1ff-110">Example 1: Get all module repositories</span></span>
 
 ```
 PS C:\> Get-PSRepository
@@ -41,17 +41,17 @@ PSGallery                                http://go.micro...                     
 myNuGetSource                            https://myget.c...                                 NuGet                Trusted
 ```
 
-<span data-ttu-id="e65f4-111">Mit diesem Befehl werden alle moduldepots abgerufen, die für den aktuellen Benutzer registriert sind.</span><span class="sxs-lookup"><span data-stu-id="e65f4-111">This command gets all module repositories registered for the current user.</span></span>
+<span data-ttu-id="5f1ff-111">Mit diesem Befehl werden alle moduldepots abgerufen, die für den aktuellen Benutzer registriert sind.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-111">This command gets all module repositories registered for the current user.</span></span>
 
-### <span data-ttu-id="e65f4-112">Beispiel 2: Get Module Repository by Name</span><span class="sxs-lookup"><span data-stu-id="e65f4-112">Example 2: Get module repositories by name</span></span>
+### <span data-ttu-id="5f1ff-112">Beispiel 2: Get Module Repository by Name</span><span class="sxs-lookup"><span data-stu-id="5f1ff-112">Example 2: Get module repositories by name</span></span>
 
 ```
 PS C:\> Get-PSRepository -Name "*NuGet*"
 ```
 
-<span data-ttu-id="e65f4-113">Dieser Befehl ruft alle modultrepositorys ab, deren Namen nuget enthalten.</span><span class="sxs-lookup"><span data-stu-id="e65f4-113">This command gets all module repositories that include NuGet in their names.</span></span>
+<span data-ttu-id="5f1ff-113">Dieser Befehl ruft alle modultrepositorys ab, deren Namen nuget enthalten.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-113">This command gets all module repositories that include NuGet in their names.</span></span>
 
-### <span data-ttu-id="e65f4-114">Beispiel 3: erhalten eines modulrepository und Formatieren der Ausgabe</span><span class="sxs-lookup"><span data-stu-id="e65f4-114">Example 3: Get a module repository and format the output</span></span>
+### <span data-ttu-id="5f1ff-114">Beispiel 3: erhalten eines modulrepository und Formatieren der Ausgabe</span><span class="sxs-lookup"><span data-stu-id="5f1ff-114">Example 3: Get a module repository and format the output</span></span>
 
 ```
 PS C:\> Get-PSRepository -Name "Local01" | Format-List * -Force
@@ -67,13 +67,13 @@ ScriptPublishLocation     : http://pattif-dev:8765/api/v2/package/
 ProviderOptions           : {}
 ```
 
-<span data-ttu-id="e65f4-115">Dieser Befehl ruft das Repository mit dem Namen Local01 ab und verwendet den Pipeline-Operator, um dieses Objekt an das Format-List-Cmdlet zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="e65f4-115">This command gets the repository named Local01 and uses the pipeline operator to pass that object to the Format-List cmdlet.</span></span>
+<span data-ttu-id="5f1ff-115">Dieser Befehl ruft das Repository mit dem Namen Local01 ab und verwendet den Pipeline-Operator, um dieses Objekt an das Format-List-Cmdlet zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-115">This command gets the repository named Local01 and uses the pipeline operator to pass that object to the Format-List cmdlet.</span></span>
 
-## <span data-ttu-id="e65f4-116">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="e65f4-116">PARAMETERS</span></span>
+## <span data-ttu-id="5f1ff-116">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5f1ff-116">PARAMETERS</span></span>
 
-### <span data-ttu-id="e65f4-117">-Name</span><span class="sxs-lookup"><span data-stu-id="e65f4-117">-Name</span></span>
+### <span data-ttu-id="5f1ff-117">-Name</span><span class="sxs-lookup"><span data-stu-id="5f1ff-117">-Name</span></span>
 
-<span data-ttu-id="e65f4-118">Gibt die Namen der zu erzurufenden Depots an.</span><span class="sxs-lookup"><span data-stu-id="e65f4-118">Specifies the names of the repositories to get.</span></span>
+<span data-ttu-id="5f1ff-118">Gibt die Namen der zu erzurufenden Depots an.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-118">Specifies the names of the repositories to get.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -87,25 +87,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e65f4-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="e65f4-119">CommonParameters</span></span>
+### <span data-ttu-id="5f1ff-119">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5f1ff-119">CommonParameters</span></span>
 
-<span data-ttu-id="e65f4-120">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="e65f4-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="e65f4-121">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="e65f4-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="5f1ff-120">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5f1ff-120">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5f1ff-121">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="5f1ff-121">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="e65f4-122">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="e65f4-122">INPUTS</span></span>
+## <span data-ttu-id="5f1ff-122">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="5f1ff-122">INPUTS</span></span>
 
-### <span data-ttu-id="e65f4-123">System.String[]</span><span class="sxs-lookup"><span data-stu-id="e65f4-123">System.String[]</span></span>
+### <span data-ttu-id="5f1ff-123">System.String[]</span><span class="sxs-lookup"><span data-stu-id="5f1ff-123">System.String[]</span></span>
 
-## <span data-ttu-id="e65f4-124">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="e65f4-124">OUTPUTS</span></span>
+## <span data-ttu-id="5f1ff-124">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="5f1ff-124">OUTPUTS</span></span>
 
-### <span data-ttu-id="e65f4-125">System.Object</span><span class="sxs-lookup"><span data-stu-id="e65f4-125">System.Object</span></span>
+### <span data-ttu-id="5f1ff-125">System.Object</span><span class="sxs-lookup"><span data-stu-id="5f1ff-125">System.Object</span></span>
 
-## <span data-ttu-id="e65f4-126">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="e65f4-126">NOTES</span></span>
+## <span data-ttu-id="5f1ff-126">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="5f1ff-126">NOTES</span></span>
 
-## <span data-ttu-id="e65f4-127">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="e65f4-127">RELATED LINKS</span></span>
+## <span data-ttu-id="5f1ff-127">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="5f1ff-127">RELATED LINKS</span></span>
 
-[<span data-ttu-id="e65f4-128">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="e65f4-128">Register-PSRepository</span></span>](Register-PSRepository.md)
+[<span data-ttu-id="5f1ff-128">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="5f1ff-128">Register-PSRepository</span></span>](Register-PSRepository.md)
 
-[<span data-ttu-id="e65f4-129">Set-PSRepository</span><span class="sxs-lookup"><span data-stu-id="e65f4-129">Set-PSRepository</span></span>](Set-PSRepository.md)
+[<span data-ttu-id="5f1ff-129">Set-PSRepository</span><span class="sxs-lookup"><span data-stu-id="5f1ff-129">Set-PSRepository</span></span>](Set-PSRepository.md)
 
-[<span data-ttu-id="e65f4-130">Unregister-PSRepository</span><span class="sxs-lookup"><span data-stu-id="e65f4-130">Unregister-PSRepository</span></span>](Unregister-PSRepository.md)
+[<span data-ttu-id="5f1ff-130">Unregister-PSRepository</span><span class="sxs-lookup"><span data-stu-id="5f1ff-130">Unregister-PSRepository</span></span>](Unregister-PSRepository.md)
 

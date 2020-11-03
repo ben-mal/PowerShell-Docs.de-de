@@ -14,52 +14,52 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/03/2020
 ms.locfileid: "93210172"
 ---
-# <span data-ttu-id="f7bb1-103">Protect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="f7bb1-103">Protect-CmsMessage</span></span>
+# <span data-ttu-id="254b8-103">Protect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="254b8-103">Protect-CmsMessage</span></span>
 
-## <span data-ttu-id="f7bb1-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="f7bb1-104">SYNOPSIS</span></span>
-<span data-ttu-id="f7bb1-105">Verschlüsselt Inhalt mithilfe des kryptografischen Nachrichten Syntax Formats.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-105">Encrypts content by using the Cryptographic Message Syntax format.</span></span>
+## <span data-ttu-id="254b8-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="254b8-104">SYNOPSIS</span></span>
+<span data-ttu-id="254b8-105">Verschlüsselt Inhalt mithilfe des kryptografischen Nachrichten Syntax Formats.</span><span class="sxs-lookup"><span data-stu-id="254b8-105">Encrypts content by using the Cryptographic Message Syntax format.</span></span>
 
-## <span data-ttu-id="f7bb1-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="f7bb1-106">SYNTAX</span></span>
+## <span data-ttu-id="254b8-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="254b8-106">SYNTAX</span></span>
 
-### <span data-ttu-id="f7bb1-107">Bycontent (Standard)</span><span class="sxs-lookup"><span data-stu-id="f7bb1-107">ByContent (Default)</span></span>
+### <span data-ttu-id="254b8-107">Bycontent (Standard)</span><span class="sxs-lookup"><span data-stu-id="254b8-107">ByContent (Default)</span></span>
 
 ```
 Protect-CmsMessage [-To] <CmsMessageRecipient[]> [-Content] <PSObject> [[-OutFile] <String>]
  [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f7bb1-108">Bypath</span><span class="sxs-lookup"><span data-stu-id="f7bb1-108">ByPath</span></span>
+### <span data-ttu-id="254b8-108">Bypath</span><span class="sxs-lookup"><span data-stu-id="254b8-108">ByPath</span></span>
 
 ```
 Protect-CmsMessage [-To] <CmsMessageRecipient[]> [-Path] <String> [[-OutFile] <String>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="f7bb1-109">Byliteralpath</span><span class="sxs-lookup"><span data-stu-id="f7bb1-109">ByLiteralPath</span></span>
+### <span data-ttu-id="254b8-109">Byliteralpath</span><span class="sxs-lookup"><span data-stu-id="254b8-109">ByLiteralPath</span></span>
 
 ```
 Protect-CmsMessage [-To] <CmsMessageRecipient[]> [-LiteralPath] <String> [[-OutFile] <String>]
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="f7bb1-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="f7bb1-110">DESCRIPTION</span></span>
+## <span data-ttu-id="254b8-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="254b8-110">DESCRIPTION</span></span>
 
-<span data-ttu-id="f7bb1-111">Das `Protect-CmsMessage` Cmdlet verschlüsselt Inhalte mithilfe des CMS-Formats (Cryptographic Message Syntax).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-111">The `Protect-CmsMessage` cmdlet encrypts content by using the Cryptographic Message Syntax (CMS) format.</span></span>
+<span data-ttu-id="254b8-111">Das `Protect-CmsMessage` Cmdlet verschlüsselt Inhalte mithilfe des CMS-Formats (Cryptographic Message Syntax).</span><span class="sxs-lookup"><span data-stu-id="254b8-111">The `Protect-CmsMessage` cmdlet encrypts content by using the Cryptographic Message Syntax (CMS) format.</span></span>
 
-<span data-ttu-id="f7bb1-112">Die CMS-Cmdlets unterstützen die Verschlüsselung und Entschlüsselung von Inhalten mithilfe des IETF-Formats, wie von [RFC5652](https://tools.ietf.org/html/rfc5652.html)dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-112">The CMS cmdlets support encryption and decryption of content using the IETF format as documented by [RFC5652](https://tools.ietf.org/html/rfc5652.html).</span></span>
+<span data-ttu-id="254b8-112">Die CMS-Cmdlets unterstützen die Verschlüsselung und Entschlüsselung von Inhalten mithilfe des IETF-Formats, wie von [RFC5652](https://tools.ietf.org/html/rfc5652.html)dokumentiert.</span><span class="sxs-lookup"><span data-stu-id="254b8-112">The CMS cmdlets support encryption and decryption of content using the IETF format as documented by [RFC5652](https://tools.ietf.org/html/rfc5652.html).</span></span>
 
-<span data-ttu-id="f7bb1-113">Der CMS-Verschlüsselungsstandard verwendet die Kryptografie mit öffentlichem Schlüssel, bei der die Schlüssel zum Verschlüsseln von Inhalten (der öffentliche Schlüssel) und die Schlüssel, die zum Entschlüsseln von Inhalten (der private Schlüssel) verwendet werden, separat sind.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-113">The CMS encryption standard uses public key cryptography, where the keys used to encrypt content (the public key) and the keys used to decrypt content (the private key) are separate.</span></span> <span data-ttu-id="f7bb1-114">Ihr öffentlicher Schlüssel kann umfassend freigegeben werden, da seine Daten nicht vertraulich sind.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-114">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="f7bb1-115">Wenn Inhalte mit diesem öffentlichen Schlüssel verschlüsselt sind, können sie nur mit Ihrem privaten Schlüssel entschlüsselt werden.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-115">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="f7bb1-116">Weitere Informationen finden Sie unter [Public-Key-Verschlüsselungsverfahren](https://en.wikipedia.org/wiki/Public-key_cryptography).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-116">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
+<span data-ttu-id="254b8-113">Der CMS-Verschlüsselungsstandard verwendet die Kryptografie mit öffentlichem Schlüssel, bei der die Schlüssel zum Verschlüsseln von Inhalten (der öffentliche Schlüssel) und die Schlüssel, die zum Entschlüsseln von Inhalten (der private Schlüssel) verwendet werden, separat sind.</span><span class="sxs-lookup"><span data-stu-id="254b8-113">The CMS encryption standard uses public key cryptography, where the keys used to encrypt content (the public key) and the keys used to decrypt content (the private key) are separate.</span></span> <span data-ttu-id="254b8-114">Ihr öffentlicher Schlüssel kann umfassend freigegeben werden, da seine Daten nicht vertraulich sind.</span><span class="sxs-lookup"><span data-stu-id="254b8-114">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="254b8-115">Wenn Inhalte mit diesem öffentlichen Schlüssel verschlüsselt sind, können sie nur mit Ihrem privaten Schlüssel entschlüsselt werden.</span><span class="sxs-lookup"><span data-stu-id="254b8-115">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="254b8-116">Weitere Informationen finden Sie unter [Public-Key-Verschlüsselungsverfahren](https://en.wikipedia.org/wiki/Public-key_cryptography).</span><span class="sxs-lookup"><span data-stu-id="254b8-116">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
 
-<span data-ttu-id="f7bb1-117">Bevor Sie das `Protect-CmsMessage` Cmdlet ausführen können, müssen Sie ein Verschlüsselungs Zertifikat eingerichtet haben.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-117">Before you can run the `Protect-CmsMessage` cmdlet, you must have an encryption certificate set up.</span></span>
-<span data-ttu-id="f7bb1-118">Um in PowerShell erkannt zu werden, benötigen Verschlüsselungs Zertifikate eine eindeutige[EKU](/windows/desktop/SecCrypto/eku)-ID (Extended Key Usage), um Sie als Daten Verschlüsselungs Zertifikate zu identifizieren (z. b. die IDs für Code Signierung und verschlüsselte e-Mail).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-118">To be recognized in PowerShell, encryption certificates require a unique extended key usage ([EKU](/windows/desktop/SecCrypto/eku)) ID to identify them as data encryption certificates (such as the IDs for Code Signing and Encrypted Mail).</span></span> <span data-ttu-id="f7bb1-119">Ein Beispiel für ein Zertifikat, das für die Dokument Verschlüsselung funktioniert, finden Sie in Beispiel 1 in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-119">For an example of a certificate that would work for document encryption, see Example 1 in this topic.</span></span>
+<span data-ttu-id="254b8-117">Bevor Sie das `Protect-CmsMessage` Cmdlet ausführen können, müssen Sie ein Verschlüsselungs Zertifikat eingerichtet haben.</span><span class="sxs-lookup"><span data-stu-id="254b8-117">Before you can run the `Protect-CmsMessage` cmdlet, you must have an encryption certificate set up.</span></span>
+<span data-ttu-id="254b8-118">Um in PowerShell erkannt zu werden, benötigen Verschlüsselungs Zertifikate eine eindeutige[EKU](/windows/desktop/SecCrypto/eku)-ID (Extended Key Usage), um Sie als Daten Verschlüsselungs Zertifikate zu identifizieren (z. b. die IDs für Code Signierung und verschlüsselte e-Mail).</span><span class="sxs-lookup"><span data-stu-id="254b8-118">To be recognized in PowerShell, encryption certificates require a unique extended key usage ([EKU](/windows/desktop/SecCrypto/eku)) ID to identify them as data encryption certificates (such as the IDs for Code Signing and Encrypted Mail).</span></span> <span data-ttu-id="254b8-119">Ein Beispiel für ein Zertifikat, das für die Dokument Verschlüsselung funktioniert, finden Sie in Beispiel 1 in diesem Thema.</span><span class="sxs-lookup"><span data-stu-id="254b8-119">For an example of a certificate that would work for document encryption, see Example 1 in this topic.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f7bb1-120">Dieses Cmdlet ist nur unter Windows verfügbar.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-120">This cmdlet is only available on Windows.</span></span>
+> <span data-ttu-id="254b8-120">Dieses Cmdlet ist nur unter Windows verfügbar.</span><span class="sxs-lookup"><span data-stu-id="254b8-120">This cmdlet is only available on Windows.</span></span>
 
-## <span data-ttu-id="f7bb1-121">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="f7bb1-121">EXAMPLES</span></span>
+## <span data-ttu-id="254b8-121">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="254b8-121">EXAMPLES</span></span>
 
-### <span data-ttu-id="f7bb1-122">Beispiel 1: Erstellen eines Zertifikats zum Verschlüsseln von Inhalten</span><span class="sxs-lookup"><span data-stu-id="f7bb1-122">Example 1: Create a certificate for encrypting content</span></span>
+### <span data-ttu-id="254b8-122">Beispiel 1: Erstellen eines Zertifikats zum Verschlüsseln von Inhalten</span><span class="sxs-lookup"><span data-stu-id="254b8-122">Example 1: Create a certificate for encrypting content</span></span>
 
-<span data-ttu-id="f7bb1-123">Bevor Sie das `Protect-CmsMessage` Cmdlet ausführen können, müssen Sie ein Verschlüsselungs Zertifikat erstellen.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-123">Before you can run the `Protect-CmsMessage` cmdlet, you must create an encryption certificate.</span></span> <span data-ttu-id="f7bb1-124">Ändern Sie den Namen in der Betreffzeile unter Verwendung des folgenden Texts in ihren Namen, Ihre e-Mail-Adresse oder einen anderen Bezeichner, und speichern Sie das Zertifikat in einer Datei (z `DocumentEncryption.inf` . b., wie in diesem Beispiel gezeigt).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-124">Using the following text, change the name in the Subject line to your name, email, or other identifier, and save the certificate in a file (such as `DocumentEncryption.inf`, as shown in this example).</span></span>
+<span data-ttu-id="254b8-123">Bevor Sie das `Protect-CmsMessage` Cmdlet ausführen können, müssen Sie ein Verschlüsselungs Zertifikat erstellen.</span><span class="sxs-lookup"><span data-stu-id="254b8-123">Before you can run the `Protect-CmsMessage` cmdlet, you must create an encryption certificate.</span></span> <span data-ttu-id="254b8-124">Ändern Sie den Namen in der Betreffzeile unter Verwendung des folgenden Texts in ihren Namen, Ihre e-Mail-Adresse oder einen anderen Bezeichner, und speichern Sie das Zertifikat in einer Datei (z `DocumentEncryption.inf` . b., wie in diesem Beispiel gezeigt).</span><span class="sxs-lookup"><span data-stu-id="254b8-124">Using the following text, change the name in the Subject line to your name, email, or other identifier, and save the certificate in a file (such as `DocumentEncryption.inf`, as shown in this example).</span></span>
 
 ```powershell
 # Create .INF file for certreq
@@ -92,28 +92,28 @@ ValidityPeriodUnits = "1000"
 certreq.exe -new DocumentEncryption.inf DocumentEncryption.cer
 ```
 
-### <span data-ttu-id="f7bb1-125">Beispiel 2: Verschlüsseln einer per e-Mail gesendeten Nachricht</span><span class="sxs-lookup"><span data-stu-id="f7bb1-125">Example 2: Encrypt a message sent by email</span></span>
+### <span data-ttu-id="254b8-125">Beispiel 2: Verschlüsseln einer per e-Mail gesendeten Nachricht</span><span class="sxs-lookup"><span data-stu-id="254b8-125">Example 2: Encrypt a message sent by email</span></span>
 
 ```powershell
 $Protected = "Hello World" | Protect-CmsMessage -To "*youralias@emailaddress.com*"
 ```
 
-<span data-ttu-id="f7bb1-126">Im folgenden Beispiel verschlüsseln Sie die Meldung "Hallo Welt", indem Sie Sie an das `Protect-CmsMessage` Cmdlet weiterleiten, und speichern dann die verschlüsselte Nachricht in einer Variablen.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-126">In the following example, you encrypt a message, "Hello World", by piping it to the `Protect-CmsMessage` cmdlet, and then save the encrypted message in a variable.</span></span> <span data-ttu-id="f7bb1-127">Der **to** -Parameter verwendet den Wert der Betreffzeile im Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-127">The **To** parameter uses the value of the Subject line in the certificate.</span></span>
+<span data-ttu-id="254b8-126">Im folgenden Beispiel verschlüsseln Sie die Meldung "Hallo Welt", indem Sie Sie an das `Protect-CmsMessage` Cmdlet weiterleiten, und speichern dann die verschlüsselte Nachricht in einer Variablen.</span><span class="sxs-lookup"><span data-stu-id="254b8-126">In the following example, you encrypt a message, "Hello World", by piping it to the `Protect-CmsMessage` cmdlet, and then save the encrypted message in a variable.</span></span> <span data-ttu-id="254b8-127">Der **to** -Parameter verwendet den Wert der Betreffzeile im Zertifikat.</span><span class="sxs-lookup"><span data-stu-id="254b8-127">The **To** parameter uses the value of the Subject line in the certificate.</span></span>
 
-### <span data-ttu-id="f7bb1-128">Beispiel 3: Anzeigen von Dokumenten Verschlüsselungs Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="f7bb1-128">Example 3: View document encryption certificates</span></span>
+### <span data-ttu-id="254b8-128">Beispiel 3: Anzeigen von Dokumenten Verschlüsselungs Zertifikaten</span><span class="sxs-lookup"><span data-stu-id="254b8-128">Example 3: View document encryption certificates</span></span>
 
 ```
 PS C:\> cd Cert:\CurrentUser\My
 PS Cert:\CurrentUser\My> Get-ChildItem -DocumentEncryptionCert
 ```
 
-<span data-ttu-id="f7bb1-129">Um Dokument Verschlüsselungs Zertifikate im Zertifikat Anbieter anzuzeigen, können Sie den dynamischen **documentverschlüsseltioncert** -Parameter von [Get-ChildItem](../Microsoft.PowerShell.Management/Get-ChildItem.md)hinzufügen, der nur verfügbar ist, wenn der Zertifikat Anbieter geladen wird.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-129">To view document encryption certificates in the certificate provider, you can add the **DocumentEncryptionCert** dynamic parameter of [Get-ChildItem](../Microsoft.PowerShell.Management/Get-ChildItem.md), available only when the certificate provider is loaded.</span></span>
+<span data-ttu-id="254b8-129">Um Dokument Verschlüsselungs Zertifikate im Zertifikat Anbieter anzuzeigen, können Sie den dynamischen **documentverschlüsseltioncert** -Parameter von [Get-ChildItem](../Microsoft.PowerShell.Management/Get-ChildItem.md)hinzufügen, der nur verfügbar ist, wenn der Zertifikat Anbieter geladen wird.</span><span class="sxs-lookup"><span data-stu-id="254b8-129">To view document encryption certificates in the certificate provider, you can add the **DocumentEncryptionCert** dynamic parameter of [Get-ChildItem](../Microsoft.PowerShell.Management/Get-ChildItem.md), available only when the certificate provider is loaded.</span></span>
 
-## <span data-ttu-id="f7bb1-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="f7bb1-130">PARAMETERS</span></span>
+## <span data-ttu-id="254b8-130">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="254b8-130">PARAMETERS</span></span>
 
-### <span data-ttu-id="f7bb1-131">-Inhalt</span><span class="sxs-lookup"><span data-stu-id="f7bb1-131">-Content</span></span>
+### <span data-ttu-id="254b8-131">-Inhalt</span><span class="sxs-lookup"><span data-stu-id="254b8-131">-Content</span></span>
 
-<span data-ttu-id="f7bb1-132">Gibt ein **psobject** an, das Inhalte enthält, die Sie verschlüsseln möchten.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-132">Specifies a **PSObject** that contains content that you want to encrypt.</span></span> <span data-ttu-id="f7bb1-133">Beispielsweise können Sie den Inhalt einer Ereignis Nachricht verschlüsseln und dann die Variable mit der Meldung ( `$Event` in diesem Beispiel) als Wert für den **Content** -Parameter verwenden: `$event = Get-WinEvent -ProviderName "PowerShell" -MaxEvents 1` .</span><span class="sxs-lookup"><span data-stu-id="f7bb1-133">For example, you can encrypt the content of an event message, and then use the variable containing the message (`$Event`, in this example) as the value of the **Content** parameter: `$event = Get-WinEvent -ProviderName "PowerShell" -MaxEvents 1`.</span></span> <span data-ttu-id="f7bb1-134">Sie können auch das- `Get-Content` Cmdlet verwenden, um den Inhalt einer Datei, z. b. ein Microsoft Word-Dokument, zu erhalten und den Inhalt in einer Variablen zu speichern, die Sie als Wert des **Content** -Parameters verwenden.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-134">You can also use the `Get-Content` cmdlet to get the contents of a file, such as a Microsoft Word document, and save the content in a variable that you use as the value of the **Content** parameter.</span></span>
+<span data-ttu-id="254b8-132">Gibt ein **psobject** an, das Inhalte enthält, die Sie verschlüsseln möchten.</span><span class="sxs-lookup"><span data-stu-id="254b8-132">Specifies a **PSObject** that contains content that you want to encrypt.</span></span> <span data-ttu-id="254b8-133">Beispielsweise können Sie den Inhalt einer Ereignis Nachricht verschlüsseln und dann die Variable mit der Meldung ( `$Event` in diesem Beispiel) als Wert für den **Content** -Parameter verwenden: `$event = Get-WinEvent -ProviderName "PowerShell" -MaxEvents 1` .</span><span class="sxs-lookup"><span data-stu-id="254b8-133">For example, you can encrypt the content of an event message, and then use the variable containing the message (`$Event`, in this example) as the value of the **Content** parameter: `$event = Get-WinEvent -ProviderName "PowerShell" -MaxEvents 1`.</span></span> <span data-ttu-id="254b8-134">Sie können auch das- `Get-Content` Cmdlet verwenden, um den Inhalt einer Datei, z. b. ein Microsoft Word-Dokument, zu erhalten und den Inhalt in einer Variablen zu speichern, die Sie als Wert des **Content** -Parameters verwenden.</span><span class="sxs-lookup"><span data-stu-id="254b8-134">You can also use the `Get-Content` cmdlet to get the contents of a file, such as a Microsoft Word document, and save the content in a variable that you use as the value of the **Content** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -127,9 +127,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f7bb1-135">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="f7bb1-135">-LiteralPath</span></span>
+### <span data-ttu-id="254b8-135">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="254b8-135">-LiteralPath</span></span>
 
-<span data-ttu-id="f7bb1-136">Gibt den Pfad zu den zu verschlüsselnden Inhalten an.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-136">Specifies the path to content that you want to encrypt.</span></span> <span data-ttu-id="f7bb1-137">Im Gegensatz zu **Path** wird der Wert von **LiteralPath** genau so verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-137">Unlike **Path** , the value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="f7bb1-138">Es werden keine Zeichen als Platzhalter interpretiert.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-138">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="f7bb1-139">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-139">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="f7bb1-140">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-140">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="254b8-136">Gibt den Pfad zu den zu verschlüsselnden Inhalten an.</span><span class="sxs-lookup"><span data-stu-id="254b8-136">Specifies the path to content that you want to encrypt.</span></span> <span data-ttu-id="254b8-137">Im Gegensatz zu **Path** wird der Wert von **LiteralPath** genau so verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="254b8-137">Unlike **Path** , the value of **LiteralPath** is used exactly as it is typed.</span></span> <span data-ttu-id="254b8-138">Es werden keine Zeichen als Platzhalter interpretiert.</span><span class="sxs-lookup"><span data-stu-id="254b8-138">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="254b8-139">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="254b8-139">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="254b8-140">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="254b8-140">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
 
 ```yaml
 Type: System.String
@@ -143,9 +143,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f7bb1-141">-Outfile</span><span class="sxs-lookup"><span data-stu-id="f7bb1-141">-OutFile</span></span>
+### <span data-ttu-id="254b8-141">-Outfile</span><span class="sxs-lookup"><span data-stu-id="254b8-141">-OutFile</span></span>
 
-<span data-ttu-id="f7bb1-142">Gibt den Pfad und den Dateinamen einer Datei an, an die der verschlüsselte Inhalt gesendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-142">Specifies the path and file name of a file to which you want to send the encrypted content.</span></span>
+<span data-ttu-id="254b8-142">Gibt den Pfad und den Dateinamen einer Datei an, an die der verschlüsselte Inhalt gesendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="254b8-142">Specifies the path and file name of a file to which you want to send the encrypted content.</span></span>
 
 ```yaml
 Type: System.String
@@ -159,9 +159,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f7bb1-143">-Path</span><span class="sxs-lookup"><span data-stu-id="f7bb1-143">-Path</span></span>
+### <span data-ttu-id="254b8-143">-Path</span><span class="sxs-lookup"><span data-stu-id="254b8-143">-Path</span></span>
 
-<span data-ttu-id="f7bb1-144">Gibt den Pfad zu den zu verschlüsselnden Inhalten an.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-144">Specifies the path to content that you want to encrypt.</span></span>
+<span data-ttu-id="254b8-144">Gibt den Pfad zu den zu verschlüsselnden Inhalten an.</span><span class="sxs-lookup"><span data-stu-id="254b8-144">Specifies the path to content that you want to encrypt.</span></span>
 
 ```yaml
 Type: System.String
@@ -175,15 +175,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f7bb1-145">Bis</span><span class="sxs-lookup"><span data-stu-id="f7bb1-145">-To</span></span>
+### <span data-ttu-id="254b8-145">Bis</span><span class="sxs-lookup"><span data-stu-id="254b8-145">-To</span></span>
 
-<span data-ttu-id="f7bb1-146">Gibt einen oder mehrere CMS-Nachrichtenempfänger an, die in einem der folgenden Formate identifiziert werden:</span><span class="sxs-lookup"><span data-stu-id="f7bb1-146">Specifies one or more CMS message recipients, identified in any of the following formats:</span></span>
+<span data-ttu-id="254b8-146">Gibt einen oder mehrere CMS-Nachrichtenempfänger an, die in einem der folgenden Formate identifiziert werden:</span><span class="sxs-lookup"><span data-stu-id="254b8-146">Specifies one or more CMS message recipients, identified in any of the following formats:</span></span>
 
-- <span data-ttu-id="f7bb1-147">Ein tatsächliches Zertifikat (wie vom Zertifikat Anbieter abgerufen).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-147">An actual certificate (as retrieved from the certificate provider).</span></span>
-- <span data-ttu-id="f7bb1-148">Der Pfad zu der Datei, die das Zertifikat enthält.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-148">Path to the file containing the certificate.</span></span>
-- <span data-ttu-id="f7bb1-149">Pfad zu einem Verzeichnis, das das Zertifikat enthält.</span><span class="sxs-lookup"><span data-stu-id="f7bb1-149">Path to a directory containing the certificate.</span></span>
-- <span data-ttu-id="f7bb1-150">Der Fingerabdruck des Zertifikats (dient zum Suchen im Zertifikat Speicher).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-150">Thumbprint of the certificate (used to look in the certificate store).</span></span>
-- <span data-ttu-id="f7bb1-151">Der Antragsteller Name des Zertifikats (das zum Suchen im Zertifikat Speicher verwendet wird).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-151">Subject name of the certificate (used to look in the certificate store).</span></span>
+- <span data-ttu-id="254b8-147">Ein tatsächliches Zertifikat (wie vom Zertifikat Anbieter abgerufen).</span><span class="sxs-lookup"><span data-stu-id="254b8-147">An actual certificate (as retrieved from the certificate provider).</span></span>
+- <span data-ttu-id="254b8-148">Der Pfad zu der Datei, die das Zertifikat enthält.</span><span class="sxs-lookup"><span data-stu-id="254b8-148">Path to the file containing the certificate.</span></span>
+- <span data-ttu-id="254b8-149">Pfad zu einem Verzeichnis, das das Zertifikat enthält.</span><span class="sxs-lookup"><span data-stu-id="254b8-149">Path to a directory containing the certificate.</span></span>
+- <span data-ttu-id="254b8-150">Der Fingerabdruck des Zertifikats (dient zum Suchen im Zertifikat Speicher).</span><span class="sxs-lookup"><span data-stu-id="254b8-150">Thumbprint of the certificate (used to look in the certificate store).</span></span>
+- <span data-ttu-id="254b8-151">Der Antragsteller Name des Zertifikats (das zum Suchen im Zertifikat Speicher verwendet wird).</span><span class="sxs-lookup"><span data-stu-id="254b8-151">Subject name of the certificate (used to look in the certificate store).</span></span>
 
 ```yaml
 Type: System.Management.Automation.CmsMessageRecipient[]
@@ -197,20 +197,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="f7bb1-152">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f7bb1-152">CommonParameters</span></span>
+### <span data-ttu-id="254b8-152">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="254b8-152">CommonParameters</span></span>
 
-<span data-ttu-id="f7bb1-153">Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` .</span><span class="sxs-lookup"><span data-stu-id="f7bb1-153">This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`.</span></span> <span data-ttu-id="f7bb1-154">Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="f7bb1-154">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="254b8-153">Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` .</span><span class="sxs-lookup"><span data-stu-id="254b8-153">This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`.</span></span> <span data-ttu-id="254b8-154">Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="254b8-154">For more information, see [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).</span></span>
 
-## <span data-ttu-id="f7bb1-155">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="f7bb1-155">INPUTS</span></span>
+## <span data-ttu-id="254b8-155">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="254b8-155">INPUTS</span></span>
 
-## <span data-ttu-id="f7bb1-156">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="f7bb1-156">OUTPUTS</span></span>
+## <span data-ttu-id="254b8-156">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="254b8-156">OUTPUTS</span></span>
 
-## <span data-ttu-id="f7bb1-157">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="f7bb1-157">NOTES</span></span>
+## <span data-ttu-id="254b8-157">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="254b8-157">NOTES</span></span>
 
-## <span data-ttu-id="f7bb1-158">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="f7bb1-158">RELATED LINKS</span></span>
+## <span data-ttu-id="254b8-158">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="254b8-158">RELATED LINKS</span></span>
 
-[<span data-ttu-id="f7bb1-159">about_Providers</span><span class="sxs-lookup"><span data-stu-id="f7bb1-159">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
+[<span data-ttu-id="254b8-159">about_Providers</span><span class="sxs-lookup"><span data-stu-id="254b8-159">about_Providers</span></span>](../Microsoft.PowerShell.Core/About/about_Providers.md)
 
-[<span data-ttu-id="f7bb1-160">Get-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="f7bb1-160">Get-CmsMessage</span></span>](Get-CmsMessage.md)
+[<span data-ttu-id="254b8-160">Get-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="254b8-160">Get-CmsMessage</span></span>](Get-CmsMessage.md)
 
-[<span data-ttu-id="f7bb1-161">Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="f7bb1-161">Unprotect-CmsMessage</span></span>](Unprotect-CmsMessage.md)
+[<span data-ttu-id="254b8-161">Unprotect-CmsMessage</span><span class="sxs-lookup"><span data-stu-id="254b8-161">Unprotect-CmsMessage</span></span>](Unprotect-CmsMessage.md)

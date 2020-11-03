@@ -14,47 +14,47 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/03/2020
 ms.locfileid: "93210047"
 ---
-# <span data-ttu-id="ff894-103">Wait-Event</span><span class="sxs-lookup"><span data-stu-id="ff894-103">Wait-Event</span></span>
+# <span data-ttu-id="aa264-103">Wait-Event</span><span class="sxs-lookup"><span data-stu-id="aa264-103">Wait-Event</span></span>
 
-## <span data-ttu-id="ff894-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="ff894-104">SYNOPSIS</span></span>
-<span data-ttu-id="ff894-105">Wartet, bis ein bestimmtes Ereignis ausgelöst wird, bevor die Ausführung fortgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="ff894-105">Waits until a particular event is raised before continuing to run.</span></span>
+## <span data-ttu-id="aa264-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="aa264-104">SYNOPSIS</span></span>
+<span data-ttu-id="aa264-105">Wartet, bis ein bestimmtes Ereignis ausgelöst wird, bevor die Ausführung fortgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="aa264-105">Waits until a particular event is raised before continuing to run.</span></span>
 
-## <span data-ttu-id="ff894-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="ff894-106">SYNTAX</span></span>
+## <span data-ttu-id="aa264-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="aa264-106">SYNTAX</span></span>
 
 ```
 Wait-Event [[-SourceIdentifier] <String>] [-Timeout <Int32>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="ff894-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="ff894-107">DESCRIPTION</span></span>
+## <span data-ttu-id="aa264-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="aa264-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="ff894-108">Das `Wait-Event` Cmdlet hält die Ausführung eines Skripts oder einer Funktion an, bis ein bestimmtes Ereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="ff894-108">The `Wait-Event` cmdlet suspends execution of a script or function until a particular event is raised.</span></span> <span data-ttu-id="ff894-109">Die Ausführung wird fortgesetzt, wenn das Ereignis erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="ff894-109">Execution resumes when the event is detected.</span></span> <span data-ttu-id="ff894-110">Drücken Sie <kbd>STRG</kbd>C, um den warte Vorgang abzubrechen + <kbd>C</kbd>.</span><span class="sxs-lookup"><span data-stu-id="ff894-110">To cancel the wait, press <kbd>CTRL</kbd>+<kbd>C</kbd>.</span></span>
+<span data-ttu-id="aa264-108">Das `Wait-Event` Cmdlet hält die Ausführung eines Skripts oder einer Funktion an, bis ein bestimmtes Ereignis ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="aa264-108">The `Wait-Event` cmdlet suspends execution of a script or function until a particular event is raised.</span></span> <span data-ttu-id="aa264-109">Die Ausführung wird fortgesetzt, wenn das Ereignis erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="aa264-109">Execution resumes when the event is detected.</span></span> <span data-ttu-id="aa264-110">Drücken Sie <kbd>STRG</kbd>C, um den warte Vorgang abzubrechen + <kbd>C</kbd>.</span><span class="sxs-lookup"><span data-stu-id="aa264-110">To cancel the wait, press <kbd>CTRL</kbd>+<kbd>C</kbd>.</span></span>
 
-<span data-ttu-id="ff894-111">Diese Funktion bietet eine Alternative zum Abruf für ein Ereignis.</span><span class="sxs-lookup"><span data-stu-id="ff894-111">This feature provides an alternative to polling for an event.</span></span> <span data-ttu-id="ff894-112">Außerdem können Sie die Reaktion auf ein Ereignis auf zwei verschiedene Arten bestimmen:</span><span class="sxs-lookup"><span data-stu-id="ff894-112">It also allows you to determine the response to an event in two different ways:</span></span>
+<span data-ttu-id="aa264-111">Diese Funktion bietet eine Alternative zum Abruf für ein Ereignis.</span><span class="sxs-lookup"><span data-stu-id="aa264-111">This feature provides an alternative to polling for an event.</span></span> <span data-ttu-id="aa264-112">Außerdem können Sie die Reaktion auf ein Ereignis auf zwei verschiedene Arten bestimmen:</span><span class="sxs-lookup"><span data-stu-id="aa264-112">It also allows you to determine the response to an event in two different ways:</span></span>
 
-- <span data-ttu-id="ff894-113">Verwenden des **Action** -Parameters des Ereignis Abonnements</span><span class="sxs-lookup"><span data-stu-id="ff894-113">using the **Action** parameter of the event subscription</span></span>
-- <span data-ttu-id="ff894-114">warten auf Rückgabe eines Ereignisses und anschließendes reagieren mit einer Aktion</span><span class="sxs-lookup"><span data-stu-id="ff894-114">waiting for an event to return and then respond with an action</span></span>
+- <span data-ttu-id="aa264-113">Verwenden des **Action** -Parameters des Ereignis Abonnements</span><span class="sxs-lookup"><span data-stu-id="aa264-113">using the **Action** parameter of the event subscription</span></span>
+- <span data-ttu-id="aa264-114">warten auf Rückgabe eines Ereignisses und anschließendes reagieren mit einer Aktion</span><span class="sxs-lookup"><span data-stu-id="aa264-114">waiting for an event to return and then respond with an action</span></span>
 
-## <span data-ttu-id="ff894-115">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="ff894-115">EXAMPLES</span></span>
+## <span data-ttu-id="aa264-115">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="aa264-115">EXAMPLES</span></span>
 
-### <span data-ttu-id="ff894-116">Beispiel 1: warten auf das nächste Ereignis</span><span class="sxs-lookup"><span data-stu-id="ff894-116">Example 1: Wait for the next event</span></span>
+### <span data-ttu-id="aa264-116">Beispiel 1: warten auf das nächste Ereignis</span><span class="sxs-lookup"><span data-stu-id="aa264-116">Example 1: Wait for the next event</span></span>
 
-<span data-ttu-id="ff894-117">In diesem Beispiel wird auf das nächste Ereignis gewartet, das ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="ff894-117">This example waits for the next event that is raised.</span></span>
+<span data-ttu-id="aa264-117">In diesem Beispiel wird auf das nächste Ereignis gewartet, das ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="aa264-117">This example waits for the next event that is raised.</span></span>
 
 ```powershell
 Wait-Event
 ```
 
-### <span data-ttu-id="ff894-118">Beispiel 2: warten auf ein Ereignis mit einem angegebenen Quell Bezeichner</span><span class="sxs-lookup"><span data-stu-id="ff894-118">Example 2: Wait for an event with a specified source identifier</span></span>
+### <span data-ttu-id="aa264-118">Beispiel 2: warten auf ein Ereignis mit einem angegebenen Quell Bezeichner</span><span class="sxs-lookup"><span data-stu-id="aa264-118">Example 2: Wait for an event with a specified source identifier</span></span>
 
-<span data-ttu-id="ff894-119">In diesem Beispiel wird auf das nächste Ereignis gewartet, das ausgelöst wird und das den Quell Bezeichner "processstarted" aufweist.</span><span class="sxs-lookup"><span data-stu-id="ff894-119">This example waits for the next event that is raised and that has a source identifier of ProcessStarted.</span></span>
+<span data-ttu-id="aa264-119">In diesem Beispiel wird auf das nächste Ereignis gewartet, das ausgelöst wird und das den Quell Bezeichner "processstarted" aufweist.</span><span class="sxs-lookup"><span data-stu-id="aa264-119">This example waits for the next event that is raised and that has a source identifier of ProcessStarted.</span></span>
 
 ```powershell
 Wait-Event -SourceIdentifier "ProcessStarted"
 ```
 
-### <span data-ttu-id="ff894-120">Beispiel 3: warten auf ein abgelaufener Timer-Ereignis</span><span class="sxs-lookup"><span data-stu-id="ff894-120">Example 3: Wait for a timer elapsed event</span></span>
+### <span data-ttu-id="aa264-120">Beispiel 3: warten auf ein abgelaufener Timer-Ereignis</span><span class="sxs-lookup"><span data-stu-id="aa264-120">Example 3: Wait for a timer elapsed event</span></span>
 
-<span data-ttu-id="ff894-121">In diesem Beispiel wird das- `Wait-Event` Cmdlet verwendet, um auf ein Zeit Geber Ereignis auf einem Timer zu warten, der für 2000 Millisekunden festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="ff894-121">This example uses the `Wait-Event` cmdlet to wait for a timer event on a timer that is set for 2000 milliseconds.</span></span>
+<span data-ttu-id="aa264-121">In diesem Beispiel wird das- `Wait-Event` Cmdlet verwendet, um auf ein Zeit Geber Ereignis auf einem Timer zu warten, der für 2000 Millisekunden festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="aa264-121">This example uses the `Wait-Event` cmdlet to wait for a timer event on a timer that is set for 2000 milliseconds.</span></span>
 
 ```powershell
 $Timer = New-Object Timers.Timer
@@ -82,20 +82,20 @@ TimeGenerated    : 4/23/2020 2:30:37 PM
 MessageData      :
 ```
 
-### <span data-ttu-id="ff894-122">Beispiel 4: warten auf ein Ereignis nach einem angegebenen Timeout</span><span class="sxs-lookup"><span data-stu-id="ff894-122">Example 4: Wait for an event after a specified timeout</span></span>
+### <span data-ttu-id="aa264-122">Beispiel 4: warten auf ein Ereignis nach einem angegebenen Timeout</span><span class="sxs-lookup"><span data-stu-id="aa264-122">Example 4: Wait for an event after a specified timeout</span></span>
 
-<span data-ttu-id="ff894-123">In diesem Beispiel werden bis zu 90 Sekunden auf das nächste Ereignis gewartet, das ausgelöst wird und das den Quell Bezeichner " **processstarted** " aufweist.</span><span class="sxs-lookup"><span data-stu-id="ff894-123">This example waits up to 90 seconds for the next event that is raised and that has a source identifier of **ProcessStarted** .</span></span> <span data-ttu-id="ff894-124">Wenn die angegebene Zeit abgelaufen ist, wird der Wartevorgang beendet.</span><span class="sxs-lookup"><span data-stu-id="ff894-124">If the specified time expires, the wait ends.</span></span>
+<span data-ttu-id="aa264-123">In diesem Beispiel werden bis zu 90 Sekunden auf das nächste Ereignis gewartet, das ausgelöst wird und das den Quell Bezeichner " **processstarted** " aufweist.</span><span class="sxs-lookup"><span data-stu-id="aa264-123">This example waits up to 90 seconds for the next event that is raised and that has a source identifier of **ProcessStarted**.</span></span> <span data-ttu-id="aa264-124">Wenn die angegebene Zeit abgelaufen ist, wird der Wartevorgang beendet.</span><span class="sxs-lookup"><span data-stu-id="aa264-124">If the specified time expires, the wait ends.</span></span>
 
 ```powershell
 Wait-Event -SourceIdentifier "ProcessStarted" -Timeout 90
 ```
 
-## <span data-ttu-id="ff894-125">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="ff894-125">PARAMETERS</span></span>
+## <span data-ttu-id="aa264-125">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="aa264-125">PARAMETERS</span></span>
 
-### <span data-ttu-id="ff894-126">-SourceIdentifier</span><span class="sxs-lookup"><span data-stu-id="ff894-126">-SourceIdentifier</span></span>
+### <span data-ttu-id="aa264-126">-SourceIdentifier</span><span class="sxs-lookup"><span data-stu-id="aa264-126">-SourceIdentifier</span></span>
 
-<span data-ttu-id="ff894-127">Gibt den Quell Bezeichner an, den dieses Cmdlet auf Ereignisse wartet.</span><span class="sxs-lookup"><span data-stu-id="ff894-127">Specifies the source identifier that this cmdlet waits for events.</span></span>
-<span data-ttu-id="ff894-128">Standardmäßig `Wait-Event` wartet auf ein beliebiges Ereignis.</span><span class="sxs-lookup"><span data-stu-id="ff894-128">By default, `Wait-Event` waits for any event.</span></span>
+<span data-ttu-id="aa264-127">Gibt den Quell Bezeichner an, den dieses Cmdlet auf Ereignisse wartet.</span><span class="sxs-lookup"><span data-stu-id="aa264-127">Specifies the source identifier that this cmdlet waits for events.</span></span>
+<span data-ttu-id="aa264-128">Standardmäßig `Wait-Event` wartet auf ein beliebiges Ereignis.</span><span class="sxs-lookup"><span data-stu-id="aa264-128">By default, `Wait-Event` waits for any event.</span></span>
 
 ```yaml
 Type: System.String
@@ -109,11 +109,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ff894-129">-Timeout</span><span class="sxs-lookup"><span data-stu-id="ff894-129">-Timeout</span></span>
+### <span data-ttu-id="aa264-129">-Timeout</span><span class="sxs-lookup"><span data-stu-id="aa264-129">-Timeout</span></span>
 
-<span data-ttu-id="ff894-130">Gibt die maximale Zeit in Sekunden an, die `Wait-Event` auf das Eintreten des Ereignisses wartet.</span><span class="sxs-lookup"><span data-stu-id="ff894-130">Specifies the maximum time, in seconds, that `Wait-Event` waits for the event to occur.</span></span> <span data-ttu-id="ff894-131">Der Standardwert -1 wartet unbegrenzt.</span><span class="sxs-lookup"><span data-stu-id="ff894-131">The default, -1, waits indefinitely.</span></span> <span data-ttu-id="ff894-132">Die zeitliche Steuerung beginnt, wenn Sie den Befehl übermitteln `Wait-Event` .</span><span class="sxs-lookup"><span data-stu-id="ff894-132">The timing starts when you submit the `Wait-Event` command.</span></span>
+<span data-ttu-id="aa264-130">Gibt die maximale Zeit in Sekunden an, die `Wait-Event` auf das Eintreten des Ereignisses wartet.</span><span class="sxs-lookup"><span data-stu-id="aa264-130">Specifies the maximum time, in seconds, that `Wait-Event` waits for the event to occur.</span></span> <span data-ttu-id="aa264-131">Der Standardwert -1 wartet unbegrenzt.</span><span class="sxs-lookup"><span data-stu-id="aa264-131">The default, -1, waits indefinitely.</span></span> <span data-ttu-id="aa264-132">Die zeitliche Steuerung beginnt, wenn Sie den Befehl übermitteln `Wait-Event` .</span><span class="sxs-lookup"><span data-stu-id="aa264-132">The timing starts when you submit the `Wait-Event` command.</span></span>
 
-<span data-ttu-id="ff894-133">Wenn die angegebene Zeit überschritten ist, wird der Wartevorgang beendet und die Befehlseingabeaufforderung wieder angezeigt, auch wenn das Ereignis nicht ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="ff894-133">If the specified time is exceeded, the wait ends and the command prompt returns, even if the event has not been raised.</span></span> <span data-ttu-id="ff894-134">Es wird keine Fehlermeldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ff894-134">No error message is displayed.</span></span>
+<span data-ttu-id="aa264-133">Wenn die angegebene Zeit überschritten ist, wird der Wartevorgang beendet und die Befehlseingabeaufforderung wieder angezeigt, auch wenn das Ereignis nicht ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="aa264-133">If the specified time is exceeded, the wait ends and the command prompt returns, even if the event has not been raised.</span></span> <span data-ttu-id="aa264-134">Es wird keine Fehlermeldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="aa264-134">No error message is displayed.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -127,36 +127,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="ff894-135">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="ff894-135">CommonParameters</span></span>
+### <span data-ttu-id="aa264-135">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="aa264-135">CommonParameters</span></span>
 
-<span data-ttu-id="ff894-136">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="ff894-136">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="ff894-137">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="ff894-137">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="aa264-136">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="aa264-136">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="aa264-137">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="aa264-137">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="ff894-138">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="ff894-138">INPUTS</span></span>
+## <span data-ttu-id="aa264-138">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="aa264-138">INPUTS</span></span>
 
-### <span data-ttu-id="ff894-139">System.String</span><span class="sxs-lookup"><span data-stu-id="ff894-139">System.String</span></span>
+### <span data-ttu-id="aa264-139">System.String</span><span class="sxs-lookup"><span data-stu-id="aa264-139">System.String</span></span>
 
-## <span data-ttu-id="ff894-140">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="ff894-140">OUTPUTS</span></span>
+## <span data-ttu-id="aa264-140">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="aa264-140">OUTPUTS</span></span>
 
-### <span data-ttu-id="ff894-141">System. Management. Automation. psiebziger args</span><span class="sxs-lookup"><span data-stu-id="ff894-141">System.Management.Automation.PSEventArgs</span></span>
+### <span data-ttu-id="aa264-141">System. Management. Automation. psiebziger args</span><span class="sxs-lookup"><span data-stu-id="aa264-141">System.Management.Automation.PSEventArgs</span></span>
 
-## <span data-ttu-id="ff894-142">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="ff894-142">NOTES</span></span>
+## <span data-ttu-id="aa264-142">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="aa264-142">NOTES</span></span>
 
-<span data-ttu-id="ff894-143">Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden.</span><span class="sxs-lookup"><span data-stu-id="ff894-143">Events, event subscriptions, and the event queue exist only in the current session.</span></span> <span data-ttu-id="ff894-144">Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="ff894-144">If you close the current session, the event queue is discarded and the event subscription is canceled.</span></span>
+<span data-ttu-id="aa264-143">Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden.</span><span class="sxs-lookup"><span data-stu-id="aa264-143">Events, event subscriptions, and the event queue exist only in the current session.</span></span> <span data-ttu-id="aa264-144">Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="aa264-144">If you close the current session, the event queue is discarded and the event subscription is canceled.</span></span>
 
-## <span data-ttu-id="ff894-145">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="ff894-145">RELATED LINKS</span></span>
+## <span data-ttu-id="aa264-145">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="aa264-145">RELATED LINKS</span></span>
 
-[<span data-ttu-id="ff894-146">Get-Event</span><span class="sxs-lookup"><span data-stu-id="ff894-146">Get-Event</span></span>](Get-Event.md)
+[<span data-ttu-id="aa264-146">Get-Event</span><span class="sxs-lookup"><span data-stu-id="aa264-146">Get-Event</span></span>](Get-Event.md)
 
-[<span data-ttu-id="ff894-147">Get-EventSubscriber</span><span class="sxs-lookup"><span data-stu-id="ff894-147">Get-EventSubscriber</span></span>](Get-EventSubscriber.md)
+[<span data-ttu-id="aa264-147">Get-EventSubscriber</span><span class="sxs-lookup"><span data-stu-id="aa264-147">Get-EventSubscriber</span></span>](Get-EventSubscriber.md)
 
-[<span data-ttu-id="ff894-148">New-Event</span><span class="sxs-lookup"><span data-stu-id="ff894-148">New-Event</span></span>](New-Event.md)
+[<span data-ttu-id="aa264-148">New-Event</span><span class="sxs-lookup"><span data-stu-id="aa264-148">New-Event</span></span>](New-Event.md)
 
-[<span data-ttu-id="ff894-149">Register-EngineEvent</span><span class="sxs-lookup"><span data-stu-id="ff894-149">Register-EngineEvent</span></span>](Register-EngineEvent.md)
+[<span data-ttu-id="aa264-149">Register-EngineEvent</span><span class="sxs-lookup"><span data-stu-id="aa264-149">Register-EngineEvent</span></span>](Register-EngineEvent.md)
 
-[<span data-ttu-id="ff894-150">Register-ObjectEvent</span><span class="sxs-lookup"><span data-stu-id="ff894-150">Register-ObjectEvent</span></span>](Register-ObjectEvent.md)
+[<span data-ttu-id="aa264-150">Register-ObjectEvent</span><span class="sxs-lookup"><span data-stu-id="aa264-150">Register-ObjectEvent</span></span>](Register-ObjectEvent.md)
 
-[<span data-ttu-id="ff894-151">Remove-Event</span><span class="sxs-lookup"><span data-stu-id="ff894-151">Remove-Event</span></span>](Remove-Event.md)
+[<span data-ttu-id="aa264-151">Remove-Event</span><span class="sxs-lookup"><span data-stu-id="aa264-151">Remove-Event</span></span>](Remove-Event.md)
 
-[<span data-ttu-id="ff894-152">Unregister-Event</span><span class="sxs-lookup"><span data-stu-id="ff894-152">Unregister-Event</span></span>](Unregister-Event.md)
+[<span data-ttu-id="aa264-152">Unregister-Event</span><span class="sxs-lookup"><span data-stu-id="aa264-152">Unregister-Event</span></span>](Unregister-Event.md)
 
-[<span data-ttu-id="ff894-153">Wait-Event</span><span class="sxs-lookup"><span data-stu-id="ff894-153">Wait-Event</span></span>](Wait-Event.md)
+[<span data-ttu-id="aa264-153">Wait-Event</span><span class="sxs-lookup"><span data-stu-id="aa264-153">Wait-Event</span></span>](Wait-Event.md)

@@ -14,12 +14,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "93216068"
 ---
-# <span data-ttu-id="55127-103">New-Variable</span><span class="sxs-lookup"><span data-stu-id="55127-103">New-Variable</span></span>
+# <span data-ttu-id="5f9d3-103">New-Variable</span><span class="sxs-lookup"><span data-stu-id="5f9d3-103">New-Variable</span></span>
 
-## <span data-ttu-id="55127-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="55127-104">SYNOPSIS</span></span>
-<span data-ttu-id="55127-105">Erstellt eine neue Variable.</span><span class="sxs-lookup"><span data-stu-id="55127-105">Creates a new variable.</span></span>
+## <span data-ttu-id="5f9d3-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="5f9d3-104">SYNOPSIS</span></span>
+<span data-ttu-id="5f9d3-105">Erstellt eine neue Variable.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-105">Creates a new variable.</span></span>
 
-## <span data-ttu-id="55127-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="55127-106">SYNTAX</span></span>
+## <span data-ttu-id="5f9d3-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="5f9d3-106">SYNTAX</span></span>
 
 ```
 New-Variable [-Name] <String> [[-Value] <Object>] [-Description <String>] [-Option <ScopedItemOptions>]
@@ -27,34 +27,34 @@ New-Variable [-Name] <String> [[-Value] <Object>] [-Description <String>] [-Opti
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="55127-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="55127-107">DESCRIPTION</span></span>
-<span data-ttu-id="55127-108">Das **New-Variable-** Cmdlet erstellt eine neue Variable in PowerShell.</span><span class="sxs-lookup"><span data-stu-id="55127-108">The **New-Variable** cmdlet creates a new variable in PowerShell.</span></span>
-<span data-ttu-id="55127-109">Sie können der Variablen beim Erstellen einen Wert zuweisen oder den Wert zuweisen bzw. ändern, nachdem die Variable erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="55127-109">You can assign a value to the variable while creating it or assign or change the value after it is created.</span></span>
+## <span data-ttu-id="5f9d3-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="5f9d3-107">DESCRIPTION</span></span>
+<span data-ttu-id="5f9d3-108">Das **New-Variable-** Cmdlet erstellt eine neue Variable in PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-108">The **New-Variable** cmdlet creates a new variable in PowerShell.</span></span>
+<span data-ttu-id="5f9d3-109">Sie können der Variablen beim Erstellen einen Wert zuweisen oder den Wert zuweisen bzw. ändern, nachdem die Variable erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-109">You can assign a value to the variable while creating it or assign or change the value after it is created.</span></span>
 
-<span data-ttu-id="55127-110">Sie können die Parameter von **New-Variable** verwenden, um die Eigenschaften der Variablen festzulegen, den Gültigkeitsbereich einer Variablen festzulegen und zu bestimmen, ob Variablen öffentlich oder privat sind.</span><span class="sxs-lookup"><span data-stu-id="55127-110">You can use the parameters of **New-Variable** to set the properties of the variable, set the scope of a variable, and determine whether variables are public or private.</span></span>
+<span data-ttu-id="5f9d3-110">Sie können die Parameter von **New-Variable** verwenden, um die Eigenschaften der Variablen festzulegen, den Gültigkeitsbereich einer Variablen festzulegen und zu bestimmen, ob Variablen öffentlich oder privat sind.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-110">You can use the parameters of **New-Variable** to set the properties of the variable, set the scope of a variable, and determine whether variables are public or private.</span></span>
 
-<span data-ttu-id="55127-111">In der Regel erstellen Sie eine neue Variable durch Eingabe des Variablen namens und seines Werts, wie z `$Var = 3` . b., aber Sie können das Cmdlet **New-Variable** verwenden, um die zugehörigen Parameter zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="55127-111">Typically, you create a new variable by typing the variable name and its value, such as `$Var = 3`, but you can use the **New-Variable** cmdlet to use its parameters.</span></span>
+<span data-ttu-id="5f9d3-111">In der Regel erstellen Sie eine neue Variable durch Eingabe des Variablen namens und seines Werts, wie z `$Var = 3` . b., aber Sie können das Cmdlet **New-Variable** verwenden, um die zugehörigen Parameter zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-111">Typically, you create a new variable by typing the variable name and its value, such as `$Var = 3`, but you can use the **New-Variable** cmdlet to use its parameters.</span></span>
 
-## <span data-ttu-id="55127-112">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="55127-112">EXAMPLES</span></span>
+## <span data-ttu-id="5f9d3-112">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="5f9d3-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="55127-113">Beispiel 1: Erstellen einer Variablen</span><span class="sxs-lookup"><span data-stu-id="55127-113">Example 1: Create a variable</span></span>
+### <span data-ttu-id="5f9d3-113">Beispiel 1: Erstellen einer Variablen</span><span class="sxs-lookup"><span data-stu-id="5f9d3-113">Example 1: Create a variable</span></span>
 
 ```
 PS C:\> New-Variable days
 ```
 
-<span data-ttu-id="55127-114">Dieser Befehl erstellt eine neue Variable mit dem Namen Days.</span><span class="sxs-lookup"><span data-stu-id="55127-114">This command creates a new variable named days.</span></span>
-<span data-ttu-id="55127-115">Sie müssen den *Name* -Parameter nicht eingeben.</span><span class="sxs-lookup"><span data-stu-id="55127-115">You are not required to type the *Name* parameter.</span></span>
+<span data-ttu-id="5f9d3-114">Dieser Befehl erstellt eine neue Variable mit dem Namen Days.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-114">This command creates a new variable named days.</span></span>
+<span data-ttu-id="5f9d3-115">Sie müssen den *Name* -Parameter nicht eingeben.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-115">You are not required to type the *Name* parameter.</span></span>
 
-### <span data-ttu-id="55127-116">Beispiel 2: Erstellen einer Variablen und Zuweisen eines Werts zu einem Wert</span><span class="sxs-lookup"><span data-stu-id="55127-116">Example 2: Create a variable and assign it a value</span></span>
+### <span data-ttu-id="5f9d3-116">Beispiel 2: Erstellen einer Variablen und Zuweisen eines Werts zu einem Wert</span><span class="sxs-lookup"><span data-stu-id="5f9d3-116">Example 2: Create a variable and assign it a value</span></span>
 
 ```
 PS C:\> New-Variable -Name "zipcode" -Value 98033
 ```
 
-<span data-ttu-id="55127-117">Dieser Befehl erstellt eine Variable namens "ZipCode" und weist ihr den Wert "98033" zu.</span><span class="sxs-lookup"><span data-stu-id="55127-117">This command creates a variable named zipcode and assigns it the value 98033.</span></span>
+<span data-ttu-id="5f9d3-117">Dieser Befehl erstellt eine Variable namens "ZipCode" und weist ihr den Wert "98033" zu.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-117">This command creates a variable named zipcode and assigns it the value 98033.</span></span>
 
-### <span data-ttu-id="55127-118">Beispiel 3: Erstellen einer Variablen mit der Option "Read only"</span><span class="sxs-lookup"><span data-stu-id="55127-118">Example 3: Create a variable with the ReadOnly option</span></span>
+### <span data-ttu-id="5f9d3-118">Beispiel 3: Erstellen einer Variablen mit der Option "Read only"</span><span class="sxs-lookup"><span data-stu-id="5f9d3-118">Example 3: Create a variable with the ReadOnly option</span></span>
 
 ```
 PS C:\> New-Variable -Name Max -Value 256 -Option ReadOnly
@@ -70,18 +70,18 @@ At line:1 char:1
 PS C:\> New-Variable -Name max -Value 1024 -Force
 ```
 
-<span data-ttu-id="55127-119">Dieses Beispiel zeigt, wie Sie die Option "schreibgeschützt" von **New-Variable** verwenden, um zu verhindern, dass eine Variable überschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="55127-119">This example shows how to use the ReadOnly option of **New-Variable** to protect a variable from being overwritten.</span></span>
+<span data-ttu-id="5f9d3-119">Dieses Beispiel zeigt, wie Sie die Option "schreibgeschützt" von **New-Variable** verwenden, um zu verhindern, dass eine Variable überschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-119">This example shows how to use the ReadOnly option of **New-Variable** to protect a variable from being overwritten.</span></span>
 
-<span data-ttu-id="55127-120">Der erste Befehl erstellt eine neue Variable namens "Max" und legt ihren Wert auf 256 fest.</span><span class="sxs-lookup"><span data-stu-id="55127-120">The first command creates a new variable named Max and sets its value to 256.</span></span>
-<span data-ttu-id="55127-121">Er verwendet den *Option* -Parameter mit dem Wert "schreibgeschützt".</span><span class="sxs-lookup"><span data-stu-id="55127-121">It uses the *Option* parameter with a value of ReadOnly.</span></span>
+<span data-ttu-id="5f9d3-120">Der erste Befehl erstellt eine neue Variable namens "Max" und legt ihren Wert auf 256 fest.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-120">The first command creates a new variable named Max and sets its value to 256.</span></span>
+<span data-ttu-id="5f9d3-121">Er verwendet den *Option* -Parameter mit dem Wert "schreibgeschützt".</span><span class="sxs-lookup"><span data-stu-id="5f9d3-121">It uses the *Option* parameter with a value of ReadOnly.</span></span>
 
-<span data-ttu-id="55127-122">Der zweite Befehl versucht, eine zweite Variable mit demselben Namen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="55127-122">The second command tries to create a second variable with the same name.</span></span>
-<span data-ttu-id="55127-123">Dieser Befehl gibt einen Fehler zurück, da für diese Variable die Option „schreibgeschützt“ festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="55127-123">This command returns an error, because the read-only option is set on the variable.</span></span>
+<span data-ttu-id="5f9d3-122">Der zweite Befehl versucht, eine zweite Variable mit demselben Namen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-122">The second command tries to create a second variable with the same name.</span></span>
+<span data-ttu-id="5f9d3-123">Dieser Befehl gibt einen Fehler zurück, da für diese Variable die Option „schreibgeschützt“ festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-123">This command returns an error, because the read-only option is set on the variable.</span></span>
 
-<span data-ttu-id="55127-124">Der dritte Befehl verwendet den *Force* -Parameter, um den schreibgeschützten Schutz der Variablen zu überschreiben.</span><span class="sxs-lookup"><span data-stu-id="55127-124">The third command uses the *Force* parameter to override the read-only protection on the variable.</span></span>
-<span data-ttu-id="55127-125">In diesem Fall ist der Befehl zum Erstellen einer neuen Variable mit dem gleichen Namen erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="55127-125">In this case, the command to create a new variable with the same name succeeds.</span></span>
+<span data-ttu-id="5f9d3-124">Der dritte Befehl verwendet den *Force* -Parameter, um den schreibgeschützten Schutz der Variablen zu überschreiben.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-124">The third command uses the *Force* parameter to override the read-only protection on the variable.</span></span>
+<span data-ttu-id="5f9d3-125">In diesem Fall ist der Befehl zum Erstellen einer neuen Variable mit dem gleichen Namen erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-125">In this case, the command to create a new variable with the same name succeeds.</span></span>
 
-### <span data-ttu-id="55127-126">Beispiel 4: Erstellen einer privaten Variablen</span><span class="sxs-lookup"><span data-stu-id="55127-126">Example 4: Create a private variable</span></span>
+### <span data-ttu-id="5f9d3-126">Beispiel 4: Erstellen einer privaten Variablen</span><span class="sxs-lookup"><span data-stu-id="5f9d3-126">Example 4: Create a private variable</span></span>
 
 ```
 PS C:\> New-Variable -Name counter -Visibility Private
@@ -112,14 +112,14 @@ Counter1     3.1415
 ...
 ```
 
-<span data-ttu-id="55127-127">Mit diesem Befehl wird das Verhalten einer privaten Variable in einem Modul veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="55127-127">This command demonstrates the behavior of a private variable in a module.</span></span>
-<span data-ttu-id="55127-128">Das Modul enthält das Cmdlet "Get-Counter", das eine private Variable namens "Counter" aufweist.</span><span class="sxs-lookup"><span data-stu-id="55127-128">The module contains the Get-Counter cmdlet, which has a private variable named Counter.</span></span>
-<span data-ttu-id="55127-129">Der Befehl verwendet den *Visibility* -Parameter mit dem Wert "private", um die Variable zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="55127-129">The command uses the *Visibility* parameter with a value of Private to create the variable.</span></span>
+<span data-ttu-id="5f9d3-127">Mit diesem Befehl wird das Verhalten einer privaten Variable in einem Modul veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-127">This command demonstrates the behavior of a private variable in a module.</span></span>
+<span data-ttu-id="5f9d3-128">Das Modul enthält das Cmdlet "Get-Counter", das eine private Variable namens "Counter" aufweist.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-128">The module contains the Get-Counter cmdlet, which has a private variable named Counter.</span></span>
+<span data-ttu-id="5f9d3-129">Der Befehl verwendet den *Visibility* -Parameter mit dem Wert "private", um die Variable zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-129">The command uses the *Visibility* parameter with a value of Private to create the variable.</span></span>
 
-<span data-ttu-id="55127-130">Die Beispielausgabe zeigt das Verhalten einer privaten Variable.</span><span class="sxs-lookup"><span data-stu-id="55127-130">The sample output shows the behavior of a private variable.</span></span>
-<span data-ttu-id="55127-131">Der Benutzer, der das Modul geladen hat, kann den Wert der Counter-Variable nicht anzeigen oder ändern, die Counter-Variable kann jedoch durch die Befehle im Modul gelesen und geändert werden.</span><span class="sxs-lookup"><span data-stu-id="55127-131">The user who has loaded the module cannot view or change the value of the Counter variable, but the Counter variable can be read and changed by the commands in the module.</span></span>
+<span data-ttu-id="5f9d3-130">Die Beispielausgabe zeigt das Verhalten einer privaten Variable.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-130">The sample output shows the behavior of a private variable.</span></span>
+<span data-ttu-id="5f9d3-131">Der Benutzer, der das Modul geladen hat, kann den Wert der Counter-Variable nicht anzeigen oder ändern, die Counter-Variable kann jedoch durch die Befehle im Modul gelesen und geändert werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-131">The user who has loaded the module cannot view or change the value of the Counter variable, but the Counter variable can be read and changed by the commands in the module.</span></span>
 
-### <span data-ttu-id="55127-132">Beispiel 5: Erstellen einer Variablen mit einem Leerzeichen</span><span class="sxs-lookup"><span data-stu-id="55127-132">Example 5: Create a variable with a space</span></span>
+### <span data-ttu-id="5f9d3-132">Beispiel 5: Erstellen einer Variablen mit einem Leerzeichen</span><span class="sxs-lookup"><span data-stu-id="5f9d3-132">Example 5: Create a variable with a space</span></span>
 
 ```
 PS C:\> New-Variable -Name 'with space' -Value 'abc123xyz'
@@ -134,13 +134,13 @@ PS C:\> ${with space}
 abc123xyz
 ```
 
-<span data-ttu-id="55127-133">Mit diesem Befehl wird veranschaulicht, dass Variablen mit Leerzeichen erstellt werden können.</span><span class="sxs-lookup"><span data-stu-id="55127-133">This command demonstrates that variables with spaces can be created.</span></span>
-<span data-ttu-id="55127-134">Auf die Variablen kann mithilfe des Cmdlets " **Get-Variable** " oder direkt durch das Trennen einer Variablen mit geschweiften Klammern zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="55127-134">The variables can be accessed using the **Get-Variable** cmdlet or directly by delimiting a variable with braces.</span></span>
+<span data-ttu-id="5f9d3-133">Mit diesem Befehl wird veranschaulicht, dass Variablen mit Leerzeichen erstellt werden können.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-133">This command demonstrates that variables with spaces can be created.</span></span>
+<span data-ttu-id="5f9d3-134">Auf die Variablen kann mithilfe des Cmdlets " **Get-Variable** " oder direkt durch das Trennen einer Variablen mit geschweiften Klammern zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-134">The variables can be accessed using the **Get-Variable** cmdlet or directly by delimiting a variable with braces.</span></span>
 
-## <span data-ttu-id="55127-135">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="55127-135">PARAMETERS</span></span>
+## <span data-ttu-id="5f9d3-135">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5f9d3-135">PARAMETERS</span></span>
 
-### <span data-ttu-id="55127-136">-Description</span><span class="sxs-lookup"><span data-stu-id="55127-136">-Description</span></span>
-<span data-ttu-id="55127-137">Gibt eine Beschreibung der Variablen an.</span><span class="sxs-lookup"><span data-stu-id="55127-137">Specifies a description of the variable.</span></span>
+### <span data-ttu-id="5f9d3-136">-Description</span><span class="sxs-lookup"><span data-stu-id="5f9d3-136">-Description</span></span>
+<span data-ttu-id="5f9d3-137">Gibt eine Beschreibung der Variablen an.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-137">Specifies a description of the variable.</span></span>
 
 ```yaml
 Type: System.String
@@ -154,11 +154,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-138">-Force</span><span class="sxs-lookup"><span data-stu-id="55127-138">-Force</span></span>
-<span data-ttu-id="55127-139">Gibt an, dass das Cmdlet eine Variable mit dem gleichen Namen wie eine vorhandene schreibgeschützte Variable erstellt.</span><span class="sxs-lookup"><span data-stu-id="55127-139">Indicates that the cmdlet creates a variable with the same name as an existing read-only variable.</span></span>
+### <span data-ttu-id="5f9d3-138">-Force</span><span class="sxs-lookup"><span data-stu-id="5f9d3-138">-Force</span></span>
+<span data-ttu-id="5f9d3-139">Gibt an, dass das Cmdlet eine Variable mit dem gleichen Namen wie eine vorhandene schreibgeschützte Variable erstellt.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-139">Indicates that the cmdlet creates a variable with the same name as an existing read-only variable.</span></span>
 
-<span data-ttu-id="55127-140">Standardmäßig können Sie eine Variable überschreiben, es sei denn, die Variable weist den Optionswert „ReadOnly“ oder „Constant“ auf.</span><span class="sxs-lookup"><span data-stu-id="55127-140">By default, you can overwrite a variable unless the variable has an option value of ReadOnly or Constant.</span></span>
-<span data-ttu-id="55127-141">Weitere Informationen finden Sie unter dem *Option* -Parameter.</span><span class="sxs-lookup"><span data-stu-id="55127-141">For more information, see the *Option* parameter.</span></span>
+<span data-ttu-id="5f9d3-140">Standardmäßig können Sie eine Variable überschreiben, es sei denn, die Variable weist den Optionswert „ReadOnly“ oder „Constant“ auf.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-140">By default, you can overwrite a variable unless the variable has an option value of ReadOnly or Constant.</span></span>
+<span data-ttu-id="5f9d3-141">Weitere Informationen finden Sie unter dem *Option* -Parameter.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-141">For more information, see the *Option* parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -172,8 +172,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-142">-Name</span><span class="sxs-lookup"><span data-stu-id="55127-142">-Name</span></span>
-<span data-ttu-id="55127-143">Gibt einen Namen für die neue Variable an.</span><span class="sxs-lookup"><span data-stu-id="55127-143">Specifies a name for the new variable.</span></span>
+### <span data-ttu-id="5f9d3-142">-Name</span><span class="sxs-lookup"><span data-stu-id="5f9d3-142">-Name</span></span>
+<span data-ttu-id="5f9d3-143">Gibt einen Namen für die neue Variable an.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-143">Specifies a name for the new variable.</span></span>
 
 ```yaml
 Type: System.String
@@ -187,25 +187,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-144">-Option</span><span class="sxs-lookup"><span data-stu-id="55127-144">-Option</span></span>
-<span data-ttu-id="55127-145">Gibt den Wert der **options** -Eigenschaft der Variablen an. Die zulässigen Werte für diesen Parameter sind:</span><span class="sxs-lookup"><span data-stu-id="55127-145">Specifies the value of the **Options** property of the variable.The acceptable values for this parameter are:</span></span>
+### <span data-ttu-id="5f9d3-144">-Option</span><span class="sxs-lookup"><span data-stu-id="5f9d3-144">-Option</span></span>
+<span data-ttu-id="5f9d3-145">Gibt den Wert der **options** -Eigenschaft der Variablen an. Die zulässigen Werte für diesen Parameter sind:</span><span class="sxs-lookup"><span data-stu-id="5f9d3-145">Specifies the value of the **Options** property of the variable.The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="55127-146">Keine</span><span class="sxs-lookup"><span data-stu-id="55127-146">None.</span></span>
-<span data-ttu-id="55127-147">Legt keine Optionen fest.</span><span class="sxs-lookup"><span data-stu-id="55127-147">Sets no options.</span></span>
-<span data-ttu-id="55127-148">("None" ist die Standardeinstellung.)</span><span class="sxs-lookup"><span data-stu-id="55127-148">(None is the default.)</span></span>
-- <span data-ttu-id="55127-149">ReadOnly.</span><span class="sxs-lookup"><span data-stu-id="55127-149">ReadOnly.</span></span>
-<span data-ttu-id="55127-150">Kann gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="55127-150">Can be deleted.</span></span>
-<span data-ttu-id="55127-151">Kann nicht geändert werden, außer mit dem *Force* -Parameter.</span><span class="sxs-lookup"><span data-stu-id="55127-151">Cannot be changed, except by using the *Force* parameter.</span></span>
-- <span data-ttu-id="55127-152">Privat.</span><span class="sxs-lookup"><span data-stu-id="55127-152">Private.</span></span>
-<span data-ttu-id="55127-153">Die Variable ist nur im aktuellen Bereich verfügbar.</span><span class="sxs-lookup"><span data-stu-id="55127-153">The variable is available only in the current scope.</span></span>
-- <span data-ttu-id="55127-154">AllScope.</span><span class="sxs-lookup"><span data-stu-id="55127-154">AllScope.</span></span>
-<span data-ttu-id="55127-155">Die Variable wird in neu erstellte Bereiche kopiert.</span><span class="sxs-lookup"><span data-stu-id="55127-155">The variable is copied to any new scopes that are created.</span></span>
-- <span data-ttu-id="55127-156">Konstante.</span><span class="sxs-lookup"><span data-stu-id="55127-156">Constant.</span></span>
-<span data-ttu-id="55127-157">Kann nicht gelöscht oder geändert werden.</span><span class="sxs-lookup"><span data-stu-id="55127-157">Cannot be deleted or changed.</span></span>
-<span data-ttu-id="55127-158">Die Konstante ist nur gültig, wenn Sie eine Variable erstellen.</span><span class="sxs-lookup"><span data-stu-id="55127-158">Constant is valid only when you are creating a variable.</span></span>
-<span data-ttu-id="55127-159">Sie können die Optionen einer vorhandenen Variablen nicht in "Constant" ändern.</span><span class="sxs-lookup"><span data-stu-id="55127-159">You cannot change the options of an existing variable to Constant.</span></span>
+- <span data-ttu-id="5f9d3-146">Keine</span><span class="sxs-lookup"><span data-stu-id="5f9d3-146">None.</span></span>
+<span data-ttu-id="5f9d3-147">Legt keine Optionen fest.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-147">Sets no options.</span></span>
+<span data-ttu-id="5f9d3-148">("None" ist die Standardeinstellung.)</span><span class="sxs-lookup"><span data-stu-id="5f9d3-148">(None is the default.)</span></span>
+- <span data-ttu-id="5f9d3-149">ReadOnly.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-149">ReadOnly.</span></span>
+<span data-ttu-id="5f9d3-150">Kann gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-150">Can be deleted.</span></span>
+<span data-ttu-id="5f9d3-151">Kann nicht geändert werden, außer mit dem *Force* -Parameter.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-151">Cannot be changed, except by using the *Force* parameter.</span></span>
+- <span data-ttu-id="5f9d3-152">Privat.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-152">Private.</span></span>
+<span data-ttu-id="5f9d3-153">Die Variable ist nur im aktuellen Bereich verfügbar.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-153">The variable is available only in the current scope.</span></span>
+- <span data-ttu-id="5f9d3-154">AllScope.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-154">AllScope.</span></span>
+<span data-ttu-id="5f9d3-155">Die Variable wird in neu erstellte Bereiche kopiert.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-155">The variable is copied to any new scopes that are created.</span></span>
+- <span data-ttu-id="5f9d3-156">Konstante.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-156">Constant.</span></span>
+<span data-ttu-id="5f9d3-157">Kann nicht gelöscht oder geändert werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-157">Cannot be deleted or changed.</span></span>
+<span data-ttu-id="5f9d3-158">Die Konstante ist nur gültig, wenn Sie eine Variable erstellen.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-158">Constant is valid only when you are creating a variable.</span></span>
+<span data-ttu-id="5f9d3-159">Sie können die Optionen einer vorhandenen Variablen nicht in "Constant" ändern.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-159">You cannot change the options of an existing variable to Constant.</span></span>
 
-<span data-ttu-id="55127-160">Um die **options** -Eigenschaft aller Variablen in der Sitzung anzuzeigen, geben Sie ein `Get-Variable | Format-Table -Property name, options -autosize` .</span><span class="sxs-lookup"><span data-stu-id="55127-160">To see the **Options** property of all variables in the session, type `Get-Variable | Format-Table -Property name, options -autosize`.</span></span>
+<span data-ttu-id="5f9d3-160">Um die **options** -Eigenschaft aller Variablen in der Sitzung anzuzeigen, geben Sie ein `Get-Variable | Format-Table -Property name, options -autosize` .</span><span class="sxs-lookup"><span data-stu-id="5f9d3-160">To see the **Options** property of all variables in the session, type `Get-Variable | Format-Table -Property name, options -autosize`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.ScopedItemOptions
@@ -220,9 +220,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-161">-PassThru</span><span class="sxs-lookup"><span data-stu-id="55127-161">-PassThru</span></span>
-<span data-ttu-id="55127-162">Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.</span><span class="sxs-lookup"><span data-stu-id="55127-162">Returns an object representing the item with which you are working.</span></span>
-<span data-ttu-id="55127-163">Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.</span><span class="sxs-lookup"><span data-stu-id="55127-163">By default, this cmdlet does not generate any output.</span></span>
+### <span data-ttu-id="5f9d3-161">-PassThru</span><span class="sxs-lookup"><span data-stu-id="5f9d3-161">-PassThru</span></span>
+<span data-ttu-id="5f9d3-162">Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-162">Returns an object representing the item with which you are working.</span></span>
+<span data-ttu-id="5f9d3-163">Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-163">By default, this cmdlet does not generate any output.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -236,25 +236,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-164">-Bereich</span><span class="sxs-lookup"><span data-stu-id="55127-164">-Scope</span></span>
-<span data-ttu-id="55127-165">Gibt den Bereich der neuen Variablen an.</span><span class="sxs-lookup"><span data-stu-id="55127-165">Specifies the scope of the new variable.</span></span>
-<span data-ttu-id="55127-166">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="55127-166">The acceptable values for this parameter are:</span></span>
+### <span data-ttu-id="5f9d3-164">-Bereich</span><span class="sxs-lookup"><span data-stu-id="5f9d3-164">-Scope</span></span>
+<span data-ttu-id="5f9d3-165">Gibt den Bereich der neuen Variablen an.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-165">Specifies the scope of the new variable.</span></span>
+<span data-ttu-id="5f9d3-166">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="5f9d3-166">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="55127-167">Weltbühne.</span><span class="sxs-lookup"><span data-stu-id="55127-167">Global.</span></span>
-<span data-ttu-id="55127-168">Variablen, die im globalen Gültigkeitsbereich erstellt werden, sind überall in einem PowerShell-Prozess zugänglich.</span><span class="sxs-lookup"><span data-stu-id="55127-168">Variables created in the global scope are accessible everywhere in a PowerShell process.</span></span>
-- <span data-ttu-id="55127-169">Lokal.</span><span class="sxs-lookup"><span data-stu-id="55127-169">Local.</span></span>
-<span data-ttu-id="55127-170">Der lokale Gültigkeitsbereich bezieht sich auf den aktuellen Bereich. Dies kann ein beliebiger Bereich sein, der vom Kontext abhängig ist.</span><span class="sxs-lookup"><span data-stu-id="55127-170">The local scope refers to the current scope, this can be any scope depending on the context.</span></span>
-- <span data-ttu-id="55127-171">Skript.</span><span class="sxs-lookup"><span data-stu-id="55127-171">Script.</span></span>
-<span data-ttu-id="55127-172">Auf Variablen, die im Skript Bereich erstellt werden, kann nur innerhalb der Skriptdatei oder des Moduls zugegriffen werden, in der Sie erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="55127-172">Variables created in the script scope are accessible only within the script file or module they are created in.</span></span>
-- <span data-ttu-id="55127-173">Privat.</span><span class="sxs-lookup"><span data-stu-id="55127-173">Private.</span></span>
-<span data-ttu-id="55127-174">Auf Variablen, die im privaten Bereich erstellt werden, kann nicht außerhalb des Bereichs zugegriffen werden, in dem Sie vorhanden sind</span><span class="sxs-lookup"><span data-stu-id="55127-174">Variables created in the private scope cannot be accessed outside the scope they exist in.</span></span>
-<span data-ttu-id="55127-175">Sie können den privaten Bereich verwenden, um eine private Version eines Elements zu erstellen, das denselben Namen in einem anderen Bereich hat.</span><span class="sxs-lookup"><span data-stu-id="55127-175">You can use private scope to create a private version of an item with the same name in another scope.</span></span>
-- <span data-ttu-id="55127-176">Eine Zahl relativ zum aktuellen Bereich (0 bis zur Anzahl der Bereiche, wobei 0 der aktuelle Bereich ist, 1 das übergeordnete Element, 2 das übergeordnete Element des übergeordneten Bereichs usw.).</span><span class="sxs-lookup"><span data-stu-id="55127-176">A number relative to the current scope (0 through the number of scopes, where 0 is the current scope, 1 is its parent, 2 the parent of the parent scope, and so on).</span></span>
-<span data-ttu-id="55127-177">Negative Zahlen können nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="55127-177">Negative numbers cannot be used.</span></span>
+- <span data-ttu-id="5f9d3-167">Weltbühne.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-167">Global.</span></span>
+<span data-ttu-id="5f9d3-168">Variablen, die im globalen Gültigkeitsbereich erstellt werden, sind überall in einem PowerShell-Prozess zugänglich.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-168">Variables created in the global scope are accessible everywhere in a PowerShell process.</span></span>
+- <span data-ttu-id="5f9d3-169">Lokal.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-169">Local.</span></span>
+<span data-ttu-id="5f9d3-170">Der lokale Gültigkeitsbereich bezieht sich auf den aktuellen Bereich. Dies kann ein beliebiger Bereich sein, der vom Kontext abhängig ist.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-170">The local scope refers to the current scope, this can be any scope depending on the context.</span></span>
+- <span data-ttu-id="5f9d3-171">Skript.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-171">Script.</span></span>
+<span data-ttu-id="5f9d3-172">Auf Variablen, die im Skript Bereich erstellt werden, kann nur innerhalb der Skriptdatei oder des Moduls zugegriffen werden, in der Sie erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-172">Variables created in the script scope are accessible only within the script file or module they are created in.</span></span>
+- <span data-ttu-id="5f9d3-173">Privat.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-173">Private.</span></span>
+<span data-ttu-id="5f9d3-174">Auf Variablen, die im privaten Bereich erstellt werden, kann nicht außerhalb des Bereichs zugegriffen werden, in dem Sie vorhanden sind</span><span class="sxs-lookup"><span data-stu-id="5f9d3-174">Variables created in the private scope cannot be accessed outside the scope they exist in.</span></span>
+<span data-ttu-id="5f9d3-175">Sie können den privaten Bereich verwenden, um eine private Version eines Elements zu erstellen, das denselben Namen in einem anderen Bereich hat.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-175">You can use private scope to create a private version of an item with the same name in another scope.</span></span>
+- <span data-ttu-id="5f9d3-176">Eine Zahl relativ zum aktuellen Bereich (0 bis zur Anzahl der Bereiche, wobei 0 der aktuelle Bereich ist, 1 das übergeordnete Element, 2 das übergeordnete Element des übergeordneten Bereichs usw.).</span><span class="sxs-lookup"><span data-stu-id="5f9d3-176">A number relative to the current scope (0 through the number of scopes, where 0 is the current scope, 1 is its parent, 2 the parent of the parent scope, and so on).</span></span>
+<span data-ttu-id="5f9d3-177">Negative Zahlen können nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-177">Negative numbers cannot be used.</span></span>
 
-<span data-ttu-id="55127-178">Local ist der Standardbereich, wenn der Bereichs Parameter nicht angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="55127-178">Local is the default scope when the scope parameter is not specified.</span></span>
+<span data-ttu-id="5f9d3-178">Local ist der Standardbereich, wenn der Bereichs Parameter nicht angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-178">Local is the default scope when the scope parameter is not specified.</span></span>
 
-<span data-ttu-id="55127-179">Weitere Informationen finden Sie unter „about_Scopes“.</span><span class="sxs-lookup"><span data-stu-id="55127-179">For more information, see about_Scopes.</span></span>
+<span data-ttu-id="5f9d3-179">Weitere Informationen finden Sie unter „about_Scopes“.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-179">For more information, see about_Scopes.</span></span>
 
 ```yaml
 Type: System.String
@@ -268,8 +268,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-180">-Value</span><span class="sxs-lookup"><span data-stu-id="55127-180">-Value</span></span>
-<span data-ttu-id="55127-181">Gibt den Anfangswert der Variablen an.</span><span class="sxs-lookup"><span data-stu-id="55127-181">Specifies the initial value of the variable.</span></span>
+### <span data-ttu-id="5f9d3-180">-Value</span><span class="sxs-lookup"><span data-stu-id="5f9d3-180">-Value</span></span>
+<span data-ttu-id="5f9d3-181">Gibt den Anfangswert der Variablen an.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-181">Specifies the initial value of the variable.</span></span>
 
 ```yaml
 Type: System.Object
@@ -283,20 +283,20 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-182">-Sichtbarkeit</span><span class="sxs-lookup"><span data-stu-id="55127-182">-Visibility</span></span>
-<span data-ttu-id="55127-183">Bestimmt, ob die Variable außerhalb der Sitzung, in der sie erstellt wurde, sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="55127-183">Determines whether the variable is visible outside of the session in which it was created.</span></span>
-<span data-ttu-id="55127-184">Dieser Parameter dient zur Verwendung in Skripts und Befehlen, die für andere Benutzer bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="55127-184">This parameter is designed for  use in scripts and commands that will be delivered to other users.</span></span>
-<span data-ttu-id="55127-185">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="55127-185">The acceptable values for this parameter are:</span></span>
+### <span data-ttu-id="5f9d3-182">-Sichtbarkeit</span><span class="sxs-lookup"><span data-stu-id="5f9d3-182">-Visibility</span></span>
+<span data-ttu-id="5f9d3-183">Bestimmt, ob die Variable außerhalb der Sitzung, in der sie erstellt wurde, sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-183">Determines whether the variable is visible outside of the session in which it was created.</span></span>
+<span data-ttu-id="5f9d3-184">Dieser Parameter dient zur Verwendung in Skripts und Befehlen, die für andere Benutzer bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-184">This parameter is designed for  use in scripts and commands that will be delivered to other users.</span></span>
+<span data-ttu-id="5f9d3-185">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="5f9d3-185">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="55127-186">Öffentlich.</span><span class="sxs-lookup"><span data-stu-id="55127-186">Public.</span></span>
-<span data-ttu-id="55127-187">Die Variable wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="55127-187">The variable is visible.</span></span>
-<span data-ttu-id="55127-188">(Public ist die Standardeinstellung.)</span><span class="sxs-lookup"><span data-stu-id="55127-188">(Public is the default.)</span></span>
-- <span data-ttu-id="55127-189">Privat.</span><span class="sxs-lookup"><span data-stu-id="55127-189">Private.</span></span>
-<span data-ttu-id="55127-190">Die Variable wird nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="55127-190">The variable is not visible.</span></span>
+- <span data-ttu-id="5f9d3-186">Öffentlich.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-186">Public.</span></span>
+<span data-ttu-id="5f9d3-187">Die Variable wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-187">The variable is visible.</span></span>
+<span data-ttu-id="5f9d3-188">(Public ist die Standardeinstellung.)</span><span class="sxs-lookup"><span data-stu-id="5f9d3-188">(Public is the default.)</span></span>
+- <span data-ttu-id="5f9d3-189">Privat.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-189">Private.</span></span>
+<span data-ttu-id="5f9d3-190">Die Variable wird nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-190">The variable is not visible.</span></span>
 
-<span data-ttu-id="55127-191">Wenn eine Variable privat ist, wird sie nicht in den Listen mit Variablen angezeigt, z. B. jene, die von Get-Variable zurückgegeben werden, oder in den Anzeigen des Variable:-Laufwerks.</span><span class="sxs-lookup"><span data-stu-id="55127-191">When a variable is private, it does not appear in lists of variables, such as those returned by Get-Variable, or in displays of the Variable: drive.</span></span>
-<span data-ttu-id="55127-192">Befehle zum Lesen oder Ändern des Werts einer privaten Variablen geben einen Fehler zurück.</span><span class="sxs-lookup"><span data-stu-id="55127-192">Commands to read or change the value of a private variable return an error.</span></span>
-<span data-ttu-id="55127-193">Der Benutzer kann jedoch Befehle ausführen, die eine private Variable verwenden, wenn die Befehle in der Sitzung geschrieben wurden, in der die Variable definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="55127-193">However, the user can run commands that use a private variable if the commands were written in the session in which the variable was defined.</span></span>
+<span data-ttu-id="5f9d3-191">Wenn eine Variable privat ist, wird sie nicht in den Listen mit Variablen angezeigt, z. B. jene, die von Get-Variable zurückgegeben werden, oder in den Anzeigen des Variable:-Laufwerks.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-191">When a variable is private, it does not appear in lists of variables, such as those returned by Get-Variable, or in displays of the Variable: drive.</span></span>
+<span data-ttu-id="5f9d3-192">Befehle zum Lesen oder Ändern des Werts einer privaten Variablen geben einen Fehler zurück.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-192">Commands to read or change the value of a private variable return an error.</span></span>
+<span data-ttu-id="5f9d3-193">Der Benutzer kann jedoch Befehle ausführen, die eine private Variable verwenden, wenn die Befehle in der Sitzung geschrieben wurden, in der die Variable definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-193">However, the user can run commands that use a private variable if the commands were written in the session in which the variable was defined.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SessionStateEntryVisibility
@@ -311,8 +311,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-194">-Confirm</span><span class="sxs-lookup"><span data-stu-id="55127-194">-Confirm</span></span>
-<span data-ttu-id="55127-195">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="55127-195">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="5f9d3-194">-Confirm</span><span class="sxs-lookup"><span data-stu-id="5f9d3-194">-Confirm</span></span>
+<span data-ttu-id="5f9d3-195">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-195">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -326,9 +326,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-196">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="55127-196">-WhatIf</span></span>
-<span data-ttu-id="55127-197">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="55127-197">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="55127-198">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="55127-198">The cmdlet is not run.</span></span>
+### <span data-ttu-id="5f9d3-196">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="5f9d3-196">-WhatIf</span></span>
+<span data-ttu-id="5f9d3-197">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-197">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="5f9d3-198">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-198">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -342,28 +342,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="55127-199">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="55127-199">CommonParameters</span></span>
-<span data-ttu-id="55127-200">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="55127-200">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="55127-201">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="55127-201">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="5f9d3-199">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5f9d3-199">CommonParameters</span></span>
+<span data-ttu-id="5f9d3-200">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-200">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5f9d3-201">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="5f9d3-201">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="55127-202">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="55127-202">INPUTS</span></span>
+## <span data-ttu-id="5f9d3-202">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="5f9d3-202">INPUTS</span></span>
 
-### <span data-ttu-id="55127-203">System.Object</span><span class="sxs-lookup"><span data-stu-id="55127-203">System.Object</span></span>
-<span data-ttu-id="55127-204">Sie können einen Wert über die Pipeline an **New-Variable** übergeben.</span><span class="sxs-lookup"><span data-stu-id="55127-204">You can pipe a value to **New-Variable** .</span></span>
+### <span data-ttu-id="5f9d3-203">System.Object</span><span class="sxs-lookup"><span data-stu-id="5f9d3-203">System.Object</span></span>
+<span data-ttu-id="5f9d3-204">Sie können einen Wert über die Pipeline an **New-Variable** übergeben.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-204">You can pipe a value to **New-Variable**.</span></span>
 
-## <span data-ttu-id="55127-205">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="55127-205">OUTPUTS</span></span>
+## <span data-ttu-id="5f9d3-205">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="5f9d3-205">OUTPUTS</span></span>
 
-### <span data-ttu-id="55127-206">None oder System. Management. Automation. psvariable</span><span class="sxs-lookup"><span data-stu-id="55127-206">None or System.Management.Automation.PSVariable</span></span>
-<span data-ttu-id="55127-207">Wenn Sie den *passthru* -Parameter verwenden, generiert **New-Variable** ein **System. Management. Automation. psvariable** -Objekt, das die neue Variable darstellt.</span><span class="sxs-lookup"><span data-stu-id="55127-207">When you use the *PassThru* parameter, **New-Variable** generates a **System.Management.Automation.PSVariable** object representing the new variable.</span></span>
-<span data-ttu-id="55127-208">Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.</span><span class="sxs-lookup"><span data-stu-id="55127-208">Otherwise, this cmdlet does not generate any output.</span></span>
+### <span data-ttu-id="5f9d3-206">None oder System. Management. Automation. psvariable</span><span class="sxs-lookup"><span data-stu-id="5f9d3-206">None or System.Management.Automation.PSVariable</span></span>
+<span data-ttu-id="5f9d3-207">Wenn Sie den *passthru* -Parameter verwenden, generiert **New-Variable** ein **System. Management. Automation. psvariable** -Objekt, das die neue Variable darstellt.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-207">When you use the *PassThru* parameter, **New-Variable** generates a **System.Management.Automation.PSVariable** object representing the new variable.</span></span>
+<span data-ttu-id="5f9d3-208">Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.</span><span class="sxs-lookup"><span data-stu-id="5f9d3-208">Otherwise, this cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="55127-209">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="55127-209">NOTES</span></span>
+## <span data-ttu-id="5f9d3-209">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="5f9d3-209">NOTES</span></span>
 
-## <span data-ttu-id="55127-210">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="55127-210">RELATED LINKS</span></span>
+## <span data-ttu-id="5f9d3-210">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="5f9d3-210">RELATED LINKS</span></span>
 
-[<span data-ttu-id="55127-211">Clear-Variable</span><span class="sxs-lookup"><span data-stu-id="55127-211">Clear-Variable</span></span>](Clear-Variable.md)
+[<span data-ttu-id="5f9d3-211">Clear-Variable</span><span class="sxs-lookup"><span data-stu-id="5f9d3-211">Clear-Variable</span></span>](Clear-Variable.md)
 
-[<span data-ttu-id="55127-212">Get-Variable</span><span class="sxs-lookup"><span data-stu-id="55127-212">Get-Variable</span></span>](Get-Variable.md)
+[<span data-ttu-id="5f9d3-212">Get-Variable</span><span class="sxs-lookup"><span data-stu-id="5f9d3-212">Get-Variable</span></span>](Get-Variable.md)
 
-[<span data-ttu-id="55127-213">Remove-Variable</span><span class="sxs-lookup"><span data-stu-id="55127-213">Remove-Variable</span></span>](Remove-Variable.md)
+[<span data-ttu-id="5f9d3-213">Remove-Variable</span><span class="sxs-lookup"><span data-stu-id="5f9d3-213">Remove-Variable</span></span>](Remove-Variable.md)
 
-[<span data-ttu-id="55127-214">Set-Variable</span><span class="sxs-lookup"><span data-stu-id="55127-214">Set-Variable</span></span>](Set-Variable.md)
+[<span data-ttu-id="5f9d3-214">Set-Variable</span><span class="sxs-lookup"><span data-stu-id="5f9d3-214">Set-Variable</span></span>](Set-Variable.md)
