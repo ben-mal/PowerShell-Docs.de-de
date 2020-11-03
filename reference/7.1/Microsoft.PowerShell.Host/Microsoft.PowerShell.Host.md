@@ -1,0 +1,31 @@
+---
+Download Help Link: https://aka.ms/powershell71-help
+Help Version: 7.1.0.0
+keywords: powershell,cmdlet
+Locale: en-US
+Module Guid: 56d66100-99a0-4ffc-a12d-eee9a6718aef
+Module Name: Microsoft.PowerShell.Host
+ms.date: 06/09/2017
+schema: 2.0.0
+title: Microsoft.PowerShell.Host
+ms.openlocfilehash: c7e51f84ead2713d220c63c9e6152d0bd894a221
+ms.sourcegitcommit: 3571b9e87e8881adbf7984cda46a63891039a987
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "93209538"
+---
+# Microsoft.PowerShell.Host-Modul
+
+## BESCHREIBUNG
+
+Dieser Abschnitt enthält die Hilfe Themen für die Cmdlets, die mit dem PowerShell-Modul Microsoft. PowerShell. Host installiert werden. Das Hostmodul enthält Cmdlets zum Verwalten der Daten aus Hostprogrammen.
+
+## Microsoft.PowerShell.Host-Cmdlets
+
+### [Start-Transcript](Start-Transcript.md)
+Erstellt einen Datensatz einer gesamten oder eines Teils einer PowerShell-Sitzung in einer Textdatei.
+
+### [Stop-Transcript](Stop-Transcript.md)
+Beendet eine Aufzeichnung.
+
