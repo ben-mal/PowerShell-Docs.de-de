@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Bereich
 
-Wirkt sich nur auf die Aliase im angegebenen Bereich aus. Der Standardbereich ist **local** . Weitere Informationen finden Sie unter [about_Scopes](../microsoft.powershell.core/about/about_scopes.md).
+Wirkt sich nur auf die Aliase im angegebenen Bereich aus. Der Standardbereich ist **local**. Weitere Informationen finden Sie unter [about_Scopes](../microsoft.powershell.core/about/about_scopes.md).
 
 Zulässige Werte für diesen Parameter:
 

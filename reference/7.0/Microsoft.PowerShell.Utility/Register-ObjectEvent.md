@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 Gibt das Ereignis an, das Sie abonnieren.
 
-Der Wert dieses Parameters muss dem Namen des Ereignisses sein, das das .NET-Objekt verfügbar macht. Die **ManagementEventWatcher** -Klasse hat z. b. Ereignisse mit dem Namen **eventeingetroffen** und **beendet** . Verwenden Sie das-Cmdlet, um den Ereignis Namen eines Ereignisses zu ermitteln `Get-Member` .
+Der Wert dieses Parameters muss dem Namen des Ereignisses sein, das das .NET-Objekt verfügbar macht. Die **ManagementEventWatcher** -Klasse hat z. b. Ereignisse mit dem Namen **eventeingetroffen** und **beendet**. Verwenden Sie das-Cmdlet, um den Ereignis Namen eines Ereignisses zu ermitteln `Get-Member` .
 
 ```yaml
 Type: System.String

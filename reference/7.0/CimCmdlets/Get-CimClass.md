@@ -182,7 +182,7 @@ Accept wildcard characters: True
 
 ### -Namespace
 
-Gibt den Namespace für den CIM-Vorgang an. Der Standard Namespace ist **root/cimv2** . Mit der Vervollständigung mit der Tab-Taste können Sie die Liste der Namespaces durchsuchen, da PowerShell eine Liste der Namespaces vom lokalen WMI-Server abruft, um die Liste der Namespaces bereitzustellen.
+Gibt den Namespace für den CIM-Vorgang an. Der Standard Namespace ist **root/cimv2**. Mit der Vervollständigung mit der Tab-Taste können Sie die Liste der Namespaces durchsuchen, da PowerShell eine Liste der Namespaces vom lokalen WMI-Server abruft, um die Liste der Namespaces bereitzustellen.
 
 ```yaml
 Type: System.String

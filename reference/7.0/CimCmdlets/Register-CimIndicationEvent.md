@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-Gibt den Namespace für den CIM-Vorgang an. Der Standard Namespace ist **root/cimv2** . Mit der Vervollständigung mit der Tab-Taste können Sie die Liste der Namespaces durchsuchen, da PowerShell eine Liste der Namespaces vom lokalen WMI-Server abruft, um die Liste der Namespaces bereitzustellen.
+Gibt den Namespace für den CIM-Vorgang an. Der Standard Namespace ist **root/cimv2**. Mit der Vervollständigung mit der Tab-Taste können Sie die Liste der Namespaces durchsuchen, da PowerShell eine Liste der Namespaces vom lokalen WMI-Server abruft, um die Liste der Namespaces bereitzustellen.
 
 ```yaml
 Type: System.String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -Querydialekt
 
-Gibt die Abfragesprache an, die für den **Abfrage** Parameter verwendet wird. Die zulässigen Werte für diesen Parameter sind: **WQL** oder **CQL** . Der Standardwert ist **WQL** .
+Gibt die Abfragesprache an, die für den **Abfrage** Parameter verwendet wird. Die zulässigen Werte für diesen Parameter sind: **WQL** oder **CQL**. Der Standardwert ist **WQL**.
 
 ```yaml
 Type: System.String

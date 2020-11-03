@@ -108,7 +108,7 @@ This is the updated description
 Param()
 ```
 
-`$Parms` speichert die Parameterwerte für **path** , **Version** , **Author** , **CompanyName** und **Description** . `Update-ScriptFileInfo` Ruft die Parameterwerte aus ab `@Parms` und aktualisiert das Skript. Der **passthru** -Parameter zeigt den Inhalt des Skripts in der PowerShell-Konsole an.
+`$Parms` speichert die Parameterwerte für **path** , **Version** , **Author** , **CompanyName** und **Description**. `Update-ScriptFileInfo` Ruft die Parameterwerte aus ab `@Parms` und aktualisiert das Skript. Der **passthru** -Parameter zeigt den Inhalt des Skripts in der PowerShell-Konsole an.
 
 ## PARAMETERS
 

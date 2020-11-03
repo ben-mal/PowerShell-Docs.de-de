@@ -90,7 +90,7 @@ PS C:\> Get-Process "Windows PowerShell" | Debug-Process
 Dieser Befehl fügt einen Debugger an die PowerShell-Prozesse auf dem Computer an.
 Er verwendet das **Get-Process-** Cmdlet, um die PowerShell-Prozesse auf dem Computer zu erhalten, und verwendet einen Pipeline Operator (|), um die Prozesse an das **Debug-Process-** Cmdlet zu senden.
 
-Verwenden Sie zum Angeben eines bestimmten PowerShell-Prozesses den ID-Parameter von **Get-Process** .
+Verwenden Sie zum Angeben eines bestimmten PowerShell-Prozesses den ID-Parameter von **Get-Process**.
 
 ### Beispiel 6: Anfügen eines Debuggers an einen aktuellen Prozess auf dem lokalen Computer
 

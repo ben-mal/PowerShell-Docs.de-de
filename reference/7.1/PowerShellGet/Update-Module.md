@@ -84,7 +84,7 @@ In diesem Beispiel wird ein Modul auf eine bestimmte Version aktualisiert. Die V
 Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 ```
 
-`Update-Module` verwendet den **Name** -Parameter, um das Modul " **speculationcontrol** " anzugeben. Der Requirements **dversion** -Parameter gibt die Version an, **1.0.14** .
+`Update-Module` verwendet den **Name** -Parameter, um das Modul " **speculationcontrol** " anzugeben. Der Requirements **dversion** -Parameter gibt die Version an, **1.0.14**.
 
 ### Beispiel 5: Aktualisieren eines Moduls ohne Bestätigung
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -Bereich
 
-Gibt den Bereich der Installation des Moduls an. Die zulässigen Werte für diesen Parameter sind **ALLUSERS** und **CurrentUser** . Wenn der **Bereich** nicht angegeben wird, wird das Update im Bereich **CurrentUser** installiert.
+Gibt den Bereich der Installation des Moduls an. Die zulässigen Werte für diesen Parameter sind **ALLUSERS** und **CurrentUser**. Wenn der **Bereich** nicht angegeben wird, wird das Update im Bereich **CurrentUser** installiert.
 
 Der Bereich " **ALLUSERS** " erfordert erhöhte Berechtigungen und installiert Module an einem Speicherort, auf den alle Benutzer des Computers zugreifen können:
 
@@ -342,7 +342,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ## HINWEISE
 
-Für PowerShell, Version 6,0 und höher, ist der Standard Installationsbereich immer **CurrentUser** .
+Für PowerShell, Version 6,0 und höher, ist der Standard Installationsbereich immer **CurrentUser**.
 Modulupdates für **CurrentUser** , `$home\Documents\PowerShell\Modules` , benötigen keine erhöhten Berechtigungen. Modulupdates für **ALLUSERS** , `$env:ProgramFiles\PowerShell\Modules` , benötigen erhöhte Berechtigungen.
 
 `Update-Module` wird in PowerShell 3,0 oder höheren Versionen von PowerShell unter Windows 7 oder Windows 2008 R2 und höheren Versionen von Windows ausgeführt.

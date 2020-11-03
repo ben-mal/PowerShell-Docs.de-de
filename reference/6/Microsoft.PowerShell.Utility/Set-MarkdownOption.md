@@ -313,7 +313,7 @@ Accept wildcard characters: False
 
 ### -Design
 
-Wählt ein Design aus, das vordefinierte Farbeinstellungen enthält. Die möglichen Werte sind **dunkel** und **hell** .
+Wählt ein Design aus, das vordefinierte Farbeinstellungen enthält. Die möglichen Werte sind **dunkel** und **hell**.
 
 ```yaml
 Type: System.String

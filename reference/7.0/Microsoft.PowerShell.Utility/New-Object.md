@@ -200,7 +200,7 @@ Gibt ein Array von Argumenten an, die an den Konstruktor der .NET Framework Klas
 
 Weitere Informationen zum Verhalten von **argumentlist** finden Sie unter [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).
 
-Der Alias für **ArgumentList** ist **Args** .
+Der Alias für **ArgumentList** ist **Args**.
 
 ```yaml
 Type: System.Object[]

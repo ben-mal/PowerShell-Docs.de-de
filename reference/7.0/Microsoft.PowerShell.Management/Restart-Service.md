@@ -76,7 +76,7 @@ Mit diesem Befehl werden alle beendeten Netzwerkdienste auf dem Computer gestart
 
 Dieser Befehl verwendet das Cmdlet "Get-Service", um Objekte zu erhalten, die die Dienste darstellen, deren Dienst Name mit "NET" beginnt.
 Der Pipeline Operator (|) sendet das Dienst Objekt an das Cmdlet "Where-Object", das nur die Dienste auswählt, die den Status "beendet" aufweisen.
-Ein weiterer Pipeline Operator sendet die ausgewählten Dienste an **Restart-Service** .
+Ein weiterer Pipeline Operator sendet die ausgewählten Dienste an **Restart-Service**.
 
 In der Praxis verwenden Sie den *WhatIf* -Parameter, um die Auswirkung des Befehls zu ermitteln, bevor Sie ihn ausführen.
 

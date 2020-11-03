@@ -98,7 +98,7 @@ Version   Name               Repository   Description
 1.2.0.0   SystemLocaleDsc    PSGallery    This DSC Resource allows configuration of the Windows...
 ```
 
-`Find-Command` verwendet den **Name** -Parameter, um den Befehl " **Get-targetresource** " anzugeben. Der **Repository** -Parameter durchsucht den **psgallery** . Der **ModuleName** -Parameter gibt das Modul an, das Sie installieren möchten, **systemlocaledsc** . Das-Objekt wird an die Pipeline gesendet, `Install-Module` und das-Modul wird installiert. Nachdem die Installation abgeschlossen ist, können Sie verwenden, `Get-InstalledModule` um die Ergebnisse anzuzeigen.
+`Find-Command` verwendet den **Name** -Parameter, um den Befehl " **Get-targetresource** " anzugeben. Der **Repository** -Parameter durchsucht den **psgallery**. Der **ModuleName** -Parameter gibt das Modul an, das Sie installieren möchten, **systemlocaledsc**. Das-Objekt wird an die Pipeline gesendet, `Install-Module` und das-Modul wird installiert. Nachdem die Installation abgeschlossen ist, können Sie verwenden, `Get-InstalledModule` um die Ergebnisse anzuzeigen.
 
 ### Beispiel 4: Suchen eines Befehls und Speichern des Moduls
 

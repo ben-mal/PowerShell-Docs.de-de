@@ -206,7 +206,7 @@ Gibt den Mechanismus an, der verwendet wird, um die Benutzer Anmelde Information
 - **Kerberos**
 - **Verhandelt**
 
-Der Standardwert lautet **Default** .
+Der Standardwert lautet **Default**.
 
 Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
