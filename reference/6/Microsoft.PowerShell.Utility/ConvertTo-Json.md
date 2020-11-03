@@ -1,0 +1,308 @@
+---
+external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
+keywords: powershell,cmdlet
+Locale: en-US
+Module Name: Microsoft.PowerShell.Utility
+ms.date: 06/09/2017
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: ConvertTo-Json
+ms.openlocfilehash: 26c899b5560df566ec97eb4f81a6f7a4416932ca
+ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "93216823"
+---
+# ConvertTo-Json
+
+## ZUSAMMENFASSUNG
+Konvertiert ein Objekt in eine JSON-formatierte Zeichenfolge.
+
+## SYNTAX
+
+```
+ConvertTo-Json [-InputObject] <Object> [-Depth <Int32>] [-Compress]
+[-EnumsAsStrings] [-AsArray] [-EscapeHandling <StringEscapeHandling>]
+[<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Mit dem- `ConvertTo-Json` Cmdlet wird ein beliebiges .NET-Objekt in eine Zeichenfolge im JSON-Format (JavaScript Object Notation) konvertiert. Die Eigenschaften werden in Feldnamen konvertiert, die Feldwerte werden in Eigenschaftswerte konvertiert, und die Methoden werden entfernt.
+
+Sie können dann mit dem `ConvertFrom-Json` Cmdlet eine JSON-formatierte Zeichenfolge in ein JSON-Objekt konvertieren, das leicht in PowerShell verwaltet werden kann.
+
+Viele Websites verwenden JSON statt XML, um Daten für die Kommunikation zwischen Servern und webbasierten Apps zu serialisieren.
+
+Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.
+
+## BEISPIELE
+
+### Beispiel 1
+
+```powershell
+(Get-UICulture).Calendar | ConvertTo-Json
+```
+
+```Output
+{
+  "MinSupportedDateTime": "0001-01-01T00:00:00",
+  "MaxSupportedDateTime": "9999-12-31T23:59:59.9999999",
+  "AlgorithmType": 1,
+  "CalendarType": 1,
+  "Eras": [
+    1
+  ],
+  "TwoDigitYearMax": 2029,
+  "IsReadOnly": true
+}
+```
+
+Dieser Befehl verwendet das `ConvertTo-Json` Cmdlet, um ein GregorianCalendar-Objekt in eine JSON-formatierte Zeichenfolge zu konvertieren.
+
+### Beispiel 2
+
+```powershell
+Get-Date | ConvertTo-Json; Get-Date | ConvertTo-Json -AsArray
+```
+
+```Output
+{
+  "value": "2018-10-12T23:07:18.8450248-05:00",
+  "DisplayHint": 2,
+  "DateTime": "October 12, 2018 11:07:18 PM"
+}
+[
+  {
+    "value": "2018-10-12T23:07:18.8480668-05:00",
+    "DisplayHint": 2,
+    "DateTime": "October 12, 2018 11:07:18 PM"
+  }
+]
+```
+
+Dieses Beispiel zeigt die Ausgabe des `ConvertTo-Json` Cmdlets mit und ohne den **asarray** -Switch-Parameter. Sie können sehen, dass der zweite Teil der Ausgabe in eckige Klammern eingeschlossen ist.
+
+### Beispiel 3
+
+```powershell
+@{Account="User01";Domain="Domain01";Admin="True"} | ConvertTo-Json -Compress
+```
+
+```Output
+{"Domain":"Domain01","Account":"User01","Admin":"True"}
+```
+
+Dieser Befehl zeigt die Auswirkung der Verwendung des Parameters " **Compress** " von `ConvertTo-Json` . Die Komprimierung wirkt sich nur auf die Darstellung der Zeichenfolge, nicht auf ihre Gültigkeit aus.
+
+### Beispiel 4
+
+```powershell
+Get-Date | Select-Object -Property * | ConvertTo-Json
+```
+
+```Output
+{
+  "DisplayHint": 2,
+  "DateTime": "October 12, 2018 10:55:32 PM",
+  "Date": "2018-10-12T00:00:00-05:00",
+  "Day": 12,
+  "DayOfWeek": 5,
+  "DayOfYear": 285,
+  "Hour": 22,
+  "Kind": 2,
+  "Millisecond": 639,
+  "Minute": 55,
+  "Month": 10,
+  "Second": 32,
+  "Ticks": 636749817326397744,
+  "TimeOfDay": {
+    "Ticks": 825326397744,
+    "Days": 0,
+    "Hours": 22,
+    "Milliseconds": 639,
+    "Minutes": 55,
+    "Seconds": 32,
+    "TotalDays": 0.95523888627777775,
+    "TotalHours": 22.925733270666665,
+    "TotalMilliseconds": 82532639.774400011,
+    "TotalMinutes": 1375.54399624,
+    "TotalSeconds": 82532.6397744
+  },
+  "Year": 2018
+}
+```
+
+In diesem Beispiel wird das- `ConvertTo-Json` Cmdlet zum Konvertieren eines **System. DateTime** -Objekts aus dem `Get-Date` Cmdlet in eine JSON-formatierte Zeichenfolge verwendet. Der Befehl verwendet das `Select-Object` Cmdlet, um alle ( `*` ) der Eigenschaften des **DateTime** -Objekts zu erhalten. Die Ausgabe zeigt die JSON-Zeichenfolge, die `ConvertTo-Json` zurückgegeben wurde.
+
+### Beispiel 5
+
+```powershell
+Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json
+```
+
+```Output
+DisplayHint : 2
+DateTime    : October 12, 2018 10:55:52 PM
+Date        : 2018-10-12 12:00:00 AM
+Day         : 12
+DayOfWeek   : 5
+DayOfYear   : 285
+Hour        : 22
+Kind        : 2
+Millisecond : 768
+Minute      : 55
+Month       : 10
+Second      : 52
+Ticks       : 636749817527683372
+TimeOfDay   : @{Ticks=825527683372; Days=0; Hours=22; Milliseconds=768; Minutes=55; Seconds=52;
+              TotalDays=0.95547185575463; TotalHours=22.9313245381111; TotalMilliseconds=82552768.3372;
+              TotalMinutes=1375.87947228667; TotalSeconds=82552.7683372}
+Year        : 2018
+```
+
+In diesem Beispiel wird gezeigt, wie `ConvertTo-Json` die `ConvertFrom-Json` Cmdlets und verwendet werden, um ein Objekt in eine JSON-Zeichenfolge und ein JSON-Objekt zu konvertieren.
+
+## PARAMETERS
+
+### -Asarray
+
+Gibt das-Objekt in Array Klammern aus, auch wenn die Eingabe ein einzelnes Objekt ist.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Komprimieren
+
+Lässt Leerstellen und eingerückte Formatierungen in der Ausgabezeichenfolge aus.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tiefe
+
+Gibt an, wie viele Ebenen der enthaltenen Objekte in der JSON-Darstellung enthalten sind. Der Standardwert ist 2.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 2
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Enumsasstrings
+
+Stellt eine Alternative Serialisierungsoption bereit, die alle Enumerationen in ihre Zeichen folgen Darstellung konvertiert.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Escapehanding
+
+Steuert, wie bestimmte Zeichen in der resultierenden JSON-Ausgabe mit Escapezeichen versehen werden. Standardmäßig werden nur Steuerzeichen mit Escapezeichen versehen.
+
+Zulässige Werte sind:
+
+- Nur-Standard Steuerzeichen werden mit Escapezeichen versehen.
+- Escapesonascii-alle nicht-ASCII-und-Steuerzeichen werden mit Escapezeichen versehen.
+- EscapeHtml-HTML ( `<` , `>` , `&` , `'` , `"` ) und Steuerzeichen werden mit Escapezeichen versehen.
+
+Dieser Parameter wurde in PowerShell 6,2 eingeführt.
+
+```yaml
+Type: Newtonsoft.Json.StringEscapeHandling
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+Gibt die Objekte an, die in das JSON-Format konvertiert werden sollen. Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden. Sie können ein Objekt auch über die Pipeline an übergeben `ConvertTo-Json` .
+
+Der **Inputobject** -Parameter ist erforderlich, aber sein Wert kann NULL ( `$null` ) oder eine leere Zeichenfolge sein.
+Wenn das Eingabe Objekt ist `$null` , `ConvertTo-Json` generiert keine Ausgabe. Wenn das Eingabe Objekt eine leere Zeichenfolge ist, wird `ConvertTo-Json` eine leere Zeichenfolge zurückgegeben.
+
+```yaml
+Type: System.Object
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+
+## EINGABEN
+
+### System.Object
+
+Sie können jedes beliebige Objekt an die Pipeline übergeben `ConvertTo-Json` .
+
+## AUSGABEN
+
+### System.String
+
+## HINWEISE
+
+Das `ConvertTo-Json` Cmdlet wird mithilfe von [newtonsoft JSON.net](https://www.newtonsoft.com/json)implementiert.
+
+## VERWANDTE LINKS
+
+[Eine Einführung in JavaScript Object Notation (JSON) in JavaScript und .net](/previous-versions/dotnet/articles/bb299886(v=msdn.10))
+
+[ConvertFrom-Json](ConvertFrom-Json.md)
+
+[Get-Content](../Microsoft.PowerShell.Management/Get-Content.md)
+
+[Get-UICulture](Get-UICulture.md)
+
+[Invoke-WebRequest](Invoke-WebRequest.md)
+
+[Invoke-RestMethod](Invoke-RestMethod.md)
+
+[NewtonSoft.Js. Stringescapehanding](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm)
