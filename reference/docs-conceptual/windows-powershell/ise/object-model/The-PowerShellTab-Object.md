@@ -1,17 +1,17 @@
 ---
 ms.date: 06/05/2017
-keywords: powershell,cmdlet
 title: Das PowerShellTab-Objekt
-ms.openlocfilehash: 55e3678a8285f0ec7e8131d98c87478216c26f37
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Das PowerShellTab-Objekt stellt eine Windows PowerShell-Laufzeitumgebung dar.
+ms.openlocfilehash: ac89875e408a41a92d7e3d1a83a849466296c3c6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809556"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663396"
 ---
 # <a name="the-powershelltab-object"></a>Das PowerShellTab-Objekt
 
-Das **PowerShellTab**-Objekt stellt eine Windows PowerShell-Laufzeitumgebung dar.
+Das **PowerShellTab** -Objekt stellt eine Windows PowerShell-Laufzeitumgebung dar.
 
 ## <a name="methods"></a>Methoden
 
@@ -24,7 +24,7 @@ Führt das angegebene Skript auf der PowerShell-Registerkarte aus.
 > [!NOTE]
 > Diese Methode kann nur für andere PowerShell-Registerkarten verwendet werden, nicht für die PowerShell-Registerkarte, auf der sie ausgeführt wird. Sie gibt keine Objekte oder Werte zurück. Wenn durch den Code eine Variable geändert wird, bleiben diese Änderungen auf der Registerkarte erhalten, für die der Befehl aufgerufen wurde.
 
-**Script**: System.Management.Automation.ScriptBlock oder Zeichenfolge – der auszuführende Skriptblock.
+**Script** : System.Management.Automation.ScriptBlock oder Zeichenfolge – der auszuführende Skriptblock.
 
 ```powershell
 # Manually create a second PowerShell tab before running this script.
@@ -41,7 +41,7 @@ Führt das angegebene Skript auf der PowerShell-Registerkarte aus.
 > [!NOTE]
 > Diese Methode kann nur für andere PowerShell-Registerkarten verwendet werden, nicht für die PowerShell-Registerkarte, auf der sie ausgeführt wird. Der Skriptblock wird ausgeführt, und alle vom Skript zurückgegebenen Werte werden an die Laufzeitumgebung zurückgegeben, in der der Befehl aufgerufen wurde. Wenn die Ausführung des Befehls länger dauert, als vom Wert **millesecondsTimeout** angegeben, tritt durch den Befehl ein Fehler mit folgender Ausnahme auf: „Timeout bei Vorgang.“.
 
-**Script**: System.Management.Automation.ScriptBlock oder Zeichenfolge – der auszuführende Skriptblock.
+**Script** : System.Management.Automation.ScriptBlock oder Zeichenfolge – der auszuführende Skriptblock.
 
 **\[useNewScope\]** : optionaler boolescher Wert mit Standardwert `$true`. Bei Festlegung auf `$true` wird ein neuer Bereich erstellt, in dem der Befehl ausgeführt werden soll. Die Laufzeitumgebung der vom Befehl angegebenen PowerShell-Registerkarte wird nicht geändert.
 
@@ -156,7 +156,7 @@ $newFile.Editor.LineCount
 
 ### <a name="output"></a>Output
 
-Dieses Feature ist in Windows PowerShell ISE 2.0 enthalten, wurde in höheren Versionen von ISE aber entfernt oder umbenannt. In höheren Versionen von Windows PowerShell ISE können Sie das **ConsolePane**-Objekt für den gleichen Zweck verwenden.
+Dieses Feature ist in Windows PowerShell ISE 2.0 enthalten, wurde in höheren Versionen von ISE aber entfernt oder umbenannt. In höheren Versionen von Windows PowerShell ISE können Sie das **ConsolePane** -Objekt für den gleichen Zweck verwenden.
 
 Die schreibgeschützte Eigenschaft, die den Ausgabebereich des aktuellen [editor](The-ISEEditor-Object.md) abruft.
 
@@ -169,7 +169,7 @@ $psISE.CurrentPowerShellTab.output.clear()
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Die schreibgeschützte Eigenschaft, die den aktuellen Aufforderungstext abruft. Hinweis: Die **Prompt**-Funktion kann durch das Profil des Benutzers überschrieben werden. Wenn das Ergebnis von einer einfachen Zeichenfolge abweicht, gibt diese Eigenschaft nichts zurück.
+Die schreibgeschützte Eigenschaft, die den aktuellen Aufforderungstext abruft. Hinweis: Die **Prompt** -Funktion kann durch das &trade;-Profil des Benutzers überschrieben werden. Wenn das Ergebnis von einer einfachen Zeichenfolge abweicht, gibt diese Eigenschaft nichts zurück.
 
 ```powershell
 # Gets the current prompt text.
@@ -193,7 +193,7 @@ if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands = $true}
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Die schreibgeschützte Eigenschaft, die den **PowerShellTab**-Statustext abruft.
+Die schreibgeschützte Eigenschaft, die den **PowerShellTab** -Statustext abruft.
 
 ```powershell
 # Gets the current status text,

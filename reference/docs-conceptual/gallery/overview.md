@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery,psget
 title: Der PowerShell-Katalog | MSDN
-ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Der PowerShell-Katalog ist das zentrale Repository für PowerShell-Module, Skripts und DSC-Ressourcen.
+ms.openlocfilehash: 1aa3d351e71211259cac4e6d6f0ebd68c0df6ff1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500562"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662117"
 ---
 # <a name="the-powershell-gallery"></a>Der PowerShell-Katalog | MSDN
 
@@ -27,7 +26,7 @@ Sehen Sie sich die Seite [Erste Schritte](getting-started.md) an, um weitere Inf
 
 ## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
 
-Für das **PowerShellGet**-Modul ist **PowerShell 3.0 oder neuer** erforderlich.
+Für das **PowerShellGet** -Modul ist **PowerShell 3.0 oder neuer** erforderlich.
 
 Für **PowerShellGet** ist .NET Framework 4.5 oder höher erforderlich. Von [hier](https://msdn.microsoft.com/library/5a4x27ek.aspx) können Sie .NET Framework 4.5 oder höher installieren.
 
@@ -36,6 +35,6 @@ Da **PowerShell Core** plattformübergreifend ist – was bedeutet, dass es unte
 Viele Module, die im Katalog aufgeführt sind, unterstützen andere Betriebssysteme und haben zusätzliche Anforderungen.
 Weitere Informationen finden Sie in der Dokumentation der jeweiligen Module.
 
-## <a name="got-a-question-have-feedback"></a>Sie haben eine Frage? Haben Sie Feedback?
+## <a name="got-a-question-have-feedback"></a>Sie haben eine Frage? Feedback?
 
 Weitere Informationen zum PowerShell-Katalog und zu PowerShellGet finden Sie auf der Seite [Erste Schritte](getting-started.md). Stellen Sie Feedback bereit, und melden Sie Probleme über [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).

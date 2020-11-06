@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: Status der Produktkompatibilität
-ms.openlocfilehash: c740b2560162ecdab40daac2f9ae36c29811ac13
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesem Artikel ist Software aufgeführt, die mit WMF 5.1 kompatibel ist.
+ms.openlocfilehash: 5610c668059b07f7c2f6e832b6ed1bd2eb9719b2
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808996"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660640"
 ---
 # <a name="product-compatibility-status"></a>Status der Produktkompatibilität
 
@@ -33,7 +32,7 @@ Systeme, auf denen die folgenden Serveranwendungen ausgeführt werden, wurden **
 
 ## <a name="incompatible"></a>Inkompatibel
 
-Systeme, auf denen die folgenden Serveranwendungen ausgeführt werden, sollten Windows Management Framework 5.1 derzeit **nicht ausführen**:
+Systeme, auf denen die folgenden Serveranwendungen ausgeführt werden, sollten Windows Management Framework 5.1 derzeit **nicht ausführen** :
 
 - Microsoft Exchange Server 2013
 - Microsoft Exchange Server 2010 SP3

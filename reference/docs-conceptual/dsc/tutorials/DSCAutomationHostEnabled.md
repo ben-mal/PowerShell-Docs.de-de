@@ -2,25 +2,25 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: DSCAutomationHostEnabled (Registrierungsschlüssel)
-ms.openlocfilehash: 0f35a798e5b7d51fdfb66e4e79ceab0e36ccea5b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesem Artikel werden die Werte definiert, die im Registrierungsschlüssel DSCAutomationHostEnabled festgelegt werden können.
+ms.openlocfilehash: 50f752dd882e9b0787ed4a4cbc22731fc1d608f5
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808332"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656180"
 ---
 # <a name="dscautomationhostenabled-registry-key"></a>DSCAutomationHostEnabled (Registrierungsschlüssel)
 
 > Gilt für: Windows PowerShell 5.0
 
-DSC verwendet den Registrierungsschlüssel **DSCAutomationHostEnabled** unter **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System**, um die Konfiguration des Computer beim ersten Start zu ermöglichen.
-**DSCAutomationHostEnabled** unterstützt drei Modi:
+DSC verwendet den Registrierungsschlüssel **DSCAutomationHostEnabled** unter **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System** , um die Konfiguration des Computer beim ersten Start zu ermöglichen. **DSCAutomationHostEnabled** unterstützt drei Modi:
 
-|  DSCAutomationHostEnabled-Wert  |  BESCHREIBUNG   |
-|---|---|
-0 | Konfiguration des Computers beim Hochfahren deaktivieren |
-1 | Konfiguration des Computers beim Hochfahren aktivieren |
-2 | Konfiguration des Computers nur dann aktivieren, wenn DSC sich im Status „ausstehend“ oder „aktuell“ befindet. Dies ist der Standardwert. |
+| DSCAutomationHostEnabled-Wert |                                              BESCHREIBUNG                                              |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 0                              | Konfiguration des Computers beim Hochfahren deaktivieren                                                           |
+| 1                              | Konfiguration des Computers beim Hochfahren aktivieren                                                            |
+| 2                              | Konfiguration des Computers nur dann aktivieren, wenn DSC sich im Status „ausstehend“ oder „aktuell“ befindet. Dies ist der Standardwert. |
 
 ## <a name="see-also"></a>Weitere Informationen
 

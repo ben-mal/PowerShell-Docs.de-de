@@ -1,15 +1,13 @@
 ---
 ms.date: 06/10/2020
-ms.topic: conceptual
-keywords: wmf,powershell,setup
-contributor: keithb
 title: Installieren und Konfigurieren von WMF 5.1
-ms.openlocfilehash: 9e0b4b6ed387b0a0d7fcf62a913677986d70de92
-ms.sourcegitcommit: 4a283fe5419f47102e6c1de7060880a934842ee9
+description: In diesem Artikel wird beschrieben, wie WMF 5.1 und seine Voraussetzungen installiert werden.
+ms.openlocfilehash: 0e076bfab684b6c83d62d236eea3bbd7ab2ad411
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671392"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660841"
 ---
 # <a name="install-and-configure-wmf-51"></a>Installieren und Konfigurieren von WMF 5.1
 
@@ -38,7 +36,7 @@ Laden Sie das WMF 5.1-Paket für das Betriebssystem und die Architektur herunter
 
 - WMF 5.1 Preview muss vor der Installation von WMF 5.1 RTM deinstalliert werden.
 - WMF 5.1 kann direkt über WMF 5.0 oder WMF 4.0 installiert werden.
-- Es ist **nicht erforderlich**, WMF 4.0 vor der Installation von WMF 5.1 unter Windows 7 und Windows Server 2008 R2 zu installieren.
+- Es ist **nicht erforderlich** , WMF 4.0 vor der Installation von WMF 5.1 unter Windows 7 und Windows Server 2008 R2 zu installieren.
 
 ## <a name="install-wmf-51-for-windows-server-2008-r2-and-windows-7"></a>Installieren von WMF 5.1 für Windows Server 2008 R2 und Windows 7
 
@@ -65,8 +63,8 @@ Für die Installation von WMF 5.1 unter Windows Server 2008 R2 SP1 oder Windows
 
    `Install-WMF5.1.ps1` verfügt über die folgenden Parameter, die das Automatisieren der Installation unter Windows Server 2008 R2 und Windows 7 erleichtern:
 
-   - **AcceptEula**: Wenn dieser Parameter verwendet wird, wird der Endbenutzer-Lizenzvertrag automatisch akzeptiert und nicht angezeigt.
-   - **AllowRestart**: Dieser Parameter kann nur verwendet werden, wenn „AcceptEula“ ebenfalls angegeben wird. Wird dieser Parameter angegeben und ist nach der Installation von WMF 5.1 ein Neustart erforderlich, erfolgt dieser Neustart nach Abschluss der Installation sofort und ohne Nachfrage.
+   - **AcceptEula** : Wenn dieser Parameter verwendet wird, wird der Endbenutzer-Lizenzvertrag automatisch akzeptiert und nicht angezeigt.
+   - **AllowRestart** : Dieser Parameter kann nur verwendet werden, wenn „AcceptEula“ ebenfalls angegeben wird. Wird dieser Parameter angegeben und ist nach der Installation von WMF 5.1 ein Neustart erforderlich, erfolgt dieser Neustart nach Abschluss der Installation sofort und ohne Nachfrage.
 
 ## <a name="winrm-dependency"></a>WinRM-Abhängigkeit
 

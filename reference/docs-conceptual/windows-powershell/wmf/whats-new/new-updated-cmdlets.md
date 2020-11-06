@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: Neue und aktualisierte Cmdlets
-ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.1 enthält viele neue oder aktualisierte Cmdlets.
+ms.openlocfilehash: bdfbe5a263864a172aefb0aa5731f59b95ab43ca
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809116"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663221"
 ---
 # <a name="new-and-updated-cmdlets"></a>Neue und aktualisierte Cmdlets
 
@@ -41,7 +41,7 @@ Weitere Informationen finden Sie unter
 
 Die CMS-Cmdlets unterstützen die Ver- und Entschlüsselung von Inhalten mithilfe des IETF-Standardformats für kryptografisch geschützte Nachrichten, wie unter [RFC5652](https://tools.ietf.org/html/rfc5652.html) dokumentiert.
 
-Der CMS-Verschlüsselungsstandard implementiert die Verschlüsselung mit öffentlichem Schlüssel, bei der der Schlüssel zum Verschlüsseln von Inhalten (der *öffentliche Schlüssel*) und zum Entschlüsseln von Inhalten (der *private Schlüssel*) getrennt sind.
+Der CMS-Verschlüsselungsstandard implementiert die Verschlüsselung mit öffentlichem Schlüssel, bei der der Schlüssel zum Verschlüsseln von Inhalten (der *öffentliche Schlüssel* ) und zum Entschlüsseln von Inhalten (der *private Schlüssel* ) getrennt sind.
 
 Ihr öffentlicher Schlüssel kann umfassend freigegeben werden, da seine Daten nicht vertraulich sind. Jeder Inhalt, der mit dem öffentlichen Schlüssel verschlüsselt wurde, kann nur mit dem privaten Schlüssel entschlüsselt werden. Weitere Informationen finden Sie unter [Public-Key-Verschlüsselungsverfahren](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
@@ -80,7 +80,7 @@ Weitere Informationen finden Sie unter [Convert-String](/powershell/module/Micro
 
 ## <a name="updates-to-fileinfo-object"></a>Aktualisierungen beim „FileInfo“-Objekt
 
-Dateiversionsinformationen können irreführend sein, insbesondere in Fällen, bei denen die Datei geändert wurde. WMF 5.0 fügt **FileInfo**-Objekten die neuen Skripteigenschaften **FileVersionRaw** und **ProductVersionRaw** hinzu.
+Dateiversionsinformationen können irreführend sein, insbesondere in Fällen, bei denen die Datei geändert wurde. WMF 5.0 fügt **FileInfo** -Objekten die neuen Skripteigenschaften **FileVersionRaw** und **ProductVersionRaw** hinzu.
 Es folgen die für „powershell.exe“ angezeigten Eigenschaften (vorausgesetzt wird, dass „$pid“ die ID des PowerShell-Prozesses ist):
 
 ```powershell
@@ -102,7 +102,7 @@ Weitere Informationen finden Sie unter [Format-Hex](/powershell/module/microsoft
 
 ## <a name="get-childitem-has--depth-parameter"></a>„Get-ChildItem“ mit „-Depth“-Parameter
 
-`Get-ChildItem` enthält nun einen Parameter **Depth**, den Sie mit **Recurse** verwenden können, um die Rekursion zu begrenzen:
+`Get-ChildItem` enthält nun einen Parameter **Depth** , den Sie mit **Recurse** verwenden können, um die Rekursion zu begrenzen:
 
 ## <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Modulunterstützung für das Deklarieren von Versionsbereichen (1.* usw.)
 
@@ -138,7 +138,7 @@ e19d6ea5-3cc2-4db9-8095-0cdaed5a703d
 
 ## <a name="nonewline-parameter"></a>„NoNewLine“-Parameter
 
-`Out-File`, `Add-Content` und `Set-Content` verfügen nun über einen Schalter **NoNewline**, der eine neue Zeile hinter der Ausgabe weglässt. Beispiel:
+`Out-File`, `Add-Content` und `Set-Content` verfügen nun über einen Schalter **NoNewline** , der eine neue Zeile hinter der Ausgabe weglässt. Beispiel:
 
 ```powershell
 "This is " | Out-File -FilePath Example.txt -NoNewline
@@ -208,7 +208,7 @@ New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
 
 ### <a name="get-childitem"></a>Get-ChildItem
 
-`Get-ChildItem` zeigt nun „l“ in der **Modus**-Eigenschaft an, um eine symbolische Verknüpfungsdatei bzw. ein symbolisches Verknüpfungsverzeichnis anzuzeigen.
+`Get-ChildItem` zeigt nun „l“ in der **Modus** -Eigenschaft an, um eine symbolische Verknüpfungsdatei bzw. ein symbolisches Verknüpfungsverzeichnis anzuzeigen.
 
 ```powershell
 Get-ChildItem C:\Temp | sort LastWriteTime -Descending
@@ -234,7 +234,7 @@ Remove-Item C:\Temp\MySymLinkFile.txt
 Remove-Item C:\Temp\MySymLinkDir
 ```
 
-Verwenden Sie den Parameter **Force**, um die Dateien im Zielverzeichnis und die symbolische Verknüpfung zu entfernen.
+Verwenden Sie den Parameter **Force** , um die Dateien im Zielverzeichnis und die symbolische Verknüpfung zu entfernen.
 
 ```powershell
 Remove-Item C:\Temp\MySymLinkDir -Force
@@ -286,7 +286,7 @@ Das „ODataUtils“-Modul ermöglicht die Generierung von PowerShell-Cmdlets an
 - Serverseitige Filterung mithilfe des „-Select“-Parameters
 - Unterstützung für Webanforderungsheader
 
-Die vom `Export-ODataEndPointProxy`-Cmdlet generierten „Proxy“-Cmdlets bieten zusätzliche Informationen vom serverseitigen OData-Endpunkt zum **Information**sdatenstrom.
+Die vom `Export-ODataEndPointProxy`-Cmdlet generierten „Proxy“-Cmdlets bieten zusätzliche Informationen vom serverseitigen OData-Endpunkt zum **Information** sdatenstrom.
 
 ```powershell
 Import-Module Microsoft.PowerShell.ODataUtils -Force
@@ -297,7 +297,7 @@ Export-ODataEndpointProxy -Uri $uri -OutputModule $generatedProxyModuleDir -Forc
 
 Im folgenden Beispiel rufen wir das Top-Produkt ab und erfassen die Ausgabe in der Variablen `$infoStream`.
 
-Durch Angabe des Parameters **IncludeTotalResponseCount** erhalten wir die Gesamtzahl aller **Produkt**-Datensätze, die auf dem Server verfügbar sind.
+Durch Angabe des Parameters **IncludeTotalResponseCount** erhalten wir die Gesamtzahl aller **Produkt** -Datensätze, die auf dem Server verfügbar sind.
 
 ```powershell
 Import-Module $generatedProxyModuleDir -Force
@@ -318,7 +318,7 @@ while($skipCount -le $additionalInfo['odata.count'])
 }
 ```
 
-Die generierten „Proxy“-Cmdlets unterstützen den **Select**-Parameter, der als Filter verwendet wird, um nur die Datensatzeigenschaften zu empfangen, die der Client benötigt. Die Filterung erfolgt auf dem Server, was die Menge der Daten reduziert, die über das Netzwerk übertragen werden.
+Die generierten „Proxy“-Cmdlets unterstützen den **Select** -Parameter, der als Filter verwendet wird, um nur die Datensatzeigenschaften zu empfangen, die der Client benötigt. Die Filterung erfolgt auf dem Server, was die Menge der Daten reduziert, die über das Netzwerk übertragen werden.
 
 ```powershell
 Get-Product -Top 2 -AllowUnsecureConnection -AllowAdditionalData -Select Name
@@ -326,7 +326,7 @@ Get-Product -Top 2 -AllowUnsecureConnection -AllowAdditionalData -Select Name
 
 Das `Export-ODataEndpointProxy`-Cmdlet und die von diesem generierten „Proxy“-Cmdlets unterstützen jetzt den Parameter **Headers**. Der Header kann verwendet werden, um zusätzliche Informationen, die vom OData-Endpunkt erwartet werden, zu übertragen.
 
-Im folgenden Beispiel wird dem Parameter**Headers** eine Hashtabelle bereitgestellt, die einen Abonnementschlüssel enthält. Dies ist ein typisches Beispiel für Dienste, die einen Abonnementschlüssel für die Authentifizierung erwarten.
+Im folgenden Beispiel wird dem Parameter **Headers** eine Hashtabelle bereitgestellt, die einen Abonnementschlüssel enthält. Dies ist ein typisches Beispiel für Dienste, die einen Abonnementschlüssel für die Authentifizierung erwarten.
 
 ```powershell
 Export-ODataEndpointProxy -Uri $endPointUri -OutputModule $generatedProxyModuleDir -Force -AllowUnSecureConnection -Verbose -Headers @{'subscription-key'='XXXX'}

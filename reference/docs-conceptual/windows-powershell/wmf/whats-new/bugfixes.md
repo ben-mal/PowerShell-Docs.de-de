@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
-keywords: wmf,powershell,setup
 title: Fehlerkorrekturen in WMF 5.1
-ms.openlocfilehash: 8edf295eb6304dc04de2fa5d3792b1c2fc4b01f3
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesem Artikel sind die Fehler aufgeführt, die in WMF 5 1 behoben wurden.
+ms.openlocfilehash: 2673860852ecd6e0b6582f6f69076f8c463eeccc
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809306"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660775"
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Fehlerkorrekturen in WMF 5.1
 
@@ -49,7 +48,7 @@ $obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
-Die **SendKeys**-Methode erwartet eine Zeichenfolge, aber PowerShell konvertierte „char“ nicht in „string“, wodurch die Konvertierung in der **IDispatch::Invoke**-Methode verzögert wurde. Diese Methode verwendet **VariantChangeType** zum Ausführen der Konvertierung. In diesem Beispiel hat dies zum Senden der Schlüssel „1“, „7“ und „3 anstelle des erwarteten Schlüssels **Volume.Mute** geführt.
+Die **SendKeys** -Methode erwartet eine Zeichenfolge, aber PowerShell konvertierte „char“ nicht in „string“, wodurch die Konvertierung in der **IDispatch::Invoke** -Methode verzögert wurde. Diese Methode verwendet **VariantChangeType** zum Ausführen der Konvertierung. In diesem Beispiel hat dies zum Senden der Schlüssel „1“, „7“ und „3 anstelle des erwarteten Schlüssels **Volume.Mute** geführt.
 
 #### <a name="enumerable-com-objects-not-always-handled-correctly"></a>Die Verarbeitung aufzählbarer COM-Objekte erfolgte nicht immer ordnungsgemäß
 

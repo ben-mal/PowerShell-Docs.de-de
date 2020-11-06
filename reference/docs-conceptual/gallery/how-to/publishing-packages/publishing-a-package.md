@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: Erstellen und Veröffentlichen eines Elements
-ms.openlocfilehash: 1aa9cc84f259869ca6f8b8e2f6952e43eaac14df
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel werden die Mechanismen und wichtigen Schritte zum Vorbereiten eines Skripts oder Moduls sowie deren Veröffentlichung im PowerShell-Katalog erläutert.
+ms.openlocfilehash: be846799aff71d38bdd0c98b3f43eaee5aef7798
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71327921"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662502"
 ---
 # <a name="creating-and-publishing-an-item"></a>Erstellen und Veröffentlichen eines Elements
 
@@ -67,7 +66,8 @@ Es gibt einige Tools, die Sie für Ihren Code ausführen müssen, bevor Sie Ihr 
 
 [PowerShell Script Analyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer/) ist ein Analysetool für statischen Code, mit dem überprüft wird, ob Ihr Code den grundlegenden Richtlinien für die PowerShell-Codierung entspricht. Dieses Tool identifiziert häufige und kritische Probleme in Ihrem Code und sollte während der Entwicklung regelmäßig ausgeführt werden, damit Sie wissen, wann Ihr Element bereit für die Veröffentlichung ist. PowerShell Script Analyzer liefert eine Liste der ermittelten Probleme kategorisiert nach Fehler, Warnung und Information. Sie müssen alle Fehler beseitigen, bevor Sie eine Veröffentlichung im PowerShell-Katalog durchführen können. Warnungen müssen überprüft und sollten behoben werden. PowerShell Script Analyzer wird bei jeder Veröffentlichung oder Aktualisierung eines Elements im PowerShell-Katalog ausgeführt. Das für den Katalogbetrieb verantwortliche Team kontaktiert die Elementbesitzer, um gefundene Fehler zu beheben.
 
-Wenn die Manifestinformationen in Ihrem Element nicht von der PowerShell-Kataloginfrastruktur gelesen werden können, ist eine Veröffentlichung nicht möglich. [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) findet häufige Probleme, durch die das Modul nach der Installation unbrauchbar wäre. Dieses Tool muss für jedes Modul ausgeführt werden, bevor dieses im PowerShell-Katalog veröffentlicht wird.
+Wenn die Manifestinformationen in Ihrem Element nicht von der PowerShell-Kataloginfrastruktur gelesen werden können, ist eine Veröffentlichung nicht möglich.
+[Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) findet häufige Probleme, durch die das Modul nach der Installation unbrauchbar wäre. Dieses Tool muss für jedes Modul ausgeführt werden, bevor dieses im PowerShell-Katalog veröffentlicht wird.
 
 In gleicher Weise überprüft [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) die Metadaten in einem Skript und muss für jedes (separat von einem Modul veröffentlichte) Skript ausgeführt werden, bevor es im PowerShell-Katalog veröffentlicht wird.
 
@@ -94,4 +94,3 @@ Alle im PowerShell-Katalog veröffentlichten Elemente werden auf Viren überprü
 Nachdem Sie ein Element im PowerShell-Katalog veröffentlicht haben, müssen Sie das Feedback für Ihr Element verfolgen.
 
 - Stellen Sie sicher, dass die E-Mail-Adresse überwacht wird, die dem für die Veröffentlichung verwendeten Konto zugeordnet ist. Benutzer und das operative Team für den PowerShell-Katalog senden Feedback über dieses Konto, Probleme aus PSSA oder Antivirenprüfungen eingeschlossen. Wenn das E-Mail-Konto ungültig ist oder schwerwiegende Probleme gemeldet und über einen längeren Zeitraum ungelöst bleiben, können Elemente als aufgegeben betrachtet und aus dem PowerShell-Katalog entfernt werden, wie in den [Nutzungsbedingungen](https://www.powershellgallery.com/policies/Terms) beschrieben.
-- Es wird empfohlen, die Kommentare für jedes PowerShell-Katalogelement zu abonnieren, das Sie veröffentlichen. Auf diese Weise werden Sie immer dann benachrichtigt, wenn ein Kommentar zu Ihren Elementen im PowerShell-Katalog hinterlassen wird. Diese Vorgehensweise ist optional, da hierzu ein Konto bei LiveFyre erstellt werden muss.

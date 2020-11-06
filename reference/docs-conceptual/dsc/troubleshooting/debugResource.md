@@ -2,22 +2,23 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Debuggen von DSC-Ressourcen
-ms.openlocfilehash: 53ee9ea5652ffb577f0c7fba2f240f63816281db
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: In diesem Artikel erfahren Sie, wie Sie das Debuggen für DSC-Konfigurationen aktivieren.
+ms.openlocfilehash: 5dda217e8dc9cc4b8699c82153c1a588d405d99e
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691952"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654122"
 ---
 # <a name="debugging-dsc-resources"></a>Debuggen von DSC-Ressourcen
 
-> Gilt für: Windows PowerShell 5.0
+> Gilt für: Windows PowerShell 5.0
 
 In PowerShell 5.0 wurde ein neues Feature in der Konfiguration für den gewünschten Zustand (Desired State Configuration, DSC) eingeführt, mit dem Sie eine DSC-Ressource beim Anwenden einer Konfiguration debuggen können.
 
 ## <a name="enabling-dsc-debugging"></a>Aktivieren des DSC-Debuggens
-Bevor Sie eine Ressource debuggen können, müssen Sie das Cmdlet [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug) aufrufen, um das Debuggen zu aktivieren.
-Dieses Cmdlet verfügt über den Pflichtparameter **BreakAll**.
+
+Bevor Sie eine Ressource debuggen können, müssen Sie das Cmdlet [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug) aufrufen, um das Debuggen zu aktivieren. Dieses Cmdlet verfügt über den Pflichtparameter **BreakAll**.
 
 Um zu überprüfen, ob das Debuggen aktiviert wurde, werfen Sie einen Blick auf das Ergebnis eines Aufrufs von [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
 
@@ -41,8 +42,8 @@ PS C:\DebugTest>
 ```
 
 ## <a name="starting-a-configuration-with-debug-enabled"></a>Starten einer Konfiguration mit aktiviertem Debuggen
-Um eine DSC-Ressource zu debuggen, starten Sie eine Konfiguration, die diese Ressource aufruft.
-In diesem Beispiel betrachten wir eine einfache Konfiguration, die die Ressource **WindowsFeature** aufruft, um sicherzustellen, dass das Feature „WindowsPowerShellWebAccess“ installiert wurde:
+
+Um eine DSC-Ressource zu debuggen, starten Sie eine Konfiguration, die diese Ressource aufruft. In diesem Beispiel betrachten wir eine einfache Konfiguration, die die Ressource **WindowsFeature** aufruft, um sicherzustellen, dass das Feature „WindowsPowerShellWebAccess“ installiert wurde:
 
 ```powershell
 Configuration PSWebAccess
@@ -60,9 +61,7 @@ Configuration PSWebAccess
 PSWebAccess
 ```
 
-Rufen Sie nach dem Kompilieren der Konfiguration [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) auf, um die Konfiguration zu starten.
-Die Konfiguration wird beendet, wenn der lokale Konfigurations-Manager die erste Ressource in der Konfiguration aufruft.
-Bei Verwendung der Parameter `-Verbose` und `-Wait` werden in der Ausgabe die Zeilen angezeigt, die Sie eingeben müssen, um das Debuggen zu starten.
+Rufen Sie nach dem Kompilieren der Konfiguration [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) auf, um die Konfiguration zu starten. Die Konfiguration wird beendet, wenn der lokale Konfigurations-Manager die erste Ressource in der Konfiguration aufruft. Bei Verwendung der Parameter `-Verbose` und `-Wait` werden in der Ausgabe die Zeilen angezeigt, die Sie eingeben müssen, um das Debuggen zu starten.
 
 ```powershell
 Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -85,27 +84,24 @@ Enter-PSHostProcess -Id 9000 -AppDomainName DscPsPluginWkr_AppDomain
 Debug-Runspace -Id 9
 ```
 
-An diesem Punkt hat der lokale Konfigurations-Manager die Ressource aufgerufen und den ersten Haltepunkt erreicht.
-Die letzten drei Zeilen in der Ausgabe zeigen, wie das Ressourcenskript an den Prozess angefügt und das Debuggen gestartet wird.
+An diesem Punkt hat der lokale Konfigurations-Manager die Ressource aufgerufen und den ersten Haltepunkt erreicht. Die letzten drei Zeilen in der Ausgabe zeigen, wie das Ressourcenskript an den Prozess angefügt und das Debuggen gestartet wird.
 
 ## <a name="debugging-the-resource-script"></a>Debuggen des Ressourcenskripts
 
-Starten Sie eine neue Instanz von PowerShell ISE.
-Geben Sie im Konsolenbereich die letzten drei Zeilen der `Start-DscConfiguration`-Ausgabe als Befehle ein, wobei Sie `<credentials>` durch gültige Benutzeranmeldeinformationen ersetzen.
-Jetzt sollte eine Eingabeaufforderung angezeigt werden, die in etwa so aussieht:
+Starten Sie eine neue Instanz von PowerShell ISE. Geben Sie im Konsolenbereich die letzten drei Zeilen der `Start-DscConfiguration`-Ausgabe als Befehle ein, wobei Sie `<credentials>` durch gültige Benutzeranmeldeinformationen ersetzen. Jetzt sollte eine Eingabeaufforderung angezeigt werden, die in etwa so aussieht:
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
 ```
 
-Das Ressourcenskript wird im Skriptfenster geöffnet, und der Debugger wird in der ersten Zeile der Funktion **Test-TargetResource** angehalten (der **Test()** -Methode einer klassenbasierten Ressource).
-Jetzt können Sie die Debugbefehle in der ISE verwenden, um das Ressourcenskript schrittweise zu durchlaufen, sich die Variablenwerte anzuschauen, die Aufrufliste anzuzeigen, usw. Denken Sie daran, dass jede Zeile im Ressourcenskript (oder in der Klasse) als Haltepunkt festgelegt ist.
+Das Ressourcenskript wird im Skriptfenster geöffnet, und der Debugger wird in der ersten Zeile der Funktion **Test-TargetResource** angehalten (der **Test()** -Methode einer klassenbbasierten Ressource). Jetzt können Sie die Debugbefehle in der ISE verwenden, um das Ressourcenskript schrittweise zu durchlaufen, sich die Variablenwerte anzuschauen, die Aufrufliste anzuzeigen, usw. Denken Sie daran, dass jede Zeile im Ressourcenskript (oder in der Klasse) als Haltepunkt festgelegt ist.
 
 ## <a name="disabling-dsc-debugging"></a>Deaktivieren des DSC-Debuggens
 
 Nach Aufrufen von [Enable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Enable-DscDebug), führen alle Aufrufe von [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) dazu, dass die Konfiguration unterbrochen und der Debugger gestartet wird. Damit Konfigurationen wie gewohnt ausgeführt werden können, müssen Sie das Debuggen durch Aufrufen des Cmdlets [Disable-DscDebug](/powershell/module/PSDesiredStateConfiguration/Disable-DscDebug) deaktivieren.
 
->**Hinweis:** Ein Neustart ändert den Debugzustand des LCM nicht. Wenn das Debuggen aktiviert ist, wird nach einem Neustart weiterhin das Starten einer Konfiguration unterbrochen und der Debugger gestartet.
+> [!NOTE]
+> Ein Neustart ändert den Debugzustand des LCM nicht. Wenn das Debuggen aktiviert ist, wird nach einem Neustart weiterhin das Starten einer Konfiguration unterbrochen und der Debugger gestartet.
 
 ## <a name="see-also"></a>Weitere Informationen
 
