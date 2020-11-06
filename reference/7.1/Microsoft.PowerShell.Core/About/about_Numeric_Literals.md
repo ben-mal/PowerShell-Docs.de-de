@@ -5,12 +5,12 @@ ms.date: 04/12/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_numeric_literals?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen zu numerischen Literalen
-ms.openlocfilehash: 25518b80f87c90c59829bb575b059f0efcadd566
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 19ed71c2571a6cd343adf622a8cf71d6e5589aff
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224111"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354982"
 ---
 # <a name="about-numeric-literals"></a>Informationen zu numerischen Literalen
 
@@ -112,7 +112,7 @@ PS> 0x12Lpb
 
 PowerShell unterstützt die folgenden typacceleratoren:
 
-| Accelerator |         Hinweis         |           BESCHREIBUNG            |
+| Accelerator |         Hinweis         |           Beschreibung            |
 | ----------- | -------------------- | -------------------------------- |
 | `[byte]`    |                      | Byte (ohne Vorzeichen)                  |
 | `[sbyte]`   |                      | Byte (signiert)                    |
@@ -141,7 +141,7 @@ PowerShell unterstützt die folgenden typacceleratoren:
 
 Die folgende Tabelle enthält einige Beispiele für numerische Literale und listet deren Typ und Wert auf:
 
-|   Number    |    type    |    Wert     |
+|   Number    |    Typ    |    Wert     |
 | ----------: | ---------- | -----------: |
 |         100 | Int32      |          100 |
 |        100 u | UInt32     |          100 |
@@ -179,7 +179,7 @@ In PowerShell 7,1 gibt die Verwendung eines typsuffixes für ein hexadezimal Lit
 PowerShell 7,1 interpretiert dies als `-1` ein- `[int16]` Typ.
 
 Wenn Sie das Literale mit einem Präfix versehen, `0` wird dies umgangen und als nicht signiert behandelt.
-Ein Beispiel für die Camel-Case-Schreibweise lautet: `0b011111111`. Dies kann bei der Arbeit mit Literalen im Bereich notwendig sein `[bigint]` , da die `u` -und- `n` Suffixe nicht kombiniert werden können.
+Beispiel: `0b011111111`. Dies kann bei der Arbeit mit Literalen im Bereich notwendig sein `[bigint]` , da die `u` -und- `n` Suffixe nicht kombiniert werden können.
 
 Sie können binäre und hexadezimale Literale auch mit dem- `-` Präfix negieren. Dies kann zu einer positiven Zahl führen, da Signier Bits zulässig sind.
 
@@ -295,4 +295,4 @@ PS> 111111111111111111111111111111111111111111111111111111n
 Außerdem sollten Werte zwischen `[ulong]::MaxValue` und `[decimal]::MaxValue` mit dem Decimal-Suffix angegeben werden `D` , um die Genauigkeit beizubehalten. Ohne das-Suffix werden diese Werte `[Double]` mit dem echt Analysemodus analysiert.
 
 <!-- reference links -->
-[bigint]: /dotnet/api/system.numerics.biginteger?view=netcore-2.2
+[bigint]: /dotnet/api/system.numerics.biginteger

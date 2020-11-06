@@ -6,17 +6,16 @@ ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_non-windows?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging_Non-Windows
-ms.openlocfilehash: 5face386a479a0264f5ff2ba3f6665cb1e218a4a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f70e2cb2c04287e36ecdf21a97dd099fcfd23d65
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220460"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355492"
 ---
 # <a name="about-logging-non-windows"></a>Informationen zur Protokollierung nicht-Windows
 
 ## <a name="short-description"></a>Kurze Beschreibung
-
 PowerShell protokolliert interne Vorgänge von der Engine, den Anbietern und den Cmdlets.
 
 ## <a name="long-description"></a>Lange Beschreibung
@@ -36,7 +35,7 @@ TIMESTAMP MACHINENAME powershell[PID]: (COMMITID:TID:CID)
   [EVENTID:TASK.OPCODE.LEVEL] MESSAGE
 ```
 
-|Feld        |BESCHREIBUNG                                             |
+|Feld        |Beschreibung                                             |
 |-------------|--------------------------------------------------------|
 |`TIMESTAMP`  |Ein Datum/Uhrzeit-Zeitpunkt, zu dem der Protokolleintrag erstellt wurde.            |
 |`MACHINENAME`|Der Name des Systems, auf dem das Protokoll erstellt wurde.      |
@@ -201,7 +200,7 @@ Der folgende Code ist eine Beispielkonfiguration:
 
 Die Eigenschaften zum Konfigurieren der PowerShell-Protokollierung sind in der folgenden Tabelle aufgeführt. Werte, die mit einem Sternchen gekennzeichnet sind (z. b.), `Operational*` geben den Standardwert an, wenn kein Wert in der Datei angegeben wird.
 
-|Eigenschaft   |Werte        |BESCHREIBUNG                                  |
+|Eigenschaft   |Werte        |Beschreibung                                  |
 |-----------|--------------|---------------------------------------------|
 |`LogIdentity`|(Zeichen folgen Name) |Der Name, der bei der Protokollierung verwendet werden soll. Standardmäßig wird von  |
 |           |PowerShell   |PowerShell ist die Identität. Dieser Wert kann|
@@ -222,7 +221,7 @@ Die Eigenschaften zum Konfigurieren der PowerShell-Protokollierung sind in der f
 |           |Debuggen         |                                             |
 |`LogKeywords`|Runspace      |Schlüsselwörter bieten die Möglichkeit, die Protokollierung einzuschränken.|
 |           |Pipeline      |für bestimmte Komponenten in PowerShell. nach |
-|           |Protokoll      |Standardmäßig sind alle Schlüsselwörter aktiviert und werden geändert. |
+|           |Protocol      |Standardmäßig sind alle Schlüsselwörter aktiviert und werden geändert. |
 |           |Transport     |Dieser Wert ist nur für sehr nützlich.           |
 |           |Host          |spezialisierte Problembehandlung.                |
 |           |Cmdlets       |                                             |
@@ -230,7 +229,7 @@ Die Eigenschaften zum Konfigurieren der PowerShell-Protokollierung sind in der f
 |           |Sitzung       |                                             |
 |           |Managedplugin |                                             |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 Informationen zu Linux- **syslog** -und **rsyslog. conf** -Informationen finden Sie auf den lokalen Seiten des Linux-Computers `man` .
 
@@ -242,4 +241,3 @@ Informationen zu macOS- **os_log** finden Sie in [os_log Entwicklerdokumentation
 
 <!-- link references -->
 [SIEM]: https://wikipedia.org/wiki/Security_information_and_event_management
-

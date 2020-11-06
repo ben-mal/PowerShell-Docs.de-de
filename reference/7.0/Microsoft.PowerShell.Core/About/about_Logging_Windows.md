@@ -1,23 +1,22 @@
 ---
-description: PowerShell protokolliert interne Vorgänge von der Engine, den Anbietern und den Cmdlets.
+description: PowerShell protokolliert interne Vorgänge von der Engine, den Anbietern und den Cmdlets im Windows-Ereignisprotokoll.
 keywords: powershell
 Locale: en-US
 ms.date: 03/30/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Logging-Windows
-ms.openlocfilehash: 62fa0592d931f5f675661f4d41ee01df6b89dc06
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: b36c45e0e8192a292dab88615cdd23f877068774
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222191"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354778"
 ---
 # <a name="about-logging-windows"></a>Informationen zu Protokollierungs Fenstern
 
 ## <a name="short-description"></a>Kurze Beschreibung
-
-PowerShell protokolliert interne Vorgänge von der Engine, den Anbietern und den Cmdlets.
+PowerShell protokolliert interne Vorgänge von der Engine, den Anbietern und den Cmdlets im Windows-Ereignisprotokoll.
 
 ## <a name="long-description"></a>Lange Beschreibung
 
@@ -32,14 +31,14 @@ PowerShell-Protokolle können mithilfe des Windows-Ereignisanzeige angezeigt wer
 
 Wenn die Protokollierung von Skript Blöcken aktiviert ist, protokolliert PowerShell die folgenden Ereignisse im `PowerShellCore/Operational` Protokoll:
 
-|Feld| Wert|
-|-|-|
-|EventId|`4104` / `0x1008`|
-|Channel|`Operational`|
-|Ebene|`Verbose`|
-|Opcode|`Create`|
-|Aufgabe|`CommandStart`|
-|Schlüsselwort|`Runspace`|
+|  Feld  |       Wert       |
+| ------- | ----------------- |
+| EventId | `4104` / `0x1008` |
+| Channel | `Operational`     |
+| Ebene   | `Verbose`         |
+| Opcode  | `Create`          |
+| Aufgabe    | `CommandStart`    |
+| Stichwort | `Runspace`        |
 
 ### <a name="registering-the-powershell-event-provider-on-windows"></a>Registrieren des PowerShell-Ereignis Anbieters unter Windows
 
@@ -134,7 +133,7 @@ Get-WinEvent Microsoft-Windows-PowerShell/Operational |
   Where-Object Id -eq 4104 | Unprotect-CmsMessage
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Logging_Non-Windows](about_Logging_Non-Windows.md)
 

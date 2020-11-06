@@ -2,16 +2,16 @@
 description: Erläutert das Konzept des Bereichs in PowerShell und zeigt, wie der Bereich von Elementen festgelegt und geändert wird.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 03/13/2020
+ms.date: 11/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_scopes?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_scopes
-ms.openlocfilehash: 8bf35e1309f027e1cf0061a95bdede0926d39ee0
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6dc416632a6948c60c8016df6066694ce01a8b5d
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221988"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354965"
 ---
 # <a name="about-scopes"></a>Informationen zu Bereichen
 
@@ -36,7 +36,7 @@ Wenn Sie ein Element in einem Bereich erstellen und der Name des Elements mit ei
 
 PowerShell unterstützt die folgenden Bereiche:
 
-- Global: der Gültigkeitsbereich, der beim Starten von PowerShell wirksam ist. Variablen und Funktionen, die beim Start von PowerShell vorhanden sind, wurden im globalen Gültigkeitsbereich erstellt, z. b. automatische Variablen und Einstellungs Variablen. Die Variablen, Aliase und Funktionen in ihren PowerShell-Profilen werden ebenfalls im globalen Gültigkeitsbereich erstellt.
+- Global: der Gültigkeitsbereich, der beim Starten von PowerShell oder beim Erstellen einer neuen Sitzung oder eines Runspace wirksam ist. Variablen und Funktionen, die beim Start von PowerShell vorhanden sind, wurden im globalen Gültigkeitsbereich erstellt, z. b. automatische Variablen und Einstellungs Variablen. Die Variablen, Aliase und Funktionen in ihren PowerShell-Profilen werden ebenfalls im globalen Gültigkeitsbereich erstellt. Der globale Gültigkeitsbereich ist der übergeordnete Stamm Bereich in einer Sitzung.
 
 - Local: der aktuelle Bereich. Der lokale Bereich kann der globale Gültigkeitsbereich oder ein beliebiger anderer Bereich sein.
 
@@ -47,11 +47,15 @@ PowerShell unterstützt die folgenden Bereiche:
 
 ## <a name="parent-and-child-scopes"></a>Über-und untergeordnete Bereiche
 
-Sie können einen neuen Bereich erstellen, indem Sie ein Skript oder eine Funktion ausführen, indem Sie eine Sitzung erstellen oder eine neue Instanz von PowerShell starten. Wenn Sie einen neuen Bereich erstellen, ist das Ergebnis ein übergeordneter Bereich (ursprünglicher Bereich) und ein untergeordneter Bereich (der Bereich, den Sie erstellt haben).
-
-In PowerShell sind alle Bereiche untergeordnete Bereiche des globalen Bereichs, Sie können jedoch viele Bereiche und viele rekursive Bereiche erstellen.
+Sie können einen neuen untergeordneten Bereich erstellen, indem Sie ein Skript oder eine Funktion aufrufen. Der Aufruf Bereich ist der übergeordnete Bereich. Das aufgerufene Skript oder die aufgerufene Funktion ist der untergeordnete Bereich.
+Die von Ihnen aufzurufenden Funktionen oder Skripts können andere Funktionen aufzurufen und eine Hierarchie untergeordneter Bereiche erstellen, deren Stamm Bereich der globale Bereich ist.
 
 Wenn Sie die Elemente nicht explizit als privat festlegen, sind die Elemente im übergeordneten Bereich für den untergeordneten Bereich verfügbar. Elemente, die Sie im untergeordneten Bereich erstellen und ändern, wirken sich jedoch nicht auf den übergeordneten Bereich aus, es sei denn, Sie geben den Bereich explizit an, wenn Sie die Elemente erstellen.
+
+> [!NOTE]
+> Funktionen aus einem Modul werden nicht in einem untergeordneten Bereich des aufrufenden Bereichs ausgeführt.
+> Module verfügen über einen eigenen Sitzungszustand, der mit dem globalen Gültigkeitsbereich verknüpft ist.
+> Der gesamte Modulcode wird in einer modulspezifischen Hierarchie von Bereichen ausgeführt, die über einen eigenen Stamm Bereich verfügen.
 
 ## <a name="inheritance"></a>Vererbung
 
@@ -478,7 +482,7 @@ Invoke-Command $s {
 } -ArgumentList $Cred
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Variables](about_Variables.md)
 
@@ -489,4 +493,3 @@ Invoke-Command $s {
 [about_Script_Blocks](about_Script_Blocks.md)
 
 [Start-ThreadJob](/powershell/module/ThreadJob/Start-ThreadJob)
-

@@ -3,12 +3,12 @@ ms.date: 09/07/2018
 ms.topic: reference
 title: Genehmigte Verben für PowerShell-Befehle
 description: Genehmigte Verben für PowerShell-Befehle
-ms.openlocfilehash: 237355ba9729cfe16c335b39f19ab20e40999457
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92655818"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93355101"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Genehmigte Verben für PowerShell-Befehle
 
@@ -18,13 +18,7 @@ Der Verbteil des Namens bezeichnet die Aktion, die das Cmdlet ausführt. Der Sub
 > [!NOTE]
 > PowerShell verwendet den Begriff _Verb_ , um ein Wort zu beschreiben, das eine Aktion impliziert, auch wenn es sich dabei in der englischen Sprache nicht um ein Verb handelt. Beispielsweise ist der Begriff _New_ ein gültiger PowerShell-Verbname, da er eine Aktion impliziert, auch wenn er im Englischen kein Verb ist.
 
-<!--
-01234567890123456789012345678901234567890123456789012345678901234567890123456789
--->
-
-Für jedes genehmigte Verb ist ein entsprechendes _Aliaspräfix_ definiert.
-Dieses Aliaspräfix wird in Aliasen für Befehle verwendet, die dieses Verb verwenden.
-Das Aliaspräfix für `Import` ist beispielsweise `ip` und der Alias für `Import-Module` folglich `ipmo`.  Es handelt sich hierbei um eine Empfehlung und nicht um eine Regel. Diese muss insbesondere nicht bei Befehlsaliasen beachtet werden, die bekannte Befehle aus anderen Umgebungen imitieren.
+Für jedes genehmigte Verb ist ein entsprechendes _Aliaspräfix_ definiert. Dieses Aliaspräfix wird in Aliasen für Befehle verwendet, die dieses Verb verwenden. Das Aliaspräfix für `Import` ist beispielsweise `ip` und der Alias für `Import-Module` folglich `ipmo`. Es handelt sich hierbei um eine Empfehlung und nicht um eine Regel. Diese muss insbesondere nicht bei Befehlsaliasen beachtet werden, die bekannte Befehle aus anderen Umgebungen imitieren.
 
 ## <a name="verb-naming-recommendations"></a>Benennungsempfehlungen für Verben
 
@@ -35,13 +29,13 @@ Die folgenden Empfehlungen helfen Ihnen bei der Auswahl eines geeigneten Verbs f
 - Verwenden Sie keine Synonyme von genehmigten Verben. Verwenden Sie z. B. immer `Remove` und nie `Delete` oder `Eliminate`.
 - Verwenden Sie nur die in diesem Artikel aufgeführte Verbform. Verwenden Sie z. B. `Get`, aber nicht `Getting` oder `Gets`.
 - Verwenden Sie nicht die folgenden reservierten Verben oder Aliase. Diese Verben werden in der PowerShell-Sprache oder ein paar wenigen der zugehörigen Cmdlets in besonderen Fällen verwendet.
-    - ForEach (foreach)
-    - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): Hiermit werden Objekte in einer angegebenen Form oder einem angegebenen Layout angeordnet.
-    - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): Hiermit werden eine oder mehrere Ressourcen an- oder zugeordnet.
-    - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
-    - Sort (sr)
-    - Tee (te)
-    - Where (wh)
+  - ForEach (foreach)
+  - [Format](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f): Hiermit werden Objekte in einer angegebenen Form oder einem angegebenen Layout angeordnet.
+  - [Group](/dotnet/api/System.Management.Automation.VerbsData.Group) (gp): Hiermit werden eine oder mehrere Ressourcen an- oder zugeordnet.
+  - [Ping](/dotnet/api/System.Management.Automation.VerbsDiagnostic.Ping) (pi)
+  - Sort (sr)
+  - Tee (te)
+  - Where (wh)
 
 Über das `Get-Verb`-Cmdlet können Sie eine Liste mit allen Verben abrufen.
 
@@ -174,7 +168,7 @@ PowerShell verwendet die Klasse [System.Management.Automation.VerbsLifeCycle](/d
 |[Approve](/dotnet/api/System.Management.Automation.VerbsLifecycle.Approve) (ap)|Hiermit wird der Zustand einer Ressource oder eines Prozesses bestätigt oder akzeptiert.||
 |[Assert](/dotnet/api/System.Management.Automation.VerbsLifecycle.Assert) (as)|Hiermit wird der Zustand einer Ressource überprüft.|Certify|
 |[Build](/dotnet/api/System.Management.Automation.VerbsLifecycle.Build) (bd)|Hiermit wird ein Artefakt (in der Regel eine Binärdatei oder ein Dokument) aus einer Gruppe von Eingabedateien erstellt (in der Regel Quellcode oder deklarative Dokumente). Dieses Verb wurde in PowerShell 6 hinzugefügt.||
-|[Complete](/dotnet/api/system.management.automation.host.buffercelltype?view=powershellsdk-1.1.0) (cp)|Hiermit wird ein Vorgang beendet.||
+|[Complete](/dotnet/api/system.management.automation.host.buffercelltype) (cp)|Hiermit wird ein Vorgang beendet.||
 |[Confirm](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (cn)|Hiermit wird der Zustand einer Ressource oder eines Prozesses anerkannt, verifiziert oder validiert.|Acknowledge, Agree, Certify, Validate, Verify|
 |[Deny](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (dn)|Hiermit wird der Zustand einer Ressource oder eines Prozesses nicht zugelassen, abgelehnt, blockiert oder verweigert.|Block, Object, Refuse, Reject|
 |[Deploy](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (dp)|Hiermit wird eine Anwendung, Website oder Lösung an ein oder mehrere Remoteziele gesendet, sodass ein Endbenutzer dieser Lösung nach Abschluss der Bereitstellung darauf zugreifen kann. Dieses Verb wurde in PowerShell 6 hinzugefügt.||
