@@ -1,14 +1,13 @@
 ---
 ms.date: 09/10/2018
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: Verwalten von API-Schlüsseln
-ms.openlocfilehash: c428689d065c63716db6bc546434623e9375f8ba
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Der PowerShell-Katalog verwendet API-Schlüssel, um den Zugriff auf den Katalog für Inhaltsherausgeber zu authentifizieren.
+ms.openlocfilehash: 4b70ac7d56fc1d63719c2acf93da3dd4ac22abed
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87777588"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661135"
 ---
 # <a name="managing-api-keys"></a>Verwalten von API-Schlüsseln
 
@@ -26,7 +25,7 @@ Der Ablaufwert verhindert, dass veraltete oder vergessene Schlüssel verwendet w
 
 ## <a name="using-glob-patterns"></a>Verwenden von Globmustern
 
-Wenn Sie an mehreren Paketen arbeiten, können Sie mit Globmustern mehrere Pakete als Gruppe zusammenfügen. API-Schlüsselberechtigungen gelten für alle neuen Pakete, die mit dem Globmuster übereinstimmen. Im vorherigen Beispiel wurde etwa als **Globmuster**-Wert „AzureRM.DataFactory*“ verwendet. Sie können ein Paket mit dem Namen „AzureRm.DataFactoryV2.Netcore“ mit diesem Schlüssel mithilfe von Push übertragen, da das Paket mit dem Globmuster übereinstimmt.
+Wenn Sie an mehreren Paketen arbeiten, können Sie mit Globmustern mehrere Pakete als Gruppe zusammenfügen. API-Schlüsselberechtigungen gelten für alle neuen Pakete, die mit dem Globmuster übereinstimmen. Im vorherigen Beispiel wurde etwa als **Globmuster** -Wert „AzureRM.DataFactory*“ verwendet. Sie können ein Paket mit dem Namen „AzureRm.DataFactoryV2.Netcore“ mit diesem Schlüssel mithilfe von Push übertragen, da das Paket mit dem Globmuster übereinstimmt.
 
 ## <a name="create-api-keys-securely"></a>Sicheres Erstellen von API-Schlüsseln
 

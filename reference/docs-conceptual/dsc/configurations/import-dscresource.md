@@ -2,17 +2,17 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Verwenden von Import-DscResource
-ms.openlocfilehash: 0fa11755558510b986ac24df120579ea15a43689
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: Import-DSCResource ist ein dynamisches Schlüsselwort, das nur innerhalb eines Skriptblocks des Typs „Configuration“ verwendet werden kann. Es dient dazu, die in Ihrer Konfiguration benötigten Ressourcenmodule zu importieren.
+ms.openlocfilehash: f6dcad2c56848ec25eb79332c96fe6b0d438fe95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786712"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658504"
 ---
 # <a name="using-import-dscresource"></a>Verwenden von Import-DscResource
 
-`Import-DScResource` ist ein dynamisches Schlüsselwort, das nur innerhalb eines Configuration-Skriptblocks verwendet werden kann. Das `Import-DSCResource`-Schlüsselwort dient zum Importieren aller Ressourcen, die in Ihrer Konfiguration erforderlich sind.
-Ressourcen unter `$pshome` werden automatisch importiert, aber es gilt immer noch als bewährte Methode, alle in Ihrer [Konfiguration](Configurations.md) verwendeten Ressourcen explizit zu importieren.
+`Import-DSCResource` ist ein dynamisches Schlüsselwort, das nur in einem Skriptblocks des Typs „Configuration“ verwendet werden kann, um alle Ressourcen zu importieren, die in Ihrer Konfiguration benötigt werden. Ressourcen unter `$PSHOME` werden automatisch importiert, aber es gilt immer noch als bewährte Methode, alle in Ihrer [Konfiguration](Configurations.md) verwendeten Ressourcen explizit zu importieren.
 
 Die Syntax für `Import-DSCResource` ist unten dargestellt. Wenn Sie Module mit Namen angeben, müssen Sie jedes in einer neuen Zeile aufführen.
 
@@ -142,7 +142,7 @@ Wenn Sie Konfigurationen in PowerShell 4.0 und PowerShell 5.0 und höher erstell
 
 Das parallele Installieren und Verwenden mehrerer Versionen von Ressourcen wurde in PowerShell 4.0 nicht unterstützt. Wenn beim Importieren von Ressourcen in Ihre Konfiguration Probleme auftreten, stellen Sie sicher, dass Sie nur eine Version der Ressource installiert haben.
 
-In der folgenden Abbildung sind zwei Versionen des **xPSDesiredStateConfiguration**-Moduls installiert.
+In der folgenden Abbildung sind zwei Versionen des **xPSDesiredStateConfiguration** -Moduls installiert.
 
 ![Mehrere im Ordner installierte Versionen der Ressource](media/import-dscresource/multiple-resource-versions-broken.png)
 

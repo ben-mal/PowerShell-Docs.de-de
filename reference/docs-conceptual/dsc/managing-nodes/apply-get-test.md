@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Anwenden, Abrufen und Testen von Konfigurationen auf einen Knoten
-ms.openlocfilehash: 41f8d2d75d3dd9621de615e7999c2690cb8ce44a
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Leitfaden erfahren Sie, wie Sie mit Konfigurationen für einen Zielknoten arbeiten.
+ms.openlocfilehash: 6bc9262bc0e2ce8eea7b85bd46ecc0c0a691276d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953837"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92651011"
 ---
 # <a name="apply-get-and-test-configurations-on-a-node"></a>Anwenden, Abrufen und Testen von Konfigurationen auf einen Knoten
 
@@ -38,14 +39,14 @@ Sample -OutputPath "C:\Temp\"
 
 Bei der Kompilierung dieser Konfiguration werden zwei MOF-Dateien generiert.
 
-```output
+```Output
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a----       11/27/2018   7:29 AM     2.13KB localhost.mof
 -a----       11/27/2018   7:29 AM     2.13KB server02.mof
 ```
 
-Um eine Konfiguration anzuwenden, verwenden Sie das Cmdlet [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Der `-Path`-Parameter gibt ein Verzeichnis an, in dem MOF-Dateien gespeichert werden. Wenn kein `-Computername` angegeben wird, versucht `Start-DSCConfiguration`, jede Konfiguration auf den Computernamen anzuwenden, der durch den Namen der MOF-Datei (\<computername\>.mof) angegeben wird. Geben Sie `-Verbose` für `Start-DSCConfiguration` an, um eine ausführlichere Ausgabe zu erhalten.
+Um eine Konfiguration anzuwenden, verwenden Sie das Cmdlet [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration). Der `-Path`-Parameter gibt ein Verzeichnis an, in dem MOF-Dateien gespeichert werden. Wenn kein `-Computername` angegeben wird, versucht `Start-DSCConfiguration`, jede Konfiguration auf den Computernamen anzuwenden, der durch den Namen der MOF-Datei (`<computername>.mof`) angegeben wird. Geben Sie `-Verbose` für `Start-DSCConfiguration` an, um eine ausführlichere Ausgabe zu erhalten.
 
 ```powershell
 Start-DSCConfiguration -Path C:\Temp\ -Verbose
@@ -53,7 +54,7 @@ Start-DSCConfiguration -Path C:\Temp\ -Verbose
 
 Wenn `-Wait` nicht angegeben wird, erkennen Sie, dass ein Auftrag erstellt wurde. Der erstellte Auftrag enthält einen **ChildJob** für jede MOF-Datei, die von `Start-DSCConfiguration` verarbeitet wird.
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 45     Job45           Configuratio... Running       True            localhost,server02   Start-DSCConfiguration...
@@ -72,22 +73,23 @@ $job = Get-Job
 $job.ChildJobs
 ```
 
-```output
+```Output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 49     Job49           Configuratio... Completed     True            localhost            Start-DSCConfiguration...
 50     Job50           Configuratio... Completed     True            server02             Start-DSCConfiguration...
 ```
 
-Um die **Verbose**-Ausgabe anzuzeigen, verwenden Sie die folgenden Befehle, um den **Verbose**-Datenstrom für jeden **ChildJob** anzuzeigen. Weitere Informationen zu PowerShell-Aufträgen finden Sie unter [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+Um die **Verbose** -Ausgabe anzuzeigen, verwenden Sie die folgenden Befehle, um den **Verbose** -Datenstrom für jeden **ChildJob** anzuzeigen. Weitere Informationen zu PowerShell-Aufträgen finden Sie unter [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
 ```powershell
 # View the verbose output of the localhost job using array indexing.
 $job.ChildJobs[0].Verbose
 ```
 
-```output
-Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
+```Output
+Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,
+'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
 An LCM method call arrived from computer SERVER01 with user sid S-1-5-21-124525095-708259637-1543119021-1282804.
 [SERVER01]: LCM:  [ Start  Set      ]
 [SERVER01]: LCM:  [ Start  Resource ]  [[File]SampleFile]
@@ -109,7 +111,8 @@ Start-DSCConfiguration -UseExisting -Verbose -Wait
 
 ## <a name="test-a-configuration"></a>Testen einer Konfiguration
 
-Sie können eine aktuell angewendete Konfiguration mit [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) testen. `Test-DSCConfiguration` gibt `True` zurück, wenn der Knoten konform ist und `False`, wenn dies nicht der Fall ist.
+Sie können eine aktuell angewendete Konfiguration mit [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) testen.
+`Test-DSCConfiguration` gibt `True` zurück, wenn der Knoten konform ist und `False`, wenn dies nicht der Fall ist.
 
 ```powershell
 Test-DSCConfiguration
@@ -121,7 +124,7 @@ Ab PowerShell 5.0 wurde der Parameter `-Detailed` hinzugefügt, der ein Objekt m
 Test-DSCConfiguration -Detailed
 ```
 
-Ab in PowerShell 5.0 können Sie eine Konfiguration testen, ohne sie anzuwenden. Der `-ReferenceConfiguration`-Parameter akzeptiert den Pfad einer MOF-Datei, anhand derer der Knoten getestet wird. Es werden keine **Set**-Aktionen für den Knoten ausgeführt. In PowerShell 4.0 gibt es Problemumgehungen, um eine Konfiguration zu testen, ohne sie anzuwenden, aber diese werden hier nicht behandelt.
+Ab in PowerShell 5.0 können Sie eine Konfiguration testen, ohne sie anzuwenden. Der `-ReferenceConfiguration`-Parameter akzeptiert den Pfad einer MOF-Datei, anhand derer der Knoten getestet wird. Es werden keine **Set** -Aktionen für den Knoten ausgeführt. In PowerShell 4.0 gibt es Problemumgehungen, um eine Konfiguration zu testen, ohne sie anzuwenden, aber diese werden hier nicht behandelt.
 
 ## <a name="get-configuration-values"></a>Abrufen von Konfigurationswerten
 
@@ -133,7 +136,7 @@ Get-DSCConfiguration
 
 Die Ausgabe aus unserer Beispielkonfiguration würde bei erfolgreicher Anwendung folgendermaßen aussehen.
 
-```output
+```Output
 ConfigurationName    : Sample
 DependsOn            :
 ModuleName           : PSDesiredStateConfiguration
@@ -162,13 +165,13 @@ CimClassName         : MSFT_FileDirectoryConfiguration
 
 ## <a name="get-configuration-status"></a>Abrufen des Konfigurationsstatus
 
-Ab PowerShell 5.0 ermöglicht Ihnen das Cmdlet [Get-DSCConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus) das Anzeigen des Verlaufs der auf den Knoten angewendeten Konfigurationen. PowerShell DSC verfolgt die letzten {{N}} Konfigurationen nach, die im Modus **Push** oder **Pull** angewendet wurden. Dazu gehören auch alle *Konsistenzprüfungen*, die von LCM ausgeführt wurden. Standardmäßig zeigt `Get-DSCConfigurationStatus` nur den letzten Verlaufseintrag an.
+Ab PowerShell 5.0 ermöglicht Ihnen das Cmdlet [Get-DSCConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus) das Anzeigen des Verlaufs der auf den Knoten angewendeten Konfigurationen. PowerShell DSC verfolgt die letzten {{N}} Konfigurationen nach, die im Modus **Push** oder **Pull** angewendet wurden. Dazu gehören auch alle *Konsistenzprüfungen* , die von LCM ausgeführt wurden. Standardmäßig zeigt `Get-DSCConfigurationStatus` nur den letzten Verlaufseintrag an.
 
 ```powershell
 Get-DSCConfigurationStatus
 ```
 
-```output
+```Output
 Status     StartDate                 Type            Mode  RebootRequested      NumberOfResources
 ------     ---------                 ----            ----  ---------------      -----------------
 Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                1
@@ -183,7 +186,7 @@ Verwenden Sie den Parameter `-All`, um den gesamten Verlauf des Konfigurationsst
 Get-DSCConfigurationStatus -All
 ```
 
-```output
+```Output
 Status     StartDate                 Type            Mode  RebootRequested      NumberOfResources
 ------     ---------                 ----            ----  ---------------      -----------------
 Success    11/27/2018 7:18:40 AM     Consistency     PUSH  False                1
@@ -200,7 +203,7 @@ Success    11/27/2018 6:03:44 AM     Consistency     PUSH  False                
 
 ## <a name="manage-configuration-documents"></a>Verwalten von Konfigurationsdokumenten
 
-Der LCM verwaltet die Konfiguration des Knotens, indem **Konfigurationsdokumente** verwendet werden. Diese MOF-Dateien befinden sich im Verzeichnis „C:\Windows\System32\Configuration“.
+Der LCM verwaltet die Konfiguration des Knotens, indem **Konfigurationsdokumente** verwendet werden. Diese MOF-Dateien befinden sich im Verzeichnis `C:\Windows\System32\Configuration`.
 
 Ab PowerShell 5.0 ermöglicht Ihnen [Remove-DSCConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument) das Entfernen der MOF-Dateien, um zukünftige Konsistenzprüfungen zu beenden oder eine Konfiguration zu entfernen, bei deren Anwendung Fehler auftreten. Der Parameter `-Stage` ermöglicht die Angabe, welche MOF-Datei entfernt werden soll.
 

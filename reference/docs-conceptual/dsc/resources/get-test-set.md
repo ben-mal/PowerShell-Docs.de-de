@@ -2,21 +2,22 @@
 ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Get-Test-Set
-ms.openlocfilehash: f7b7e947a85832365a783e40c25a25bfaa9fff8d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: In diesem Artikel wird veranschaulicht, wie die Methoden „Get“, „Test“ und „Set“ in einer DSC-Konfiguration implementiert werden.
+ms.openlocfilehash: e0da1452a1237c550f52a4a4f9e4400f801ed7cd
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771514"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646791"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
 >Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-PowerShell Desired State Configuration ist um einen **Get**-, **Test**- und **Set**-Prozess herum konstruiert. Die DSC-[Ressourcen](resources.md) enthalten Methoden, um jeden dieser Vorgänge abzuschließen.
-In einer [Konfiguration](../configurations/configurations.md) definieren Sie Ressourcenblöcke, um Schlüssel auszufüllen, die Parameter für **Get**-, **Test**- und **Set**-Methoden einer Ressource werden.
+PowerShell Desired State Configuration ist um einen **Get** -, **Test** - und **Set** -Prozess herum konstruiert. Die DSC-[Ressourcen](resources.md) enthalten Methoden, um jeden dieser Vorgänge abzuschließen.
+In einer [Konfiguration](../configurations/configurations.md) definieren Sie Ressourcenblöcke, um Schlüssel auszufüllen, die Parameter für **Get** -, **Test** - und **Set** -Methoden einer Ressource werden.
 
-Dies ist die Syntax für einen **Service**-Ressourcenblock. Die **Service**-Ressource konfiguriert Windows-Dienste.
+Dies ist die Syntax für einen **Service** -Ressourcenblock. Die **Service** -Ressource konfiguriert Windows-Dienste.
 
 ```syntax
 Service [String] #ResourceName
@@ -36,7 +37,7 @@ Service [String] #ResourceName
 }
 ```
 
-Die Parameterblöcke der **Get**-, **Test**- und **Set**-Methoden der **Service**-Ressource akzeptieren diese Werte.
+Die Parameterblöcke der **Get** -, **Test** - und **Set** -Methoden der **Service** -Ressource akzeptieren diese Werte.
 
 ```powershell
 param
@@ -85,9 +86,9 @@ param
 ```
 
 > [!NOTE]
-> Die zum Definieren der Ressource verwendete Sprache und Methode bestimmt, wie die **Get**-, **Test**- und **Set**-Methoden definiert werden.
+> Die zum Definieren der Ressource verwendete Sprache und Methode bestimmt, wie die **Get** -, **Test** - und **Set** -Methoden definiert werden.
 
-Da die **Service**-Ressource nur einen einzigen Schlüssel (`Name`) benötigt, könnte eine **Service**-Blockressource so einfach sein wie folgt:
+Da die **Service** -Ressource nur einen einzigen Schlüssel (`Name`) benötigt, könnte eine **Service** -Blockressource so einfach sein wie folgt:
 
 ```powershell
 Configuration TestConfig
@@ -120,16 +121,16 @@ ModuleVersion = "1.0";
 };
 ```
 
-Bei Anwendung liest der [lokale Konfigurations-Manager (Local Configuration Manager, LCM)](../managing-nodes/metaConfig.md) den Wert „Spooler“ aus der `.mof`-Datei und übergibt ihn dem **Name**-Parameter der **Get**-, **Test**- und **Set**-Methode für die Instanz „MyService“ der **Service**-Ressource.
+Bei Anwendung liest der [lokale Konfigurations-Manager (Local Configuration Manager, LCM)](../managing-nodes/metaConfig.md) den Wert „Spooler“ aus der `.mof`-Datei und übergibt ihn dem **Name** -Parameter der **Get** -, **Test** - und **Set** -Methode für die Instanz „MyService“ der **Service** -Ressource.
 
 ## <a name="get"></a>Herunterladen
 
-Die **Get**-Methode einer Ressource ruft den Status der Ressource ab, wenn sie auf dem Zielknoten konfiguriert wird. Dieser Status wird als [Hashtabelle](/powershell/module/microsoft.powershell.core/about/about_hash_tables) zurückgegeben.
-Die Schlüssel der **Hashtabelle** sind die konfigurierbaren Werte oder Parameter, die die Ressource akzeptiert.
+Die **Get** -Methode einer Ressource ruft den Status der Ressource ab, wenn sie auf dem Zielknoten konfiguriert wird. Dieser Status wird als [Hashtabelle](/powershell/module/microsoft.powershell.core/about/about_hash_tables) zurückgegeben. Die Schlüssel der **Hashtabelle** sind die konfigurierbaren Werte oder Parameter, die die Ressource akzeptiert.
 
-Die **Get**-Methode wird direkt dem [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration)-Cmdlet zugeordnet. Beim Aufruf von `Get-DSCConfiguration` führt der LCM die **Get**-Methoden der einzelnen Ressourcen in der gerade angewendeten Konfiguration aus. Der LCM nutzt die in der `.mof`-Datei gespeicherten Schlüsselwerte als Parameter für die jeweils entsprechende Ressourceninstanz.
+Die **Get** -Methode wird direkt dem [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration)-Cmdlet zugeordnet.
+Beim Aufruf von `Get-DSCConfiguration` führt der LCM die **Get** -Methoden der einzelnen Ressourcen in der gerade angewendeten Konfiguration aus. Der LCM nutzt die in der `.mof`-Datei gespeicherten Schlüsselwerte als Parameter für die jeweils entsprechende Ressourceninstanz.
 
-Dies ist eine Beispielausgabe einer **Service**-Ressource, die den „Spooler“-Dienst konfiguriert.
+Dies ist eine Beispielausgabe einer **Service** -Ressource, die den „Spooler“-Dienst konfiguriert.
 
 ```output
 ConfigurationName    : Test
@@ -155,7 +156,7 @@ PSComputerName       :
 CimClassName         : MSFT_ServiceResource
 ```
 
-Die Ausgabe zeigt die aktuellen, mit der **Service**-Ressource konfigurierbaren Werteigenschaften.
+Die Ausgabe zeigt die aktuellen, mit der **Service** -Ressource konfigurierbaren Werteigenschaften.
 
 ```syntax
 Service [String] #ResourceName
@@ -177,9 +178,9 @@ Service [String] #ResourceName
 
 ## <a name="test"></a>Test
 
-Die **Test**-Methode einer Ressource bestimmt, ob der Zielknoten derzeit mit dem _gewünschten Status_ der Ressource konform ist. Die **Test**-Methode gibt `$true` oder `$false` nur zurück, um anzuzeigen, ob der Knoten konform ist. Beim Aufruf von [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) ruft der LCM die **Test**-Methoden der einzelnen Ressourcen in der gerade angewendeten Konfiguration auf. Der LCM nutzt die in der MOF-Datei gespeicherten Schlüsselwerte als Parameter für die jeweilige entsprechende Ressourceninstanz.
+Die **Test** -Methode einer Ressource bestimmt, ob der Zielknoten derzeit mit dem _gewünschten Status_ der Ressource konform ist. Die **Test** -Methode gibt `$true` oder `$false` nur zurück, um anzuzeigen, ob der Knoten konform ist. Beim Aufruf von [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) ruft der LCM die **Test** -Methoden der einzelnen Ressourcen in der gerade angewendeten Konfiguration auf. Der LCM nutzt die in der MOF-Datei gespeicherten Schlüsselwerte als Parameter für die jeweilige entsprechende Ressourceninstanz.
 
-Wenn das Ergebnis von **Test** einer beliebigen einzelnen Ressource `$false` ist, gibt `Test-DSCConfiguration``$false` zurück, um anzugeben, dass der Knoten nicht konform ist. Wenn die **Test**-Methoden aller Ressourcen `$true` zurückgeben, gibt `Test-DSCConfiguration``$true` zurück, um anzugeben, dass der Knoten konform ist.
+Wenn das Ergebnis von **Test** einer beliebigen einzelnen Ressource `$false` ist, gibt `Test-DSCConfiguration``$false` zurück, um anzugeben, dass der Knoten nicht konform ist. Wenn die **Test** -Methoden aller Ressourcen `$true` zurückgeben, gibt `Test-DSCConfiguration``$true` zurück, um anzugeben, dass der Knoten konform ist.
 
 ```powershell
 Test-DSCConfiguration
@@ -189,7 +190,7 @@ Test-DSCConfiguration
 True
 ```
 
-Ab PowerShell 5.0 wurde der **Detailed**-Parameter hinzugefügt. Die Angabe von **Detailed** bewirkt, dass `Test-DSCConfiguration` ein Objekt zurückgibt, das Sammlungen von Ergebnissen für konforme und nicht konforme Ressourcen enthält.
+Ab PowerShell 5.0 wurde der **Detailed** -Parameter hinzugefügt. Die Angabe von **Detailed** bewirkt, dass `Test-DSCConfiguration` ein Objekt zurückgibt, das Sammlungen von Ergebnissen für konforme und nicht konforme Ressourcen enthält.
 
 ```powershell
 Test-DSCConfiguration -Detailed
@@ -205,9 +206,9 @@ Weitere Informationen finden Sie unter [Test-DSCConfiguration](/powershell/modul
 
 ## <a name="set"></a>Set
 
-Die **Set**-Methode einer Ressource versucht, die Konformität des Knotens mit dem *gewünschten Status* der Ressource zu erzwingen. Die **Set**-Methode soll **idempotent** sein, was bedeutet, dass **Set** mehrmals ausgeführt werden und immer ohne Fehler das gleiche Ergebnis erzielen könnte. Beim Aufruf von [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) durchläuft der LCM die einzelnen Ressourcen in der gerade angewendeten Konfiguration. Der LCM ruft Schlüsselwerte für die aktuelle Ressourceninstanz aus der MOF-Datei ab und verwendet sie als Parameter für die **Test**-Methode. Wenn die **Test**-Methode `$true` zurückgibt, ist der Knoten mit der aktuellen Ressource konform, und die **Set**-Methode wird übersprungen. Wenn der **Test**`$false` zurückgibt, ist der Knoten nicht konform. Der LCM übergibt die Schlüsselwerte der Ressourceninstanz als Parameter an die **Set**-Methode der Ressource und stellt dabei die Konformität des Knotens wieder her.
+Die **Set** -Methode einer Ressource versucht, die Konformität des Knotens mit dem *gewünschten Status* der Ressource zu erzwingen. Die **Set** -Methode soll **idempotent** sein, was bedeutet, dass **Set** mehrmals ausgeführt werden und immer ohne Fehler das gleiche Ergebnis erzielen könnte. Beim Aufruf von [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) durchläuft der LCM die einzelnen Ressourcen in der gerade angewendeten Konfiguration. Der LCM ruft Schlüsselwerte für die aktuelle Ressourceninstanz aus der MOF-Datei ab und verwendet sie als Parameter für die **Test** -Methode. Wenn die **Test** -Methode `$true` zurückgibt, ist der Knoten mit der aktuellen Ressource konform, und die **Set** -Methode wird übersprungen. Wenn der **Test**`$false` zurückgibt, ist der Knoten nicht konform. Der LCM übergibt die Schlüsselwerte der Ressourceninstanz als Parameter an die **Set** -Methode der Ressource und stellt dabei die Konformität des Knotens wieder her.
 
-Durch Angabe der Parameter **Verbose** und **Wait** können Sie den Fortschritt des `Start-DSCConfiguration`-Cmdlets verfolgen. In diesem Beispiel ist der Knoten bereits konform. Die `Verbose`-Ausgabe gibt an, dass die **Set**-Methode übersprungen wurde.
+Durch Angabe der Parameter **Verbose** und **Wait** können Sie den Fortschritt des `Start-DSCConfiguration`-Cmdlets verfolgen. In diesem Beispiel ist der Knoten bereits konform. Die `Verbose`-Ausgabe gibt an, dass die **Set** -Methode übersprungen wurde.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -UseExisting

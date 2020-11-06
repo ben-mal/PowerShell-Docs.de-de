@@ -2,16 +2,17 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Verwenden von DSC auf Nano Server
-ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC ist ein optionales Paket, das installiert werden kann, wenn Sie eine VHD für Windows Nano Server erstellen.
+ms.openlocfilehash: 18585323359abd85515d4db194dae4adbad7c3d8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71953857"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92647063"
 ---
 # <a name="using-dsc-on-nano-server"></a>Verwenden von DSC auf Nano Server
 
-> Gilt für: Windows PowerShell 5.0
+> Gilt für: Windows PowerShell 5.0
 
 **DSC unter Nano Server** ist ein optionales Paket im Ordner `NanoServer\Packages` des Windows Server 2016-Mediums. Das Paket kann installiert werden, wenn Sie eine VHD (virtuelle Festplatte) für einen Nano Server erstellen, indem Sie **Microsoft-NanoServer-DSC-Package** als Wert des Parameters **Packages** der Funktion **New-NanoServerImage** angeben. Wenn Sie beispielsweise eine virtuelle Festplatte für einen virtuellen Computer erstellen, würde der Befehl wie folgt aussehen:
 
@@ -44,7 +45,7 @@ Sowohl Push- als auch Pull-Modus
 - [Remove-DscConfigurationDocument](/powershell/module/PSDesiredStateConfiguration/Remove-DscConfigurationDocument)
 - [Get-DscConfigurationStatus](/powershell/module/PSDesiredStateConfiguration/Get-DscConfigurationStatus)
 - [Invoke-DscResource](/powershell/module/PSDesiredStateConfiguration/Invoke-DscResource)
-- [Find-DscResource](/powershell/module/powershellget/find-dscresource?view=powershell-6)
+- [Find-DscResource](/powershell/module/powershellget/find-dscresource)
 - [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)
 - [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum)
 
@@ -80,34 +81,38 @@ Sowohl Push- als auch Pull-Modus
 
 - Ressourcen, die voll funktionsfähig sind
 
-- **Archivieren**
-- **Umgebung**
-- **File**
-- **Protokoll**
-- **ProcessSet**
-- **Registrierung**
-- **Skript**
-- **WindowsPackageCab**
-- **WindowsProcess**
-- **WaitForAll** (siehe [Angeben knotenübergreifender Abhängigkeiten](../configurations/crossNodeDependencies.md))
-- **WaitForAny** (siehe [Angeben knotenübergreifender Abhängigkeiten](../configurations/crossNodeDependencies.md))
-- **WaitForSome** (siehe [Angeben knotenübergreifender Abhängigkeiten](../configurations/crossNodeDependencies.md))
+  - **Archivieren**
+  - **Umgebung**
+  - **File**
+  - **Log**
+  - **ProcessSet**
+  - **Registrierung**
+  - **Skript**
+  - **WindowsPackageCab**
+  - **WindowsProcess**
+  - **WaitForAll** (siehe [Angeben knotenübergreifender Abhängigkeiten](../configurations/crossNodeDependencies.md))
+  - **WaitForAny** (siehe [Angeben knotenübergreifender Abhängigkeiten](../configurations/crossNodeDependencies.md))
+  - **WaitForSome** (siehe [Angeben knotenübergreifender Abhängigkeiten](../configurations/crossNodeDependencies.md))
 
 - Ressourcen, die teilweise funktionsfähig sind
-- **Gruppe**
-- **GroupSet**
 
-  **Problem:** Bei den oben genannten Ressourcen tritt ein Fehler auf, wenn eine bestimmte Instanz zweimal aufgerufen wird (bzw. wenn die gleiche Konfiguration zweimal ausgeführt wird)
+  - **Gruppieren**
+  - **GroupSet**
 
-- **Service**
-- **ServiceSet**
+    **Problem:** Bei den oben genannten Ressourcen tritt ein Fehler auf, wenn eine bestimmte Instanz zweimal aufgerufen wird (bzw. wenn die gleiche Konfiguration zweimal ausgeführt wird)
 
-  **Problem:** Funktioniert nur beim Starten/Beenden (Status) des Diensts. Schlägt fehl, wenn versucht wird, andere Attribute des Diensts zu ändern, z. B. Starttyp, Anmeldeinformationen, Beschreibung usw. Ein Fehler mit etwa folgendem Wortlaut wird ausgelöst:
+  - **Service**
+  - **ServiceSet**
 
-  *Typ [management.managementobject] wurde nicht gefunden: Stellen Sie sicher, dass die Assembly, die diesen Typ enthält, geladen wird.*
+    **Problem:** Funktioniert nur beim Starten/Beenden (Status) des Diensts. Schlägt fehl, wenn versucht wird, andere Attribute des Diensts zu ändern, z. B. Starttyp, Anmeldeinformationen, Beschreibung usw. Ein Fehler mit etwa folgendem Wortlaut wird ausgelöst:
+
+    ```
+    Cannot find type [management.managementobject]: verify that the assembly containing this type is loaded.
+    ```
 
 - Ressourcen, die nicht funktionsfähig sind
-- **Benutzer**
+
+  - **Benutzer**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Unter Nano Server nicht verfügbare DSC-Funktionen
 

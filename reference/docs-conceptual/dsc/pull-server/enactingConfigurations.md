@@ -2,12 +2,13 @@
 ms.date: 10/16/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Inkraftsetzung von Konfigurationen
-ms.openlocfilehash: 1437521471d95fd80dc6a6cec62a0b75df4224ec
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: 'Es gibt zwei Möglichkeiten, PowerShell DSC-Konfigurationen anzuwenden: Push- und Pullmodus.'
+ms.openlocfilehash: 466eb43cd266ceb4ae81cc997a7b338e041f8a15
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783074"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661731"
 ---
 # <a name="enacting-configurations"></a>Inkraftsetzung von Konfigurationen
 
@@ -24,7 +25,7 @@ Der Pushmodus bezieht sich auf einen Benutzer, der eine Konfiguration durch Aufr
 Nach dem Erstellen und Kompilieren einer Konfiguration können Sie sie im Pushmodus anwenden, indem Sie das Cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) aufrufen und den Parameter „-Path“ des Cmdlets auf den Pfad festlegen, in dem sich die MOF-Konfigurationsdatei befindet. Wenn sich die MOF-Konfigurationsdatei z.B. in `C:\DSC\Configurations\localhost.mof` befindet, wenden Sie sie mit dem folgenden Befehl auf den lokalen Computer an: `Start-DscConfiguration -Path 'C:\DSC\Configurations'`.
 
 > [!NOTE]
-> DSC führt eine Konfiguration standardmäßig als Hintergrundauftrag aus. Um die Konfiguration interaktiv auszuführen, rufen Sie das Cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) mit dem **Wait**-Parameter auf.
+> DSC führt eine Konfiguration standardmäßig als Hintergrundauftrag aus. Um die Konfiguration interaktiv auszuführen, rufen Sie das Cmdlet [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) mit dem **Wait** -Parameter auf.
 
 ## <a name="pull-mode"></a>Pullmodus
 

@@ -2,12 +2,13 @@
 ms.date: 07/09/2019
 keywords: DSC, GPO, PowerShell, Konfiguration, Setup
 title: Schnellstart – Konvertieren von Gruppenrichtlinien in DSC
-ms.openlocfilehash: 852710f261ea1d57228c05d4093c1d78584e0ca5
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: Dieser Schnellstart zeigt, welche Schritte erforderlich sind, um eine Windows-Gruppenrichtlinie in eine DSC-Konfiguration zu konvertieren.
+ms.openlocfilehash: b67f6dd2cf6c91d90fa6ac5b6367f9efc7f40ee0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236236"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644700"
 ---
 # <a name="quickstart-convert-group-policy-into-dsc"></a>Schnellstart: Konvertieren von Gruppenrichtlinien in DSC
 
@@ -16,7 +17,7 @@ ms.locfileid: "89236236"
 Sie können eine DSC-Konfiguration aus einer Gruppenrichtlinie oder Azure Security Center-Baseline generieren. Das Modul [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) umfasst die folgenden Befehle für diese Aufgabe.
 
 - `ConvertFrom-GPO`: Konvertiert Gruppenrichtlinien, als Dateien gespeichert. Sie können auch ein Verzeichnis mit mehreren Richtlinien angeben, die in einer Konfiguration zusammengefasst werden.
-  - Verwenden Sie zum Exportieren von Gruppenrichtlinien in Ihrer Umgebung das Cmdlet [Backup-GPO](/powershell/module/grouppolicy/backup-gpo?view=win10-ps), oder folgen Sie den Anweisungen unter [Export a GPO to a File (Exportieren von Gruppenrichtlinienobjekten in eine Datei)](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file).
+  - Verwenden Sie zum Exportieren von Gruppenrichtlinien in Ihrer Umgebung das Cmdlet [Backup-GPO](/powershell/module/grouppolicy/backup-gpo), oder folgen Sie den Anweisungen unter [Export a GPO to a File (Exportieren von Gruppenrichtlinienobjekten in eine Datei)](/microsoft-desktop-optimization-pack/agpm/export-a-gpo-to-a-file).
 - `ConvertFrom-SCM`: Konvertiert Security Compliance Manager-Baselines, als `.xml`-Dateien gespeichert.
 - `ConvertFrom-ASC`: Konvertiert Azure Security Center-Baselines, als `.json`-Dateien gespeichert.
 - `Merge-GPOs`: Konvertiert auf einen Zielcomputer angewendete Gruppenrichtlinien.
@@ -57,5 +58,5 @@ Für jeden verwalteten Knoten sind außerdem die folgenden zwei Module erforderl
 ## <a name="next-steps"></a>Nächste Schritte
 
 - Informationen zum Hochladen Ihres Konfigurationsskripts in Azure Automation State Configuration finden Sie unter [Erste Schritte](/azure/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation).
-- Fügen Sie Ihrem [Automation-Konto](/azure/automation/shared-resources/modules) das **SecurityPolicyDSC**-Modul und das **AuditPolicyDSC**-Modul hinzu.
+- Fügen Sie Ihrem [Automation-Konto](/azure/automation/shared-resources/modules) das **SecurityPolicyDSC** -Modul und das **AuditPolicyDSC** -Modul hinzu.
 - DSC-Konfigurationen und -Ressourcen finden Sie unter [PowerShell-Katalog](https://www.powershellgallery.com/).

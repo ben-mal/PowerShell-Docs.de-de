@@ -2,12 +2,13 @@
 ms.date: 06/22/2020
 keywords: dsc,powershell,configuration,service,setup
 title: Schreiben, Kompilieren und Anwenden einer Konfiguration
-ms.openlocfilehash: 9acb2db882795d7150326fadb2964deb1105b2cc
-ms.sourcegitcommit: 7eea0885dd7ac90ab36e5664501438a292217f7f
+description: Diese Übung führt Sie von Anfang bis Ende durch das Erstellen und Anwenden einer DSC-Konfiguration. Anhand des folgenden Beispiels erfahren Sie, wie Sie eine einfache Konfiguration schreiben und anwenden.
+ms.openlocfilehash: f173fe0dc6cd73e2b49bb8c44a9ee1a53eab475f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295674"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645032"
 ---
 # <a name="write-compile-and-apply-a-configuration"></a>Schreiben, Kompilieren und Anwenden einer Konfiguration
 
@@ -63,13 +64,13 @@ Configuration HelloWorld {
 
 Speichern Sie die Datei als „HelloWorld.ps1“.
 
-Das Definieren einer Konfiguration entspricht dem Definieren einer Funktion. Der **Node**-Block gibt den zu konfigurierenden Zielknoten an, in diesem Fall `localhost`.
+Das Definieren einer Konfiguration entspricht dem Definieren einer Funktion. Der **Node** -Block gibt den zu konfigurierenden Zielknoten an, in diesem Fall `localhost`.
 
 Die Konfiguration ruft eine [Ressource](../resources/resources.md) auf, die `File`-Ressource. Ressourcen stellen sicher, dass sich der Zielknoten im durch die Konfiguration definierten Zustand befindet.
 
 ## <a name="compile-the-configuration"></a>Kompilieren der Konfiguration
 
-Damit eine DSC-Konfiguration auf einem Knoten angewendet werden kann, muss sie zunächst in eine MOF-Datei kompiliert werden. Durch Ausführen der Konfiguration wie eine Funktion wird vom `Node`-Block eine `.mof`-Datei für jeden Knoten definiert. Sie müssen das Skript `HelloWorld.ps1` per _dot source_ im aktuellen Bereich aufrufen, um die Konfiguration auszuführen. Weitere Informationen hierzu finden Sie unter [about_Scripts (Informationen zu Skripts)](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
+Damit eine DSC-Konfiguration auf einem Knoten angewendet werden kann, muss sie zunächst in eine MOF-Datei kompiliert werden. Durch Ausführen der Konfiguration wie eine Funktion wird vom `Node`-Block eine `.mof`-Datei für jeden Knoten definiert. Sie müssen das Skript `HelloWorld.ps1` per _dot source_ im aktuellen Bereich aufrufen, um die Konfiguration auszuführen. Weitere Informationen hierzu finden Sie unter [about_Scripts (Informationen zu Skripts)](/powershell/module/microsoft.powershell.core/about/about_scripts#script-scope-and-dot-sourcing).
 
 <!-- markdownlint-disable MD038 -->
 Das Skript `HelloWorld.ps1` rufen Sie per _dot source_ auf, indem Sie den Pfad zum Speicherort nach dem `. ` (Punkt gefolgt von einem Leerzeichen) eingeben. Anschließend können Sie Ihre Konfiguration ausführen, indem Sie sie wie eine Funktion aufrufen. Sie könnten auch die Konfigurationsfunktion unten im Skript aufrufen, sodass „dot-source“ nicht erforderlich ist.

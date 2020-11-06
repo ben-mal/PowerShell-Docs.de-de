@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Verpacken und Hochladen von Ressourcen auf einen Pullserver
-ms.openlocfilehash: d0e070b7aa43acbbbf087729d53f06dbc7e7734a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: In diesem Artikel wird gezeigt, wie Sie Ressourcen auf einen Pullserver hochladen, damit Sie von Konfigurationen auf die von DSC verwalteten Knoten heruntergeladen werden können.
+ms.openlocfilehash: a19d04346a0ae546cfcaf70701fde870d3839f65
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782887"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661685"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Verpacken und Hochladen von Ressourcen auf einen Pullserver
 

@@ -2,12 +2,12 @@
 title: Grundlegendes zur Dateicodierung in VS Code und PowerShell
 description: Konfigurieren der Dateicodierung in VS Code und PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: a4b13bcfbe5cffc4e015a37a5fd64fbb8b91f949
-ms.sourcegitcommit: 01a1c253f48b61c943f6d6aca4e603118014015f
+ms.openlocfilehash: afad189ff20a4e73d25f15c48d6c4982b18f29a3
+ms.sourcegitcommit: 196c7f8cd24560cac70c88acc89909f17a86aea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87900007"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93142547"
 ---
 # <a name="understanding-file-encoding-in-vs-code-and-powershell"></a>Grundlegendes zur Dateicodierung in VS Code und PowerShell
 
@@ -15,7 +15,7 @@ Wenn Sie mit VS Code PowerShell-Skripts erstellen und bearbeiten, ist es wichtig
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>Was ist die Dateicodierung und weshalb ist sie wichtig?
 
-VS Code fungiert als Schnittstelle zwischen einem Menschen, der Zeichenfolgen in einen Puffer eingibt, und dem Lesen/Schreiben von Byteblocks in das Dateisystem. Wenn VS Code eine Datei speichert, wird mithilfe einer Textcodierung festgelegt, in welche Bytes jedes Zeichen umgewandelt wird.
+VS Code fungiert als Schnittstelle zwischen einem Menschen, der Zeichenfolgen in einen Puffer eingibt, und dem Lesen/Schreiben von Byteblocks in das Dateisystem. Wenn VS Code eine Datei speichert, wird mithilfe einer Textcodierung festgelegt, in welche Bytes jedes Zeichen umgewandelt wird. Weitere Informationen finden Sie unter [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding).
 
 Wenn PowerShell ein Skript ausführt, muss es die Bytes in einer Datei entsprechend in Zeichen konvertieren, um die Datei in einem PowerShell-Programm zu rekonstruieren. Da VS Code die Datei schreibt und PowerShell diese liest, müssen sie dasselbe Codierungssystem verwenden. Die Analyse eines PowerShell-Skripts sieht folgendermaßen aus: _Bytes_ -> _Zeichen_ -> _Token_ -> _abstrakte Syntaxstruktur_ -> _Ausführung_.
 
@@ -41,27 +41,27 @@ Aus den folgenden Gründen kann es zu Codierungsproblemen kommen:
 
 ### <a name="how-to-tell-when-you-have-encoding-issues"></a>Erkennen von Codierungsproblemen
 
-Codierungsfehler treten häufig als Analysefehler in Skripts auf. Wenn Sie in Ihren Skripts ungewöhnliche Zeichensequenzen sehen, kann das der Grund für das Problem sein. Im Beispiel unten wird ein Halbgeviertstrich (`–`) als `â€"` angezeigt:
+Codierungsfehler treten häufig als Analysefehler in Skripts auf. Wenn Sie in Ihren Skripts ungewöhnliche Zeichensequenzen sehen, kann das der Grund für das Problem sein. Im Beispiel unten wird ein Halbgeviertstrich (`–`) als `â&euro;"` angezeigt:
 
 ```Output
 Send-MailMessage : A positional parameter cannot be found that accepts argument 'Testing FuseMail SMTP...'.
 At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtpRelay.ps1:6 char:1
-+ Send-MailMessage â€"From $from â€"To $recipient1 â€"Subject $subject  ...
++ Send-MailMessage â&euro;"From $from â&euro;"To $recipient1 â&euro;"Subject $subject  ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [Send-MailMessage], ParameterBindingException
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SendMailMessage
 ```
 
-Dieses Problem tritt auf, weil VS Code das Zeichen `–` in UTF-8 als `0xE2 0x80 0x93` codiert. Wenn diese Bytes als Windows-1252 decodiert werden, werden sie als die Zeichen `â€"` interpretiert.
+Dieses Problem tritt auf, weil VS Code das Zeichen `–` in UTF-8 als `0xE2 0x80 0x93` codiert. Wenn diese Bytes als Windows-1252 decodiert werden, werden sie als die Zeichen `â&euro;"` interpretiert.
 
 Weitere ungewöhnliche Zeichensequenzen, die Sie eventuell sehen, sind die folgenden:
 
 <!-- markdownlint-disable MD038 -->
-- `â€"` anstelle von `–`
-- `â€"` anstelle von `—`
+- `â&euro;"` anstelle von `–`
+- `â&euro;"` anstelle von `—`
 - `Ã„2` anstelle von `Ä`
-- `Â` anstelle von ` ` (ein geschütztes Leerzeichen)
-- `Ã©` anstelle von `é`
+- `Â` anstelle von ` ` (ein geschütztes Leerzeichen)
+- `Ã&copy;` anstelle von `é`
 <!-- markdownlint-enable MD038 -->
 
 In dieser praktischen [Referenz](https://www.i18nqa.com/debug/utf8-debug.html) werden gängige Muster aufgelistet, die auf Codierungsprobleme zwischen UTF-8 und Windows-1252 hindeuten.
@@ -88,7 +88,7 @@ Unicodecodierungen verwenden auch Bytereihenfolge-Marken. BOMs stehen am Textanf
 
 BOMs sind optional und ihre Verwendung ist im Linux-Kontext nicht sonderlich beliebt, da eine verlässliche UTF-8-Konvention überall verwendet wird. Die meisten Linux-Anwendungen gehen davon aus, dass Eingaben in UTF-8 codiert sind. Die meisten Linux-Anwendungen erkennen eine BOM ordnungsgemäß und verarbeiten sie richtig. Einige Anwendungen erkennen sie jedoch nicht, was in Texten, die mit diesen Anwendungen bearbeitet wurden, zu ungewollten Abweichungen führt.
 
-**Deshalb gilt Folgendes**:
+**Deshalb gilt Folgendes** :
 
 - Wenn Sie überwiegend mit Windows-Anwendungen und Windows-PowerShell arbeiten, eignet sich UTF-8 mit BOM oder UTF-16 für Sie.
 - Wenn Sie plattformübergreifend arbeiten, eignet sich UTF-8 mit BOM für Sie.
@@ -131,6 +131,8 @@ Wenn Sie nicht möchten, dass diese Einstellungen für alle Dateitypen gelten, k
     "files.autoGuessEncoding": true
 }
 ```
+
+Möglicherweise möchten Sie auch den [Gremlins Tracker][] für Visual Studio Code installieren. Diese Erweiterung deckt bestimmte Unicode-Zeichen auf, die leicht beschädigt werden können, weil sie unsichtbar sind oder wie andere normale Zeichen aussehen.
 
 ## <a name="configuring-powershell"></a>Konfiguration von PowerShell
 
@@ -254,6 +256,7 @@ Einige dieser Tools arbeiten mit Bytes und nicht mit Text und andere bieten Codi
 
 Es gibt einige weitere nützliche Beiträge zur Codierung und Konfiguration der Codierung in PowerShell, die Sie sich ansehen können:
 
+- [about_Character_Encoding](/powershell/module/microsoft.powershell.core/about/about_character_encoding)
 - die Zusammenfassung von [@mklement0] zum [Verwenden der PowerShell-Codierung auf Stack Overflow](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
 - Frühere Probleme bezüglich der Codierung bei VS Code und PowerShell:
   - [#1308](https://github.com/PowerShell/VSCode-powershell/issues/1308)
@@ -273,3 +276,4 @@ Es gibt einige weitere nützliche Beiträge zur Codierung und Konfiguration der 
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
 [Sprachserverprotokoll]: https://microsoft.github.io/language-server-protocol/
 [Codierung in VS Code]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
+[Gremlins Tracker]: https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins

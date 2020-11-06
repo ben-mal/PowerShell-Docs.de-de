@@ -2,17 +2,18 @@
 ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Schreiben einer Einzelinstanz-DSC-Ressource (empfohlen)
-ms.openlocfilehash: cd6048c0f8aeef7fb5458a5f0bfefef25169297c
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: In diesem Artikel wird ein bewährtes Verfahren zum Definieren einer DSC-Ressource beschrieben, die nur eine einzige Instanz in einer Konfiguration zulässt.
+ms.openlocfilehash: 4744136b5a733c86b517b239b2c37ce57a4246f7
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217609"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662640"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Schreiben einer Einzelinstanz-DSC-Ressource (empfohlen)
 
 > [!NOTE]
-> In diesem Thema wird ein bewährtes Verfahren zum Definieren einer DSC-Ressource beschrieben, die nur eine einzige Instanz in einer Konfiguration zulässt. Derzeit gibt es hierfür keine integrierte DSC-Funktion. Dies kann sich zukünftig ändern.
+> In diesem Artikel wird ein bewährtes Verfahren zum Definieren einer DSC-Ressource beschrieben, die nur eine einzige Instanz in einer Konfiguration zulässt. Derzeit gibt es hierfür keine integrierte DSC-Funktion. Dies kann sich zukünftig ändern.
 
 Es gibt Situationen, in denen Sie für eine Ressource nicht zulassen möchten, dass sie mehrmals in einer Konfiguration verwendet wird. Beispielsweise konnte in einer früheren Implementierung der [xTimeZone](https://github.com/PowerShell/xTimeZone)-Ressource eine Konfiguration die Ressource mehrmals aufrufen, wodurch die Zeitzone in jedem Ressourcenblock auf eine andere Einstellung festgelegt wurde:
 
@@ -47,9 +48,9 @@ Configuration SetTimeZone
 }
 ```
 
-Ursache hierfür ist die Funktionsweise der DSC-Ressourcenschlüssel. Eine Ressource muss mindestens eine Schlüsseleigenschaft haben. Eine Ressourceninstanz wird als eindeutig angesehen, wenn die Kombination aus allen ihrer Schlüsseleigenschaften eindeutig ist. In ihrer vorherigen Implementierung hat die [xTimeZone](https://github.com/PowerShell/xTimeZone)-Ressource nur eine Eigenschaft, **TimeZone**, die ein Schlüssel sein muss. Aus diesem Grund würde eine Konfiguration wie die hier gezeigte ohne Warnung kompiliert und ausgeführt. Jeder der **xTimeZone**-Ressourcenblöcke wird als eindeutig angesehen. Dies würde dazu führen, dass die Konfiguration wiederholt auf den Knoten angewendet wird, wodurch ständig zwischen den Zeitzonen gewechselt würde.
+Ursache hierfür ist die Funktionsweise der DSC-Ressourcenschlüssel. Eine Ressource muss mindestens eine Schlüsseleigenschaft haben. Eine Ressourceninstanz wird als eindeutig angesehen, wenn die Kombination aus allen ihrer Schlüsseleigenschaften eindeutig ist. In ihrer vorherigen Implementierung hat die [xTimeZone](https://github.com/PowerShell/xTimeZone)-Ressource nur eine Eigenschaft, **TimeZone** , die ein Schlüssel sein muss. Aus diesem Grund würde eine Konfiguration wie die hier gezeigte ohne Warnung kompiliert und ausgeführt. Jeder der **xTimeZone** -Ressourcenblöcke wird als eindeutig angesehen. Dies würde dazu führen, dass die Konfiguration wiederholt auf den Knoten angewendet wird, wodurch ständig zwischen den Zeitzonen gewechselt würde.
 
-Um sicherzustellen, dass eine Konfiguration die Zeitzone für einen Zielknoten nur einmal festlegen kann, wurde die Ressource so aktualisiert, dass ihr eine zweite Eigenschaft, **IsSingleInstance**, hinzugefügt wurde, die die Schlüsseleigenschaft geworden ist. Der **IsSingleInstance**-Schlüssel wurde mit einem **ValueMap** auf einen einzigen Wert eingeschränkt: „Yes“. Das alte MOF-Schema für die Ressource sieht so aus:
+Um sicherzustellen, dass eine Konfiguration die Zeitzone für einen Zielknoten nur einmal festlegen kann, wurde die Ressource so aktualisiert, dass ihr eine zweite Eigenschaft, **IsSingleInstance** , hinzugefügt wurde, die die Schlüsseleigenschaft geworden ist. Der **IsSingleInstance** -Schlüssel wurde mit einem **ValueMap** auf einen einzigen Wert eingeschränkt: „Yes“. Das alte MOF-Schema für die Ressource sieht so aus:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -202,7 +203,7 @@ Function Set-TimeZone {
 Export-ModuleMember -Function *-TargetResource
 ```
 
-Beachten Sie, dass die **TimeZone**-Eigenschaft kein Schlüssel mehr ist. Wenn nun eine Konfiguration versucht, die Zeitzone zweimal festzulegen (durch Verwenden von zwei verschiedenen **xTimeZone**-Blöcken mit verschiedenen **TimeZone**-Werten), wird beim Kompilieren ein Fehler verursacht:
+Beachten Sie, dass die **TimeZone** -Eigenschaft kein Schlüssel mehr ist. Wenn nun eine Konfiguration versucht, die Zeitzone zweimal festzulegen (durch Verwenden von zwei verschiedenen **xTimeZone** -Blöcken mit verschiedenen **TimeZone** -Werten), wird beim Kompilieren ein Fehler verursacht:
 
 ```Output
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and

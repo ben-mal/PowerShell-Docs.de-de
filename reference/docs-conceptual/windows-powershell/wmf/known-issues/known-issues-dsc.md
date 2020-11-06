@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: Bekannte Probleme und Einschränkungen bei DSC (Desired State Configuration)
-ms.openlocfilehash: a76c5bb336804c5b384e6b6ba6a705c6049ef7fb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Bekannte Probleme und Einschränkungen von DSC in Windows PowerShell 5.x
+ms.openlocfilehash: 1163ed9e130430f6bbca98405a8993bb054dd1a8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808696"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662043"
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Bekannte Probleme und Einschränkungen bei DSC (Desired State Configuration)
 
@@ -58,7 +58,7 @@ Wenn der lokale Konfigurations-Manager im Debugmodus ist, reagiert `Stop-DscConf
 
 Wenn der LCM im **DebugMode** (Debugmodus) ist, werden von DSC-Ressourcen keine ausführlichen Fehlermeldungen angezeigt.
 
-**Lösung:** Deaktivieren Sie den **Debugmodus**, um ausführliche Meldungen der Ressource anzuzeigen.
+**Lösung:** Deaktivieren Sie den **Debugmodus** , um ausführliche Meldungen der Ressource anzuzeigen.
 
 ## <a name="invoke-dscresource-operations-cannot-be-retrieved-by-get-dscconfigurationstatus-cmdlet"></a>„Invoke-DscResource“-Vorgänge können vom Cmdlet „Get-DscConfigurationStatus“ nicht abgerufen werden
 
@@ -158,7 +158,7 @@ Das Debuggen von DSC-Ressourcen, wenn eine Ressource **PSDscRunAsCredential** in
 
 Der Parameter **Syntax** spiegelt **PsDscRunAsCredential** nicht ordnungsgemäß wider, wenn ihn eine Ressource als erforderlich kennzeichnet oder nicht unterstützt.
 
-**Lösung:** Keine. Die Erstellungskonfiguration in ISE spiegelt jedoch ordnungsgemäße Metadaten zur **PsDscRunAsCredential**-Eigenschaft wider, wenn IntelliSense verwendet wird.
+**Lösung:** Keine. Die Erstellungskonfiguration in ISE spiegelt jedoch ordnungsgemäße Metadaten zur **PsDscRunAsCredential** -Eigenschaft wider, wenn IntelliSense verwendet wird.
 
 ## <a name="windowsoptionalfeature-is-not-available-in-windows-7"></a>„WindowsOptionalFeature“ ist unter Windows 7 nicht verfügbar
 
@@ -178,7 +178,7 @@ At C:\Windows\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
     + FullyQualifiedErrorId : PSInvalidOperationException,ImportClassResourcesFromModule
 ```
 
-**Lösung:** Importieren Sie die erforderliche Version, indem Sie das **ModuleSpecification**-Objekt auf den **ModuleName**-Parameter definieren, mit dem Schlüssel **RequiredVersion** festgelegt wie folgt :
+**Lösung:** Importieren Sie die erforderliche Version, indem Sie das **ModuleSpecification** -Objekt auf den **ModuleName** -Parameter definieren, mit dem Schlüssel **RequiredVersion** festgelegt wie folgt :
 
 ```powershell
 Import-DscResource -ModuleName @{ModuleName='MyModuleName';RequiredVersion='1.2'}

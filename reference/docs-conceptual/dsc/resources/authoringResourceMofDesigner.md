@@ -2,19 +2,19 @@
 ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Verwenden des Ressourcen-Designers
-ms.openlocfilehash: 04fd2fbcc5afd9f1c7cbfaa44d6bdfde93bca399
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: Der Ressourcen-Designer ist ein Gruppe von Cmdlets, die vom Modul xDscResourceDesigner verfügbar gemacht werden und das Erstellen von Windows PowerShell DSC-Ressourcen erleichtern.
+ms.openlocfilehash: efe36d045ac3fba3823cb1f812bb5761d238fdf1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217490"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656493"
 ---
 # <a name="using-the-resource-designer-tool"></a>Verwenden des Ressourcen-Designers
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Der Ressourcen-Designer ist ein Satz von Cmdlets, die vom Modul **xDscResourceDesigner** verfügbar gemacht werden und das Erstellen von Windows PowerShell DSC-Ressourcen erleichtern. Die Cmdlets in dieser Ressource helfen beim Erstellen des MOF-Schemas, des Skriptmoduls und der Verzeichnisstruktur für die neue Ressource. Weitere Informationen zu DSC-Ressourcen finden Sie unter [Erstellen von benutzerdefinierten Windows PowerShell DSC-Ressourcen](authoringResource.md).
-In diesem Thema wird eine DSC-Ressource zur Verwaltung von Active Directory-Benutzern erstellt. Verwenden Sie das Cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) zum Installieren des Moduls **xDscResourceDesigner**.
+Der Ressourcen-Designer ist ein Satz von Cmdlets, die vom Modul **xDscResourceDesigner** verfügbar gemacht werden und das Erstellen von Windows PowerShell DSC-Ressourcen erleichtern. Die Cmdlets in dieser Ressource helfen beim Erstellen des MOF-Schemas, des Skriptmoduls und der Verzeichnisstruktur für die neue Ressource. Weitere Informationen zu DSC-Ressourcen finden Sie unter [Erstellen von benutzerdefinierten Windows PowerShell DSC-Ressourcen](authoringResource.md). In diesem Artikel wird eine DSC-Ressource zur Verwaltung von Active Directory-Benutzern erstellt. Verwenden Sie das Cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) zum Installieren des Moduls **xDscResourceDesigner**.
 
 ## <a name="creating-resource-properties"></a>Erstellen von Ressourceneigenschaften
 
@@ -22,10 +22,10 @@ Zunächst werden Eigenschaften festgelegt, die die Ressource verfügbar machen s
 
 Parameternamen und Beschreibungen
 
-- **UserName**: Schlüsseleigenschaft, die einen Benutzer eindeutig identifiziert.
-- **Ensure**: Gibt an, ob das Benutzerkonto vorhanden („Present“) oder nicht vorhanden („Absent“) sein soll. Für diesen Parameter gibt es nur zwei mögliche Werte.
-- **DomainCredential**: Das Domänenkennwort für den Benutzer.
-- **Password**: Das gewünschte Kennwort für den Benutzer, um einer Konfiguration zu erlauben, das Benutzerkennwort bei Bedarf zu ändern.
+- **UserName** : Schlüsseleigenschaft, die einen Benutzer eindeutig identifiziert.
+- **Ensure** : Gibt an, ob das Benutzerkonto vorhanden („Present“) oder nicht vorhanden („Absent“) sein soll. Für diesen Parameter gibt es nur zwei mögliche Werte.
+- **DomainCredential** : Das Domänenkennwort für den Benutzer.
+- **Password** : Das gewünschte Kennwort für den Benutzer, um einer Konfiguration zu erlauben, das Benutzerkennwort bei Bedarf zu ändern.
 
 Zum Erstellen der Eigenschaften verwenden wir das Cmdlet `New-xDscResourceProperty`. Mit den folgenden PowerShell-Befehlen werden die oben beschriebenen Eigenschaften erstellt.
 

@@ -2,16 +2,17 @@
 ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: Neuigkeiten bei PowerShell 5.0 ISE
-ms.openlocfilehash: 1f5d32d583165ff8ead0a95b1c882386cf654326
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesem Artikel werden die neuen und aktualisierten Features vorgestellt, die in Version 5.0 der Windows PowerShell Integrated Scripting Environment (ISE) eingeführt wurden.
+ms.openlocfilehash: 75d37d0dafe381c84898ac48343336cd525d2dd1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809136"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92660831"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Neuigkeiten bei Windows PowerShell 5.0 ISE
 
-In diesem Thema werden die neuen und aktualisierten Features vorgestellt, die in Version 5.0 der Windows PowerShell Integrated Scripting Environment (ISE) eingeführt wurden.
+In diesem Artikel werden die neuen und aktualisierten Features vorgestellt, die in Version 5.0 der Windows PowerShell Integrated Scripting Environment (ISE) eingeführt wurden.
 
 > [!NOTE]
 > Die PowerShell ISE befindet sich nicht mehr in der aktiven Featureentwicklung. Als in Windows enthaltene Komponente wird sie weiterhin offiziell mit Sicherheits- und Wartungsfixes hoher Priorität unterstützt.
@@ -54,7 +55,7 @@ Mithilfe von Codeausschnitten können Sie Skripts zum Automatisieren Ihrer Umgeb
 
 **Worin bestehen die Unterschiede?**
 
-Klicken Sie zum Verwenden von Codeausschnitten in Windows PowerShell 3.0 oder höher im Menü **Bearbeiten** auf **Codeausschnitte starten**, oder drücken Sie <kbd>STRG</kbd>+<kbd>J</kbd>.
+Klicken Sie zum Verwenden von Codeausschnitten in Windows PowerShell 3.0 oder höher im Menü **Bearbeiten** auf **Codeausschnitte starten** , oder drücken Sie <kbd>STRG</kbd>+<kbd>J</kbd>.
 
 ## <a name="add-on-tools"></a>Add-On-Tools
 
@@ -70,7 +71,7 @@ Add-Ons ermöglichen Ihnen das Erweitern und Anpassen der Windows PowerShell ISE
 
 Zum Funktionsumfang der Windows PowerShell ISE 3.0 und höher gehört das Add-On **Befehle**. Das Add-On **Befehle** ermöglicht das Durchsuchen von Cmdlets und das Zugreifen auf die Hilfe zu den Cmdlets. Es wird neben den Bereichen **Skript** und **Konsole** angezeigt.
 
-Zusätzliche Add-Ons finden Sie über den Befehl **Website mit Add-On-Tools öffnen** im Menü**Add-Ons**.
+Zusätzliche Add-Ons finden Sie über den Befehl **Website mit Add-On-Tools öffnen** im Menü **Add-Ons**.
 
 ## <a name="restart-manager-and-auto-save"></a>Neustart-Manager und automatisches Speichern
 
@@ -155,14 +156,14 @@ Die Windows PowerShell ISE 2.0 erkennt diese Befehlszeilenschalter nicht.
 
 Zu den weiteren Windows PowerShell ISE-Bearbeitungsfeatures zählen:
 
-- **XML-Syntaxfarben**: Windows PowerShell ISE versieht die XML-Syntax jetzt ebenso mit Farben wie die Windows PowerShell-Syntax.
-- **Zugehörige Klammer**: Die Windows PowerShell ISE bietet die Funktion „Zugehörige Klammer (Hervorhebung)“, die wie folgt verwendet werden kann: Wenn Sie z. B. den Befehl **Gehe zu Spiel** bzw. <kbd>STRG</kbd>+<kbd>]</kbd> verwenden, wird die schließende Klammer gefunden, wenn eine öffnende Klammer ausgewählt ist.
+- **XML-Syntaxfarben** : Windows PowerShell ISE versieht die XML-Syntax jetzt ebenso mit Farben wie die Windows PowerShell-Syntax.
+- **Zugehörige Klammer** : Die Windows PowerShell ISE bietet die Funktion „Zugehörige Klammer (Hervorhebung)“, die wie folgt verwendet werden kann: Wenn Sie z. B. den Befehl **Gehe zu Spiel** bzw. <kbd>STRG</kbd>+<kbd>]</kbd> verwenden, wird die schließende Klammer gefunden, wenn eine öffnende Klammer ausgewählt ist.
 - **Gliederungsansicht** Der Skriptbereich unterstützt Gliederungen, sodass Codeabschnitte durch Klicken auf Plus- bzw. Minuszeichen am linken Rand auf- bzw. zugeklappt werden können. Sie können Klammern bzw. die Tags `#region` und `#endregion` verwenden, um den Anfang bzw. das Ende eines zuklappbaren Abschnitts zu markieren. Drücken Sie zum Auf- bzw. Zuklappen aller Bereiche <kbd>STRG</kbd>+<kbd>M</kbd>.
-- **Textbearbeitung mit Drag & Drop**: Windows PowerShell ISE unterstützt nun die Textbearbeitung mit Drag & Drop. Sie können einen beliebigen Textblock auswählen und an eine andere Stelle im Editor oder in der Konsole ziehen, um den Text zu verschieben. Wenn Sie die <kbd>STRG</kbd>-Taste gedrückt halten, während Sie den markierten Text ziehen, wird der Text, sobald Sie die Maustaste loslassen, an den neuen Ort kopiert. In dieser Version von Windows PowerShell ISE wird beim Ziehen und Ablegen von Dateien auf Windows PowerShell ISE die Datei von Windows PowerShell ISE geöffnet.
-- **Anzeige von Analysefehlern**: Analysefehler werden rot unterstrichen angezeigt. Wenn Sie auf einen Fehler zeigen, wird das im Code gefundene Problem als QuickInfo angezeigt.
-- **Zoom**: Der Zoomprozentsatz des Konsoleninhalts kann mit einem Zoomschieberegler (rechts unten im Fenster der Windows PowerShell ISE) oder durch Eingabe des Befehls `$psise.options.Zoom` im Konsolenbereich festgelegt werden.
-- **Umfassende Funktionen zum Kopieren und Einfügen von Text**: Beim Kopieren in die Zwischenablage in Windows PowerShell ISE bleiben Informationen zur Schriftart, Größe und Farbe der ursprünglichen Auswahl erhalten.
-- **Blockauswahl**: Sie können einen Textblock auswählen, indem Sie bei gedrückter <kbd>ALT</kbd>-TASTE den Text im Skriptbereich mit der Maus auswählen, oder indem Sie <kbd>ALT</kbd>+<kbd>UMSCHALT</kbd>+<kbd>NACH-OBEN/NACH-UNTEN</kbd> drücken.
+- **Textbearbeitung mit Drag & Drop** : Windows PowerShell ISE unterstützt nun die Textbearbeitung mit Drag & Drop. Sie können einen beliebigen Textblock auswählen und an eine andere Stelle im Editor oder in der Konsole ziehen, um den Text zu verschieben. Wenn Sie die <kbd>STRG</kbd>-Taste gedrückt halten, während Sie den markierten Text ziehen, wird der Text, sobald Sie die Maustaste loslassen, an den neuen Ort kopiert. In dieser Version von Windows PowerShell ISE wird beim Ziehen und Ablegen von Dateien auf Windows PowerShell ISE die Datei von Windows PowerShell ISE geöffnet.
+- **Anzeige von Analysefehlern** : Analysefehler werden rot unterstrichen angezeigt. Wenn Sie auf einen Fehler zeigen, wird das im Code gefundene Problem als QuickInfo angezeigt.
+- **Zoom** : Der Zoomprozentsatz des Konsoleninhalts kann mit einem Zoomschieberegler (rechts unten im Fenster der Windows PowerShell ISE) oder durch Eingabe des Befehls `$psise.options.Zoom` im Konsolenbereich festgelegt werden.
+- **Umfassende Funktionen zum Kopieren und Einfügen von Text** : Beim Kopieren in die Zwischenablage in Windows PowerShell ISE bleiben Informationen zur Schriftart, Größe und Farbe der ursprünglichen Auswahl erhalten.
+- **Blockauswahl** : Sie können einen Textblock auswählen, indem Sie bei gedrückter <kbd>ALT</kbd>-TASTE den Text im Skriptbereich mit der Maus auswählen, oder indem Sie <kbd>ALT</kbd>+<kbd>UMSCHALT</kbd>+<kbd>NACH-OBEN/NACH-UNTEN</kbd> drücken.
 
 **Welchen Nutzen bietet diese Änderung?**
 

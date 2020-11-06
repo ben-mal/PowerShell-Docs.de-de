@@ -2,20 +2,20 @@
 ms.date: 01/17/2019
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Neustart eines Knotens
-ms.openlocfilehash: 22c63fab9b6646f522f8531b46a43a94ff883552
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Viele Konfigurationseinstellungen erfordern, dass der Computer neu gestartet wird, damit die Konfigurationsänderung erfolgen kann. In diesem Artikel wird erläutert, wie Neustarts in einer Konfiguration verwaltet werden.
+ms.openlocfilehash: d2b0f77c34ebcb006821da1f4f8d7c4b046f7a95
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954027"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645113"
 ---
 # <a name="reboot-a-node"></a>Neustart eines Knotens
 
 > [!NOTE]
-> In diesem Thema wird erläutert, wie ein Knoten neu gestartet wird. Damit der Neustart erfolgreich verläuft, müssen die LCM-Einstellungen **ActionAfterReboot** und **RebootNodeIfNeeded** ordnungsgemäß konfiguriert werden.
-> Weitere Informationen zu Einstellungen des lokalen Konfigurations-Managers finden Sie unter [Configure the Local Configuration Manager (Konfigurieren des lokalen Konfigurations-Managers)](../managing-nodes/metaConfig.md) oder [Configure the Local Configuration Manager (v4) (Konfigurieren des lokalen Konfigurations-Managers (Version 4))](../managing-nodes/metaConfig4.md).
+> In diesem Thema wird erläutert, wie ein Knoten neu gestartet wird. Damit der Neustart erfolgreich verläuft, müssen die LCM-Einstellungen **ActionAfterReboot** und **RebootNodeIfNeeded** ordnungsgemäß konfiguriert werden. Weitere Informationen zu Einstellungen des lokalen Konfigurations-Managers finden Sie unter [Configure the Local Configuration Manager (Konfigurieren des lokalen Konfigurations-Managers)](../managing-nodes/metaConfig.md) oder [Configure the Local Configuration Manager (v4) (Konfigurieren des lokalen Konfigurations-Managers (Version 4))](../managing-nodes/metaConfig4.md).
 
-Knoten können mithilfe des `$global:DSCMachineStatus`-Flags innerhalb einer Ressource neu gestartet werden. Wenn dieses Flag in der Funktion `Set-TargetResource` auf `1` festgelegt wird, wird der LCM direkt nach der **Set**-Methode der aktuellen Ressource zum Neustart des Knotens gezwungen. Mithilfe dieses Flags erkennt die **PendingReboot**-Ressource im DSC-Ressourcenmodul [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc), ob ein Neustart außerhalb von DSC aussteht.
+Knoten können mithilfe des `$global:DSCMachineStatus`-Flags innerhalb einer Ressource neu gestartet werden. Wenn dieses Flag in der Funktion `Set-TargetResource` auf `1` festgelegt wird, wird der LCM direkt nach der **Set** -Methode der aktuellen Ressource zum Neustart des Knotens gezwungen. Mithilfe dieses Flags erkennt die **PendingReboot** -Ressource im DSC-Ressourcenmodul [ComputerManagementDsc](https://github.com/PowerShell/ComputerManagementDsc), ob ein Neustart außerhalb von DSC aussteht.
 
 Ihre [Konfigurationen](configurations.md) führen möglicherweise Schritte aus, die für den Neustart des Knotens erforderlich sind. Dazu kann Folgendes gehören:
 
@@ -60,8 +60,7 @@ PendingReboot [String] #ResourceName
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel installiert Microsoft Exchange mithilfe der [xExchange](https://github.com/PowerShell/xExchange)-Ressource.
-Während der kompletten Installation wird die **PendingReboot**-Ressource verwendet, um den Knoten neu zu starten.
+Das folgende Beispiel installiert Microsoft Exchange mithilfe der [xExchange](https://github.com/PowerShell/xExchange)-Ressource. Während der kompletten Installation wird die **PendingReboot** -Ressource verwendet, um den Knoten neu zu starten.
 
 > [!NOTE]
 > Für dieses Beispiel sind die Anmeldeinformationen eines Kontos erforderlich, das berechtigt ist, der Gesamtstruktur einen Exchange-Server hinzuzufügen. Weitere Informationen zur Verwendung von Anmeldeinformationen in DSC finden Sie unter [Handling Credentials in DSC (Verwendung von Anmeldeinformationen in DSC)](../configurations/configDataCredentials.md).

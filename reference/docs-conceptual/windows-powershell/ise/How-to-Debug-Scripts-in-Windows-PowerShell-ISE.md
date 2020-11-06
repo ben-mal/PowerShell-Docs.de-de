@@ -1,13 +1,13 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: "So wird's gemacht: Debuggen von Skripts in Windows PowerShell ISE"
-ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesem Artikel wird beschrieben, wie das Debuggen von Skripts auf einem lokalen Computer mithilfe der visuellen Debugfunktionen von Windows PowerShell ISE erfolgt.
+ms.openlocfilehash: c2e45e3b165e16c9dcd6852550d13fc2426986fa
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809346"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663795"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>So wird's gemacht: Debuggen von Skripts in Windows PowerShell ISE
 
@@ -118,21 +118,21 @@ Nachdem Sie mit dem Debuggen begonnen haben, können Sie ein Skript erst wieder 
 
 ### <a name="to-start-debugging"></a>So starten Sie das Debuggen
 
-Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf der Symbolleiste auf das Symbol **Skript ausführen**, oder klicken Sie im Menü **Debuggen** auf **Ausführen/Fortsetzen**. Das Skript wird ausgeführt, bis der erste Haltepunkt erreicht ist. Das Ausführen des Skripts wird in dieser Zeile angehalten, und die Zeile wird hervorgehoben angezeigt.
+Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf der Symbolleiste auf das Symbol **Skript ausführen** , oder klicken Sie im Menü **Debuggen** auf **Ausführen/Fortsetzen**. Das Skript wird ausgeführt, bis der erste Haltepunkt erreicht ist. Das Ausführen des Skripts wird in dieser Zeile angehalten, und die Zeile wird hervorgehoben angezeigt.
 
 ### <a name="to-continue-debugging"></a>So setzen Sie das Debuggen fort
 
-Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf der Symbolleiste auf das Symbol **Skript ausführen**, oder klicken Sie im Menü **Debuggen** auf **Ausführen/Fortsetzen**, oder geben Sie im Konsolenfenster `C` ein, und drücken Sie dann die <kbd>EINGABETASTE</kbd>. Dies bewirkt, dass das Skript weiter bis zum nächsten Haltepunkt oder bis zum Ende des Skripts ausgeführt wird, wenn keine weiteren Haltepunkte gefunden werden.
+Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf der Symbolleiste auf das Symbol **Skript ausführen** , oder klicken Sie im Menü **Debuggen** auf **Ausführen/Fortsetzen** , oder geben Sie im Konsolenfenster `C` ein, und drücken Sie dann die <kbd>EINGABETASTE</kbd>. Dies bewirkt, dass das Skript weiter bis zum nächsten Haltepunkt oder bis zum Ende des Skripts ausgeführt wird, wenn keine weiteren Haltepunkte gefunden werden.
 
 ### <a name="to-view-the-call-stack"></a>So zeigen Sie die Aufrufliste an
 
 Die Aufrufliste zeigt die aktuelle Ausführungsstelle im Skript an. Wird im Skript eine Funktion ausgeführt, die aus einer anderen Funktion aufgerufen wurde, wird dies in der Anzeige durch zusätzliche Zeilen in der Ausgabe dargestellt. In der untersten Zeile werden das ursprüngliche Skript und dessen Zeile angezeigt, in der die Funktion aufgerufen wurde. In der Zeile darüber werden die Funktion und die Zeile angezeigt, in der möglicherweise eine weitere Funktion aufgerufen wurde. In der obersten Zeile wird der aktuelle Kontext der aktuellen Zeile angezeigt, für die der Haltepunkt festgelegt ist.
 
-Drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd>, oder klicken Sie im Menü **Debuggen** auf **Aufrufliste anzeigen**, oder geben Sie im Konsolenbereich `K` ein, und drücken Sie anschließend die <kbd>EINGABETASTE</kbd>, um bei angehaltener Skriptausführung die aktuelle Aufrufliste anzuzeigen.
+Drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd>, oder klicken Sie im Menü **Debuggen** auf **Aufrufliste anzeigen** , oder geben Sie im Konsolenbereich `K` ein, und drücken Sie anschließend die <kbd>EINGABETASTE</kbd>, um bei angehaltener Skriptausführung die aktuelle Aufrufliste anzuzeigen.
 
 ### <a name="to-stop-debugging"></a>So beenden Sie das Debuggen
 
-Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F5</kbd>, oder klicken Sie im Menü **Debuggen** auf **Debugger beenden**, oder geben Sie im Konsolenbereich `Q` ein, und drücken Sie anschließend die <kbd>EINGABETASTE</kbd>.
+Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F5</kbd>, oder klicken Sie im Menü **Debuggen** auf **Debugger beenden** , oder geben Sie im Konsolenbereich `Q` ein, und drücken Sie anschließend die <kbd>EINGABETASTE</kbd>.
 
 ## <a name="how-to-step-over-step-into-and-step-out-while-debugging"></a>Schrittweises Debuggen: Überspringen, Einzelschritt und Rücksprung
 
@@ -140,10 +140,10 @@ Schrittweises Debuggen ist die Vorgehensweise, bei der immer nur jeweils eine Ze
 
 | Debugaufgabe |                                                                                                                   BESCHREIBUNG                                                                                                                    |                                                      Vorgehensweise in PowerShell ISE                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Einzelschritt**  | Führt die aktuelle Anweisung aus und hält dann bei der nächsten Anweisung an. Ist die aktuelle Anweisung ein Funktions- oder Skriptaufruf, wechselt der Debugger in diese Funktion oder dieses Skript. Andernfalls hält er bei der nächsten Anweisung an.                      | Drücken Sie <kbd>F11</kbd>, oder klicken Sie im Menü **Debuggen** auf **Einzelschritt**, oder geben Sie im Konsolenbereich `S` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>.                 |
-| **Überspringen**  | Führt die aktuelle Anweisung aus und hält dann bei der nächsten Anweisung an. Ist die aktuelle Anweisung ein Funktions- oder Skriptaufruf, führt der Debugger die gesamte Funktion oder das gesamte Skript aus und hält bei der Anweisung an, die auf den Funktions- oder Skriptaufruf folgt. | Drücken Sie <kbd>F10</kbd>, oder klicken Sie im Menü **Debuggen** auf **Prozedurschritt**, oder geben Sie im Konsolenbereich `V` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>.                 |
-| **Rücksprung**   | Führt einen Rücksprung aus der aktuellen Funktion und auf eine Ebene höher aus, wenn die Funktion geschachtelt ist. Befindet sich der Fokus im Hauptteil, wird das Skript bis zum Ende oder bis zum nächsten Haltepunkt ausgeführt. Die übersprungenen Anweisungen werden ausgeführt, aber nicht in Einzelschritten durchlaufen.                   | Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F11</kbd>, oder klicken Sie im Menü **Debuggen** auf **Rücksprung**, oder geben Sie im Konsolenbereich `O` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>. |
-| **Fortsetzen**   | Setzt die Ausführung bis zum Ende oder bis zum nächsten Haltepunkt fort. Die übersprungenen Funktionen und Aufrufe werden ausgeführt, aber nicht in Einzelschritten durchlaufen.                                                                                                          | Drücken Sie <kbd>F5</kbd>, oder klicken Sie im Menü **Debuggen** auf **Ausführen/Fortsetzen**, oder geben Sie im Konsolenbereich `C` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>.               |
+| **Einzelschritt**  | Führt die aktuelle Anweisung aus und hält dann bei der nächsten Anweisung an. Ist die aktuelle Anweisung ein Funktions- oder Skriptaufruf, wechselt der Debugger in diese Funktion oder dieses Skript. Andernfalls hält er bei der nächsten Anweisung an.                      | Drücken Sie <kbd>F11</kbd>, oder klicken Sie im Menü **Debuggen** auf **Einzelschritt** , oder geben Sie im Konsolenbereich `S` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>.                 |
+| **Überspringen**  | Führt die aktuelle Anweisung aus und hält dann bei der nächsten Anweisung an. Ist die aktuelle Anweisung ein Funktions- oder Skriptaufruf, führt der Debugger die gesamte Funktion oder das gesamte Skript aus und hält bei der Anweisung an, die auf den Funktions- oder Skriptaufruf folgt. | Drücken Sie <kbd>F10</kbd>, oder klicken Sie im Menü **Debuggen** auf **Prozedurschritt** , oder geben Sie im Konsolenbereich `V` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>.                 |
+| **Rücksprung**   | Führt einen Rücksprung aus der aktuellen Funktion und auf eine Ebene höher aus, wenn die Funktion geschachtelt ist. Befindet sich der Fokus im Hauptteil, wird das Skript bis zum Ende oder bis zum nächsten Haltepunkt ausgeführt. Die übersprungenen Anweisungen werden ausgeführt, aber nicht in Einzelschritten durchlaufen.                   | Drücken Sie <kbd>UMSCHALT</kbd>+<kbd>F11</kbd>, oder klicken Sie im Menü **Debuggen** auf **Rücksprung** , oder geben Sie im Konsolenbereich `O` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>. |
+| **Fortsetzen**   | Setzt die Ausführung bis zum Ende oder bis zum nächsten Haltepunkt fort. Die übersprungenen Funktionen und Aufrufe werden ausgeführt, aber nicht in Einzelschritten durchlaufen.                                                                                                          | Drücken Sie <kbd>F5</kbd>, oder klicken Sie im Menü **Debuggen** auf **Ausführen/Fortsetzen** , oder geben Sie im Konsolenbereich `C` ein, und drücken Sie die <kbd>EINGABETASTE</kbd>.               |
 
 ## <a name="how-to-display-the-values-of-variables-while-debugging"></a>Anzeigen der Werte von Variablen beim Debuggen
 

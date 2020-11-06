@@ -2,19 +2,20 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Einrichten eines Pullclients mit Konfigurations-IDs in PowerShell 4.0
-ms.openlocfilehash: 9259c624c8725f7d76f61e9ad7caa42e1bfa308c
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird das Einrichten eines Pullclients mithilfe von Konfigurations-IDs in PowerShell 4.0 erläutert.
+ms.openlocfilehash: 2a3d7b79f29030620cddc2b2131cb4432e41e4eb
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71955147"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92649007"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Einrichten eines Pullclients mit Konfigurations-IDs in PowerShell 4.0
 
 >Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> Der Pull-Server (Windows-Feature *DSC-Dienst*) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
+> Der Pull-Server (Windows-Feature *DSC-Dienst* ) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
 
 Bevor Sie einen Pullclient einrichten, sollten Sie einen Pullserver einrichten. Diese Reihenfolge ist zwar nicht erforderlich, jedoch hilft sie bei der Problembehandlung und unterstützt Sie dabei, sicherzustellen, dass die Registrierung erfolgreich war. Sie können eine der folgenden Führungslinien zum Einrichten eines Pullservers verwenden:
 
@@ -27,7 +28,7 @@ Jeder Zielknoten kann zum Herunterladen von Konfigurationen, Ressourcen und soga
 
 Durch Ausführen der folgenden Beispiele wird ein neuer Ausgabeordner namens **PullClientConfigID** erstellt, und in diesem wird eine MOF-Datei mit der Metakonfiguration platziert. In diesem Fall heißt die MOF-Datei mit der Metakonfiguration `localhost.meta.mof`.
 
-Rufen Sie zum Anwenden der Konfiguration das Cmdlet **Set DscLocalConfigurationManager** auf, wobei **Path** auf den Speicherort der MOF-Datei mit der Metakonfiguration festgelegt wird. Beispiel:
+Rufen Sie zum Anwenden der Konfiguration das Cmdlet **Set-DscLocalConfigurationManager** auf, wobei **Path** auf den Speicherort der MOF-Datei mit der Metakonfiguration festgelegt wird. Beispiel:
 
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientConfigId –Verbose.
@@ -45,7 +46,7 @@ Sie können eine zufällige **GUID** mithilfe des folgenden Beispiels erstellen.
 
 ## <a name="set-up-a-pull-client-to-download-configurations"></a>Einrichten eines Pullclients zum Herunterladen von Konfigurationen
 
-Jeder Client muss im Modus **Pull** konfiguriert werden und mit der Pullserver-URL zum Speicherort der Konfiguration versehen werden. Hierzu müssen Sie den lokalen Konfigurations-Manager (LCM) mit den benötigten Informationen konfigurieren. Zum Konfigurieren des LCM erstellten Sie eine besondere Art von Konfiguration mit einem **DSCLocalConfigurationManager**-Block. Weitere Informationen zum Konfigurieren des LCM finden Sie unter [Konfigurieren des lokalen Konfigurations-Managers](../managing-nodes/metaConfig4.md).
+Jeder Client muss im Modus **Pull** konfiguriert werden und mit der Pullserver-URL zum Speicherort der Konfiguration versehen werden. Hierzu müssen Sie den lokalen Konfigurations-Manager (LCM) mit den benötigten Informationen konfigurieren. Zum Konfigurieren des LCM erstellten Sie eine besondere Art von Konfiguration mit einem **DSCLocalConfigurationManager** -Block. Weitere Informationen zum Konfigurieren des LCM finden Sie unter [Konfigurieren des lokalen Konfigurations-Managers](../managing-nodes/metaConfig4.md).
 
 ## <a name="http-dsc-pull-server"></a>HTTP-DSC-Pullserver
 
@@ -71,7 +72,7 @@ PullClientConfigId -Output "."
 
 ## <a name="smb-share"></a>SMB-Freigabe
 
-Wenn der Pullserver nicht als Webdienst, sondern als SMB-Dateifreigabe konfiguriert wurde, legen Sie **DownloadManagerName** auf **DscFileDownloadManager** anstelle von **WebDownLoadManager** fest. **DscFileDownloadManager** erfordert, dass Sie eine **SourcePath**-Eigenschaft in **DownloadManagerCustomData** angeben. Das folgende Skript konfiguriert den LCM zum Abrufen von Konfigurationen von einer SMB-Freigabe namens „SmbDscShare“ auf einem Server namens „CONTOSO-SERVER“.
+Wenn der Pullserver nicht als Webdienst, sondern als SMB-Dateifreigabe konfiguriert wurde, legen Sie **DownloadManagerName** auf **DscFileDownloadManager** anstelle von **WebDownLoadManager** fest. **DscFileDownloadManager** erfordert, dass Sie eine **SourcePath** -Eigenschaft in **DownloadManagerCustomData** angeben. Das folgende Skript konfiguriert den LCM zum Abrufen von Konfigurationen von einer SMB-Freigabe namens „SmbDscShare“ auf einem Server namens „CONTOSO-SERVER“.
 
 ```powershell
 Configuration PullClientConfigId

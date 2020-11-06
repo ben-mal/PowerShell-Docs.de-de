@@ -1,24 +1,24 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: Kennenlernen der Windows PowerShell ISE
-ms.openlocfilehash: 03728a8c83962894b27738609a5b1bec841fdb13
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Dieser Artikel bietet eine Übersicht über die Features der Windows PowerShell ISE.
+ms.openlocfilehash: f389ac60da13141329d81baf08e9100b144022c3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809826"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663824"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Kennenlernen der Windows PowerShell ISE
 
-Sie können Windows PowerShell® Integrated Scripting Environment (ISE) verwenden, um Befehle und Skripts zu erstellen, auszuführen und zu debuggen. Windows PowerShell ISE besteht aus der Menüleiste, den Windows PowerShell-Registerkarten, der Symbolleiste, den Skriptregisterkarten, dem Skriptbereich, dem Konsolenbereich, der Statusleiste, dem Schieberegler für die Textgröße und der kontextbezogenen Hilfe.
+Sie können mithilfe der Windows PowerShell&reg; Integrated Scripting Environment (ISE) Befehle und Skripts erstellen, ausführen und debuggen. Windows PowerShell ISE besteht aus der Menüleiste, den Windows PowerShell-Registerkarten, der Symbolleiste, den Skriptregisterkarten, dem Skriptbereich, dem Konsolenbereich, der Statusleiste, dem Schieberegler für die Textgröße und der kontextbezogenen Hilfe.
 
 > [!NOTE]
 > Ab Windows PowerShell ISE 3.0 wurden der Befehls- und der Ausgabebereich in Form des zentralen Konsolenbereichs zusammengeführt.
 
 ## <a name="menu-bar"></a>Menüleiste
 
-Die Menüleiste enthält die Menüs **Datei**, **Bearbeiten**, **Ansicht**, **Tools**, **Debuggen**, **Add-Ons** und **Hilfe**. Über die Schaltflächen in den Menüs können Sie Aufgaben erledigen, die im Zusammenhang mit dem Schreiben und Ausführen von Skripts und Ausführen von Befehlen in der Windows PowerShell ISE stehen. Darüber hinaus kann ein [Add-On-Tool](object-model/The-ISEAddOnTool-Object.md) auf der Menüleiste platziert werden, indem Skripts ausgeführt werden, die die [ISE-Objektmodellhierarchie](object-model/The-ISE-Object-Model-Hierarchy.md) verwenden.
+Die Menüleiste enthält die Menüs **Datei** , **Bearbeiten** , **Ansicht** , **Tools** , **Debuggen** , **Add-Ons** und **Hilfe**. Über die Schaltflächen in den Menüs können Sie Aufgaben erledigen, die im Zusammenhang mit dem Schreiben und Ausführen von Skripts und Ausführen von Befehlen in der Windows PowerShell ISE stehen. Darüber hinaus kann ein [Add-On-Tool](object-model/The-ISEAddOnTool-Object.md) auf der Menüleiste platziert werden, indem Skripts ausgeführt werden, die die [ISE-Objektmodellhierarchie](object-model/The-ISE-Object-Model-Hierarchy.md) verwenden.
 
 > [!NOTE]
 > In Windows PowerShell ISE 2.0 gab es die Menüs **Tools** und **Add-Ons** nicht.

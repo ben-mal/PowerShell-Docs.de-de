@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
-keywords: gallery,powershell,cmdlet,psget
 title: Bootstrapping von NuGet
-ms.openlocfilehash: 139b2c5a9e742eca8f5ac36c9acd721216584335
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: In diesem Artikel wird beschrieben, wie Sie die für das Arbeiten mit dem PowerShell-Katalog erforderlichen NuGet-Komponenten installieren.
+ms.openlocfilehash: eddbe15e7a765ad8b6df2b317a090269f06661d5
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690867"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661113"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Bootstrapping des NuGet-Anbieters und von „NuGet.exe“
 
-„NuGet.exe“ ist im neuesten NuGet-Anbieter nicht enthalten. Für die Veröffentlichung eines Moduls oder Skripts benötigt PowerShell die binäre ausführbare Datei **NuGet.exe**. Für alle weiteren Vorgänge, darunter **find**, **install**, **save** und **uninstall**, ist nur der NuGet-Anbieter erforderlich.
+„NuGet.exe“ ist im neuesten NuGet-Anbieter nicht enthalten. Für die Veröffentlichung eines Moduls oder Skripts benötigt PowerShell die binäre ausführbare Datei **NuGet.exe**. Für alle weiteren Vorgänge, darunter **find** , **install** , **save** und **uninstall** , ist nur der NuGet-Anbieter erforderlich.
 PowerShell umfasst Logik für ein kombiniertes Bootstrappings des NuGet-Anbieters und der Datei „NuGet.exe“ oder ein ausschließliches Bootstrapping des NuGet-Anbieters. In beiden Fällen sollte nur eine einzige Aufforderungsmeldung erfolgen. Wenn der Computer nicht mit dem Internet verbunden ist, muss der Benutzer oder Administrator eine vertrauenswürdige Instanz des NuGet-Anbieters und/oder der Datei „NuGet.exe“ auf den getrennten Computer kopieren.
 
 > [!NOTE]
@@ -25,11 +25,14 @@ Find-Module -Repository PSGallery -Verbose -Name Contoso
 
 ```Output
 NuGet provider is required to continue
-PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
-'C:\Users\user1\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install and import the NuGet provider
-now?
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based
+repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
+'C:\Users\user1\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet
+provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you
+want PowerShellGet to install and import the NuGet provider now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): n
-Find-Module : NuGet provider is required to interact with NuGet-based repositories. Please ensure that '2.8.5.201' or newer version of NuGet provider is installed.
+Find-Module : NuGet provider is required to interact with NuGet-based repositories. Please ensure
+that '2.8.5.201' or newer version of NuGet provider is installed.
 At line:1 char:1
 + Find-Module -Repository PSGallery -Verbose -Name Contoso
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,9 +46,11 @@ Find-Module -Repository PSGallery -Verbose -Name Contoso
 
 ```Output
 NuGet provider is required to continue
-PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
-'C:\Users\user1\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install and import the NuGet provider
-now?
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based
+repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
+'C:\Users\user1\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet
+provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you
+want PowerShellGet to install and import the NuGet provider now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 VERBOSE: Installing NuGet provider.
 
@@ -62,9 +67,12 @@ Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 ```Output
 NuGet.exe is required to continue
-PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must be available under one of the paths specified in PATH environment variable value. Do you want PowerShellGet to install NuGet.exe now?
+PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must
+be available under one of the paths specified in PATH environment variable value. Do you want
+PowerShellGet to install NuGet.exe now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): N
-Publish-Module : NuGet.exe is required to interact with NuGet-based repositories. Please ensure that NuGet.exe is available under one of the paths specified in PATH environment variable value.
+Publish-Module : NuGet.exe is required to interact with NuGet-based repositories. Please ensure
+that NuGet.exe is available under one of the paths specified in PATH environment variable value.
 At line:1 char:1
 + Publish-Module -Name Contoso -Repository PSGallery -Verbose
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,10 +86,13 @@ Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 ```Output
 NuGet.exe is required to continue
-PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must be available under one of the paths specified in PATH environment variable value. Do you want PowerShellGet to install NuGet.exe now?
+PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must
+be available under one of the paths specified in PATH environment variable value. Do you want
+PowerShellGet to install NuGet.exe now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 VERBOSE: Installing NuGet.exe.
-VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
+VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'.
+Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
 ## <a name="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Fehlerbehebung, wenn sowohl der NuGet-Anbieter als auch „NuGet.exe“ während eines Veröffentlichungsvorgangs auf einem Computer ohne Internetverbindung nicht verfügbar sind
@@ -92,10 +103,14 @@ Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 ```Output
 NuGet.exe and NuGet provider are required to continue
-PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider now?
+PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with
+the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider
+now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): N
-Publish-Module : PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Please ensure that '2.8.5.201' or newer version of NuGet provider is installed and NuGet.exe is available under
-one of the paths specified in PATH environment variable value.
+Publish-Module : PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer
+to interact with the NuGet-based repositories. Please ensure that '2.8.5.201' or newer version of
+NuGet provider is installed and NuGet.exe is available under one of the paths specified in PATH
+environment variable value.
 At line:1 char:1
 + Publish-Module -Name Contoso -Repository PSGallery -Verbose
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,11 +124,14 @@ Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 ```Output
 NuGet.exe and NuGet provider are required to continue
-PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider now?
+PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with
+the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider
+now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 VERBOSE: Installing NuGet provider.
 VERBOSE: Installing NuGet.exe.
-VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
+VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'.
+ Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
 ## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a>Manuelles Bootstrapping des NuGet-Anbieters auf einem Computer ohne Internetverbindung

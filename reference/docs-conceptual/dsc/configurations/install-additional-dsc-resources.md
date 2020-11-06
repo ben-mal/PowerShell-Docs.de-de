@@ -2,36 +2,37 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Ressource,Katalog,Setup
 title: Installieren zusätzlicher DSC-Ressourcen
-ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel sind die DSC-Ressourcen im Modul PSDesiredStateConfiguration aufgeführt. Außerdem wird erläutert, wie Sie Ressourcen im PowerShell-Katalog suchen und installieren.
+ms.openlocfilehash: e75561ed539e06716c9a103f905b9d1e4f3e71d3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "74417798"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92645133"
 ---
 # <a name="install-additional-dsc-resources"></a>Installieren zusätzlicher DSC-Ressourcen
 
-PowerShell umfasst mehrere vorgefertigte Ressourcen für die Desired State Configuration (DSC). Das **PSDesiredStateConfiguration**-Modul enthält alle für Ihre spezifische Instanz von PowerShell verfügbaren OOB-DSC-Ressourcen.
+PowerShell umfasst mehrere vorgefertigte Ressourcen für die Desired State Configuration (DSC). Das **PSDesiredStateConfiguration** -Modul enthält alle für Ihre spezifische Instanz von PowerShell verfügbaren OOB-DSC-Ressourcen.
 
 Hier finden Sie eine Liste der in PowerShell 4.0 enthaltenen OOB-Ressourcen sowie Beschreibungen der Funktionen der Ressourcen.
 
 > [!NOTE]
 > Diese Liste ist unvollständig, da die Anzahl der OOB-Ressourcen mit jeder Version von PowerShell gewachsen ist.
 
-|Resource  |BESCHREIBUNG  |
-|---------|---------|
-|**File**|Steuert den Status der Dateien und Verzeichnisse. Kopiert Dateien aus einer **Quelle** in ein **Ziel** und aktualisiert sie bei Änderung der **Quelle** durch Vergleichen von Datumsangaben, Prüfsummen und Hashes.|
-|**Archivieren**|Entpackt Archive an einem angegebenen Speicherort. Überprüft die Archive mit einer angegebenen **Prüfsumme**.|
-|**Umgebung**|Verwaltet Umgebungsvariablen.|
-|**Gruppe**|Verwaltet lokale Gruppen und steuert die Gruppenmitgliedschaft.|
-|**Protokoll**|Schreibt Meldungen in das `Microsoft-Windows-Desired State Configuration/Analytic`-Ereignisprotokoll.|
-|**Paket**|Installiert oder deinstalliert Pakete mit **Arguments**, **LogPath**, **ReturnCode** und anderen Einstellungen.|
-|**Registrierung**|Verwaltet Registrierungsschlüssel und -werte.|
-|**Skript**|Ermöglicht Ihnen den Entwurf Ihrer eigenen [get-test-set](../resources/get-test-set.md)-Skriptblöcke.|
-|**Service**|Konfiguriert Windows-Dienste.|
-|**Benutzer** |Verwaltet lokale Benutzer und Attribute.|
-|**WindowsFeature**|Verwaltet Rollen und Features.|
-|**WindowsProcess**|Konfiguriert Windows-Prozesse.|
+|      Resource      |                                                                                       BESCHREIBUNG                                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **File**           | Steuert den Status der Dateien und Verzeichnisse. Kopiert Dateien aus einer **Quelle** in ein **Ziel** und aktualisiert sie bei Änderung der **Quelle** durch Vergleichen von Datumsangaben, Prüfsummen und Hashes. |
+| **Archivieren**        | Entpackt Archive an einem angegebenen Speicherort. Überprüft die Archive mit einer angegebenen **Prüfsumme**.                                                                                         |
+| **Umgebung**    | Verwaltet Umgebungsvariablen.                                                                                                                                                           |
+| **Gruppieren**          | Verwaltet lokale Gruppen und steuert die Gruppenmitgliedschaft.                                                                                                                                      |
+| **Log**            | Schreibt Meldungen in das `Microsoft-Windows-Desired State Configuration/Analytic`-Ereignisprotokoll.                                                                                               |
+| **Paket**        | Installiert oder deinstalliert Pakete mit **Arguments** , **LogPath** , **ReturnCode** und anderen Einstellungen.                                                                                        |
+| **Registrierung**       | Verwaltet Registrierungsschlüssel und -werte.                                                                                                                                                        |
+| **Skript**         | Ermöglicht Ihnen den Entwurf Ihrer eigenen [get-test-set](../resources/get-test-set.md)-Skriptblöcke.                                                                                                |
+| **Service**        | Konfiguriert Windows-Dienste.                                                                                                                                                             |
+| **Benutzer**           | Verwaltet lokale Benutzer und Attribute.                                                                                                                                                      |
+| **WindowsFeature** | Verwaltet Rollen und Features.                                                                                                                                                              |
+| **WindowsProcess** | Konfiguriert Windows-Prozesse.                                                                                                                                                            |
 
 Die OOB-Ressourcen bieten einen guten Ausgangspunkt für allgemeine Vorgänge. Wenn die OOB-Ressourcen Ihre Anforderungen nicht erfüllen, können Sie Ihre eigene [benutzerdefinierte Ressource](../resources/authoringResource.md) schreiben. Bevor Sie eine benutzerdefinierte Ressource zur Behebung Ihres Problems schreiben, sollten Sie die große Anzahl von DSC-Ressourcen durchsehen, die bereits von Microsoft und der PowerShell-Community erstellt wurden.
 
@@ -51,11 +52,11 @@ Suchen Sie zunächst mit dem [Find-DSCResource](/powershell/module/powershellget
 PS> Find-DSCResource
 
 NuGet provider is required to continue
-PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The
-NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
-'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider
- by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to
-install and import the NuGet provider now?
+PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based
+repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies'
+or 'C:\Users\xAdministrator\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install
+the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201
+-Force'. Do you want PowerShellGet to install and import the NuGet provider now?
 [Y] Yes  [N] No  [?] Help (default is "Y"):
 ```
 
@@ -115,9 +116,9 @@ Da die Ressource „TimeZone“ sich im Modul „ComputerManagementDSC“ befind
 PS> Install-Module -Name ComputerManagementDSC
 
 Untrusted repository
-You are installing the modules from an untrusted repository. If you trust this repository, change its
-InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
-'PSGallery'?
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to
+install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 

@@ -2,18 +2,19 @@
 ms.date: 10/30/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Problembehandlung bei DSC
-ms.openlocfilehash: 83e59b9f7148b52071d4782522ca7642027d795a
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: Dieser Artikel enthält Anleitungen zur Behandlung häufiger Fehler.
+ms.openlocfilehash: 2ac86689fa2695add247995bfb91c0ea85e22d60
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83692315"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656252"
 ---
 # <a name="troubleshooting-dsc"></a>Problembehandlung bei DSC
 
-_Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0_
+> Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Dieses Thema beschreibt die Problembehandlung für DSC.
+Dieser Artikel enthält Anleitungen zur Behandlung häufiger Fehler.
 
 ## <a name="winrm-dependency"></a>WinRM-Abhängigkeit
 
@@ -82,8 +83,8 @@ PSComputerName        :
 
 ## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Mein Skript wird nicht ausgeführt: Verwenden von DSC-Protokollen für die Diagnose von Skriptfehlern
 
-Wie alle Windows-Softwareprogramme erfasst DSC Fehler und Ereignisse in [Protokollen](/windows/desktop/EventLog/about-event-logging), die Sie in der [Ereignisanzeige](https://support.microsoft.com/hub/4338813/windows-help) anzeigen können.
-Die Durchsicht dieser Protokolle kann Ihnen dabei helfen herauszufinden, warum ein bestimmter Vorgang fehlgeschlagen ist und wie Sie Fehler in Zukunft vermeiden. Das Schreiben von Konfigurationsskripts ist nicht ganz einfach. Sie sollten daher den Fortschritt der Konfiguration im Ereignisprotokoll der DSC-Analyse mithilfe der DSC-Protokollressource verfolgen, um Fehler bei der Erstellung leichter aufspüren zu können.
+Wie alle Windows-Softwareprogramme erfasst DSC Fehler und Ereignisse in [Protokollen](/windows/desktop/EventLog/about-event-logging), die Sie in der [Ereignisanzeige](https://support.microsoft.com/hub/4338813/windows-help) anzeigen können. Die Durchsicht dieser Protokolle kann Ihnen dabei helfen herauszufinden, warum ein bestimmter Vorgang fehlgeschlagen ist und wie Sie Fehler in Zukunft vermeiden.
+Das Schreiben von Konfigurationsskripts ist nicht ganz einfach. Sie sollten daher den Fortschritt der Konfiguration im Ereignisprotokoll der DSC-Analyse mithilfe der DSC-Protokollressource verfolgen, um Fehler bei der Erstellung leichter aufspüren zu können.
 
 ## <a name="where-are-dsc-event-logs"></a>Wo befinden sich die DSC-Ereignisprotokolle?
 
@@ -101,8 +102,9 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Wie oben gezeigt, lautet der primäre Protokollname von DSC **Microsoft > Windows > DSC** (andere Protokollnamen unter Windows werden hier aus Gründen der Übersichtlichkeit nicht dargestellt). Der primäre Name wird an den Namen des Kanals angefügt. Daraus ergibt sich der vollständige Protokollname. Die DSC-Engine schreibt hauptsächlich in drei Arten von Protokollen: [Betriebs-, Analyse- und Debugprotokolle](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Da die analytischen Protokolle und die Debugprotokolle standardmäßig deaktiviert sind, sollten Sie sie in der Ereignisanzeige aktivieren. Öffnen Sie dazu die Ereignisanzeige, indem Sie in Windows PowerShell „Show-EventLog“ eingeben. Oder klicken Sie auf die Schaltfläche **Start** und dann auf **Systemsteuerung**, **Verwaltung** und **Ereignisanzeige**.
-Klicken Sie in der Ereignisanzeige im Menü **Ansicht** auf **Analytische und Debugprotokolle einblenden**. Der Name des für den analytischen Kanal lautet **Microsoft-Windows-Dsc/Analytic**, und der Debugkanal heißt **Microsoft-Windows-Dsc/Debug**. Außerdem können Sie zum Aktivieren der Protokolle das Hilfsprogramm [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) verwenden, wie im folgenden Beispiel gezeigt.
+Wie oben gezeigt, lautet der primäre Protokollname von DSC **Microsoft > Windows > DSC** (andere Protokollnamen unter Windows werden hier aus Gründen der Übersichtlichkeit nicht dargestellt). Der primäre Name wird an den Namen des Kanals angefügt. Daraus ergibt sich der vollständige Protokollname. Die DSC-Engine schreibt hauptsächlich in drei Arten von Protokollen: [Betriebs-, Analyse- und Debugprotokolle](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)).
+Da die analytischen Protokolle und die Debugprotokolle standardmäßig deaktiviert sind, sollten Sie sie in der Ereignisanzeige aktivieren.
+Öffnen Sie dazu die Ereignisanzeige, indem Sie in Windows PowerShell „Show-EventLog“ eingeben. Oder klicken Sie auf die Schaltfläche **Start** und dann auf **Systemsteuerung** , **Verwaltung** und **Ereignisanzeige**. Klicken Sie in der Ereignisanzeige im Menü **Ansicht** auf **Analytische und Debugprotokolle einblenden**. Der Name des für den analytischen Kanal lautet **Microsoft-Windows-Dsc/Analytic** , und der Debugkanal heißt **Microsoft-Windows-Dsc/Debug**. Außerdem können Sie zum Aktivieren der Protokolle das Hilfsprogramm [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) verwenden, wie im folgenden Beispiel gezeigt.
 
 ```powershell
 wevtutil.exe set-log "Microsoft-Windows-Dsc/Analytic" /q:true /e:true
@@ -254,8 +256,8 @@ PS C:\> $myFailedEvent.Message
 
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} :
 DSC Engine Error :
- Error Message Current configuration does not exist. Execute Start-DscConfiguration command with -Path pa
-rameter to specify a configuration file and create a current configuration first.
+ Error Message Current configuration does not exist. Execute Start-DscConfiguration command with
+ -Path parameter to specify a configuration file and create a current configuration first.
 Error Code : 1
 ```
 
@@ -602,7 +604,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-Dieses Skript generiert eine Zufallszahl und aktualisiert den Anbietercode entsprechend. Ist `DebugMode` auf „false“ festgelegt, wird der Inhalt der Datei „**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**“ nie geändert.
+Dieses Skript generiert eine Zufallszahl und aktualisiert den Anbietercode entsprechend. Wenn `DebugMode` auf FALSE festgelegt ist, wird der Inhalt der Datei `$env:SystemDrive\OutputFromTestProviderDebugMode.txt` nie geändert.
 
 Legen Sie `DebugMode` in Ihrem Konfigurationsskript jetzt auf **ForceModuleImport** fest:
 
@@ -633,16 +635,15 @@ onlyProperty                            PSComputerName
 
 Wenn eine Metakonfiguration auf einen Server angewendet wird, um ihn bei einer Instanz von Windows-Pullserver zu registrieren, wird möglicherweise der folgende Fehler angezeigt.
 
-```PowerShell
-Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+```
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server
 https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
     + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
     + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
     + PSComputerName        : <computername>
 ```
 
-Er kann auftreten, wenn das Zertifikat, das auf dem Server zum Verschlüsseln von Datenverkehr verwendet wird, einen allgemeinen Namen (Common Name, CN) hat, der anders als der DNS-Name ist, der vom Knoten zum Auflösen der URL verwendet wird.
-Aktualisieren Sie die Windows-Pullserver-Instanz, sodass ein Zertifikat mit einem korrigierten Namen verwendet wird.
+Er kann auftreten, wenn das Zertifikat, das auf dem Server zum Verschlüsseln von Datenverkehr verwendet wird, einen allgemeinen Namen (Common Name, CN) hat, der anders als der DNS-Name ist, der vom Knoten zum Auflösen der URL verwendet wird. Aktualisieren Sie die Windows-Pullserver-Instanz, sodass ein Zertifikat mit einem korrigierten Namen verwendet wird.
 
 ## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>Fehler beim Ausführen von Sysprep nach dem Anwenden einer DSC-Konfiguration
 
@@ -652,7 +653,7 @@ Bei dem Versuch, Sysprep auszuführen, um einen Windows-Server nach der Anwendun
 SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
 ```
 
-Das Generalisieren von Servern nach der Konfiguration mit der Plattform Desired State Configuration für Windows PowerShell wird nicht unterstützt.  Wenden Sie stattdessen erst Konfigurationen auf Windows an, nachdem die Phase „Specialize“ (Spezialisierung) des Windows-Setups abgeschlossen ist.
+Das Generalisieren von Servern nach der Konfiguration mit der Plattform Desired State Configuration für Windows PowerShell wird nicht unterstützt. Wenden Sie stattdessen erst Konfigurationen auf Windows an, nachdem die Phase „Specialize“ (Spezialisierung) des Windows-Setups abgeschlossen ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 

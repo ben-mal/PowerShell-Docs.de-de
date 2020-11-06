@@ -1,13 +1,13 @@
 ---
 ms.date: 08/14/2018
-keywords: powershell,cmdlet
 title: Einführung in die Windows PowerShell ISE
-ms.openlocfilehash: 3e4471d0982ba4d7ef1a9d59906a9ff297f6f7cb
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Die PowerShell ISE ist eine Hostanwendung für Windows PowerShell, mit der Sie auf einer einzelnen Windows-basierten grafischen Benutzeroberfläche Befehle ausführen und Skripts schreiben, testen und debuggen können.
+ms.openlocfilehash: ab2b11e5d81933b166d404c0b24c96aa73253895
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808716"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663617"
 ---
 # <a name="the-windows-powershell-ise"></a>Windows PowerShell ISE
 
@@ -35,7 +35,7 @@ Die Windows PowerShell ISE ermöglicht Ihnen das Anpassen einiger Aspekte ihrer 
 
 ## <a name="to-start-the-windows-powershell-ise"></a>So starten Sie die Windows PowerShell ISE
 
-Klicken Sie auf **Start**, wählen Sie **Windows PowerShell** aus, und klicken Sie dann auf **Windows PowerShell ISE**.
+Klicken Sie auf **Start** , wählen Sie **Windows PowerShell** aus, und klicken Sie dann auf **Windows PowerShell ISE**.
 Alternativ können Sie `powershell_ise.exe` in eine Befehlsshell oder im Feld „Ausführen“ eingeben.
 
 ## <a name="to-get-help-in-the-windows-powershell-ise"></a>So rufen Sie Hilfe in der Windows PowerShell ISE ab

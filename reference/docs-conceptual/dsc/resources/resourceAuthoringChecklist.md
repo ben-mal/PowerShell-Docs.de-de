@@ -2,12 +2,13 @@
 ms.date: 07/08/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Prüfliste für die Ressourcenerstellung
-ms.openlocfilehash: f21e2e8563880e0c10cf50b044e9c56ca09fe0fa
-ms.sourcegitcommit: d26e2237397483c6333abcf4331bd82f2e72b4e3
+description: Dieser Artikel enthält eine Prüfliste bewährter Methoden, die beim Erstellen einer neuen DSC-Ressource befolgt werden sollten.
+ms.openlocfilehash: 5b618511f730c80104620c84e693c13ae4f536ac
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217643"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656338"
 ---
 # <a name="resource-authoring-checklist"></a>Prüfliste für die Ressourcenerstellung
 
@@ -115,7 +116,7 @@ Hier ein konkreteres Beispiel der Ressource „Registry“:
 
 `Get-TargetResource` sollte Details zum aktuellen Zustand der Ressource zurückgeben. Testen Sie die Konfiguration durch Aufrufen von `Get-DscConfiguration`, nachdem Sie sie angewendet haben, und stellen Sie sicher, dass die Ausgabe den aktuellen Zustand des Computers ordnungsgemäß widerspiegelt. Es müssen unbedingt getrennte Tests erfolgen, da Probleme in diesem Bereich nicht auftauchen, wenn `Start-DscConfiguration` aufgerufen wird.
 
-## <a name="call-getsettest-targetresource-functions-directly"></a>Direktes Aufrufen der **Get/Set/Test-TargetResource**-Funktionen
+## <a name="call-getsettest-targetresource-functions-directly"></a>Direktes Aufrufen der **Get/Set/Test-TargetResource** -Funktionen
 
 Vergessen Sie nicht, die `Get/Set/Test-TargetResource`-Funktionen zu testen, die in Ihrer Ressource implementiert sind, indem Sie sie direkt aufrufen und sicherstellen, dass sie erwartungsgemäß funktionieren.
 

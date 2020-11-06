@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Installieren der Windows PowerShell 2.0-Engine
-ms.openlocfilehash: ca0e83209324b28bd41f65ced61bfe9003d98553
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Die Windows PowerShell 2.0 Engine ist ein optionales Feature von Windows. In diesem Artikel wird erläutert, wie Sie das Feature und die erforderlichen Komponenten installieren.
+ms.openlocfilehash: c82725c34f5c5864eba0c88eb33ecac9e43f86d3
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808586"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663968"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Installieren der Windows PowerShell 2.0-Engine
 
@@ -17,7 +18,7 @@ Windows PowerShell 3.0 ist mit Windows PowerShell 2.0 abwärtskompatibel. Cmdlet
 
 Die Engines Windows PowerShell 2.0, Windows PowerShell 3.0 und Windows PowerShell 4.0 können parallel ausgeführt werden, um die Abwärtskompatibilität mit Befehlen und Hostprogrammen zu erhalten, die von diesen Änderungen betroffen sind. Außerdem ist Windows PowerShell 2.0 Engine in Windows Server 2012 R2, Windows 8.1, Windows 8, Windows Server 2012 und Windows Management Framework 3.0 enthalten. Windows PowerShell 2.0 Engine soll ausschließlich verwendet werden, wenn ein vorhandenes Skript oder Hostprogramm nicht ausgeführt werden kann, da es nicht mit Windows PowerShell 3.0, Windows PowerShell 4.0 oder Microsoft .NET Framework 4 kompatibel ist. Solche Fälle sind allerdings eher selten.
 
-Windows PowerShell 2.0 Engine ist eine optionale Funktion von Windows Server 2012 R2, Windows 8.1, Windows® 8 und Windows-Server® 2012. In früheren Versionen von Windows ersetzt die Installation von Windows PowerShell 3.0 komplett die Installation von Windows PowerShell 2.0 im Installationsverzeichnis von Windows PowerShell, wenn Sie Windows Management Framework 3.0 installieren. Windows PowerShell 2.0 Engine wird jedoch beibehalten.
+Die Windows PowerShell 2.0 Engine ist ein optionales Feature von Windows Server 2012 R2, Windows 8.1, Windows&reg; 8 und Windows-Server&reg; 2012. In früheren Versionen von Windows ersetzt die Installation von Windows PowerShell 3.0 komplett die Installation von Windows PowerShell 2.0 im Installationsverzeichnis von Windows PowerShell, wenn Sie Windows Management Framework 3.0 installieren. Windows PowerShell 2.0 Engine wird jedoch beibehalten.
 
 Informationen zum Starten der Windows PowerShell 2.0-Engine finden Sie unter [Starten der Windows PowerShell 2.0-Engine](../Starting-the-Windows-PowerShell-2.0-Engine.md).
 
@@ -29,7 +30,7 @@ Um es verwenden zu können, müssen Sie jedoch die Option für Microsoft .NET Fr
 #### <a name="to-turn-on-net-framework-35"></a>So aktivieren Sie .NET Framework 3.5
 
 1. Geben Sie **Windows-Features** auf dem **Startbildschirm ein**.
-2. Klicken Sie auf der Leiste **Apps** auf **Einstellungen**, und klicken Sie dann auf **Windows-Features aktivieren oder deaktivieren**.
+2. Klicken Sie auf der Leiste **Apps** auf **Einstellungen** , und klicken Sie dann auf **Windows-Features aktivieren oder deaktivieren**.
 3. Klicken Sie im Feld **Windows-Features** auf **.NET Framework 3.5 (enthält .NET 2.0 und 3.0)** , um es auszuwählen.
 
    Wenn Sie die Option **NET Framework 3.5 (enthält .NET 2.0 und 3.0)** auswählen, wird das Feld aufgefüllt, um anzugeben, dass nur ein Teil des Features ausgewählt ist. Dies ist jedoch für Windows PowerShell 2.0 Engine ausreichend.
@@ -38,9 +39,9 @@ Um es verwenden zu können, müssen Sie jedoch die Option für Microsoft .NET Fr
 
 1. Geben Sie **Windows-Features** auf dem **Startbildschirm ein**.
 
-2. Klicken Sie auf der Leiste **Apps** auf **Einstellungen**, und klicken Sie dann auf **Windows-Features aktivieren oder deaktivieren**.
+2. Klicken Sie auf der Leiste **Apps** auf **Einstellungen** , und klicken Sie dann auf **Windows-Features aktivieren oder deaktivieren**.
 
-3. Erweitern Sie im Feld **Windows-Features** den Knoten **Windows PowerShell 2.0**, und klicken Sie auf das Feld **Windows PowerShell 2.0 Engine**, um es zu aktivieren oder zu deaktivieren.
+3. Erweitern Sie im Feld **Windows-Features** den Knoten **Windows PowerShell 2.0** , und klicken Sie auf das Feld **Windows PowerShell 2.0 Engine** , um es zu aktivieren oder zu deaktivieren.
 
 ## <a name="on-windows-server-2012-r2-and-windows-server-2012"></a>Unter Windows Server 2012 R2 und Windows Server 2012
 
@@ -50,7 +51,7 @@ Mithilfe der folgenden Verfahren können Sie Windows PowerShell 2.0 Engine und M
 
 1. Klicken Sie im **Server-Manager** im Menü **Verwalten** auf **Rollen und Features hinzufügen**.
 
-    Alternativ dazu klicken Sie im **Server-Manager** auf **Alle Server**, klicken mit der rechten Maustaste auf einen Servernamen und wählen anschließend **Rollen und Features hinzufügen** aus.
+    Alternativ dazu klicken Sie im **Server-Manager** auf **Alle Server** , klicken mit der rechten Maustaste auf einen Servernamen und wählen anschließend **Rollen und Features hinzufügen** aus.
 
 2. Wählen Sie auf der Seite **Installationstyp auswählen** **Rollenbasierte oder featurebasierte Installation** aus.
 
@@ -62,11 +63,11 @@ Mithilfe der folgenden Verfahren können Sie Windows PowerShell 2.0 Engine und M
 
 - Klicken Sie im **Server-Manager** im Menü **Verwalten** auf **Rollen und Features hinzufügen**.
 
-  Klicken Sie im **Server-Manager** auf **Alle Server**, klicken Sie mit der rechten Maustaste auf einen Servernamen, und wählen Sie anschließend **Rollen und Features hinzufügen** aus.
+  Klicken Sie im **Server-Manager** auf **Alle Server** , klicken Sie mit der rechten Maustaste auf einen Servernamen, und wählen Sie anschließend **Rollen und Features hinzufügen** aus.
 
 - Wählen Sie auf der Seite **Installationstyp auswählen** **Rollenbasierte oder featurebasierte Installation** aus.
 
-- Auf der Seite **Features**, erweitern Sie den Knoten **Windows PowerShell (installiert)** , und wählen Sie **Windows PowerShell 2.0 Engine** aus.
+- Auf der Seite **Features** , erweitern Sie den Knoten **Windows PowerShell (installiert)** , und wählen Sie **Windows PowerShell 2.0 Engine** aus.
 
 Informationen zum Starten der Windows PowerShell 2.0-Engine finden Sie unter [Starten der Windows PowerShell 2.0-Engine](../Starting-the-Windows-PowerShell-2.0-Engine.md).
 

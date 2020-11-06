@@ -2,12 +2,13 @@
 ms.date: 04/19/2019
 keywords: wmf,powershell,setup
 title: Windows Management Framework (WMF)
-ms.openlocfilehash: d581370fd602e03c86aa549eb8b273ff4d01b4e5
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF ist eine Voraussetzung für Windows PowerShell. In diesem Artikel ist der Verlauf der WMF-Versionen mit Informationen zum Suchen und Installieren von WMF beschrieben.
+ms.openlocfilehash: 339b140325befea0b28aa470d4249170937f2c37
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808686"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92654042"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -51,7 +52,7 @@ Um die verschiedenen Verbesserungen an PowerShell und anderen Komponenten einer 
 | Windows Server 2003<br>*Nicht mehr unterstützt* |              |                             |              |              | Ja          |
 | Windows XP<br>*Nicht mehr unterstützt*          |              |                             |              | Ja          | Ja          |
 
-- **Im Lieferumfang enthalten**: Die Features von der angegebenen WMF-Version waren in den angegebenen Versionen des Windows-Clients und von Windows Server im Lieferumfang enthalten.
+- **Im Lieferumfang enthalten** : Die Features von der angegebenen WMF-Version waren in den angegebenen Versionen des Windows-Clients und von Windows Server im Lieferumfang enthalten.
 - **Nicht mehr unterstützt** Diese Produkte werden von Microsoft nicht mehr unterstützt. Sie müssen ein Upgrade auf eine neue Version ausführen, die unterstützt wird. Weitere Informationen finden Sie auf der Seite [Microsoft Lifecycle-Richtlinie][].
 
 > [!NOTE]

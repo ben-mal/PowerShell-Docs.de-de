@@ -1,14 +1,13 @@
 ---
 ms.date: 06/09/2017
-schema: 2.0.0
-keywords: powershell
 title: Module, die eine Zustimmung zur Lizenz erfordern
-ms.openlocfilehash: a2f7ed72aae8579a6723f65b86dd0993f1a22afd
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird erläutert, wie Sie mit Modulen arbeiten, die im PowerShell-Katalog veröffentlicht wurden und die Zustimmung zu einer Endbenutzerlizenz erfordern.
+ms.openlocfilehash: a9486e10b10569ce8bcde47d5c8acf0796a93851
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80082809"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656107"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Module, die eine Zustimmung zur Lizenz erfordern
 
@@ -27,7 +26,7 @@ Module, für die die Benutzer einer Lizenz zustimmen sollen, müssen folgende An
 
 ## <a name="impact-on-installsaveupdate-module"></a>Auswirkungen auf „Install-Module“, „Save-Module“ und „Update-Module“
 
-- Die Cmdlets „Install“, „Save“ und „Update“ unterstützen den neuen Parameter **AcceptLicense**, der vorgibt, dass der Benutzer die Lizenz gesehen hat.
+- Die Cmdlets „Install“, „Save“ und „Update“ unterstützen den neuen Parameter **AcceptLicense** , der vorgibt, dass der Benutzer die Lizenz gesehen hat.
 - Wenn **RequiredLicenseAcceptance** TRUE lautet und **AcceptLicense** nicht angegeben ist, werden dem Benutzer die Datei „`license.txt`“ und die folgende Meldung angezeigt: `Do you accept these license terms
   (Yes/No/YesToAll/NoToAll)`.
   - Bei Zustimmung zur Lizenz
@@ -36,7 +35,7 @@ Module, für die die Benutzer einer Lizenz zustimmen sollen, müssen folgende An
     - **Update-Module:** Das Modul wird aktualisiert.
   - Bei Ablehnung der Lizenz.
     - Vorgang wurde abgebrochen.
-    - Alle Cmdlets suchen nach den Metadaten (**requireLicenseAcceptance** und Formatversion), die besagen, dass eine Zustimmung zur Lizenz erforderlich ist.
+    - Alle Cmdlets suchen nach den Metadaten ( **requireLicenseAcceptance** und Formatversion), die besagen, dass eine Zustimmung zur Lizenz erforderlich ist.
     - Wenn die Formatversion des Clients älter als 2.0 ist, verursacht der Vorgang einen Fehler, und der Benutzer wird zum Aktualisieren des Clients aufgefordert.
     - Wenn das Modul mit einer älteren Formatversion als 2.0 veröffentlicht wurde, wird das Flag „requireLicenseAcceptance“ ignoriert.
 

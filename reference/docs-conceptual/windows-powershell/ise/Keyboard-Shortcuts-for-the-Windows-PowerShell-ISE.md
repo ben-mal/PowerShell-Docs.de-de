@@ -1,17 +1,17 @@
 ---
 ms.date: 01/02/2020
-keywords: powershell,cmdlet
 title: Tastenkombinationen für Windows PowerShell ISE
-ms.openlocfilehash: 36fa3f983dc2d8440dd3b87aefd92eb49c028dc9
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+description: Dieser Artikel enthält eine Liste der Tastenkombinationen, die in PowerShell ISE verwendet werden.
+ms.openlocfilehash: b7749f49d3ac2923b097e2ab94488263436980bd
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092115"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663463"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tastenkombinationen für Windows PowerShell ISE
 
-Verwenden Sie die folgenden Tastenkombinationen zum Ausführen von Aktionen in Windows PowerShell® Integrated Scripting Environment (ISE). Windows PowerShell ISE ist als Bestandteil von Windows Server- und Windows-Client-Betriebssystemen verfügbar, kann aber auch unter einigen älteren Windows-Betriebssystemen als Teil des [Windows Management Framework 4.0-Downloadpakets](https://go.microsoft.com/fwlink/?LinkID=293881) installiert werden.
+Verwenden Sie die folgenden Tastenkombinationen zum Ausführen von Aktionen in Windows PowerShell&reg; Integrated Scripting Environment (ISE). Windows PowerShell ISE ist als Bestandteil von Windows Server- und Windows-Client-Betriebssystemen verfügbar, kann aber auch unter einigen älteren Windows-Betriebssystemen als Teil des [Windows Management Framework 4.0-Downloadpakets](https://go.microsoft.com/fwlink/?LinkID=293881) installiert werden.
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Tastenkombinationen zum Bearbeiten von Text
 

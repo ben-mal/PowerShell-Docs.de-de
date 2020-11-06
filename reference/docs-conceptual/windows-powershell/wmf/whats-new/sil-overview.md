@@ -1,13 +1,13 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: Protokollierung des Softwarebestands (Software Inventory Logging, SIL)
-ms.openlocfilehash: b12cfc4ae1e505bbc4d47596bed9352ce53a98f2
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: WMF 5.x fügt Features für die Protokollierung des Softwarebestands hinzu, die es Ihnen ermöglichen, Informationen zu installierter Software zur einfacheren Verwaltung und Überwachung an einem zentralen Ort zu sammeln.
+ms.openlocfilehash: 85e261782a3df5fe5561a80529ba699d686a8779
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808466"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92646617"
 ---
 # <a name="software-inventory-logging-sil"></a>Protokollierung des Softwarebestands (Software Inventory Logging, SIL)
 
@@ -18,6 +18,6 @@ Durch die Protokollierung des Softwarebestands sollen die Betriebskosten für da
 
 Sie können Daten zum Softwarebestand auch über ein direktes Abfragen aller Computer protokollieren. Doch mit der Protokollierung des Softwarebestands können (durch die Nutzung einer von jedem Server ausgelösten Weiterleitung) Probleme bei der Serverermittlung überwunden werden, die für viele Software-Inventur- und Ressourcenverwaltungsszenarien typisch sind. Die Software-Inventurprotokollierung verwendet SSL, um Daten zu schützen, die über HTTPS an einen Aggregationsserver weitergeleitet werden. Da die Daten an zentraler Stelle gespeichert werden, können sie einfacher analysiert, bearbeitet und freigegeben werden.
 
-Im Rahmen der Funktionalität des Features werden keine Daten an Microsoft gesendet. Die Daten und die Funktionalität der Softwareinventurprotokollierung sind ausschließlich zur Verwendung durch den lizenzierten Besitzer der Serversoftware und durch Administratoren gedacht.
+Im Rahmen der Funktionalität des Features werden keine Daten an Microsoft gesendet. Die Daten und die Funktionalität der zur Protokollierung des Softwarebestands sind ausschließlich zur Verwendung durch den lizenzierten Besitzer der Serversoftware und durch Administratoren gedacht.
 
 Weitere Informationen und Dokumentation zu Cmdlets zur Protokollierung des Softwarebestands finden Sie unter [Verwalten der Protokollierung des Softwarebestands in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383584(v=ws.11)).

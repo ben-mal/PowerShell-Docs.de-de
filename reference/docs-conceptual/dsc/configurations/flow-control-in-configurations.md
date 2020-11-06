@@ -2,19 +2,19 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Bedingte Anweisungen und Schleifen in Konfigurationen
-ms.openlocfilehash: 86f75be4a3d1c1760dd6269335431e8ab9fd8d09
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Dieser Artikel zeigt Ihnen, wie Sie bedingte Anweisungen und Schleifen verwenden können, um Ihre Konfiguration dynamischer zu gestalten. Die Kombination von Bedingungen und Schleifen mit Parametern und Konfigurationsdaten ermöglicht Ihnen mehr Flexibilität und Kontrolle bei der Kompilierung Ihrer Konfiguration.
+ms.openlocfilehash: 7af8a360c17a0842fa2b95d1d1fb288323c327ef
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "75736895"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658468"
 ---
 # <a name="conditional-statements-and-loops-in-a-configuration"></a>Bedingte Anweisungen und Schleifen in einer Konfiguration
 
 Sie können Ihre [Konfiguration](configurations.md) dynamischer gestalten, indem Sie PowerShell-Schlüsselwörter für die Ablaufsteuerung verwenden. Dieser Artikel zeigt Ihnen, wie Sie bedingte Anweisungen und Schleifen verwenden können, um Ihre `Configuration` dynamischer zu gestalten. Die Kombination von Bedingungen und Schleifen mit [Parametern](add-parameters-to-a-configuration.md) und [Konfigurationsdaten](configData.md) ermöglicht Ihnen mehr Flexibilität und Kontrolle bei der Kompilierung Ihrer `Configuration`.
 
-Genau wie eine Funktion oder ein Skriptblock können Sie jedes beliebige PowerShell-Sprachfeature innerhalb einer `Configuration` verwenden.
-Die von Ihnen verwendeten Anweisungen werden nur ausgewertet, wenn Sie Ihre `Configuration` aufrufen, um eine `.mof`-Datei zu kompilieren. Die folgenden Beispiele zeigen Szenarien zur Veranschaulichung der Konzepte. Bedingte Anweisungen und Schleifen werden häufiger mit Parametern und Konfigurationsdaten verwendet.
+Genau wie eine Funktion oder ein Skriptblock können Sie jedes beliebige PowerShell-Sprachfeature innerhalb einer `Configuration` verwenden. Die von Ihnen verwendeten Anweisungen werden nur ausgewertet, wenn Sie Ihre `Configuration` aufrufen, um eine `.mof`-Datei zu kompilieren. Die folgenden Beispiele zeigen Szenarien zur Veranschaulichung der Konzepte. Bedingte Anweisungen und Schleifen werden häufiger mit Parametern und Konfigurationsdaten verwendet.
 
 In diesem Beispiel ruft der Ressourcenblock **Service** den aktuellen Zustand eines Diensts zur Kompilierungszeit ab, um eine `.mof`-Datei zu generieren, die ihren aktuellen Zustand beibehält.
 
@@ -38,7 +38,7 @@ Configuration ServiceState
 }
 ```
 
-Zusätzlich können Sie für jeden Dienst auf dem aktuellen Computer einen **Service**-Ressourcenblock erstellen, indem Sie eine `foreach`-Schleife verwenden.
+Zusätzlich können Sie für jeden Dienst auf dem aktuellen Computer einen **Service** -Ressourcenblock erstellen, indem Sie eine `foreach`-Schleife verwenden.
 
 ```powershell
 Configuration ServiceState
@@ -104,7 +104,7 @@ Dazu zählen etwa:
 - Remoting
 - WMI und CIM
 - Active Directory-Objekte
-- und weitere...
+- und vieles mehr...
 
 Der gesamte PowerShell-Code, der in einer `Configuration` definiert ist, wird während der Kompilierung ausgewertet, aber Sie können auch Code in das Skript einfügen, das Ihre `Configuration` enthält. Sämtlicher Code, der sich außerhalb des `Configuration`-Blocks befindet, wird beim Import Ihrer `Configuration` ausgeführt.
 

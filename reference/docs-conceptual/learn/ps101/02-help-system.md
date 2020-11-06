@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 8325a32ad8ec137781300e9d46cab52705f0805a
-ms.sourcegitcommit: eaac7af89171379df2e20464ebee9fc7e7d7674a
+ms.openlocfilehash: 98876cf324b367fd5bb3c3462cb90ea6d7c7d5b9
+ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89493656"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "93143313"
 ---
 # <a name="chapter-2---the-help-system"></a>Kapitel 2: Das Hilfesystem
 
@@ -94,7 +94,7 @@ Jeder der folgenden Parameter befindet sich in einem anderen Parametersatz:
 - Parameter
 - ShowWindow
 
-Alle kryptischen Teile der Syntax, z. B. eckige und spitze Klammern, im Abschnitt „Syntax“ haben eine Bedeutung, und werden in Anhang A dieses Buchs behandelt. Zwar ist das Erlernen der Bedeutung der kryptischen Syntax wichtig, doch fällt es Einsteigern bei PowerShell, die sie möglicherweise auch nicht täglich verwenden, häufig schwer, sich dies zu merken.
+Alle kryptischen Teile der Syntax, z. B. eckige und spitze Klammern, im Abschnitt „Syntax“ haben eine Bedeutung, und werden in Anhang A dieses Buchs behandelt. Zwar ist das Erlernen der Bedeutung der kryptischen Syntax wichtig, doch fällt es Einsteigern bei PowerShell, die sie möglicherweise auch nicht täglich verwenden, häufig schwer, sich diese zu merken.
 
 Weitere Informationen zum besseren Verständnis der kryptischen Syntax finden Sie in [Anhang A][].
 
@@ -121,7 +121,7 @@ Nehmen Sie sich einen Moment Zeit, um dieses Beispiel auf Ihrem Computer auszuf�
 
 Beachten Sie, dass durch die Verwendung des Parameters **Full** mehrere zusätzliche Abschnitte zurückgegeben wurden, von denen einer der Abschnitt „PARAMETER“ ist, der mehr Informationen als der kryptisch Abschnitt „SYNTAX“ bereitstellt.
 
-Der Parameter **Full** ist ein Switch-Parameter (Schalter). Ein Parameter, der keinen Wert erfordert, wird als Switch-Parameter bezeichnet. Wenn ein Switch-Parameter angegeben wird, ist sein Wert „true“, und er nicht angegeben wird, ist sein Wert „false“.
+Der Parameter **Full** ist ein Switch-Parameter (Schalter). Ein Parameter, der keinen Wert erfordert, wird als Switch-Parameter bezeichnet. Wenn ein Switch-Parameter angegeben wird, ist der Wert TRUE, andernfalls FALSE.
 
 Wenn Sie dieses Kapitel in der PowerShell-Konsole durchgearbeitet haben, haben Sie bemerkt, dass der vorherige Befehl zum Anzeigen des vollständigen Hilfethemas für `Get-Help` auf dem Bildschirm durchgelaufen ist, ohne dass Sie die Möglichkeit hatten, es zu lesen. Es gibt eine bessere Möglichkeit.
 
@@ -194,7 +194,7 @@ Get-Help -Name Get-Command -Parameter Noun
 Get-Help -Name Get-Command -ShowWindow
 ```
 
-In der Regel verwende ich `help <command name>` mit dem Parameter **Full** oder **Online**. Wenn ich nur an den Beispielen interessiert bin, verwende ich den Parameter **Examples**, und wenn ich nur an einem bestimmten Parameter interessiert bin, verwende ich den Parameter **Parameter**. Der Parameter **ShowWindow** öffnet das Hilfethema in einem separaten, durchsuchbaren Fenster, das auf einem anderen Monitor angezeigt werden kann, wenn Sie über mehrere Monitore verfügen. Ich habe den Parameter **ShowWindow** vermieden, weil es einen bekannten Fehler gibt, durch den nicht das gesamte Hilfethema angezeigt wird.
+In der Regel verwende ich `help <command name>` mit dem Parameter **Full** oder **Online**. Wenn ich nur an den Beispielen interessiert bin, verwende ich den Parameter **Examples** , und wenn ich nur an einem bestimmten Parameter interessiert bin, verwende ich den Parameter **Parameter**. Der Parameter **ShowWindow** öffnet das Hilfethema in einem separaten, durchsuchbaren Fenster, das auf einem anderen Monitor angezeigt werden kann, wenn Sie über mehrere Monitore verfügen. Ich habe den Parameter **ShowWindow** vermieden, weil es einen bekannten Fehler gibt, durch den nicht das gesamte Hilfethema angezeigt wird.
 
 Wenn Sie Hilfe in einem separaten Fenster anzeigen möchten, empfehle ich Ihnen, entweder den Parameter **Online** oder den Parameter **Full** zu verwenden und die Ergebnisse per Pipeline an `Out-GridView` weiterzuleiten, wie im folgenden Beispiel gezeigt.
 
@@ -204,7 +204,7 @@ help Get-Command -Full | Out-GridView
 
 Sowohl das Cmdlet `Out-GridView` als auch der Parameter **ShowWindow** des Cmdlets `Get-Help` erfordert ein Betriebssystem mit grafischer Benutzeroberfläche (GUI). Sie generieren eine Fehlermeldung, wenn Sie versuchen, eins davon unter Windows Server zu verwenden, das mit der Installationsoption „Server Core“ (ohne GUI) installiert wurde.
 
-Wenn Sie `Get-Help` verwenden möchten, um Befehle zu suchen, verwenden Sie das Sternchen-Platzhalterzeichen (`*`) mit dem Parameter **Name**. Geben Sie einen Begriff, mit dem Sie nach Befehlen suchen, als Wert für den Parameter **Name**an, wie im folgenden Beispiel gezeigt.
+Wenn Sie `Get-Help` verwenden möchten, um Befehle zu suchen, verwenden Sie das Sternchen-Platzhalterzeichen (`*`) mit dem Parameter **Name**. Geben Sie einen Begriff, mit dem Sie nach Befehlen suchen, als Wert für den Parameter **Name** an, wie im folgenden Beispiel gezeigt.
 
 ```powershell
 help *process*
@@ -400,7 +400,7 @@ REMARKS
 
 Beachten Sie im vorherigen Beispiel, dass `more` kein Hilfethema besitzt, und dass das `Help`-System in PowerShell dennoch in der Lage war, es zu finden. Es hat nur eine Übereinstimmung gefunden und die grundlegenden Syntaxinformationen zurückgegeben, die Ihnen angezeigt werden, wenn ein Befehl kein Hilfethema besitzt.
 
-PowerShell enthält zahlreiche konzeptionelle („About“) Hilfethemen. Der folgende Befehl kann verwendet werden, um eine Liste aller **About**-Hilfethemen in Ihrem System zurückzugeben.
+PowerShell enthält zahlreiche konzeptionelle („About“) Hilfethemen. Der folgende Befehl kann verwendet werden, um eine Liste aller **About** -Hilfethemen in Ihrem System zurückzugeben.
 
 ```powershell
 help About_*
@@ -412,7 +412,7 @@ Wenn Sie die Ergebnisse auf ein einzelnes „About“-Hilfethema beschränken, w
 help about_Updatable_Help
 ```
 
-Das Hilfesystem in PowerShell muss aktualisiert werden, damit die **About**-Hilfethemen vorhanden sind. Wenn die anfängliche Aktualisierung des Hilfesystems auf dem Computer aus irgendeinem Grund fehlgeschlagen ist, sind die Dateien erst verfügbar, wenn das Cmdlet `Update-Help` erfolgreich ausgeführt wurde.
+Das Hilfesystem in PowerShell muss aktualisiert werden, damit die **About** -Hilfethemen vorhanden sind. Wenn die anfängliche Aktualisierung des Hilfesystems auf dem Computer aus irgendeinem Grund fehlgeschlagen ist, sind die Dateien erst verfügbar, wenn das Cmdlet `Update-Help` erfolgreich ausgeführt wurde.
 
 ## <a name="get-command"></a>Get-Command
 
@@ -434,7 +434,7 @@ Cmdlet          Wait-Process                                       3.1.0.0    Mi
 
 Beachten Sie, dass im vorherigen Beispiel, in dem `Get-Command` ausgeführt wurde, der Parameter **Noun** verwendet und `Process` als Wert für den Parameter **Noun** angegeben wird. Was ist, wenn Sie nicht wüssten, wie das Cmdlet `Get-Command` verwendet wird? Sie könnten `Get-Help` verwenden, um das Hilfethema für `Get-Command` anzuzeigen.
 
-Die Parameter **Name**, **Noun** und **Verb** akzeptieren Platzhalter. Das folgende Beispiel illustriert die Verwendung von Platzhaltern mit dem Parameter **Name**:
+Die Parameter **Name** , **Noun** und **Verb** akzeptieren Platzhalter. Das folgende Beispiel illustriert die Verwendung von Platzhaltern mit dem Parameter **Name** :
 
 ```Output
 Get-Command -Name *service*

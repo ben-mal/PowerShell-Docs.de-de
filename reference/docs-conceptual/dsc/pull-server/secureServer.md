@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: Dieses Dokument bietet bewährte Methoden zur Unterstützung von Technikern, die den DSC-Pullserver bereitstellen.
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Bewährte Methoden für Pullserver
-ms.openlocfilehash: 99009fd73ea08ca4ac42832a055e914a3ce6dbcf
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846948"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664334"
 ---
 # <a name="pull-server-best-practices"></a>Bewährte Methoden für Pullserver
 
 Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> Der Pull-Server (Windows-Feature *DSC-Dienst*) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
+> Der Pull-Server (Windows-Feature *DSC-Dienst* ) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
 
 Zusammenfassung: Dieses Dokument soll Prozesse und Erweiterungen enthalten und Techniker unterstützen, die die Lösung vorbereiten. Details sollten bewährte Methoden bereitstellen, die von Kunden ermittelt und dann vom Produktteam bestätigt wurden, um sicherzustellen, dass die Empfehlungen in die Zukunft gerichtet sind und als stabil angesehen werden.
 
@@ -119,8 +119,7 @@ In Testumgebungen wird in der Regel der Serverhostname verwendet oder die IP-Adr
 
 Mit einem DNS-CNAME können Sie ein Alias erstellen, um auf Ihren Hosteintrag (A) zu verweisen. Die Absicht des zusätzlichen Namenseintrags ist eine verbesserte Flexibilität für den Fall, dass eine Änderung in der Zukunft erforderlich sein sollte. Ein CNAME kann bei der Isolierung der Clientkonfiguration behilflich sein, damit Änderungen der Serverumgebung keine entsprechenden Änderungen der Clientkonfiguration erfordern. Diese Änderungen umfassen das Ersetzen eines Pullservers oder Hinzufügen zusätzlicher Pullserver.
 
-Bedenken Sie die Lösungsarchitektur, wenn Sie einen Namen für den DNS-Datensatz auswählen.
-Bei der Nutzung des Lastenausgleichs muss das Zertifikat zur Sicherung von Datenverkehr über HTTPS über denselben Namen verfügen wie der DNS-Datensatz.
+Bedenken Sie die Lösungsarchitektur, wenn Sie einen Namen für den DNS-Datensatz auswählen. Bei der Nutzung des Lastenausgleichs muss das Zertifikat zur Sicherung von Datenverkehr über HTTPS über denselben Namen verfügen wie der DNS-Datensatz.
 
 |       Szenario        |                                                                                         Bewährte Methode
 |:--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -142,7 +141,7 @@ Planungsaufgabe
 In den meisten Unternehmen muss Netzwerkdatenverkehr, insbesondere Datenverkehr, der vertrauliche Daten wie die Serverkonfiguration enthält, heutzutage bei der Übertragung bestätigt und/oder verschlüsselt werden.
 Es ist zwar möglich, einen Pullserver mithilfe von HTTP bereitzustellen, was Clientanforderungen im Klartext vereinfacht, aber die bewährte Methode ist ein mit HTTPS gesicherter Datenverkehr. Der Dienst kann mithilfe einer Reihe von Parametern in der DSC-Ressource **xPSDesiredStateConfiguration** zur Verwendung von HTTPS konfiguriert werden.
 
-Die Zertifikatanforderungen zur Sicherung von HTTPS-Datenverkehr für Pullserver unterscheiden sich nicht von der Sicherung anderer HTTPS-Websites. Die **Webserver**-Vorlage in einem Windows Server Certificate Service erfüllt die erforderlichen Funktionen.
+Die Zertifikatanforderungen zur Sicherung von HTTPS-Datenverkehr für Pullserver unterscheiden sich nicht von der Sicherung anderer HTTPS-Websites. Die **Webserver** -Vorlage in einem Windows Server Certificate Service erfüllt die erforderlichen Funktionen.
 
 Planungsaufgabe
 
@@ -207,12 +206,12 @@ Ein Pullserver dient zur Bereitstellung eines zentralisierten Mechanismus für d
 
 #### <a name="guids"></a>GUIDs
 
-Das Planen der Konfigurations-**GUIDs** lohnt sich besonders, wenn Sie eine Pullserverbereitstellung planen. Es bestehen keine besonderen Anforderungen für die Behandlung von **GUIDs**, und der Prozess wird wahrscheinlich für jede Umgebung einzigartig sein. Der Prozess kann einfach bis komplex sein: eine zentral gespeicherte CSV-Datei, eine einfache SQL-Tabelle, eine CMDB oder eine komplexe Lösung, die eine Integration mit einem anderen Tool oder einer Softwarelösung erfordert. Es gibt zwei allgemeine Vorgehensweisen:
+Das Planen der Konfigurations- **GUIDs** lohnt sich besonders, wenn Sie eine Pullserverbereitstellung planen. Es bestehen keine besonderen Anforderungen für die Behandlung von **GUIDs** , und der Prozess wird wahrscheinlich für jede Umgebung einzigartig sein. Der Prozess kann einfach bis komplex sein: eine zentral gespeicherte CSV-Datei, eine einfache SQL-Tabelle, eine CMDB oder eine komplexe Lösung, die eine Integration mit einem anderen Tool oder einer Softwarelösung erfordert. Es gibt zwei allgemeine Vorgehensweisen:
 
 - **Zuweisen von GUIDs pro Server** – Hiermit kann sichergestellt werden, dass jede Serverkonfiguration einzeln gesteuert wird. Dies bietet einen Grad an Genauigkeit um Updates und kann auch in Umgebungen mit wenigen Servern ausgeführt werden.
 - **Zuweisen von GUIDs pro Serverrolle** – Alle Server, die die gleiche Funktion erfüllen, z.B. Webserver, verwenden dieselbe GUID, um auf die erforderlichen Konfigurationsdaten zu verweisen. Beachten Sie, dass wenn viele Server dieselbe GUID verwenden, alle gleichzeitig aktualisiert werden würden, wenn die Konfiguration geändert wird.
 
-  Die GUID sollte als vertraulich behandelt werden, da sie von jemanden mit böswilligen Absichten genutzt werden könnte, um Informationen über die Bereitstellung und Konfiguration von Servern in Ihrer Umgebung zu erlangen. Weitere Informationen finden Sie unter [Securely allocating GUIDs in PowerShell Desired State Configuration Pull Mode](https://blogs.msdn.microsoft.com/powershell/2014/12/31/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/) (Sicheres Zuweisen von GUIDs in PowerShell Desired State Configuration Pullmodus).
+  Die GUID sollte als vertraulich behandelt werden, da sie von jemanden mit böswilligen Absichten genutzt werden könnte, um Informationen über die Bereitstellung und Konfiguration von Servern in Ihrer Umgebung zu erlangen. Weitere Informationen finden Sie unter [Securely allocating GUIDs in PowerShell Desired State Configuration Pull Mode](https://devblogs.microsoft.com/powershell/securely-allocating-guids-in-powershell-desired-state-configuration-pull-mode/) (Sicheres Zuweisen von GUIDs in PowerShell Desired State Configuration Pullmodus).
 
 Planungsaufgabe
 
@@ -247,7 +246,7 @@ Der Befehl wird Sie nach Ihrer Genehmigung fragen, bevor Sie das Modul herunterl
 
 Die beste Methode zur Bereitstellung eines DSC-Pullservers ist die Verwendung eines DSC-Konfigurationsskripts. Dieses Dokument präsentiert Skripts, einschließlich beide grundlegenden Einstellungen, die nur den DSC-Webdienst konfigurieren und erweiterte Einstellungen, die einen durchgängigen Windows Server, einschließlich DSC-Webdienst konfigurieren.
 
-Hinweis: Das `xPSDesiredStateConfiguration`-DSC-Modul erfordert derzeit einen Server aus dem Gebietsschema EN-US.
+Hinweis: Das `xPSDesiredStateConfiguration`-DSC-Modul erfordert derzeit das Gebietsschema EN-US für den Server.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Grundlegende Konfiguration für Windows Server 2012
 
@@ -537,7 +536,7 @@ Die PowerShell-Funktion [Create a Checksum and Publish DSC MOF to SMB Pull Serve
 
 Eine Datendatei wird gespeichert, um während der Bereitstellung eines Pullservers Informationen zu erstellen, die den OData-Webdienst enthalten. Wie unten beschrieben, hängt der Dateityp vom Betriebssystem ab.
 
-- **Windows Server 2012** Der Dateityp ist immer MDB.
-- **Windows Server 2012 R2** Der Dateityp wird standardmäßig auf EDB festgelegt, es sei denn, in der Konfiguration wird eine MDB-Datei angegeben.
+- **Windows Server 2012** : Der Dateityp ist stets `.mdb`.
+- **Windows Server 2012 R2** : Der Dateityp wird standardmäßig auf `.edb` festgelegt, es sei denn, in der Konfiguration wird eine `.mdb`-Datei angegeben.
 
 Im [erweiterte Beispielskript](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) für die Installation eines Pullservers finden Sie außerdem ein Beispiel für die automatische Steuerung der web.config-Dateieinstellungen, um mögliche Fehler durch den Dateityp zu verhindern.

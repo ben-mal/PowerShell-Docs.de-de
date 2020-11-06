@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
-keywords: wmf,powershell,setup
 title: Ablaufverfolgung und Protokollierung von Skripts
-ms.openlocfilehash: dd18453c041428d5a6537c413c3ebe324a62dfee
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Windows PowerShell 5.x fügt eine neue Ereignisprotokollierung hinzu, mit der Sie die Ausführung von Skriptblöcken überwachen können.
+ms.openlocfilehash: d47fb6fdd1ee4b9372fab7b81e6dc94fb45b8880
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809866"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663114"
 ---
 # <a name="script-tracing-and-logging"></a>Ablaufverfolgung und Protokollierung von Skripts
 
 Während PowerShell bereits über die Gruppenrichtlinieneinstellung **LogPipelineExecutionDetails** verfügt, um den Aufruf von Cmdlets zu protokollieren, bietet die PowerShell-Skriptsprache mehrere Features, die Sie ggf. protokollieren und überwachen möchten. Das neue Feature zur detaillierten Ablaufverfolgung von Skripts stellt eine detaillierte Nachverfolgung und Analyse der Verwendung von PowerShell-Skriptaktivitäten auf einem System bereit. Nachdem Sie die detaillierte Ablaufverfolgung von Skripts aktiviert haben, protokolliert PowerShell alle Skriptblöcke im ETW-Ereignisprotokoll **Microsoft-Windows-PowerShell/Operational**. Wenn ein Skriptblock einen anderen Skriptblock erzeugt, z. B. durch Aufrufen von `Invoke-Expression`, wird der aufgerufene Skriptblock ebenfalls protokolliert.
 
-Die Protokollierung wird über die Gruppenrichtlinieneinstellung **Protokollierung von PowerShell-Skriptblöcken aktivieren** (**Administrative Vorlagen** -> **Windows-Komponenten** -> **Windows PowerShell**) aktiviert.
+Die Protokollierung wird über die Gruppenrichtlinieneinstellung **Protokollierung von PowerShell-Skriptblöcken aktivieren** ( **Administrative Vorlagen** -> **Windows-Komponenten** -> **Windows PowerShell** ) aktiviert.
 
 Die Ereignisse sind wie folgt:
 

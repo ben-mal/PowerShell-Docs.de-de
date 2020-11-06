@@ -1,14 +1,13 @@
 ---
 ms.date: 06/12/2017
-contributor: JKeithB
-keywords: gallery,powershell,cmdlet,psgallery
 title: Erste Schritte mit dem PowerShell-Katalog
-ms.openlocfilehash: bae0af144e6f520142e7eaea3dd0e1039976dae4
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: In diesem Artikel wird erläutert, wie Sie die ersten Schritte mit dem PowerShell-Katalog und den PowerShellGet-Cmdlets ausführen.
+ms.openlocfilehash: 02d84c64e39245b2a16c03029982796a74301bd6
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81219692"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661420"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Erste Schritte mit dem PowerShell-Katalog
 
@@ -19,7 +18,7 @@ Der PowerShell-Katalog ist ein Paketrepository mit Skripts, Modulen und DSC-Ress
 
 ## <a name="discovering-packages-from-the-powershell-gallery"></a>Ermitteln von Paketen im PowerShell-Katalog
 
-Sie können Pakete im PowerShell-Katalog finden, indem Sie das **Suchen**-Steuerelement auf der [Homepage](https://www.powershellgallery.com) des PowerShell-Katalogs verwenden oder die Module und Skripts auf der Seite [Pakete](https://www.powershellgallery.com/packages) durchsuchen. Sie können auch nach Paketen im PowerShell-Katalog suchen, indem Sie je nach Pakettyp die Cmdlets [Find-Module][], [Find-DscResource] oder [Find-Script][] mit `-Repository PSGallery` ausführen.
+Sie können Pakete im PowerShell-Katalog finden, indem Sie das **Suchen** -Steuerelement auf der [Homepage](https://www.powershellgallery.com) des PowerShell-Katalogs verwenden oder die Module und Skripts auf der Seite [Pakete](https://www.powershellgallery.com/packages) durchsuchen. Sie können auch nach Paketen im PowerShell-Katalog suchen, indem Sie je nach Pakettyp die Cmdlets [Find-Module][], [Find-DscResource] oder [Find-Script][] mit `-Repository PSGallery` ausführen.
 
 Sie können Ergebnisse aus dem Katalog filtern, indem Sie die folgenden Parameter verwenden:
 
@@ -32,9 +31,9 @@ Sie können Ergebnisse aus dem Katalog filtern, indem Sie die folgenden Paramete
 - DscResource
 - RoleCapability
 - Get-Help
-- Filtern
+- Filter
 
-Wenn Sie nur spezifische DSC-Ressourcen im Katalog suchen, können Sie das Cmdlet [Find-DscResource][] ausführen. „Find-DscResource“ gibt Daten zu DSC-Ressourcen zurück, die im Katalog enthalten sind. Da DSC-Ressourcen immer als Teil eines Moduls geliefert werden, müssen Sie [Install-Module][] ausführen, um diese DSC-Ressourcen zu installieren.
+Wenn Sie nur spezifische DSC-Ressourcen im Katalog suchen, können Sie das Cmdlet [Find-DscResource][] ausführen. „Find-DscResource“ gibt Daten zu DSC-Ressourcen zurück, die im Katalog enthalten sind. Weil DSC-Ressourcen immer als Teil eines Moduls bereitgestellt werden, müssen Sie [Install-Module][] ausführen, um diese DSC-Ressourcen zu installieren.
 
 ## <a name="learning-about-packages-in-the-powershell-gallery"></a>Informationen Paketen im PowerShell-Katalog
 
@@ -70,7 +69,7 @@ Dafür ist ein Administratorkonto erforderlich. Wenn Sie den Parameter `-Scope C
 
 ### <a name="deploy"></a>Bereitstellen
 
-Klicken Sie auf der Detailseite des Pakets auf **Azure Automation** und dann auf **In Azure Automation bereitstellen**, um ein Paket aus dem PowerShell-Katalog in Azure Automation bereitzustellen. Sie werden an das Azure-Verwaltungsportal umgeleitet, an dem Sie sich mit den Anmeldeinformationen Ihres Azure-Kontos anmelden. Beachten Sie, dass das Bereitstellen von Paketen mit Abhängigkeiten alle Abhängigkeiten in Azure Automation bereitstellt. Sie können die Schaltfläche „In Azure Automation bereitstellen“ deaktivieren, indem Sie den Paketmetadaten das Tag **AzureAutomationNotSupported** hinzufügen.
+Klicken Sie auf der Detailseite des Pakets auf **Azure Automation** und dann auf **In Azure Automation bereitstellen** , um ein Paket aus dem PowerShell-Katalog in Azure Automation bereitzustellen. Sie werden an das Azure-Verwaltungsportal umgeleitet, an dem Sie sich mit den Anmeldeinformationen Ihres Azure-Kontos anmelden. Beachten Sie, dass das Bereitstellen von Paketen mit Abhängigkeiten alle Abhängigkeiten in Azure Automation bereitstellt. Sie können die Schaltfläche „In Azure Automation bereitstellen“ deaktivieren, indem Sie den Paketmetadaten das Tag **AzureAutomationNotSupported** hinzufügen.
 
 Weitere Informationen zu Azure Automation finden Sie in der [Azure Automation](/azure/automation)-Dokumentation.
 

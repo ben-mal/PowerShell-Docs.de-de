@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: Das ISEFile-Objekt
-ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Ein ISEFile-Objekt stellt eine Datei in Windows PowerShell ISE dar.
+ms.openlocfilehash: 0de19c45bde7e5629d5721635150d3b0915aaa7d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809886"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662136"
 ---
 # <a name="the-isefile-object"></a>Das ISEFile-Objekt
 
-Ein **ISEFile**-Objekt stellt eine Datei in Windows-PowerShell® Integrated Scripting Environment (ISE) dar Es handelt sich um eine Instanz der **Microsoft.PowerShell.Host.ISE.ISEFile**-Klasse. In diesem Thema werden die Elementmethoden und -eigenschaften aufgeführt. `$psISE.CurrentFile` und die Dateien in der Dateisammlung auf einer PowerShell-Registerkarte sind Instanzen der \*\***Microsoft.PowerShell.Host.ISE.ISEFile**-Klasse.
+Ein **ISEFile** -Objekt stellt eine Datei in Windows-PowerShell&reg; Integrated Scripting Environment (ISE) dar. Es handelt sich um eine Instanz der **Microsoft.PowerShell.Host.ISE.ISEFile** -Klasse. In diesem Thema werden die Elementmethoden und -eigenschaften aufgeführt. `$psISE.CurrentFile` und die Dateien in der Dateisammlung auf einer PowerShell-Registerkarte sind Instanzen der \*\***Microsoft.PowerShell.Host.ISE.ISEFile**-Klasse.
 
 ## <a name="methods"></a>Methoden
 
@@ -25,7 +25,7 @@ Speichert die Datei auf dem Datenträger.
 
 ### <a name="exceptions"></a>Ausnahmen
 
-- **System.IO.IOException**: Die Datei konnte nicht gespeichert werden.
+- **System.IO.IOException** : Die Datei konnte nicht gespeichert werden.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -45,15 +45,15 @@ In Windows PowerShell ISE 2.0 und höher unterstützt.
 
 Speichert die Datei mit dem angegebenen Namen und der angegebenen Codierung.
 
-**Dateiname**: Zeichenfolge – der Name, der zum Speichern der Datei verwendet werden soll.
+**Dateiname** : Zeichenfolge – der Name, der zum Speichern der Datei verwendet werden soll.
 
 **\[saveEncoding\]** – Optional [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx) Ein optionaler Zeichencodierungsparameter, der für die gespeicherte Datei verwendet werden soll. Der Standardwert lautet **UTF8**.
 
 ### <a name="exceptions"></a>Ausnahmen
 
-- **System.ArgumentNullException**: Der **filename**-Parameter ist NULL.
-- **System.ArgumentException**: Der **filename**-Parameter ist leer.
-- **System.IO.IOException**: Die Datei konnte nicht gespeichert werden.
+- **System.ArgumentNullException** : Der **filename** -Parameter ist NULL.
+- **System.ArgumentException** : Der **filename** -Parameter ist leer.
+- **System.IO.IOException** : Die Datei konnte nicht gespeichert werden.
 
 ```powershell
 # Save the file with a full path and name.
@@ -91,7 +91,7 @@ $psISE.CurrentFile.Editor.Text
 
 In Windows PowerShell ISE 2.0 und höher unterstützt.
 
-Die schreibgeschützte Eigenschaft, die die ursprüngliche Dateicodierung abruft. Dies ist ein **System.Text.Encoding**-Objekt.
+Die schreibgeschützte Eigenschaft, die die ursprüngliche Dateicodierung abruft. Dies ist ein **System.Text.Encoding** -Objekt.
 
 ```powershell
 # Shows the encoding for the file.

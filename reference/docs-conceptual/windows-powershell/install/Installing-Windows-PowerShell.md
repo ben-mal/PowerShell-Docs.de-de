@@ -1,13 +1,13 @@
 ---
 ms.date: 08/09/2017
-keywords: powershell,cmdlet,download,installieren,setup,windows 10, windows 8.1, windows 8.0,windows 7
 title: Installieren von Windows PowerShell
-ms.openlocfilehash: 26675eb0b213818eaa72e148f0814545ee9f960e
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: In diesem Artikel wird erläutert, wie Windows PowerShell unter verschiedenen Versionen von Windows installiert wird.
+ms.openlocfilehash: 04e6d791e6895dd50825c58c905ff9cf8fa86ca8
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236219"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663982"
 ---
 # <a name="installing-windows-powershell"></a>Installieren von Windows PowerShell
 
@@ -17,7 +17,7 @@ Wenn Sie PowerShell 6 und höher verwenden möchten, müssen Sie PowerShell Core
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Finden von PowerShell unter Windows 10, 8.1, 8.0 und 7
 
-Manchmal kann es schwierig sein, die PowerShell-Konsole oder die ISE (integrierte Skriptumgebung) unter Windows zu finden, da sich der Speicherort je nach Windows-Version unterscheidet.
+Mitunter kann es schwierig sein, die PowerShell-Konsole oder ISE (Integrated Scripting Environment, integrierte Skriptumgebung) unter Windows zu finden, da sich der Speicherort je nach Windows-Version unterscheidet.
 
 In den folgenden Tabellen erfahren Sie, wo sich PowerShell in Ihrer Windows-Version befindet. Alle aufgelisteten Versionen sind die ursprünglich veröffentlichten Versionen ohne Updates.
 
@@ -39,13 +39,13 @@ In den folgenden Tabellen erfahren Sie, wo sich PowerShell in Ihrer Windows-Vers
 
 ## <a name="finding-powershell-in-windows-server-versions"></a>Finden von PowerShell in Windows Server-Versionen
 
-Ab Windows Server 2008 R2 kann ein Windows-Betriebssystem ohne die GUI (grafische Benutzeroberfläche) installiert werden. Editionen von Windows Server ohne die GUI werden als **Core**-Editionen bezeichnet. Editionen mit der GUI werden als **Desktop**-Editionen bezeichnet.
+Ab Windows Server 2008 R2 kann ein Windows-Betriebssystem ohne die GUI (grafische Benutzeroberfläche) installiert werden. Editionen von Windows Server ohne die GUI werden als **Core** -Editionen bezeichnet. Editionen mit der GUI werden als **Desktop** -Editionen bezeichnet.
 
 ### <a name="windows-server-core-editions"></a>Windows Server Core-Editionen
 
 In allen Core-Editionen wird ein Windows-Eingabeaufforderungsfenster geöffnet, wenn Sie sich beim Server anmelden.
 
-Geben Sie `powershell` ein, und drücken Sie auf **EINGABE**, um PowerShell in der Eingabeaufforderungssitzung zu starten. Geben Sie `exit` ein, um die PowerShell-Sitzung zu beenden und zur Eingabeaufforderung zurückzukehren.
+Geben Sie `powershell` ein, und drücken Sie auf **EINGABE** , um PowerShell in der Eingabeaufforderungssitzung zu starten. Geben Sie `exit` ein, um die PowerShell-Sitzung zu beenden und zur Eingabeaufforderung zurückzukehren.
 
 ### <a name="windows-server-desktop-editions"></a>Windows Server Desktop-Editionen
 

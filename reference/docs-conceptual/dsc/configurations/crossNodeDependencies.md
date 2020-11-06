@@ -2,27 +2,27 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Angeben knotenübergreifender Abhängigkeiten
-ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC bietet spezielle Ressourcen, die in Konfigurationen zum Angeben von Abhängigkeiten von Konfigurationen auf anderen Knoten verwendet werden.
+ms.openlocfilehash: a9fc09af922839b37db476c24c113efc5e3e8cb1
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "71954107"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658491"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Angeben knotenübergreifender Abhängigkeiten
 
-> Gilt für: Windows PowerShell 5.0
+> Gilt für: Windows PowerShell 5.0
 
-DSC bietet spezielle Ressourcen **WaitForAll**, **WaitForAny** und **WaitForSome**, die in Konfigurationen zum Angeben von Abhängigkeiten von Konfigurationen auf anderen Knoten verwendet werden können. Die Ressourcen verhalten sich wie folgt:
+DSC bietet spezielle Ressourcen **WaitForAll** , **WaitForAny** und **WaitForSome** , die in Konfigurationen zum Angeben von Abhängigkeiten von Konfigurationen auf anderen Knoten verwendet werden können. Die Ressourcen verhalten sich wie folgt:
 
-- **WaitForAll**: Ist erfolgreich, wenn die angegebene Ressource auf allen Zielknoten, die in der **NodeName**-Eigenschaft definiert sind, den gewünschten Zustand hat.
-- **WaitForAny**: Ist erfolgreich, wenn die angegebene Ressource auf mindestens einem der Zielknoten, die in der **NodeName**-Eigenschaft definiert sind, den gewünschten Zustand hat.
-- **WaitForSome**: Gibt zusätzlich zu einer **NodeName**-Eigenschaft eine **NodeCount**-Eigenschaft an. Die Ressource ist erfolgreich, wenn sich die Ressource auf einer Mindestanzahl von Knoten (angegeben durch **NodeCount**), die von der **NodeName**-Eigenschaft definiert sind, im gewünschten Zustand befindet.
+- **WaitForAll** : Ist erfolgreich, wenn die angegebene Ressource auf allen Zielknoten, die in der **NodeName** -Eigenschaft definiert sind, den gewünschten Zustand hat.
+- **WaitForAny** : Ist erfolgreich, wenn die angegebene Ressource auf mindestens einem der Zielknoten, die in der **NodeName** -Eigenschaft definiert sind, den gewünschten Zustand hat.
+- **WaitForSome** : Gibt zusätzlich zu einer **NodeName** -Eigenschaft eine **NodeCount** -Eigenschaft an. Die Ressource ist erfolgreich, wenn sich die Ressource auf einer Mindestanzahl von Knoten (angegeben durch **NodeCount** ), die von der **NodeName** -Eigenschaft definiert sind, im gewünschten Zustand befindet.
 
 ## <a name="syntax"></a>Syntax
 
-Die **WaitForAll**- und **WaitForAny**-Ressourcen verwenden die gleiche Syntax. Ersetzen Sie \<ResourceType\> im folgenden Beispiel durch **WaitForAny** oder durch **WaitForAll**.
-Wie beim Schlüsselwort **DependsOn** müssen Sie den Namen als „[RessourcenTyp]RessourcenName“ formatieren. Wenn die Ressource zu einer separaten [Konfiguration](configurations.md) gehört, fügen Sie den **KonfigurationsNamen** in die formatierte Zeichenfolge „[RessourcenTyp]RessourcenName::[KonfigurationsName]::[KonfigurationsName]“ ein. Der **NodeName** ist der Computer oder Knoten, auf den die aktuelle Ressource warten soll.
+Die **WaitForAll** - und **WaitForAny** -Ressourcen verwenden die gleiche Syntax. Ersetzen Sie `<ResourceType>` im folgenden Beispiel durch **WaitForAny** oder durch **WaitForAll**. Wie beim Schlüsselwort **DependsOn** müssen Sie den Namen als `[ResourceType]ResourceName` formatieren. Wenn die Ressource zu einer separaten [Konfiguration](configurations.md) gehört, schließen Sie **ConfigurationName** in die formatierte Zeichenfolge `[ResourceType]ResourceName::[ConfigurationName]::[ConfigurationName]` ein. Der **NodeName** ist der Computer oder Knoten, auf den die aktuelle Ressource warten soll.
 
 ```
 <ResourceType> [string] #ResourceName
@@ -53,24 +53,24 @@ WaitForSome [String] #ResourceName
 }
 ```
 
-Alle **WaitForXXXX**-Ressourcen verwenden die folgenden Syntaxschlüssel gemeinsam.
+Alle **WaitForXXXX** -Ressourcen verwenden die folgenden Syntaxschlüssel gemeinsam.
 
-|Eigenschaft|  BESCHREIBUNG   |
-|---------|---------------------|
-| RetryIntervalSec| Die Anzahl von Sekunden bis zu einem Neuversuch. Der Mindestwert lautet 1.|
-| RetryCount| Die maximal zulässige Anzahl von Neuversuchen.|
-| ThrottleLimit| Die Anzahl von Computern, die gleichzeitig eine Verbindung herstellen können. Die Standardeinstellung lautet `New-CimSession`.|
-| DependsOn | Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Weitere Informationen finden Sie unter [DependsOn](resource-depends-on.md).|
-| PsDscRunAsCredential | Informationen finden Sie unter [Verwenden von DSC mit Benutzeranmeldeinformationen](./runAsUser.md). |
+|       Eigenschaft       |                                                                           BESCHREIBUNG                                                                           |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RetryIntervalSec     | Die Anzahl von Sekunden bis zu einem Neuversuch. Der Mindestwert lautet 1.                                                                                                            |
+| RetryCount           | Die maximal zulässige Anzahl von Neuversuchen.                                                                                                                           |
+| ThrottleLimit        | Die Anzahl von Computern, die gleichzeitig eine Verbindung herstellen können. Die Standardeinstellung lautet `New-CimSession`.                                                                              |
+| DependsOn            | Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Weitere Informationen finden Sie unter [DependsOn](resource-depends-on.md). |
+| PsDscRunAsCredential | Informationen finden Sie unter [Verwenden von DSC mit Benutzeranmeldeinformationen](./runAsUser.md).                                                                                                           |
 
 ## <a name="using-waitforxxxx-resources"></a>Verwenden von WaitForXXXX-Ressourcen
 
-Jede **WaitForXXXX**-Ressource wartet darauf, dass die angegebenen Ressourcen auf dem angegebenen Knoten abgeschlossen werden.
-Andere Ressourcen in derselben Konfiguration können dann von der **WaitForXXXX**-Ressource mit dem Schlüssel **DependsOn** als *abhängig* gekennzeichnet werden.
+Jede **WaitForXXXX** -Ressource wartet darauf, dass die angegebenen Ressourcen auf dem angegebenen Knoten abgeschlossen werden.
+Andere Ressourcen in derselben Konfiguration können dann von der **WaitForXXXX** -Ressource mit dem Schlüssel **DependsOn** als *abhängig* gekennzeichnet werden.
 
 Bei der folgenden Konfiguration wartet der Zielknoten beispielsweise, bis die Ressource **xADDomain** auf dem Knoten **MyDC** (bei einer maximalen Anzahl von 30 Wiederholungen in 15-Sekunden-Intervallen) abgeschlossen ist, ehe der Zielknoten der Domäne beitreten kann.
 
-Standardmäßig führen die **WaitForXXXX**-Ressourcen einen Versuch durch und verursachen dann einen Fehler. Auch wenn dies nicht erforderlich ist, sollten Sie in der Regel **RetryCount** sowie **RetryIntervalSec** angeben.
+Standardmäßig führen die **WaitForXXXX** -Ressourcen einen Versuch durch und verursachen dann einen Fehler. Auch wenn dies nicht erforderlich ist, sollten Sie in der Regel **RetryCount** sowie **RetryIntervalSec** angeben.
 
 ```powershell
 Configuration JoinDomain
@@ -120,8 +120,7 @@ Configuration JoinDomain
 Wenn Sie die Konfiguration kompilieren, werden zwei MOF-Dateien generiert. Wenden Sie beide MOF-Dateien mit dem Cmdlet [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) auf die Zielknoten an.
 
 > [!NOTE]
-> Die Ressource **WaitForXXX** verwendet die Windows-Remoteverwaltung, um den Status anderer Knoten zu überprüfen.
-> Weitere Informationen zu Anforderungen zur Portierung und Sicherheit für WinRM finden Sie unter [Sicherheitsaspekte von PowerShell-Remoting](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
+> Die Ressource **WaitForXXX** verwendet die Windows-Remoteverwaltung, um den Status anderer Knoten zu überprüfen. Weitere Informationen zu Anforderungen zur Portierung und Sicherheit für WinRM finden Sie unter [Sicherheitsaspekte von PowerShell-Remoting](/powershell/scripting/learn/remoting/winrmsecurity).
 
 ## <a name="see-also"></a>Weitere Informationen
 

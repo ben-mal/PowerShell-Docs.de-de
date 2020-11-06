@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: Das ISEMenuItemCollection-Objekt
-ms.openlocfilehash: 39e8547c9b19ba323d4b224a46eda416542b2807
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: Ein ISEMenuItemCollection-Objekt ist eine Sammlung von ISEMenuItem-Objekten.
+ms.openlocfilehash: cd86768d13b1326a8f35c44f0391ab60669cee4f
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809586"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92655992"
 ---
 # <a name="the-isemenuitemcollection-object"></a>Das ISEMenuItemCollection-Objekt
 
-Ein **ISEMenuItemCollection**-Objekt ist eine Sammlung von **ISEMenuItem**-Objekten. Es handelt sich um eine Instanz der **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection**-Klasse. Ein Beispiel ist das `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`-Objekt, das verwendet wird, um das Menü **Add-On** in Windows PowerShell® Integrated Scripting Environment (ISE) anzupassen.
+Ein **ISEMenuItemCollection** -Objekt ist eine Sammlung von **ISEMenuItem** -Objekten. Es handelt sich um eine Instanz der **Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection** -Klasse. Ein Beispiel ist das `$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus`-Objekt, das verwendet wird, um das Menü **Add-On** in Windows PowerShell&reg; Integrated Scripting Environment (ISE) anzupassen.
 
 ## <a name="method"></a>Methode
 
@@ -23,11 +23,11 @@ Fügt der Sammlung ein Menüelement hinzu.
 
 **DisplayName** Der Anzeigename des hinzuzufügenden Menüs.
 
-**Action** Das **System.Management.Automation.ScriptBlock**-Objekt, das die diesem Menüelement zugeordnete Aktion angibt.
+**Action** Das **System.Management.Automation.ScriptBlock** -Objekt, das die diesem Menüelement zugeordnete Aktion angibt.
 
 **Shortcut** Die Tastenkombination für diese Aktion.
 
-**Returns** Das **ISEMenuItem**-Objekt, das soeben hinzugefügt wurde.
+**Returns** Das **ISEMenuItem** -Objekt, das soeben hinzugefügt wurde.
 
 ```powershell
 # Create an Add-ons menu with an fast access key and a shortcut.

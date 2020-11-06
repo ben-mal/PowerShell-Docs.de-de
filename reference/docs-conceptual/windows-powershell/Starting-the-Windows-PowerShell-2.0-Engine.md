@@ -2,12 +2,13 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Verwenden der Windows PowerShell 2.0 Engine
-ms.openlocfilehash: c5ac92159d63e5669643908016186ed32dfb46db
-ms.sourcegitcommit: 3e343f005fe76960c998ef1869a1a093d37ef349
+description: Die Windows PowerShell 2.0-Engine soll nur zum Einsatz kommen, wenn ein vorhandenes Skript oder Hostprogramm nicht ausgeführt werden kann, da für Windows PowerShell 2.0 geschriebene und mit CLR 2.0 kompilierte Hostprogramme nicht ohne Änderungen ausgeführt werden können.
+ms.openlocfilehash: 214b87b7314f31974801bb07f98ddea3b68008f0
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216021"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92664008"
 ---
 # <a name="using-the-windows-powershell-20-engine"></a>Verwenden der Windows PowerShell 2.0 Engine
 
@@ -44,23 +45,23 @@ Erstellen Sie auf dem Remotecomputer eine Sitzungskonfiguration (auch _Endpunkt_
 
 Dies ist eine komplexe Aufgabe, die in der Regel von einem Systemadministrator ausgeführt wird.
 
-Im folgenden Verfahren wird der **PSVersion**-Parameter des Cmdlets [Register-PSSessionConfiguration][] zum Erstellen einer Sitzungskonfiguration verwendet, die Windows PowerShell 2.0 Engine nutzt. Sie können auch den **PowerShellVersion**-Parameter des Cmdlets [New-PSSessionConfigurationFile][] verwenden, um eine Sitzungskonfigurationsdatei für eine Sitzung zu erstellen, die Windows PowerShell 2.0 Engine lädt. Sie können auch den **PSVersion**-Parameter des Parameters [Set-PSSessionConfiguration][] verwenden, um eine Sitzungskonfiguration so zu ändern, dass Windows PowerShell 2.0 Engine verwendet wird.
+Im folgenden Verfahren wird der **PSVersion** -Parameter des Cmdlets [Register-PSSessionConfiguration][] zum Erstellen einer Sitzungskonfiguration verwendet, die Windows PowerShell 2.0 Engine nutzt. Sie können auch den **PowerShellVersion** -Parameter des Cmdlets [New-PSSessionConfigurationFile][] verwenden, um eine Sitzungskonfigurationsdatei für eine Sitzung zu erstellen, die Windows PowerShell 2.0 Engine lädt. Sie können auch den **PSVersion** -Parameter des Parameters [Set-PSSessionConfiguration][] verwenden, um eine Sitzungskonfiguration so zu ändern, dass Windows PowerShell 2.0 Engine verwendet wird.
 
 Weitere Informationen zu Sitzungskonfigurationsdateien finden Sie unter [about_Session_Configuration_Files][].
 Informationen zu Sitzungskonfigurationen, einschließlich Einrichtung und Sicherheit, finden Sie unter [about_Session_Configurations][].
 
 ### <a name="to-start-a-remote-windows-powershell-20-session"></a>Gehen Sie folgendermaßen vor, um eine Remotesitzung von Windows PowerShell 2.0 zu starten
 
-1. Verwenden Sie den **PSVersion**-Parameter des Cmdlets `Register-PSSessionConfiguration` mit dem Wert `2.0`, um eine Sitzungskonfiguration zu erstellen, die Windows PowerShell 2.0 Engine erfordert.
+1. Verwenden Sie den **PSVersion** -Parameter des Cmdlets `Register-PSSessionConfiguration` mit dem Wert `2.0`, um eine Sitzungskonfiguration zu erstellen, die Windows PowerShell 2.0 Engine erfordert.
    Führen Sie diesen Befehl auf dem Computer auf der Serverseite oder dem empfangenden Ende der Verbindung aus.
 
-   Der folgende Befehl erstellt die PS2-Sitzungskonfiguration auf dem Computer „Server01“. Starten Sie Windows PowerShell mit der Option **Als Administrator ausführen**, um diesen Befehl auszuführen.
+   Der folgende Befehl erstellt die PS2-Sitzungskonfiguration auf dem Computer „Server01“. Starten Sie Windows PowerShell mit der Option **Als Administrator ausführen** , um diesen Befehl auszuführen.
 
    ```powershell
    Register-PSSessionConfiguration -Name PS2 -PSVersion 2.0
    ```
 
-1. Zum Erstellen einer Sitzung auf dem Computer „Server01“, der die PS2-Sitzungskonfiguration nutzt, verwenden Sie den **ConfigurationName**-Parameter von Cmdlets, die eine Remotesitzung aufbauen, wie z. B. das Cmdlet „New-PSSession“.
+1. Zum Erstellen einer Sitzung auf dem Computer „Server01“, der die PS2-Sitzungskonfiguration nutzt, verwenden Sie den **ConfigurationName** -Parameter von Cmdlets, die eine Remotesitzung aufbauen, wie z. B. das Cmdlet „New-PSSession“.
 
    Wenn eine Sitzung gestartet wird, die die Sitzungskonfiguration verwendet, wird Windows PowerShell 2.0 Engine automatisch in die Sitzung geladen.
 
@@ -72,7 +73,7 @@ Informationen zu Sitzungskonfigurationen, einschließlich Einrichtung und Sicher
 
 ## <a name="how-to-start-a-background-job-with-the-windows-powershell-20-engine"></a>So starten Sie einen Hintergrundauftrags mit Windows PowerShell 2.0 Engine
 
-Verwenden Sie den **PSVersion**-Parameter des Cmdlets [Start-Job][] zum Starten eines Hintergrundauftrags mit Windows PowerShell 2.0 Engine.
+Verwenden Sie den **PSVersion** -Parameter des Cmdlets [Start-Job][] zum Starten eines Hintergrundauftrags mit Windows PowerShell 2.0 Engine.
 
 Der folgende Befehl startet einen Hintergrundauftrag mit Windows PowerShell 2.0 Engine
 

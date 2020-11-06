@@ -2,18 +2,19 @@
 ms.date: 12/06/2019
 keywords: powershell,cmdlet
 title: Windows PowerShell-Systemanforderungen
-ms.openlocfilehash: 883da2f91c4a0b46e4bccbacd9933a52f8f476f6
-ms.sourcegitcommit: c4906f4c9fa4ef1a16dcd6dd00ff960d19446d71
+description: In diesem Artikel werden die Systemanforderungen für Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 und Windows PowerShell 5.1 und
+ms.openlocfilehash: a82c0b1d6bf53e4a97db8414050a122ae5b7745d
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89236083"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92663829"
 ---
 # <a name="windows-powershell-system-requirements"></a>Windows PowerShell-Systemanforderungen
 
 In diesem Artikel werden die Systemanforderungen für Windows PowerShell 3.0, Windows PowerShell 4.0, Windows PowerShell 5.0 und Windows PowerShell 5.1 und spezielle Features wie Windows PowerShell Integrated Scripting Environment (ISE), Common Information Model -Befehle (CIM) und Workflows aufgeführt.
 
-Windows® 8.1 und Windows Server® 2012 R2 enthalten alle erforderlichen Programme. Dieser Artikel ist für Benutzer früherer Releases von Windows gedacht.
+Windows&reg; 8.1 und Windows Server&reg; 2012 R2 enthalten alle erforderlichen Programme. Dieser Artikel ist für Benutzer früherer Releases von Windows gedacht.
 
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen
 
@@ -57,8 +58,8 @@ Windows PowerShell 4.0 wird unter den folgenden Versionen von Windows ausgeführ
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8.1                                 | standardmäßig installiert                                                                                       |
 | Windows Server 2012 R2                      | standardmäßig installiert                                                                                       |
-| Windows® 7 mit Service Pack 1              | [Installieren von Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
-| Windows Server® 2008 R2 mit Service Pack 1 | [Installieren von Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows&reg; 7 mit Service Pack 1              | [Installieren von Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
+| Windows Server&reg; 2008 R2 mit Service Pack 1 | [Installieren von Windows Management Framework 4.0](https://www.microsoft.com/download/details.aspx?id=40855) |
 
 ### <a name="windows-powershell-30"></a>Windows PowerShell 3.0
 
@@ -68,8 +69,8 @@ Windows PowerShell 3.0 wird unter den folgenden Versionen von Windows ausgeführ
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Windows 8                                   | standardmäßig installiert                                                                                       |
 | Windows Server 2012                         | standardmäßig installiert                                                                                       |
-| Windows® 7 mit Service Pack 1              | [Installieren von Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
-| Windows Server® 2008 R2 mit Service Pack 1 | [Installieren von Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows&reg; 7 mit Service Pack 1              | [Installieren von Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
+| Windows Server&reg; 2008 R2 mit Service Pack 1 | [Installieren von Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 | Windows Server 2008 mit Service Pack 2     | [Installieren von Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595) |
 
 ## <a name="microsoft-net-framework-requirements"></a>Microsoft .NET Framework-Anforderungen
@@ -120,8 +121,8 @@ Einige Elemente erfordern eine grafische Benutzeroberfläche. Weitere Informatio
   - [Show-ControlPanelItem](/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
   - [Show-EventLog](/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
 - Parameter
-  - **ShowWindow**-Parameter des Cmdlets [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help).
-  - **ShowSecurityDescriptorUI**-Parameter der Cmdlets [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) und [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration).
+  - **ShowWindow** -Parameter des Cmdlets [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help).
+  - **ShowSecurityDescriptorUI** -Parameter der Cmdlets [Register-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) und [Set-PSSessionConfiguration](/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration).
 
 ## <a name="windows-powershell-engine-requirements"></a>Anforderungen an die Windows PowerShell-Engine
 
@@ -137,13 +138,13 @@ Informationen zum Hinzufügen oder Installieren von Windows PowerShell 2.0 Engin
 
 Windows PowerShell 2.0, Windows PowerShell 3.0 und Windows PowerShell 4.0 werden in Windows Preinstallation Environment (Windows PE) ausgeführt. Die folgenden Cmdlets werden jedoch nicht unterstützt.
 
-- BITS-Cmdlets (Background Intelligent Transfer Service, Intelligenter Hintergrundübertragungsdienst) Weitere Informationen hierzu finden Sie unter [BitsTransfer](/powershell/module/bitstransfer/?view=win10-ps).
+- BITS-Cmdlets (Background Intelligent Transfer Service, Intelligenter Hintergrundübertragungsdienst) Weitere Informationen hierzu finden Sie unter [BitsTransfer](/powershell/module/bitstransfer/).
 - [Get-EventLog](/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
 - [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
 - [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help)
 - [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help)
 
-Der **WinRM**-Dienst ist nicht in Windows PE vorhanden.
+Der **WinRM** -Dienst ist nicht in Windows PE vorhanden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

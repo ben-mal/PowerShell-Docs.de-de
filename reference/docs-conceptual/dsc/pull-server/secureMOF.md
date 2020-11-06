@@ -2,18 +2,19 @@
 ms.date: 07/06/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Schützen der MOF-Datei
-ms.openlocfilehash: b1319167010a85e639fdb51a1a0b8b472dfda3a6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+description: In diesem Artikel wird beschrieben, auf welche Weise sichergestellt werden kann, dass die MOF-Datei auf dem Zielknoten verschlüsselt wurde.
+ms.openlocfilehash: e8b495a5c3c18dca5cde29cbbcf7d3f3cdab8f48
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778138"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662799"
 ---
 # <a name="securing-the-mof-file"></a>Schützen der MOF-Datei
 
 > Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-DSC verwaltet die Konfiguration von Serverknoten durch Anwenden der in einer MOF-Datei gespeicherten Informationen; die Implementierung des gewünschten Endzustands übernimmt der lokale Konfigurations-Manager (LCM). Da diese Datei die Details der Konfiguration enthält, muss sie geschützt werden. In diesem Thema wird beschrieben, auf welche Weise sichergestellt werden kann, dass die Datei auf dem Zielknoten verschlüsselt wurde.
+DSC verwaltet die Konfiguration von Serverknoten durch Anwenden der in einer MOF-Datei gespeicherten Informationen; die Implementierung des gewünschten Endzustands übernimmt der lokale Konfigurations-Manager (LCM). Da diese Datei die Details der Konfiguration enthält, muss sie geschützt werden. In diesem Artikel wird beschrieben, wie sichergestellt werden kann, dass die Datei auf dem Zielknoten verschlüsselt wurde.
 
 Seit PowerShell-Version 5.0 ist die gesamte MOF-Datei standardmäßig verschlüsselt, wenn sie mithilfe des Cmdlets `Start-DSCConfiguration` auf den Knoten angewendet wird. Das in diesem Artikel beschriebene Verfahren ist nur erforderlich, wenn eine Lösung unter Verwendung des Pulldienstprotokolls implementiert wird und keine Zertifikate verwaltet werden, um sicherzustellen, dass vom Zielknoten heruntergeladene Konfigurationen vom System vor der Anwendung entschlüsselt und gelesen werden können (betrifft beispielsweise den in Windows Server verfügbaren Pulldienst). Für bei [Azure Automation DSC](/azure/automation/automation-dsc-overview) registrierte Knoten werden ohne anfallenden administrativen Mehraufwand automatisch Zertifikate installiert und verwaltet.
 
@@ -27,7 +28,7 @@ Stellen Sie sicher, dass Folgendes zutrifft, um die Anmeldeinformationen sicher 
 - **Möglichkeiten zum Ausstellen und Verteilen von Zertifikaten**. In diesem Thema und seinen Beispielen wird davon ausgegangen, dass Sie eine Active Directory-Zertifizierungsstelle verwenden. Weitere Informationen zu Active Directory-Zertifikatdiensten finden Sie unter [Übersicht über Active Directory-Zertifikatdienste](https://technet.microsoft.com/library/hh831740.aspx) und [Active Directory-Zertifikatdienste in Windows Server 2008](https://technet.microsoft.com/windowsserver/dd448615.aspx).
 - **Administratorzugriff auf den Zielknoten oder Knoten**.
 - **Jeder Zielknoten hat ein verschlüsselungsfähiges Zertifikat, das in seinem persönlichen Speicher gespeichert ist**. In Windows PowerShell ist der Pfad zum Speicher „Cert: \LocalMachine\My“. In den Beispielen in diesem Thema verwenden Sie die Vorlage „Arbeitsstationsauthentifizierung“, die Sie (zusammen mit anderen Zertifikatvorlagen) unter [Standardzertifikatvorlagen](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx) finden.
-- Wenn Sie diese Konfiguration auf einem anderen Computer als dem Zielknoten ausführen, **exportieren Sie den öffentlichen Schlüssel des Zertifikats**, und importieren Sie ihn anschließend auf den Computer, auf dem Sie die Konfiguration ausführen. Stellen Sie sicher, dass Sie nur den **öffentlichen** Schlüssel exportieren. Halten Sie den privaten Schlüssel geschützt.
+- Wenn Sie diese Konfiguration auf einem anderen Computer als dem Zielknoten ausführen, **exportieren Sie den öffentlichen Schlüssel des Zertifikats** , und importieren Sie ihn anschließend auf den Computer, auf dem Sie die Konfiguration ausführen. Stellen Sie sicher, dass Sie nur den **öffentlichen** Schlüssel exportieren. Halten Sie den privaten Schlüssel geschützt.
 
 > [!NOTE]
 > Bei der Verschlüsselung weisen Script-Ressourcen Einschränkungen auf. Weitere Informationen finden Sie unter [DSC-Ressource „Script“](../reference/resources/windows/scriptResource.md#known-limitations).
@@ -45,10 +46,10 @@ Stellen Sie sicher, dass Folgendes zutrifft, um die Anmeldeinformationen sicher 
 
 Zum Aktivieren der Verschlüsselung der Anmeldeinformationen muss auf dem _Zielknoten_ ein Zertifikat für öffentliche Schlüssel verfügbar sein, dem der zum Erstellen der DSC-Konfiguration verwendete Computer **vertraut**. Dieses Zertifikat für öffentliche Schlüssel muss bestimmte Anforderungen erfüllen, damit es für die Verschlüsselung der DSC-Anmeldeinformationen verwendet werden kann:
 
-1. **Schlüsselverwendung**:
+1. **Schlüsselverwendung** :
    - Muss enthalten: „KeyEncipherment“ und „DataEncipherment“.
    - Darf _nicht_ enthalten: „Digitale Signatur“.
-1. **Erweiterte Schlüsselverwendung**:
+1. **Erweiterte Schlüsselverwendung** :
    - Muss enthalten: Dokumentenverschlüsselung (1.3.6.1.4.1.311.80.1).
    - Darf _nicht_ enthalten: Clientauthentifizierung (1.3.6.1.5.5.7.3.2) und Serverauthentifizierung (1.3.6.1.5.5.7.3.1).
 1. Der private Schlüssel für das Zertifikat ist auf dem *Zielknoten_ verfügbar.
@@ -57,7 +58,7 @@ Zum Aktivieren der Verschlüsselung der Anmeldeinformationen muss auf dem _Zielk
 > [!IMPORTANT]
 > Sie können zwar ein Zertifikat verwenden, das die Schlüsselverwendung „Digitale Signatur“ oder eine der Authentifizierungs-EKUs enthält. Dadurch kann der Verschlüsselungsschlüssel allerdings leichter missbraucht werden und ist anfälliger für Angriffe. Es empfiehlt sich daher, ein Zertifikat ohne diese Schlüsselverwendung und EKUs zu verwenden, das speziell zum Sichern von DSC-Anmeldeinformationen erstellt wurde.
 
-Alle vorhandenen Zertifikate auf dem _Zielknoten_, die diese Kriterien erfüllen, können zum Absichern von DSC-Anmeldeinformationen verwendet werden.
+Alle vorhandenen Zertifikate auf dem _Zielknoten_ , die diese Kriterien erfüllen, können zum Absichern von DSC-Anmeldeinformationen verwendet werden.
 
 ## <a name="certificate-creation"></a>Zertifikaterstellung
 
@@ -74,7 +75,7 @@ Der private Schlüssel muss geheim gehalten werden, weil er zum Entschlüsseln d
 
 1. ein Zertifikat auf dem **Zielknoten** erstellt.
 1. das Zertifikat für öffentliche Schlüssel auf den **Zielknoten** exportiert.
-1. das Zertifikat für öffentliche Schlüssel in den **my**-Zertifikatspeicher auf dem **Erstellungsknoten** importiert.
+1. das Zertifikat für öffentliche Schlüssel in den **my** -Zertifikatspeicher auf dem **Erstellungsknoten** importiert.
 
 #### <a name="on-the-target-node-create-and-export-the-certificate"></a>Auf dem Zielknoten: Erstellen und Exportieren des Zertifikats
 
@@ -92,7 +93,7 @@ Einmal exportiert, müsste `DscPublicKey.cer` auf den **Erstellungsknoten** kopi
 > Zielknoten: Windows Server 2012 R2/Windows 8.1 oder früher
 
 > [!WARNING]
-> Da das Cmdlet `New-SelfSignedCertificate` unter älteren Windows-Betriebssystemen als Windows 10 und Windows Server 2016 nicht den Parameter **Type** unterstützt, ist eine alternative Methode zum Erstellen dieses Zertifikats unter diesen Betriebssystemen erforderlich. In diesem Fall können Sie `makecert.exe` oder `certutil.exe` zum Erstellen des Zertifikats verwenden. Eine alternative Methode besteht darin, [das Skript „New-SelfSignedCertificateEx.ps1“ aus dem Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) herunterzuladen und es stattdessen zum Erstellen des Zertifikats zu verwenden:
+> Da das Cmdlet `New-SelfSignedCertificate` unter älteren Windows-Betriebssystemen als Windows 10 und Windows Server 2016 nicht den Parameter **Type** unterstützt, ist eine alternative Methode zum Erstellen dieses Zertifikats unter diesen Betriebssystemen erforderlich. In diesem Fall können Sie `makecert.exe` oder `certutil.exe` zum Erstellen des Zertifikats verwenden. Eine alternative Methode besteht darin, das Skript [New-SelfSignedCertificateEx.ps1](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) aus dem Microsoft Script Center herunterzuladen und es stattdessen zum Erstellen des Zertifikats zu verwenden:
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -133,7 +134,7 @@ Alternativ kann das Verschlüsselungszertifikat auf dem **Erstellungsknoten** er
 
 1. wird ein Zertifikat auf dem **Erstellungsknoten** erstellt.
 1. wird das Zertifikat, einschließlich des privaten Schlüssels, auf den **Erstellungsknoten** exportiert.
-1. wird der private Schlüssel vom **Erstellungsknoten** entfernt, aber das Zertifikat für den öffentlichen Schlüssel im **my**-Speicher beibehalten.
+1. wird der private Schlüssel vom **Erstellungsknoten** entfernt, aber das Zertifikat für den öffentlichen Schlüssel im **my** -Speicher beibehalten.
 1. wird das Zertifikat für den privaten Schlüssel in den Zertifikatspeicher „My(Personal)“ auf dem **Zielknoten** importiert.
    - muss es dem Stammspeicher hinzugefügt werden, damit ihm der **Zielknoten** vertraut.
 
@@ -158,7 +159,7 @@ Einmal exportiert, müsste `DscPrivateKey.pfx` auf den **Zielknoten** kopiert we
 > Zielknoten: Windows Server 2012 R2/Windows 8.1 oder früher
 
 > [!WARNING]
-> Da das Cmdlet `New-SelfSignedCertificate` unter älteren Windows-Betriebssystemen als Windows 10 und Windows Server 2016 nicht den Parameter **Type** unterstützt, ist eine alternative Methode zum Erstellen dieses Zertifikats unter diesen Betriebssystemen erforderlich. In diesem Fall können Sie `makecert.exe` oder `certutil.exe` zum Erstellen des Zertifikats verwenden. Eine alternative Methode besteht darin, [das Skript „New-SelfSignedCertificateEx.ps1“ aus dem Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) herunterzuladen und es stattdessen zum Erstellen des Zertifikats zu verwenden:
+> Da das Cmdlet `New-SelfSignedCertificate` unter älteren Windows-Betriebssystemen als Windows 10 und Windows Server 2016 nicht den Parameter **Type** unterstützt, ist eine alternative Methode zum Erstellen dieses Zertifikats unter diesen Betriebssystemen erforderlich. In diesem Fall können Sie `makecert.exe` oder `certutil.exe` zum Erstellen des Zertifikats verwenden. Eine alternative Methode besteht darin, das Skript [New-SelfSignedCertificateEx.ps1](https://gallery.technet.microsoft.com/scriptcenter/Self-signed-certificate-5920a7c6) aus dem Microsoft Script Center herunterzuladen und es stattdessen zum Erstellen des Zertifikats zu verwenden:
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -203,10 +204,10 @@ Der „Configuration“-Datenblock definiert die betroffenen Zielknoten, ob die 
 
 Die Elemente im Zusammenhang mit der Verschlüsselung von Anmeldeinformationen für jeden Knoten konfiguriert werden können, sind:
 
-- **NodeName**: Der Name des Zielknotens, für den die Verschlüsselung der Anmeldeinformationen konfiguriert wird.
-- **PsDscAllowPlainTextPassword**: Legt fest, ob unverschlüsselte Anmeldeinformationen an diesen Knoten übergeben werden können. Dies ist **nicht zu empfehlen**.
-- **Thumbprint**: Der Fingerabdruck des Zertifikats, das verwendet wird, um die Anmeldeinformationen in der DSC-Konfiguration auf dem _Zielknoten_ zu entschlüsseln. **Dieses Zertifikat muss im Zertifikatspeicher des lokalen Computers auf dem Zielknoten vorhanden sein.**
-- **CertificateFile**: Die Zertifikatsdatei (enthält nur den öffentlichen Schlüssel), die verwendet werden soll, um die Anmeldeinformationen für die _Zielknoten_ zu verschlüsseln. Dies muss eine Zertifikatdatei im DER-codierten binären X.509-Format oder im Base-64-codierten X.509-Format sein.
+- **NodeName** : Der Name des Zielknotens, für den die Verschlüsselung der Anmeldeinformationen konfiguriert wird.
+- **PsDscAllowPlainTextPassword** : Legt fest, ob unverschlüsselte Anmeldeinformationen an diesen Knoten übergeben werden können. Dies ist **nicht zu empfehlen**.
+- **Thumbprint** : Der Fingerabdruck des Zertifikats, das verwendet wird, um die Anmeldeinformationen in der DSC-Konfiguration auf dem _Zielknoten_ zu entschlüsseln. **Dieses Zertifikat muss im Zertifikatspeicher des lokalen Computers auf dem Zielknoten vorhanden sein.**
+- **CertificateFile** : Die Zertifikatsdatei (enthält nur den öffentlichen Schlüssel), die verwendet werden soll, um die Anmeldeinformationen für die _Zielknoten_ zu verschlüsseln. Dies muss eine Zertifikatdatei im DER-codierten binären X.509-Format oder im Base-64-codierten X.509-Format sein.
 
 Dieses Beispiel zeigt einen „Configuration“-Datenblock, einen betroffenen Zielknoten namens „targetNode“, den Pfad zur Zertifikatdatei mit dem öffentlichen Schlüssel (namens „targetNode.cer“) und den Fingerabdruck des öffentlichen Schlüssels.
 
@@ -258,7 +259,7 @@ configuration CredentialEncryptionExample
 
 ## <a name="setting-up-decryption"></a>Einrichten der Entschlüsselung
 
-Damit [`Start-DscConfiguration`](https://technet.microsoft.com/library/dn521623.aspx) funktionieren kann, müssen Sie den lokalen Konfigurations-Manager auf allen Zielknoten informieren, welches Zertifikat zum Entschlüsseln der Anmeldeinformationen verwendet werden soll. Die „CertificateID“-Ressource wird zum Überprüfen des Fingerabdrucks des Zertifikats verwendet. Diese Beispielfunktion findet das entsprechende lokale Zertifikat (Sie müssen ggf. eine Anpassung vornehmen, damit genau das gewünschte Zertifikat gefunden wird):
+Damit [Start-DscConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration) funktionieren kann, müssen Sie den lokalen Konfigurations-Manager auf allen Zielknoten informieren, welches Zertifikat zum Entschlüsseln der Anmeldeinformationen verwendet werden soll. Die Ressource CertificateID wird zum Überprüfen des Fingerabdrucks des Zertifikats verwendet. Diese Beispielfunktion findet das entsprechende lokale Zertifikat (Sie müssen ggf. eine Anpassung vornehmen, damit genau das gewünschte Zertifikat gefunden wird):
 
 ```powershell
 # Get the certificate that works for encryption
@@ -306,8 +307,8 @@ configuration CredentialEncryptionExample
 
 An dieser Stellen können Sie die Konfiguration ausführen, woraufhin zwei Dateien ausgegeben werden:
 
-- Eine Datei des Typs „\*.meta.mof“, die vom lokalen Konfigurations-Manager zum Entschlüsseln der Anmeldeinformationen mithilfe des Zertifikats verwendet wird, das sich im lokalen Computerspeicher befindet und von dessen Fingerabdruck bestimmt wird.
-  [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) installiert die \*.meta.mof-Datei.
+- Eine Datei des Typs `*.meta.mof `, die vom lokalen Konfigurations-Manager zum Entschlüsseln der Anmeldeinformationen mithilfe des Zertifikats verwendet wird, das sich im lokalen Computerspeicher befindet und von dessen Fingerabdruck bestimmt wird.
+  [Set DscLocalConfigurationManager](/powershell/module/psdesiredstateconfiguration/Set-DscLocalConfigurationManager) wendet die Datei `*.meta.mof ` an.
 - Eine MOF-Datei, die die Konfiguration tatsächlich anwendet. „Start-DscConfiguration“ wendet die Konfiguration an.
 
 Mit diesen Befehlen werden diese Schritte ausgeführt:

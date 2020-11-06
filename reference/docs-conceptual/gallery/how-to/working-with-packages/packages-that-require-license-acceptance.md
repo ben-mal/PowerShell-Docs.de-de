@@ -1,18 +1,17 @@
 ---
 ms.date: 06/12/2017
-contributor: Farehar
-keywords: Katalog,PowerShell,psgallery
 title: Erforderliche Zustimmung zur Lizenz
-ms.openlocfilehash: 4b293ea693062cf9717fa4ca913c3eb9abaf7014
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: Anzeigen der Paketlizenz auf der Seite mit den Elementdetails
+ms.openlocfilehash: 0d8a9ed671f7993726bc3fa41d11159b366e5a28
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "78278647"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92662303"
 ---
 # <a name="require-license-acceptance"></a>Erforderliche Zustimmung zur Lizenz
 
-Der Text zum Anfordern der Zustimmung zur Lizenz wird auf der Seite mit den Elementdetails für Module angezeigt, für die die Zustimmung zur Lizenz erforderlich ist. Die Lizenz für das Modul kann durch Klicken auf „‚License.txt‘ anzeigen“ angezeigt werden.
+Der Text zum Anfordern der Zustimmung zur Lizenz wird auf der Seite mit den Elementdetails für Module angezeigt, für die die Zustimmung zur Lizenz erforderlich ist. Die Lizenz für das Modul kann durch Klicken auf den Link **„License.txt“ anzeigen** angezeigt werden.
 
 ![Erforderliche Zustimmung zur Lizenz](media/packages-that-require-license-acceptance/RequireLicenseAcceptance.png)
 

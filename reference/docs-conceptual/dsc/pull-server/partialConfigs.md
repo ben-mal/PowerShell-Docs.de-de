@@ -2,16 +2,17 @@
 ms.date: 06/12/2017
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: PowerShell DSC – Teilkonfigurationen
-ms.openlocfilehash: 842acad221d468ca5e4c9e660f0205c567bcc220
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
+description: DSC ermöglicht, dass Konfigurationen in Fragmenten und aus mehreren Quellen übertragen werden. Der LCM auf dem Zielknoten setzt die Fragmente zusammen, ehe sie als einzelne Konfiguration angewendet werden.
+ms.openlocfilehash: 3afe5d684cabec9c8ab528347610b6dd00c5d4e9
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "80500775"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661598"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>PowerShell DSC – Teilkonfigurationen
 
-_Gilt für: Windows PowerShell 5.0 und höher._
+> Gilt für: Windows PowerShell 5.0 und höher.
 
 In PowerShell 5.0 ermöglicht DSC (Desired State Configuration, Konfiguration des gewünschten Zustands), dass Konfigurationen in Fragmenten und aus mehreren Quellen übermittelt werden. Der LCM (Local Configuration Manager, lokale Konfigurations-Manager) auf dem Zielknoten setzt die Fragmente zusammen, ehe sie als einzelne Konfiguration angewendet werden. Dies ermöglicht die gemeinsame Steuerung der Konfiguration durch Teams oder Einzelpersonen. Wenn z. B. zwei oder mehr Teams an der Entwicklung eines Diensts zusammenarbeiten, möchte ggf. jedes Team Konfigurationen für die Verwaltung seines Teils des Diensts erstellen. Jede dieser Konfigurationen kann von verschiedenen Pullservern abgerufen und in verschiedenen Phasen der Entwicklung hinzugefügt werden. Teilkonfigurationen ermöglichen außerdem verschiedenen Personen oder Teams das Steuern verschiedener Aspekte der Konfiguration von Knoten, ohne dass die Bearbeitung eines einzelnen Konfigurationsdokuments koordiniert werden muss. Ein Team kann z. B. für die Bereitstellung einer VM und eines Betriebssystems verantwortlich sein, während ein anderes Team andere Anwendungen und Dienste auf dieser VM bereitstellen kann. Bei Teilkonfigurationen kann jedes Team seine eigene Konfiguration erstellen, die dann nicht unnötig kompliziert sein muss.
 
@@ -23,7 +24,7 @@ Um Teilkonfigurationen im Pushmodus zu verwenden, konfigurieren Sie den LCM auf 
 
 ### <a name="configuring-the-lcm-for-push-mode-partial-configurations"></a>Konfigurieren des LCM für Teilkonfigurationen im Pushmodus
 
-Zum Konfigurieren des LCM für Teilkonfigurationen im Pushmodus erstellen Sie eine **DSCLocalConfigurationManager**-Konfiguration mit einem **PartialConfiguration**-Block für jede Teilkonfiguration. Weitere Informationen zum Konfigurieren des LCM finden Sie unter [Konfigurieren des lokalen Konfigurations-Managers](../managing-nodes/metaConfig.md). Das folgende Beispiel zeigt eine LCM-Konfiguration, die zwei Teilkonfigurationen erwartet: eine, die das Betriebssystem bereitgestellt, und eine, die SharePoint bereitstellt und konfiguriert.
+Zum Konfigurieren des LCM für Teilkonfigurationen im Pushmodus erstellen Sie eine **DSCLocalConfigurationManager** -Konfiguration mit einem **PartialConfiguration** -Block für jede Teilkonfiguration. Weitere Informationen zum Konfigurieren des LCM finden Sie unter [Konfigurieren des lokalen Konfigurations-Managers](../managing-nodes/metaConfig.md). Das folgende Beispiel zeigt eine LCM-Konfiguration, die zwei Teilkonfigurationen erwartet: eine, die das Betriebssystem bereitgestellt, und eine, die SharePoint bereitstellt und konfiguriert.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -48,14 +49,14 @@ configuration PartialConfigDemo
 PartialConfigDemo
 ```
 
-**RefreshMode** für jede Teilkonfiguration ist auf „Push“ festgelegt. Die Namen der **PartialConfiguration**-Blöcke (in diesem Fall „ServiceAccountConfig“ und „SharePointConfig“) müssen genau mit den Namen der Konfigurationen übereinstimmen, die per Push an die Zielknoten übertragen werden.
+**RefreshMode** für jede Teilkonfiguration ist auf „Push“ festgelegt. Die Namen der **PartialConfiguration** -Blöcke (in diesem Fall „ServiceAccountConfig“ und „SharePointConfig“) müssen genau mit den Namen der Konfigurationen übereinstimmen, die per Push an die Zielknoten übertragen werden.
 
 > [!Note]
-> Die benannten einzelnen **PartialConfiguration**-Blocks müssen mit dem tatsächlichen Namen der Konfiguration übereinstimmen, der im Konfigurationsskript angegeben ist, und nicht mit dem Namen der MOF-Datei, der der Name des Zielknotens oder `localhost` sein sollte.
+> Die benannten einzelnen **PartialConfiguration** -Blocks müssen mit dem tatsächlichen Namen der Konfiguration übereinstimmen, der im Konfigurationsskript angegeben ist, und nicht mit dem Namen der MOF-Datei, der der Name des Zielknotens oder `localhost` sein sollte.
 
 ### <a name="publishing-and-starting-push-mode-partial-configurations"></a>Veröffentlichen und Starten von Teilkonfigurationen im Pushmodus
 
-Rufen Sie dann [Publish-DSCConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) für jede Konfiguration auf, und übergeben Sie die Ordner mit den Konfigurationsdokumenten als **Path**-Parameter. `Publish-DSCConfiguration` positioniert die Konfigurations-MOF-Dateien auf die Zielknoten. Nach Veröffentlichen beider Konfigurationen können Sie `Start-DSCConfiguration –UseExisting` auf dem Zielknoten aufrufen.
+Rufen Sie dann [Publish-DSCConfiguration](/powershell/module/PSDesiredStateConfiguration/Publish-DscConfiguration) für jede Konfiguration auf, und übergeben Sie die Ordner mit den Konfigurationsdokumenten als **Path** -Parameter. `Publish-DSCConfiguration` positioniert die Konfigurations-MOF-Dateien auf die Zielknoten. Nach Veröffentlichen beider Konfigurationen können Sie `Start-DSCConfiguration –UseExisting` auf dem Zielknoten aufrufen.
 
 Wenn Sie z.B. die folgenden Konfigurations-MOF-Dokumente auf dem Erstellungsknoten kompiliert haben:
 
@@ -107,7 +108,7 @@ Teilkonfigurationen können von einem oder mehreren Pullservern abgerufen werden
 
 ### <a name="configuring-the-lcm-for-pull-node-configurations"></a>Konfigurieren des LCM für Teilkonfigurationen im Pullmodus
 
-Zum Konfigurieren des LCM zum Abrufen von Teilkonfigurationen per Pull von einem Pullserver müssen Sie den Pullserver entweder in einem **ConfigurationRepositoryWeb**-Block (für einen HTTP-Pullserver) oder einem **ConfigurationRepositoryShare**-Block (für einen SMB-Pullserver) definieren. Dann erstellen Sie **PartialConfiguration**-Blöcke, die unter Verwendung der **ConfigurationSource**-Eigenschaft auf den Pullserver verweisen. Sie müssen außerdem einen **Settings**-Block erstellen, um anzugeben, dass der LCM den Pullmodus verwendet, und um die **ConfigurationNames**- oder **ConfigurationID**-Werte anzugeben, die der Pullserver und Zielknoten zum Identifizieren der Konfigurationen verwenden. Die folgende Metakonfiguration definiert einen HTTP-Pullserver mit dem Namen „CONTOSO-PullSrv“ und zwei Teilkonfigurationen, die diesen Pullserver verwenden.
+Zum Konfigurieren des LCM zum Abrufen von Teilkonfigurationen per Pull von einem Pullserver müssen Sie den Pullserver entweder in einem **ConfigurationRepositoryWeb** -Block (für einen HTTP-Pullserver) oder einem **ConfigurationRepositoryShare** -Block (für einen SMB-Pullserver) definieren. Dann erstellen Sie **PartialConfiguration** -Blöcke, die unter Verwendung der **ConfigurationSource** -Eigenschaft auf den Pullserver verweisen. Sie müssen außerdem einen **Settings** -Block erstellen, um anzugeben, dass der LCM den Pullmodus verwendet, und um die **ConfigurationNames** - oder **ConfigurationID** -Werte anzugeben, die der Pullserver und Zielknoten zum Identifizieren der Konfigurationen verwenden. Die folgende Metakonfiguration definiert einen HTTP-Pullserver mit dem Namen „CONTOSO-PullSrv“ und zwei Teilkonfigurationen, die diesen Pullserver verwenden.
 
 Weitere Informationen zum Konfigurieren des LCM unter Verwendung von **ConfigurationNames** finden Sie unter [Einrichten eines Pullclients mithilfe von Konfigurationsnamen](pullClientConfigNames.md). Weitere Informationen zum Konfigurieren des LCM unter Verwendung von **ConfigurationID** finden Sie unter [Einrichten eines Pullclients mithilfe der Konfigurations-ID](pullClientConfigID.md).
 
@@ -187,7 +188,7 @@ configuration PartialConfigDemoConfigID
 PartialConfigDemo
 ```
 
-Sie können Teilkonfigurationen per Pull von mehreren Pullservern abrufen. Sie müssen dazu die einzelnen Pullserver definieren und dann im jeweiligen **PartialConfiguration**-Block auf den entsprechenden Pullserver verweisen.
+Sie können Teilkonfigurationen per Pull von mehreren Pullservern abrufen. Sie müssen dazu die einzelnen Pullserver definieren und dann im jeweiligen **PartialConfiguration** -Block auf den entsprechenden Pullserver verweisen.
 
 Nach dem Erstellen der Metakonfiguration müssen Sie diese ausführen, um ein Konfigurationsdokument (eine MOF-Datei) zu erstellen. Rufen Sie anschließend [Set- DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager) auf, um den LCM zu konfigurieren.
 
@@ -224,7 +225,7 @@ SharePointConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof.checksum
 
 ### <a name="running-partial-configurations-from-a-pull-server"></a>Ausführen von Teilkonfigurationen von einem Pullserver
 
-Nachdem der LCM auf dem Zielknoten konfiguriert wurde und die Konfigurationsdokumente auf dem Pullserver erstellt und ordnungsgemäß benannt wurden, ruft der Zielknoten die Teilkonfigurationen ab, kombiniert sie und wendet die resultierende Konfiguration in regelmäßigen Abständen entsprechend der Angabe der **RefreshFrequencyMins**-Eigenschaft des LCM an. Wenn Sie eine Aktualisierung erzwingen möchten, können Sie das Cmdlet [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration) aufrufen, um die Konfigurationen per Pull abzurufen, und dann `Start-DSCConfiguration –UseExisting` aufrufen, um sie anzuwenden.
+Nachdem der LCM auf dem Zielknoten konfiguriert wurde und die Konfigurationsdokumente auf dem Pullserver erstellt und ordnungsgemäß benannt wurden, ruft der Zielknoten die Teilkonfigurationen ab, kombiniert sie und wendet die resultierende Konfiguration in regelmäßigen Abständen entsprechend der Angabe der **RefreshFrequencyMins** -Eigenschaft des LCM an. Wenn Sie eine Aktualisierung erzwingen möchten, können Sie das Cmdlet [Update-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Update-DscConfiguration) aufrufen, um die Konfigurationen per Pull abzurufen, und dann `Start-DSCConfiguration –UseExisting` aufrufen, um sie anzuwenden.
 
 ## <a name="partial-configurations-in-mixed-push-and-pull-modes"></a>Teilkonfigurationen im gemischten Push- und Pullmodus
 
@@ -375,6 +376,6 @@ SharePointConfig
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Windows PowerShell DSC (Desired State Configuration): Pullserver](pullServer.md)
+[Windows PowerShell DSC – Pullserver](pullServer.md)
 
 [Konfigurieren des lokalen Konfigurations-Managers](../managing-nodes/metaConfig.md)

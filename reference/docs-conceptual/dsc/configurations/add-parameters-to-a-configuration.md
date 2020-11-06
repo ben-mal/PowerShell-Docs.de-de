@@ -2,12 +2,13 @@
 ms.date: 12/12/2018
 keywords: DSC,PowerShell,Ressource,Katalog,Setup
 title: Hinzufügen von Parametern zu einer Konfiguration
-ms.openlocfilehash: 9aa4c746042e89d7767e1b326233dcca1e5c4c24
-ms.sourcegitcommit: b80ce0396550d0896189d0205d6c4b4372ac2015
+description: DSC-Konfigurationen können parametrisiert werden, sodass dynamischere Konfigurationen auf Grundlage der Benutzereingabe möglich sind.
+ms.openlocfilehash: aea230d34994a7b20076559c44990abe554d5395
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141403"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92656807"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Hinzufügen von Parametern zu einer Konfiguration
 
@@ -42,12 +43,12 @@ Im Gegensatz zu einer Funktion fügt das [CmdletBinding](/powershell/module/micr
 | `-DependsOn`            | Zur Definition [zusammengesetzter Konfigurationen](compositeconfigs.md)                             |
 | `-PSDSCRunAsCredential` | Zur Definition [zusammengesetzter Konfigurationen](compositeconfigs.md)                             |
 | `-ConfigurationData`    | Zur Übergabe strukturierter [Konfigurationsdaten](configData.md) für die Verwendung in der Konfiguration. |
-| `-OutputPath`           | Um anzugeben, wo Ihre „\<Computername\>.mof“-Datei kompiliert wird                      |
+| `-OutputPath`           | Zur Angabe, wo Ihre Datei „\<computername\>.mof“ kompiliert wird                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>Hinzufügen Ihrer eigenen Parameter zu Konfigurationen
 
 Neben den integrierten Parametern können Sie auch Ihre eigenen Parameter Ihren Konfigurationen hinzufügen.
-Der Parameterblock wird wie eine Funktion direkt in die Deklaration der Konfiguration eingefügt. Ein Konfigurationsparameterblock muss außerhalb von **Node**-Deklarationen und vor jeglichen *import*-Anweisungen platziert werden. Durch Hinzufügen von Parametern können Sie Ihre Konfigurationen robuster und dynamischer machen.
+Der Parameterblock wird wie eine Funktion direkt in die Deklaration der Konfiguration eingefügt. Ein Konfigurationsparameterblock muss außerhalb von **Node** -Deklarationen und vor jeglichen *import* -Anweisungen platziert werden. Durch Hinzufügen von Parametern können Sie Ihre Konfigurationen robuster und dynamischer machen.
 
 ```powershell
 Configuration TestConfig
@@ -119,7 +120,7 @@ TestConfig -ComputerName "server01", "server02", "server03"
 ## <a name="advanced-parameters-in-configurations"></a>Erweiterte Parameter in Konfigurationen
 
 Zusätzlich zu einem `-ComputerName`-Parameter können wir Parameter für den Dienstnamen und Zustand hinzufügen.
-Im folgenden Beispiel wird ein Parameterblock mit einem `-ServiceName`-Parameter hinzugefügt und verwendet, um den **Service**-Ressourcenblock dynamisch zu definieren. Es wird auch ein `-State`-Parameter hinzugefügt, um den **State** (Zustand) im **Service**-Ressourcenblock dynamisch zu definieren.
+Im folgenden Beispiel wird ein Parameterblock mit einem `-ServiceName`-Parameter hinzugefügt und verwendet, um den **Service** -Ressourcenblock dynamisch zu definieren. Es wird auch ein `-State`-Parameter hinzugefügt, um den **State** (Zustand) im **Service** -Ressourcenblock dynamisch zu definieren.
 
 ```powershell
 Configuration TestConfig
@@ -170,7 +171,7 @@ Fügen Sie vor jeder Parameterdeklaration wie im folgenden Beispiel den `paramet
 $ServiceName
 ```
 
-Sie können für jedes `parameter`-Attribut Argumente angeben, um die Aspekte der definierten Parameter zu steuern. Im folgenden Beispiel wird `$ServiceName` zu einem **Mandatory**-Parameter.
+Sie können für jedes `parameter`-Attribut Argumente angeben, um die Aspekte der definierten Parameter zu steuern. Im folgenden Beispiel wird `$ServiceName` zu einem **Mandatory** -Parameter.
 
 ```powershell
 [parameter(Mandatory)]
@@ -178,7 +179,7 @@ Sie können für jedes `parameter`-Attribut Argumente angeben, um die Aspekte de
 $ServiceName
 ```
 
-Wir möchten verhindern, dass der Benutzer für den `$State`-Parameter außerhalb eines vordefinierten Satzes (z.B. „Running“, „Stopped“) liegende Werte angibt, und verwenden hierzu das `ValidationSet*`-Attribut. Im folgenden Beispiel wird das `ValidationSet`-Attribut dem `$State`-Parameter hinzugefügt. Da wir den `$State`-Parameter nicht zu einem **Mandatory**-Parameter machen möchten, müssen wir für ihn einen Standardwert hinzufügen.
+Wir möchten verhindern, dass der Benutzer für den `$State`-Parameter außerhalb eines vordefinierten Satzes (z.B. „Running“, „Stopped“) liegende Werte angibt, und verwenden hierzu das `ValidationSet*`-Attribut. Im folgenden Beispiel wird das `ValidationSet`-Attribut dem `$State`-Parameter hinzugefügt. Da wir den `$State`-Parameter nicht zu einem **Mandatory** -Parameter machen möchten, müssen wir für ihn einen Standardwert hinzufügen.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]

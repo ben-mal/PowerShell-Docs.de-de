@@ -1,17 +1,17 @@
 ---
 ms.date: 12/31/2019
-keywords: powershell,cmdlet
 title: Die ISE-Objektmodellhierarchie
-ms.openlocfilehash: 1ec5810fc5e7b765c2a08af83bce0415dd61a54b
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+description: In diesem Artikel wird die Hierarchie der Objekte gezeigt, die Teil der Windows PowerShell ISE sind.
+ms.openlocfilehash: 00980cda72f05bc6ccb398079b129de13a98f783
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83809736"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92658324"
 ---
 # <a name="the-ise-object-model-hierarchy"></a>Die ISE-Objektmodellhierarchie
 
-In diesem Thema wird die Hierarchie der Objekte beschrieben, die Teil von Windows PowerShell Integrated Scripting Environment (ISE) sind. Windows PowerShell ISE ist in Windows PowerShell 3.0, 4.0 und 5.1 enthalten. Klicken Sie auf ein Objekt, um die Dokumentation für die Klasse aufzurufen, die das Objekt definiert.
+In diesem Artikel wird die Hierarchie der Objekte beschrieben, die Teil der Windows PowerShell Integrated Scripting Environment (ISE) sind. Windows PowerShell ISE ist in Windows PowerShell 3.0, 4.0 und 5.1 enthalten. Klicken Sie auf ein Objekt, um die Dokumentation für die Klasse aufzurufen, die das Objekt definiert.
 
 ## <a name="psise-object"></a>$psISE-Objekt
 

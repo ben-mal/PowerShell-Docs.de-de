@@ -1,14 +1,13 @@
 ---
 ms.date: 12/11/2018
-contributor: JKeithB, SydneyhSmith
-keywords: gallery,powershell,cmdlet,psgallery
 title: Pakete mit kompatiblen PowerShell-Editionen oder Betriebssystemen
-ms.openlocfilehash: fce1383fa604a555a40b050ce92c5cc45ca7054c
-ms.sourcegitcommit: 17d798a041851382b406ed789097843faf37692d
+description: In diesem Artikel wird beschrieben, wie Sie den PowerShell-Katalog auf Kompatibilität mit einer bestimmten Plattform oder Edition durchsuchen.
+ms.openlocfilehash: 9806c09c85febfd74bb69adf3d294fb4f559ff23
+ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83691455"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92661241"
 ---
 # <a name="packages-with-compatible-powershell-editions-or-operating-systems"></a>Pakete mit kompatiblen PowerShell-Editionen oder Betriebssystemen
 
@@ -41,9 +40,8 @@ Verwenden Sie die Tags „PSEdition_Desktop“ und „PSEdition_Core“, um die 
 ![Suchergebnisse für Elemente, die mit Desktop PSEdition kompatibel sind](media/searching-by-compatibility/searchresultswithpseditionsdesktop.PNG)
 
 ### <a name="search-for-packages-to-find-compatible-editions-using-powershell"></a>Suchen nach Paketen mithilfe von PowerShell, um kompatible Versionen zu finden
-Sie können Tags angeben, um nach PowerShell-Edition und Betriebssystem zu filtern.
-Sie verwenden das Cmdlet `Find-Package`, das die `-Tag`-Parameter angibt, um die Edition und das Betriebssystem anzugeben, auf das Sie abzielen.
-Dies sieht folgendermaßen aus:
+
+Sie können Tags angeben, um nach PowerShell-Edition und Betriebssystem zu filtern. Sie verwenden das Cmdlet `Find-Package`, das die `-Tag`-Parameter angibt, um die Edition und das Betriebssystem anzugeben, auf das Sie abzielen. Dies sieht folgendermaßen aus:
 
 ```powershell
 # Find modules compatible with PowerShell Core:
