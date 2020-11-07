@@ -7,12 +7,12 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: 0a247be8c7a8067455e3153ac48cacde78eaa26d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 118c3e563743cee03dc7a75ca68e0979c1522f07
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217527"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347073"
 ---
 # Get-Acl
 
@@ -241,6 +241,8 @@ Sie können eine Zeichenfolge über die Pipeline übergeben, die einen Pfad zu e
 
 ## HINWEISE
 
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
 Standardmäßig `Get-Acl` zeigt den PowerShell-Pfad der Ressource ( `<provider>::<resource-path>` ), den Besitzer der Ressource und "Access", eine Liste (Array) der Zugriffs Steuerungs Einträge in der freigegebenen Zugriffs Steuerungs Liste (DACL) für die Ressource an. Die DACL-Liste wird durch den Besitzer der Ressource gesteuert.
 
 Wenn Sie das Ergebnis als Liste ( `Get-Acl | Format-List` ), zusätzlich zum Pfad, Besitzer und der Zugriffsliste formatieren, zeigt PowerShell die folgenden Eigenschaften und Eigenschaftswerte an:
@@ -254,4 +256,3 @@ Da `Get-Acl` von den Dateisystem-und Registrierungs Anbietern unterstützt wird,
 ## VERWANDTE LINKS
 
 [Set-Acl](Set-Acl.md)
-

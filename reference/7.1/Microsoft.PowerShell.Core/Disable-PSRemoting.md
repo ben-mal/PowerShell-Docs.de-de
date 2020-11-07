@@ -7,12 +7,12 @@ ms.date: 01/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disable-psremoting?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-PSRemoting
-ms.openlocfilehash: 82db14f6819a003f4f51a35844a9fcce7a146f03
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f2f9fb5ac13413b1ace74a995db9c3e78ac22d41
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217772"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347005"
 ---
 # Disable-PSRemoting
 
@@ -475,6 +475,8 @@ Dieses Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
 
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
 - Durch das Deaktivieren der Sitzungs Konfigurationen werden nicht alle Änderungen rückgängig gemacht, die von den- `Enable-PSRemoting` oder- `Enable-PSSessionConfiguration` Cmdlets vorgenommen wurden. Möglicherweise müssen Sie Änderungen wie folgt manuell rückgängig machen.
 
   1. Beenden und deaktivieren Sie den WinRM-Dienst.
@@ -502,4 +504,3 @@ Dieses Cmdlet generiert keine Ausgabe.
 [Unregister-PSSessionConfiguration](Unregister-PSSessionConfiguration.md)
 
 [WSMan-Anbieter](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
-

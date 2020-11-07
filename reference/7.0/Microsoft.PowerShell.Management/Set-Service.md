@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Service
-ms.openlocfilehash: d58d26a93e9b785bcba425537ea570feeffa1606
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c6aa8a16bd5ccbeb00252b872e997018b1997181
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210623"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346699"
 ---
 # Set-Service
 
@@ -39,7 +39,7 @@ Set-Service [-InputObject] <ServiceController> [-DisplayName <String>] [-Credent
 
 ## DESCRIPTION
 
-Das- `Set-Service` Cmdlet ändert die Eigenschaften eines Dienstanbieter, z. b. **Status** , **Beschreibung** , **Display Name** und **startupType** . `Set-Service` ein Dienst kann gestartet, beendet, angehalten oder angehalten werden. Um einen Dienst zu identifizieren, geben Sie seinen Dienstnamen ein, oder übermitteln Sie ein Dienst Objekt. Oder senden Sie einen Dienstnamen oder ein Dienst Objekt über die Pipeline an `Set-Service` .
+Das- `Set-Service` Cmdlet ändert die Eigenschaften eines Dienstanbieter, z. b. **Status** , **Beschreibung** , **Display Name** und **startupType**. `Set-Service` ein Dienst kann gestartet, beendet, angehalten oder angehalten werden. Um einen Dienst zu identifizieren, geben Sie seinen Dienstnamen ein, oder übermitteln Sie ein Dienst Objekt. Oder senden Sie einen Dienstnamen oder ein Dienst Objekt über die Pipeline an `Set-Service` .
 
 ## BEISPIELE
 
@@ -353,7 +353,7 @@ Gibt den Status für den Dienst an.
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
 - **Angeh** alten. Hält den Dienst an.
-- **Wird ausgeführt** . Startet den Dienst.
+- **Wird ausgeführt**. Startet den Dienst.
 - **Stopped** (Beendet): Dies ist der anfängliche Status des Kanals nach seiner Erstellung (es sei denn, im Portal wurde das automatische Starten gewählt). Beendet den Dienst.
 
 ```yaml
@@ -418,6 +418,8 @@ Sie können die Pipeline verwenden, um ein Dienst Objekt oder eine Zeichenfolge,
 Standardmäßig `Set-Service` gibt keine-Objekte zurück. Verwenden Sie den **passthru** -Parameter, um ein **ServiceController** -Objekt auszugeben.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 `Set-Service` erfordert erweiterte Berechtigungen. Verwenden Sie die Option **als Administrator ausführen** .
 

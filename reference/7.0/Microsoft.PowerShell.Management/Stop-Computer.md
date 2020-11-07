@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/stop-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Computer
-ms.openlocfilehash: 4791f447fbada43830c8e2d41d7f0f2364aecff9
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 9ba056a7c85b62ac02137959a5586fdd87d9ceb4
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218404"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346308"
 ---
 # Stop-Computer
 
@@ -179,7 +179,7 @@ Gibt den Mechanismus an, der verwendet wird, um die Benutzer Anmelde Information
 
 Zulässige Werte für diesen Parameter:
 
-- Basic
+- Einfach
 - CredSSP
 - Standard
 - Digest
@@ -237,6 +237,8 @@ Eingaben können nicht an dieses Cmdlet übergeben werden.
 ### Keine
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Dieses Cmdlet funktioniert nur unter Windows und verwendet die **Win32Shutdown** -Methode der WMI-Klasse **Win32_OperatingSystem** . Diese Methode erfordert, dass die **SeShutdownPrivilege** -Berechtigung für das Benutzerkonto aktiviert ist, mit dem der Computer neu gestartet wird.
 

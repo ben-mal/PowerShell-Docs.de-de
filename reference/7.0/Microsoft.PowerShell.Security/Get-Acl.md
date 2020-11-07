@@ -7,12 +7,12 @@ ms.date: 03/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Acl
-ms.openlocfilehash: cb38b327920fc56817c5c8ec73f548ffba8bdd7a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: d9adce420ff8904fa40c7689a8b2ab5a3b5e945f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211468"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347209"
 ---
 # Get-Acl
 
@@ -240,6 +240,8 @@ Sie können eine Zeichenfolge über die Pipeline übergeben, die einen Pfad zu e
 `Get-Acl` Gibt ein-Objekt zurück, das die Abbild-ACLs darstellt. Der Objekttyp richtet sich nach der ACL-Typ.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Standardmäßig `Get-Acl` zeigt den PowerShell-Pfad der Ressource ( `<provider>::<resource-path>` ), den Besitzer der Ressource und "Access", eine Liste (Array) der Zugriffs Steuerungs Einträge in der freigegebenen Zugriffs Steuerungs Liste (DACL) für die Ressource an. Die DACL-Liste wird durch den Besitzer der Ressource gesteuert.
 

@@ -7,12 +7,12 @@ ms.date: 07/16/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-PSRemoting
-ms.openlocfilehash: f74fe88cfb1d89e2f21d3f85e5c604d75f8ac55d
-ms.sourcegitcommit: 0e0f45d0d8deb8c9088a4f4a32218edde052b686
+ms.openlocfilehash: 4d00b875aab2e175465b262a320e7b16893c255c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "93218031"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347379"
 ---
 # Enable-PSRemoting
 
@@ -267,6 +267,8 @@ Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 Dieses Cmdlet gibt Zeichen folgen zurück, die die Ergebnisse beschreiben.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Unter Serverversionen des Windows-Betriebssystems `Enable-PSRemoting` erstellt Firewallregeln für private Netzwerke und Domänen Netzwerke, die Remote Zugriff zulassen, und erstellt eine Firewallregel für öffentliche Netzwerke, die den Remote Zugriff nur von Computern im selben lokalen Subnetz zulässt.
 

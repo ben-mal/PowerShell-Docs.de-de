@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/show-command?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-Command
-ms.openlocfilehash: 86253a8a0bd02a60980cc3655af7bb961acf88ac
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: b5758fdb9fc3e8f604b24fb9c64cad3f95047ec3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211764"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347770"
 ---
 # Show-Command
 
@@ -40,7 +40,7 @@ Sobald Sie bereit sind, können Sie auf **Copy** klicken, um den Befehl, den Sie
 
 In der PowerShell Integrated Scripting Environment (ISE) `Show-Command` wird standardmäßig eine Variation des Fensters angezeigt. Weitere Informationen zur Verwendung dieses Befehls Fensters finden Sie in den Hilfe Themen zur PowerShell ISE.
 
-Dieses Cmdlet wurde in PowerShell 7 erneut eingeführt. 
+Dieses Cmdlet wurde in PowerShell 7 erneut eingeführt.
 
 Da dieses Cmdlet eine Benutzeroberfläche erfordert, funktioniert es nicht unter Windows Server Core oder Windows Nano Server. Dieses Cmdlet ist nur auf Windows-Systemen verfügbar, die den Windows-Desktop unterstützen.
 
@@ -272,7 +272,8 @@ Wenn Sie den **passthru** -Parameter verwenden, `Show-Command` gibt eine Befehls
 
 ## HINWEISE
 
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
 `Show-Command` funktioniert nicht in Remote Sitzungen.
 
 ## VERWANDTE LINKS
-

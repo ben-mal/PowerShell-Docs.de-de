@@ -7,12 +7,12 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/test-filecatalog?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-FileCatalog
-ms.openlocfilehash: 7e2102963df66988d4d7bc2d67ac054d8b7414b8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4ea34f547e296567fc0ad728d9279392615836d3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214759"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346393"
 ---
 # Test-FileCatalog
 
@@ -30,10 +30,7 @@ Test-FileCatalog [-Detailed] [-FilesToSkip <String[]>] [-CatalogFilePath] <Strin
 
 ## DESCRIPTION
 
-`Test-FileCatalog` überprüft die Authentizität von Dateien, indem die Dateihashes einer Katalog Datei (. cat) mit den Hashes der tatsächlichen Dateien auf dem Datenträger verglichen werden.
-Wenn keine Übereinstimmungen gefunden werden, wird der Status "validationfailed" zurückgegeben. Benutzer können alle diese Informationen mithilfe des Parameters -Detailed abrufen.
-Außerdem wird der Signierungs Status des Katalogs in der Signatur Eigenschaft angezeigt, der dem aufrufenden `Get-AuthenticodeSignature` Cmdlet in der Katalog Datei entspricht.
-Benutzer können außerdem jede Datei während der Überprüfung mithilfe des Parameters -FilesToSkip überspringen.
+`Test-FileCatalog` überprüft die Authentizität von Dateien, indem die Dateihashes einer Katalog Datei (. cat) mit den Hashes der tatsächlichen Dateien auf dem Datenträger verglichen werden. Wenn keine Übereinstimmungen gefunden werden, wird der Status "validationfailed" zurückgegeben. Benutzer können alle diese Informationen mithilfe des Parameters -Detailed abrufen. Außerdem wird der Signierungs Status des Katalogs in der Signatur Eigenschaft angezeigt, der dem aufrufenden `Get-AuthenticodeSignature` Cmdlet in der Katalog Datei entspricht. Benutzer können außerdem jede Datei während der Überprüfung mithilfe des Parameters -FilesToSkip überspringen.
 
 Dieses Cmdlet wird nur unter Windows unterstützt.
 
@@ -153,8 +150,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -170,7 +166,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` . Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## EINGABEN
 
@@ -190,9 +186,10 @@ Ein ausführlicheres Objekt, das zurückgegeben wird, wenn verwendet `-Detailed`
 
 ## HINWEISE
 
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
 ## VERWANDTE LINKS
 
 [New-FileCatalog](New-FileCatalog.md)
 
 [PowerShellGet](/powershell/module/PowerShellGet)
-

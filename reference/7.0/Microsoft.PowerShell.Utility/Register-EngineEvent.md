@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 26a8ef5bfb9fd520fabc836ca1e5da40558e0e8a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: cff52e9a321428cde31977f6d91e2d1047faa2ee
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210303"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346852"
 ---
 # Register-EngineEvent
 
@@ -207,7 +207,7 @@ Gibt den Quellbezeichner des Ereignisses an, das Sie abonnieren. Der Quellbezeic
 
 Der Wert dieses Parameters wird im Wert der **SourceIdentifier** -Eigenschaft des Abonnentenobjekts und aller diesem Abonnement zugeordneten Ereignisobjekte angezeigt.
 
-Der Wert ist für die Quelle des Ereignisses spezifisch. Dies kann ein beliebiger Wert sein, den Sie für die Verwendung mit dem `New-Event` Cmdlet erstellt haben. Die PowerShell-Engine unterstützt die **engineevent** -Werte **PowerShell. Exit** und **PowerShell. OnIdle** .
+Der Wert ist für die Quelle des Ereignisses spezifisch. Dies kann ein beliebiger Wert sein, den Sie für die Verwendung mit dem `New-Event` Cmdlet erstellt haben. Die PowerShell-Engine unterstützt die **engineevent** -Werte **PowerShell. Exit** und **PowerShell. OnIdle**.
 
 ```yaml
 Type: System.String
@@ -256,6 +256,8 @@ Eingaben können nicht an übergeben werden `Register-EngineEvent` .
 Wenn Sie den **Action** -Parameter verwenden, wird `Register-EngineEvent` ein **System. Management. Automation. psiebziger Job** -Objekt zurückgegeben. Andernfalls wird keine Ausgabe generiert.
 
 ## HINWEISE
+
+Auf den Linux-oder macOS-Plattformen sind keine Ereignis Quellen verfügbar.
 
 Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
 

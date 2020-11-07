@@ -7,12 +7,12 @@ ms.date: 05/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-hotfix?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HotFix
-ms.openlocfilehash: 355257d0e403143d6983886de592d491241c6253
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 277dd2678b54c9e708d09f6ca27d82ab9afd4c1c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212476"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347617"
 ---
 # Get-HotFix
 
@@ -183,6 +183,8 @@ Sie können einen oder mehrere Computernamen über die Pipeline an Get-Hotfix ü
 `Get-HotFix` gibt-Objekte zurück, die die Hotfixes auf dem Computer darstellen.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Die **Win32_QuickFixEngineering** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) stellt ein kleines systemweites Update dar, das auf das aktuelle Betriebssystem häufig als Update für die schnelle Korrektur Technik (Quick fixengineering, QFE) bezeichnet wird. Diese Klasse gibt nur die von der komponentenbasierten Wartung (Component based Wartung, CBS) bereitgestellten Updates zurück. Diese Updates sind nicht in der Registrierung aufgeführt. Von der Microsoft Windows Installer (MSI) oder der [Windows Update](https://update.microsoft.com) Site bereitgestellte Updates werden von **Win32_QuickFixEngineering** nicht zurückgegeben. Weitere Informationen finden Sie unter [Win32_QuickFixEngineering-Klasse](/windows/desktop/CIMWin32Prov/win32-quickfixengineering).
 

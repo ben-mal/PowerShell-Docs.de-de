@@ -7,12 +7,12 @@ ms.date: 11/02/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/new-filecatalog?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-FileCatalog
-ms.openlocfilehash: aef0f6e63be07f0568927f8e65df675ff4f9eba7
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 007b486b7b65d9b6481839643fe839eda49a1113
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210180"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346954"
 ---
 # New-FileCatalog
 
@@ -28,13 +28,9 @@ New-FileCatalog [-CatalogVersion <Int32>] [-CatalogFilePath] <String> [[-Path] <
 
 ## DESCRIPTION
 
-`New-FileCatalog` erstellt eine [Windows-Katalog Datei](/windows-hardware/drivers/install/catalog-files) für eine Gruppe von Ordnern und Dateien.
-Diese Katalog Datei enthält Hashes für alle Dateien in den angegebenen Pfaden.
-Benutzer können den Katalog dann mit Ihren Dateien verteilen, damit Benutzer überprüfen können, ob seit der Erstellung des Katalogs Änderungen an den Ordnern vorgenommen wurden.
+`New-FileCatalog` erstellt eine [Windows-Katalog Datei](/windows-hardware/drivers/install/catalog-files) für eine Gruppe von Ordnern und Dateien. Diese Katalog Datei enthält Hashes für alle Dateien in den angegebenen Pfaden. Benutzer können den Katalog dann mit Ihren Dateien verteilen, damit Benutzer überprüfen können, ob seit der Erstellung des Katalogs Änderungen an den Ordnern vorgenommen wurden.
 
-Die Katalogversionen 1 und 2 werden unterstützt. Version 1 verwendet den (veralteten) SHA1-Hash Algorithmus, um Dateihashes zu erstellen, und Version 2 verwendet SHA256.
-Katalogversion 2 wird weder auf Windows Server 2008 R2 noch auf Windows 7 unterstützt.
-Daher sollten Sie die Katalogversion 2 mit Windows 8, Windows Server 2012 und späteren Betriebssystemen verwenden.
+Die Katalogversionen 1 und 2 werden unterstützt. Version 1 verwendet den (veralteten) SHA1-Hash Algorithmus, um Dateihashes zu erstellen, und Version 2 verwendet SHA256. Katalogversion 2 wird weder auf Windows Server 2008 R2 noch auf Windows 7 unterstützt. Daher sollten Sie die Katalogversion 2 mit Windows 8, Windows Server 2012 und späteren Betriebssystemen verwenden.
 
 ## BEISPIELE
 
@@ -54,8 +50,7 @@ Mode                LastWriteTime         Length Name
 
 ### -Catalogfilepath
 
-Ein Pfad zu einer Datei oder einem Ordner, in der die Katalog Datei (. cat) platziert werden soll.
-Wenn ein Ordner Pfad angegeben wird, wird der Standard Dateiname `catalog.cat` verwendet.
+Ein Pfad zu einer Datei oder einem Ordner, in der die Katalog Datei (. cat) platziert werden soll. Wenn ein Ordner Pfad angegeben wird, wird der Standard Dateiname `catalog.cat` verwendet.
 
 ```yaml
 Type: System.String
@@ -71,8 +66,7 @@ Accept wildcard characters: False
 
 ### -CatalogVersion
 
-Akzeptiert `1.0` oder `2.0` als mögliche Werte zum Angeben der Katalogversion.
-`1.0` sollte nach Möglichkeit vermieden werden, da der unsichere SHA-1-Hash Algorithmus verwendet wird, während `2.0` den sicheren SHA-256-Algorithmus verwendet, `1.0` ist jedoch der einzige unterstützte Algorithmus für Windows 7 und Server 2008R2.
+Akzeptiert `1.0` oder `2.0` als mögliche Werte zum Angeben der Katalogversion. `1.0` sollte nach Möglichkeit vermieden werden, da der unsichere SHA-1-Hash Algorithmus verwendet wird, während `2.0` den sicheren SHA-256-Algorithmus verwendet, `1.0` ist jedoch der einzige unterstützte Algorithmus für Windows 7 und Server 2008R2.
 
 ```yaml
 Type: System.Int32
@@ -83,6 +77,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+
+Akzeptiert einen Pfad oder ein Array von Pfaden zu Dateien oder Ordnern, die in die Katalog Datei eingeschlossen werden sollen. Wenn ein Ordner angegeben wird, werden alle Dateien im Ordner ebenfalls eingeschlossen.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -102,27 +112,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Path
-
-Akzeptiert einen Pfad oder ein Array von Pfaden zu Dateien oder Ordnern, die in die Katalog Datei eingeschlossen werden sollen.
-Wenn ein Ordner angegeben wird, werden alle Dateien im Ordner ebenfalls eingeschlossen.
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -151,6 +143,8 @@ Die Pipeline verwendet eine Zeichenfolge, die als Katalog Dateiname verwendet wi
 ### System. IO. fileingefo
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 ## VERWANDTE LINKS
 

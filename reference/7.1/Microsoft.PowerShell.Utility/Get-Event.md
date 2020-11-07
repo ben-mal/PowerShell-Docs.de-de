@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-event?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Event
-ms.openlocfilehash: 81244e9c32ca1f1d4824bdb8559607b44222c7bd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0ab2c32fe81f2e5ffa6c292ce0fd00e05685bd2a
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213095"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94347702"
 ---
 # Get-Event
 
@@ -35,15 +35,11 @@ Get-Event [-EventIdentifier] <Int32> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Das **Get-Event-** Cmdlet ruft Ereignisse in der PowerShell-Ereignis Warteschlange für die aktuelle Sitzung ab.
-Sie können alle Ereignisse oder den *eventidentifier* -oder *SourceIdentifier* -Parameter verwenden, um die Ereignisse anzugeben.
+Das- `Get-Event` Cmdlet ruft Ereignisse in der PowerShell-Ereignis Warteschlange für die aktuelle Sitzung ab. Sie können alle Ereignisse oder den **eventidentifier** -oder **SourceIdentifier** -Parameter verwenden, um die Ereignisse anzugeben.
 
-Wenn ein Ereignis auftritt, wird es zur Ereigniswarteschlange hinzugefügt.
-Die Ereignis Warteschlange enthält Ereignisse, für die Sie sich registriert haben, Ereignisse, die mit dem Cmdlet "New-Event" erstellt wurden, und das Ereignis, das ausgelöst wird, wenn PowerShell beendet wird.
-Sie können **Get-Event** oder Wait-Event verwenden, um die Ereignisse zu erhalten.
+Wenn ein Ereignis auftritt, wird es zur Ereigniswarteschlange hinzugefügt. Die Ereignis Warteschlange enthält Ereignisse, für die Sie sich registriert haben, Ereignisse, die mithilfe des `New-Event` Cmdlets erstellt wurden, und das Ereignis, das ausgelöst wird, wenn PowerShell beendet wird. Sie können `Get-Event` oder verwenden `Wait-Event` , um die Ereignisse zu erhalten.
 
-Dieses Cmdlet ruft keine Ereignisse aus den Protokollen der Ereignisanzeige ab.
-Um diese Ereignisse abzurufen, verwenden Sie „Get-WinEvent“ oder „Get-EventLog“.
+Dieses Cmdlet ruft keine Ereignisse aus den Protokollen der Ereignisanzeige ab. Um diese Ereignisse zu erhalten, verwenden Sie `Get-WinEvent` oder `Get-EventLog` .
 
 ## BEISPIELE
 
@@ -90,13 +86,11 @@ MessageData      :
 
 Dieses Beispiel zeigt, wie Ereignisse mithilfe anderer Eigenschaften als „SourceIdentifier“ abgerufen werden.
 
-Der erste Befehl ruft alle Ereignisse in der Ereignis Warteschlange ab und speichert Sie in der $Events Variable.
+Der erste Befehl ruft alle Ereignisse in der Ereignis Warteschlange ab und speichert Sie in der `$Events` Variablen.
 
-Der zweite Befehl verwendet die Array Notation, um das erste Ereignis (0-Index) im Array in der $Events Variablen zu erhalten.
-Der Befehl verwendet einen Pipelineoperator (|) zum Senden des Ereignisses an den Format-List-Befehl, der alle Eigenschaften des Ereignisses in einer Liste anzeigt.
-Dadurch können Sie die Eigenschaften des Ereignisobjekts überprüfen.
+Der zweite Befehl verwendet die Array Notation, um das erste Ereignis (0-Index) im Array in der `$Events` Variablen zu erhalten. Der Befehl verwendet einen Pipeline Operator ( `|` ), um das Ereignis an den `Format-List` Befehl zu senden, der alle Eigenschaften des Ereignisses in einer Liste anzeigt. Dadurch können Sie die Eigenschaften des Ereignisobjekts überprüfen.
 
-Der dritte Befehl zeigt, wie das Where-Object-Cmdlet verwendet wird, um ein Ereignis basierend auf dem Zeitpunkt, an dem es generiert wurde, zu erhalten.
+Der dritte Befehl zeigt, wie das `Where-Object` Cmdlet verwendet wird, um ein Ereignis basierend auf dem Zeitpunkt, an dem es generiert wurde, zu erhalten.
 
 ### Beispiel 4: erhalten eines Ereignisses anhand seines Bezeichners
 
@@ -126,9 +120,7 @@ Accept wildcard characters: False
 
 ### -SourceIdentifier
 
-Gibt Quell Bezeichner an, für die dieses Cmdlet Ereignisse abruft.
-Standardmäßig werden alle Ereignisse in der Ereigniswarteschlange abgerufen.
-Platzhalter sind nicht zulässig.
+Gibt Quell Bezeichner an, für die dieses Cmdlet Ereignisse abruft. Standardmäßig werden alle Ereignisse in der Ereigniswarteschlange abgerufen. Platzhalter sind nicht zulässig.
 
 ```yaml
 Type: System.String
@@ -156,52 +148,34 @@ Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 
 ### System. Management. Automation. psiebziger args
 
-**Get-Event** gibt ein **peventargs** -Objekt für jedes Ereignis zurück.
-Um eine Beschreibung dieses Objekts anzuzeigen, geben Sie ein, `Get-Help Get-Event -Full` und lesen Sie den Abschnitt "Hinweise" des Hilfe Themas.
+`Get-Event` Gibt ein **peventargs** -Objekt für jedes Ereignis zurück. Um eine Beschreibung dieses Objekts anzuzeigen, geben Sie ein, `Get-Help Get-Event -Full` und lesen Sie den Abschnitt "Hinweise" des Hilfe Themas.
 
 ## HINWEISE
 
-* Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
+Auf den Linux-oder macOS-Plattformen sind keine Ereignis Quellen verfügbar.
 
-  Das **Get-Event-** Cmdlet gibt ein **peventargs** -Objekt ( **System. Management. Automation. peventargs** ) mit den folgenden Eigenschaften zurück:
+Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
 
-  - Computername.
-Der Name des Computers, auf dem das Ereignis aufgetreten ist.
-Dieser Eigenschaftswert wird nur aufgefüllt, wenn das Ereignis von einem Remotecomputer weitergeleitet wird.
+Das- `Get-Event` Cmdlet gibt ein **psiebziger args** -Objekt ( **System. Management. Automation. psiebargs** ) mit den folgenden Eigenschaften zurück:
 
-  - Runspaceid.
-Eine GUID, die die Sitzung, in der das Ereignis aufgetreten ist, eindeutig identifiziert.
-Dieser Eigenschaftswert wird nur aufgefüllt, wenn das Ereignis von einem Remotecomputer weitergeleitet wird.
+- Computername. Der Name des Computers, auf dem das Ereignis aufgetreten ist. Dieser Eigenschaftswert wird nur aufgefüllt, wenn das Ereignis von einem Remotecomputer weitergeleitet wird.
 
-  - EventIdentifier.
-Eine ganze Zahl (Int32), die die Ereignisbenachrichtigung in der aktuellen Sitzung eindeutig identifiziert.
+- Runspaceid. Eine GUID, die die Sitzung, in der das Ereignis aufgetreten ist, eindeutig identifiziert. Dieser Eigenschaftswert wird nur aufgefüllt, wenn das Ereignis von einem Remotecomputer weitergeleitet wird.
 
-  - Sen.
-Das Objekt, das das Ereignis generiert hat.
-Im Wert des *Action* -Parameters enthält die $Sender automatische Variable das Sender-Objekt.
+- EventIdentifier. Eine ganze Zahl (Int32), die die Ereignisbenachrichtigung in der aktuellen Sitzung eindeutig identifiziert.
 
-  - SourceEventArgs.
-Der erste Parameter, der von EventArgs abgeleitet wird, falls vorhanden.
-Beispielsweise enthält die sourceeventargs-Eigenschaft in einem Ereignis mit Timer-verstrichenen Ereignissen, bei dem die Signatur das Formular Objekt Absender, Timer. ElapsedEventArgs e, die Eigenschaft "Timers. ElapsedEventArgs".
-Im Wert des *Action* -Parameters enthält die $EventArgs automatische Variable diesen Wert.
+- Sen. Das Objekt, das das Ereignis generiert hat. Im Wert des **Action** -Parameters enthält die `$Sender` Automatische Variable das Sender-Objekt.
 
-  - Sourceargs.
-Alle Parameter der ursprünglichen Ereignissignatur.
-Bei einer Standard Ereignis Signatur stellt $args \[ 0 \] den Absender und $args \[ 1 \] die sourceeventargs dar.
-Im Wert des *Action* -Parameters enthält die $args automatische Variable diesen Wert.
+- SourceEventArgs. Der erste Parameter, der von EventArgs abgeleitet wird, falls vorhanden. Beispielsweise enthält die **sourceeventargs** -Eigenschaft in einem Ereignis mit Timer-verstrichenen Ereignissen, bei dem die Signatur das Formular Objekt Absender, **Timer. ElapsedEventArgs** e, die Eigenschaft " **Timers. ElapsedEventArgs** ". Im Wert des **Action** -Parameters enthält die `$EventArgs` Automatische Variable diesen Wert.
 
-  - SourceIdentifier.
-Eine Zeichenfolge, die das Ereignisabonnement bezeichnet.
-Im Wert des *Action* -Parameters enthält die SourceIdentifier-Eigenschaft der automatischen $Event-Variablen diesen Wert.
+- Sourceargs. Alle Parameter der ursprünglichen Ereignissignatur. Für eine Standard Ereignis Signatur `$Args[0]` stellt den Absender dar und `$Args[1]` stellt die **sourceeventargs** dar. Im Wert des **Action** -Parameters enthält die `$Args` Automatische Variable diesen Wert.
 
-  - TimeGenerated.
-Ein **DateTime** -Objekt, das die Uhrzeit darstellt, zu der das Ereignis generiert wurde.
-Im Wert des *Action* -Parameters enthält die TimeGenerated-Eigenschaft der automatischen $Event-Variablen diesen Wert.
+- SourceIdentifier. Eine Zeichenfolge, die das Ereignisabonnement bezeichnet. Im Wert des **Action** -Parameters enthält die **SourceIdentifier** -Eigenschaft der `$Event` automatischen Variablen diesen Wert.
 
-  - MessageData.
-Die dem Ereignisabonnement zugeordneten Daten.
-Benutzer geben diese Daten an, wenn sie ein Ereignis registrieren.
-Im Wert des *Action* -Parameters enthält die messageData-Eigenschaft der automatischen $Event-Variablen diesen Wert.
+- TimeGenerated. Ein **DateTime** -Objekt, das die Uhrzeit darstellt, zu der das Ereignis generiert wurde.
+  Im Wert des **Action** -Parameters enthält die **TimeGenerated** -Eigenschaft der `$Event` automatischen Variablen diesen Wert.
+
+- MessageData. Die dem Ereignisabonnement zugeordneten Daten. Benutzer geben diese Daten an, wenn sie ein Ereignis registrieren. Im Wert des **Action** -Parameters enthält die **messageData** -Eigenschaft der `$Event` automatischen Variablen diesen Wert.
 
 ## VERWANDTE LINKS
 
@@ -216,4 +190,3 @@ Im Wert des *Action* -Parameters enthält die messageData-Eigenschaft der automa
 [Unregister-Event](Unregister-Event.md)
 
 [Wait-Event](Wait-Event.md)
-
