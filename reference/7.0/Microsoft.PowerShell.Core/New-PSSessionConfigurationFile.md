@@ -7,19 +7,19 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: 4f326fcfb2c2af6816ae7cc58f12699e748f163a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: f2d5613b97e784fc9e1096d3687c156a77d21908
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210676"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343095"
 ---
-# <span data-ttu-id="0693c-103">New-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="0693c-103">New-PSSessionConfigurationFile</span></span>
+# <span data-ttu-id="8229c-103">New-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="8229c-103">New-PSSessionConfigurationFile</span></span>
 
-## <span data-ttu-id="0693c-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="0693c-104">SYNOPSIS</span></span>
-<span data-ttu-id="0693c-105">Erstellt eine Datei, die eine Sitzungskonfiguration definiert.</span><span class="sxs-lookup"><span data-stu-id="0693c-105">Creates a file that defines a session configuration.</span></span>
+## <span data-ttu-id="8229c-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="8229c-104">SYNOPSIS</span></span>
+<span data-ttu-id="8229c-105">Erstellt eine Datei, die eine Sitzungskonfiguration definiert.</span><span class="sxs-lookup"><span data-stu-id="8229c-105">Creates a file that defines a session configuration.</span></span>
 
-## <span data-ttu-id="0693c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="0693c-106">SYNTAX</span></span>
+## <span data-ttu-id="8229c-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8229c-106">SYNTAX</span></span>
 
 ```
 New-PSSessionConfigurationFile [-Path] <String> [-SchemaVersion <Version>] [-Guid <Guid>]
@@ -36,38 +36,38 @@ New-PSSessionConfigurationFile [-Path] <String> [-SchemaVersion <Version>] [-Gui
  [-FormatsToProcess <String[]>] [-AssembliesToLoad <String[]>] [-Full] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="0693c-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="0693c-107">DESCRIPTION</span></span>
+## <span data-ttu-id="8229c-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8229c-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="0693c-108">Mit dem `New-PSSessionConfigurationFile` -Cmdlet wird eine Datei mit Einstellungen erstellt, mit denen eine Sitzungs Konfiguration und die Umgebung der Sitzungen definiert werden, die mit der Sitzungs Konfiguration erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-108">The `New-PSSessionConfigurationFile` cmdlet creates a file of settings that define a session configuration and the environment of sessions that are created by using the session configuration.</span></span>
-<span data-ttu-id="0693c-109">Wenn Sie die Datei in einer Sitzungs Konfiguration verwenden möchten, verwenden Sie den **path** -Parameter der `Register-PSSessionConfiguration` `Set-PSSessionConfiguration` Cmdlets oder.</span><span class="sxs-lookup"><span data-stu-id="0693c-109">To use the file in a session configuration, use the **Path** parameter of the `Register-PSSessionConfiguration` or `Set-PSSessionConfiguration` cmdlets.</span></span>
+<span data-ttu-id="8229c-108">Mit dem `New-PSSessionConfigurationFile` -Cmdlet wird eine Datei mit Einstellungen erstellt, mit denen eine Sitzungs Konfiguration und die Umgebung der Sitzungen definiert werden, die mit der Sitzungs Konfiguration erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-108">The `New-PSSessionConfigurationFile` cmdlet creates a file of settings that define a session configuration and the environment of sessions that are created by using the session configuration.</span></span>
+<span data-ttu-id="8229c-109">Wenn Sie die Datei in einer Sitzungs Konfiguration verwenden möchten, verwenden Sie den **path** -Parameter der `Register-PSSessionConfiguration` `Set-PSSessionConfiguration` Cmdlets oder.</span><span class="sxs-lookup"><span data-stu-id="8229c-109">To use the file in a session configuration, use the **Path** parameter of the `Register-PSSessionConfiguration` or `Set-PSSessionConfiguration` cmdlets.</span></span>
 
-<span data-ttu-id="0693c-110">Die Sitzungs Konfigurationsdatei, die `New-PSSessionConfigurationFile` erstellt, ist eine lesbare Textdatei, die eine Hash Tabelle mit den Eigenschaften und Werten der Sitzungs Konfiguration enthält.</span><span class="sxs-lookup"><span data-stu-id="0693c-110">The session configuration file that `New-PSSessionConfigurationFile` creates is a human-readable text file that contains a hash table of the session configuration properties and values.</span></span> <span data-ttu-id="0693c-111">Die Datei hat eine Datei `.pssc` Namen Erweiterung.</span><span class="sxs-lookup"><span data-stu-id="0693c-111">The file has a `.pssc` filename extension.</span></span>
+<span data-ttu-id="8229c-110">Die Sitzungs Konfigurationsdatei, die `New-PSSessionConfigurationFile` erstellt, ist eine lesbare Textdatei, die eine Hash Tabelle mit den Eigenschaften und Werten der Sitzungs Konfiguration enthält.</span><span class="sxs-lookup"><span data-stu-id="8229c-110">The session configuration file that `New-PSSessionConfigurationFile` creates is a human-readable text file that contains a hash table of the session configuration properties and values.</span></span> <span data-ttu-id="8229c-111">Die Datei hat eine Datei `.pssc` Namen Erweiterung.</span><span class="sxs-lookup"><span data-stu-id="8229c-111">The file has a `.pssc` filename extension.</span></span>
 
-<span data-ttu-id="0693c-112">Alle Parameter von `New-PSSessionConfigurationFile` sind optional, mit Ausnahme des **path** -Parameters.</span><span class="sxs-lookup"><span data-stu-id="0693c-112">All parameters of `New-PSSessionConfigurationFile` are optional, except for the **Path** parameter.</span></span>
-<span data-ttu-id="0693c-113">Wenn Sie einen Parameter weglassen, wird der entsprechende Schlüssel in der Sitzungskonfigurationsdatei auskommentiert, es sei denn, er wurde in der Parameterbeschreibung angegeben.</span><span class="sxs-lookup"><span data-stu-id="0693c-113">If you omit a parameter, the corresponding key in the session configuration file is commented-out, except where noted in the parameter description.</span></span>
+<span data-ttu-id="8229c-112">Alle Parameter von `New-PSSessionConfigurationFile` sind optional, mit Ausnahme des **path** -Parameters.</span><span class="sxs-lookup"><span data-stu-id="8229c-112">All parameters of `New-PSSessionConfigurationFile` are optional, except for the **Path** parameter.</span></span>
+<span data-ttu-id="8229c-113">Wenn Sie einen Parameter weglassen, wird der entsprechende Schlüssel in der Sitzungskonfigurationsdatei auskommentiert, es sei denn, er wurde in der Parameterbeschreibung angegeben.</span><span class="sxs-lookup"><span data-stu-id="8229c-113">If you omit a parameter, the corresponding key in the session configuration file is commented-out, except where noted in the parameter description.</span></span>
 
-<span data-ttu-id="0693c-114">Eine Sitzungs Konfiguration, auch als Endpunkt bezeichnet, ist eine Sammlung von Einstellungen auf dem lokalen Computer, die die Umgebung für PowerShell-Sitzungen ( **pssessions** ) definieren, die eine Verbindung mit dem Computer herstellen.</span><span class="sxs-lookup"><span data-stu-id="0693c-114">A session configuration, also known as an endpoint, is a collection of settings on the local computer that define the environment for PowerShell sessions ( **PSSessions** ) that connect to the computer.</span></span> <span data-ttu-id="0693c-115">Alle **pssessions** verwenden eine Sitzungs Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="0693c-115">All **PSSessions** use a session configuration.</span></span> <span data-ttu-id="0693c-116">Verwenden Sie zum Angeben einer bestimmten Sitzungs Konfiguration den **ConfigurationName** -Parameter von Cmdlets, die eine Sitzung erstellen, z `New-PSSession` . b. das Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="0693c-116">To specify a particular session configuration, use the **ConfigurationName** parameter of cmdlets that create a session, such as the `New-PSSession` cmdlet.</span></span>
+<span data-ttu-id="8229c-114">Eine Sitzungs Konfiguration, auch als Endpunkt bezeichnet, ist eine Sammlung von Einstellungen auf dem lokalen Computer, die die Umgebung für PowerShell-Sitzungen ( **pssessions** ) definieren, die eine Verbindung mit dem Computer herstellen.</span><span class="sxs-lookup"><span data-stu-id="8229c-114">A session configuration, also known as an endpoint, is a collection of settings on the local computer that define the environment for PowerShell sessions ( **PSSessions** ) that connect to the computer.</span></span> <span data-ttu-id="8229c-115">Alle **pssessions** verwenden eine Sitzungs Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="8229c-115">All **PSSessions** use a session configuration.</span></span> <span data-ttu-id="8229c-116">Verwenden Sie zum Angeben einer bestimmten Sitzungs Konfiguration den **ConfigurationName** -Parameter von Cmdlets, die eine Sitzung erstellen, z `New-PSSession` . b. das Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="8229c-116">To specify a particular session configuration, use the **ConfigurationName** parameter of cmdlets that create a session, such as the `New-PSSession` cmdlet.</span></span>
 
-<span data-ttu-id="0693c-117">Eine session configuration file erleichtert die Definition einer Sitzungskonfiguration ohne komplexe Skripts oder Codeassemblys.</span><span class="sxs-lookup"><span data-stu-id="0693c-117">A session configuration file makes it easy to define a session configuration without complex scripts or code assemblies.</span></span> <span data-ttu-id="0693c-118">Die Einstellungen in der Datei werden mit dem optionalen Startskript und allen Assemblys in der Sitzungs Konfiguration verwendet.</span><span class="sxs-lookup"><span data-stu-id="0693c-118">The settings in the file are used with the optional startup script and any assemblies in the session configuration.</span></span>
+<span data-ttu-id="8229c-117">Eine session configuration file erleichtert die Definition einer Sitzungskonfiguration ohne komplexe Skripts oder Codeassemblys.</span><span class="sxs-lookup"><span data-stu-id="8229c-117">A session configuration file makes it easy to define a session configuration without complex scripts or code assemblies.</span></span> <span data-ttu-id="8229c-118">Die Einstellungen in der Datei werden mit dem optionalen Startskript und allen Assemblys in der Sitzungs Konfiguration verwendet.</span><span class="sxs-lookup"><span data-stu-id="8229c-118">The settings in the file are used with the optional startup script and any assemblies in the session configuration.</span></span>
 
-<span data-ttu-id="0693c-119">Weitere Informationen zu Sitzungs Konfigurationen und Sitzungs Konfigurationsdateien finden Sie unter [about_Session_Configurations](About/about_Session_Configurations.md) und [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span><span class="sxs-lookup"><span data-stu-id="0693c-119">For more information about session configurations and session configuration files, see [about_Session_Configurations](About/about_Session_Configurations.md) and [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span></span>
+<span data-ttu-id="8229c-119">Weitere Informationen zu Sitzungs Konfigurationen und Sitzungs Konfigurationsdateien finden Sie unter [about_Session_Configurations](About/about_Session_Configurations.md) und [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span><span class="sxs-lookup"><span data-stu-id="8229c-119">For more information about session configurations and session configuration files, see [about_Session_Configurations](About/about_Session_Configurations.md) and [about_Session_Configuration_Files](About/about_Session_Configuration_Files.md).</span></span>
 
-<span data-ttu-id="0693c-120">Dieses Cmdlet wurde in PowerShell 3,0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="0693c-120">This cmdlet was introduced in PowerShell 3.0.</span></span>
+<span data-ttu-id="8229c-120">Dieses Cmdlet wurde in PowerShell 3,0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="8229c-120">This cmdlet was introduced in PowerShell 3.0.</span></span>
 
-## <span data-ttu-id="0693c-121">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="0693c-121">EXAMPLES</span></span>
+## <span data-ttu-id="8229c-121">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="8229c-121">EXAMPLES</span></span>
 
-### <span data-ttu-id="0693c-122">Beispiel 1: Erstellen und Verwenden einer nolanguage-Sitzung</span><span class="sxs-lookup"><span data-stu-id="0693c-122">Example 1: Creating and using a NoLanguage session</span></span>
+### <span data-ttu-id="8229c-122">Beispiel 1: Erstellen und Verwenden einer nolanguage-Sitzung</span><span class="sxs-lookup"><span data-stu-id="8229c-122">Example 1: Creating and using a NoLanguage session</span></span>
 
-<span data-ttu-id="0693c-123">In diesem Beispiel wird gezeigt, wie Sie die Verwendung einer Sitzungs basierten Sitzung und die Auswirkungen von erstellen können.</span><span class="sxs-lookup"><span data-stu-id="0693c-123">This example show how to create and the effects of using a no-language session.</span></span>
+<span data-ttu-id="8229c-123">In diesem Beispiel wird gezeigt, wie Sie die Verwendung einer Sitzungs basierten Sitzung und die Auswirkungen von erstellen können.</span><span class="sxs-lookup"><span data-stu-id="8229c-123">This example show how to create and the effects of using a no-language session.</span></span>
 
-<span data-ttu-id="0693c-124">Dazu müssen folgende Schritte ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="0693c-124">The steps include:</span></span>
+<span data-ttu-id="8229c-124">Dazu müssen folgende Schritte ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="8229c-124">The steps include:</span></span>
 
-1. <span data-ttu-id="0693c-125">Erstellen Sie eine neue Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="0693c-125">Create a new configuration file.</span></span>
-1. <span data-ttu-id="0693c-126">Registrieren Sie die Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="0693c-126">Register the configuration.</span></span>
-1. <span data-ttu-id="0693c-127">Erstellen Sie eine neue Sitzung, in der die-Konfiguration verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-127">Create a new session that uses the configuration.</span></span>
-1. <span data-ttu-id="0693c-128">Führt Befehle in dieser neuen Sitzung aus.</span><span class="sxs-lookup"><span data-stu-id="0693c-128">Run commands in that new session.</span></span>
+1. <span data-ttu-id="8229c-125">Erstellen Sie eine neue Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8229c-125">Create a new configuration file.</span></span>
+1. <span data-ttu-id="8229c-126">Registrieren Sie die Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="8229c-126">Register the configuration.</span></span>
+1. <span data-ttu-id="8229c-127">Erstellen Sie eine neue Sitzung, in der die-Konfiguration verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-127">Create a new session that uses the configuration.</span></span>
+1. <span data-ttu-id="8229c-128">Führt Befehle in dieser neuen Sitzung aus.</span><span class="sxs-lookup"><span data-stu-id="8229c-128">Run commands in that new session.</span></span>
 
-<span data-ttu-id="0693c-129">Um die Befehle in diesem Beispiel auszuführen, starten Sie PowerShell mit der Option als Administrator ausführen.</span><span class="sxs-lookup"><span data-stu-id="0693c-129">To run the commands in this example, start PowerShell by using the Run as administrator option.</span></span> <span data-ttu-id="0693c-130">Diese Option ist erforderlich, um das `Register-PSSessionConfiguration` Cmdlet auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0693c-130">This option is required to run the `Register-PSSessionConfiguration` cmdlet.</span></span>
+<span data-ttu-id="8229c-129">Um die Befehle in diesem Beispiel auszuführen, starten Sie PowerShell mit der Option als Administrator ausführen.</span><span class="sxs-lookup"><span data-stu-id="8229c-129">To run the commands in this example, start PowerShell by using the Run as administrator option.</span></span> <span data-ttu-id="8229c-130">Diese Option ist erforderlich, um das `Register-PSSessionConfiguration` Cmdlet auszuführen.</span><span class="sxs-lookup"><span data-stu-id="8229c-130">This option is required to run the `Register-PSSessionConfiguration` cmdlet.</span></span>
 
 ```powershell
 New-PSSessionConfigurationFile -Path .\NoLanguage.pssc -LanguageMode NoLanguage
@@ -85,20 +85,20 @@ The syntax is not supported by this runspace. This might be because it is in no-
     + PSComputerName        : localhost
 ```
 
-<span data-ttu-id="0693c-131">In diesem Beispiel schlägt der `Invoke-Command` fehl, da **languagemode** auf **nolanguage** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="0693c-131">In this example, the `Invoke-Command` fails because the **LanguageMode** is set to **NoLanguage** .</span></span>
+<span data-ttu-id="8229c-131">In diesem Beispiel schlägt der `Invoke-Command` fehl, da **languagemode** auf **nolanguage** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="8229c-131">In this example, the `Invoke-Command` fails because the **LanguageMode** is set to **NoLanguage**.</span></span>
 
-### <span data-ttu-id="0693c-132">Beispiel 2: Erstellen und Verwenden einer restrictedlanguage-Sitzung</span><span class="sxs-lookup"><span data-stu-id="0693c-132">Example 2: Creating and using a RestrictedLanguage session</span></span>
+### <span data-ttu-id="8229c-132">Beispiel 2: Erstellen und Verwenden einer restrictedlanguage-Sitzung</span><span class="sxs-lookup"><span data-stu-id="8229c-132">Example 2: Creating and using a RestrictedLanguage session</span></span>
 
-<span data-ttu-id="0693c-133">In diesem Beispiel wird gezeigt, wie Sie die Verwendung einer Sitzungs basierten Sitzung und die Auswirkungen von erstellen können.</span><span class="sxs-lookup"><span data-stu-id="0693c-133">This example show how to create and the effects of using a no-language session.</span></span>
+<span data-ttu-id="8229c-133">In diesem Beispiel wird gezeigt, wie Sie die Verwendung einer Sitzungs basierten Sitzung und die Auswirkungen von erstellen können.</span><span class="sxs-lookup"><span data-stu-id="8229c-133">This example show how to create and the effects of using a no-language session.</span></span>
 
-<span data-ttu-id="0693c-134">Dazu müssen folgende Schritte ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="0693c-134">The steps include:</span></span>
+<span data-ttu-id="8229c-134">Dazu müssen folgende Schritte ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="8229c-134">The steps include:</span></span>
 
-1. <span data-ttu-id="0693c-135">Erstellen Sie eine neue Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="0693c-135">Create a new configuration file.</span></span>
-1. <span data-ttu-id="0693c-136">Registrieren Sie die Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="0693c-136">Register the configuration.</span></span>
-1. <span data-ttu-id="0693c-137">Erstellen Sie eine neue Sitzung, in der die-Konfiguration verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-137">Create a new session that uses the configuration.</span></span>
-1. <span data-ttu-id="0693c-138">Führt Befehle in dieser neuen Sitzung aus.</span><span class="sxs-lookup"><span data-stu-id="0693c-138">Run commands in that new session.</span></span>
+1. <span data-ttu-id="8229c-135">Erstellen Sie eine neue Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8229c-135">Create a new configuration file.</span></span>
+1. <span data-ttu-id="8229c-136">Registrieren Sie die Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="8229c-136">Register the configuration.</span></span>
+1. <span data-ttu-id="8229c-137">Erstellen Sie eine neue Sitzung, in der die-Konfiguration verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-137">Create a new session that uses the configuration.</span></span>
+1. <span data-ttu-id="8229c-138">Führt Befehle in dieser neuen Sitzung aus.</span><span class="sxs-lookup"><span data-stu-id="8229c-138">Run commands in that new session.</span></span>
 
-<span data-ttu-id="0693c-139">Um die Befehle in diesem Beispiel auszuführen, starten Sie PowerShell mit der Option als Administrator ausführen.</span><span class="sxs-lookup"><span data-stu-id="0693c-139">To run the commands in this example, start PowerShell by using the Run as administrator option.</span></span> <span data-ttu-id="0693c-140">Diese Option ist erforderlich, um das `Register-PSSessionConfiguration` Cmdlet auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0693c-140">This option is required to run the `Register-PSSessionConfiguration` cmdlet.</span></span>
+<span data-ttu-id="8229c-139">Um die Befehle in diesem Beispiel auszuführen, starten Sie PowerShell mit der Option als Administrator ausführen.</span><span class="sxs-lookup"><span data-stu-id="8229c-139">To run the commands in this example, start PowerShell by using the Run as administrator option.</span></span> <span data-ttu-id="8229c-140">Diese Option ist erforderlich, um das `Register-PSSessionConfiguration` Cmdlet auszuführen.</span><span class="sxs-lookup"><span data-stu-id="8229c-140">This option is required to run the `Register-PSSessionConfiguration` cmdlet.</span></span>
 
 ```powershell
 New-PSSessionConfigurationFile -Path .\NoLanguage.pssc -LanguageMode RestrictedLanguage
@@ -113,31 +113,31 @@ Invoke-Command -Session $RestrictedSession -ScriptBlock {
 Before
 ```
 
-<span data-ttu-id="0693c-141">In diesem Beispiel `Invoke-Command` ist erfolgreich, da **languagemode** auf **restrictedlanguage** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="0693c-141">In this example, the `Invoke-Command` succeeds because the **LanguageMode** is set to **RestrictedLanguage** .</span></span>
+<span data-ttu-id="8229c-141">In diesem Beispiel `Invoke-Command` ist erfolgreich, da **languagemode** auf **restrictedlanguage** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="8229c-141">In this example, the `Invoke-Command` succeeds because the **LanguageMode** is set to **RestrictedLanguage**.</span></span>
 
-### <span data-ttu-id="0693c-142">Beispiel 3: Ändern einer Sitzungs Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="0693c-142">Example 3: Changing a Session Configuration File</span></span>
+### <span data-ttu-id="8229c-142">Beispiel 3: Ändern einer Sitzungs Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="8229c-142">Example 3: Changing a Session Configuration File</span></span>
 
-<span data-ttu-id="0693c-143">Dieses Beispiel zeigt, wie Sie die Sitzungs Konfigurationsdatei ändern können, die in einer vorhandenen Sitzung namens "ittasks" verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-143">This example shows how to change the session configuration file that is used in an existing session named "ITTasks".</span></span> <span data-ttu-id="0693c-144">Bisher verfügten diese Sitzungen nur über die Kernmodule und über ein internes **ittasks** -Modul.</span><span class="sxs-lookup"><span data-stu-id="0693c-144">Previously, these sessions had only the core modules and an internal **ITTasks** module.</span></span> <span data-ttu-id="0693c-145">Der Administrator möchte das **psscheduledjob** -Modul zu Sitzungen hinzufügen, die mit der ittasks-Sitzungs Konfiguration erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="0693c-145">The administrator wants to add the **PSScheduledJob** module to sessions created by using the ITTasks session configuration.</span></span>
+<span data-ttu-id="8229c-143">Dieses Beispiel zeigt, wie Sie die Sitzungs Konfigurationsdatei ändern können, die in einer vorhandenen Sitzung namens "ittasks" verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-143">This example shows how to change the session configuration file that is used in an existing session named "ITTasks".</span></span> <span data-ttu-id="8229c-144">Bisher verfügten diese Sitzungen nur über die Kernmodule und über ein internes **ittasks** -Modul.</span><span class="sxs-lookup"><span data-stu-id="8229c-144">Previously, these sessions had only the core modules and an internal **ITTasks** module.</span></span> <span data-ttu-id="8229c-145">Der Administrator möchte das **psscheduledjob** -Modul zu Sitzungen hinzufügen, die mit der ittasks-Sitzungs Konfiguration erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="8229c-145">The administrator wants to add the **PSScheduledJob** module to sessions created by using the ITTasks session configuration.</span></span>
 
 ```powershell
 New-PSSessionConfigurationFile -Path .\New-ITTasks.pssc -ModulesToImport Microsoft*, ITTasks, PSScheduledJob
 Set-PSSessionConfiguration -Name ITTasks -Path .\New-ITTasks.pssc
 ```
 
-<span data-ttu-id="0693c-146">Mit dem- `New-PSSessionConfigurationFile` Cmdlet können Sie eine Sitzungs Konfigurationsdatei erstellen, mit der die erforderlichen Module importiert werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-146">The `New-PSSessionConfigurationFile` cmdlet to create a session configuration file that imports the required modules.</span></span> <span data-ttu-id="0693c-147">Mit dem- `Set-PSSessionConfiguration` Cmdlet wird die aktuelle Konfigurationsdatei durch die neue ersetzt.</span><span class="sxs-lookup"><span data-stu-id="0693c-147">The `Set-PSSessionConfiguration` cmdlet replaces the current configuration file with the new one.</span></span> <span data-ttu-id="0693c-148">Diese neue Konfiguration wirkt sich nur auf neue Sitzungen aus, die nach der Änderung erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="0693c-148">This new configuration only affects new sessions created after the change.</span></span>
-<span data-ttu-id="0693c-149">Vorhandene ittasks-Sitzungen sind nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="0693c-149">Existing "ITTasks" sessions are not affected.</span></span>
+<span data-ttu-id="8229c-146">Mit dem- `New-PSSessionConfigurationFile` Cmdlet können Sie eine Sitzungs Konfigurationsdatei erstellen, mit der die erforderlichen Module importiert werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-146">The `New-PSSessionConfigurationFile` cmdlet to create a session configuration file that imports the required modules.</span></span> <span data-ttu-id="8229c-147">Mit dem- `Set-PSSessionConfiguration` Cmdlet wird die aktuelle Konfigurationsdatei durch die neue ersetzt.</span><span class="sxs-lookup"><span data-stu-id="8229c-147">The `Set-PSSessionConfiguration` cmdlet replaces the current configuration file with the new one.</span></span> <span data-ttu-id="8229c-148">Diese neue Konfiguration wirkt sich nur auf neue Sitzungen aus, die nach der Änderung erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="8229c-148">This new configuration only affects new sessions created after the change.</span></span>
+<span data-ttu-id="8229c-149">Vorhandene ittasks-Sitzungen sind nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="8229c-149">Existing "ITTasks" sessions are not affected.</span></span>
 
-### <span data-ttu-id="0693c-150">Beispiel 4: Bearbeiten einer Sitzungs Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="0693c-150">Example 4: Editing a Session Configuration File</span></span>
+### <span data-ttu-id="8229c-150">Beispiel 4: Bearbeiten einer Sitzungs Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="8229c-150">Example 4: Editing a Session Configuration File</span></span>
 
-<span data-ttu-id="0693c-151">In diesem Beispiel wird veranschaulicht, wie Sie eine Sitzungskonfiguration durch Bearbeiten der aktiven Sitzungskonfigurationskopie der Konfigurationsdatei ändern können.</span><span class="sxs-lookup"><span data-stu-id="0693c-151">This example shows how to change a session configuration by editing the active session configuration copy of the configuration file.</span></span> <span data-ttu-id="0693c-152">Um die Sitzungs Konfigurationskopie der Konfigurationsdatei zu ändern, müssen Sie über Vollzugriff auf die Datei verfügen.</span><span class="sxs-lookup"><span data-stu-id="0693c-152">To modify the session configuration copy of the configuration file, you must have full control access to the file.</span></span> <span data-ttu-id="0693c-153">Dies erfordert möglicherweise das Ändern der Berechtigungen für die Datei.</span><span class="sxs-lookup"><span data-stu-id="0693c-153">This may require you to change the permissions on the file.</span></span>
+<span data-ttu-id="8229c-151">In diesem Beispiel wird veranschaulicht, wie Sie eine Sitzungskonfiguration durch Bearbeiten der aktiven Sitzungskonfigurationskopie der Konfigurationsdatei ändern können.</span><span class="sxs-lookup"><span data-stu-id="8229c-151">This example shows how to change a session configuration by editing the active session configuration copy of the configuration file.</span></span> <span data-ttu-id="8229c-152">Um die Sitzungs Konfigurationskopie der Konfigurationsdatei zu ändern, müssen Sie über Vollzugriff auf die Datei verfügen.</span><span class="sxs-lookup"><span data-stu-id="8229c-152">To modify the session configuration copy of the configuration file, you must have full control access to the file.</span></span> <span data-ttu-id="8229c-153">Dies erfordert möglicherweise das Ändern der Berechtigungen für die Datei.</span><span class="sxs-lookup"><span data-stu-id="8229c-153">This may require you to change the permissions on the file.</span></span>
 
-<span data-ttu-id="0693c-154">In diesem Szenario möchten wir einen neuen Alias für das `Select-String` Cmdlet hinzufügen, indem wir die aktive Konfigurationsdatei bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="0693c-154">In this scenario, we want to add a new alias for the `Select-String` cmdlet by editing the active configuration file.</span></span>
+<span data-ttu-id="8229c-154">In diesem Szenario möchten wir einen neuen Alias für das `Select-String` Cmdlet hinzufügen, indem wir die aktive Konfigurationsdatei bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="8229c-154">In this scenario, we want to add a new alias for the `Select-String` cmdlet by editing the active configuration file.</span></span>
 
-<span data-ttu-id="0693c-155">Der folgende Beispielcode führt die folgenden Schritte aus, um diese Änderung vorzunehmen:</span><span class="sxs-lookup"><span data-stu-id="0693c-155">The example code below performs the following steps to make this change:</span></span>
+<span data-ttu-id="8229c-155">Der folgende Beispielcode führt die folgenden Schritte aus, um diese Änderung vorzunehmen:</span><span class="sxs-lookup"><span data-stu-id="8229c-155">The example code below performs the following steps to make this change:</span></span>
 
-1. <span data-ttu-id="0693c-156">Den Pfad der Konfigurationsdatei für die ITconfig-Sitzung erhalten.</span><span class="sxs-lookup"><span data-stu-id="0693c-156">Get the configuration file path for the ITConfig session.</span></span>
-1. <span data-ttu-id="0693c-157">Der Benutzer bearbeitet die Konfigurationsdatei mit **Notepad.exe** , um den **aliasdefinitions** -Wert wie folgt zu ändern: `AliasDefinitions = @(@{Name='slst';Value='Select-String'})` .</span><span class="sxs-lookup"><span data-stu-id="0693c-157">The user edits the configuration file using **Notepad.exe** to change the **AliasDefinitions** value as follows: `AliasDefinitions = @(@{Name='slst';Value='Select-String'})`.</span></span>
-1. <span data-ttu-id="0693c-158">Testen Sie die aktualisierte Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="0693c-158">Test the updated configuration file.</span></span>
+1. <span data-ttu-id="8229c-156">Den Pfad der Konfigurationsdatei für die ITconfig-Sitzung erhalten.</span><span class="sxs-lookup"><span data-stu-id="8229c-156">Get the configuration file path for the ITConfig session.</span></span>
+1. <span data-ttu-id="8229c-157">Der Benutzer bearbeitet die Konfigurationsdatei mit **Notepad.exe** , um den **aliasdefinitions** -Wert wie folgt zu ändern: `AliasDefinitions = @(@{Name='slst';Value='Select-String'})` .</span><span class="sxs-lookup"><span data-stu-id="8229c-157">The user edits the configuration file using **Notepad.exe** to change the **AliasDefinitions** value as follows: `AliasDefinitions = @(@{Name='slst';Value='Select-String'})`.</span></span>
+1. <span data-ttu-id="8229c-158">Testen Sie die aktualisierte Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8229c-158">Test the updated configuration file.</span></span>
 
 ```powershell
 $ITConfig = Get-PSSessionConfiguration -Name ITConfig
@@ -149,14 +149,14 @@ Test-PSSessionConfigurationFile -Path $ITConfig.ConfigFilePath
 True
 ```
 
-<span data-ttu-id="0693c-159">Verwenden Sie den **verbose** -Parameter mit `Test-PSSessionConfigurationFile` , um alle erkannten Fehler anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="0693c-159">Use the **Verbose** parameter with `Test-PSSessionConfigurationFile` to display any errors that are detected.</span></span> <span data-ttu-id="0693c-160">Das-Cmdlet gibt zurück, `$True` Wenn keine Fehler in der Datei erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-160">The cmdlet returns `$True` if no errors are detected in the file.</span></span>
+<span data-ttu-id="8229c-159">Verwenden Sie den **verbose** -Parameter mit `Test-PSSessionConfigurationFile` , um alle erkannten Fehler anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="8229c-159">Use the **Verbose** parameter with `Test-PSSessionConfigurationFile` to display any errors that are detected.</span></span> <span data-ttu-id="8229c-160">Das-Cmdlet gibt zurück, `$True` Wenn keine Fehler in der Datei erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-160">The cmdlet returns `$True` if no errors are detected in the file.</span></span>
 
-### <span data-ttu-id="0693c-161">Beispiel 5: Erstellen einer Beispielkonfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="0693c-161">Example 5: Create a sample configuration file</span></span>
+### <span data-ttu-id="8229c-161">Beispiel 5: Erstellen einer Beispielkonfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="8229c-161">Example 5: Create a sample configuration file</span></span>
 
-<span data-ttu-id="0693c-162">Dieses Beispiel zeigt einen `New-PSSessionConfigurationFile` Befehl, der alle Cmdlet-Parameter verwendet.</span><span class="sxs-lookup"><span data-stu-id="0693c-162">This example shows a `New-PSSessionConfigurationFile` command that uses all the cmdlet parameters.</span></span>
-<span data-ttu-id="0693c-163">Er wurde angegeben, um das richtige Eingabeformat für jeden Parameter zu zeigen.</span><span class="sxs-lookup"><span data-stu-id="0693c-163">It is included to show the correct input format for each parameter.</span></span>
+<span data-ttu-id="8229c-162">Dieses Beispiel zeigt einen `New-PSSessionConfigurationFile` Befehl, der alle Cmdlet-Parameter verwendet.</span><span class="sxs-lookup"><span data-stu-id="8229c-162">This example shows a `New-PSSessionConfigurationFile` command that uses all the cmdlet parameters.</span></span>
+<span data-ttu-id="8229c-163">Er wurde angegeben, um das richtige Eingabeformat für jeden Parameter zu zeigen.</span><span class="sxs-lookup"><span data-stu-id="8229c-163">It is included to show the correct input format for each parameter.</span></span>
 
-<span data-ttu-id="0693c-164">Die resultierende SampleFile.pssc wird in der Ausgabe angezeigt.</span><span class="sxs-lookup"><span data-stu-id="0693c-164">The resulting SampleFile.pssc is displayed in the output.</span></span>
+<span data-ttu-id="8229c-164">Die resultierende SampleFile.pssc wird in der Ausgabe angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8229c-164">The resulting SampleFile.pssc is displayed in the output.</span></span>
 
 ```powershell
 $configSettings = @{
@@ -295,18 +295,18 @@ AssembliesToLoad = 'System.Web.Services', 'FSharp.Compiler.CodeDom.dll'
 }
 ```
 
-## <span data-ttu-id="0693c-165">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="0693c-165">PARAMETERS</span></span>
+## <span data-ttu-id="8229c-165">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8229c-165">PARAMETERS</span></span>
 
-### <span data-ttu-id="0693c-166">-Aliasdefinitionen</span><span class="sxs-lookup"><span data-stu-id="0693c-166">-AliasDefinitions</span></span>
+### <span data-ttu-id="8229c-166">-Aliasdefinitionen</span><span class="sxs-lookup"><span data-stu-id="8229c-166">-AliasDefinitions</span></span>
 
-<span data-ttu-id="0693c-167">Fügt die angegebenen Aliase zu Sitzungen hinzu, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-167">Adds the specified aliases to sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-168">Geben Sie eine Hashtabelle mit den folgenden Schlüsseln ein:</span><span class="sxs-lookup"><span data-stu-id="0693c-168">Enter a hash table with the following keys:</span></span>
+<span data-ttu-id="8229c-167">Fügt die angegebenen Aliase zu Sitzungen hinzu, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-167">Adds the specified aliases to sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-168">Geben Sie eine Hashtabelle mit den folgenden Schlüsseln ein:</span><span class="sxs-lookup"><span data-stu-id="8229c-168">Enter a hash table with the following keys:</span></span>
 
-- <span data-ttu-id="0693c-169">Name: Name des Alias.</span><span class="sxs-lookup"><span data-stu-id="0693c-169">Name - Name of the alias.</span></span> <span data-ttu-id="0693c-170">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-170">This key is required.</span></span>
-- <span data-ttu-id="0693c-171">Value: der Befehl, den der Alias darstellt.</span><span class="sxs-lookup"><span data-stu-id="0693c-171">Value - The command that the alias represents.</span></span> <span data-ttu-id="0693c-172">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-172">This key is required.</span></span>
-- <span data-ttu-id="0693c-173">Description: eine Text Zeichenfolge, die den Alias beschreibt.</span><span class="sxs-lookup"><span data-stu-id="0693c-173">Description - A text string that describes the alias.</span></span> <span data-ttu-id="0693c-174">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="0693c-174">This key is optional.</span></span>
-- <span data-ttu-id="0693c-175">Optionen: Alias Optionen.</span><span class="sxs-lookup"><span data-stu-id="0693c-175">Options - Alias options.</span></span> <span data-ttu-id="0693c-176">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="0693c-176">This key is optional.</span></span> <span data-ttu-id="0693c-177">Der Standardwert ist " **None** ".</span><span class="sxs-lookup"><span data-stu-id="0693c-177">The default value is **None** .</span></span> <span data-ttu-id="0693c-178">Die zulässigen Werte für diesen Parameter lauten: None, Read Only, Constant, private oder allscope.</span><span class="sxs-lookup"><span data-stu-id="0693c-178">The acceptable values for this parameter are: None, ReadOnly, Constant, Private, or AllScope.</span></span>
+- <span data-ttu-id="8229c-169">Name: Name des Alias.</span><span class="sxs-lookup"><span data-stu-id="8229c-169">Name - Name of the alias.</span></span> <span data-ttu-id="8229c-170">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-170">This key is required.</span></span>
+- <span data-ttu-id="8229c-171">Value: der Befehl, den der Alias darstellt.</span><span class="sxs-lookup"><span data-stu-id="8229c-171">Value - The command that the alias represents.</span></span> <span data-ttu-id="8229c-172">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-172">This key is required.</span></span>
+- <span data-ttu-id="8229c-173">Description: eine Text Zeichenfolge, die den Alias beschreibt.</span><span class="sxs-lookup"><span data-stu-id="8229c-173">Description - A text string that describes the alias.</span></span> <span data-ttu-id="8229c-174">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="8229c-174">This key is optional.</span></span>
+- <span data-ttu-id="8229c-175">Optionen: Alias Optionen.</span><span class="sxs-lookup"><span data-stu-id="8229c-175">Options - Alias options.</span></span> <span data-ttu-id="8229c-176">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="8229c-176">This key is optional.</span></span> <span data-ttu-id="8229c-177">Der Standardwert ist " **None** ".</span><span class="sxs-lookup"><span data-stu-id="8229c-177">The default value is **None**.</span></span> <span data-ttu-id="8229c-178">Die zulässigen Werte für diesen Parameter lauten: None, Read Only, Constant, private oder allscope.</span><span class="sxs-lookup"><span data-stu-id="8229c-178">The acceptable values for this parameter are: None, ReadOnly, Constant, Private, or AllScope.</span></span>
 
-<span data-ttu-id="0693c-179">Beispiel: `@{Name='hlp';Value='Get-Help';Description='Gets help';Options='ReadOnly'}`</span><span class="sxs-lookup"><span data-stu-id="0693c-179">For example: `@{Name='hlp';Value='Get-Help';Description='Gets help';Options='ReadOnly'}`</span></span>
+<span data-ttu-id="8229c-179">Beispiel: `@{Name='hlp';Value='Get-Help';Description='Gets help';Options='ReadOnly'}`</span><span class="sxs-lookup"><span data-stu-id="8229c-179">For example: `@{Name='hlp';Value='Get-Help';Description='Gets help';Options='ReadOnly'}`</span></span>
 
 ```yaml
 Type: System.Collections.IDictionary[]
@@ -320,9 +320,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-180">-Assemliestoload</span><span class="sxs-lookup"><span data-stu-id="0693c-180">-AssembliesToLoad</span></span>
+### <span data-ttu-id="8229c-180">-Assemliestoload</span><span class="sxs-lookup"><span data-stu-id="8229c-180">-AssembliesToLoad</span></span>
 
-<span data-ttu-id="0693c-181">Gibt die Assemblys an, die in die Sitzungen geladen werden sollen und die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-181">Specifies the assemblies to load into the sessions that use the session configuration.</span></span>
+<span data-ttu-id="8229c-181">Gibt die Assemblys an, die in die Sitzungen geladen werden sollen und die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-181">Specifies the assemblies to load into the sessions that use the session configuration.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -336,9 +336,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-182">-Autor</span><span class="sxs-lookup"><span data-stu-id="0693c-182">-Author</span></span>
+### <span data-ttu-id="8229c-182">-Autor</span><span class="sxs-lookup"><span data-stu-id="8229c-182">-Author</span></span>
 
-<span data-ttu-id="0693c-183">Gibt den Autor der Sitzungs Konfiguration oder der Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="0693c-183">Specifies the author of the session configuration or the configuration file.</span></span> <span data-ttu-id="0693c-184">Der Standardwert ist der aktuelle Benutzer.</span><span class="sxs-lookup"><span data-stu-id="0693c-184">The default is the current user.</span></span> <span data-ttu-id="0693c-185">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="0693c-185">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
+<span data-ttu-id="8229c-183">Gibt den Autor der Sitzungs Konfiguration oder der Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="8229c-183">Specifies the author of the session configuration or the configuration file.</span></span> <span data-ttu-id="8229c-184">Der Standardwert ist der aktuelle Benutzer.</span><span class="sxs-lookup"><span data-stu-id="8229c-184">The default is the current user.</span></span> <span data-ttu-id="8229c-185">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="8229c-185">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
 
 ```yaml
 Type: System.String
@@ -352,9 +352,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-186">-CompanyName</span><span class="sxs-lookup"><span data-stu-id="0693c-186">-CompanyName</span></span>
+### <span data-ttu-id="8229c-186">-CompanyName</span><span class="sxs-lookup"><span data-stu-id="8229c-186">-CompanyName</span></span>
 
-<span data-ttu-id="0693c-187">Gibt das Unternehmen an, das die Sitzungs Konfiguration oder die Konfigurationsdatei erstellt hat.</span><span class="sxs-lookup"><span data-stu-id="0693c-187">Specifies the company that created the session configuration or the configuration file.</span></span> <span data-ttu-id="0693c-188">Der Standardwert ist **Unknown** (Unbekannt).</span><span class="sxs-lookup"><span data-stu-id="0693c-188">The default value is **Unknown** .</span></span> <span data-ttu-id="0693c-189">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="0693c-189">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
+<span data-ttu-id="8229c-187">Gibt das Unternehmen an, das die Sitzungs Konfiguration oder die Konfigurationsdatei erstellt hat.</span><span class="sxs-lookup"><span data-stu-id="8229c-187">Specifies the company that created the session configuration or the configuration file.</span></span> <span data-ttu-id="8229c-188">Der Standardwert ist **Unknown** (Unbekannt).</span><span class="sxs-lookup"><span data-stu-id="8229c-188">The default value is **Unknown**.</span></span> <span data-ttu-id="8229c-189">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="8229c-189">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
 
 ```yaml
 Type: System.String
@@ -368,27 +368,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-190">-Copyright</span><span class="sxs-lookup"><span data-stu-id="0693c-190">-Copyright</span></span>
+### <span data-ttu-id="8229c-190">-Copyright</span><span class="sxs-lookup"><span data-stu-id="8229c-190">-Copyright</span></span>
 
-<span data-ttu-id="0693c-191">Gibt ein Copyright der Sitzungs Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="0693c-191">Specifies a copyright the session configuration file.</span></span> <span data-ttu-id="0693c-192">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="0693c-192">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
+<span data-ttu-id="8229c-191">Gibt ein Copyright der Sitzungs Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="8229c-191">Specifies a copyright the session configuration file.</span></span> <span data-ttu-id="8229c-192">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="8229c-192">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
 
-<span data-ttu-id="0693c-193">Wenn Sie diesen Parameter weglassen, `New-PSSessionConfigurationFile` generiert eine Copyright Anweisung mit dem Wert des **Author** -Parameters.</span><span class="sxs-lookup"><span data-stu-id="0693c-193">If you omit this parameter, `New-PSSessionConfigurationFile` generates a copyright statement by using the value of the **Author** parameter.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="0693c-194">-Description</span><span class="sxs-lookup"><span data-stu-id="0693c-194">-Description</span></span>
-
-<span data-ttu-id="0693c-195">Gibt eine Beschreibung der Sitzungs Konfiguration oder der Sitzungs Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="0693c-195">Specifies a description of the session configuration or the session configuration file.</span></span> <span data-ttu-id="0693c-196">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="0693c-196">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
+<span data-ttu-id="8229c-193">Wenn Sie diesen Parameter weglassen, `New-PSSessionConfigurationFile` generiert eine Copyright Anweisung mit dem Wert des **Author** -Parameters.</span><span class="sxs-lookup"><span data-stu-id="8229c-193">If you omit this parameter, `New-PSSessionConfigurationFile` generates a copyright statement by using the value of the **Author** parameter.</span></span>
 
 ```yaml
 Type: System.String
@@ -402,11 +386,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-197">-Umgebungsvariablen</span><span class="sxs-lookup"><span data-stu-id="0693c-197">-EnvironmentVariables</span></span>
+### <span data-ttu-id="8229c-194">-Description</span><span class="sxs-lookup"><span data-stu-id="8229c-194">-Description</span></span>
 
-<span data-ttu-id="0693c-198">Fügt der Sitzung Umgebungsvariablen hinzu.</span><span class="sxs-lookup"><span data-stu-id="0693c-198">Adds environment variables to the session.</span></span> <span data-ttu-id="0693c-199">Geben Sie eine Hashtabelle ein, in der die Schlüssel die Namen der Umgebungsvariablen und die Werte die Werte der Umgebungsvariablen sind.</span><span class="sxs-lookup"><span data-stu-id="0693c-199">Enter a hash table in which the keys are the environment variable names and the values are the environment variable values.</span></span>
+<span data-ttu-id="8229c-195">Gibt eine Beschreibung der Sitzungs Konfiguration oder der Sitzungs Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="8229c-195">Specifies a description of the session configuration or the session configuration file.</span></span> <span data-ttu-id="8229c-196">Der Wert dieses Parameters wird in der Sitzungskonfigurationsdatei angezeigt, aber es handelt sich nicht um eine Eigenschaft des Sitzungskonfigurationsobjekts.</span><span class="sxs-lookup"><span data-stu-id="8229c-196">The value of this parameter is visible in the session configuration file, but it is not a property of the session configuration object.</span></span>
 
-<span data-ttu-id="0693c-200">Beispiel: `EnvironmentVariables=@{TestShare='\\Server01\TestShare'}`</span><span class="sxs-lookup"><span data-stu-id="0693c-200">For example: `EnvironmentVariables=@{TestShare='\\Server01\TestShare'}`</span></span>
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8229c-197">-Umgebungsvariablen</span><span class="sxs-lookup"><span data-stu-id="8229c-197">-EnvironmentVariables</span></span>
+
+<span data-ttu-id="8229c-198">Fügt der Sitzung Umgebungsvariablen hinzu.</span><span class="sxs-lookup"><span data-stu-id="8229c-198">Adds environment variables to the session.</span></span> <span data-ttu-id="8229c-199">Geben Sie eine Hashtabelle ein, in der die Schlüssel die Namen der Umgebungsvariablen und die Werte die Werte der Umgebungsvariablen sind.</span><span class="sxs-lookup"><span data-stu-id="8229c-199">Enter a hash table in which the keys are the environment variable names and the values are the environment variable values.</span></span>
+
+<span data-ttu-id="8229c-200">Beispiel: `EnvironmentVariables=@{TestShare='\\Server01\TestShare'}`</span><span class="sxs-lookup"><span data-stu-id="8229c-200">For example: `EnvironmentVariables=@{TestShare='\\Server01\TestShare'}`</span></span>
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -420,9 +420,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-201">-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="0693c-201">-ExecutionPolicy</span></span>
+### <span data-ttu-id="8229c-201">-ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="8229c-201">-ExecutionPolicy</span></span>
 
-<span data-ttu-id="0693c-202">Bestimmt die Ausführungsrichtlinie von Sitzungen, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-202">Specifies the execution policy of sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-203">Wenn Sie diesen Parameter weglassen, ist der Wert des **ExecutionPolicy** -Schlüssels in der Sitzungs Konfigurationsdatei **eingeschränkt** .</span><span class="sxs-lookup"><span data-stu-id="0693c-203">If you omit this parameter, the value of the **ExecutionPolicy** key in the session configuration file is **Restricted** .</span></span> <span data-ttu-id="0693c-204">Informationen zu Ausführungsrichtlinien in PowerShell finden Sie unter [about_Execution_Policies](about/about_Execution_Policies.md).</span><span class="sxs-lookup"><span data-stu-id="0693c-204">For information about execution policies in PowerShell, see [about_Execution_Policies](about/about_Execution_Policies.md).</span></span>
+<span data-ttu-id="8229c-202">Bestimmt die Ausführungsrichtlinie von Sitzungen, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-202">Specifies the execution policy of sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-203">Wenn Sie diesen Parameter weglassen, ist der Wert des **ExecutionPolicy** -Schlüssels in der Sitzungs Konfigurationsdatei **eingeschränkt**.</span><span class="sxs-lookup"><span data-stu-id="8229c-203">If you omit this parameter, the value of the **ExecutionPolicy** key in the session configuration file is **Restricted**.</span></span> <span data-ttu-id="8229c-204">Informationen zu Ausführungsrichtlinien in PowerShell finden Sie unter [about_Execution_Policies](about/about_Execution_Policies.md).</span><span class="sxs-lookup"><span data-stu-id="8229c-204">For information about execution policies in PowerShell, see [about_Execution_Policies](about/about_Execution_Policies.md).</span></span>
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicy
@@ -437,10 +437,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-205">-Formatstoprocess</span><span class="sxs-lookup"><span data-stu-id="0693c-205">-FormatsToProcess</span></span>
+### <span data-ttu-id="8229c-205">-Formatstoprocess</span><span class="sxs-lookup"><span data-stu-id="8229c-205">-FormatsToProcess</span></span>
 
-<span data-ttu-id="0693c-206">Gibt die Formatierungsdateien (.ps1xml) an, die in Sitzungen ausgeführt werden, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-206">Specifies the formatting files (.ps1xml) that run in sessions that use the session configuration.</span></span>
-<span data-ttu-id="0693c-207">Der Wert dieses Parameters muss ein vollständiger oder absoluter Pfad der Formatierungs Dateien sein.</span><span class="sxs-lookup"><span data-stu-id="0693c-207">The value of this parameter must be a full or absolute path of the formatting files.</span></span>
+<span data-ttu-id="8229c-206">Gibt die Formatierungsdateien (.ps1xml) an, die in Sitzungen ausgeführt werden, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-206">Specifies the formatting files (.ps1xml) that run in sessions that use the session configuration.</span></span>
+<span data-ttu-id="8229c-207">Der Wert dieses Parameters muss ein vollständiger oder absoluter Pfad der Formatierungs Dateien sein.</span><span class="sxs-lookup"><span data-stu-id="8229c-207">The value of this parameter must be a full or absolute path of the formatting files.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -454,9 +454,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-208">-Full</span><span class="sxs-lookup"><span data-stu-id="0693c-208">-Full</span></span>
+### <span data-ttu-id="8229c-208">-Full</span><span class="sxs-lookup"><span data-stu-id="8229c-208">-Full</span></span>
 
-<span data-ttu-id="0693c-209">Gibt an, dass dieser Vorgang alle möglichen Konfigurations Eigenschaften in der Sitzungs Konfigurationsdatei enthält.</span><span class="sxs-lookup"><span data-stu-id="0693c-209">Indicates that this operation includes all possible configuration properties in the session configuration file.</span></span>
+<span data-ttu-id="8229c-209">Gibt an, dass dieser Vorgang alle möglichen Konfigurations Eigenschaften in der Sitzungs Konfigurationsdatei enthält.</span><span class="sxs-lookup"><span data-stu-id="8229c-209">Indicates that this operation includes all possible configuration properties in the session configuration file.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -470,15 +470,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-210">-Functiondefinitions</span><span class="sxs-lookup"><span data-stu-id="0693c-210">-FunctionDefinitions</span></span>
+### <span data-ttu-id="8229c-210">-Functiondefinitions</span><span class="sxs-lookup"><span data-stu-id="8229c-210">-FunctionDefinitions</span></span>
 
-<span data-ttu-id="0693c-211">Fügt Sitzungen, die die Sitzungskonfiguration verwenden, die angegebenen Funktionen hinzu.</span><span class="sxs-lookup"><span data-stu-id="0693c-211">Adds the specified functions to sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-212">Geben Sie eine Hashtabelle mit den folgenden Schlüsseln ein:</span><span class="sxs-lookup"><span data-stu-id="0693c-212">Enter a hash table with the following keys:</span></span>
+<span data-ttu-id="8229c-211">Fügt Sitzungen, die die Sitzungskonfiguration verwenden, die angegebenen Funktionen hinzu.</span><span class="sxs-lookup"><span data-stu-id="8229c-211">Adds the specified functions to sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-212">Geben Sie eine Hashtabelle mit den folgenden Schlüsseln ein:</span><span class="sxs-lookup"><span data-stu-id="8229c-212">Enter a hash table with the following keys:</span></span>
 
-- <span data-ttu-id="0693c-213">Name: der Name der Funktion.</span><span class="sxs-lookup"><span data-stu-id="0693c-213">Name - Name of the function.</span></span> <span data-ttu-id="0693c-214">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-214">This key is required.</span></span>
-- <span data-ttu-id="0693c-215">ScriptBlock-Funktions Text.</span><span class="sxs-lookup"><span data-stu-id="0693c-215">ScriptBlock - Function body.</span></span> <span data-ttu-id="0693c-216">Geben Sie einen Skriptblock ein.</span><span class="sxs-lookup"><span data-stu-id="0693c-216">Enter a script block.</span></span> <span data-ttu-id="0693c-217">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-217">This key is required.</span></span>
-- <span data-ttu-id="0693c-218">Optionen: Funktions Optionen.</span><span class="sxs-lookup"><span data-stu-id="0693c-218">Options - Function options.</span></span> <span data-ttu-id="0693c-219">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="0693c-219">This key is optional.</span></span> <span data-ttu-id="0693c-220">Der Standardwert ist " **None** ".</span><span class="sxs-lookup"><span data-stu-id="0693c-220">The default value is **None** .</span></span> <span data-ttu-id="0693c-221">Die zulässigen Werte für diesen Parameter lauten: None, Read Only, Constant, private oder allscope.</span><span class="sxs-lookup"><span data-stu-id="0693c-221">The acceptable values for this parameter are: None, ReadOnly, Constant, Private, or AllScope.</span></span>
+- <span data-ttu-id="8229c-213">Name: der Name der Funktion.</span><span class="sxs-lookup"><span data-stu-id="8229c-213">Name - Name of the function.</span></span> <span data-ttu-id="8229c-214">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-214">This key is required.</span></span>
+- <span data-ttu-id="8229c-215">ScriptBlock-Funktions Text.</span><span class="sxs-lookup"><span data-stu-id="8229c-215">ScriptBlock - Function body.</span></span> <span data-ttu-id="8229c-216">Geben Sie einen Skriptblock ein.</span><span class="sxs-lookup"><span data-stu-id="8229c-216">Enter a script block.</span></span> <span data-ttu-id="8229c-217">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-217">This key is required.</span></span>
+- <span data-ttu-id="8229c-218">Optionen: Funktions Optionen.</span><span class="sxs-lookup"><span data-stu-id="8229c-218">Options - Function options.</span></span> <span data-ttu-id="8229c-219">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="8229c-219">This key is optional.</span></span> <span data-ttu-id="8229c-220">Der Standardwert ist " **None** ".</span><span class="sxs-lookup"><span data-stu-id="8229c-220">The default value is **None**.</span></span> <span data-ttu-id="8229c-221">Die zulässigen Werte für diesen Parameter lauten: None, Read Only, Constant, private oder allscope.</span><span class="sxs-lookup"><span data-stu-id="8229c-221">The acceptable values for this parameter are: None, ReadOnly, Constant, Private, or AllScope.</span></span>
 
-<span data-ttu-id="0693c-222">Beispiel: `@{Name='Get-PowerShellProcess';ScriptBlock={Get-Process PowerShell};Options='AllScope'}`</span><span class="sxs-lookup"><span data-stu-id="0693c-222">For example: `@{Name='Get-PowerShellProcess';ScriptBlock={Get-Process PowerShell};Options='AllScope'}`</span></span>
+<span data-ttu-id="8229c-222">Beispiel: `@{Name='Get-PowerShellProcess';ScriptBlock={Get-Process PowerShell};Options='AllScope'}`</span><span class="sxs-lookup"><span data-stu-id="8229c-222">For example: `@{Name='Get-PowerShellProcess';ScriptBlock={Get-Process PowerShell};Options='AllScope'}`</span></span>
 
 ```yaml
 Type: System.Collections.IDictionary[]
@@ -492,9 +492,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-223">-Groupmanagedserviceaccount</span><span class="sxs-lookup"><span data-stu-id="0693c-223">-GroupManagedServiceAccount</span></span>
+### <span data-ttu-id="8229c-223">-Groupmanagedserviceaccount</span><span class="sxs-lookup"><span data-stu-id="8229c-223">-GroupManagedServiceAccount</span></span>
 
-<span data-ttu-id="0693c-224">Konfiguriert Sitzungen, die diese Sitzungs Konfiguration verwenden, um im Kontext des angegebenen Gruppen verwalteten Dienst Kontos ausgeführt zu werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-224">Configures sessions using this session configuration to run under the context of the specified Group Managed Service Account.</span></span> <span data-ttu-id="0693c-225">Der Computer, auf dem diese Sitzungs Konfiguration registriert ist, muss über die Berechtigung zum Anfordern des GMSA-Kennworts verfügen, damit Sitzungen erfolgreich erstellt werden können.</span><span class="sxs-lookup"><span data-stu-id="0693c-225">The machine where this session configuration is registered must have permission to request the gMSA password in order for sessions to be created successfully.</span></span> <span data-ttu-id="0693c-226">Dieses Feld kann nicht mit dem Parameter " **runasvirtualaccount** " verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-226">This field cannot be used with the **RunAsVirtualAccount** parameter.</span></span>
+<span data-ttu-id="8229c-224">Konfiguriert Sitzungen, die diese Sitzungs Konfiguration verwenden, um im Kontext des angegebenen Gruppen verwalteten Dienst Kontos ausgeführt zu werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-224">Configures sessions using this session configuration to run under the context of the specified Group Managed Service Account.</span></span> <span data-ttu-id="8229c-225">Der Computer, auf dem diese Sitzungs Konfiguration registriert ist, muss über die Berechtigung zum Anfordern des GMSA-Kennworts verfügen, damit Sitzungen erfolgreich erstellt werden können.</span><span class="sxs-lookup"><span data-stu-id="8229c-225">The machine where this session configuration is registered must have permission to request the gMSA password in order for sessions to be created successfully.</span></span> <span data-ttu-id="8229c-226">Dieses Feld kann nicht mit dem Parameter " **runasvirtualaccount** " verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-226">This field cannot be used with the **RunAsVirtualAccount** parameter.</span></span>
 
 ```yaml
 Type: System.String
@@ -508,9 +508,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-227">-GUID</span><span class="sxs-lookup"><span data-stu-id="0693c-227">-Guid</span></span>
+### <span data-ttu-id="8229c-227">-GUID</span><span class="sxs-lookup"><span data-stu-id="8229c-227">-Guid</span></span>
 
-<span data-ttu-id="0693c-228">Gibt einen eindeutigen Bezeichner für die Sitzungskonfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="0693c-228">Specifies a unique identifier for the session configuration file.</span></span> <span data-ttu-id="0693c-229">Wenn Sie diesen Parameter weglassen, `New-PSSessionConfigurationFile` generiert eine GUID für die Datei.</span><span class="sxs-lookup"><span data-stu-id="0693c-229">If you omit this parameter, `New-PSSessionConfigurationFile` generates a GUID for the file.</span></span> <span data-ttu-id="0693c-230">Geben Sie ein, um eine neue GUID in PowerShell zu erstellen `New-Guid` .</span><span class="sxs-lookup"><span data-stu-id="0693c-230">To create a new GUID in PowerShell, type `New-Guid`.</span></span>
+<span data-ttu-id="8229c-228">Gibt einen eindeutigen Bezeichner für die Sitzungskonfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="8229c-228">Specifies a unique identifier for the session configuration file.</span></span> <span data-ttu-id="8229c-229">Wenn Sie diesen Parameter weglassen, `New-PSSessionConfigurationFile` generiert eine GUID für die Datei.</span><span class="sxs-lookup"><span data-stu-id="8229c-229">If you omit this parameter, `New-PSSessionConfigurationFile` generates a GUID for the file.</span></span> <span data-ttu-id="8229c-230">Geben Sie ein, um eine neue GUID in PowerShell zu erstellen `New-Guid` .</span><span class="sxs-lookup"><span data-stu-id="8229c-230">To create a new GUID in PowerShell, type `New-Guid`.</span></span>
 
 ```yaml
 Type: System.Guid
@@ -524,22 +524,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-231">-Languagemode</span><span class="sxs-lookup"><span data-stu-id="0693c-231">-LanguageMode</span></span>
+### <span data-ttu-id="8229c-231">-Languagemode</span><span class="sxs-lookup"><span data-stu-id="8229c-231">-LanguageMode</span></span>
 
-<span data-ttu-id="0693c-232">Bestimmt, welche Elemente der PowerShell-Sprache in Sitzungen zulässig sind, die diese Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-232">Determines which elements of the PowerShell language are permitted in sessions that use this session configuration.</span></span> <span data-ttu-id="0693c-233">Sie können diesen Parameter verwenden, um die Befehle einzuschränken, die bestimmte Benutzer auf dem Computer ausführen können.</span><span class="sxs-lookup"><span data-stu-id="0693c-233">You can use this parameter to restrict the commands that particular users can run on the computer.</span></span>
+<span data-ttu-id="8229c-232">Bestimmt, welche Elemente der PowerShell-Sprache in Sitzungen zulässig sind, die diese Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-232">Determines which elements of the PowerShell language are permitted in sessions that use this session configuration.</span></span> <span data-ttu-id="8229c-233">Sie können diesen Parameter verwenden, um die Befehle einzuschränken, die bestimmte Benutzer auf dem Computer ausführen können.</span><span class="sxs-lookup"><span data-stu-id="8229c-233">You can use this parameter to restrict the commands that particular users can run on the computer.</span></span>
 
-<span data-ttu-id="0693c-234">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="0693c-234">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="8229c-234">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="8229c-234">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="0693c-235">Fulllanguage: alle Sprachelemente sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="0693c-235">FullLanguage - All language elements are permitted.</span></span>
-- <span data-ttu-id="0693c-236">"Einschräninedlanguage": Befehle, die auszuwertende Skripts enthalten, sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="0693c-236">ConstrainedLanguage - Commands that contain scripts to be evaluated are not allowed.</span></span> <span data-ttu-id="0693c-237">Der ConstrainedLanguage-Modus schränkt den Benutzerzugriff auf Microsoft .NET Framework-Typen, -Objekte oder -Methoden ein.</span><span class="sxs-lookup"><span data-stu-id="0693c-237">The ConstrainedLanguage mode restricts user access to Microsoft .NET Framework types, objects, or methods.</span></span>
-- <span data-ttu-id="0693c-238">Nolanguage: Benutzer können Cmdlets und Funktionen ausführen, dürfen jedoch keine Sprachelemente verwenden, wie z. b. Skriptblöcke, Variablen oder Operatoren.</span><span class="sxs-lookup"><span data-stu-id="0693c-238">NoLanguage - Users may run cmdlets and functions, but are not permitted to use any language elements, such as script blocks, variables, or operators.</span></span>
-- <span data-ttu-id="0693c-239">Restrictedlanguage: Benutzer können Cmdlets und Funktionen ausführen, dürfen jedoch keine Skriptblöcke oder Variablen verwenden, mit Ausnahme der folgenden zulässigen Variablen: `$PSCulture` , `$PSUICulture` , `$True` , `$False` und `$Null` .</span><span class="sxs-lookup"><span data-stu-id="0693c-239">RestrictedLanguage - Users may run cmdlets and functions, but are not permitted to use script blocks or variables except for the following permitted variables: `$PSCulture`, `$PSUICulture`, `$True`, `$False`, and `$Null`.</span></span> <span data-ttu-id="0693c-240">Benutzer dürfen nur die grundlegenden Vergleichs Operatoren ( `-eq` , `-gt` ,) verwenden `-lt` .</span><span class="sxs-lookup"><span data-stu-id="0693c-240">Users may use only the basic comparison operators (`-eq`, `-gt`, `-lt`).</span></span> <span data-ttu-id="0693c-241">Zuweisungsanweisungen, Eigenschaftsverweise und Methodenaufrufe sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="0693c-241">Assignment statements, property references, and method calls are not permitted.</span></span>
+- <span data-ttu-id="8229c-235">Fulllanguage: alle Sprachelemente sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="8229c-235">FullLanguage - All language elements are permitted.</span></span>
+- <span data-ttu-id="8229c-236">"Einschräninedlanguage": Befehle, die auszuwertende Skripts enthalten, sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="8229c-236">ConstrainedLanguage - Commands that contain scripts to be evaluated are not allowed.</span></span> <span data-ttu-id="8229c-237">Der ConstrainedLanguage-Modus schränkt den Benutzerzugriff auf Microsoft .NET Framework-Typen, -Objekte oder -Methoden ein.</span><span class="sxs-lookup"><span data-stu-id="8229c-237">The ConstrainedLanguage mode restricts user access to Microsoft .NET Framework types, objects, or methods.</span></span>
+- <span data-ttu-id="8229c-238">Nolanguage: Benutzer können Cmdlets und Funktionen ausführen, dürfen jedoch keine Sprachelemente verwenden, wie z. b. Skriptblöcke, Variablen oder Operatoren.</span><span class="sxs-lookup"><span data-stu-id="8229c-238">NoLanguage - Users may run cmdlets and functions, but are not permitted to use any language elements, such as script blocks, variables, or operators.</span></span>
+- <span data-ttu-id="8229c-239">Restrictedlanguage: Benutzer können Cmdlets und Funktionen ausführen, dürfen jedoch keine Skriptblöcke oder Variablen verwenden, mit Ausnahme der folgenden zulässigen Variablen: `$PSCulture` , `$PSUICulture` , `$True` , `$False` und `$Null` .</span><span class="sxs-lookup"><span data-stu-id="8229c-239">RestrictedLanguage - Users may run cmdlets and functions, but are not permitted to use script blocks or variables except for the following permitted variables: `$PSCulture`, `$PSUICulture`, `$True`, `$False`, and `$Null`.</span></span> <span data-ttu-id="8229c-240">Benutzer dürfen nur die grundlegenden Vergleichs Operatoren ( `-eq` , `-gt` ,) verwenden `-lt` .</span><span class="sxs-lookup"><span data-stu-id="8229c-240">Users may use only the basic comparison operators (`-eq`, `-gt`, `-lt`).</span></span> <span data-ttu-id="8229c-241">Zuweisungsanweisungen, Eigenschaftsverweise und Methodenaufrufe sind nicht zulässig.</span><span class="sxs-lookup"><span data-stu-id="8229c-241">Assignment statements, property references, and method calls are not permitted.</span></span>
 
-<span data-ttu-id="0693c-242">Der Standardwert des **LanguageMode** -Parameters hängt vom Wert des **SessionType** -Parameters ab.</span><span class="sxs-lookup"><span data-stu-id="0693c-242">The default value of the **LanguageMode** parameter depends on the value of the **SessionType** parameter.</span></span>
+<span data-ttu-id="8229c-242">Der Standardwert des **LanguageMode** -Parameters hängt vom Wert des **SessionType** -Parameters ab.</span><span class="sxs-lookup"><span data-stu-id="8229c-242">The default value of the **LanguageMode** parameter depends on the value of the **SessionType** parameter.</span></span>
 
-- <span data-ttu-id="0693c-243">Empty-nolanguage</span><span class="sxs-lookup"><span data-stu-id="0693c-243">Empty - NoLanguage</span></span>
-- <span data-ttu-id="0693c-244">Restrictedremuteserver-nolanguage</span><span class="sxs-lookup"><span data-stu-id="0693c-244">RestrictedRemoteServer - NoLanguage</span></span>
-- <span data-ttu-id="0693c-245">Standard-fulllanguage</span><span class="sxs-lookup"><span data-stu-id="0693c-245">Default - FullLanguage</span></span>
+- <span data-ttu-id="8229c-243">Empty-nolanguage</span><span class="sxs-lookup"><span data-stu-id="8229c-243">Empty - NoLanguage</span></span>
+- <span data-ttu-id="8229c-244">Restrictedremuteserver-nolanguage</span><span class="sxs-lookup"><span data-stu-id="8229c-244">RestrictedRemoteServer - NoLanguage</span></span>
+- <span data-ttu-id="8229c-245">Standard-fulllanguage</span><span class="sxs-lookup"><span data-stu-id="8229c-245">Default - FullLanguage</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSLanguageMode
@@ -554,19 +554,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-246">-Modulestoimport</span><span class="sxs-lookup"><span data-stu-id="0693c-246">-ModulesToImport</span></span>
+### <span data-ttu-id="8229c-246">-Modulestoimport</span><span class="sxs-lookup"><span data-stu-id="8229c-246">-ModulesToImport</span></span>
 
-<span data-ttu-id="0693c-247">Gibt die Module und Snap-ins an, die automatisch in Sitzungen importiert werden, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-247">Specifies the modules and snap-ins that are automatically imported into sessions that use the session configuration.</span></span>
+<span data-ttu-id="8229c-247">Gibt die Module und Snap-ins an, die automatisch in Sitzungen importiert werden, die die Sitzungskonfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-247">Specifies the modules and snap-ins that are automatically imported into sessions that use the session configuration.</span></span>
 
-<span data-ttu-id="0693c-248">Standardmäßig wird nur das **Microsoft. PowerShell. Core** -Snap-in in Remote Sitzungen importiert, aber wenn die Cmdlets nicht ausgeschlossen sind, können Benutzer die `Import-Module` -und `Add-PSSnapin` -Cmdlets verwenden, um der Sitzung Module und Snap-Ins hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="0693c-248">By default, only the **Microsoft.PowerShell.Core** snap-in is imported into remote sessions, but unless the cmdlets are excluded, users can use the `Import-Module` and `Add-PSSnapin` cmdlets to add modules and snap-ins to the session.</span></span>
+<span data-ttu-id="8229c-248">Standardmäßig wird nur das **Microsoft. PowerShell. Core** -Snap-in in Remote Sitzungen importiert, aber wenn die Cmdlets nicht ausgeschlossen sind, können Benutzer die `Import-Module` -und `Add-PSSnapin` -Cmdlets verwenden, um der Sitzung Module und Snap-Ins hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="8229c-248">By default, only the **Microsoft.PowerShell.Core** snap-in is imported into remote sessions, but unless the cmdlets are excluded, users can use the `Import-Module` and `Add-PSSnapin` cmdlets to add modules and snap-ins to the session.</span></span>
 
-<span data-ttu-id="0693c-249">Jedes Modul oder Snap-In im Wert dieses Parameters kann durch eine Zeichenfolge oder als Hashtabelle dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-249">Each module or snap-in in the value of this parameter can be represented by a string or as a hash table.</span></span> <span data-ttu-id="0693c-250">Eine Modul Zeichenfolge besteht nur aus dem Namen des Moduls oder Snap-Ins.</span><span class="sxs-lookup"><span data-stu-id="0693c-250">A module string consists only of the name of the module or snap-in.</span></span> <span data-ttu-id="0693c-251">Eine Modul Hash Tabelle kann die Schlüssel " **ModuleName** ", " **moduleversion** " und " **GUID** " enthalten.</span><span class="sxs-lookup"><span data-stu-id="0693c-251">A module hash table can include **ModuleName** , **ModuleVersion** , and **GUID** keys.</span></span> <span data-ttu-id="0693c-252">Nur der **ModuleName** -Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-252">Only the **ModuleName** key is required.</span></span>
+<span data-ttu-id="8229c-249">Jedes Modul oder Snap-In im Wert dieses Parameters kann durch eine Zeichenfolge oder als Hashtabelle dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-249">Each module or snap-in in the value of this parameter can be represented by a string or as a hash table.</span></span> <span data-ttu-id="8229c-250">Eine Modul Zeichenfolge besteht nur aus dem Namen des Moduls oder Snap-Ins.</span><span class="sxs-lookup"><span data-stu-id="8229c-250">A module string consists only of the name of the module or snap-in.</span></span> <span data-ttu-id="8229c-251">Eine Modul Hash Tabelle kann die Schlüssel " **ModuleName** ", " **moduleversion** " und " **GUID** " enthalten.</span><span class="sxs-lookup"><span data-stu-id="8229c-251">A module hash table can include **ModuleName** , **ModuleVersion** , and **GUID** keys.</span></span> <span data-ttu-id="8229c-252">Nur der **ModuleName** -Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-252">Only the **ModuleName** key is required.</span></span>
 
-<span data-ttu-id="0693c-253">Beispielsweise besteht der folgende Wert aus einer Zeichenfolge und einer Hashtabelle.</span><span class="sxs-lookup"><span data-stu-id="0693c-253">For example, the following value consists of a string and a hash table.</span></span> <span data-ttu-id="0693c-254">Jede Kombination aus Zeichenfolgen und Hashtabellen, in beliebiger Reihenfolge, ist gültig.</span><span class="sxs-lookup"><span data-stu-id="0693c-254">Any combination of strings and hash tables, in any order, is valid.</span></span>
+<span data-ttu-id="8229c-253">Beispielsweise besteht der folgende Wert aus einer Zeichenfolge und einer Hashtabelle.</span><span class="sxs-lookup"><span data-stu-id="8229c-253">For example, the following value consists of a string and a hash table.</span></span> <span data-ttu-id="8229c-254">Jede Kombination aus Zeichenfolgen und Hashtabellen, in beliebiger Reihenfolge, ist gültig.</span><span class="sxs-lookup"><span data-stu-id="8229c-254">Any combination of strings and hash tables, in any order, is valid.</span></span>
 
 `'TroubleshootingPack', @{ModuleName='PSDiagnostics'; ModuleVersion='1.0.0.0';GUID='c61d6278-02a3-4618-ae37-a524d40a7f44'}`
 
-<span data-ttu-id="0693c-255">Der Wert des **modulestoimport** -Parameters des `Register-PSSessionConfiguration` Cmdlets hat Vorrang vor dem Wert des **modulestoimport** -Schlüssels in der Sitzungs Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="0693c-255">The value of the **ModulesToImport** parameter of the `Register-PSSessionConfiguration` cmdlet takes precedence over the value of the **ModulesToImport** key in the session configuration file.</span></span>
+<span data-ttu-id="8229c-255">Der Wert des **modulestoimport** -Parameters des `Register-PSSessionConfiguration` Cmdlets hat Vorrang vor dem Wert des **modulestoimport** -Schlüssels in der Sitzungs Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8229c-255">The value of the **ModulesToImport** parameter of the `Register-PSSessionConfiguration` cmdlet takes precedence over the value of the **ModulesToImport** key in the session configuration file.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -580,11 +580,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-256">-Mountuserdrive</span><span class="sxs-lookup"><span data-stu-id="0693c-256">-MountUserDrive</span></span>
+### <span data-ttu-id="8229c-256">-Mountuserdrive</span><span class="sxs-lookup"><span data-stu-id="8229c-256">-MountUserDrive</span></span>
 
-<span data-ttu-id="0693c-257">Konfiguriert Sitzungen, die diese Sitzungs Konfiguration verwenden, um das `User:` PSDrive verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="0693c-257">Configures sessions that use this session configuration to expose the `User:` PSDrive.</span></span> <span data-ttu-id="0693c-258">Benutzer Laufwerke sind für jeden Benutzer, der eine Verbindung herstellt, eindeutig und ermöglichen Benutzern das Kopieren von Daten in und von PowerShell-Endpunkten, auch wenn der Datei System Anbieter nicht verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-258">User drives are unique for each connecting user and allow users to copy data to and from PowerShell endpoints even if the File System provider is not exposed.</span></span> <span data-ttu-id="0693c-259">Benutzer Laufwerk Stämme werden unter erstellt `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\` .</span><span class="sxs-lookup"><span data-stu-id="0693c-259">User drive roots are created under `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\`.</span></span> <span data-ttu-id="0693c-260">Für jeden Benutzer, der eine Verbindung zum Endpunkt herstellt, wird ein Ordner mit dem Namen `$env:USERDOMAIN_$env:USERNAME` erstellt.</span><span class="sxs-lookup"><span data-stu-id="0693c-260">For each user connecting to the endpoint, a folder is created with the name `$env:USERDOMAIN_$env:USERNAME`.</span></span>
+<span data-ttu-id="8229c-257">Konfiguriert Sitzungen, die diese Sitzungs Konfiguration verwenden, um das `User:` PSDrive verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="8229c-257">Configures sessions that use this session configuration to expose the `User:` PSDrive.</span></span> <span data-ttu-id="8229c-258">Benutzer Laufwerke sind für jeden Benutzer, der eine Verbindung herstellt, eindeutig und ermöglichen Benutzern das Kopieren von Daten in und von PowerShell-Endpunkten, auch wenn der Datei System Anbieter nicht verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-258">User drives are unique for each connecting user and allow users to copy data to and from PowerShell endpoints even if the File System provider is not exposed.</span></span> <span data-ttu-id="8229c-259">Benutzer Laufwerk Stämme werden unter erstellt `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\` .</span><span class="sxs-lookup"><span data-stu-id="8229c-259">User drive roots are created under `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\`.</span></span> <span data-ttu-id="8229c-260">Für jeden Benutzer, der eine Verbindung zum Endpunkt herstellt, wird ein Ordner mit dem Namen `$env:USERDOMAIN_$env:USERNAME` erstellt.</span><span class="sxs-lookup"><span data-stu-id="8229c-260">For each user connecting to the endpoint, a folder is created with the name `$env:USERDOMAIN_$env:USERNAME`.</span></span>
 
-<span data-ttu-id="0693c-261">Der Inhalt des Benutzer Laufwerks wird über Benutzersitzungen hinweg beibehalten und nicht automatisch entfernt.</span><span class="sxs-lookup"><span data-stu-id="0693c-261">Contents in the user drive persist across user sessions and are not automatically removed.</span></span> <span data-ttu-id="0693c-262">Standardmäßig können Benutzer nur bis zu 50 MB Daten auf dem Benutzer Laufwerk speichern.</span><span class="sxs-lookup"><span data-stu-id="0693c-262">By default, users can only store up to 50MB of data in the user drive.</span></span> <span data-ttu-id="0693c-263">Dies kann mit dem **userdrivemaximumsize** -Parameter angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-263">This can be customized with the **UserDriveMaximumSize** parameter.</span></span>
+<span data-ttu-id="8229c-261">Der Inhalt des Benutzer Laufwerks wird über Benutzersitzungen hinweg beibehalten und nicht automatisch entfernt.</span><span class="sxs-lookup"><span data-stu-id="8229c-261">Contents in the user drive persist across user sessions and are not automatically removed.</span></span> <span data-ttu-id="8229c-262">Standardmäßig können Benutzer nur bis zu 50 MB Daten auf dem Benutzer Laufwerk speichern.</span><span class="sxs-lookup"><span data-stu-id="8229c-262">By default, users can only store up to 50MB of data in the user drive.</span></span> <span data-ttu-id="8229c-263">Dies kann mit dem **userdrivemaximumsize** -Parameter angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-263">This can be customized with the **UserDriveMaximumSize** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -598,9 +598,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-264">-Path</span><span class="sxs-lookup"><span data-stu-id="0693c-264">-Path</span></span>
+### <span data-ttu-id="8229c-264">-Path</span><span class="sxs-lookup"><span data-stu-id="8229c-264">-Path</span></span>
 
-<span data-ttu-id="0693c-265">Gibt den Pfad und den Dateinamen der Sitzungs Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="0693c-265">Specifies the path and filename of the session configuration file.</span></span> <span data-ttu-id="0693c-266">Die Datei muss eine `.pssc` Dateinamenerweiterung aufweisen.</span><span class="sxs-lookup"><span data-stu-id="0693c-266">The file must have a `.pssc` file name extension.</span></span>
+<span data-ttu-id="8229c-265">Gibt den Pfad und den Dateinamen der Sitzungs Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="8229c-265">Specifies the path and filename of the session configuration file.</span></span> <span data-ttu-id="8229c-266">Die Datei muss eine `.pssc` Dateinamenerweiterung aufweisen.</span><span class="sxs-lookup"><span data-stu-id="8229c-266">The file must have a `.pssc` file name extension.</span></span>
 
 ```yaml
 Type: System.String
@@ -614,11 +614,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-267">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="0693c-267">-PowerShellVersion</span></span>
+### <span data-ttu-id="8229c-267">-PowerShellVersion</span><span class="sxs-lookup"><span data-stu-id="8229c-267">-PowerShellVersion</span></span>
 
-<span data-ttu-id="0693c-268">Gibt die Version der PowerShell-Engine in Sitzungen an, die die Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-268">Specifies the version of the PowerShell engine in sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-269">Die zulässigen Werte für diesen Parameter sind: 2,0 und 3,0.</span><span class="sxs-lookup"><span data-stu-id="0693c-269">The acceptable values for this parameter are: 2.0 and 3.0.</span></span> <span data-ttu-id="0693c-270">Wenn Sie diesen Parameter weglassen, wird der **PowerShellVersion** -Schlüssel auskommentiert, und die neueste Version von PowerShell wird in der Sitzung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="0693c-270">If you omit this parameter, the **PowerShellVersion** key is commented-out and newest version of PowerShell runs in the session.</span></span>
+<span data-ttu-id="8229c-268">Gibt die Version der PowerShell-Engine in Sitzungen an, die die Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-268">Specifies the version of the PowerShell engine in sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-269">Die zulässigen Werte für diesen Parameter sind: 2,0 und 3,0.</span><span class="sxs-lookup"><span data-stu-id="8229c-269">The acceptable values for this parameter are: 2.0 and 3.0.</span></span> <span data-ttu-id="8229c-270">Wenn Sie diesen Parameter weglassen, wird der **PowerShellVersion** -Schlüssel auskommentiert, und die neueste Version von PowerShell wird in der Sitzung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="8229c-270">If you omit this parameter, the **PowerShellVersion** key is commented-out and newest version of PowerShell runs in the session.</span></span>
 
-<span data-ttu-id="0693c-271">Der Wert des **psversion** -Parameters des `Register-PSSessionConfiguration` Cmdlets hat Vorrang vor dem Wert des **PowerShellVersion** -Schlüssels in der Sitzungs Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="0693c-271">The value of the **PSVersion** parameter of the `Register-PSSessionConfiguration` cmdlet takes precedence over the value of the **PowerShellVersion** key in the session configuration file.</span></span>
+<span data-ttu-id="8229c-271">Der Wert des **psversion** -Parameters des `Register-PSSessionConfiguration` Cmdlets hat Vorrang vor dem Wert des **PowerShellVersion** -Schlüssels in der Sitzungs Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8229c-271">The value of the **PSVersion** parameter of the `Register-PSSessionConfiguration` cmdlet takes precedence over the value of the **PowerShellVersion** key in the session configuration file.</span></span>
 
 ```yaml
 Type: System.Version
@@ -632,35 +632,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-272">-Requirements dgroups</span><span class="sxs-lookup"><span data-stu-id="0693c-272">-RequiredGroups</span></span>
+### <span data-ttu-id="8229c-272">-Requirements dgroups</span><span class="sxs-lookup"><span data-stu-id="8229c-272">-RequiredGroups</span></span>
 
-<span data-ttu-id="0693c-273">Gibt bedingte Zugriffsregeln für Benutzer an, die eine Verbindung mit Sitzungen herstellen, die diese Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-273">Specifies conditional access rules for users connecting to sessions that use this session configuration.</span></span>
+<span data-ttu-id="8229c-273">Gibt bedingte Zugriffsregeln für Benutzer an, die eine Verbindung mit Sitzungen herstellen, die diese Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-273">Specifies conditional access rules for users connecting to sessions that use this session configuration.</span></span>
 
-<span data-ttu-id="0693c-274">Geben Sie eine Hash Tabelle ein, um die Liste der Regeln mithilfe von nur 1 Schlüssel pro Hash Tabelle, ' and ' oder ' or ', zu verfassen, und legen Sie den Wert auf ein Array von Sicherheitsgruppen Namen oder zusätzlichen Hash Tabellen fest.</span><span class="sxs-lookup"><span data-stu-id="0693c-274">Enter a hashtable to compose your list of rules using only 1 key per hashtable, 'And' or 'Or', and set the value to an array of security group names or additional hashtables.</span></span>
+<span data-ttu-id="8229c-274">Geben Sie eine Hash Tabelle ein, um die Liste der Regeln mithilfe von nur 1 Schlüssel pro Hash Tabelle, ' and ' oder ' or ', zu verfassen, und legen Sie den Wert auf ein Array von Sicherheitsgruppen Namen oder zusätzlichen Hash Tabellen fest.</span><span class="sxs-lookup"><span data-stu-id="8229c-274">Enter a hashtable to compose your list of rules using only 1 key per hashtable, 'And' or 'Or', and set the value to an array of security group names or additional hashtables.</span></span>
 
-<span data-ttu-id="0693c-275">Beispiel für das Herstellen einer Verbindung von Benutzern mit Mitgliedern einer einzelnen Gruppe: `@{ And = 'MyRequiredGroup' }`</span><span class="sxs-lookup"><span data-stu-id="0693c-275">Example requiring connecting users to be members of a single group: `@{ And = 'MyRequiredGroup' }`</span></span>
+<span data-ttu-id="8229c-275">Beispiel für das Herstellen einer Verbindung von Benutzern mit Mitgliedern einer einzelnen Gruppe: `@{ And = 'MyRequiredGroup' }`</span><span class="sxs-lookup"><span data-stu-id="8229c-275">Example requiring connecting users to be members of a single group: `@{ And = 'MyRequiredGroup' }`</span></span>
 
-<span data-ttu-id="0693c-276">Beispiel für den Zugriff auf den Endpunkt durch Benutzer, die der Gruppe a oder beiden Gruppen B und C angehören müssen: `@{ Or = 'GroupA', @{ And = 'GroupB', 'GroupC' } }`</span><span class="sxs-lookup"><span data-stu-id="0693c-276">Example requiring users to belong to group A, or both groups B and C, to access the endpoint: `@{ Or = 'GroupA', @{ And = 'GroupB', 'GroupC' } }`</span></span>
-
-```yaml
-Type: System.Collections.IDictionary
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="0693c-277">-Roledefinitions</span><span class="sxs-lookup"><span data-stu-id="0693c-277">-RoleDefinitions</span></span>
-
-<span data-ttu-id="0693c-278">Gibt die Zuordnung zwischen Sicherheitsgruppen (oder Benutzern) und Rollen Funktionen an.</span><span class="sxs-lookup"><span data-stu-id="0693c-278">Specifies the mapping between security groups (or users) and role capabilities.</span></span> <span data-ttu-id="0693c-279">Benutzer erhalten Zugriff auf alle Rollen Funktionen, die für ihre Gruppenmitgliedschaft zum Zeitpunkt der Erstellung der Sitzung gelten.</span><span class="sxs-lookup"><span data-stu-id="0693c-279">Users will be granted access to all role capabilities which apply to their group membership at the time the session is created.</span></span>
-
-<span data-ttu-id="0693c-280">Geben Sie eine Hash Tabelle ein, in der die Schlüssel der Name der Sicherheitsgruppe sind, und die Werte sind Hash Tabellen, die eine Liste der Rollen Funktionen enthalten, die der Sicherheitsgruppe zur Verfügung gestellt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="0693c-280">Enter a hash table in which the keys are the name of the security group and the values are hash tables that contain a list of role capabilities that should be made available to the security group.</span></span>
-
-<span data-ttu-id="0693c-281">Beispiel: `@{'Contoso\Level 2 Helpdesk Users' = @{ RoleCapabilities = 'Maintenance', 'ADHelpDesk' }}`</span><span class="sxs-lookup"><span data-stu-id="0693c-281">For example: `@{'Contoso\Level 2 Helpdesk Users' = @{ RoleCapabilities = 'Maintenance', 'ADHelpDesk' }}`</span></span>
+<span data-ttu-id="8229c-276">Beispiel für den Zugriff auf den Endpunkt durch Benutzer, die der Gruppe a oder beiden Gruppen B und C angehören müssen: `@{ Or = 'GroupA', @{ And = 'GroupB', 'GroupC' } }`</span><span class="sxs-lookup"><span data-stu-id="8229c-276">Example requiring users to belong to group A, or both groups B and C, to access the endpoint: `@{ Or = 'GroupA', @{ And = 'GroupB', 'GroupC' } }`</span></span>
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -674,9 +654,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-282">-Runasvirtualaccount</span><span class="sxs-lookup"><span data-stu-id="0693c-282">-RunAsVirtualAccount</span></span>
+### <span data-ttu-id="8229c-277">-Roledefinitions</span><span class="sxs-lookup"><span data-stu-id="8229c-277">-RoleDefinitions</span></span>
 
-<span data-ttu-id="0693c-283">Konfiguriert Sitzungen, die diese Sitzungs Konfiguration verwenden, damit Sie als (virtuelles) Administrator Konto des Computers ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-283">Configures sessions using this session configuration to be run as the computer's (virtual) administrator account.</span></span> <span data-ttu-id="0693c-284">Dieses Feld kann nicht mit dem **groupmanagedserviceaccount** -Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-284">This field cannot be used with the **GroupManagedServiceAccount** parameter.</span></span>
+<span data-ttu-id="8229c-278">Gibt die Zuordnung zwischen Sicherheitsgruppen (oder Benutzern) und Rollen Funktionen an.</span><span class="sxs-lookup"><span data-stu-id="8229c-278">Specifies the mapping between security groups (or users) and role capabilities.</span></span> <span data-ttu-id="8229c-279">Benutzer erhalten Zugriff auf alle Rollen Funktionen, die für ihre Gruppenmitgliedschaft zum Zeitpunkt der Erstellung der Sitzung gelten.</span><span class="sxs-lookup"><span data-stu-id="8229c-279">Users will be granted access to all role capabilities which apply to their group membership at the time the session is created.</span></span>
+
+<span data-ttu-id="8229c-280">Geben Sie eine Hash Tabelle ein, in der die Schlüssel der Name der Sicherheitsgruppe sind, und die Werte sind Hash Tabellen, die eine Liste der Rollen Funktionen enthalten, die der Sicherheitsgruppe zur Verfügung gestellt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="8229c-280">Enter a hash table in which the keys are the name of the security group and the values are hash tables that contain a list of role capabilities that should be made available to the security group.</span></span>
+
+<span data-ttu-id="8229c-281">Beispiel: `@{'Contoso\Level 2 Helpdesk Users' = @{ RoleCapabilities = 'Maintenance', 'ADHelpDesk' }}`</span><span class="sxs-lookup"><span data-stu-id="8229c-281">For example: `@{'Contoso\Level 2 Helpdesk Users' = @{ RoleCapabilities = 'Maintenance', 'ADHelpDesk' }}`</span></span>
+
+```yaml
+Type: System.Collections.IDictionary
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="8229c-282">-Runasvirtualaccount</span><span class="sxs-lookup"><span data-stu-id="8229c-282">-RunAsVirtualAccount</span></span>
+
+<span data-ttu-id="8229c-283">Konfiguriert Sitzungen, die diese Sitzungs Konfiguration verwenden, damit Sie als (virtuelles) Administrator Konto des Computers ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-283">Configures sessions using this session configuration to be run as the computer's (virtual) administrator account.</span></span> <span data-ttu-id="8229c-284">Dieses Feld kann nicht mit dem **groupmanagedserviceaccount** -Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-284">This field cannot be used with the **GroupManagedServiceAccount** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -690,9 +690,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-285">-Runasvirtualaccountgroups</span><span class="sxs-lookup"><span data-stu-id="0693c-285">-RunAsVirtualAccountGroups</span></span>
+### <span data-ttu-id="8229c-285">-Runasvirtualaccountgroups</span><span class="sxs-lookup"><span data-stu-id="8229c-285">-RunAsVirtualAccountGroups</span></span>
 
-<span data-ttu-id="0693c-286">Gibt die Sicherheitsgruppen an, die dem virtuellen Konto zugeordnet werden sollen, wenn eine Sitzung, die die Sitzungs Konfiguration verwendet, als virtuelles Konto ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-286">Specifies the security groups to be associated with the virtual account when a session that uses the session configuration is run as a virtual account.</span></span> <span data-ttu-id="0693c-287">Wenn die Angabe weggelassen wird, gehört das virtuelle Konto Domänen Administratoren auf Domänen Controllern und Administratoren auf allen anderen Computern an.</span><span class="sxs-lookup"><span data-stu-id="0693c-287">If omitted, the virtual account belongs to Domain Admins on domain controllers and Administrators on all other computers.</span></span>
+<span data-ttu-id="8229c-286">Gibt die Sicherheitsgruppen an, die dem virtuellen Konto zugeordnet werden sollen, wenn eine Sitzung, die die Sitzungs Konfiguration verwendet, als virtuelles Konto ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-286">Specifies the security groups to be associated with the virtual account when a session that uses the session configuration is run as a virtual account.</span></span> <span data-ttu-id="8229c-287">Wenn die Angabe weggelassen wird, gehört das virtuelle Konto Domänen Administratoren auf Domänen Controllern und Administratoren auf allen anderen Computern an.</span><span class="sxs-lookup"><span data-stu-id="8229c-287">If omitted, the virtual account belongs to Domain Admins on domain controllers and Administrators on all other computers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -706,9 +706,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-288">-Schemaversion</span><span class="sxs-lookup"><span data-stu-id="0693c-288">-SchemaVersion</span></span>
+### <span data-ttu-id="8229c-288">-Schemaversion</span><span class="sxs-lookup"><span data-stu-id="8229c-288">-SchemaVersion</span></span>
 
-<span data-ttu-id="0693c-289">Gibt die Version des Sitzungskonfigurationsdateischemas an.</span><span class="sxs-lookup"><span data-stu-id="0693c-289">Specifies the version of the session configuration file schema.</span></span> <span data-ttu-id="0693c-290">Der Standardwert ist „1.0.0.0“.</span><span class="sxs-lookup"><span data-stu-id="0693c-290">The default value is "1.0.0.0".</span></span>
+<span data-ttu-id="8229c-289">Gibt die Version des Sitzungskonfigurationsdateischemas an.</span><span class="sxs-lookup"><span data-stu-id="8229c-289">Specifies the version of the session configuration file schema.</span></span> <span data-ttu-id="8229c-290">Der Standardwert ist „1.0.0.0“.</span><span class="sxs-lookup"><span data-stu-id="8229c-290">The default value is "1.0.0.0".</span></span>
 
 ```yaml
 Type: System.Version
@@ -722,9 +722,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-291">-Scriptstoprocess</span><span class="sxs-lookup"><span data-stu-id="0693c-291">-ScriptsToProcess</span></span>
+### <span data-ttu-id="8229c-291">-Scriptstoprocess</span><span class="sxs-lookup"><span data-stu-id="8229c-291">-ScriptsToProcess</span></span>
 
-<span data-ttu-id="0693c-292">Fügt den Sitzungen, die die Sitzungskonfiguration verwenden, die angegebenen Skripts hinzu.</span><span class="sxs-lookup"><span data-stu-id="0693c-292">Adds the specified scripts to sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-293">Geben Sie den Pfad und die Dateinamen der Skripts ein.</span><span class="sxs-lookup"><span data-stu-id="0693c-293">Enter the path and file names of the scripts.</span></span> <span data-ttu-id="0693c-294">Der Wert dieses Parameters muss ein vollständiger oder absoluter Pfad von Skript Dateinamen sein.</span><span class="sxs-lookup"><span data-stu-id="0693c-294">The value of this parameter must be a full or absolute path of script file names.</span></span>
+<span data-ttu-id="8229c-292">Fügt den Sitzungen, die die Sitzungskonfiguration verwenden, die angegebenen Skripts hinzu.</span><span class="sxs-lookup"><span data-stu-id="8229c-292">Adds the specified scripts to sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-293">Geben Sie den Pfad und die Dateinamen der Skripts ein.</span><span class="sxs-lookup"><span data-stu-id="8229c-293">Enter the path and file names of the scripts.</span></span> <span data-ttu-id="8229c-294">Der Wert dieses Parameters muss ein vollständiger oder absoluter Pfad von Skript Dateinamen sein.</span><span class="sxs-lookup"><span data-stu-id="8229c-294">The value of this parameter must be a full or absolute path of script file names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -738,14 +738,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-295">-SessionType</span><span class="sxs-lookup"><span data-stu-id="0693c-295">-SessionType</span></span>
+### <span data-ttu-id="8229c-295">-SessionType</span><span class="sxs-lookup"><span data-stu-id="8229c-295">-SessionType</span></span>
 
-<span data-ttu-id="0693c-296">Gibt den Typ der Sitzung an, die mit der Sitzungskonfiguration erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="0693c-296">Specifies the type of session that is created by using the session configuration.</span></span> <span data-ttu-id="0693c-297">Der Standardwert ist Default.</span><span class="sxs-lookup"><span data-stu-id="0693c-297">The default value is Default.</span></span> <span data-ttu-id="0693c-298">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="0693c-298">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="8229c-296">Gibt den Typ der Sitzung an, die mit der Sitzungskonfiguration erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="8229c-296">Specifies the type of session that is created by using the session configuration.</span></span> <span data-ttu-id="8229c-297">Der Standardwert ist Default.</span><span class="sxs-lookup"><span data-stu-id="8229c-297">The default value is Default.</span></span> <span data-ttu-id="8229c-298">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="8229c-298">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="0693c-299">Leer: der Sitzung werden standardmäßig keine Module hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0693c-299">Empty - No modules are added to session by default.</span></span> <span data-ttu-id="0693c-300">Verwenden Sie die Parameter dieses Cmdlets, um der Sitzung Module, Funktionen, Skripts und andere Funktionen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="0693c-300">Use the parameters of this cmdlet to add modules, functions, scripts, and other features to the session.</span></span> <span data-ttu-id="0693c-301">Mit dieser Option können Sie benutzerdefinierte Sitzungen erstellen, indem Sie ausgewählte Befehle hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="0693c-301">This option is designed for you to create custom sessions by adding selected commands.</span></span> <span data-ttu-id="0693c-302">Wenn Sie einer leeren Sitzung keine Befehle hinzufügen, ist die Sitzung auf Ausdrücke beschränkt und kann womöglich nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-302">If you do not add commands to an empty session, the session is limited to expressions and might not be usable.</span></span>
-- <span data-ttu-id="0693c-303">Standard: Fügt der Sitzung das Microsoft. PowerShell. Core-Modul hinzu.</span><span class="sxs-lookup"><span data-stu-id="0693c-303">Default - Adds the Microsoft.PowerShell.Core module to the session.</span></span> <span data-ttu-id="0693c-304">Dieses Modul enthält das `Import-Module` Cmdlet, mit dem Benutzer andere Module importieren können, sofern Sie dieses Cmdlet nicht explizit verbieten.</span><span class="sxs-lookup"><span data-stu-id="0693c-304">This module includes the `Import-Module` cmdlet that users can use to import other modules unless you explicitly prohibit this cmdlet.</span></span>
-- <span data-ttu-id="0693c-305">RestrictedRemoteServer.</span><span class="sxs-lookup"><span data-stu-id="0693c-305">RestrictedRemoteServer.</span></span> <span data-ttu-id="0693c-306">Schließt nur die folgenden Proxy Funktionen ein: `Exit-PSSession` , `Get-Command` , `Get-FormatData` , `Get-Help` , `Measure-Object` , `Out-Default` und `Select-Object` .</span><span class="sxs-lookup"><span data-stu-id="0693c-306">Includes only the following proxy functions: `Exit-PSSession`, `Get-Command`, `Get-FormatData`, `Get-Help`, `Measure-Object`, `Out-Default`, and `Select-Object`.</span></span>
-  <span data-ttu-id="0693c-307">Verwenden Sie die Parameter dieses Cmdlets, um der Sitzung Module, Funktionen, Skripts und andere Funktionen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="0693c-307">Use the parameters of this cmdlet to add modules, functions, scripts, and other features to the session.</span></span>
+- <span data-ttu-id="8229c-299">Leer: der Sitzung werden standardmäßig keine Module hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="8229c-299">Empty - No modules are added to session by default.</span></span> <span data-ttu-id="8229c-300">Verwenden Sie die Parameter dieses Cmdlets, um der Sitzung Module, Funktionen, Skripts und andere Funktionen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="8229c-300">Use the parameters of this cmdlet to add modules, functions, scripts, and other features to the session.</span></span> <span data-ttu-id="8229c-301">Mit dieser Option können Sie benutzerdefinierte Sitzungen erstellen, indem Sie ausgewählte Befehle hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="8229c-301">This option is designed for you to create custom sessions by adding selected commands.</span></span> <span data-ttu-id="8229c-302">Wenn Sie einer leeren Sitzung keine Befehle hinzufügen, ist die Sitzung auf Ausdrücke beschränkt und kann womöglich nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-302">If you do not add commands to an empty session, the session is limited to expressions and might not be usable.</span></span>
+- <span data-ttu-id="8229c-303">Standard: Fügt der Sitzung das Microsoft. PowerShell. Core-Modul hinzu.</span><span class="sxs-lookup"><span data-stu-id="8229c-303">Default - Adds the Microsoft.PowerShell.Core module to the session.</span></span> <span data-ttu-id="8229c-304">Dieses Modul enthält das `Import-Module` Cmdlet, mit dem Benutzer andere Module importieren können, sofern Sie dieses Cmdlet nicht explizit verbieten.</span><span class="sxs-lookup"><span data-stu-id="8229c-304">This module includes the `Import-Module` cmdlet that users can use to import other modules unless you explicitly prohibit this cmdlet.</span></span>
+- <span data-ttu-id="8229c-305">RestrictedRemoteServer.</span><span class="sxs-lookup"><span data-stu-id="8229c-305">RestrictedRemoteServer.</span></span> <span data-ttu-id="8229c-306">Schließt nur die folgenden Proxy Funktionen ein: `Exit-PSSession` , `Get-Command` , `Get-FormatData` , `Get-Help` , `Measure-Object` , `Out-Default` und `Select-Object` .</span><span class="sxs-lookup"><span data-stu-id="8229c-306">Includes only the following proxy functions: `Exit-PSSession`, `Get-Command`, `Get-FormatData`, `Get-Help`, `Measure-Object`, `Out-Default`, and `Select-Object`.</span></span>
+  <span data-ttu-id="8229c-307">Verwenden Sie die Parameter dieses Cmdlets, um der Sitzung Module, Funktionen, Skripts und andere Funktionen hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="8229c-307">Use the parameters of this cmdlet to add modules, functions, scripts, and other features to the session.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Remoting.SessionType
@@ -760,9 +760,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-308">-Transcriptdirectory</span><span class="sxs-lookup"><span data-stu-id="0693c-308">-TranscriptDirectory</span></span>
+### <span data-ttu-id="8229c-308">-Transcriptdirectory</span><span class="sxs-lookup"><span data-stu-id="8229c-308">-TranscriptDirectory</span></span>
 
-<span data-ttu-id="0693c-309">Gibt das Verzeichnis an, in dem Sitzungsprotokolle für Sitzungen mit dieser Sitzungs Konfiguration platziert werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-309">Specifies the directory to place session transcripts for sessions using this session configuration.</span></span>
+<span data-ttu-id="8229c-309">Gibt das Verzeichnis an, in dem Sitzungsprotokolle für Sitzungen mit dieser Sitzungs Konfiguration platziert werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-309">Specifies the directory to place session transcripts for sessions using this session configuration.</span></span>
 
 ```yaml
 Type: System.String
@@ -776,9 +776,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-310">-Typestoprocess</span><span class="sxs-lookup"><span data-stu-id="0693c-310">-TypesToProcess</span></span>
+### <span data-ttu-id="8229c-310">-Typestoprocess</span><span class="sxs-lookup"><span data-stu-id="8229c-310">-TypesToProcess</span></span>
 
-<span data-ttu-id="0693c-311">Fügt den `.ps1xml` Sitzungen, die die Sitzungs Konfiguration verwenden, die angegebenen Typdateien hinzu.</span><span class="sxs-lookup"><span data-stu-id="0693c-311">Adds the specified `.ps1xml` type files to sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-312">Geben Sie die typdateinamen ein.</span><span class="sxs-lookup"><span data-stu-id="0693c-312">Enter the type filenames.</span></span> <span data-ttu-id="0693c-313">Der Wert dieses Parameters muss ein vollständiger oder absoluter Pfad zu den typdateinamen sein.</span><span class="sxs-lookup"><span data-stu-id="0693c-313">The value of this parameter must be a full or absolute path to type filenames.</span></span>
+<span data-ttu-id="8229c-311">Fügt den `.ps1xml` Sitzungen, die die Sitzungs Konfiguration verwenden, die angegebenen Typdateien hinzu.</span><span class="sxs-lookup"><span data-stu-id="8229c-311">Adds the specified `.ps1xml` type files to sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-312">Geben Sie die typdateinamen ein.</span><span class="sxs-lookup"><span data-stu-id="8229c-312">Enter the type filenames.</span></span> <span data-ttu-id="8229c-313">Der Wert dieses Parameters muss ein vollständiger oder absoluter Pfad zu den typdateinamen sein.</span><span class="sxs-lookup"><span data-stu-id="8229c-313">The value of this parameter must be a full or absolute path to type filenames.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -792,12 +792,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-314">-Userdrivemaximumsize</span><span class="sxs-lookup"><span data-stu-id="0693c-314">-UserDriveMaximumSize</span></span>
+### <span data-ttu-id="8229c-314">-Userdrivemaximumsize</span><span class="sxs-lookup"><span data-stu-id="8229c-314">-UserDriveMaximumSize</span></span>
 
-<span data-ttu-id="0693c-315">Gibt die maximale Größe für Benutzer Laufwerke an, die in Sitzungen verfügbar gemacht werden, die diese Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="0693c-315">Specifies the maximum size for user drives exposed in sessions that use this session configuration.</span></span>
-<span data-ttu-id="0693c-316">Wenn der Wert weggelassen wird, beträgt die Standardgröße der einzelnen `User:` Laufwerk Stamm 50 MB.</span><span class="sxs-lookup"><span data-stu-id="0693c-316">When omitted, the default size of each `User:` drive root is 50MB.</span></span>
+<span data-ttu-id="8229c-315">Gibt die maximale Größe für Benutzer Laufwerke an, die in Sitzungen verfügbar gemacht werden, die diese Sitzungs Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="8229c-315">Specifies the maximum size for user drives exposed in sessions that use this session configuration.</span></span>
+<span data-ttu-id="8229c-316">Wenn der Wert weggelassen wird, beträgt die Standardgröße der einzelnen `User:` Laufwerk Stamm 50 MB.</span><span class="sxs-lookup"><span data-stu-id="8229c-316">When omitted, the default size of each `User:` drive root is 50MB.</span></span>
 
-<span data-ttu-id="0693c-317">Dieser Parameter sollte mit **mountuserdrive** verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-317">This parameter should be used with **MountUserDrive** .</span></span>
+<span data-ttu-id="8229c-317">Dieser Parameter sollte mit **mountuserdrive** verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-317">This parameter should be used with **MountUserDrive**.</span></span>
 
 ```yaml
 Type: System.Int64
@@ -811,15 +811,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-318">-Variabledefinitionen</span><span class="sxs-lookup"><span data-stu-id="0693c-318">-VariableDefinitions</span></span>
+### <span data-ttu-id="8229c-318">-Variabledefinitionen</span><span class="sxs-lookup"><span data-stu-id="8229c-318">-VariableDefinitions</span></span>
 
-<span data-ttu-id="0693c-319">Fügt den Sitzungen, die die Sitzungskonfiguration verwenden, die angegebenen Variablen hinzu.</span><span class="sxs-lookup"><span data-stu-id="0693c-319">Adds the specified variables to sessions that use the session configuration.</span></span> <span data-ttu-id="0693c-320">Geben Sie eine Hashtabelle mit den folgenden Schlüsseln ein:</span><span class="sxs-lookup"><span data-stu-id="0693c-320">Enter a hash table with the following keys:</span></span>
+<span data-ttu-id="8229c-319">Fügt den Sitzungen, die die Sitzungskonfiguration verwenden, die angegebenen Variablen hinzu.</span><span class="sxs-lookup"><span data-stu-id="8229c-319">Adds the specified variables to sessions that use the session configuration.</span></span> <span data-ttu-id="8229c-320">Geben Sie eine Hashtabelle mit den folgenden Schlüsseln ein:</span><span class="sxs-lookup"><span data-stu-id="8229c-320">Enter a hash table with the following keys:</span></span>
 
-- <span data-ttu-id="0693c-321">Name: der Name der Variablen.</span><span class="sxs-lookup"><span data-stu-id="0693c-321">Name - Name of the variable.</span></span> <span data-ttu-id="0693c-322">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-322">This key is required.</span></span>
-- <span data-ttu-id="0693c-323">Wert-Variablen Wert.</span><span class="sxs-lookup"><span data-stu-id="0693c-323">Value - Variable value.</span></span> <span data-ttu-id="0693c-324">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="0693c-324">This key is required.</span></span>
-- <span data-ttu-id="0693c-325">Optionen: Variablen Optionen.</span><span class="sxs-lookup"><span data-stu-id="0693c-325">Options - Variable options.</span></span> <span data-ttu-id="0693c-326">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="0693c-326">This key is optional.</span></span> <span data-ttu-id="0693c-327">Der Standardwert ist " **None** ".</span><span class="sxs-lookup"><span data-stu-id="0693c-327">The default value is **None** .</span></span> <span data-ttu-id="0693c-328">Die zulässigen Werte für diesen Parameter lauten: None, Read Only, Constant, private oder allscope.</span><span class="sxs-lookup"><span data-stu-id="0693c-328">The acceptable values for this parameter are: None, ReadOnly, Constant, Private, or AllScope.</span></span>
+- <span data-ttu-id="8229c-321">Name: der Name der Variablen.</span><span class="sxs-lookup"><span data-stu-id="8229c-321">Name - Name of the variable.</span></span> <span data-ttu-id="8229c-322">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-322">This key is required.</span></span>
+- <span data-ttu-id="8229c-323">Wert-Variablen Wert.</span><span class="sxs-lookup"><span data-stu-id="8229c-323">Value - Variable value.</span></span> <span data-ttu-id="8229c-324">Dieser Schlüssel ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8229c-324">This key is required.</span></span>
+- <span data-ttu-id="8229c-325">Optionen: Variablen Optionen.</span><span class="sxs-lookup"><span data-stu-id="8229c-325">Options - Variable options.</span></span> <span data-ttu-id="8229c-326">Dieser Schlüssel ist optional.</span><span class="sxs-lookup"><span data-stu-id="8229c-326">This key is optional.</span></span> <span data-ttu-id="8229c-327">Der Standardwert ist " **None** ".</span><span class="sxs-lookup"><span data-stu-id="8229c-327">The default value is **None**.</span></span> <span data-ttu-id="8229c-328">Die zulässigen Werte für diesen Parameter lauten: None, Read Only, Constant, private oder allscope.</span><span class="sxs-lookup"><span data-stu-id="8229c-328">The acceptable values for this parameter are: None, ReadOnly, Constant, Private, or AllScope.</span></span>
 
-<span data-ttu-id="0693c-329">Beispiel: `@{Name='WarningPreference';Value='SilentlyContinue';Options='AllScope'}`</span><span class="sxs-lookup"><span data-stu-id="0693c-329">For example: `@{Name='WarningPreference';Value='SilentlyContinue';Options='AllScope'}`</span></span>
+<span data-ttu-id="8229c-329">Beispiel: `@{Name='WarningPreference';Value='SilentlyContinue';Options='AllScope'}`</span><span class="sxs-lookup"><span data-stu-id="8229c-329">For example: `@{Name='WarningPreference';Value='SilentlyContinue';Options='AllScope'}`</span></span>
 
 ```yaml
 Type: System.Object
@@ -833,13 +833,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-330">-Visiblealiases</span><span class="sxs-lookup"><span data-stu-id="0693c-330">-VisibleAliases</span></span>
+### <span data-ttu-id="8229c-330">-Visiblealiases</span><span class="sxs-lookup"><span data-stu-id="8229c-330">-VisibleAliases</span></span>
 
-<span data-ttu-id="0693c-331">Beschränkt die Aliase in der Sitzung auf jene, die im Wert dieses Parameters angegeben wurden, sowie auf alle Aliase, die Sie im **AliasDefinition** -Parameter definieren.</span><span class="sxs-lookup"><span data-stu-id="0693c-331">Limits the aliases in the session to those specified in the value of this parameter, plus any aliases that you define in the **AliasDefinition** parameter.</span></span> <span data-ttu-id="0693c-332">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0693c-332">Wildcard characters are supported.</span></span> <span data-ttu-id="0693c-333">Standardmäßig sind alle Aliase, die von der PowerShell-Engine definiert werden, und alle Aliase, die von Modulen exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0693c-333">By default, all aliases that are defined by the PowerShell engine and all aliases that modules export are visible in the session.</span></span>
+<span data-ttu-id="8229c-331">Beschränkt die Aliase in der Sitzung auf jene, die im Wert dieses Parameters angegeben wurden, sowie auf alle Aliase, die Sie im **AliasDefinition** -Parameter definieren.</span><span class="sxs-lookup"><span data-stu-id="8229c-331">Limits the aliases in the session to those specified in the value of this parameter, plus any aliases that you define in the **AliasDefinition** parameter.</span></span> <span data-ttu-id="8229c-332">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8229c-332">Wildcard characters are supported.</span></span> <span data-ttu-id="8229c-333">Standardmäßig sind alle Aliase, die von der PowerShell-Engine definiert werden, und alle Aliase, die von Modulen exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-333">By default, all aliases that are defined by the PowerShell engine and all aliases that modules export are visible in the session.</span></span>
 
-<span data-ttu-id="0693c-334">Beispiel: `VisibleAliases='gcm', 'gp'`</span><span class="sxs-lookup"><span data-stu-id="0693c-334">For example: `VisibleAliases='gcm', 'gp'`</span></span>
+<span data-ttu-id="8229c-334">Beispiel: `VisibleAliases='gcm', 'gp'`</span><span class="sxs-lookup"><span data-stu-id="8229c-334">For example: `VisibleAliases='gcm', 'gp'`</span></span>
 
-<span data-ttu-id="0693c-335">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="0693c-335">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
+<span data-ttu-id="8229c-335">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="8229c-335">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -853,13 +853,13 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="0693c-336">-Visiblecmdlets</span><span class="sxs-lookup"><span data-stu-id="0693c-336">-VisibleCmdlets</span></span>
+### <span data-ttu-id="8229c-336">-Visiblecmdlets</span><span class="sxs-lookup"><span data-stu-id="8229c-336">-VisibleCmdlets</span></span>
 
-<span data-ttu-id="0693c-337">Beschränkt die Cmdlets in der Sitzung auf jene, die im Wert dieses Parameters angegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="0693c-337">Limits the cmdlets in the session to those specified in the value of this parameter.</span></span> <span data-ttu-id="0693c-338">Platzhalter Zeichen und qualifizierte Modulnamen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0693c-338">Wildcard characters and Module Qualified Names are supported.</span></span>
+<span data-ttu-id="8229c-337">Beschränkt die Cmdlets in der Sitzung auf jene, die im Wert dieses Parameters angegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="8229c-337">Limits the cmdlets in the session to those specified in the value of this parameter.</span></span> <span data-ttu-id="8229c-338">Platzhalter Zeichen und qualifizierte Modulnamen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8229c-338">Wildcard characters and Module Qualified Names are supported.</span></span>
 
-<span data-ttu-id="0693c-339">Standardmäßig sind alle Cmdlets, die von Modulen in der Sitzung exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0693c-339">By default, all cmdlets that modules in the session export are visible in the session.</span></span> <span data-ttu-id="0693c-340">Verwenden Sie die **SessionType** - und **ModulesToImport** -Parameter, um zu bestimmen, welche Module und Snap-Ins in die Sitzung importiert werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-340">Use the **SessionType** and **ModulesToImport** parameters to determine which modules and snap-ins are imported into the session.</span></span> <span data-ttu-id="0693c-341">Wenn das Cmdlet in **modulestoimport** nicht verfügbar ist, versucht das entsprechende Modul, das Cmdlet zu veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="0693c-341">If no modules in **ModulesToImport** expose the cmdlet, the appropriate module will attempt to be autoloaded.</span></span>
+<span data-ttu-id="8229c-339">Standardmäßig sind alle Cmdlets, die von Modulen in der Sitzung exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-339">By default, all cmdlets that modules in the session export are visible in the session.</span></span> <span data-ttu-id="8229c-340">Verwenden Sie die **SessionType** - und **ModulesToImport** -Parameter, um zu bestimmen, welche Module und Snap-Ins in die Sitzung importiert werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-340">Use the **SessionType** and **ModulesToImport** parameters to determine which modules and snap-ins are imported into the session.</span></span> <span data-ttu-id="8229c-341">Wenn das Cmdlet in **modulestoimport** nicht verfügbar ist, versucht das entsprechende Modul, das Cmdlet zu veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="8229c-341">If no modules in **ModulesToImport** expose the cmdlet, the appropriate module will attempt to be autoloaded.</span></span>
 
-<span data-ttu-id="0693c-342">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="0693c-342">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
+<span data-ttu-id="8229c-342">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="8229c-342">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -873,13 +873,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="0693c-343">-Visibleexternalcommands</span><span class="sxs-lookup"><span data-stu-id="0693c-343">-VisibleExternalCommands</span></span>
+### <span data-ttu-id="8229c-343">-Visibleexternalcommands</span><span class="sxs-lookup"><span data-stu-id="8229c-343">-VisibleExternalCommands</span></span>
 
-<span data-ttu-id="0693c-344">Schränkt die externen Binärdateien, Skripts und Befehle, die in der Sitzung ausgeführt werden können, auf die Werte ein, die im Wert dieses Parameters angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-344">Limits the external binaries, scripts, and commands that can be executed in the session to those specified in the value of this parameter.</span></span> <span data-ttu-id="0693c-345">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0693c-345">Wildcard characters are supported.</span></span>
+<span data-ttu-id="8229c-344">Schränkt die externen Binärdateien, Skripts und Befehle, die in der Sitzung ausgeführt werden können, auf die Werte ein, die im Wert dieses Parameters angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-344">Limits the external binaries, scripts, and commands that can be executed in the session to those specified in the value of this parameter.</span></span> <span data-ttu-id="8229c-345">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8229c-345">Wildcard characters are supported.</span></span>
 
-<span data-ttu-id="0693c-346">Standardmäßig sind keine externen Befehle in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0693c-346">By default, no external commands are visible in the session.</span></span>
+<span data-ttu-id="8229c-346">Standardmäßig sind keine externen Befehle in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-346">By default, no external commands are visible in the session.</span></span>
 
-<span data-ttu-id="0693c-347">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="0693c-347">When any **Visible** parameter is included in the session configuration file, PowerShell, removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
+<span data-ttu-id="8229c-347">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="8229c-347">When any **Visible** parameter is included in the session configuration file, PowerShell, removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -893,13 +893,13 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="0693c-348">-Visiblefunctions</span><span class="sxs-lookup"><span data-stu-id="0693c-348">-VisibleFunctions</span></span>
+### <span data-ttu-id="8229c-348">-Visiblefunctions</span><span class="sxs-lookup"><span data-stu-id="8229c-348">-VisibleFunctions</span></span>
 
-<span data-ttu-id="0693c-349">Beschränkt die Funktionen in der Sitzung auf jene, die im Wert dieses Parameters angegeben wurden, sowie auf alle Funktionen, die Sie im **FunctionDefinition** -Parameter definieren.</span><span class="sxs-lookup"><span data-stu-id="0693c-349">Limits the functions in the session to those specified in the value of this parameter, plus any functions that you define in the **FunctionDefinition** parameter.</span></span> <span data-ttu-id="0693c-350">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0693c-350">Wildcard characters are supported.</span></span>
+<span data-ttu-id="8229c-349">Beschränkt die Funktionen in der Sitzung auf jene, die im Wert dieses Parameters angegeben wurden, sowie auf alle Funktionen, die Sie im **FunctionDefinition** -Parameter definieren.</span><span class="sxs-lookup"><span data-stu-id="8229c-349">Limits the functions in the session to those specified in the value of this parameter, plus any functions that you define in the **FunctionDefinition** parameter.</span></span> <span data-ttu-id="8229c-350">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8229c-350">Wildcard characters are supported.</span></span>
 
-<span data-ttu-id="0693c-351">Standardmäßig sind alle Funktionen, die von Modulen in der Sitzung exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0693c-351">By default, all functions that modules in the session export are visible in the session.</span></span> <span data-ttu-id="0693c-352">Verwenden Sie die **SessionType** - und **ModulesToImport** -Parameter, um zu bestimmen, welche Module und Snap-Ins in die Sitzung importiert werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-352">Use the **SessionType** and **ModulesToImport** parameters to determine which modules and snap-ins are imported into the session.</span></span>
+<span data-ttu-id="8229c-351">Standardmäßig sind alle Funktionen, die von Modulen in der Sitzung exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-351">By default, all functions that modules in the session export are visible in the session.</span></span> <span data-ttu-id="8229c-352">Verwenden Sie die **SessionType** - und **ModulesToImport** -Parameter, um zu bestimmen, welche Module und Snap-Ins in die Sitzung importiert werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-352">Use the **SessionType** and **ModulesToImport** parameters to determine which modules and snap-ins are imported into the session.</span></span>
 
-<span data-ttu-id="0693c-353">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="0693c-353">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
+<span data-ttu-id="8229c-353">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen ipmo-Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="8229c-353">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its ipmo alias from the session.</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -913,14 +913,14 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="0693c-354">-Visibleproviders</span><span class="sxs-lookup"><span data-stu-id="0693c-354">-VisibleProviders</span></span>
+### <span data-ttu-id="8229c-354">-Visibleproviders</span><span class="sxs-lookup"><span data-stu-id="8229c-354">-VisibleProviders</span></span>
 
-<span data-ttu-id="0693c-355">Schränkt die PowerShell-Anbieter in der Sitzung auf die Werte ein, die im Wert dieses Parameters angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="0693c-355">Limits the PowerShell providers in the session to those specified in the value of this parameter.</span></span>
-<span data-ttu-id="0693c-356">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="0693c-356">Wildcard characters are supported.</span></span>
+<span data-ttu-id="8229c-355">Schränkt die PowerShell-Anbieter in der Sitzung auf die Werte ein, die im Wert dieses Parameters angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="8229c-355">Limits the PowerShell providers in the session to those specified in the value of this parameter.</span></span>
+<span data-ttu-id="8229c-356">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8229c-356">Wildcard characters are supported.</span></span>
 
-<span data-ttu-id="0693c-357">Standardmäßig sind alle Anbieter, die von Modulen in der Sitzung exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0693c-357">By default, all providers that modules in the session export are visible in the session.</span></span> <span data-ttu-id="0693c-358">Verwenden Sie die Parameter **SessionType** und **modulestoimport** , um zu bestimmen, welche Module in die Sitzung importiert werden.</span><span class="sxs-lookup"><span data-stu-id="0693c-358">Use the **SessionType** and **ModulesToImport** parameters to determine which modules are imported into the session.</span></span>
+<span data-ttu-id="8229c-357">Standardmäßig sind alle Anbieter, die von Modulen in der Sitzung exportiert werden, in der Sitzung sichtbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-357">By default, all providers that modules in the session export are visible in the session.</span></span> <span data-ttu-id="8229c-358">Verwenden Sie die Parameter **SessionType** und **modulestoimport** , um zu bestimmen, welche Module in die Sitzung importiert werden.</span><span class="sxs-lookup"><span data-stu-id="8229c-358">Use the **SessionType** and **ModulesToImport** parameters to determine which modules are imported into the session.</span></span>
 
-<span data-ttu-id="0693c-359">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen `ipmo` Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="0693c-359">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its `ipmo` alias from the session.</span></span>
+<span data-ttu-id="8229c-359">Wenn ein beliebiger **sichtbarer** Parameter in der Sitzungs Konfigurationsdatei enthalten ist, entfernt PowerShell das `Import-Module` Cmdlet und den zugehörigen `ipmo` Alias aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="8229c-359">When any **Visible** parameter is included in the session configuration file, PowerShell removes the `Import-Module` cmdlet and its `ipmo` alias from the session.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -934,49 +934,51 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="0693c-360">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="0693c-360">CommonParameters</span></span>
+### <span data-ttu-id="8229c-360">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8229c-360">CommonParameters</span></span>
 
-<span data-ttu-id="0693c-361">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="0693c-361">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="0693c-362">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="0693c-362">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="8229c-361">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8229c-361">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8229c-362">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8229c-362">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="0693c-363">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="0693c-363">INPUTS</span></span>
+## <span data-ttu-id="8229c-363">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="8229c-363">INPUTS</span></span>
 
-### <span data-ttu-id="0693c-364">Keine</span><span class="sxs-lookup"><span data-stu-id="0693c-364">None</span></span>
+### <span data-ttu-id="8229c-364">Keine</span><span class="sxs-lookup"><span data-stu-id="8229c-364">None</span></span>
 
-<span data-ttu-id="0693c-365">Sie können keine Objekte über die Pipeline an dieses Cmdlet übergeben.</span><span class="sxs-lookup"><span data-stu-id="0693c-365">You cannot pipe any objects to this cmdlet.</span></span>
+<span data-ttu-id="8229c-365">Sie können keine Objekte über die Pipeline an dieses Cmdlet übergeben.</span><span class="sxs-lookup"><span data-stu-id="8229c-365">You cannot pipe any objects to this cmdlet.</span></span>
 
-## <span data-ttu-id="0693c-366">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="0693c-366">OUTPUTS</span></span>
+## <span data-ttu-id="8229c-366">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="8229c-366">OUTPUTS</span></span>
 
-### <span data-ttu-id="0693c-367">Keine</span><span class="sxs-lookup"><span data-stu-id="0693c-367">None</span></span>
+### <span data-ttu-id="8229c-367">Keine</span><span class="sxs-lookup"><span data-stu-id="8229c-367">None</span></span>
 
-<span data-ttu-id="0693c-368">Dieses Cmdlet generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="0693c-368">This cmdlet does not generate any output.</span></span>
+<span data-ttu-id="8229c-368">Dieses Cmdlet generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="8229c-368">This cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="0693c-369">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="0693c-369">NOTES</span></span>
+## <span data-ttu-id="8229c-369">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="8229c-369">NOTES</span></span>
 
-- <span data-ttu-id="0693c-370">Parameter, wie z. **b. visiblecmdlets** und **visibleproviders** , importieren keine Elemente in die Sitzung.</span><span class="sxs-lookup"><span data-stu-id="0693c-370">Parameters, such as **VisibleCmdlets** and **VisibleProviders** , do not import items into the session.</span></span> <span data-ttu-id="0693c-371">Stattdessen treffen sie ihre Auswahl unter den Elementen, die in die Sitzung importiert wurden.</span><span class="sxs-lookup"><span data-stu-id="0693c-371">Instead, they select from among the items imported into the session.</span></span> <span data-ttu-id="0693c-372">Wenn z. b. der Wert des **visibleproviders** -Parameters der Zertifikat Anbieter ist, der **modulestoimport** -Parameter jedoch nicht das **Microsoft. PowerShell. Security** -Modul angibt, das den Zertifikat Anbieter enthält, ist der Zertifikat Anbieter in der Sitzung nicht sichtbar.</span><span class="sxs-lookup"><span data-stu-id="0693c-372">For example, if the value of the **VisibleProviders** parameter is the Certificate provider, but the **ModulesToImport** parameter does not specify the **Microsoft.PowerShell.Security** module that contains the Certificate provider, the Certificate provider is not visible in the session.</span></span>
-- <span data-ttu-id="0693c-373">`New-PSSessionConfigurationFile` erstellt eine Sitzungs Konfigurationsdatei mit der Dateinamenerweiterung. PSSC in dem Pfad, den Sie im **path** -Parameter angeben.</span><span class="sxs-lookup"><span data-stu-id="0693c-373">`New-PSSessionConfigurationFile` creates a session configuration file that has a .pssc file name extension in the path that you specify in the **Path** parameter.</span></span> <span data-ttu-id="0693c-374">Wenn Sie die Sitzungs Konfigurationsdatei verwenden, um eine Sitzungs Konfiguration zu erstellen, `Register-PSSessionConfiguration` kopiert das Cmdlet die Konfigurationsdatei und speichert eine aktive Kopie der Datei im Unterverzeichnis **sessionconfig** des `$PSHOME` Verzeichnisses.</span><span class="sxs-lookup"><span data-stu-id="0693c-374">When you use the session configuration file to create a session configuration, the `Register-PSSessionConfiguration` cmdlet copies the configuration file and saves an active copy of the file in the **SessionConfig** subdirectory of the `$PSHOME` directory.</span></span>
+<span data-ttu-id="8229c-370">Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-370">This cmdlet is only available on Windows platforms.</span></span>
 
-  <span data-ttu-id="0693c-375">Die **configfilepath** -Eigenschaft der Sitzungs Konfiguration enthält den voll qualifizierten Pfad der aktiven Sitzungs Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="0693c-375">The **ConfigFilePath** property of the session configuration contains the fully qualified path of the active session configuration file.</span></span> <span data-ttu-id="0693c-376">Sie können die aktive Konfigurationsdatei im Verzeichnis jederzeit `$PSHOME` mithilfe eines beliebigen Text-Editors ändern.</span><span class="sxs-lookup"><span data-stu-id="0693c-376">You can modify the active configuration file in the `$PSHOME` directory at any time using any text editor.</span></span> <span data-ttu-id="0693c-377">Die Änderungen, die Sie vornehmen, betreffen alle neuen Sitzungen, die diese Sitzungskonfiguration verwenden, aber nicht bereits vorhandene Sitzungen.</span><span class="sxs-lookup"><span data-stu-id="0693c-377">The changes that you make affect all new sessions that use the session configuration, but not existing sessions.</span></span>
+- <span data-ttu-id="8229c-371">Parameter, wie z. **b. visiblecmdlets** und **visibleproviders** , importieren keine Elemente in die Sitzung.</span><span class="sxs-lookup"><span data-stu-id="8229c-371">Parameters, such as **VisibleCmdlets** and **VisibleProviders** , do not import items into the session.</span></span> <span data-ttu-id="8229c-372">Stattdessen treffen sie ihre Auswahl unter den Elementen, die in die Sitzung importiert wurden.</span><span class="sxs-lookup"><span data-stu-id="8229c-372">Instead, they select from among the items imported into the session.</span></span> <span data-ttu-id="8229c-373">Wenn z. b. der Wert des **visibleproviders** -Parameters der Zertifikat Anbieter ist, der **modulestoimport** -Parameter jedoch nicht das **Microsoft. PowerShell. Security** -Modul angibt, das den Zertifikat Anbieter enthält, ist der Zertifikat Anbieter in der Sitzung nicht sichtbar.</span><span class="sxs-lookup"><span data-stu-id="8229c-373">For example, if the value of the **VisibleProviders** parameter is the Certificate provider, but the **ModulesToImport** parameter does not specify the **Microsoft.PowerShell.Security** module that contains the Certificate provider, the Certificate provider is not visible in the session.</span></span>
+- <span data-ttu-id="8229c-374">`New-PSSessionConfigurationFile` erstellt eine Sitzungs Konfigurationsdatei mit der Dateinamenerweiterung. PSSC in dem Pfad, den Sie im **path** -Parameter angeben.</span><span class="sxs-lookup"><span data-stu-id="8229c-374">`New-PSSessionConfigurationFile` creates a session configuration file that has a .pssc file name extension in the path that you specify in the **Path** parameter.</span></span> <span data-ttu-id="8229c-375">Wenn Sie die Sitzungs Konfigurationsdatei verwenden, um eine Sitzungs Konfiguration zu erstellen, `Register-PSSessionConfiguration` kopiert das Cmdlet die Konfigurationsdatei und speichert eine aktive Kopie der Datei im Unterverzeichnis **sessionconfig** des `$PSHOME` Verzeichnisses.</span><span class="sxs-lookup"><span data-stu-id="8229c-375">When you use the session configuration file to create a session configuration, the `Register-PSSessionConfiguration` cmdlet copies the configuration file and saves an active copy of the file in the **SessionConfig** subdirectory of the `$PSHOME` directory.</span></span>
 
-  <span data-ttu-id="0693c-378">Vor der Verwendung einer bearbeiteten Sitzungs Konfigurationsdatei können `Test-PSSessionConfigurationFile` Sie mit dem Cmdlet überprüfen, ob die Einträge in der Konfigurationsdatei gültig sind.</span><span class="sxs-lookup"><span data-stu-id="0693c-378">Before using an edited session configuration file, use the `Test-PSSessionConfigurationFile` cmdlet to verify that the configuration file entries are valid.</span></span>
+  <span data-ttu-id="8229c-376">Die **configfilepath** -Eigenschaft der Sitzungs Konfiguration enthält den voll qualifizierten Pfad der aktiven Sitzungs Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8229c-376">The **ConfigFilePath** property of the session configuration contains the fully qualified path of the active session configuration file.</span></span> <span data-ttu-id="8229c-377">Sie können die aktive Konfigurationsdatei im Verzeichnis jederzeit `$PSHOME` mithilfe eines beliebigen Text-Editors ändern.</span><span class="sxs-lookup"><span data-stu-id="8229c-377">You can modify the active configuration file in the `$PSHOME` directory at any time using any text editor.</span></span> <span data-ttu-id="8229c-378">Die Änderungen, die Sie vornehmen, betreffen alle neuen Sitzungen, die diese Sitzungskonfiguration verwenden, aber nicht bereits vorhandene Sitzungen.</span><span class="sxs-lookup"><span data-stu-id="8229c-378">The changes that you make affect all new sessions that use the session configuration, but not existing sessions.</span></span>
 
-## <span data-ttu-id="0693c-379">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="0693c-379">RELATED LINKS</span></span>
+  <span data-ttu-id="8229c-379">Vor der Verwendung einer bearbeiteten Sitzungs Konfigurationsdatei können `Test-PSSessionConfigurationFile` Sie mit dem Cmdlet überprüfen, ob die Einträge in der Konfigurationsdatei gültig sind.</span><span class="sxs-lookup"><span data-stu-id="8229c-379">Before using an edited session configuration file, use the `Test-PSSessionConfigurationFile` cmdlet to verify that the configuration file entries are valid.</span></span>
 
-[<span data-ttu-id="0693c-380">Disable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="0693c-380">Disable-PSSessionConfiguration</span></span>](Disable-PSSessionConfiguration.md)
+## <span data-ttu-id="8229c-380">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="8229c-380">RELATED LINKS</span></span>
 
-[<span data-ttu-id="0693c-381">Enable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="0693c-381">Enable-PSSessionConfiguration</span></span>](Enable-PSSessionConfiguration.md)
+[<span data-ttu-id="8229c-381">Disable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8229c-381">Disable-PSSessionConfiguration</span></span>](Disable-PSSessionConfiguration.md)
 
-[<span data-ttu-id="0693c-382">Get-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="0693c-382">Get-PSSessionConfiguration</span></span>](Get-PSSessionConfiguration.md)
+[<span data-ttu-id="8229c-382">Enable-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8229c-382">Enable-PSSessionConfiguration</span></span>](Enable-PSSessionConfiguration.md)
 
-[<span data-ttu-id="0693c-383">Register-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="0693c-383">Register-PSSessionConfiguration</span></span>](Register-PSSessionConfiguration.md)
+[<span data-ttu-id="8229c-383">Get-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8229c-383">Get-PSSessionConfiguration</span></span>](Get-PSSessionConfiguration.md)
 
-[<span data-ttu-id="0693c-384">Set-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="0693c-384">Set-PSSessionConfiguration</span></span>](Set-PSSessionConfiguration.md)
+[<span data-ttu-id="8229c-384">Register-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8229c-384">Register-PSSessionConfiguration</span></span>](Register-PSSessionConfiguration.md)
 
-[<span data-ttu-id="0693c-385">Test-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="0693c-385">Test-PSSessionConfigurationFile</span></span>](Test-PSSessionConfigurationFile.md)
+[<span data-ttu-id="8229c-385">Set-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8229c-385">Set-PSSessionConfiguration</span></span>](Set-PSSessionConfiguration.md)
 
-[<span data-ttu-id="0693c-386">Unregister-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="0693c-386">Unregister-PSSessionConfiguration</span></span>](Unregister-PSSessionConfiguration.md)
+[<span data-ttu-id="8229c-386">Test-PSSessionConfigurationFile</span><span class="sxs-lookup"><span data-stu-id="8229c-386">Test-PSSessionConfigurationFile</span></span>](Test-PSSessionConfigurationFile.md)
 
-[<span data-ttu-id="0693c-387">WSMan-Anbieter</span><span class="sxs-lookup"><span data-stu-id="0693c-387">WSMan Provider</span></span>](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
+[<span data-ttu-id="8229c-387">Unregister-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="8229c-387">Unregister-PSSessionConfiguration</span></span>](Unregister-PSSessionConfiguration.md)
 
-[<span data-ttu-id="0693c-388">about_Session_Configurations</span><span class="sxs-lookup"><span data-stu-id="0693c-388">about_Session_Configurations</span></span>](About/about_Session_Configurations.md)
+[<span data-ttu-id="8229c-388">WSMan-Anbieter</span><span class="sxs-lookup"><span data-stu-id="8229c-388">WSMan Provider</span></span>](../Microsoft.WsMan.Management/About/about_WSMan_Provider.md)
 
-[<span data-ttu-id="0693c-389">about_Session_Configuration_Files</span><span class="sxs-lookup"><span data-stu-id="0693c-389">about_Session_Configuration_Files</span></span>](About/about_Session_Configuration_Files.md)
+[<span data-ttu-id="8229c-389">about_Session_Configurations</span><span class="sxs-lookup"><span data-stu-id="8229c-389">about_Session_Configurations</span></span>](About/about_Session_Configurations.md)
+
+[<span data-ttu-id="8229c-390">about_Session_Configuration_Files</span><span class="sxs-lookup"><span data-stu-id="8229c-390">about_Session_Configuration_Files</span></span>](About/about_Session_Configuration_Files.md)
