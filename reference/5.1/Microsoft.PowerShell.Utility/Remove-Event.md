@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/remove-event?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Event
-ms.openlocfilehash: 19841624e836f7cf8080487c977f11b88dd3174e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 35d5d75cad2855753504549262abd2e14af200c0
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213751"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344489"
 ---
 # Remove-Event
 
@@ -34,10 +34,10 @@ Remove-Event [-EventIdentifier] <Int32> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Das Cmdlet " **Remove-Event** " löscht Ereignisse aus der Ereignis Warteschlange in der aktuellen Sitzung.
 
-Mit diesem Cmdlet werden nur Ereignisse gelöscht, die sich aktuell in der Warteschlange befinden.
-Verwenden Sie das Cmdlet „Unregister-Event“, um Ereignisregistrierungen abzubrechen oder das Abonnement aufzuheben.
+Das- `Remove-Event` Cmdlet löscht Ereignisse aus der Ereignis Warteschlange in der aktuellen Sitzung.
+
+Mit diesem Cmdlet werden nur Ereignisse gelöscht, die sich aktuell in der Warteschlange befinden. Verwenden Sie das Cmdlet, um Ereignis Registrierungen abzubrechen oder das Abonnement abzubestellen `Unregister-Event` .
 
 ## BEISPIELE
 
@@ -68,8 +68,8 @@ Dieser Befehl löscht alle Ereignisse aus der Ereigniswarteschlange.
 ## PARAMETERS
 
 ### -Eventidentifier
-Gibt den Ereignis Bezeichner an, den das Cmdlet löscht.
-Ein *eventidentifier* -oder *SourceIdentifier* -Parameter ist in jedem Befehl erforderlich.
+
+Gibt den Ereignis Bezeichner an, den das Cmdlet löscht. Ein **eventidentifier** -oder **SourceIdentifier** -Parameter ist in jedem Befehl erforderlich.
 
 ```yaml
 Type: System.Int32
@@ -84,9 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-Gibt den Quell Bezeichner an, aus dem dieses Cmdlet Ereignisse löscht.
-Platzhalter sind nicht zulässig.
-Ein *eventidentifier* -oder *SourceIdentifier* -Parameter ist in jedem Befehl erforderlich.
+
+Gibt den Quell Bezeichner an, aus dem dieses Cmdlet Ereignisse löscht. Platzhalter sind nicht zulässig. Ein **eventidentifier** -oder **SourceIdentifier** -Parameter ist in jedem Befehl erforderlich.
 
 ```yaml
 Type: System.String
@@ -101,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.
 
 ```yaml
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,23 +132,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## EINGABEN
 
 ### System. Management. Automation. psiebziger args
-Ereignisse können von Get-Event an **Remove-Event** übergeben werden.
+
+Ereignisse können von `Get-Event` an übergeben werden `Remove-Event` .
 
 ## AUSGABEN
 
 ### Keine
+
 Das Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
 
-* Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
-
-*
+Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
 
 ## VERWANDTE LINKS
 

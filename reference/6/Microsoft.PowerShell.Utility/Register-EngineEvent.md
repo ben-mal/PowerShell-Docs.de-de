@@ -7,12 +7,12 @@ ms.date: 02/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/register-engineevent?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-EngineEvent
-ms.openlocfilehash: 005e495ff5f532cc947edf894a67c078e524a72c
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 35218a3860db9746b99ec441e122fcd5e2370f72
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216052"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344761"
 ---
 # Register-EngineEvent
 
@@ -44,7 +44,9 @@ Dieses Beispiel registriert sich für ein PowerShell-Engine-Ereignis auf zwei Re
 
 ```powershell
 $S = New-PSSession -ComputerName "Server01, Server02"
-Invoke-Command -Session $S { Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward }
+Invoke-Command -Session $S {
+Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Forward
+}
 ```
 
 `New-PSSession` erstellt eine vom Benutzer verwaltete Sitzung (PSSession) auf jedem Remote Computer. Das `Invoke-Command` Cmdlet führt den `Register-EngineEvent` Befehl in den Remote Sitzungen aus.
@@ -207,7 +209,7 @@ Gibt den Quellbezeichner des Ereignisses an, das Sie abonnieren. Der Quellbezeic
 
 Der Wert dieses Parameters wird im Wert der **SourceIdentifier** -Eigenschaft des Abonnentenobjekts und aller diesem Abonnement zugeordneten Ereignisobjekte angezeigt.
 
-Der Wert ist für die Quelle des Ereignisses spezifisch. Dies kann ein beliebiger Wert sein, den Sie für die Verwendung mit dem `New-Event` Cmdlet erstellt haben. Die PowerShell-Engine unterstützt die **engineevent** -Werte **PowerShell. Exit** und **PowerShell. OnIdle** .
+Der Wert ist für die Quelle des Ereignisses spezifisch. Dies kann ein beliebiger Wert sein, den Sie für die Verwendung mit dem `New-Event` Cmdlet erstellt haben. Die PowerShell-Engine unterstützt die **engineevent** -Werte **PowerShell. Exit** und **PowerShell. OnIdle**.
 
 ```yaml
 Type: System.String
@@ -256,6 +258,8 @@ Eingaben können nicht an übergeben werden `Register-EngineEvent` .
 Wenn Sie den **Action** -Parameter verwenden, wird `Register-EngineEvent` ein **System. Management. Automation. psiebziger Job** -Objekt zurückgegeben. Andernfalls wird keine Ausgabe generiert.
 
 ## HINWEISE
+
+Auf den Linux-oder macOS-Plattformen sind keine Ereignis Quellen verfügbar.
 
 Ereignisse, Ereignisabonnements und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
 

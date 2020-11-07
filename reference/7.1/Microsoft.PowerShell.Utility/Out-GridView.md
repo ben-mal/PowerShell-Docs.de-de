@@ -7,12 +7,12 @@ ms.date: 10/28/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-GridView
-ms.openlocfilehash: 22e6a8de2b52039e0a23cab135f81ff74bdf929a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 840aa38ff17ceaf7dc65ca838da020c3d8c27952
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217372"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344387"
 ---
 # Out-GridView
 
@@ -148,7 +148,7 @@ Diese Befehlszeile kann in einer Windows-Verknüpfung verwendet werden. Ohne den
 
 Gibt das Objekt an, das das Cmdlet als Eingabe akzeptiert `Out-GridView` .
 
-Wenn Sie den **Inputobject** -Parameter verwenden, um eine Auflistung von Objekten an zu senden `Out-GridView` , `Out-GridView` behandelt die Auflistung als ein Auflistungs Objekt und zeigt eine Zeile an, die die Auflistung darstellt. Um jedes Objekt in der Auflistung anzuzeigen, verwenden Sie einen Pipeline Operator (|), um Objekte an zu senden `Out-GridView` .
+Wenn Sie den **Inputobject** -Parameter verwenden, um eine Auflistung von Objekten an zu senden `Out-GridView` , `Out-GridView` behandelt die Auflistung als ein Auflistungs Objekt und zeigt eine Zeile an, die die Auflistung darstellt. Um jedes Objekt in der Auflistung anzuzeigen, verwenden Sie einen Pipeline Operator ( `|` ), um Objekte an zu senden `Out-GridView` .
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -169,7 +169,7 @@ Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert. Um Elemente aus 
 
 Die Werte für diesen Parameter bestimmen, wie viele Elemente Sie über die Pipeline senden können.
 
-- Keine  Keine Elemente. Dies ist der Standardwert.
+- Keine.  Keine Elemente. Dies ist der Standardwert.
 - Einfach. Ein Element oder null Elemente. Verwenden Sie diesen Wert, wenn der nächste Befehl nur jeweils ein Eingabeobjekt akzeptieren kann.
 - Mehr. Null, eines oder viele Elemente. Verwenden Sie diesen Wert, wenn der nächste Befehl mehrere Eingabeobjekte akzeptieren kann. Dieser Wert entspricht dem **Passthru** -Parameter.
 
@@ -255,6 +255,8 @@ Sie können jedes beliebige Objekt an dieses Cmdlet senden.
 Normalerweise gibt keine- `Out-GridView` Objekte zurück. Wenn Sie den **passthru** -Parameter verwenden, werden die Objekte, die die ausgewählten Zeilen darstellen, an die Pipeline zurückgegeben.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Sie können keinen Remotebefehl verwenden, um ein Rasteransichtsfenster auf einem anderen Computer zu öffnen.
 

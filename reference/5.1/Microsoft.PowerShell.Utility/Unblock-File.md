@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/unblock-file?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unblock-File
-ms.openlocfilehash: 1f56dce193cc3c7c8b6af3a7854021b420107255
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 57c8c6f2ceda124b3dc89c363c6cf942680781ca
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213644"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344506"
 ---
 # Unblock-File
 
@@ -35,13 +35,11 @@ Unblock-File -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Mit dem Cmdlet **Unblock-File** können Sie Dateien öffnen, die aus dem Internet heruntergeladen wurden.
-Die Blockierung von PowerShell-Skriptdateien, die aus dem Internet heruntergeladen wurden, wird aufgehoben, sodass Sie Sie ausführen können, auch wenn die PowerShell-Ausführungs Richtlinie **RemoteSigned** ist.
-Standardmäßig werden diese Dateien blockiert, um den Computer vor nicht vertrauenswürdigen Dateien zu schützen.
+Mit dem- `Unblock-File` Cmdlet können Sie Dateien öffnen, die aus dem Internet heruntergeladen wurden. Die Blockierung von PowerShell-Skriptdateien, die aus dem Internet heruntergeladen wurden, wird aufgehoben, sodass Sie Sie ausführen können, auch wenn die PowerShell-Ausführungs Richtlinie **RemoteSigned** ist. Standardmäßig werden diese Dateien blockiert, um den Computer vor nicht vertrauenswürdigen Dateien zu schützen.
 
-Überprüfen Sie vor der Verwendung des **Unblock-File** -Cmdlets die Datei und die Quelle und stellen Sie sicher, dass sie sicher geöffnet werden kann.
+Bevor Sie das `Unblock-File` Cmdlet verwenden, überprüfen Sie die Datei und ihre Quelle, und vergewissern Sie sich, dass Sie sicher geöffnet werden kann.
 
-Intern wird das **Unblock-File** -Cmdlet aus dem alternativen Datenstrom „Zone.Identifier“ entfernt, der den Wert „3“ hat, um anzugeben, dass er aus dem Internet heruntergeladen wurde.
+Intern entfernt das `Unblock-File` Cmdlet den alternativen Datenstrom "Zone. Identifier" mit dem Wert "3", um anzugeben, dass er aus dem Internet heruntergeladen wurde.
 
 Weitere Informationen zu PowerShell-Ausführungsrichtlinien finden Sie unter [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).
 
@@ -51,25 +49,31 @@ Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.
 
 ### Beispiel 1: Entsperren einer Datei
 
+Dieser Befehl hebt die Blockierung der Datei „PowerShellTips.chm“ auf.
+
 ```
 PS C:\> Unblock-File -Path C:\Users\User01\Documents\Downloads\PowerShellTips.chm
 ```
 
-Dieser Befehl hebt die Blockierung der Datei „PowerShellTips.chm“ auf.
-
 ### Beispiel 2: entsperren mehrerer Dateien
+
+Dieser Befehl hebt die Blockierung aller Dateien im Verzeichnis auf, `C:\Downloads` deren Namen "PowerShell" enthalten. Führen Sie keinen Befehl wie diesen aus, bis Sie sichergestellt haben, dass alle Dateien sicher sind.
 
 ```
 PS C:\> dir C:\Downloads\*PowerShell* | Unblock-File
 ```
 
-Dieser Befehl hebt die Blockierung aller Dateien im Verzeichnis „C:\Downloads“ auf, deren Namen die Zeichenfolge „PowerShell“ enthalten.
-Führen Sie keinen Befehl wie diesen aus, bis Sie sichergestellt haben, dass alle Dateien sicher sind.
-
 ### Beispiel 3: Suchen und Entsperren von Skripts
 
+Dieser Befehl zeigt, wie Sie PowerShell-Skripts suchen und deren Blockierung entsperren.
+
+Der erste Befehl verwendet den **Stream** -Parameter des *Get-Item-* Cmdlets zum Aufrufen von Dateien mit dem "Zone. Identifier"-Stream.
+
+Der zweite Befehl zeigt, was geschieht, wenn Sie ein blockiertes Skript in einer PowerShell-Sitzung ausführen, in der die Ausführungs Richtlinie **RemoteSigned** ist. Die RemoteSigned-Richtlinie verhindert die Ausführung von Skripts, die aus dem Internet heruntergeladen werden, es sei denn, sie sind digital signiert.
+
+Der dritte Befehl verwendet das `Unblock-File` Cmdlet, um die Blockierung des Skripts zu entsperren, sodass es in der Sitzung ausgeführt werden kann.
+
 ```
-The first command uses the *Stream* parameter of the Get-Item cmdlet get files with the Zone.Identifier stream.Although you could pipe the output directly to the **Unblock-File** cmdlet (Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue | ForEach {Unblock-File $_.FileName}), it is prudent to review the file and confirm that it is safe before unblocking.
 PS C:\> Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue
    FileName: C:\ps-test\Start-ActivityTracker.ps1
 
@@ -77,7 +81,6 @@ Stream                   Length
 ------                   ------
 Zone.Identifier              26
 
-The second command shows what happens when you run a blocked script in a PowerShell session in which the execution policy is **RemoteSigned**. The RemoteSigned policy prevents you from running scripts that are downloaded from the Internet unless they are digitally signed.
 PS C:\> C:\ps-test\Start-ActivityTracker.ps1
 c:\ps-test\Start-ActivityTracker.ps1 : File c:\ps-test\Start-ActivityTracker.ps1 cannot
 be loaded. The file c:\ps-test\Start-ActivityTracker.ps1 is not digitally signed. The script
@@ -89,25 +92,19 @@ At line:1 char:1
     + CategoryInfo          : SecurityError: (:) [], PSSecurityException
     + FullyQualifiedErrorId : UnauthorizedAccess
 
-The third command uses the **Unblock-File** cmdlet to unblock the script so it can run in the session.
 PS C:\> Get-Item C:\ps-test\Start-ActivityTracker.ps1 | Unblock-File
 ```
-
-Dieser Befehl zeigt, wie Sie PowerShell-Skripts suchen und deren Blockierung entsperren.
 
 ## PARAMETERS
 
 ### -Literalpath
-Gibt die Dateien an, deren Blockierung aufgehoben werden soll.
-Im Gegensatz zu *Path* wird der Wert des *LiteralPath* -Parameters genauso verwendet, wie er eingegeben wurde.
-Es werden keine Zeichen als Platzhalter interpretiert.
-Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.
-Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
+
+Gibt die Dateien an, deren Blockierung aufgehoben werden soll. Im Gegensatz zu **Path** wird der Wert des **LiteralPath** -Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: ByLiteralPath
-Aliases: PSPath
+Aliases: PSPath, LP
 
 Required: True
 Position: Named
@@ -117,8 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Gibt die Dateien an, deren Blockierung aufgehoben werden soll.
-Platzhalterzeichen werden unterstützt.
+
+Gibt die Dateien an, deren Blockierung aufgehoben werden soll. Platzhalterzeichen werden unterstützt.
 
 ```yaml
 Type: System.String[]
@@ -150,8 +147,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -173,7 +169,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ### System.String
 
-Sie können einen Dateipfad über die Pipeline an **Unblock-File** übergeben.
+Sie können einen Dateipfad an die Pipeline übergeben `Unblock-File` .
 
 ## AUSGABEN
 
@@ -183,9 +179,9 @@ Dieses Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
 
-* Das Cmdlet **Unblock-File** funktioniert nur in Dateisystemlaufwerken.
-* **Unblock-File** führt den gleichen Vorgang wie die **Schaltfläche "entsperren"** im Dialogfeld " **Eigenschaften** " im Datei-Explorer aus.
-* Bei Verwendung des **Unblock-File** -Cmdlets für eine nicht blockierte Datei hat der Befehl keine Auswirkungen auf die Datei, deren Blockierung aufgehoben wurde, und das Cmdlet generiert keine Fehler.
+- Das- `Unblock-File` Cmdlet funktioniert nur in Dateisystem Laufwerken.
+- `Unblock-File` führt den gleichen Vorgang wie die **Schaltfläche "entsperren"** im Dialogfeld " **Eigenschaften** " im Datei-Explorer aus.
+- Wenn Sie das `Unblock-File` Cmdlet für eine Datei verwenden, die nicht blockiert ist, hat der Befehl keine Auswirkungen auf die nicht blockierte Datei, und das Cmdlet generiert keine Fehler.
 
 ## VERWANDTE LINKS
 

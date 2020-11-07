@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-pssessionconfiguration?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-PSSessionConfiguration
-ms.openlocfilehash: 237fe83af05de7a97113deb95a831d8295c9f4c4
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 6c8c64161ef674e3a9babaa7ad18c33b3f18cbf0
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210700"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344438"
 ---
 # Enable-PSSessionConfiguration
 
@@ -219,6 +219,8 @@ Sie können ein Sitzungs Konfigurationsobjekt oder eine Zeichenfolge, die den Na
 Dieses Cmdlet gibt keine Objekte zurück.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Um dieses Cmdlet verwenden zu können, müssen Sie PowerShell mit der Option **als Administrator ausführen** starten.
 

@@ -7,12 +7,12 @@ ms.date: 10/25/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 04a2d18b9d663f612e8819c1d81bbfe490f4931a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: aadb0d53ad180ba1e88d31e5d008c6090ae0c9b3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213148"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345220"
 ---
 # New-Service
 
@@ -167,8 +167,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Gibt den Namen des Diensts an.
-Dieser Parameter ist erforderlich.
+Gibt den Namen des Diensts an. Dieser Parameter ist erforderlich.
 
 ```yaml
 Type: System.String
@@ -193,7 +192,7 @@ Legt den Starttyp des Diensts fest. Zulässige Werte für diesen Parameter:
 - **Invalidvalue** : dieser Wert wird nicht unterstützt. Die Verwendung dieses Werts führt zu einem Fehler.
 - **Manuell: der** Dienst wird nur manuell von einem Benutzer, über den Dienststeuerungs-Manager oder durch eine Anwendung gestartet.
 
- Der Standardwert ist **automatisch** .
+ Der Standardwert ist **automatisch**.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ServiceStartupType
@@ -226,8 +225,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -259,7 +257,9 @@ Dieses Cmdlet gibt ein Objekt zurück, das den neuen Dienst darstellt.
 
 ## HINWEISE
 
-Um dieses Cmdlet unter Windows Vista und höheren Versionen des Windows-Betriebssystems auszuführen, starten Sie PowerShell mit der Option als Administrator ausführen.
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
+Starten Sie PowerShell mit der Option **als Administrator ausführen** , um dieses Cmdlet auszuführen.
 
 ## VERWANDTE LINKS
 

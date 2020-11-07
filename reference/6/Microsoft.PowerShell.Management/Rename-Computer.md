@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: e2d4f321609a386c6795949a4a706323b4889f69
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 54624058b57b88b820391cc5afba638aa39ff873
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216103"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345230"
 ---
 # Rename-Computer
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 Gibt den Mechanismus an, der verwendet wird, um die Benutzer Anmelde Informationen zu authentifizieren, wenn dieses Cmdlet das WSMAN-Protokoll verwendet. Zulässige Werte für diesen Parameter:
 
-- **Grundlegend**
+- **Basic**
 - **CredSSP**
 - **Standard**
 - **Digest**
@@ -271,8 +271,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ### Keine
 
-Dieses Cmdlet enthält keine Parameter, die eine Eingabe nach Wert annehmen.
-Sie können jedoch die Werte der Eigenschaften **ComputerName** und **NewName** von Objekten über die Pipeline an dieses Cmdlet übergeben.
+Dieses Cmdlet enthält keine Parameter, die eine Eingabe nach Wert annehmen. Sie können jedoch die Werte der Eigenschaften **ComputerName** und **NewName** von Objekten über die Pipeline an dieses Cmdlet übergeben.
 
 ## AUSGABEN
 
@@ -282,6 +281,8 @@ Dieses Cmdlet gibt ein **computerchangeinfo** -Objekt zurück, wenn Sie den **pa
 Andernfalls wird keine Ausgabe zurückgegeben.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 ## VERWANDTE LINKS
 

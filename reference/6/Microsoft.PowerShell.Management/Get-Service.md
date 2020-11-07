@@ -7,12 +7,12 @@ ms.date: 10/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Service
-ms.openlocfilehash: 8c10e9e97c3371e8de46ed76e4c8a1195bc21513
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 425b5e56286c22b6595954916d8aa66eec807d83
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215044"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345254"
 ---
 # Get-Service
 
@@ -297,6 +297,8 @@ Sie können ein Dienst Objekt oder einen Dienstnamen über die Pipeline an diese
 Dieses Cmdlet gibt Objekte zurück, die die Dienste auf dem Computer darstellen.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 Ab PowerShell 6,0 werden den **ServiceController** -Objekten die folgenden Eigenschaften hinzugefügt: **username** , **Description** , **delayedaudestart** , **binarypathname** und **startupType** .
 

@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: aeffc496e78a447af828737980429a91a74b5a6b
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 2fc21594a4765a0901f61dba7b7f1a79f3259886
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93209743"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94346138"
 ---
 # Rename-Computer
 
@@ -199,14 +199,14 @@ Accept wildcard characters: False
 
 Gibt den Mechanismus an, der verwendet wird, um die Benutzer Anmelde Informationen zu authentifizieren, wenn dieses Cmdlet das WSMAN-Protokoll verwendet. Zulässige Werte für diesen Parameter:
 
-- **Grundlegend**
+- **Basic**
 - **CredSSP**
 - **Standard**
 - **Digest**
 - **Kerberos**
 - **Verhandelt**
 
-Der Standardwert lautet **Default** .
+Der Standardwert lautet **Default**.
 
 Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
@@ -271,8 +271,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ### Keine
 
-Dieses Cmdlet enthält keine Parameter, die eine Eingabe nach Wert annehmen.
-Sie können jedoch die Werte der Eigenschaften **ComputerName** und **NewName** von Objekten über die Pipeline an dieses Cmdlet übergeben.
+Dieses Cmdlet enthält keine Parameter, die eine Eingabe nach Wert annehmen. Sie können jedoch die Werte der Eigenschaften **ComputerName** und **NewName** von Objekten über die Pipeline an dieses Cmdlet übergeben.
 
 ## AUSGABEN
 
@@ -282,6 +281,8 @@ Dieses Cmdlet gibt ein **computerchangeinfo** -Objekt zurück, wenn Sie den **pa
 Andernfalls wird keine Ausgabe zurückgegeben.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 ## VERWANDTE LINKS
 

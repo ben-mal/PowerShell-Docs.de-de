@@ -7,12 +7,12 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: f7cad4b85a8501081152768c2e3bfdf7fb3e59fd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 939dc011307b4c98340bb376032b96289e1c1bc3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217444"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345951"
 ---
 # New-PSSessionConfigurationFile
 
@@ -951,6 +951,8 @@ Sie können keine Objekte über die Pipeline an dieses Cmdlet übergeben.
 Dieses Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 - Parameter, wie z. **b. visiblecmdlets** und **visibleproviders** , importieren keine Elemente in die Sitzung. Stattdessen treffen sie ihre Auswahl unter den Elementen, die in die Sitzung importiert wurden. Wenn z. b. der Wert des **visibleproviders** -Parameters der Zertifikat Anbieter ist, der **modulestoimport** -Parameter jedoch nicht das **Microsoft. PowerShell. Security** -Modul angibt, das den Zertifikat Anbieter enthält, ist der Zertifikat Anbieter in der Sitzung nicht sichtbar.
 - `New-PSSessionConfigurationFile` erstellt eine Sitzungs Konfigurationsdatei mit der Dateinamenerweiterung. PSSC in dem Pfad, den Sie im **path** -Parameter angeben. Wenn Sie die Sitzungs Konfigurationsdatei verwenden, um eine Sitzungs Konfiguration zu erstellen, `Register-PSSessionConfiguration` kopiert das Cmdlet die Konfigurationsdatei und speichert eine aktive Kopie der Datei im Unterverzeichnis **sessionconfig** des `$PSHOME` Verzeichnisses.

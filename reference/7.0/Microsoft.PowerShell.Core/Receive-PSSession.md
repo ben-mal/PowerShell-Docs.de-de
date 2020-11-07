@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 43f9823f19df9ceec44f1e27d5183cca418647ba
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: b0177a00bbbf93659775ee94f7d4898a99f570f3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218487"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345577"
 ---
 # Receive-PSSession
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 Gibt den Mechanismus an, der zum Authentifizieren der Benutzer Anmelde Informationen im Befehl verwendet wird, um die Verbindung mit einer getrennten Sitzung wiederherzustellen. Zulässige Werte für diesen Parameter:
 
 - Standard
-- Basic
+- Einfach
 - CredSSP
 - Digest
 - Kerberos
@@ -758,6 +758,8 @@ Sie können Sitzungs Namen an dieses Cmdlet weiterreichen.
 Mit diesem Cmdlet werden die Ergebnisse von Befehlen zurückgegeben, die ggf. in der getrennten Sitzung ausgeführt wurden. Wenn der Wert oder der Standardwert des **outtarget** -Parameters "Job" ist, wird `Receive-PSSession` ein Auftrags Objekt zurückgegeben. Andernfalls werden Objekte zurückgeben, die diese Befehlsergebnisse darstellen.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 `Receive-PSSession` Ruft Ergebnisse nur aus Sitzungen ab, die getrennt wurden. Nur Sitzungen, die mit einem Computer verbunden sind, auf dem PowerShell 3,0 oder höhere Versionen ausgeführt werden, können getrennt und erneut verbunden werden.
 

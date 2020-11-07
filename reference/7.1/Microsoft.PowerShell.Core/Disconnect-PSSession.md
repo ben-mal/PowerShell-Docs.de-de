@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: efe80ab22af8552860e3dfa8f9e2766b07bcfd5d
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 2588d0d0a8d7ce9cddf65c94dcc79700df9deeb7
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218668"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94345560"
 ---
 # Disconnect-PSSession
 
@@ -444,6 +444,8 @@ Sie können eine Sitzung an die Pipeline übergeben `Disconnect-PSSession` .
 
 ## HINWEISE
 
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
 - Das- `Disconnect-PSSession` Cmdlet funktioniert nur, wenn auf dem lokalen Computer und dem Remote Computer PowerShell 3,0 oder höher ausgeführt wird.
 - Wenn Sie das `Disconnect-PSSession` Cmdlet in einer getrennten Sitzung verwenden, hat der Befehl keine Auswirkungen auf die Sitzung und generiert keine Fehler.
 - Die Verbindung getrennter Loopbacksitzungen mit interaktiven Sicherheitstoken (die mit dem **EnableNetworkAccess** -Parameter erstellt werden) kann nur von dem Computer wiederhergestellt werden, auf dem die Sitzung erstellt wurde. Diese Einschränkung schützt den Computer vor böswilligem Zugriff.
@@ -486,4 +488,3 @@ Sie können eine Sitzung an die Pipeline übergeben `Disconnect-PSSession` .
 [about_Remote](About/about_Remote.md)
 
 [about_Remote_Disconnected_Sessions](About/about_Remote_Disconnected_Sessions.md)
-

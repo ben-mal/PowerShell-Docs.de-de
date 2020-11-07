@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-event?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Event
-ms.openlocfilehash: 9ab8ff192b150811b3cef7035c60f509e1fb5570
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: c822711b7fda94dd6a2a391560100758ee41d233
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213820"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344642"
 ---
 # New-Event
 
@@ -27,16 +27,14 @@ New-Event [-SourceIdentifier] <String> [[-Sender] <PSObject>] [[-EventArguments]
 ```
 
 ## DESCRIPTION
-Das **New-Event-** Cmdlet erstellt ein neues benutzerdefiniertes Ereignis.
+
+Das- `New-Event` Cmdlet erstellt ein neues benutzerdefiniertes Ereignis.
 
 Mit benutzerdefinierten Ereignissen können Sie die Benutzer über Statusänderungen in Ihrem Programm und jede Änderung benachrichtigen, die das Programm erkennen kann, einschließlich Hardware- oder Systembedingungen, Anwendungsstatus, Datenträgerstatus, Netzwerkstatus oder den Abschluss eines Auftrags im Hintergrund.
 
-Benutzerdefinierte Ereignisse werden bei ihrer Auslösung automatisch der Warteschlange in der Sitzung hinzugefügt. Es ist kein Abonnement erforderlich.
-Wenn Sie ein Ereignis jedoch an die lokale Sitzung weiterleiten oder eine Aktion zur Reaktion auf das Ereignis angeben möchten, verwenden Sie das Register-EngineEvent-Cmdlet, um das benutzerdefinierte Ereignis zu abonnieren.
+Benutzerdefinierte Ereignisse werden bei ihrer Auslösung automatisch der Warteschlange in der Sitzung hinzugefügt. Es ist kein Abonnement erforderlich. Wenn Sie ein Ereignis jedoch an die lokale Sitzung weiterleiten oder eine Aktion zur Reaktion auf das Ereignis angeben möchten, verwenden Sie das `Register-EngineEvent` Cmdlet, um das benutzerdefinierte Ereignis zu abonnieren.
 
-Wenn Sie ein benutzerdefiniertes Ereignis abonnieren, wird der Ereignisabonnent Ihrer Sitzung hinzugefügt.
-Wenn Sie das Ereignisabonnement mithilfe des Unregister-Event-Cmdlets stornieren, werden der Ereignisabonnent und das benutzerdefinierte Ereignis aus der Sitzung gelöscht.
-Wenn Sie das benutzerdefinierte Ereignis nicht abonnieren, müssen Sie zum Löschen des Ereignisses die Programmbedingungen ändern oder die Windows PowerShell-Sitzung schließen.
+Wenn Sie ein benutzerdefiniertes Ereignis abonnieren, wird der Ereignisabonnent Ihrer Sitzung hinzugefügt. Wenn Sie das Ereignis Abonnement mithilfe des `Unregister-Event` Cmdlets abbrechen, werden der Ereignis Abonnent und das benutzerdefinierte Ereignis aus der Sitzung gelöscht. Wenn Sie das benutzerdefinierte Ereignis nicht abonnieren, müssen Sie zum Löschen des Ereignisses die Programmbedingungen ändern oder die PowerShell-Sitzung schließen.
 
 ## BEISPIELE
 
@@ -46,8 +44,7 @@ Wenn Sie das benutzerdefinierte Ereignis nicht abonnieren, müssen Sie zum Lösc
 PS C:\> New-Event -SourceIdentifier Timer -Sender windows.timer -MessageData "Test"
 ```
 
-Dieser Befehl erstellt ein neues Ereignis in der Windows PowerShell-Ereigniswarteschlange.
-Er verwendet ein **Windows. Timer** -Objekt, um das Ereignis zu senden.
+Dieser Befehl erstellt ein neues Ereignis in der PowerShell-Ereignis Warteschlange. Er verwendet ein **Windows. Timer** -Objekt, um das Ereignis zu senden.
 
 ### Beispiel 2: Ausführen eines Ereignisses als Reaktion auf ein anderes Ereignis
 
@@ -64,15 +61,14 @@ PS C:\> function Enable-ProcessCreationEvent
 }
 ```
 
-Diese Beispiel Funktion verwendet das **New-Event-** Cmdlet, um ein Ereignis als Reaktion auf ein anderes Ereignis aufzurichten.
-Der Befehl verwendet das Register-ObjectEvent-Cmdlet zum Abonnieren des Ereignisses der Windows-Verwaltungsinstrumentation (WMI), das beim Erstellen eines neuen Prozesses ausgelöst wird.
-Der Befehl verwendet den *Action* -Parameter des Cmdlets, um das **New-Event-** Cmdlet aufzurufen, das das neue Ereignis erstellt.
+Diese Beispiel Funktion verwendet das- `New-Event` Cmdlet, um ein Ereignis als Reaktion auf ein anderes Ereignis aufzurichten. Der Befehl verwendet das `Register-ObjectEvent` Cmdlet, um das Ereignis Windows-Verwaltungsinstrumentation (WMI) zu abonnieren, das beim Erstellen eines neuen Prozesses ausgelöst wird. Der Befehl verwendet den **Action** -Parameter des Cmdlets, um das `New-Event` Cmdlet aufzurufen, das das neue Ereignis erstellt.
 
-Da die von **New-Event ausgelösten** Ereignisse der Windows powershellevent-Warteschlange automatisch hinzugefügt werden, müssen Sie sich für dieses Ereignis nicht registrieren.
+Da die `New-Event` ausgelösten Ereignisse automatisch zur PowerShell-Ereignis Warteschlange hinzugefügt werden, müssen Sie sich für dieses Ereignis nicht registrieren.
 
 ## PARAMETERS
 
 ### -Eventarguments
+
 Gibt ein Objekt an, das Optionen für das Ereignis enthält.
 
 ```yaml
@@ -88,8 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -MessageData
-Gibt zusätzliche Daten an, die dem Ereignis zugeordnet sind.
-Der Wert dieses Parameters wird in der **MessageData** -Eigenschaft des Ereignisobjekts angezeigt.
+
+Gibt zusätzliche Daten an, die dem Ereignis zugeordnet sind. Der Wert dieses Parameters wird in der **MessageData** -Eigenschaft des Ereignisobjekts angezeigt.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -104,8 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -Absender
-Gibt das Objekt an, das das Ereignis auslöst.
-Der Standardwert ist die Windows PowerShell-Engine.
+
+Gibt das Objekt an, das das Ereignis auslöst. Der Standardwert ist das PowerShell-Modul.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -120,8 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceIdentifier
-Gibt einen Namen für das neue Ereignis an.
-Dieser Parameter ist erforderlich und muss in der Sitzung eindeutig sein.
+
+Gibt einen Namen für das neue Ereignis an. Dieser Parameter ist erforderlich und muss in der Sitzung eindeutig sein.
 
 Der Wert dieses Parameters wird in der **SourceIdentifier** -Eigenschaft der Ereignisse angezeigt.
 
@@ -138,11 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## EINGABEN
 
 ### Keine
+
 Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 
 ## AUSGABEN
@@ -151,7 +149,8 @@ Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 
 ## HINWEISE
 
-Das neue benutzerdefinierte Ereignis, das Ereignisabonnement und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden. Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
+Das neue benutzerdefinierte Ereignis, das Ereignisabonnement und die Ereigniswarteschlange sind nur in der aktuellen Sitzung vorhanden.
+Wenn Sie die aktuelle Sitzung schließen, wird die Ereigniswarteschlange verworfen, und das Ereignisabonnement wird abgebrochen.
 
 ## VERWANDTE LINKS
 

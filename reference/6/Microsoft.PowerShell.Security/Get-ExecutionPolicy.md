@@ -7,12 +7,12 @@ ms.date: 3/22/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ExecutionPolicy
-ms.openlocfilehash: a846c3605c4adf469b12bfadaa3f90e585558dea
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f798aaef7032db450a13d79589eb7dd0ca762cd6
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216935"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344829"
 ---
 # Get-ExecutionPolicy
 
@@ -172,11 +172,11 @@ Gibt den Bereich an, der von einer Ausführungs Richtlinie betroffen ist.
 
 Die effektive Ausführungs Richtlinie wird wie folgt durch die Rangfolge bestimmt:
 
-- **MachinePolicy** . Wird von einem Gruppenrichtlinie für alle Benutzer des Computers festgelegt.
-- **UserPolicy** . Wird von einem Gruppenrichtlinie für den aktuellen Benutzer des Computers festgelegt.
-- **Verarbeiten** . Wirkt sich nur auf die aktuelle PowerShell-Sitzung aus.
-- **CurrentUser** . Wirkt sich nur auf den aktuellen Benutzer aus.
-- **LocalMachine** . Standardbereich, der sich auf alle Benutzer des Computers auswirkt.
+- **MachinePolicy**. Wird von einem Gruppenrichtlinie für alle Benutzer des Computers festgelegt.
+- **UserPolicy**. Wird von einem Gruppenrichtlinie für den aktuellen Benutzer des Computers festgelegt.
+- **Verarbeiten**. Wirkt sich nur auf die aktuelle PowerShell-Sitzung aus.
+- **CurrentUser**. Wirkt sich nur auf den aktuellen Benutzer aus.
+- **LocalMachine**. Standardbereich, der sich auf alle Benutzer des Computers auswirkt.
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicyScope
@@ -204,6 +204,8 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ## AUSGABEN
 
 ### Microsoft.PowerShell.Executionpolicy
+
+Das Cmdlet gibt immer **uneingeschränkt** auf Linux-und macOS-Plattformen zurück.
 
 ## HINWEISE
 
