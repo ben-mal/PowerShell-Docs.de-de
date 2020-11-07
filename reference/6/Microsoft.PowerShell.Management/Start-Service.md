@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/start-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Service
-ms.openlocfilehash: ae2b61ab4f5486b761f32603e60a10507e96a907
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ec825c981754e69453dab702815fcaaf6b4362f3
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212247"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343725"
 ---
 # Start-Service
 
@@ -252,12 +252,14 @@ Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objek
 
 ## HINWEISE
 
-* Sie können auch auf den `Start-Service` integrierten Alias verweisen `sasv` . Weitere Informationen finden Sie unter [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
-* `Start-Service` Dienste können nur von gesteuert werden, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
-* Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` .
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
+- Sie können auch auf den `Start-Service` integrierten Alias verweisen `sasv` . Weitere Informationen finden Sie unter [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
+- `Start-Service` Dienste können nur von gesteuert werden, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
+- Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` .
   Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
-* Sie können nur die Dienste starten, die den Starttyp manuell, automatisch oder automatisch (verzögerter Start) aufweisen. Sie können keine Dienste starten, die den Starttyp "deaktiviert" aufweisen. Wenn ein `Start-Service` Befehl mit der Meldung fehlschlägt `Cannot start service \<service-name\> on computer` , verwenden `Get-CimInstance` Sie, um den Starttyp des Dienstanbieter zu suchen, und verwenden Sie ggf. das `Set-Service` Cmdlet, um den Starttyp des Dienstanbieter zu ändern.
-* Einige Dienste, beispielsweise der Dienst für Leistungsprotokolle und -warnungen (SysmonLog), werden automatisch beendet, wenn sie keine Vorgänge ausführen müssen. Wenn PowerShell einen Dienst startet, der sich fast sofort beendet, wird die folgende Meldung angezeigt: `Service \<display-name\> start failed.`
+- Sie können nur die Dienste starten, die den Starttyp manuell, automatisch oder automatisch (verzögerter Start) aufweisen. Sie können keine Dienste starten, die den Starttyp "deaktiviert" aufweisen. Wenn ein `Start-Service` Befehl mit der Meldung fehlschlägt `Cannot start service \<service-name\> on computer` , verwenden `Get-CimInstance` Sie, um den Starttyp des Dienstanbieter zu suchen, und verwenden Sie ggf. das `Set-Service` Cmdlet, um den Starttyp des Dienstanbieter zu ändern.
+- Einige Dienste, beispielsweise der Dienst für Leistungsprotokolle und -warnungen (SysmonLog), werden automatisch beendet, wenn sie keine Vorgänge ausführen müssen. Wenn PowerShell einen Dienst startet, der sich fast sofort beendet, wird die folgende Meldung angezeigt: `Service \<display-name\> start failed.`
 
 ## VERWANDTE LINKS
 

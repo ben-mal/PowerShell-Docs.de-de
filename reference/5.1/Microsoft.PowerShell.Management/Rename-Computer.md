@@ -7,12 +7,12 @@ ms.date: 5/1/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-Computer
-ms.openlocfilehash: 860a5ec4f75136bd53fa5c9621504b1613e9c511
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4028978b7d2d5353b7250acac3a3454b2f9d8ee1
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214527"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343214"
 ---
 # Rename-Computer
 
@@ -220,14 +220,14 @@ Accept wildcard characters: False
 
 Gibt den Mechanismus an, der verwendet wird, um die Benutzer Anmelde Informationen zu authentifizieren, wenn dieses Cmdlet das WSMAN-Protokoll verwendet. Zulässige Werte für diesen Parameter:
 
-- **Grundlegend**
+- **Basic**
 - **CredSSP**
 - **Standard**
 - **Digest**
 - **Kerberos**
 - **Verhandelt**
 
-Der Standardwert lautet **Default** .
+Der Standardwert lautet **Default**.
 
 Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
@@ -292,8 +292,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ### Keine
 
-Dieses Cmdlet enthält keine Parameter, die eine Eingabe nach Wert annehmen.
-Sie können jedoch die Werte der Eigenschaften **ComputerName** und **NewName** von Objekten über die Pipeline an dieses Cmdlet übergeben.
+Dieses Cmdlet enthält keine Parameter, die eine Eingabe nach Wert annehmen. Sie können jedoch die Werte der Eigenschaften **ComputerName** und **NewName** von Objekten über die Pipeline an dieses Cmdlet übergeben.
 
 ## AUSGABEN
 

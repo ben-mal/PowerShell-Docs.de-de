@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/stop-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Service
-ms.openlocfilehash: 6bffe41f1efd42c686d06f59cf86b374b596d80d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 77ce507d0eaf476e2c24f41e433bd69fdcb416bb
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214351"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342568"
 ---
 # Stop-Service
 
@@ -44,8 +44,7 @@ Stop-Service [-Force] [-NoWait] [-PassThru] -DisplayName <String[]> [-Include <S
 
 ## DESCRIPTION
 
-Das Cmdlet "End **-Service** " sendet für jeden der angegebenen Dienste eine Nachricht zum Abbrechen an den Windows-Dienst Controller.
-Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können den **Inputobject** -Parameter verwenden, um ein Dienst Objekt zu übergeben, das den Dienst darstellt, den Sie abbrechen möchten.
+Das- `Stop-Service` Cmdlet sendet für jeden der angegebenen Dienste eine Stoppmeldung an den Windows-Dienst Controller. Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können den **Inputobject** -Parameter verwenden, um ein Dienst Objekt zu übergeben, das den Dienst darstellt, den Sie abbrechen möchten.
 
 ## BEISPIELE
 
@@ -63,9 +62,7 @@ Mit diesem Befehl wird der Dienst für Leistungsprotokolle und -benachrichtigung
 PS C:\> Get-Service -DisplayName "telnet" | Stop-Service
 ```
 
-Mit diesem Befehl wird der Dienst %%amp;quot;Telnet%%amp;quot; auf dem lokalen Computer beendet.
-Der Befehl verwendet **Get-Service** , um ein Objekt zu erhalten, das den Telnet-Dienst darstellt.
-Der Pipeline Operator (|) übergibt das Objekt an den **Stopp-Dienst** , wodurch der Dienst beendet wird.
+Mit diesem Befehl wird der Dienst %%amp;quot;Telnet%%amp;quot; auf dem lokalen Computer beendet. Der Befehl verwendet `Get-Service` , um ein Objekt zu erhalten, das den Telnet-Dienst darstellt. Der Pipeline Operator ( `|` ) übergibt das Objekt an `Stop-Service` , wodurch der Dienst beendet wird.
 
 ### Beispiel 3: beendet einen Dienst, der über abhängige Dienste verfügt.
 
@@ -74,17 +71,11 @@ PS C:\> Get-Service -Name "iisadmin" | Format-List -Property Name, DependentServ
 PS C:\> Stop-Service -Name "iisadmin" -Force -Confirm
 ```
 
-In diesem Beispiel wird der IISAdmin-Dienst auf dem lokalen Computer angehalten.
-Da durch das Beenden dieses Diensts auch die Dienste angehalten werden, die vom IISAdmin-Dienst abhängen, empfiehlt es sich, dem **Stop-Service** mit einem Befehl voranzugehen, der die Dienste auflistet, die vom IISAdmin-Dienst abhängen.
+In diesem Beispiel wird der IISAdmin-Dienst auf dem lokalen Computer angehalten. Da das Beenden dieses Diensts auch die Dienste stoppt, die vom IISAdmin-Dienst abhängen, empfiehlt es sich, `Stop-Service` einem Befehl, der die Dienste auflistet, die vom IISAdmin-Dienst abhängen, einen vorangestellten Befehl vorzufinden.
 
-Mit dem ersten Befehl werden die Dienste aufgelistet, die von %%amp;quot;IISAdmin%%amp;quot; abhängen.
-Er verwendet **Get-Service** , um ein Objekt zu erhalten, das den IISAdmin-Dienst darstellt.
-Der Pipelineoperator (|) übergibt das Ergebnis an das Cmdlet %%amp;quot;Format-List%%amp;quot;.
-Der Befehl verwendet den *Property* -Parameter von " **Format-List** ", um nur die Eigenschaften " **Name** " und " **DependentServices** " des Diensts aufzulisten.
+Mit dem ersten Befehl werden die Dienste aufgelistet, die von %%amp;quot;IISAdmin%%amp;quot; abhängen. Es wird verwendet `Get-Service` , um ein Objekt zu erhalten, das den IISAdmin-Dienst darstellt. Der Pipeline Operator ( `|` ) übergibt das Ergebnis an das `Format-List` Cmdlet. Der Befehl verwendet den **Property** -Parameter von `Format-List` , um nur die **Name** -Eigenschaft und die **DependentServices** -Eigenschaft des Diensts aufzulisten.
 
-Mit dem zweiten Befehl wird der IISAdmin-Dienst beendet.
-Der *Force* -Parameter ist erforderlich, um einen Dienst zu unterbinden, der über abhängige Dienste verfügt.
-Der Befehl verwendet den *Confirm* -Parameter, um eine Bestätigung vom Benutzer anzufordern, bevor die einzelnen Dienste beendet werden.
+Mit dem zweiten Befehl wird der IISAdmin-Dienst beendet. Der **Force** -Parameter ist erforderlich, um einen Dienst zu unterbinden, der über abhängige Dienste verfügt. Der Befehl verwendet den **Confirm** -Parameter, um eine Bestätigung vom Benutzer anzufordern, bevor die einzelnen Dienste beendet werden.
 
 ## PARAMETERS
 
@@ -107,10 +98,7 @@ Accept wildcard characters: True
 
 ### -Ausschließen
 
-Gibt die Dienste an, die von diesem Cmdlet ausgelassen werden.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder-Muster ein, z. b. s *.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienste an, die von diesem Cmdlet ausgelassen werden. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder-Muster ein, z. b. s *. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -142,10 +130,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-Gibt die Dienste an, die von diesem Cmdlet beendet werden.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder-Muster ein, z. b. s *.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienste an, die von diesem Cmdlet beendet werden. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder-Muster ein, z. b. s *. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -161,8 +146,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Gibt **ServiceController** -Objekte an, die die zu stoppenden Dienste darstellen.
-Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
+Gibt **ServiceController** -Objekte an, die die zu stoppenden Dienste darstellen. Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -178,8 +162,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Gibt die Dienstnamen der zu stoppenden Dienste an.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienstnamen der zu stoppenden Dienste an. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -211,8 +194,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt ein Objekt zurück, das den Dienst darstellt.
-Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
+Gibt ein Objekt zurück, das den Dienst darstellt. Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -244,8 +226,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -273,20 +254,15 @@ Sie können ein Dienst Objekt oder eine Zeichenfolge, die den Namen eines diensn
 
 ### Keine, System. ServiceProcess. ServiceController
 
-Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den Dienst darstellt, wenn Sie den *passthru* -Parameter verwenden.
-Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
+Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den Dienst darstellt, wenn Sie den **passthru** -Parameter verwenden. Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
 
 ## HINWEISE
 
-* Sie können auch über den integrierten Alias **spsv** auf "End **-Service** " verweisen. Weitere Informationen finden Sie unter %%amp;quot;about_Aliases%%amp;quot;.
+Sie können auch über `Stop-Service` den integrierten Alias **spsv** auf verweisen. Weitere Informationen finden Sie unter %%amp;quot;about_Aliases%%amp;quot;.
 
-  " **Beenden": der Dienst** kann die Dienste nur steuern, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt.
-Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
+`Stop-Service` Dienste können nur von gesteuert werden, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
 
-  Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` .
-Die Dienstnamen werden in der Spalte " **Name** " angezeigt, und die anzeigen Amen werden in der Spalte " **Display Name** " angezeigt.
-
-*
+Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` . Die Dienstnamen werden in der Spalte " **Name** " angezeigt, und die anzeigen Amen werden in der Spalte " **Display Name** " angezeigt.
 
 ## VERWANDTE LINKS
 

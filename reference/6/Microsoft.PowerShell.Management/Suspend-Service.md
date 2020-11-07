@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/suspend-service?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-Service
-ms.openlocfilehash: 6e9fd5dd7a5736ef95976cb5195dd1d210d81651
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5e4037c4ba8947f8efb438103f2bfd47eb05d1f5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212239"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343734"
 ---
 # Suspend-Service
 
@@ -44,9 +44,7 @@ Suspend-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Excl
 
 ## DESCRIPTION
 
-Das **Suspend-Service-** Cmdlet sendet für jeden der angegebenen Dienste eine Suspend-Nachricht an den Windows-Dienst Controller.
-Obwohl der Dienst angehalten wird, wird der Dienst weiterhin ausgeführt, die Aktion wird jedoch bis zum fortsetzen angehalten, wie z. b. durch das Resume-Service Cmdlet.
-Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können mit dem *Inputobject* -Parameter ein Dienst Objekt übergeben, das die anzuhaltenden Dienste darstellt.
+Das- `Suspend-Service` Cmdlet sendet eine Suspend-Nachricht für jeden der angegebenen Dienste an den Windows-Dienst Controller. Obwohl der Dienst angehalten wird, wird er weiterhin ausgeführt, die Aktion wird jedoch bis zum fortsetzen angehalten, wie z. b. durch das `Resume-Service` Verwenden des Cmdlets. Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können mit dem **Inputobject** -Parameter ein Dienst Objekt übergeben, das die anzuhaltenden Dienste darstellt.
 
 ## BEISPIELE
 
@@ -64,8 +62,7 @@ Mit diesem Befehl wird der Telnet-Dienst (Tlntsvr) auf dem lokalen Computer ange
 PS C:\> Suspend-Service -Name lanman* -WhatIf
 ```
 
-Dieser Befehl gibt Aufschluss darüber, was passieren würde, wenn Sie die Dienste mit einem Dienstnamen angehalten haben, der mit LanMan beginnt.
-Führen Sie den Befehl ohne den *WhatIf* -Parameter erneut aus, um die Dienste anzuhalten.
+Dieser Befehl gibt Aufschluss darüber, was passieren würde, wenn Sie die Dienste mit einem Dienstnamen angehalten haben, der mit LanMan beginnt. Führen Sie den Befehl ohne den **WhatIf** -Parameter erneut aus, um die Dienste anzuhalten.
 
 ### Beispiel 3: Get und Suspend a Service
 
@@ -73,8 +70,7 @@ Führen Sie den Befehl ohne den *WhatIf* -Parameter erneut aus, um die Dienste a
 PS C:\> Get-Service schedule | Suspend-Service
 ```
 
-Dieser Befehl verwendet das **Get-Service-** Cmdlet, um ein Objekt zu erhalten, das den Taskplaner (Schedule)-Dienst auf dem Computer darstellt.
-Der Pipeline Operator (|) übergibt das Ergebnis an **Suspend-Service** , wodurch der Dienst angehalten wird.
+Dieser Befehl verwendet das `Get-Service` Cmdlet, um ein Objekt zu erhalten, das den Taskplaner (Schedule)-Dienst auf dem Computer darstellt. Der Pipeline Operator ( `|` ) übergibt das Ergebnis an `Suspend-Service` , wodurch der Dienst angehalten wird.
 
 ### Beispiel 4: aussetzen aller Dienste, die angehalten werden können
 
@@ -82,18 +78,13 @@ Der Pipeline Operator (|) übergibt das Ergebnis an **Suspend-Service** , wodurc
 PS C:\> Get-Service | Where-Object {$_.CanPauseAndContinue -eq "True"} | Suspend-Service -Confirm
 ```
 
-Mit diesem Befehl werden alle Dienste auf dem Computer angehalten, die angehalten werden können.
-Er verwendet **Get-Service** , um Objekte zu erhalten, die die Dienste auf dem Computer darstellen.
-Der Pipeline Operator übergibt die Ergebnisse an das Cmdlet "Where-Object", das nur die Dienste auswählt, die den Wert "$true" für die **canpaustiandcontinue** -Eigenschaft aufweisen.
-Ein weiterer Pipeline Operator übergibt die Ergebnisse an **Suspend-Service** .
-Mit dem *Confirm* -Parameter werden Sie vor dem Anhalten der einzelnen Dienste zur Bestätigung aufgefordert.
+Mit diesem Befehl werden alle Dienste auf dem Computer angehalten, die angehalten werden können. Es verwendet `Get-Service` , um Objekte zu erhalten, die die Dienste auf dem Computer darstellen. Der Pipeline Operator übergibt die Ergebnisse an das `Where-Object` Cmdlet, das nur die Dienste auswählt, die den Wert `$True` für die **canpaustiandcontinue** -Eigenschaft aufweisen. Ein weiterer Pipeline Operator übergibt die Ergebnisse an `Suspend-Service` . Mit dem **Confirm** -Parameter werden Sie vor dem Anhalten der einzelnen Dienste zur Bestätigung aufgefordert.
 
 ## PARAMETERS
 
 ### -DisplayName
 
-Gibt die Anzeigenamen der anzuhaltenden Dienste an.
-Platzhalterzeichen sind zulässig.
+Gibt die Anzeigenamen der anzuhaltenden Dienste an. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -109,10 +100,7 @@ Accept wildcard characters: True
 
 ### -Ausschließen
 
-Gibt Dienste an, die aus den angegebenen Diensten ausgelassen werden sollen.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder -muster wie %%amp;quot;s*%%amp;quot; ein.
-Platzhalterzeichen sind zulässig.
+Gibt Dienste an, die aus den angegebenen Diensten ausgelassen werden sollen. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder -muster wie %%amp;quot;s*%%amp;quot; ein. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -128,10 +116,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-Gibt Dienste zum Aussetzen an.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder -muster wie %%amp;quot;s*%%amp;quot; ein.
-Platzhalterzeichen sind zulässig.
+Gibt Dienste zum Aussetzen an. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder -muster wie %%amp;quot;s*%%amp;quot; ein. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -147,8 +132,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Gibt **ServiceController** -Objekte an, die die anzuhaltenden Dienste darstellen.
-Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
+Gibt **ServiceController** -Objekte an, die die anzuhaltenden Dienste darstellen. Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -164,11 +148,9 @@ Accept wildcard characters: False
 
 ### -Name
 
-Gibt die Dienstnamen der anzuhaltenden Dienste an.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienstnamen der anzuhaltenden Dienste an. Platzhalterzeichen sind zulässig.
 
-Der Parametername ist optional.
-Sie können " *Name* " oder den zugehörigen Alias " *Service* Name" verwenden, oder Sie können den Parameternamen weglassen.
+Der Parametername ist optional. Sie können " **Name** " oder den zugehörigen Alias " **Service** Name" verwenden, oder Sie können den Parameternamen weglassen.
 
 ```yaml
 Type: System.String[]
@@ -184,8 +166,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.
-Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
+Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten. Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,14 +227,16 @@ Sie können ein Dienst Objekt oder eine Zeichenfolge, die einen Dienstnamen enth
 
 ### Keine, System. ServiceProcess. ServiceController
 
-Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den Dienst darstellt, wenn Sie den *passthru* -Parameter angeben.
-Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
+Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den Dienst darstellt, wenn Sie den **passthru** -Parameter angeben. Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
 
 ## HINWEISE
 
-* **Suspend-Service** kann Dienste nur steuern, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
-* **Suspend-Service** kann nur Dienste aussetzen, die angehalten und fortgesetzt werden. Um zu ermitteln, ob ein bestimmter Dienst angehalten werden kann, verwenden Sie das Get-Service-Cmdlet mit der **canpauabandcontinue** -Eigenschaft. Beispiel: `Get-Service wmi | Format-List Name, CanPauseAndContinue`. Wenn Sie alle Dienste auf dem Computer ermitteln möchten, die angehalten werden können, geben Sie ein `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` .
-* Geben **Sie Get-Service** ein, um die Dienstnamen und anzeigen amen der Dienste auf Ihrem System zu ermitteln. Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
+- `Suspend-Service` Dienste können nur von gesteuert werden, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
+- `Suspend-Service` von können nur Dienste angehalten werden, deren Unterstützung angehalten und fortgesetzt Um zu ermitteln, ob ein bestimmter Dienst angehalten werden kann, verwenden Sie das `Get-Service` Cmdlet in Verbindung mit der **canpaumenandcontinue** -Eigenschaft. Beispiel: `Get-Service wmi | Format-List Name, CanPauseAndContinue`. Wenn Sie alle Dienste auf dem Computer ermitteln möchten, die angehalten werden können, geben Sie ein `Get-Service | Where-Object {$_.CanPauseAndContinue -eq $true}` .
+- Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` .
+  Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
 
 ## VERWANDTE LINKS
 

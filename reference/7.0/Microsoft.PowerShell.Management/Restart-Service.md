@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-Service
-ms.openlocfilehash: 7d12d92d0c11ef0f06ffe8c53d3c2a1f8bf8b42c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 06db89e107e7589dcdd4439fff54e04676adcc1c
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210356"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342891"
 ---
 # Restart-Service
 
@@ -44,9 +44,7 @@ Restart-Service [-Force] [-PassThru] -DisplayName <String[]> [-Include <String[]
 
 ## DESCRIPTION
 
-Das **Restart-Service-** Cmdlet sendet eine Nachricht zum Abbrechen und eine Start Meldung an den Windows-Dienst Controller für einen angegebenen Dienst.
-Wenn ein Dienst bereits beendet wurde, wird er gestartet, ohne dass ein Fehler ausgegeben wird.
-Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können mit dem *Inputobject* -Parameter ein Objekt übergeben, das die einzelnen neu zu startenden Dienste darstellt.
+Das `Restart-Service` -Cmdlet sendet eine Nachricht zum Abbrechen und eine Start Meldung an den Windows-Dienst Controller für einen angegebenen Dienst. Wenn ein Dienst bereits beendet wurde, wird er gestartet, ohne dass ein Fehler ausgegeben wird. Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können mit dem **Inputobject** -Parameter ein Objekt übergeben, das die einzelnen neu zu startenden Dienste darstellt.
 
 ## BEISPIELE
 
@@ -74,18 +72,15 @@ PS C:\> Get-Service -Name "net*" | Where-Object {$_.Status -eq "Stopped"} | Rest
 
 Mit diesem Befehl werden alle beendeten Netzwerkdienste auf dem Computer gestartet.
 
-Dieser Befehl verwendet das Cmdlet "Get-Service", um Objekte zu erhalten, die die Dienste darstellen, deren Dienst Name mit "NET" beginnt.
-Der Pipeline Operator (|) sendet das Dienst Objekt an das Cmdlet "Where-Object", das nur die Dienste auswählt, die den Status "beendet" aufweisen.
-Ein weiterer Pipeline Operator sendet die ausgewählten Dienste an **Restart-Service**.
+Dieser Befehl verwendet das `Get-Service` Cmdlet, um Objekte zu erhalten, die die Dienste darstellen, deren Dienst Name mit "NET" beginnt. Der Pipeline Operator ( `|` ) sendet das Dienst Objekt an das `Where-Object` Cmdlet, das nur die Dienste auswählt, die den Status "beendet" aufweisen. Ein weiterer Pipeline Operator sendet die ausgewählten Dienste an `Restart-Service` .
 
-In der Praxis verwenden Sie den *WhatIf* -Parameter, um die Auswirkung des Befehls zu ermitteln, bevor Sie ihn ausführen.
+In der Praxis verwenden Sie den **WhatIf** -Parameter, um die Auswirkung des Befehls zu ermitteln, bevor Sie ihn ausführen.
 
 ## PARAMETERS
 
 ### -DisplayName
 
-Gibt die anzeigen Amen von Diensten an, die neu gestartet werden sollen.
-Platzhalterzeichen sind zulässig.
+Gibt die anzeigen Amen von Diensten an, die neu gestartet werden sollen. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -101,10 +96,7 @@ Accept wildcard characters: True
 
 ### -Ausschließen
 
-Gibt die Dienste an, die von diesem Cmdlet ausgelassen werden.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder-Muster ein, z. b. s *.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienste an, die von diesem Cmdlet ausgelassen werden. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder-Muster ein, z. b. s *. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -136,10 +128,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-Gibt die Dienste an, die von diesem Cmdlet neu gestartet werden.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder-Muster ein, z. b. s *.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienste an, die von diesem Cmdlet neu gestartet werden. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder-Muster ein, z. b. s *. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -155,8 +144,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Gibt **ServiceController** -Objekte an, die die neu zu Start-Dienste darstellen.
-Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
+Gibt **ServiceController** -Objekte an, die die neu zu Start-Dienste darstellen. Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -188,8 +176,7 @@ Accept wildcard characters: True
 
 ### -PassThru
 
-Gibt ein Objekt zurück, das den Dienst darstellt.
-Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
+Gibt ein Objekt zurück, das den Dienst darstellt. Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -221,8 +208,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -250,13 +236,15 @@ Sie können ein Dienst Objekt oder eine Zeichenfolge, die einen Dienstnamen enth
 
 ### Keine, System. ServiceProcess. ServiceController
 
-Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den neu gestarteten Dienst darstellt, wenn Sie den *passthru* -Parameter angeben.
-Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
+Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den neu gestarteten Dienst darstellt, wenn Sie den **passthru** -Parameter angeben. Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
 
 ## HINWEISE
 
-* **Neustart: der Dienst** kann nur dann Dienste steuern, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
-* Um die Dienstnamen und anzeigen amen der Dienste auf Ihrem System zu suchen, geben **Sie Get-Service** "ein. Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
+- `Restart-Service` Dienste können nur von gesteuert werden, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
+- Geben Sie "ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` .
+  Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
 
 ## VERWANDTE LINKS
 

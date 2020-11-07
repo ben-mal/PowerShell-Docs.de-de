@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 11/06/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/exit-pshostprocess?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Exit-PSHostProcess
-ms.openlocfilehash: b7e2bf7cff84e92f4c174ef01861ee5c0a822bea
-ms.sourcegitcommit: 2e497178126b2b33a169ff04c31e251e0b59e89b
+ms.openlocfilehash: 368d29b7cdcbe2725399da0896eed87ddb372236
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "93200953"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342143"
 ---
 # Exit-PSHostProcess
 
@@ -27,7 +27,7 @@ Exit-PSHostProcess [<CommonParameters>]
 
 ## DESCRIPTION
 
-Das " **Exit-pshostprocess"-** Cmdlet schließt eine interaktive Sitzung mit einem lokalen Prozess, den Sie durch Ausführen des Cmdlets "Enter-PSHostProcess" geöffnet haben. Sie führen das Cmdlet **Exit-pshostprocess** innerhalb des Prozesses aus, wenn Sie das Debuggen abgeschlossen haben oder ein Skript ausführen möchten, das innerhalb eines Prozesses ausgeführt wird.
+Das `Exit-PSHostProcess` Cmdlet schließt eine interaktive Sitzung mit einem lokalen Prozess, den Sie durch Ausführen des `Enter-PSHostProcess` Cmdlets geöffnet haben. Sie führen das `Exit-PSHostProcess` Cmdlet innerhalb des Prozesses aus, wenn Sie das Debuggen oder die Problembehandlung eines Skripts abgeschlossen haben, das innerhalb eines Prozesses ausgeführt wird. Ab PowerShell 6,2 wird dieses Cmdlet auf nicht-Windows-Plattformen unterstützt.
 
 ## BEISPIELE
 
@@ -38,8 +38,8 @@ Das " **Exit-pshostprocess"-** Cmdlet schließt eine interaktive Sitzung mit ein
 PS>
 ```
 
-In diesem Beispiel haben Sie in einem aktiven Prozess gearbeitet, um ein Skript zu debuggen, das in einem Runspace im Prozess ausgeführt wird, wie in Enter-pshostprocess beschrieben. Nachdem Sie den Befehl **Exit** zum Beenden des Debuggers eingeben haben, führen Sie das Cmdlet **Exit-pshostprocess** aus, um die interaktive Sitzung mit dem Prozess zu schließen.
-Das Cmdlet schließt die Sitzung im Prozess und kehrt zur PS C:- \\ \> Eingabeaufforderung zurück.
+In diesem Beispiel haben Sie in einem aktiven Prozess gearbeitet, um ein Skript zu debuggen, das in einem Runspace im Prozess ausgeführt wird, wie unter beschrieben `Enter-PSHostProcess` . Nachdem Sie den `exit` Befehl zum Beenden des Debuggers eingeben haben, führen Sie das `Exit-PSHostProcess` Cmdlet aus, um die interaktive Sitzung mit dem Prozess zu schließen.
+Das Cmdlet schließt die Sitzung im Prozess und kehrt zur `PS C:\>` Eingabeaufforderung zurück.
 
 ## PARAMETERS
 

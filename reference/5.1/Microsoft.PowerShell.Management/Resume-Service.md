@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/resume-service?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-Service
-ms.openlocfilehash: c90c9fcaca3a003d46b41a7ff8b9901079c9f134
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0902e944f2976bbdbc35fd051926422c5ae6f8c5
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214463"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342636"
 ---
 # Resume-Service
 
@@ -44,10 +44,7 @@ Resume-Service [-PassThru] -DisplayName <String[]> [-Include <String[]>] [-Exclu
 
 ## DESCRIPTION
 
-Das **Resume-Service-** Cmdlet sendet für jeden der angegebenen Dienste eine Fortsetzungs Meldung an den Windows-Dienst Controller.
-Wenn ein Dienst angehalten wird, wird er fortgesetzt.
-Wenn er gerade ausgeführt wird, wird die Meldung ignoriert.
-Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können mit dem *Inputobject* -Parameter ein Dienst Objekt übergeben, das die wiederherzustellenden Dienste darstellt.
+Das- `Resume-Service` Cmdlet sendet für jeden der angegebenen Dienste eine Fortsetzungs Meldung an den Windows-Dienst Controller. Wenn ein Dienst angehalten wird, wird er fortgesetzt. Wenn er gerade ausgeführt wird, wird die Meldung ignoriert. Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder Sie können mit dem **Inputobject** -Parameter ein Dienst Objekt übergeben, das die wiederherzustellenden Dienste darstellt.
 
 ## BEISPIELE
 
@@ -57,9 +54,7 @@ Sie können die Dienste mit ihren Dienstnamen oder anzeigen Amen angeben, oder S
 PS C:\> Resume-Service "sens"
 ```
 
-Mit diesem Befehl wird der System Ereignis Benachrichtigungsdienst auf dem lokalen Computer fortgesetzt.
-Der Dienst Name wird im Befehl von Sens dargestellt.
-Der Befehl verwendet den *Name* -Parameter, um den Dienstnamen des Dienstanbieter anzugeben, aber der Befehl lässt den Parameternamen aus, da der Parameter Name optional ist.
+Mit diesem Befehl wird der System Ereignis Benachrichtigungsdienst auf dem lokalen Computer fortgesetzt. Der Dienst Name wird im Befehl von Sens dargestellt. Der Befehl verwendet den **Name** -Parameter, um den Dienstnamen des Dienstanbieter anzugeben, aber der Befehl lässt den Parameternamen aus, da der Parameter Name optional ist.
 
 ### Beispiel 2: Fortsetzen aller angehaltenen Dienste
 
@@ -67,12 +62,9 @@ Der Befehl verwendet den *Name* -Parameter, um den Dienstnamen des Dienstanbiete
 PS C:\> Get-Service | Where-Object {$_.Status -eq "Paused"} | Resume-Service
 ```
 
-Mit diesem Befehl werden alle angehaltenen Dienste auf dem Computer fortgesetzt.
-Mit dem Befehl "Get-Service Cmdlet" werden alle Dienste auf dem Computer abgerufen.
-Der Pipeline Operator (|) übergibt die Ergebnisse an das Where-Object-Cmdlet, das die Dienste auswählt, deren **Status** -Eigenschaft angehalten ist.
-Der nächste Pipeline Operator sendet die Ergebnisse an **Resume-Service** , wodurch die angehaltenen Dienste fortgesetzt werden.
+Mit diesem Befehl werden alle angehaltenen Dienste auf dem Computer fortgesetzt. Der `Get-Service` Cmdlet-Befehl ruft alle Dienste auf dem Computer ab. Der Pipeline Operator ( `|` ) übergibt die Ergebnisse an das `Where-Object` Cmdlet, das die Dienste auswählt, deren **Status** -Eigenschaft angehalten ist. Der nächste Pipeline Operator sendet die Ergebnisse an `Resume-Service` , wodurch die angehaltenen Dienste fortgesetzt werden.
 
-In der Praxis verwenden Sie den *WhatIf* -Parameter, um die Auswirkung des Befehls zu ermitteln, bevor Sie ihn ausführen.
+In der Praxis verwenden Sie den **WhatIf** -Parameter, um die Auswirkung des Befehls zu ermitteln, bevor Sie ihn ausführen.
 
 ## PARAMETERS
 
@@ -95,10 +87,7 @@ Accept wildcard characters: True
 
 ### -Ausschließen
 
-Gibt die Dienste an, die von diesem Cmdlet ausgelassen werden.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder-Muster ein, z. b. s *.
-Platzhalterzeichen sind zulässig.
+Gibt die Dienste an, die von diesem Cmdlet ausgelassen werden. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder-Muster ein, z. b. s *. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -114,10 +103,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-Gibt Dienste zum Fortsetzen an.
-Der Wert dieses Parameters qualifiziert den *Name* -Parameter.
-Geben Sie ein Namenselement oder-Muster ein, z. b. s *.
-Platzhalterzeichen sind zulässig.
+Gibt Dienste zum Fortsetzen an. Der Wert dieses Parameters qualifiziert den **Name** -Parameter. Geben Sie ein Namenselement oder-Muster ein, z. b. s *. Platzhalterzeichen sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -133,8 +119,7 @@ Accept wildcard characters: True
 
 ### -InputObject
 
-Gibt **ServiceController** -Objekte an, die die fort zusetzenden Dienste darstellen.
-Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
+Gibt **ServiceController** -Objekte an, die die fort zusetzenden Dienste darstellen. Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
 
 ```yaml
 Type: System.ServiceProcess.ServiceController[]
@@ -166,8 +151,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt ein Objekt zurück, das den Dienst darstellt.
-Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
+Gibt ein Objekt zurück, das den Dienst darstellt. Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -199,8 +183,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -228,14 +211,14 @@ Sie können ein Dienst Objekt oder eine Zeichenfolge, die einen Dienstnamen enth
 
 ### Keine, System. ServiceProcess. ServiceController
 
-Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den fortgesetzten Dienst darstellt, wenn Sie den *passthru* -Parameter angeben.
-Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
+Dieses Cmdlet generiert ein **System. ServiceProcess. ServiceController** -Objekt, das den fortgesetzten Dienst darstellt, wenn Sie den **passthru** -Parameter angeben. Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
 
 ## HINWEISE
 
-* Der Status von Diensten, die angehalten wurden, wurde angehalten. Wenn Dienste fortgesetzt werden, lautet Ihr Status wird ausgeführt.
-* **Resume-Service** kann Dienste nur steuern, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
-* Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` . Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
+- Der Status von Diensten, die angehalten wurden, wurde angehalten. Wenn Dienste fortgesetzt werden, lautet Ihr Status wird ausgeführt.
+- `Resume-Service` Dienste können nur von gesteuert werden, wenn der aktuelle Benutzer über die entsprechende Berechtigung verfügt. Wenn ein Befehl nicht ordnungsgemäß verarbeitet wird, verfügen Sie u. U. nicht über die erforderlichen Berechtigungen.
+- Geben Sie ein, um die Dienstnamen und anzeigen amen der Dienste auf dem System zu suchen `Get-Service` .
+  Die Dienstnamen werden in der Spalte **Name** angezeigt, und die anzeigen Amen werden in der Spalte **Display Name** angezeigt.
 
 ## VERWANDTE LINKS
 

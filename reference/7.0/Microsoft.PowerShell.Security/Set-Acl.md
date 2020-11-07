@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-acl?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Acl
-ms.openlocfilehash: 3c8f26884ac0eda1ece799bbd49a7863b6d2239c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 56a9625a42062cf787f0c92aaa319a0a344b5919
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211231"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94342534"
 ---
 # Set-Acl
 
@@ -135,11 +135,9 @@ Mit diesem Befehl wird der Gruppe " **BUILTIN\Administrators** " die vollständi
 
 Der erste Befehl verwendet das `Get-Acl` Cmdlet, um die Sicherheits Beschreibung der Dog.txt Datei zu erhalten.
 
-Die nächsten Variablen werden erstellt, um der Gruppe **BUILTIN\Administrators** die vollständige Kontrolle über die Dog.txt Datei zu erteilen. Die `$identity` Variable, die auf den Namen eines [Benutzerkontos](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor)festgelegt ist.
-Die `$fileSystemRights` Variable, die auf FullControl festgelegt ist, und kann einer der [FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights) -Werte sein, der den Typ des Vorgangs angibt, der der Zugriffs Regel zugeordnet ist. Die `$type` Variable, die auf "Allow" festgelegt ist, gibt an, ob der Vorgang zugelassen oder verweigert werden soll. Die `$fileSystemAccessRuleArgumentList` Variable ist eine Argumentliste, die beim Erstellen des neuen **FileSystemAccessRule** -Objekts übermittelt werden soll. Anschließend wird ein neues **FileSystemAccessRule** -Objekt erstellt, und das **FileSystemAccessRule** -Objekt wird an die **SetAccessRule ()** -Methode weitergegeben, fügt die neue Zugriffs Regel hinzu.
+Die nächsten Variablen werden erstellt, um der Gruppe **BUILTIN\Administrators** die vollständige Kontrolle über die Dog.txt Datei zu erteilen. Die `$identity` Variable, die auf den Namen eines [Benutzerkontos](/dotnet/api/system.security.accesscontrol.filesystemaccessrule.-ctor)festgelegt ist. Die `$fileSystemRights` Variable, die auf FullControl festgelegt ist, und kann einer der [FileSystemRights](/dotnet/api/system.security.accesscontrol.filesystemrights) -Werte sein, der den Typ des Vorgangs angibt, der der Zugriffs Regel zugeordnet ist. Die `$type` Variable, die auf "Allow" festgelegt ist, gibt an, ob der Vorgang zugelassen oder verweigert werden soll. Die `$fileSystemAccessRuleArgumentList` Variable ist eine Argumentliste, die beim Erstellen des neuen **FileSystemAccessRule** -Objekts übermittelt werden soll. Anschließend wird ein neues **FileSystemAccessRule** -Objekt erstellt, und das **FileSystemAccessRule** -Objekt wird an die **SetAccessRule ()** -Methode weitergegeben, fügt die neue Zugriffs Regel hinzu.
 
-Mit dem letzten Befehl wird verwendet `Set-Acl` , um die Sicherheits Beschreibung von auf Dog.txt anzuwenden.
-Wenn der Befehl abgeschlossen ist, verfügt die Gruppe " **BUILTIN\Administrators** " über Vollzugriff auf die Dog.txt.
+Mit dem letzten Befehl wird verwendet `Set-Acl` , um die Sicherheits Beschreibung von auf Dog.txt anzuwenden. Wenn der Befehl abgeschlossen ist, verfügt die Gruppe " **BUILTIN\Administrators** " über Vollzugriff auf die Dog.txt.
 
 ## PARAMETERS
 
@@ -349,13 +347,13 @@ Sie können ein ACL-Objekt oder eine Sicherheits Beschreibung an die Pipeline ü
 
 ### System. Security. AccessControl. File Security
 
-Standardmäßig `Set-Acl` generiert keine Ausgabe.
-Allerdings wird bei Verwendung des **Passthru** -Parameters ein Sicherheitsobjekt generiert.
-Der Typ des Sicherheitsobjekts hängt vom Typ des Elements ab.
+Standardmäßig `Set-Acl` generiert keine Ausgabe. Allerdings wird bei Verwendung des **Passthru** -Parameters ein Sicherheitsobjekt generiert. Der Typ des Sicherheitsobjekts hängt vom Typ des Elements ab.
 
 ## HINWEISE
 
- Das `Set-Acl` -Cmdlet wird vom PowerShell-Dateisystem und von Registrierungs Anbietern unterstützt. Sie können es verwenden, um die Sicherheitsbeschreibungen von Dateien, Verzeichnissen und Registrierungsschlüsseln zu ändern.
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
+
+Das `Set-Acl` -Cmdlet wird vom PowerShell-Dateisystem und von Registrierungs Anbietern unterstützt. Sie können es verwenden, um die Sicherheitsbeschreibungen von Dateien, Verzeichnissen und Registrierungsschlüsseln zu ändern.
 
 ## VERWANDTE LINKS
 

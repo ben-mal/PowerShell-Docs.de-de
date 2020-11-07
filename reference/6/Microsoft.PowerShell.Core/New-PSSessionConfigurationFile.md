@@ -7,12 +7,12 @@ ms.date: 06/24/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionconfigurationfile?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionConfigurationFile
-ms.openlocfilehash: 1045c22cdaadb9fe1a45ec01ea86d5d8a276b05a
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e393916f00e3670cd1ed3b5772bf165c43cc3a2f
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93216412"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94343945"
 ---
 # New-PSSessionConfigurationFile
 
@@ -422,7 +422,7 @@ Accept wildcard characters: False
 
 ### -ExecutionPolicy
 
-Bestimmt die Ausführungsrichtlinie von Sitzungen, die die Sitzungskonfiguration verwenden. Wenn Sie diesen Parameter weglassen, ist der Wert des **ExecutionPolicy** -Schlüssels in der Sitzungs Konfigurationsdatei **eingeschränkt** . Informationen zu Ausführungsrichtlinien in PowerShell finden Sie unter [about_Execution_Policies](about/about_Execution_Policies.md).
+Bestimmt die Ausführungsrichtlinie von Sitzungen, die die Sitzungskonfiguration verwenden. Wenn Sie diesen Parameter weglassen, ist der Wert des **ExecutionPolicy** -Schlüssels in der Sitzungs Konfigurationsdatei **eingeschränkt**. Informationen zu Ausführungsrichtlinien in PowerShell finden Sie unter [about_Execution_Policies](about/about_Execution_Policies.md).
 
 ```yaml
 Type: Microsoft.PowerShell.ExecutionPolicy
@@ -951,6 +951,8 @@ Sie können keine Objekte über die Pipeline an dieses Cmdlet übergeben.
 Dieses Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 - Parameter, wie z. **b. visiblecmdlets** und **visibleproviders** , importieren keine Elemente in die Sitzung. Stattdessen treffen sie ihre Auswahl unter den Elementen, die in die Sitzung importiert wurden. Wenn z. b. der Wert des **visibleproviders** -Parameters der Zertifikat Anbieter ist, der **modulestoimport** -Parameter jedoch nicht das **Microsoft. PowerShell. Security** -Modul angibt, das den Zertifikat Anbieter enthält, ist der Zertifikat Anbieter in der Sitzung nicht sichtbar.
 - `New-PSSessionConfigurationFile` erstellt eine Sitzungs Konfigurationsdatei mit der Dateinamenerweiterung. PSSC in dem Pfad, den Sie im **path** -Parameter angeben. Wenn Sie die Sitzungs Konfigurationsdatei verwenden, um eine Sitzungs Konfiguration zu erstellen, `Register-PSSessionConfiguration` kopiert das Cmdlet die Konfigurationsdatei und speichert eine aktive Kopie der Datei im Unterverzeichnis **sessionconfig** des `$PSHOME` Verzeichnisses.

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-PSSession
-ms.openlocfilehash: c0eed3d571cfb243c3f0ba4d0a4b7ddfaf4f04fb
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 41f278541d1375697ccb95504b7d7b1d28027786
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218479"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344064"
 ---
 # Disconnect-PSSession
 
@@ -443,6 +443,8 @@ Sie können eine Sitzung an die Pipeline übergeben `Disconnect-PSSession` .
 `Disconnect-PSSession` Gibt ein-Objekt zurück, das die getrennte Sitzung darstellt.
 
 ## HINWEISE
+
+Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.
 
 - Das- `Disconnect-PSSession` Cmdlet funktioniert nur, wenn auf dem lokalen Computer und dem Remote Computer PowerShell 3,0 oder höher ausgeführt wird.
 - Wenn Sie das `Disconnect-PSSession` Cmdlet in einer getrennten Sitzung verwenden, hat der Befehl keine Auswirkungen auf die Sitzung und generiert keine Fehler.
