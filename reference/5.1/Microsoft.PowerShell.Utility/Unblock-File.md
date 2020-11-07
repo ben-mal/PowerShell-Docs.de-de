@@ -7,69 +7,73 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/unblock-file?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unblock-File
-ms.openlocfilehash: 1f56dce193cc3c7c8b6af3a7854021b420107255
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 57c8c6f2ceda124b3dc89c363c6cf942680781ca
+ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213644"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94344506"
 ---
-# <span data-ttu-id="22220-103">Unblock-File</span><span class="sxs-lookup"><span data-stu-id="22220-103">Unblock-File</span></span>
+# <span data-ttu-id="71b27-103">Unblock-File</span><span class="sxs-lookup"><span data-stu-id="71b27-103">Unblock-File</span></span>
 
-## <span data-ttu-id="22220-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="22220-104">SYNOPSIS</span></span>
-<span data-ttu-id="22220-105">Hebt die Blockierung von Dateien auf, die aus dem Internet heruntergeladen wurden.</span><span class="sxs-lookup"><span data-stu-id="22220-105">Unblocks files that were downloaded from the Internet.</span></span>
+## <span data-ttu-id="71b27-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="71b27-104">SYNOPSIS</span></span>
+<span data-ttu-id="71b27-105">Hebt die Blockierung von Dateien auf, die aus dem Internet heruntergeladen wurden.</span><span class="sxs-lookup"><span data-stu-id="71b27-105">Unblocks files that were downloaded from the Internet.</span></span>
 
-## <span data-ttu-id="22220-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="22220-106">SYNTAX</span></span>
+## <span data-ttu-id="71b27-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="71b27-106">SYNTAX</span></span>
 
-### <span data-ttu-id="22220-107">Bypath (Standard)</span><span class="sxs-lookup"><span data-stu-id="22220-107">ByPath (Default)</span></span>
+### <span data-ttu-id="71b27-107">Bypath (Standard)</span><span class="sxs-lookup"><span data-stu-id="71b27-107">ByPath (Default)</span></span>
 
 ```
 Unblock-File [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="22220-108">Byliteralpath</span><span class="sxs-lookup"><span data-stu-id="22220-108">ByLiteralPath</span></span>
+### <span data-ttu-id="71b27-108">Byliteralpath</span><span class="sxs-lookup"><span data-stu-id="71b27-108">ByLiteralPath</span></span>
 
 ```
 Unblock-File -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="22220-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="22220-109">DESCRIPTION</span></span>
+## <span data-ttu-id="71b27-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="71b27-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="22220-110">Mit dem Cmdlet **Unblock-File** können Sie Dateien öffnen, die aus dem Internet heruntergeladen wurden.</span><span class="sxs-lookup"><span data-stu-id="22220-110">The **Unblock-File** cmdlet lets you open files that were downloaded from the Internet.</span></span>
-<span data-ttu-id="22220-111">Die Blockierung von PowerShell-Skriptdateien, die aus dem Internet heruntergeladen wurden, wird aufgehoben, sodass Sie Sie ausführen können, auch wenn die PowerShell-Ausführungs Richtlinie **RemoteSigned** ist.</span><span class="sxs-lookup"><span data-stu-id="22220-111">It unblocks PowerShell script files that were downloaded from the Internet so you can run them, even when the PowerShell execution policy is **RemoteSigned** .</span></span>
-<span data-ttu-id="22220-112">Standardmäßig werden diese Dateien blockiert, um den Computer vor nicht vertrauenswürdigen Dateien zu schützen.</span><span class="sxs-lookup"><span data-stu-id="22220-112">By default, these files are blocked to protect the computer from untrusted files.</span></span>
+<span data-ttu-id="71b27-110">Mit dem- `Unblock-File` Cmdlet können Sie Dateien öffnen, die aus dem Internet heruntergeladen wurden.</span><span class="sxs-lookup"><span data-stu-id="71b27-110">The `Unblock-File` cmdlet lets you open files that were downloaded from the Internet.</span></span> <span data-ttu-id="71b27-111">Die Blockierung von PowerShell-Skriptdateien, die aus dem Internet heruntergeladen wurden, wird aufgehoben, sodass Sie Sie ausführen können, auch wenn die PowerShell-Ausführungs Richtlinie **RemoteSigned** ist.</span><span class="sxs-lookup"><span data-stu-id="71b27-111">It unblocks PowerShell script files that were downloaded from the Internet so you can run them, even when the PowerShell execution policy is **RemoteSigned**.</span></span> <span data-ttu-id="71b27-112">Standardmäßig werden diese Dateien blockiert, um den Computer vor nicht vertrauenswürdigen Dateien zu schützen.</span><span class="sxs-lookup"><span data-stu-id="71b27-112">By default, these files are blocked to protect the computer from untrusted files.</span></span>
 
-<span data-ttu-id="22220-113">Überprüfen Sie vor der Verwendung des **Unblock-File** -Cmdlets die Datei und die Quelle und stellen Sie sicher, dass sie sicher geöffnet werden kann.</span><span class="sxs-lookup"><span data-stu-id="22220-113">Before using the **Unblock-File** cmdlet, review the file and its source and verify that it is safe to open.</span></span>
+<span data-ttu-id="71b27-113">Bevor Sie das `Unblock-File` Cmdlet verwenden, überprüfen Sie die Datei und ihre Quelle, und vergewissern Sie sich, dass Sie sicher geöffnet werden kann.</span><span class="sxs-lookup"><span data-stu-id="71b27-113">Before using the `Unblock-File` cmdlet, review the file and its source and verify that it is safe to open.</span></span>
 
-<span data-ttu-id="22220-114">Intern wird das **Unblock-File** -Cmdlet aus dem alternativen Datenstrom „Zone.Identifier“ entfernt, der den Wert „3“ hat, um anzugeben, dass er aus dem Internet heruntergeladen wurde.</span><span class="sxs-lookup"><span data-stu-id="22220-114">Internally, the **Unblock-File** cmdlet removes the Zone.Identifier alternate data stream, which has a value of "3" to indicate that it was downloaded from the Internet.</span></span>
+<span data-ttu-id="71b27-114">Intern entfernt das `Unblock-File` Cmdlet den alternativen Datenstrom "Zone. Identifier" mit dem Wert "3", um anzugeben, dass er aus dem Internet heruntergeladen wurde.</span><span class="sxs-lookup"><span data-stu-id="71b27-114">Internally, the `Unblock-File` cmdlet removes the Zone.Identifier alternate data stream, which has a value of "3" to indicate that it was downloaded from the Internet.</span></span>
 
-<span data-ttu-id="22220-115">Weitere Informationen zu PowerShell-Ausführungsrichtlinien finden Sie unter [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span><span class="sxs-lookup"><span data-stu-id="22220-115">For more information about PowerShell execution policies, see [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span></span>
+<span data-ttu-id="71b27-115">Weitere Informationen zu PowerShell-Ausführungsrichtlinien finden Sie unter [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span><span class="sxs-lookup"><span data-stu-id="71b27-115">For more information about PowerShell execution policies, see [about_Execution_Policies](../Microsoft.PowerShell.Core/about/about_Execution_Policies.md).</span></span>
 
-<span data-ttu-id="22220-116">Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="22220-116">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="71b27-116">Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="71b27-116">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
 
-## <span data-ttu-id="22220-117">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="22220-117">EXAMPLES</span></span>
+## <span data-ttu-id="71b27-117">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="71b27-117">EXAMPLES</span></span>
 
-### <span data-ttu-id="22220-118">Beispiel 1: Entsperren einer Datei</span><span class="sxs-lookup"><span data-stu-id="22220-118">Example 1: Unblock a file</span></span>
+### <span data-ttu-id="71b27-118">Beispiel 1: Entsperren einer Datei</span><span class="sxs-lookup"><span data-stu-id="71b27-118">Example 1: Unblock a file</span></span>
+
+<span data-ttu-id="71b27-119">Dieser Befehl hebt die Blockierung der Datei „PowerShellTips.chm“ auf.</span><span class="sxs-lookup"><span data-stu-id="71b27-119">This command unblocks the PowerShellTips.chm file.</span></span>
 
 ```
 PS C:\> Unblock-File -Path C:\Users\User01\Documents\Downloads\PowerShellTips.chm
 ```
 
-<span data-ttu-id="22220-119">Dieser Befehl hebt die Blockierung der Datei „PowerShellTips.chm“ auf.</span><span class="sxs-lookup"><span data-stu-id="22220-119">This command unblocks the PowerShellTips.chm file.</span></span>
+### <span data-ttu-id="71b27-120">Beispiel 2: entsperren mehrerer Dateien</span><span class="sxs-lookup"><span data-stu-id="71b27-120">Example 2: Unblock multiple files</span></span>
 
-### <span data-ttu-id="22220-120">Beispiel 2: entsperren mehrerer Dateien</span><span class="sxs-lookup"><span data-stu-id="22220-120">Example 2: Unblock multiple files</span></span>
+<span data-ttu-id="71b27-121">Dieser Befehl hebt die Blockierung aller Dateien im Verzeichnis auf, `C:\Downloads` deren Namen "PowerShell" enthalten.</span><span class="sxs-lookup"><span data-stu-id="71b27-121">This command unblocks all of the files in the `C:\Downloads` directory whose names include "PowerShell".</span></span> <span data-ttu-id="71b27-122">Führen Sie keinen Befehl wie diesen aus, bis Sie sichergestellt haben, dass alle Dateien sicher sind.</span><span class="sxs-lookup"><span data-stu-id="71b27-122">Do not run a command like this one until you have verified that all files are safe.</span></span>
 
 ```
 PS C:\> dir C:\Downloads\*PowerShell* | Unblock-File
 ```
 
-<span data-ttu-id="22220-121">Dieser Befehl hebt die Blockierung aller Dateien im Verzeichnis „C:\Downloads“ auf, deren Namen die Zeichenfolge „PowerShell“ enthalten.</span><span class="sxs-lookup"><span data-stu-id="22220-121">This command unblocks all of the files in the C:\Downloads directory whose names include "PowerShell".</span></span>
-<span data-ttu-id="22220-122">Führen Sie keinen Befehl wie diesen aus, bis Sie sichergestellt haben, dass alle Dateien sicher sind.</span><span class="sxs-lookup"><span data-stu-id="22220-122">Do not run a command like this one until you have verified that all files are safe.</span></span>
+### <span data-ttu-id="71b27-123">Beispiel 3: Suchen und Entsperren von Skripts</span><span class="sxs-lookup"><span data-stu-id="71b27-123">Example 3: Find and unblock scripts</span></span>
 
-### <span data-ttu-id="22220-123">Beispiel 3: Suchen und Entsperren von Skripts</span><span class="sxs-lookup"><span data-stu-id="22220-123">Example 3: Find and unblock scripts</span></span>
+<span data-ttu-id="71b27-124">Dieser Befehl zeigt, wie Sie PowerShell-Skripts suchen und deren Blockierung entsperren.</span><span class="sxs-lookup"><span data-stu-id="71b27-124">This command shows how to find and unblock PowerShell scripts.</span></span>
+
+<span data-ttu-id="71b27-125">Der erste Befehl verwendet den **Stream** -Parameter des *Get-Item-* Cmdlets zum Aufrufen von Dateien mit dem "Zone. Identifier"-Stream.</span><span class="sxs-lookup"><span data-stu-id="71b27-125">The first command uses the **Stream** parameter of the *Get-Item* cmdlet get files with the Zone.Identifier stream.</span></span>
+
+<span data-ttu-id="71b27-126">Der zweite Befehl zeigt, was geschieht, wenn Sie ein blockiertes Skript in einer PowerShell-Sitzung ausführen, in der die Ausführungs Richtlinie **RemoteSigned** ist.</span><span class="sxs-lookup"><span data-stu-id="71b27-126">The second command shows what happens when you run a blocked script in a PowerShell session in which the execution policy is **RemoteSigned**.</span></span> <span data-ttu-id="71b27-127">Die RemoteSigned-Richtlinie verhindert die Ausführung von Skripts, die aus dem Internet heruntergeladen werden, es sei denn, sie sind digital signiert.</span><span class="sxs-lookup"><span data-stu-id="71b27-127">The RemoteSigned policy prevents you from running scripts that are downloaded from the Internet unless they are digitally signed.</span></span>
+
+<span data-ttu-id="71b27-128">Der dritte Befehl verwendet das `Unblock-File` Cmdlet, um die Blockierung des Skripts zu entsperren, sodass es in der Sitzung ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="71b27-128">The third command uses the `Unblock-File` cmdlet to unblock the script so it can run in the session.</span></span>
 
 ```
-The first command uses the *Stream* parameter of the Get-Item cmdlet get files with the Zone.Identifier stream.Although you could pipe the output directly to the **Unblock-File** cmdlet (Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue | ForEach {Unblock-File $_.FileName}), it is prudent to review the file and confirm that it is safe before unblocking.
 PS C:\> Get-Item * -Stream "Zone.Identifier" -ErrorAction SilentlyContinue
    FileName: C:\ps-test\Start-ActivityTracker.ps1
 
@@ -77,7 +81,6 @@ Stream                   Length
 ------                   ------
 Zone.Identifier              26
 
-The second command shows what happens when you run a blocked script in a PowerShell session in which the execution policy is **RemoteSigned**. The RemoteSigned policy prevents you from running scripts that are downloaded from the Internet unless they are digitally signed.
 PS C:\> C:\ps-test\Start-ActivityTracker.ps1
 c:\ps-test\Start-ActivityTracker.ps1 : File c:\ps-test\Start-ActivityTracker.ps1 cannot
 be loaded. The file c:\ps-test\Start-ActivityTracker.ps1 is not digitally signed. The script
@@ -89,25 +92,19 @@ At line:1 char:1
     + CategoryInfo          : SecurityError: (:) [], PSSecurityException
     + FullyQualifiedErrorId : UnauthorizedAccess
 
-The third command uses the **Unblock-File** cmdlet to unblock the script so it can run in the session.
 PS C:\> Get-Item C:\ps-test\Start-ActivityTracker.ps1 | Unblock-File
 ```
 
-<span data-ttu-id="22220-124">Dieser Befehl zeigt, wie Sie PowerShell-Skripts suchen und deren Blockierung entsperren.</span><span class="sxs-lookup"><span data-stu-id="22220-124">This command shows how to find and unblock PowerShell scripts.</span></span>
+## <span data-ttu-id="71b27-129">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="71b27-129">PARAMETERS</span></span>
 
-## <span data-ttu-id="22220-125">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="22220-125">PARAMETERS</span></span>
+### <span data-ttu-id="71b27-130">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="71b27-130">-LiteralPath</span></span>
 
-### <span data-ttu-id="22220-126">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="22220-126">-LiteralPath</span></span>
-<span data-ttu-id="22220-127">Gibt die Dateien an, deren Blockierung aufgehoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="22220-127">Specifies the files to unblock.</span></span>
-<span data-ttu-id="22220-128">Im Gegensatz zu *Path* wird der Wert des *LiteralPath* -Parameters genauso verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="22220-128">Unlike *Path* , the value of the *LiteralPath* parameter is used exactly as it is typed.</span></span>
-<span data-ttu-id="22220-129">Es werden keine Zeichen als Platzhalter interpretiert.</span><span class="sxs-lookup"><span data-stu-id="22220-129">No characters are interpreted as wildcards.</span></span>
-<span data-ttu-id="22220-130">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="22220-130">If the path includes escape characters, enclose it in single quotation marks.</span></span>
-<span data-ttu-id="22220-131">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="22220-131">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="71b27-131">Gibt die Dateien an, deren Blockierung aufgehoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="71b27-131">Specifies the files to unblock.</span></span> <span data-ttu-id="71b27-132">Im Gegensatz zu **Path** wird der Wert des **LiteralPath** -Parameters genauso verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="71b27-132">Unlike **Path** , the value of the **LiteralPath** parameter is used exactly as it is typed.</span></span> <span data-ttu-id="71b27-133">Es werden keine Zeichen als Platzhalter interpretiert.</span><span class="sxs-lookup"><span data-stu-id="71b27-133">No characters are interpreted as wildcards.</span></span> <span data-ttu-id="71b27-134">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="71b27-134">If the path includes escape characters, enclose it in single quotation marks.</span></span> <span data-ttu-id="71b27-135">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="71b27-135">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
 
 ```yaml
 Type: System.String[]
 Parameter Sets: ByLiteralPath
-Aliases: PSPath
+Aliases: PSPath, LP
 
 Required: True
 Position: Named
@@ -116,9 +113,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="22220-132">-Path</span><span class="sxs-lookup"><span data-stu-id="22220-132">-Path</span></span>
-<span data-ttu-id="22220-133">Gibt die Dateien an, deren Blockierung aufgehoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="22220-133">Specifies the files to unblock.</span></span>
-<span data-ttu-id="22220-134">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="22220-134">Wildcard characters are supported.</span></span>
+### <span data-ttu-id="71b27-136">-Path</span><span class="sxs-lookup"><span data-stu-id="71b27-136">-Path</span></span>
+
+<span data-ttu-id="71b27-137">Gibt die Dateien an, deren Blockierung aufgehoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="71b27-137">Specifies the files to unblock.</span></span> <span data-ttu-id="71b27-138">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="71b27-138">Wildcard characters are supported.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -132,9 +129,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="22220-135">-Confirm</span><span class="sxs-lookup"><span data-stu-id="22220-135">-Confirm</span></span>
+### <span data-ttu-id="71b27-139">-Confirm</span><span class="sxs-lookup"><span data-stu-id="71b27-139">-Confirm</span></span>
 
-<span data-ttu-id="22220-136">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="22220-136">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="71b27-140">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="71b27-140">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -148,10 +145,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="22220-137">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="22220-137">-WhatIf</span></span>
+### <span data-ttu-id="71b27-141">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="71b27-141">-WhatIf</span></span>
 
-<span data-ttu-id="22220-138">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="22220-138">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="22220-139">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="22220-139">The cmdlet is not run.</span></span>
+<span data-ttu-id="71b27-142">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="71b27-142">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="71b27-143">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="71b27-143">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -165,34 +161,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="22220-140">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="22220-140">CommonParameters</span></span>
+### <span data-ttu-id="71b27-144">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="71b27-144">CommonParameters</span></span>
 
-<span data-ttu-id="22220-141">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="22220-141">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="22220-142">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="22220-142">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="71b27-145">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="71b27-145">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="71b27-146">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="71b27-146">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="22220-143">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="22220-143">INPUTS</span></span>
+## <span data-ttu-id="71b27-147">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="71b27-147">INPUTS</span></span>
 
-### <span data-ttu-id="22220-144">System.String</span><span class="sxs-lookup"><span data-stu-id="22220-144">System.String</span></span>
+### <span data-ttu-id="71b27-148">System.String</span><span class="sxs-lookup"><span data-stu-id="71b27-148">System.String</span></span>
 
-<span data-ttu-id="22220-145">Sie können einen Dateipfad über die Pipeline an **Unblock-File** übergeben.</span><span class="sxs-lookup"><span data-stu-id="22220-145">You can pipe a file path to **Unblock-File** .</span></span>
+<span data-ttu-id="71b27-149">Sie können einen Dateipfad an die Pipeline übergeben `Unblock-File` .</span><span class="sxs-lookup"><span data-stu-id="71b27-149">You can pipe a file path to `Unblock-File`.</span></span>
 
-## <span data-ttu-id="22220-146">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="22220-146">OUTPUTS</span></span>
+## <span data-ttu-id="71b27-150">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="71b27-150">OUTPUTS</span></span>
 
-### <span data-ttu-id="22220-147">Keine</span><span class="sxs-lookup"><span data-stu-id="22220-147">None</span></span>
+### <span data-ttu-id="71b27-151">Keine</span><span class="sxs-lookup"><span data-stu-id="71b27-151">None</span></span>
 
-<span data-ttu-id="22220-148">Dieses Cmdlet generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="22220-148">This cmdlet does not generate any output.</span></span>
+<span data-ttu-id="71b27-152">Dieses Cmdlet generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="71b27-152">This cmdlet does not generate any output.</span></span>
 
-## <span data-ttu-id="22220-149">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="22220-149">NOTES</span></span>
+## <span data-ttu-id="71b27-153">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="71b27-153">NOTES</span></span>
 
-* <span data-ttu-id="22220-150">Das Cmdlet **Unblock-File** funktioniert nur in Dateisystemlaufwerken.</span><span class="sxs-lookup"><span data-stu-id="22220-150">The **Unblock-File** cmdlet works only in file system drives.</span></span>
-* <span data-ttu-id="22220-151">**Unblock-File** führt den gleichen Vorgang wie die **Schaltfläche "entsperren"** im Dialogfeld " **Eigenschaften** " im Datei-Explorer aus.</span><span class="sxs-lookup"><span data-stu-id="22220-151">**Unblock-File** performs the same operation as the **Unblock** button on the **Properties** dialog box in File Explorer.</span></span>
-* <span data-ttu-id="22220-152">Bei Verwendung des **Unblock-File** -Cmdlets für eine nicht blockierte Datei hat der Befehl keine Auswirkungen auf die Datei, deren Blockierung aufgehoben wurde, und das Cmdlet generiert keine Fehler.</span><span class="sxs-lookup"><span data-stu-id="22220-152">If you use the **Unblock-File** cmdlet on a file that is not blocked, the command has no effect on the unblocked file and the cmdlet does not generate errors.</span></span>
+- <span data-ttu-id="71b27-154">Das- `Unblock-File` Cmdlet funktioniert nur in Dateisystem Laufwerken.</span><span class="sxs-lookup"><span data-stu-id="71b27-154">The `Unblock-File` cmdlet works only in file system drives.</span></span>
+- <span data-ttu-id="71b27-155">`Unblock-File` führt den gleichen Vorgang wie die **Schaltfläche "entsperren"** im Dialogfeld " **Eigenschaften** " im Datei-Explorer aus.</span><span class="sxs-lookup"><span data-stu-id="71b27-155">`Unblock-File` performs the same operation as the **Unblock** button on the **Properties** dialog box in File Explorer.</span></span>
+- <span data-ttu-id="71b27-156">Wenn Sie das `Unblock-File` Cmdlet für eine Datei verwenden, die nicht blockiert ist, hat der Befehl keine Auswirkungen auf die nicht blockierte Datei, und das Cmdlet generiert keine Fehler.</span><span class="sxs-lookup"><span data-stu-id="71b27-156">If you use the `Unblock-File` cmdlet on a file that is not blocked, the command has no effect on the unblocked file and the cmdlet does not generate errors.</span></span>
 
-## <span data-ttu-id="22220-153">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="22220-153">RELATED LINKS</span></span>
+## <span data-ttu-id="71b27-157">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="71b27-157">RELATED LINKS</span></span>
 
-[<span data-ttu-id="22220-154">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="22220-154">about_Execution_Policies</span></span>](../Microsoft.PowerShell.Core/About/about_Execution_Policies.md)
+[<span data-ttu-id="71b27-158">about_Execution_Policies</span><span class="sxs-lookup"><span data-stu-id="71b27-158">about_Execution_Policies</span></span>](../Microsoft.PowerShell.Core/About/about_Execution_Policies.md)
 
-[<span data-ttu-id="22220-155">Get-Item</span><span class="sxs-lookup"><span data-stu-id="22220-155">Get-Item</span></span>](../Microsoft.PowerShell.Management/Get-Item.md)
+[<span data-ttu-id="71b27-159">Get-Item</span><span class="sxs-lookup"><span data-stu-id="71b27-159">Get-Item</span></span>](../Microsoft.PowerShell.Management/Get-Item.md)
 
-[<span data-ttu-id="22220-156">Out-File</span><span class="sxs-lookup"><span data-stu-id="22220-156">Out-File</span></span>](Out-File.md)
+[<span data-ttu-id="71b27-160">Out-File</span><span class="sxs-lookup"><span data-stu-id="71b27-160">Out-File</span></span>](Out-File.md)
 
-[<span data-ttu-id="22220-157">FileSystem-Anbieter</span><span class="sxs-lookup"><span data-stu-id="22220-157">FileSystem Provider</span></span>](../Microsoft.PowerShell.Core/about/about_FileSystem_Provider.md)
+[<span data-ttu-id="71b27-161">FileSystem-Anbieter</span><span class="sxs-lookup"><span data-stu-id="71b27-161">FileSystem Provider</span></span>](../Microsoft.PowerShell.Core/about/about_FileSystem_Provider.md)
