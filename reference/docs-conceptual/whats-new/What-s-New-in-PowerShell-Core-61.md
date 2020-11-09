@@ -2,12 +2,12 @@
 title: Neuigkeiten in PowerShell Core 6.1
 description: Neue Funktionen und Änderungen in PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 16159059285f89c2ddd85b506b0920f0aa8748ae
-ms.sourcegitcommit: d757d64ea8c8af4d92596e8fbe15f2f40d48d3ac
+ms.openlocfilehash: 4ff70be239197c7a4f64019d2aab42433f82f36c
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90846914"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354659"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Neuigkeiten in PowerShell Core 6.1
 
@@ -19,16 +19,16 @@ Ein großer Dank geht an alle [Mitwirkende aus der Community](https://github.com
 
 ## <a name="net-core-21"></a>.NET Core 2.1
 
-PowerShell Core 6.1 wurde nach der [Veröffentlichung im Mai](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) zu .NET Core 2.1 verschoben, wodurch sich u.a. folgende Verbesserungen für PowerShell ergeben:
+PowerShell Core 6.1 wurde nach der [Veröffentlichung im Mai](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) zu .NET Core 2.1 verschoben, wodurch sich u.a. folgende Verbesserungen für PowerShell ergeben:
 
 - Leistungsverbesserungen (siehe [unten](#performance-improvements))
 - Unterstützung von Alpine Linux (Vorschau)
 - [Globale Toolunterstützung für .NET](/dotnet/core/tools/global-tools) – Demnächst für PowerShell verfügbar
-- [`Span<T>`](/dotnet/api/system.span-1?view=netcore-2.1)
+- [`Span<T>`](/dotnet/api/system.span-1)
 
 ## <a name="windows-compatibility-pack-for-net-core"></a>Windows Compatibility Pack für .NET Core
 
-Im Lieferumfang war unter Windows das [Windows Compatibility Pack für .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/11/16/announcing-the-windows-compatibility-pack-for-net-core/) enthalten, das aus verschiedenen Assemblys besteht, mit denen .NET Core unter Windows einige entfernte APIs wieder hinzugefügt werden.
+Im Lieferumfang war unter Windows das [Windows Compatibility Pack für .NET Core](https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/) enthalten, das aus verschiedenen Assemblys besteht, mit denen .NET Core unter Windows einige entfernte APIs wieder hinzugefügt werden.
 
 Nun wurde das Windows Compatibility Pack dem Release von PowerShell Core 6.1 hinzugefügt, damit diese APIs für alle Module oder Skripts, die sie verwenden, auch verfügbar sind.
 
@@ -36,7 +36,7 @@ Durch das Windows Compatibility Pack kann PowerShell Core **mehr als 1.900 Cmdle
 
 ## <a name="support-for-application-allow-lists"></a>Unterstützung für Anwendungszulassungslisten
 
-PowerShell Core 6.1 verfügt über dieselbe Unterstützung für Anwendungszulassungslisten von [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) und [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) wie Windows PowerShell 5.1. Mit Anwendungszulassungslisten können Sie detailliert steuern, welche Binärdateien ausgeführt werden dürfen, wenn PowerShell im [eingeschränkten Sprachmodus](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) verwendet wird.
+PowerShell Core 6.1 verfügt über dieselbe Unterstützung für Anwendungszulassungslisten von [AppLocker](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) und [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control) wie Windows PowerShell 5.1. Mit Anwendungszulassungslisten können Sie detailliert steuern, welche Binärdateien ausgeführt werden dürfen, wenn PowerShell im [eingeschränkten Sprachmodus](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/) verwendet wird.
 
 ## <a name="performance-improvements"></a>Leistungsverbesserungen
 

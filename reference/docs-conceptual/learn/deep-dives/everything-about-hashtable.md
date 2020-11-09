@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über Hashtabellen wissen wollten
 description: Hashtabellen spielen eine wichtige Rolle in PowerShell, daher sollten Sie mit dem Konzept vertraut sein.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: c67f00911b6c9d05fa9b5b5a700bbae795cf9244
-ms.sourcegitcommit: d0461273abb6db099c5e784ef00f57fd551be4a6
+ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
+ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85353820"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93354421"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Alles, was Sie schon immer über Hashtabellen wissen wollten
 
@@ -684,7 +684,7 @@ Achten Sie auf Hashtabellen mit vielen Schachtelungsebenen. Wenn Sie diese in JS
 }
 ```
 
-Verwenden Sie den **Depth**-Parameter, um sicherzustellen, dass alle geschachtelten Hashtabellen erweitert wurden.
+Verwenden Sie den **Depth** -Parameter, um sicherzustellen, dass alle geschachtelten Hashtabellen erweitert wurden.
 
 ```powershell
 @{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
@@ -722,7 +722,7 @@ Name      Value
 a         b
 ```
 
-In PowerShell 6.2 wurde der **Depth**-Parameter zu `ConvertFrom-Json` hinzugefügt. Der Standardwert für **Depth** ist 1024.
+In PowerShell 6.2 wurde der **Depth** -Parameter zu `ConvertFrom-Json` hinzugefügt. Der Standardwert für **Depth** ist 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Direktes Lesen aus einer Datei
 
@@ -966,7 +966,7 @@ Ich habe hier in kurzer Zeit sehr viele Aspekte vorgestellt. Ich hoffe, dass Sie
 [Wenn Leistung wichtig ist, probier es aus]: https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Best-Practices/Performance.md
 [Splatting]: /powershell/module/microsoft.powershell.core/about/about_splatting
 [pscustomobject]: everything-about-pscustomobject.md
-[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8
+[JavaScriptSerializer]: /dotnet/api/system.web.script.serialization.javascriptserializer?view=netframework-4.8&preserve-view=true
 [PSBoundParameters]: https://tommymaynard.com/the-psboundparameters-automatic-variable-2016/
 [about_Automatic_Variables]: /powershell/module/microsoft.powershell.core/about/about_automatic_variables
 [Automatische Standardwerte]: https://www.simple-talk.com/sysadmin/PowerShell/PowerShell-time-saver-automatic-defaults/
