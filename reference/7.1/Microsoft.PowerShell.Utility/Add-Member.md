@@ -7,12 +7,12 @@ ms.date: 4/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-member?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Member
-ms.openlocfilehash: 1c07d79af1516becff86a0706906fa6ddfe03ab8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f6cc98f31d42f3468fd864782fb7252b064302b8
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217860"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389469"
 ---
 # Add-Member
 
@@ -244,7 +244,7 @@ Zulässige Werte für diesen Parameter:
 - ScriptMethod
 - CodeMethod
 
-Weitere Informationen zu diesen Werten finden Sie unter [psmembership types-Enumeration](/dotnet/api/system.management.automation.psmembertypes) in der MSDN Library.
+Weitere Informationen zu diesen Werten finden Sie unter [psmembership types-Enumeration](/dotnet/api/system.management.automation.psmembertypes) im PowerShell SDK.
 
 Nicht alle Objekte verfügen über jeden Membertyp.
 Wenn Sie einen Elementtyp angeben, der für das Objekt nicht vorhanden ist, gibt PowerShell einen Fehler zurück.

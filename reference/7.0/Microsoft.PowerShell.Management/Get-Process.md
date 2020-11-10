@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-process?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Process
-ms.openlocfilehash: 1880651719d030bd015a6f431fce60527b56aae5
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 360b1f045899dec20a30be022e043947f47b52b7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210223"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391135"
 ---
 # Get-Process
 
@@ -59,13 +59,11 @@ Get-Process -InputObject <Process[]> -IncludeUserName [<CommonParameters>]
 
 ## DESCRIPTION
 
-Mit dem- `Get-Process` Cmdlet werden die Prozesse auf einem lokalen Computer abgerufen.
+Das- `Get-Process` Cmdlet ruft die Prozesse auf einem lokalen Computer oder einem Remote Computer ab.
 
-Ohne Parameter ruft dieses Cmdlet alle Prozesse auf dem lokalen Computer ab.
-Sie können auch einen bestimmten Prozess mit dem Prozessnamen oder der Prozess-ID (PID) angeben oder ein Prozess Objekt über die Pipeline an dieses Cmdlet übergeben.
+Ohne Parameter ruft dieses Cmdlet alle Prozesse auf dem lokalen Computer ab. Sie können auch einen bestimmten Prozess mit dem Prozessnamen oder der Prozess-ID (PID) angeben oder ein Prozess Objekt über die Pipeline an dieses Cmdlet übergeben.
 
-Standardmäßig gibt dieses Cmdlet ein Prozess Objekt mit detaillierten Informationen über den Prozess zurück und unterstützt Methoden, mit denen Sie den Prozess starten und abbrechen können.
-Sie können auch die Parameter des `Get-Process` Cmdlets verwenden, um Datei Versionsinformationen für das Programm zu erhalten, das im Prozess ausgeführt wird, und um die vom Prozess geladenen Module zu erhalten.
+Standardmäßig gibt dieses Cmdlet ein Prozess Objekt mit detaillierten Informationen über den Prozess zurück und unterstützt Methoden, mit denen Sie den Prozess starten und abbrechen können. Sie können auch die Parameter des `Get-Process` Cmdlets verwenden, um Datei Versionsinformationen für das Programm zu erhalten, das im Prozess ausgeführt wird, und um die vom Prozess geladenen Module zu erhalten.
 
 ## BEISPIELE
 
@@ -75,8 +73,7 @@ Sie können auch die Parameter des `Get-Process` Cmdlets verwenden, um Datei Ver
 Get-Process
 ```
 
-Mit diesem Befehl wird eine Liste aller aktiven Prozesse abgerufen, die auf dem lokalen Computer ausgeführt werden.
-Eine Definition der einzelnen Spalten finden Sie im Abschnitt " [Hinweise](#notes) ".
+Mit diesem Befehl wird eine Liste aller aktiven Prozesse abgerufen, die auf dem lokalen Computer ausgeführt werden. Eine Definition der einzelnen Spalten finden Sie im Abschnitt " [Hinweise](#notes) ".
 
 ### Beispiel 2: alle verfügbaren Daten zu einem oder mehreren Prozessen
 
@@ -84,12 +81,9 @@ Eine Definition der einzelnen Spalten finden Sie im Abschnitt " [Hinweise](#note
 Get-Process winword, explorer | Format-List *
 ```
 
-Mit diesem Befehl werden alle verfügbaren Daten zum Winword- und zum Explorer-Prozess auf dem Computer abgerufen.
-Er verwendet den **Name** -Parameter, um die Prozesse anzugeben, der optionale Parameter Name wird jedoch ausgelassen.
-Der Pipeline Operator `|` übergibt die Daten an das `Format-List` Cmdlet, das alle verfügbaren Eigenschaften `*` der Winword-und Explorer-Prozess Objekte anzeigt.
+Mit diesem Befehl werden alle verfügbaren Daten zum Winword- und zum Explorer-Prozess auf dem Computer abgerufen. Er verwendet den **Name** -Parameter, um die Prozesse anzugeben, der optionale Parameter Name wird jedoch ausgelassen. Der Pipeline Operator `|` übergibt die Daten an das `Format-List` Cmdlet, das alle verfügbaren Eigenschaften `*` der Winword-und Explorer-Prozess Objekte anzeigt.
 
-Sie können die Prozesse auch anhand ihrer Prozess-IDs angeben.
-Beispielsweise `Get-Process -Id 664, 2060`.
+Sie können die Prozesse auch anhand ihrer Prozess-IDs angeben. Beispielsweise `Get-Process -Id 664, 2060`.
 
 ### Beispiel 3: alle Prozesse mit einem Workingset, das größer ist als die angegebene Größe
 
@@ -97,13 +91,9 @@ Beispielsweise `Get-Process -Id 664, 2060`.
 Get-Process | Where-Object {$_.WorkingSet -gt 20000000}
 ```
 
-Mit diesem Befehl werden alle Prozesse mit einem Arbeitssatz abgerufen, dessen Größe 20 MB übersteigt.
-Er verwendet das `Get-Process`  Cmdlet, um alle laufenden Prozesse zu erhalten.
-Der Pipeline Operator `|` übergibt die Prozess Objekte an das `Where-Object` Cmdlet, das nur das Objekt auswählt, dessen Wert größer als 20 Millionen Byte für die **Workingset** -Eigenschaft ist.
+Mit diesem Befehl werden alle Prozesse mit einem Arbeitssatz abgerufen, dessen Größe 20 MB übersteigt. Er verwendet das `Get-Process` Cmdlet, um alle laufenden Prozesse zu erhalten. Der Pipeline Operator `|` übergibt die Prozess Objekte an das `Where-Object` Cmdlet, das nur das Objekt auswählt, dessen Wert größer als 20 Millionen Byte für die **Workingset** -Eigenschaft ist.
 
-**Workingset** ist eine von vielen Eigenschaften von Prozess Objekten.
-Um alle Eigenschaften anzuzeigen, geben Sie ein `Get-Process | Get-Member` .
-Standardmäßig werden die Werte aller Mengeneigenschaften in Bytes angegeben, auch wenn sie in der Standardanzeige in Kilobytes und Megabytes aufgeführt werden.
+**Workingset** ist eine von vielen Eigenschaften von Prozess Objekten. Um alle Eigenschaften anzuzeigen, geben Sie ein `Get-Process | Get-Member` . Standardmäßig werden die Werte aller Mengeneigenschaften in Bytes angegeben, auch wenn sie in der Standardanzeige in Kilobytes und Megabytes aufgeführt werden.
 
 ### Beispiel 4: Auflisten von Prozessen auf dem Computer in Gruppen basierend auf der Priorität
 
@@ -112,8 +102,7 @@ $A = Get-Process
 $A | Get-Process | Format-Table -View priority
 ```
 
-Diese Befehle Listen die Prozesse auf dem Computer in Gruppen auf Grundlage ihrer Prioritäts Klasse auf.
-Der erste Befehl ruft alle Prozesse auf dem Computer ab und speichert Sie dann in der `$A` Variablen.
+Diese Befehle Listen die Prozesse auf dem Computer in Gruppen auf Grundlage ihrer Prioritäts Klasse auf. Der erste Befehl ruft alle Prozesse auf dem Computer ab und speichert Sie dann in der `$A` Variablen.
 
 Mit dem zweiten Befehl wird das in der Variablen gespeicherte **Prozess** Objekt `$A` an das `Get-Process` Cmdlet weitergeleitet, dann an das `Format-Table` Cmdlet, das die Prozesse mithilfe der **Prioritäts** Ansicht formatiert.
 
@@ -139,7 +128,7 @@ NPM(K) PM(K) WS(K) VM(M) CPU(s)   Id MachineName ProcessName
     27 54572 54520   576 5.52   4428 .           pwsh
 ```
 
-Dieses Beispiel enthält einen `Format-Table` Befehl, der die **MachineName** -Eigenschaft der Standard `Get-Process` Ausgabe Anzeige hinzufügt.
+In diesem Beispiel werden Prozesse vom lokalen Computer und einem Remote Computer (S1) abgerufen. Die abgerufenen Prozesse werden an den Befehl weitergeleitet `Format-Table` , der die **MachineName** -Eigenschaft der Standard `Get-Process` Ausgabe Anzeige hinzufügt.
 
 ### Beispiel 6: erhalten von Versionsinformationen für einen Prozess
 
@@ -207,8 +196,7 @@ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
     83    96.21      77.53       4.39    1192  10 pwsh
 ```
 
-Diese Befehle zeigen, wie Sie die `$PID` Automatische Variable verwenden, um den Prozess zu identifizieren, der die aktuelle PowerShell-Sitzung gehostet.
-Sie können den Hostprozess mithilfe dieser Methode von anderen PowerShell-Prozessen unterscheiden, die Sie beenden oder schließen möchten.
+Diese Befehle zeigen, wie Sie die `$PID` Automatische Variable verwenden, um den Prozess zu identifizieren, der die aktuelle PowerShell-Sitzung gehostet. Sie können den Hostprozess mithilfe dieser Methode von anderen PowerShell-Prozessen unterscheiden, die Sie beenden oder schließen möchten.
 
 Der erste Befehl ruft alle PowerShell-Prozesse in der aktuellen Sitzung ab.
 
@@ -222,8 +210,7 @@ Get-Process | Where-Object {$_.mainWindowTitle} | Format-Table Id, Name, mainWin
 
 Mit diesem Befehl werden alle Prozesse mit einem Hauptfenstertitel abgerufen und in einer Tabelle mit der Prozess-ID und dem Prozessnamen angezeigt.
 
-Die **MainWindowTitle** -Eigenschaft ist nur eine von vielen nützlichen Eigenschaften des **Prozess** Objekts, das `Get-Process` zurückgibt.
-Um alle Eigenschaften anzuzeigen, reichen Sie die Ergebnisse eines Befehls über `Get-Process` die Pipeline an das `Get-Member` Cmdlet weiter `Get-Process | Get-Member` .
+Die **MainWindowTitle** -Eigenschaft ist nur eine von vielen nützlichen Eigenschaften des **Prozess** Objekts, das `Get-Process` zurückgibt. Um alle Eigenschaften anzuzeigen, reichen Sie die Ergebnisse eines Befehls über `Get-Process` die Pipeline an das `Get-Member` Cmdlet weiter `Get-Process | Get-Member` .
 
 ## PARAMETERS
 
@@ -235,9 +222,7 @@ Unter Windows Vista und höheren Versionen von Windows müssen Sie PowerShell mi
 
 Verwenden Sie das-Cmdlet, um die Datei Versionsinformationen für einen Prozess auf einem Remote Computer zu erhalten `Invoke-Command` .
 
-Die Verwendung dieses Parameters entspricht dem erhalten der **MainModule. FileVersionInfo** -Eigenschaft für jedes Prozess Objekt.
-Wenn Sie diesen Parameter verwenden, `Get-Process` gibt ein **FileVersionInfo** -Objekt **System. Diagnostics. FileVersionInfo** zurück, kein Prozess Objekt.
-Daher können Sie die Ausgabe des Befehls nicht an ein Cmdlet übergeben, das ein Prozess Objekt erwartet, z `Stop-Process` . b..
+Die Verwendung dieses Parameters entspricht dem erhalten der **MainModule. FileVersionInfo** -Eigenschaft für jedes Prozess Objekt. Wenn Sie diesen Parameter verwenden, `Get-Process` gibt ein **FileVersionInfo** -Objekt **System. Diagnostics. FileVersionInfo** zurück, kein Prozess Objekt. Daher können Sie die Ausgabe des Befehls nicht an ein Cmdlet übergeben, das ein Prozess Objekt erwartet, z `Stop-Process` . b..
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -253,9 +238,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Gibt einen oder mehrere Prozesse anhand der Prozess-ID (PID) an.
-Wenn Sie mehrere IDs angeben, trennen Sie diese durch Kommas.
-Um die PID eines Prozesses zu ermitteln, geben Sie ein `Get-Process` .
+Gibt einen oder mehrere Prozesse anhand der Prozess-ID (PID) an. Wenn Sie mehrere IDs angeben, trennen Sie diese durch Kommas. Um die PID eines Prozesses zu ermitteln, geben Sie ein `Get-Process` .
 
 ```yaml
 Type: System.Int32[]
@@ -287,8 +270,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Gibt Prozessobjekte an.
-Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
+Gibt Prozessobjekte an. Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -306,13 +288,11 @@ Accept wildcard characters: False
 
 Gibt an, dass dieses Cmdlet die Module abruft, die von den Prozessen geladen wurden.
 
-Unter Windows Vista und höheren Versionen von Windows müssen Sie PowerShell mit der Option "als Administrator ausführen" öffnen, um diesen Parameter für Prozesse zu verwenden, deren Besitzer Sie sind.
+Unter Windows Vista und höheren Versionen von Windows müssen Sie PowerShell mit der Option " **als Administrator ausführen** " öffnen, um diesen Parameter für Prozesse zu verwenden, deren Besitzer Sie sind.
 
 Verwenden Sie das Cmdlet, um die Module, die von einem Prozess auf einem Remote Computer geladen wurden, zu erhalten `Invoke-Command` .
 
-Dieser Parameter entspricht dem erhalten der **modules** -Eigenschaft jedes Prozess Objekts.
-Wenn Sie diesen Parameter verwenden, gibt dieses Cmdlet ein **ProcessModule** -Objekt **System. Diagnostics. ProcessModule** zurück, kein Prozess Objekt.
-Daher können Sie die Ausgabe des Befehls nicht an ein Cmdlet übergeben, das ein Prozess Objekt erwartet, z `Stop-Process` . b..
+Dieser Parameter entspricht dem erhalten der **modules** -Eigenschaft jedes Prozess Objekts. Wenn Sie diesen Parameter verwenden, gibt dieses Cmdlet ein **ProcessModule** -Objekt **System. Diagnostics. ProcessModule** zurück, kein Prozess Objekt. Daher können Sie die Ausgabe des Befehls nicht an ein Cmdlet übergeben, das ein Prozess Objekt erwartet, z `Stop-Process` . b..
 
 Wenn Sie den *Module* -Parameter und den **FileVersionInfo** -Parameter im gleichen Befehl verwenden, gibt dieses Cmdlet ein **FileVersionInfo** -Objekt mit Informationen zur Dateiversion aller Module zurück.
 
@@ -330,9 +310,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Gibt einen oder mehrere Prozesse mit ihrem Prozessnamen an.
-Sie können mehrere Prozessnamen eingeben (getrennt durch Kommas) und Platzhalterzeichen verwenden.
-Der Parametername (Name) ist optional.
+Gibt einen oder mehrere Prozesse mit ihrem Prozessnamen an. Sie können mehrere Prozessnamen eingeben (getrennt durch Kommas) und Platzhalterzeichen verwenden. Der Parametername (Name) ist optional.
 
 ```yaml
 Type: System.String[]
@@ -360,16 +338,14 @@ Sie können ein Prozess Objekt über die Pipeline an dieses Cmdlet übergeben.
 
 ### System. Diagnostics. Process, System. Diagnostics. FileVersionInfo, System. Diagnostics. ProcessModule
 
-Standardmäßig gibt dieses Cmdlet ein **System. Diagnostics. Process** -Objekt zurück.
-Wenn Sie den **FileVersionInfo** -Parameter verwenden, wird ein **System. Diagnostics. FileVersionInfo** -Objekt zurückgegeben.
-Wenn Sie den **Module** -Parameter ohne den **FileVersionInfo** -Parameter verwenden, wird ein **System. Diagnostics. ProcessModule** -Objekt zurückgegeben.
+Standardmäßig gibt dieses Cmdlet ein **System. Diagnostics. Process** -Objekt zurück. Wenn Sie den **FileVersionInfo** -Parameter verwenden, wird ein **System. Diagnostics. FileVersionInfo** -Objekt zurückgegeben. Wenn Sie den **Module** -Parameter ohne den **FileVersionInfo** -Parameter verwenden, wird ein **System. Diagnostics. ProcessModule** -Objekt zurückgegeben.
 
 ## HINWEISE
 
 - Sie können dieses Cmdlet auch über die integrierten Aliase, PS und GPS verweisen. Weitere Informationen finden Sie unter [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
 - Auf Computern, auf denen eine 64-Bit-Version von Windows ausgeführt wird, werden von der 64-Bit-Version von PowerShell nur 64-Bit-Prozessmodule abgerufen, und die 32-Bit-Version von PowerShell erhält nur die 32-Bit-Prozessmodule.
 - Sie können die Eigenschaften und Methoden des Windows-Verwaltungsinstrumentation (WMI) Win32_Process-Objekts in PowerShell verwenden. Weitere Informationen finden Sie unter `Get-WmiObject` und im WMI SDK.
-- Die Standardanzeige eines Prozesses ist eine Tabelle mit den folgenden Spalten: Eine Beschreibung aller Eigenschaften von Prozess Objekten finden Sie unter [Verarbeiten von Eigenschaften](/dotnet/api/system.diagnostics.process) in der MSDN Library.
+- Die Standardanzeige eines Prozesses ist eine Tabelle mit den folgenden Spalten: Eine Beschreibung aller Eigenschaften von Prozess Objekten finden Sie unter [Prozess Eigenschaften](/dotnet/api/system.diagnostics.process).
   - Handles: die Anzahl der Handles, die der Prozess geöffnet hat.
   - NPM (K): die Menge des vom Prozess verwendeten nicht auslagerbaren Speichers in Kilobyte.
   - PM (K): die Menge des vom Prozess verwendeten Speicher abrechenbaren Speichers in Kilobyte.
@@ -379,8 +355,7 @@ Wenn Sie den **Module** -Parameter ohne den **FileVersionInfo** -Parameter verwe
     Der virtuelle Speicher umfasst den Speicher der Auslagerungsdateien auf dem Datenträger.
   - CPU (s): die Prozessorzeit (in Sekunden), die vom Prozess auf allen Prozessoren verwendet wurde.
   - ID: die Prozess-ID (PID) des Prozesses.
-  - ProcessName: der Name des Prozesses.
-    Erläuterungen zu den Prozesskonzepten finden Sie im Glossar des Hilfe- und Supportcenters sowie in der Hilfe des Task-Managers.
+  - ProcessName: der Name des Prozesses. Erläuterungen zu den Prozesskonzepten finden Sie im Glossar des Hilfe- und Supportcenters sowie in der Hilfe des Task-Managers.
 - Sie können auch die integrierten alternativen Ansichten der Prozesse verwenden, die in verfügbar sind `Format-Table` , z. b. **StartTime** und **Priority** , und Sie können Ihre eigenen Ansichten entwerfen.
 
 ## VERWANDTE LINKS

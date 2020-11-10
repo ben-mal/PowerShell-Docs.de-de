@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/debug-process?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Debug-Process
-ms.openlocfilehash: a2d7a6d10e9dcc132defd7297c2255ab47dab112
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 05075a00074eb69a0fe492da95c28c2ad912c291
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212543"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389044"
 ---
 # Debug-Process
 
@@ -41,11 +41,10 @@ Debug-Process -InputObject <Process[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Das **Debug-Process-** Cmdlet fügt einen Debugger an einen oder mehrere laufende Prozesse auf einem lokalen Computer an.
+Mit dem- `Debug-Process` Cmdlet wird ein Debugger an einen oder mehrere laufende Prozesse auf einem lokalen Computer angefügt.
 Sie können die Prozesse durch ihren Prozessnamen oder Ihre Prozess-ID (PID) angeben, oder Sie können Prozess Objekte über die Pipeline an dieses Cmdlet übergeben.
 
-Dieses Cmdlet fügt den Debugger an, der derzeit für den Prozess registriert ist.
-Überprüfen Sie vor dem Verwenden dieses Cmdlets, dass ein Debugger heruntergeladen und ordnungsgemäß konfiguriert wurde.
+Dieses Cmdlet fügt den Debugger an, der derzeit für den Prozess registriert ist. Überprüfen Sie vor dem Verwenden dieses Cmdlets, dass ein Debugger heruntergeladen und ordnungsgemäß konfiguriert wurde.
 
 ## BEISPIELE
 
@@ -87,10 +86,9 @@ Dieser Befehl fügt einen Debugger an die Prozesse mit den Prozess-IDs 1132 und 
 PS C:\> Get-Process "Windows PowerShell" | Debug-Process
 ```
 
-Dieser Befehl fügt einen Debugger an die PowerShell-Prozesse auf dem Computer an.
-Er verwendet das **Get-Process-** Cmdlet, um die PowerShell-Prozesse auf dem Computer zu erhalten, und verwendet einen Pipeline Operator (|), um die Prozesse an das **Debug-Process-** Cmdlet zu senden.
+Dieser Befehl fügt einen Debugger an die PowerShell-Prozesse auf dem Computer an. Er verwendet das `Get-Process` Cmdlet, um die PowerShell-Prozesse auf dem Computer zu erhalten, und verwendet einen Pipeline Operator ( `|` ), um die Prozesse an das `Debug-Process` Cmdlet zu senden.
 
-Verwenden Sie zum Angeben eines bestimmten PowerShell-Prozesses den ID-Parameter von **Get-Process** .
+Verwenden Sie zum Angeben eines bestimmten PowerShell-Prozesses den ID-Parameter von `Get-Process` .
 
 ### Beispiel 6: Anfügen eines Debuggers an einen aktuellen Prozess auf dem lokalen Computer
 
@@ -100,10 +98,9 @@ PS C:\> $PID | Debug-Process
 
 Dieser Befehl fügt einen Debugger an die aktuellen PowerShell-Prozesse auf dem Computer an.
 
-Der Befehl verwendet die $PID automatische Variable, die die Prozess-ID des aktuellen PowerShell-Prozesses enthält.
-Anschließend wird ein Pipeline Operator (|) verwendet, um die Prozess-ID an das **Debug-Process-** Cmdlet zu senden.
+Der Befehl verwendet die `$PID` Automatische Variable, die die Prozess-ID des aktuellen PowerShell-Prozesses enthält. Anschließend wird ein Pipeline Operator () verwendet, `|` um die Prozess-ID an das `Debug-Process` Cmdlet zu senden.
 
-Weitere Informationen über die $PID automatische Variable finden Sie unter about_Automatic_Variables.
+Weitere Informationen über die `$PID` Automatische Variable finden Sie unter about_Automatic_Variables.
 
 ### Beispiel 7: Anfügen eines Debuggers an einen Prozess, der den Inputobject-Parameter verwendet
 
@@ -114,17 +111,15 @@ PS C:\> Debug-Process -InputObject $P
 
 Dieser Befehl fügt einen Debugger an die PowerShell-Prozesse auf dem lokalen Computer an.
 
-Der erste Befehl verwendet das **Get-Process-** Cmdlet, um die PowerShell-Prozesse auf dem Computer zu erhalten.
-Das resultierende Prozess Objekt wird in der Variablen mit dem Namen $P gespeichert.
+Der erste Befehl verwendet das `Get-Process` Cmdlet, um die PowerShell-Prozesse auf dem Computer zu erhalten. Das resultierende Prozess Objekt wird in der Variablen mit dem Namen gespeichert `$P` .
 
-Der zweite Befehl verwendet den *Inputobject* -Parameter des **Debug-Process-** Cmdlets, um das Process-Objekt in der $P-Variablen zu übermitteln.
+Der zweite Befehl verwendet den **Inputobject** -Parameter des `Debug-Process` Cmdlets, um das Prozess Objekt in der Variablen zu übermitteln `$P` .
 
 ## PARAMETERS
 
 ### -Id
 
-Gibt die Prozess-IDs der zu debuggenden Prozesse an.
-Der *ID* -Parameter Name ist optional.
+Gibt die Prozess-IDs der zu debuggenden Prozesse an. Der **ID** -Parameter Name ist optional.
 
 Um die Prozess-ID eines Prozesses zu ermitteln, geben Sie ein `Get-Process` .
 
@@ -142,9 +137,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Gibt die Prozessobjekte an, die zu debuggende Prozesse darstellen.
-Geben Sie eine Variable ein, die die Prozess Objekte enthält, oder einen Befehl, mit dem die Prozess Objekte abgerufen werden, z. b. das Get-Process Cmdlet.
-Sie können Prozess Objekte auch über die Pipeline an dieses Cmdlet übergeben.
+Gibt die Prozessobjekte an, die zu debuggende Prozesse darstellen. Geben Sie eine Variable ein, die die Prozess Objekte enthält, oder einen Befehl, mit dem die Prozess Objekte abgerufen werden, z `Get-Process` . b. das Cmdlet. Sie können Prozess Objekte auch über die Pipeline an dieses Cmdlet übergeben.
 
 ```yaml
 Type: System.Diagnostics.Process[]
@@ -160,9 +153,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-Gibt die Namen der zu debuggenden Prozesse an.
-Wenn mehr als ein Prozess mit demselben Namen vorhanden ist, fügt dieses Cmdlet einen Debugger an alle Prozesse mit diesem Namen an.
-Der *Name* -Parameter ist optional.
+Gibt die Namen der zu debuggenden Prozesse an. Wenn mehr als ein Prozess mit demselben Namen vorhanden ist, fügt dieses Cmdlet einen Debugger an alle Prozesse mit diesem Namen an. Der **Name** -Parameter ist optional.
 
 ```yaml
 Type: System.String[]
@@ -194,8 +185,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -227,7 +217,7 @@ Dieses Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
 
-* Dieses Cmdlet verwendet die AttachDebugger-Methode der Win32_Process-Klasse der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI). Weitere Informationen zu dieser Methode finden Sie unter [AttachDebugger-Methode](https://go.microsoft.com/fwlink/?LinkId=143640) in der MSDN Library.
+Dieses Cmdlet verwendet die AttachDebugger-Methode der Win32_Process-Klasse der Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI). Weitere Informationen zu dieser Methode finden Sie unter [AttachDebugger-Methode](https://go.microsoft.com/fwlink/?LinkId=143640) in der MSDN Library.
 
 ## VERWANDTE LINKS
 

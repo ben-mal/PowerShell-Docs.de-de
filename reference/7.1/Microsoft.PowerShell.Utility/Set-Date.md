@@ -7,12 +7,12 @@ ms.date: 4/30/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-date?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Date
-ms.openlocfilehash: 1c2a029a20b80826f74662a2b68d4a5f32276b00
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 196ed2830534d6f53491ae73d31291ded1aa2249
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211820"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389860"
 ---
 # Set-Date
 
@@ -131,12 +131,9 @@ Accept wildcard characters: False
 
 Gibt an, welche Elemente von Datum und Uhrzeit angezeigt werden. Die zulässigen Werte für diesen Parameter sind:
 
-- das Datum
-  zeigt nur das Datum an.
-- Zeit.
-  zeigt nur die Uhrzeit an.
-- DateTime.
-  zeigt das Datum und die Uhrzeit an.
+- **Date** : zeigt nur das Datum an.
+- **Zeit** : zeigt nur die Uhrzeit an.
+- **DateTime** : zeigt das Datum und die Uhrzeit an.
 
 Dieser Parameter betrifft nur die Anzeige.
 Dies wirkt sich nicht auf das **DateTime** -Objekt aus, das `Get-Date` abruft.
@@ -206,13 +203,12 @@ Sie können ein Datum an die Pipeline übergeben `Set-Date` .
 ## HINWEISE
 
 - Verwenden Sie dieses Cmdlet vorsichtig, wenn Sie das Datum und die Uhrzeit auf dem Computer ändern. Die Änderung kann möglicherweise verhindern, dass der Computer systemweite Ereignisse und Updates erhält, die durch einen Datums- oder Uhrzeitwert ausgelöst werden. Verwenden Sie die Parameter **WhatIf** und **Confirm** , um Fehler zu vermeiden.
-- Sie können .net-Standardmethoden mit den **DateTime** -und **TimeSpan** -Objekten verwenden, die mit verwendet werden `Set-Date` , z. b. **addDays** , **addmonate** und **FromFileTime** . Weitere Informationen finden Sie unter [DateTime-Methoden](/dotnet/api/system.datetime) und
+- Sie können .net-Standardmethoden mit den **DateTime** -und **TimeSpan** -Objekten verwenden, die mit verwendet werden `Set-Date` , z. b. **addDays** , **addmonate** und **FromFileTime**. Weitere Informationen finden Sie unter [DateTime-Methoden](/dotnet/api/system.datetime) und
 
-  [TimeSpan-Methoden](/dotnet/api/system.timespan) in der MSDN Library.
+  [TimeSpan-Methoden](/dotnet/api/system.timespan) im .NET SDK.
 
 ## VERWANDTE LINKS
 
 [Get-Date](Get-Date.md)
 
 [New-TimeSpan](New-TimeSpan.md)
-

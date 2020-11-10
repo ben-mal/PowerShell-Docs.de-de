@@ -7,12 +7,12 @@ ms.date: 12/11/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: e9b99b824a0ffe59e4572a57998010667788b59d
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 3c22bb28357a5dd0a5e402eafe1597cabdc3ed84
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94345934"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390693"
 ---
 # Receive-PSSession
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 Gibt den Mechanismus an, der zum Authentifizieren der Benutzer Anmelde Informationen im Befehl verwendet wird, um die Verbindung mit einer getrennten Sitzung wiederherzustellen. Zulässige Werte für diesen Parameter:
 
 - Standard
-- Einfach
+- Standard
 - CredSSP
 - Digest
 - Kerberos
@@ -789,7 +789,7 @@ Wenn Sie eine **PSSession** trennen, wird der Sitzungs Status getrennt, und die 
 - Der Wert der **State** Eigenschaft bezieht sich auf die aktuelle Sitzung. Der Wert "getrennt" bedeutet, dass die **PSSession** nicht mit der aktuellen Sitzung verbunden ist. Dies bedeutet jedoch nicht, dass die **PSSession** von allen Sitzungen getrennt ist. Sie kann mit einer anderen Sitzung verbunden sein.
   Um festzustellen, ob Sie eine Sitzungsverbindung herstellen bzw. wiederherstellen können, verwenden Sie die **Availability** -Eigenschaft.
 - Ein **Availability** -Wert von None gibt an, dass eine Verbindung mit der Sitzung hergestellt werden kann. Der Wert ausgelastet gibt an, dass keine Verbindung mit der **PSSession** hergestellt werden kann, da Sie mit einer anderen Sitzung verbunden ist.
-- Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate](/dotnet/api/system.management.automation.runspaces.runspacestate) in der MSDN Library.
+- Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate](/dotnet/api/system.management.automation.runspaces.runspacestate).
 - Weitere Informationen zu den Werten der **Availability** -Eigenschaft von Sitzungen finden Sie unter [runspaceavailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## VERWANDTE LINKS
@@ -819,4 +819,3 @@ Wenn Sie eine **PSSession** trennen, wird der Sitzungs Status getrennt, und die 
 [New-PSTransportOption](New-PSTransportOption.md)
 
 [Remove-PSSession](Remove-PSSession.md)
-

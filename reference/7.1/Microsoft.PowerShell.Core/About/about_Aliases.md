@@ -6,12 +6,12 @@ ms.date: 11/27/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Aliases
-ms.openlocfilehash: e0a1fa357e591dd17986a8dd685a1818751ab355
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 9213bd41af6d5383c7e67d33b8909736a6e380bb
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224084"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391288"
 ---
 # <a name="about-aliases"></a>Informationen zu Aliasen
 
@@ -171,10 +171,10 @@ Get-Help about_Functions
 
 ## <a name="alias-objects"></a>Alias Objekte
 
-PowerShell-Aliase werden durch Objekte dargestellt, die Instanzen der System. Management. Automation. AliasInfo-Klasse sind. Weitere Informationen zu diesem Objekttyp finden Sie unter [AliasInfo-Klasse][aliasinfo] in der MSDN-Bibliothek (Microsoft Developer Network).
+PowerShell-Aliase werden durch Objekte dargestellt, die Instanzen der System. Management. Automation. AliasInfo-Klasse sind. Weitere Informationen zu diesem Objekttyp finden Sie unter [AliasInfo-Klasse][aliasinfo] im PowerShell SDK.
 
 Um die Eigenschaften und Methoden der Alias Objekte anzuzeigen, erhalten Sie die Aliase.
-Übergeben Sie Sie dann an das Cmdlet "Get-Member". Beispiel:
+Übergeben Sie Sie dann an das Cmdlet "Get-Member". Zum Beispiel:
 
 ```powershell
 Get-Alias | Get-Member
@@ -202,7 +202,7 @@ Geben Sie Folgendes ein, um den Inhalt des Laufwerks anzuzeigen:
 Get-ChildItem
 ```
 
-Um den Inhalt des Laufwerks von einem anderen PowerShell-Laufwerk aus anzuzeigen, starten Sie den Pfad mit dem Namen des Laufwerks. Fügen Sie den Doppelpunkt (:) ein. Beispiel:
+Um den Inhalt des Laufwerks von einem anderen PowerShell-Laufwerk aus anzuzeigen, starten Sie den Pfad mit dem Namen des Laufwerks. Fügen Sie den Doppelpunkt (:) ein. Zum Beispiel:
 
 ```powershell
 Get-ChildItem -Path Alias:
@@ -235,4 +235,3 @@ Get-Help Alias
 
 <!-- External links -->
 [aliasinfo]: /dotnet/api/system.management.automation.aliasinfo
-

@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: 3a9336fedece67c2c84532f226cec01de14cbb2a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 6002003b413cede3cbdb0eeeb40646facb566f61
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210671"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389758"
 ---
 # New-PSSessionOption
 
@@ -495,13 +495,13 @@ Accept wildcard characters: False
 
 Bestimmt, wie die Befehlsausgabe in getrennten Sitzungen verwaltet wird, wenn sich der Ausgabepuffer füllt.
 
-Wenn der Modus für die Ausgabepufferung in der Sitzung oder der Sitzungskonfiguration nicht festgelegt ist, ist der Standardwert **Block** . Benutzer können den Modus für die Ausgabepufferung auch beim Trennen der Sitzung ändern.
+Wenn der Modus für die Ausgabepufferung in der Sitzung oder der Sitzungskonfiguration nicht festgelegt ist, ist der Standardwert **Block**. Benutzer können den Modus für die Ausgabepufferung auch beim Trennen der Sitzung ändern.
 
 Wenn Sie diesen Parameter weglassen, ist der Wert von **outputbufferingmode** des Sitzungs Options Objekts "None". Ein Wert von **Block** oder **Drop** überschreibt die Transportoption des Modus für die Ausgabepufferung, die in der Sitzungskonfiguration festgelegt wurde. Zulässige Werte für diesen Parameter:
 
 - Blockierung. Wenn der Ausgabepuffer voll ist, wird die Ausführung unterbrochen, bis der Puffer leer ist.
 - Ablage. Wenn der Ausgabepuffer voll ist, wird die Ausführung fortgesetzt. Sobald neue Ausgabedaten gespeichert werden, wird die älteste Ausgabe verworfen.
-- Keine Es wurde kein Ausgabepufferungsmodus angegeben.
+- Keine. Es wurde kein Ausgabepufferungsmodus angegeben.
 
 Weitere Informationen zur Transport Option "Output bufferingmode" finden Sie unter `New-PSTransportOption` .
 
@@ -532,7 +532,7 @@ Bestimmt, welcher Mechanismus verwendet wird, um den Hostnamen aufzulösen. Zul�
 
 Der Standardwert lautet „Keine“.
 
-Informationen zu den Werten dieses Parameters finden Sie unter [proxyaccesstype-Enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Informationen zu den Werten dieses Parameters finden Sie unter [proxyaccesstype-Enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype).
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -549,9 +549,9 @@ Accept wildcard characters: False
 
 ### -Proxy Authentifizierung
 
-Gibt die Authentifizierungsmethode an, die für die Proxyauflösung verwendet wird. Die zulässigen Werte für diesen Parameter sind: **Basic** , **Digest** und **Aushandlungs** . Der Standardwert ist " **aushandeln** ".
+Gibt die Authentifizierungsmethode an, die für die Proxyauflösung verwendet wird. Die zulässigen Werte für diesen Parameter sind: **Basic** , **Digest** und **Aushandlungs**. Der Standardwert ist " **aushandeln** ".
 
-Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism

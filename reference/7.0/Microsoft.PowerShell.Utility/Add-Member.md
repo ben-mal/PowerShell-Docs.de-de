@@ -7,12 +7,12 @@ ms.date: 4/26/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-member?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Member
-ms.openlocfilehash: 29a39e88d6d39659df1dd9d2e05318351dc47f3a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 8c27ebe1c5f1a0c53f5012f1faa17a9fdb1cdcff
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210359"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391033"
 ---
 # Add-Member
 
@@ -111,7 +111,7 @@ $A.Size
 In diesem Beispiel wird eine Zeichenfolge der Eigenschaft " **stringuse** Note" hinzugefügt.
 Da `Add-Member` Typen zu **Zeichen** folgen Eingabe Objekten keine Typen hinzufügen können, können Sie den **passthru** -Parameter angeben, um ein Ausgabe Objekt zu generieren. Der letzte Befehl im Beispiel zeigt die neue Eigenschaft an.
 
-In diesem Beispiel wird der **notepropertymembers** -Parameter verwendet. Der Wert des **NotePropertyMembers** -Parameters ist eine Hashtabelle. Der Schlüssel ist der Name der Hinweis Eigenschaft ( **stringuse** ), und der Wert ist der Wert der Note-Eigenschaft, **Display** .
+In diesem Beispiel wird der **notepropertymembers** -Parameter verwendet. Der Wert des **NotePropertyMembers** -Parameters ist eine Hashtabelle. Der Schlüssel ist der Name der Hinweis Eigenschaft ( **stringuse** ), und der Wert ist der Wert der Note-Eigenschaft, **Display**.
 
 ```powershell
 $A = "A string"
@@ -244,7 +244,7 @@ Zulässige Werte für diesen Parameter:
 - ScriptMethod
 - CodeMethod
 
-Weitere Informationen zu diesen Werten finden Sie unter [psmembership types-Enumeration](/dotnet/api/system.management.automation.psmembertypes) in der MSDN Library.
+Weitere Informationen zu diesen Werten finden Sie unter [psmembership types-Enumeration](/dotnet/api/system.management.automation.psmembertypes) im PowerShell SDK.
 
 Nicht alle Objekte verfügen über jeden Membertyp.
 Wenn Sie einen Elementtyp angeben, der für das Objekt nicht vorhanden ist, gibt PowerShell einen Fehler zurück.
@@ -450,7 +450,7 @@ Sie können nur Elemente zu **psobject** -Objekten hinzufügen. Verwenden Sie de
 Um z. b. ein in der Variablen gespeichertes Objekt zu testen `$obj` , geben Sie ein `$obj -is [PSObject]` .
 
 Die Namen der Parameter " **Membership Type** ", " **Name** ", " **value** " und " **SecondValue** " sind optional.
-Wenn Sie die Parameternamen weglassen, müssen die unbenannten Parameterwerte in der folgenden Reihenfolge angezeigt werden: **Mitgliedschaftstyp** , **Name** , **Wert** und **SecondValue** .
+Wenn Sie die Parameternamen weglassen, müssen die unbenannten Parameterwerte in der folgenden Reihenfolge angezeigt werden: **Mitgliedschaftstyp** , **Name** , **Wert** und **SecondValue**.
 
 Wenn Sie die Parameternamen angeben, können die Parameter in beliebiger Reihenfolge angegeben werden.
 

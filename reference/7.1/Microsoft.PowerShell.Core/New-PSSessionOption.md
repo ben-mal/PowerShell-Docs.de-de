@@ -7,12 +7,12 @@ ms.date: 02/07/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-PSSessionOption
-ms.openlocfilehash: c8d51054b2beb4da0e7d54280d85b9688928147e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 73bc543ff9525a51b1e776ec1c24e9baca4e4f71
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217439"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94390710"
 ---
 # New-PSSessionOption
 
@@ -501,7 +501,7 @@ Wenn Sie diesen Parameter weglassen, ist der Wert von **outputbufferingmode** de
 
 - Blockierung. Wenn der Ausgabepuffer voll ist, wird die Ausführung unterbrochen, bis der Puffer leer ist.
 - Ablage. Wenn der Ausgabepuffer voll ist, wird die Ausführung fortgesetzt. Sobald neue Ausgabedaten gespeichert werden, wird die älteste Ausgabe verworfen.
-- Keine Es wurde kein Ausgabepufferungsmodus angegeben.
+- Keine. Es wurde kein Ausgabepufferungsmodus angegeben.
 
 Weitere Informationen zur Transport Option "Output bufferingmode" finden Sie unter `New-PSTransportOption` .
 
@@ -532,7 +532,7 @@ Bestimmt, welcher Mechanismus verwendet wird, um den Hostnamen aufzulösen. Zul�
 
 Der Standardwert lautet „Keine“.
 
-Informationen zu den Werten dieses Parameters finden Sie unter [proxyaccesstype-Enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Informationen zu den Werten dieses Parameters finden Sie unter [proxyaccesstype-Enumeration](/dotnet/api/system.management.automation.remoting.proxyaccesstype).
 
 ```yaml
 Type: System.Management.Automation.Remoting.ProxyAccessType
@@ -551,7 +551,7 @@ Accept wildcard characters: False
 
 Gibt die Authentifizierungsmethode an, die für die Proxyauflösung verwendet wird. Die zulässigen Werte für diesen Parameter sind: **Basic** , **Digest** und **Aushandlungs**. Der Standardwert ist " **aushandeln** ".
 
-Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism?redirectedfrom=MSDN&view=powershellsdk-1.1.0).
+Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 ```yaml
 Type: System.Management.Automation.Runspaces.AuthenticationMechanism
@@ -701,4 +701,3 @@ Die Eigenschaften eines Sitzungskonfigurationsobjekts weichen hinsichtlich der f
 [Invoke-Command](Invoke-Command.md)
 
 [New-PSSession](New-PSSession.md)
-

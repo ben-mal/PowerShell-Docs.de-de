@@ -6,12 +6,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_methods?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Methods
-ms.openlocfilehash: 7160b049cffffa35263fc75fd595997c98ca2e34
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 39ebd876b99d77d699c5026e298acc931b501382
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222671"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388942"
 ---
 # <a name="about-methods"></a>Informationen zu Methoden
 
@@ -81,7 +81,7 @@ Ab PowerShell 4,0 wird der Methodenaufruf mithilfe dynamischer Methodennamen unt
 
 ### <a name="learning-about-methods"></a>Erlernen von Methoden
 
-Um Definitionen der Methoden eines Objekts zu finden, wechseln Sie zum Hilfethema für den Objekttyp in MSDN, und suchen Sie nach den zugehörigen Methoden. Auf der folgenden Seite werden z. b. die Methoden von Process Objects [System. Diagnostics. Process](/dotnet/api/system.diagnostics.process#methods)beschrieben.
+Um Definitionen der Methoden eines Objekts zu suchen, navigieren Sie zu Hilfe Themen für den Objekttyp, und suchen Sie nach der entsprechenden Methoden Seite. Auf der folgenden Seite werden z. b. die Methoden von Process Objects [System. Diagnostics. Process](/dotnet/api/system.diagnostics.process#methods)beschrieben.
 
 Überprüfen Sie die Methoden Definition, die dem Syntax Diagramm eines PowerShell-Cmdlets ähnelt, um die Argumente einer Methode zu bestimmen.
 

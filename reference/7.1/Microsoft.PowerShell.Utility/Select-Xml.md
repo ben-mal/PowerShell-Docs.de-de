@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/select-xml?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Select-Xml
-ms.openlocfilehash: 848986bbd1c1b36e1611c5ad6004e36146c9864d
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: d744b1d151d50d95ebf359c6e1fce2cb5e206b5c
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218735"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389979"
 ---
 # Select-Xml
 
@@ -327,9 +327,8 @@ Sie können einen Pfad oder XML-Knoten über die Pipeline an dieses Cmdlet über
 
 ## HINWEISE
 
-* XPath ist eine Standardsprache, die Teile eines XML-Dokuments identifiziert. Weitere Informationen zur XPath-Sprache finden Sie unter [XPath-Referenz](https://msdn.microsoft.com/library/ms256115) und im Abschnitt Auswahl Filter der [Ereignis Auswahl](https://msdn.microsoft.com/library/aa385231) in der MSDN Library.
+XPath ist eine Standardsprache, die Teile eines XML-Dokuments identifiziert. Weitere Informationen zur XPath-Sprache finden Sie unter [XPath-Referenz](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) und im Abschnitt Auswahl Filter der [Ereignis Auswahl](/previous-versions//aa385231(v=vs.85)).
 
 ## VERWANDTE LINKS
 
 [ConvertTo-Xml](ConvertTo-Xml.md)
-
