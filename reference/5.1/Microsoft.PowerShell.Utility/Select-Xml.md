@@ -7,52 +7,52 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/select-xml?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Select-Xml
-ms.openlocfilehash: eb5684ed281b3ba05629528bb12b44577f8c050a
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: 7e3d02dedb9f7809a8f8e1c657987fef8ec38fa9
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218151"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387990"
 ---
-# <span data-ttu-id="cadd0-103">Select-Xml</span><span class="sxs-lookup"><span data-stu-id="cadd0-103">Select-Xml</span></span>
+# <span data-ttu-id="d4b5e-103">Select-Xml</span><span class="sxs-lookup"><span data-stu-id="d4b5e-103">Select-Xml</span></span>
 
-## <span data-ttu-id="cadd0-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="cadd0-104">SYNOPSIS</span></span>
-<span data-ttu-id="cadd0-105">Sucht Text in einer XML-Zeichenfolge oder einem XML-Dokument.</span><span class="sxs-lookup"><span data-stu-id="cadd0-105">Finds text in an XML string or document.</span></span>
+## <span data-ttu-id="d4b5e-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="d4b5e-104">SYNOPSIS</span></span>
+<span data-ttu-id="d4b5e-105">Sucht Text in einer XML-Zeichenfolge oder einem XML-Dokument.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-105">Finds text in an XML string or document.</span></span>
 
-## <span data-ttu-id="cadd0-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="cadd0-106">SYNTAX</span></span>
+## <span data-ttu-id="d4b5e-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d4b5e-106">SYNTAX</span></span>
 
-### <span data-ttu-id="cadd0-107">XML (Standard)</span><span class="sxs-lookup"><span data-stu-id="cadd0-107">Xml (Default)</span></span>
+### <span data-ttu-id="d4b5e-107">XML (Standard)</span><span class="sxs-lookup"><span data-stu-id="d4b5e-107">Xml (Default)</span></span>
 
 ```
 Select-Xml [-Xml] <XmlNode[]> [-XPath] <String> [-Namespace <Hashtable>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cadd0-108">Pfad</span><span class="sxs-lookup"><span data-stu-id="cadd0-108">Path</span></span>
+### <span data-ttu-id="d4b5e-108">Pfad</span><span class="sxs-lookup"><span data-stu-id="d4b5e-108">Path</span></span>
 
 ```
 Select-Xml [-Path] <String[]> [-XPath] <String> [-Namespace <Hashtable>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cadd0-109">LiteralPath</span><span class="sxs-lookup"><span data-stu-id="cadd0-109">LiteralPath</span></span>
+### <span data-ttu-id="d4b5e-109">LiteralPath</span><span class="sxs-lookup"><span data-stu-id="d4b5e-109">LiteralPath</span></span>
 
 ```
 Select-Xml -LiteralPath <String[]> [-XPath] <String> [-Namespace <Hashtable>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="cadd0-110">Inhalt</span><span class="sxs-lookup"><span data-stu-id="cadd0-110">Content</span></span>
+### <span data-ttu-id="d4b5e-110">Inhalt</span><span class="sxs-lookup"><span data-stu-id="d4b5e-110">Content</span></span>
 
 ```
 Select-Xml -Content <String[]> [-XPath] <String> [-Namespace <Hashtable>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="cadd0-111">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="cadd0-111">DESCRIPTION</span></span>
+## <span data-ttu-id="d4b5e-111">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="d4b5e-111">DESCRIPTION</span></span>
 
-<span data-ttu-id="cadd0-112">Mit dem **Select-XML-** Cmdlet können Sie XPath-Abfragen verwenden, um Text in XML-Zeichen folgen und-Dokumenten zu suchen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-112">The **Select-Xml** cmdlet lets you use XPath queries to search for text in XML strings and documents.</span></span>
-<span data-ttu-id="cadd0-113">Geben Sie eine XPath-Abfrage ein, und verwenden Sie den Parameter *Content* , *path* oder *XML* , um das zu durchsuchende XML anzugeben.</span><span class="sxs-lookup"><span data-stu-id="cadd0-113">Enter an XPath query, and use the *Content* , *Path* , or *Xml* parameter to specify the XML to be searched.</span></span>
+<span data-ttu-id="d4b5e-112">Mit dem **Select-XML-** Cmdlet können Sie XPath-Abfragen verwenden, um Text in XML-Zeichen folgen und-Dokumenten zu suchen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-112">The **Select-Xml** cmdlet lets you use XPath queries to search for text in XML strings and documents.</span></span>
+<span data-ttu-id="d4b5e-113">Geben Sie eine XPath-Abfrage ein, und verwenden Sie den Parameter *Content* , *path* oder *XML* , um das zu durchsuchende XML anzugeben.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-113">Enter an XPath query, and use the *Content* , *Path* , or *Xml* parameter to specify the XML to be searched.</span></span>
 
-## <span data-ttu-id="cadd0-114">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="cadd0-114">EXAMPLES</span></span>
+## <span data-ttu-id="d4b5e-114">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="d4b5e-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="cadd0-115">Beispiel 1: Auswählen von aliasproperty-Knoten</span><span class="sxs-lookup"><span data-stu-id="cadd0-115">Example 1: Select AliasProperty nodes</span></span>
+### <span data-ttu-id="d4b5e-115">Beispiel 1: Auswählen von aliasproperty-Knoten</span><span class="sxs-lookup"><span data-stu-id="d4b5e-115">Example 1: Select AliasProperty nodes</span></span>
 
 ```
 PS C:\> $Path = "$Pshome\Types.ps1xml"
@@ -78,36 +78,36 @@ Name                 __Class
 Namespace            ModuleName
 ```
 
-<span data-ttu-id="cadd0-116">In diesem Beispiel werden die Aliaseigenschaften in „Types.ps1xml“ abgerufen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-116">This example gets the alias properties in the Types.ps1xml.</span></span>
-<span data-ttu-id="cadd0-117">(Weitere Informationen zu dieser Datei finden Sie unter about_Types.ps1xml.)</span><span class="sxs-lookup"><span data-stu-id="cadd0-117">(For information about this file, see about_Types.ps1xml.)</span></span>
+<span data-ttu-id="d4b5e-116">In diesem Beispiel werden die Aliaseigenschaften in „Types.ps1xml“ abgerufen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-116">This example gets the alias properties in the Types.ps1xml.</span></span>
+<span data-ttu-id="d4b5e-117">(Weitere Informationen zu dieser Datei finden Sie unter about_Types.ps1xml.)</span><span class="sxs-lookup"><span data-stu-id="d4b5e-117">(For information about this file, see about_Types.ps1xml.)</span></span>
 
-<span data-ttu-id="cadd0-118">Der erste Befehl speichert den Pfad zur Datei „Types.ps1xml“ in der $Path-Variablen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-118">The first command saves the path to the Types.ps1xml file in the $Path variable.</span></span>
+<span data-ttu-id="d4b5e-118">Der erste Befehl speichert den Pfad zur Datei „Types.ps1xml“ in der $Path-Variablen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-118">The first command saves the path to the Types.ps1xml file in the $Path variable.</span></span>
 
-<span data-ttu-id="cadd0-119">Der zweite Befehl speichert den XML-Pfad zum AliasProperty-Knoten in der $XPath-Variablen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-119">The second command saves the XML path to the AliasProperty node in the $XPath variable.</span></span>
+<span data-ttu-id="d4b5e-119">Der zweite Befehl speichert den XML-Pfad zum AliasProperty-Knoten in der $XPath-Variablen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-119">The second command saves the XML path to the AliasProperty node in the $XPath variable.</span></span>
 
-<span data-ttu-id="cadd0-120">Der dritte Befehl verwendet das **Select-Xml** -Cmdlet zum Abrufen der AliasProperty-Knoten, die durch die XPath-Anweisung der Datei „Types.ps1xml“ identifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="cadd0-120">The third command uses the **Select-Xml** cmdlet to get the AliasProperty nodes that are identified by the XPath statement from the Types.ps1xml file.</span></span>
-<span data-ttu-id="cadd0-121">Der Befehl verwendet einen Pipeline Operator, um die aliasproperty-Knoten an das Select-Object-Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="cadd0-121">The command uses a pipeline operator to send the AliasProperty nodes to the Select-Object cmdlet.</span></span>
-<span data-ttu-id="cadd0-122">Der *ExpandProperty* -Parameter erweitert das **Knoten** Objekt und gibt dessen Eigenschaften Name und referencedmembership Name zurück.</span><span class="sxs-lookup"><span data-stu-id="cadd0-122">The *ExpandProperty* parameter expands the **Node** object and returns its Name and ReferencedMemberName properties.</span></span>
+<span data-ttu-id="d4b5e-120">Der dritte Befehl verwendet das **Select-Xml** -Cmdlet zum Abrufen der AliasProperty-Knoten, die durch die XPath-Anweisung der Datei „Types.ps1xml“ identifiziert werden.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-120">The third command uses the **Select-Xml** cmdlet to get the AliasProperty nodes that are identified by the XPath statement from the Types.ps1xml file.</span></span>
+<span data-ttu-id="d4b5e-121">Der Befehl verwendet einen Pipeline Operator, um die aliasproperty-Knoten an das Select-Object-Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-121">The command uses a pipeline operator to send the AliasProperty nodes to the Select-Object cmdlet.</span></span>
+<span data-ttu-id="d4b5e-122">Der *ExpandProperty* -Parameter erweitert das **Knoten** Objekt und gibt dessen Eigenschaften Name und referencedmembership Name zurück.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-122">The *ExpandProperty* parameter expands the **Node** object and returns its Name and ReferencedMemberName properties.</span></span>
 
-<span data-ttu-id="cadd0-123">Das Ergebnis zeigt die Name-Eigenschaft und ReferencedMemberName-Eigenschaft jeder Aliaseigenschaft in der Datei „Types.ps1xml“ an.</span><span class="sxs-lookup"><span data-stu-id="cadd0-123">The result shows the Name and ReferencedMemberName of each alias property in the Types.ps1xml file.</span></span>
-<span data-ttu-id="cadd0-124">Beispielsweise gibt es eine **count** -Eigenschaft, die ein Alias der **length** -Eigenschaft ist.</span><span class="sxs-lookup"><span data-stu-id="cadd0-124">For example, there is a **Count** property that is an alias of the **Length** property.</span></span>
+<span data-ttu-id="d4b5e-123">Das Ergebnis zeigt die Name-Eigenschaft und ReferencedMemberName-Eigenschaft jeder Aliaseigenschaft in der Datei „Types.ps1xml“ an.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-123">The result shows the Name and ReferencedMemberName of each alias property in the Types.ps1xml file.</span></span>
+<span data-ttu-id="d4b5e-124">Beispielsweise gibt es eine **count** -Eigenschaft, die ein Alias der **length** -Eigenschaft ist.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-124">For example, there is a **Count** property that is an alias of the **Length** property.</span></span>
 
-### <span data-ttu-id="cadd0-125">Beispiel 2: Eingabe eines XML-Dokuments</span><span class="sxs-lookup"><span data-stu-id="cadd0-125">Example 2: Input an XML document</span></span>
+### <span data-ttu-id="d4b5e-125">Beispiel 2: Eingabe eines XML-Dokuments</span><span class="sxs-lookup"><span data-stu-id="d4b5e-125">Example 2: Input an XML document</span></span>
 
 ```
 PS C:\> [xml]$Types = Get-Content $Pshome\Types.ps1xml
 PS C:\> Select-Xml -Xml $Types -XPath "//MethodName"
 ```
 
-<span data-ttu-id="cadd0-126">In diesem Beispiel wird gezeigt, wie der *XML* -Parameter verwendet wird, um ein XML-Dokument für das **Select-XML** -Cmdlet bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-126">This example shows how to use the *XML* parameter to provide an XML document to the **Select-Xml** cmdlet.</span></span>
+<span data-ttu-id="d4b5e-126">In diesem Beispiel wird gezeigt, wie der *XML* -Parameter verwendet wird, um ein XML-Dokument für das **Select-XML** -Cmdlet bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-126">This example shows how to use the *XML* parameter to provide an XML document to the **Select-Xml** cmdlet.</span></span>
 
-<span data-ttu-id="cadd0-127">Der erste Befehl verwendet das Cmdlet "Get-Content", um den Inhalt der Types.ps1XML-Datei zu erhalten und in der $Types-Variablen zu speichern.</span><span class="sxs-lookup"><span data-stu-id="cadd0-127">The first command uses the Get-Content cmdlet to get the content of the Types.ps1xml file and save it in the $Types variable.</span></span>
-<span data-ttu-id="cadd0-128">Der XML-Code wandelt \[ \] die Variable in ein XML-Objekt um.</span><span class="sxs-lookup"><span data-stu-id="cadd0-128">The \[xml\] casts the variable as an XML object.</span></span>
+<span data-ttu-id="d4b5e-127">Der erste Befehl verwendet das Cmdlet "Get-Content", um den Inhalt der Types.ps1XML-Datei zu erhalten und in der $Types-Variablen zu speichern.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-127">The first command uses the Get-Content cmdlet to get the content of the Types.ps1xml file and save it in the $Types variable.</span></span>
+<span data-ttu-id="d4b5e-128">Der XML-Code wandelt \[ \] die Variable in ein XML-Objekt um.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-128">The \[xml\] casts the variable as an XML object.</span></span>
 
-<span data-ttu-id="cadd0-129">Der zweite Befehl verwendet das **Select-Xml** -Cmdlet zum Abrufen der MethodName-Knoten in der Datei „Types.ps1xml“.</span><span class="sxs-lookup"><span data-stu-id="cadd0-129">The second command uses the **Select-Xml** cmdlet to get the MethodName nodes in the Types.ps1xml file.</span></span>
-<span data-ttu-id="cadd0-130">Der Befehl verwendet den *Xml* -Parameter, um den XML-Inhalt in der $Types-Variablen und den *XPath* -Parameter anzugeben, der den Pfad zum MethodName-Knoten festlegt.</span><span class="sxs-lookup"><span data-stu-id="cadd0-130">The command uses the *Xml* parameter to specify the XML content in the $Types variable and the *XPath* parameter to specify the path to the MethodName node.</span></span>
+<span data-ttu-id="d4b5e-129">Der zweite Befehl verwendet das **Select-Xml** -Cmdlet zum Abrufen der MethodName-Knoten in der Datei „Types.ps1xml“.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-129">The second command uses the **Select-Xml** cmdlet to get the MethodName nodes in the Types.ps1xml file.</span></span>
+<span data-ttu-id="d4b5e-130">Der Befehl verwendet den *Xml* -Parameter, um den XML-Inhalt in der $Types-Variablen und den *XPath* -Parameter anzugeben, der den Pfad zum MethodName-Knoten festlegt.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-130">The command uses the *Xml* parameter to specify the XML content in the $Types variable and the *XPath* parameter to specify the path to the MethodName node.</span></span>
 
-### <span data-ttu-id="cadd0-131">Beispiel 3: Durchsuchen von PowerShell-Hilfedateien</span><span class="sxs-lookup"><span data-stu-id="cadd0-131">Example 3: Search PowerShell Help files</span></span>
+### <span data-ttu-id="d4b5e-131">Beispiel 3: Durchsuchen von PowerShell-Hilfedateien</span><span class="sxs-lookup"><span data-stu-id="d4b5e-131">Example 3: Search PowerShell Help files</span></span>
 
 ```
 PS C:\> $Namespace = @{command = "http://schemas.microsoft.com/maml/dev/command/2004/10"; maml = "http://schemas.microsoft.com/maml/2004/10"; dev = "http://schemas.microsoft.com/maml/dev/2004/10"}
@@ -133,12 +133,12 @@ Checkpoint-Computer     C:\Windows\system32\WindowsPowerShell\v1.0\en-us\Microso
 ...
 ```
 
-<span data-ttu-id="cadd0-132">In diesem Beispiel wird gezeigt, wie das Cmdlet **Select-XML** verwendet wird, um die XML-basierten Cmdlet-Hilfedateien von PowerShell zu durchsuchen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-132">This example shows how to use the **Select-Xml** cmdlet to search the PowerShell XML-based cmdlet help files.</span></span>
-<span data-ttu-id="cadd0-133">In diesem Beispiel suchen wir den Cmdletnamen, der als Titel der einzelnen Hilfedateien dient, und den Pfad zur Hilfedatei.</span><span class="sxs-lookup"><span data-stu-id="cadd0-133">In this example, we'll search for the cmdlet name that serves as a title for each help file and the path to the help file.</span></span>
+<span data-ttu-id="d4b5e-132">In diesem Beispiel wird gezeigt, wie das Cmdlet **Select-XML** verwendet wird, um die XML-basierten Cmdlet-Hilfedateien von PowerShell zu durchsuchen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-132">This example shows how to use the **Select-Xml** cmdlet to search the PowerShell XML-based cmdlet help files.</span></span>
+<span data-ttu-id="d4b5e-133">In diesem Beispiel suchen wir den Cmdletnamen, der als Titel der einzelnen Hilfedateien dient, und den Pfad zur Hilfedatei.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-133">In this example, we'll search for the cmdlet name that serves as a title for each help file and the path to the help file.</span></span>
 
-<span data-ttu-id="cadd0-134">Der erste Befehl erstellt eine Hashtabelle, die den für die Hilfedateien verwendeten XML-Namespace darstellt, und speichert sie in der $Namespace-Variablen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-134">The first command creates a hash table that represents the XML namespace that is used for the help files and saves it in the $Namespace variable.</span></span>
+<span data-ttu-id="d4b5e-134">Der erste Befehl erstellt eine Hashtabelle, die den für die Hilfedateien verwendeten XML-Namespace darstellt, und speichert sie in der $Namespace-Variablen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-134">The first command creates a hash table that represents the XML namespace that is used for the help files and saves it in the $Namespace variable.</span></span>
 
-### <span data-ttu-id="cadd0-135">Beispiel 4: unterschiedliche Möglichkeiten zum Eingeben von XML</span><span class="sxs-lookup"><span data-stu-id="cadd0-135">Example 4: Different ways to input XML</span></span>
+### <span data-ttu-id="d4b5e-135">Beispiel 4: unterschiedliche Möglichkeiten zum Eingeben von XML</span><span class="sxs-lookup"><span data-stu-id="d4b5e-135">Example 4: Different ways to input XML</span></span>
 
 ```
 PS C:\> $Xml = @"
@@ -174,12 +174,12 @@ Fr.Book1.com
 Pl.Book1.com
 ```
 
-<span data-ttu-id="cadd0-136">In diesem Beispiel werden zwei verschiedene Möglichkeiten zum Senden von XML an das **Select-XML-** Cmdlet veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="cadd0-136">This example shows two different ways to send XML to the **Select-Xml** cmdlet.</span></span>
+<span data-ttu-id="d4b5e-136">In diesem Beispiel werden zwei verschiedene Möglichkeiten zum Senden von XML an das **Select-XML-** Cmdlet veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-136">This example shows two different ways to send XML to the **Select-Xml** cmdlet.</span></span>
 
-<span data-ttu-id="cadd0-137">Der erste Befehl speichert eine here-Zeichenfolge, die XML in der $XML Variable enthält.</span><span class="sxs-lookup"><span data-stu-id="cadd0-137">The first command saves a here-string that contains XML in the $Xml variable.</span></span>
-<span data-ttu-id="cadd0-138">Weitere Informationen zu here-strings finden Sie unter about_Quoting_Rules.</span><span class="sxs-lookup"><span data-stu-id="cadd0-138">(For more information about here-strings, see about_Quoting_Rules.)</span></span>
+<span data-ttu-id="d4b5e-137">Der erste Befehl speichert eine here-Zeichenfolge, die XML in der $XML Variable enthält.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-137">The first command saves a here-string that contains XML in the $Xml variable.</span></span>
+<span data-ttu-id="d4b5e-138">Weitere Informationen zu here-strings finden Sie unter about_Quoting_Rules.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-138">(For more information about here-strings, see about_Quoting_Rules.)</span></span>
 
-### <span data-ttu-id="cadd0-139">Beispiel 5: Verwenden des xmlns-Standard Namespace</span><span class="sxs-lookup"><span data-stu-id="cadd0-139">Example 5: Use the default xmlns namespace</span></span>
+### <span data-ttu-id="d4b5e-139">Beispiel 5: Verwenden des xmlns-Standard Namespace</span><span class="sxs-lookup"><span data-stu-id="d4b5e-139">Example 5: Use the default xmlns namespace</span></span>
 
 ```
 PS C:\> $SnippetNamespace = @{snip = "http://schemas.microsoft.com/PowerShell/Snippets"}
@@ -188,21 +188,21 @@ The second command uses the **Select-Xml** cmdlet to get the content of the Titl
 PS C:\> Select-Xml -Path $Home\Documents\WindowsPowerShell\Snippets -Namespace $SnippetNamespace -XPath "//snip:Title" | foreach {$_.Node.Innerxml}
 ```
 
-<span data-ttu-id="cadd0-140">Dieses Beispiel zeigt, wie Sie das **Select-XML-** Cmdlet mit XML-Dokumenten verwenden, die den xmlns-Standard Namespace verwenden.</span><span class="sxs-lookup"><span data-stu-id="cadd0-140">This example shows how to use the **Select-Xml** cmdlet with XML documents that use the default xmlns namespace.</span></span>
-<span data-ttu-id="cadd0-141">Im Beispiel werden die Titel der vom Benutzer erstellten Windows PowerShell ISE-Codeausschnittsdateien abgerufen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-141">The example gets the titles of Windows PowerShell ISE user-created snippet files.</span></span>
-<span data-ttu-id="cadd0-142">Weitere Informationen zu Codeausschnitten finden Sie unter New-IseSnippet.</span><span class="sxs-lookup"><span data-stu-id="cadd0-142">For information about snippets, see New-IseSnippet.</span></span>
+<span data-ttu-id="d4b5e-140">Dieses Beispiel zeigt, wie Sie das **Select-XML-** Cmdlet mit XML-Dokumenten verwenden, die den xmlns-Standard Namespace verwenden.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-140">This example shows how to use the **Select-Xml** cmdlet with XML documents that use the default xmlns namespace.</span></span>
+<span data-ttu-id="d4b5e-141">Im Beispiel werden die Titel der vom Benutzer erstellten Windows PowerShell ISE-Codeausschnittsdateien abgerufen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-141">The example gets the titles of Windows PowerShell ISE user-created snippet files.</span></span>
+<span data-ttu-id="d4b5e-142">Weitere Informationen zu Codeausschnitten finden Sie unter New-IseSnippet.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-142">For information about snippets, see New-IseSnippet.</span></span>
 
-<span data-ttu-id="cadd0-143">Der erste Befehl erstellt eine Hash Tabelle für den Standard Namespace, der von Code Ausschnitt-XML-Dateien verwendet wird, und weist ihn der $SnippetNamespace Variablen zu.</span><span class="sxs-lookup"><span data-stu-id="cadd0-143">The first command creates a hash table for the default namespace that snippet XML files use and assigns it to the $SnippetNamespace variable.</span></span>
-<span data-ttu-id="cadd0-144">Der Hashtabellenwert befindet sich im XMLNS-Schema-URI der XML-Codeausschnittsdatei.</span><span class="sxs-lookup"><span data-stu-id="cadd0-144">The hash table value is the XMLNS schema URI in the snippet XML.</span></span>
-<span data-ttu-id="cadd0-145">Der Name des Hash Tabellen Schlüssels (Snip) ist willkürlich.</span><span class="sxs-lookup"><span data-stu-id="cadd0-145">The hash table key name, snip, is arbitrary.</span></span>
-<span data-ttu-id="cadd0-146">Sie können einen beliebigen Namen verwenden, der nicht reserviert ist, aber Sie können keine xmlns verwenden.</span><span class="sxs-lookup"><span data-stu-id="cadd0-146">You can use any name that is not reserved, but you cannot use xmlns.</span></span>
+<span data-ttu-id="d4b5e-143">Der erste Befehl erstellt eine Hash Tabelle für den Standard Namespace, der von Code Ausschnitt-XML-Dateien verwendet wird, und weist ihn der $SnippetNamespace Variablen zu.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-143">The first command creates a hash table for the default namespace that snippet XML files use and assigns it to the $SnippetNamespace variable.</span></span>
+<span data-ttu-id="d4b5e-144">Der Hashtabellenwert befindet sich im XMLNS-Schema-URI der XML-Codeausschnittsdatei.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-144">The hash table value is the XMLNS schema URI in the snippet XML.</span></span>
+<span data-ttu-id="d4b5e-145">Der Name des Hash Tabellen Schlüssels (Snip) ist willkürlich.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-145">The hash table key name, snip, is arbitrary.</span></span>
+<span data-ttu-id="d4b5e-146">Sie können einen beliebigen Namen verwenden, der nicht reserviert ist, aber Sie können keine xmlns verwenden.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-146">You can use any name that is not reserved, but you cannot use xmlns.</span></span>
 
-## <span data-ttu-id="cadd0-147">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="cadd0-147">PARAMETERS</span></span>
+## <span data-ttu-id="d4b5e-147">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d4b5e-147">PARAMETERS</span></span>
 
-### <span data-ttu-id="cadd0-148">-Inhalt</span><span class="sxs-lookup"><span data-stu-id="cadd0-148">-Content</span></span>
+### <span data-ttu-id="d4b5e-148">-Inhalt</span><span class="sxs-lookup"><span data-stu-id="d4b5e-148">-Content</span></span>
 
-<span data-ttu-id="cadd0-149">Gibt eine Zeichenfolge an, die den zu suchenden XML-Inhalt enthält.</span><span class="sxs-lookup"><span data-stu-id="cadd0-149">Specifies a string that contains the XML to search.</span></span>
-<span data-ttu-id="cadd0-150">Sie können Zeichen folgen auch an **Select-XML** übergeben.</span><span class="sxs-lookup"><span data-stu-id="cadd0-150">You can also pipe strings to **Select-Xml**.</span></span>
+<span data-ttu-id="d4b5e-149">Gibt eine Zeichenfolge an, die den zu suchenden XML-Inhalt enthält.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-149">Specifies a string that contains the XML to search.</span></span>
+<span data-ttu-id="d4b5e-150">Sie können Zeichen folgen auch an **Select-XML** übergeben.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-150">You can also pipe strings to **Select-Xml**.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -216,13 +216,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cadd0-151">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="cadd0-151">-LiteralPath</span></span>
+### <span data-ttu-id="d4b5e-151">-Literalpath</span><span class="sxs-lookup"><span data-stu-id="d4b5e-151">-LiteralPath</span></span>
 
-<span data-ttu-id="cadd0-152">Gibt die Pfad- und Dateinamen der zu durchsuchenden XML-Dateien an.</span><span class="sxs-lookup"><span data-stu-id="cadd0-152">Specifies the paths and file names of the XML files to search.</span></span>
-<span data-ttu-id="cadd0-153">Im Gegensatz zu *Path* wird der Wert des *LiteralPath* -Parameters genauso verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="cadd0-153">Unlike *Path* , the value of the *LiteralPath* parameter is used exactly as it is typed.</span></span>
-<span data-ttu-id="cadd0-154">Es werden keine Zeichen als Platzhalter interpretiert.</span><span class="sxs-lookup"><span data-stu-id="cadd0-154">No characters are interpreted as wildcards.</span></span>
-<span data-ttu-id="cadd0-155">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-155">If the path includes escape characters, enclose it in single quotation marks.</span></span>
-<span data-ttu-id="cadd0-156">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="cadd0-156">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
+<span data-ttu-id="d4b5e-152">Gibt die Pfad- und Dateinamen der zu durchsuchenden XML-Dateien an.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-152">Specifies the paths and file names of the XML files to search.</span></span>
+<span data-ttu-id="d4b5e-153">Im Gegensatz zu *Path* wird der Wert des *LiteralPath* -Parameters genauso verwendet, wie er eingegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-153">Unlike *Path* , the value of the *LiteralPath* parameter is used exactly as it is typed.</span></span>
+<span data-ttu-id="d4b5e-154">Es werden keine Zeichen als Platzhalter interpretiert.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-154">No characters are interpreted as wildcards.</span></span>
+<span data-ttu-id="d4b5e-155">Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-155">If the path includes escape characters, enclose it in single quotation marks.</span></span>
+<span data-ttu-id="d4b5e-156">Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-156">Single quotation marks tell PowerShell not to interpret any characters as escape sequences.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -236,14 +236,14 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cadd0-157">-Namespace</span><span class="sxs-lookup"><span data-stu-id="cadd0-157">-Namespace</span></span>
+### <span data-ttu-id="d4b5e-157">-Namespace</span><span class="sxs-lookup"><span data-stu-id="d4b5e-157">-Namespace</span></span>
 
-<span data-ttu-id="cadd0-158">Gibt eine Hashtabelle der im XML-Inhalt verwendeten Namespaces an.</span><span class="sxs-lookup"><span data-stu-id="cadd0-158">Specifies a hash table of the namespaces used in the XML.</span></span>
-<span data-ttu-id="cadd0-159">Verwenden Sie das Format @ { \<namespaceName\>  =  \<namespaceValue\> }.</span><span class="sxs-lookup"><span data-stu-id="cadd0-159">Use the format @{\<namespaceName\> = \<namespaceValue\>}.</span></span>
+<span data-ttu-id="d4b5e-158">Gibt eine Hashtabelle der im XML-Inhalt verwendeten Namespaces an.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-158">Specifies a hash table of the namespaces used in the XML.</span></span>
+<span data-ttu-id="d4b5e-159">Verwenden Sie das Format @ { \<namespaceName\>  =  \<namespaceValue\> }.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-159">Use the format @{\<namespaceName\> = \<namespaceValue\>}.</span></span>
 
-<span data-ttu-id="cadd0-160">Wenn der XML-Code den Standard Namespace verwendet, der mit xmlns beginnt, verwenden Sie einen beliebigen Schlüssel für den Namespace Namen.</span><span class="sxs-lookup"><span data-stu-id="cadd0-160">When the XML uses the default namespace, which begins with xmlns, use an arbitrary key for the namespace name.</span></span>
-<span data-ttu-id="cadd0-161">Xmlns können nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="cadd0-161">You cannot use xmlns.</span></span>
-<span data-ttu-id="cadd0-162">Stellen Sie in der XPath-Anweisung jedem Knoten Namen den Namespace Namen und einen Doppelpunkt (z. b.//Namespacename: Node) voran.</span><span class="sxs-lookup"><span data-stu-id="cadd0-162">In the XPath statement, prefix each node name with the namespace name and a colon, such as //namespaceName:Node.</span></span>
+<span data-ttu-id="d4b5e-160">Wenn der XML-Code den Standard Namespace verwendet, der mit xmlns beginnt, verwenden Sie einen beliebigen Schlüssel für den Namespace Namen.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-160">When the XML uses the default namespace, which begins with xmlns, use an arbitrary key for the namespace name.</span></span>
+<span data-ttu-id="d4b5e-161">Xmlns können nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-161">You cannot use xmlns.</span></span>
+<span data-ttu-id="d4b5e-162">Stellen Sie in der XPath-Anweisung jedem Knoten Namen den Namespace Namen und einen Doppelpunkt (z. b.//Namespacename: Node) voran.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-162">In the XPath statement, prefix each node name with the namespace name and a colon, such as //namespaceName:Node.</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -257,10 +257,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cadd0-163">-Path</span><span class="sxs-lookup"><span data-stu-id="cadd0-163">-Path</span></span>
+### <span data-ttu-id="d4b5e-163">-Path</span><span class="sxs-lookup"><span data-stu-id="d4b5e-163">-Path</span></span>
 
-<span data-ttu-id="cadd0-164">Gibt die Pfad- und Dateinamen der zu durchsuchenden XML-Dateien an.</span><span class="sxs-lookup"><span data-stu-id="cadd0-164">Specifies the path and file names of the XML files to search.</span></span>
-<span data-ttu-id="cadd0-165">Platzhalterzeichen sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="cadd0-165">Wildcard characters are permitted.</span></span>
+<span data-ttu-id="d4b5e-164">Gibt die Pfad- und Dateinamen der zu durchsuchenden XML-Dateien an.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-164">Specifies the path and file names of the XML files to search.</span></span>
+<span data-ttu-id="d4b5e-165">Platzhalterzeichen sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-165">Wildcard characters are permitted.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -274,12 +274,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="cadd0-166">-XML</span><span class="sxs-lookup"><span data-stu-id="cadd0-166">-Xml</span></span>
+### <span data-ttu-id="d4b5e-166">-XML</span><span class="sxs-lookup"><span data-stu-id="d4b5e-166">-Xml</span></span>
 
-<span data-ttu-id="cadd0-167">Gibt mindestens einen XML-Knoten an.</span><span class="sxs-lookup"><span data-stu-id="cadd0-167">Specifies one or more XML nodes.</span></span>
+<span data-ttu-id="d4b5e-167">Gibt mindestens einen XML-Knoten an.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-167">Specifies one or more XML nodes.</span></span>
 
-<span data-ttu-id="cadd0-168">Ein XML-Dokument wird als eine Auflistung von XML-Knoten verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="cadd0-168">An XML document will be processed as a collection of XML nodes.</span></span>
-<span data-ttu-id="cadd0-169">Wenn Sie ein XML-Dokument an **Select-XML** übergeben, wird jeder Dokument Knoten separat durchsucht, während er die Pipeline durchläuft.</span><span class="sxs-lookup"><span data-stu-id="cadd0-169">If you pipe an XML document to **Select-Xml** , each document node will be searched separately as it comes through the pipeline.</span></span>
+<span data-ttu-id="d4b5e-168">Ein XML-Dokument wird als eine Auflistung von XML-Knoten verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-168">An XML document will be processed as a collection of XML nodes.</span></span>
+<span data-ttu-id="d4b5e-169">Wenn Sie ein XML-Dokument an **Select-XML** übergeben, wird jeder Dokument Knoten separat durchsucht, während er die Pipeline durchläuft.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-169">If you pipe an XML document to **Select-Xml** , each document node will be searched separately as it comes through the pipeline.</span></span>
 
 ```yaml
 Type: System.Xml.XmlNode[]
@@ -293,11 +293,11 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cadd0-170">-XPath</span><span class="sxs-lookup"><span data-stu-id="cadd0-170">-XPath</span></span>
+### <span data-ttu-id="d4b5e-170">-XPath</span><span class="sxs-lookup"><span data-stu-id="d4b5e-170">-XPath</span></span>
 
-<span data-ttu-id="cadd0-171">Gibt eine XPath-Suchabfrage an.</span><span class="sxs-lookup"><span data-stu-id="cadd0-171">Specifies an XPath search query.</span></span>
-<span data-ttu-id="cadd0-172">Bei der Abfragesprache wird Groß-/Kleinschreibung beachtet.</span><span class="sxs-lookup"><span data-stu-id="cadd0-172">The query language is case-sensitive.</span></span>
-<span data-ttu-id="cadd0-173">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="cadd0-173">This parameter is required.</span></span>
+<span data-ttu-id="d4b5e-171">Gibt eine XPath-Suchabfrage an.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-171">Specifies an XPath search query.</span></span>
+<span data-ttu-id="d4b5e-172">Bei der Abfragesprache wird Groß-/Kleinschreibung beachtet.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-172">The query language is case-sensitive.</span></span>
+<span data-ttu-id="d4b5e-173">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-173">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -311,24 +311,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="cadd0-174">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="cadd0-174">CommonParameters</span></span>
+### <span data-ttu-id="d4b5e-174">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d4b5e-174">CommonParameters</span></span>
 
-<span data-ttu-id="cadd0-175">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="cadd0-175">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="cadd0-176">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="cadd0-176">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="d4b5e-175">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-175">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d4b5e-176">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="d4b5e-176">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="cadd0-177">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="cadd0-177">INPUTS</span></span>
+## <span data-ttu-id="d4b5e-177">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="d4b5e-177">INPUTS</span></span>
 
-### <span data-ttu-id="cadd0-178">System. String-oder System.Xml.Xml-Knoten</span><span class="sxs-lookup"><span data-stu-id="cadd0-178">System.String or System.Xml.XmlNode</span></span>
+### <span data-ttu-id="d4b5e-178">System. String-oder System.Xml.Xml-Knoten</span><span class="sxs-lookup"><span data-stu-id="d4b5e-178">System.String or System.Xml.XmlNode</span></span>
 
-<span data-ttu-id="cadd0-179">Sie können einen Pfad oder XML-Knoten über die Pipeline an dieses Cmdlet übergeben.</span><span class="sxs-lookup"><span data-stu-id="cadd0-179">You can pipe a path or XML node to this cmdlet.</span></span>
+<span data-ttu-id="d4b5e-179">Sie können einen Pfad oder XML-Knoten über die Pipeline an dieses Cmdlet übergeben.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-179">You can pipe a path or XML node to this cmdlet.</span></span>
 
-## <span data-ttu-id="cadd0-180">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="cadd0-180">OUTPUTS</span></span>
+## <span data-ttu-id="d4b5e-180">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="d4b5e-180">OUTPUTS</span></span>
 
-### <span data-ttu-id="cadd0-181">Microsoft. PowerShell. Commands. selectxmlinfo</span><span class="sxs-lookup"><span data-stu-id="cadd0-181">Microsoft.PowerShell.Commands.SelectXmlInfo</span></span>
+### <span data-ttu-id="d4b5e-181">Microsoft. PowerShell. Commands. selectxmlinfo</span><span class="sxs-lookup"><span data-stu-id="d4b5e-181">Microsoft.PowerShell.Commands.SelectXmlInfo</span></span>
 
-## <span data-ttu-id="cadd0-182">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="cadd0-182">NOTES</span></span>
+## <span data-ttu-id="d4b5e-182">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="d4b5e-182">NOTES</span></span>
 
-* <span data-ttu-id="cadd0-183">XPath ist eine Standardsprache, die Teile eines XML-Dokuments identifiziert.</span><span class="sxs-lookup"><span data-stu-id="cadd0-183">XPath is a standard language that is designed to identify parts of an XML document.</span></span> <span data-ttu-id="cadd0-184">Weitere Informationen zur XPath-Sprache finden Sie unter [XPath-Referenz](https://msdn.microsoft.com/library/ms256115) und im Abschnitt Auswahl Filter der [Ereignis Auswahl](https://msdn.microsoft.com/library/aa385231) in der MSDN Library.</span><span class="sxs-lookup"><span data-stu-id="cadd0-184">For more information about the XPath language, see [XPath Reference](https://msdn.microsoft.com/library/ms256115) and the Selection Filters section of the [Event Selection](https://msdn.microsoft.com/library/aa385231) in the MSDN library.</span></span>
+<span data-ttu-id="d4b5e-183">XPath ist eine Standardsprache, die Teile eines XML-Dokuments identifiziert.</span><span class="sxs-lookup"><span data-stu-id="d4b5e-183">XPath is a standard language that is designed to identify parts of an XML document.</span></span> <span data-ttu-id="d4b5e-184">Weitere Informationen zur XPath-Sprache finden Sie unter [XPath-Referenz](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) und im Abschnitt Auswahl Filter der [Ereignis Auswahl](/previous-versions//aa385231(v=vs.85)).</span><span class="sxs-lookup"><span data-stu-id="d4b5e-184">For more information about the XPath language, see [XPath Reference](/dotnet/standard/data/xml/select-nodes-using-xpath-navigation) and the Selection Filters section of [Event Selection](/previous-versions//aa385231(v=vs.85)).</span></span>
 
-## <span data-ttu-id="cadd0-185">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="cadd0-185">RELATED LINKS</span></span>
+## <span data-ttu-id="d4b5e-185">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="d4b5e-185">RELATED LINKS</span></span>
 
-[<span data-ttu-id="cadd0-186">ConvertTo-Xml</span><span class="sxs-lookup"><span data-stu-id="cadd0-186">ConvertTo-Xml</span></span>](ConvertTo-Xml.md)
+[<span data-ttu-id="d4b5e-186">ConvertTo-Xml</span><span class="sxs-lookup"><span data-stu-id="d4b5e-186">ConvertTo-Xml</span></span>](ConvertTo-Xml.md)
