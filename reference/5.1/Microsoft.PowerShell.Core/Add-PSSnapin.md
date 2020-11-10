@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/add-pssnapin?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PSSnapin
-ms.openlocfilehash: 5adba912d91369250ee9891ee2bb2ca0f8cba796
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: a21c2974fd66a9b02929752ae487c8995579b8a7
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212124"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388823"
 ---
 # Add-PSSnapin
 
@@ -136,15 +136,15 @@ Dieses Cmdlet gibt ein pssnapininfo-Objekt zurück, das das Snap-in darstellt, w
 
 ## HINWEISE
 
-* Ab Windows PowerShell 3.0 sind die mit Windows PowerShell installierten Hauptbefehle in Module gepackt. In Windows PowerShell 2,0 und in Host Programmen, die in neueren Versionen von Windows PowerShell ältere Sitzungen erstellen, werden die Hauptbefehle in Snap-Ins (pssnapins) gepackt. Die Ausnahme ist **Microsoft. PowerShell. Core** , bei der es sich immer um ein Snap-in handelt. Remote Sitzungen, wie z. b. diejenigen, die mit dem Cmdlet "New-PSSession" gestartet werden, sind auch ältere Sitzungen, die Core-Snap-Ins enthalten.
+- Ab Windows PowerShell 3.0 sind die mit Windows PowerShell installierten Hauptbefehle in Module gepackt. In Windows PowerShell 2,0 und in Host Programmen, die in neueren Versionen von Windows PowerShell ältere Sitzungen erstellen, werden die Hauptbefehle in Snap-Ins (pssnapins) gepackt. Die Ausnahme ist **Microsoft. PowerShell. Core** , bei der es sich immer um ein Snap-in handelt. Remote Sitzungen, wie z. b. diejenigen, die mit dem Cmdlet "New-PSSession" gestartet werden, sind auch ältere Sitzungen, die Core-Snap-Ins enthalten.
 
-  Weitere Informationen über die **CreateDefault2** -Methode, die Sitzungen im neueren Stil mit Kernmodulen erstellt, finden Sie unter [CreateDefault2-Methode](https://msdn.microsoft.com/library/system.management.automation.runspaces.initialsessionstate.createdefault2) in der MSDN Library.
+  Weitere Informationen über die **CreateDefault2** -Methode, die Sitzungen im neueren Stil mit Kernmodulen erstellt, finden Sie unter [CreateDefault2-Methode](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2#System_Management_Automation_Runspaces_InitialSessionState_CreateDefault2).
 
-* Weitere Informationen zu Snap-Ins finden Sie unter [about_PSSnapins](About/about_PSSnapins.md) und [Erstellen eines Windows PowerShell-Snap-](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in)ins.
-* `Add-PSSnapin` Fügt das Snap-in nur zur aktuellen Sitzung hinzu. Um das Snap-In zu allen Windows PowerShell-Sitzungen hinzuzufügen, fügen Sie es zu Ihrem Windows PowerShell-Profil hinzu. Weitere Informationen finden Sie unter „about_Profiles“.
-* Sie können ein beliebiges Snap-in hinzufügen, das mit dem Installationsprogramm für Microsoft .NET Framework registriert wurde. Weitere Informationen finden Sie unter [Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions//ms714644(v=vs.85)).
-* Zum erhalten einer Liste von Snap-Ins, die auf Ihrem Computer registriert sind, geben Sie ein `Get-PSSnapin -Registered` .
-* Vor dem Hinzufügen eines Snap-Ins `Add-PSSnapin` überprüft die Version des Snap-Ins, um zu überprüfen, ob es mit der aktuellen Version von Windows PowerShell kompatibel ist. Wenn das Snap-In die Versionsprüfung nicht besteht, meldet Windows PowerShell einen Fehler.
+- Weitere Informationen zu Snap-Ins finden Sie unter [about_PSSnapins](About/about_PSSnapins.md) und [Erstellen eines Windows PowerShell-Snap-](/powershell/scripting/developer/cmdlet/how-to-create-a-windows-powershell-snap-in)ins.
+- `Add-PSSnapin` Fügt das Snap-in nur zur aktuellen Sitzung hinzu. Um das Snap-In zu allen Windows PowerShell-Sitzungen hinzuzufügen, fügen Sie es zu Ihrem Windows PowerShell-Profil hinzu. Weitere Informationen finden Sie unter „about_Profiles“.
+- Sie können ein beliebiges Snap-in hinzufügen, das mit dem Installationsprogramm für Microsoft .NET Framework registriert wurde. Weitere Informationen finden Sie unter [Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions//ms714644(v=vs.85)).
+- Zum erhalten einer Liste von Snap-Ins, die auf Ihrem Computer registriert sind, geben Sie ein `Get-PSSnapin -Registered` .
+- Vor dem Hinzufügen eines Snap-Ins `Add-PSSnapin` überprüft die Version des Snap-Ins, um zu überprüfen, ob es mit der aktuellen Version von Windows PowerShell kompatibel ist. Wenn das Snap-In die Versionsprüfung nicht besteht, meldet Windows PowerShell einen Fehler.
 
 ## VERWANDTE LINKS
 

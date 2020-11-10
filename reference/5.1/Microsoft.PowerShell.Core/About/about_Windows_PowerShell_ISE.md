@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_windows_powershell_ise?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Windows_PowerShell_ISE
-ms.openlocfilehash: ec99dec9ea5012b41c10a56a688b23a6fa2c9dd8
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: ff543024d7c62c70217eeaf3ded192a5a24c4757
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223167"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388840"
 ---
 # <a name="about-windows-powershell-ise"></a>Informationen zu Windows PowerShell ISE
 
@@ -121,7 +121,7 @@ Windows PowerShell ISE ist eine optionale Windows-Funktion, die standardmäßig 
 Da Windows PowerShell ISE eine Benutzeroberfläche erfordert, funktioniert es nicht bei Server Core-Installationen von Windows Server. Wenn Sie jedoch das Windows PowerShell ISE Feature hinzufügen, wird die Installation automatisch auf den Server mit grafischer Benutzeroberfläche konvertiert.
 
 Windows PowerShell ISE beruht auf Windows Presentation Foundation (WPF).
-Wenn die grafischen Elemente von Windows PowerShell ISE auf dem System nicht ordnungsgemäß gerendert werden, können Sie das Problem beheben, indem Sie die Grafik Rendering-Einstellungen für die WPF-Hardware Beschleunigung in Ihrem System hinzufügen oder anpassen. Weitere Informationen finden Sie unter [Rendern von Registrierungs Einstellungen für Grafiken](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings) in der MSDN Library.
+Wenn die grafischen Elemente von Windows PowerShell ISE auf dem System nicht ordnungsgemäß gerendert werden, können Sie das Problem beheben, indem Sie die Grafik Rendering-Einstellungen für die WPF-Hardware Beschleunigung in Ihrem System hinzufügen oder anpassen. Weitere Informationen finden Sie unter [Registrierungseinstellungen für das Rendern von Grafiken](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings).
 
 ## <a name="see-also"></a>SIEHE AUCH
 

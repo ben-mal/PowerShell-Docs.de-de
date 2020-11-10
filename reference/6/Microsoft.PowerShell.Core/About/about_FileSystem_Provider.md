@@ -6,16 +6,17 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem-Anbieter
-ms.openlocfilehash: 24c30e311ba43842e759e884424ce3abfb92aae7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 3464dbcbc1a7f357cdbc5368dc7a1e4d21f5ed5e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221663"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387592"
 ---
 # <a name="filesystem-provider"></a>FileSystem provider
 
 ## <a name="provider-name"></a>Anbietername
+
 FileSystem
 
 ## <a name="drives"></a>Laufwerke
@@ -205,7 +206,7 @@ Dieser Befehl gibt ein [System. Security. AccessControl. FileSecurity](/dotnet/a
 Get-Acl -Path test.txt | Format-List -Property *
 ```
 
-Um weitere Informationen zu diesem Objekt zu erhalten, übergeben Sie den Befehl an das Cmdlet " [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) ". Weitere Informationen finden Sie unter "[File Security](/dotnet/api/system.security.accesscontrol.filesecurity) Class" in der MSDN (Microsoft Developer Network)-Bibliothek.
+Um weitere Informationen zu diesem Objekt zu erhalten, übergeben Sie den Befehl an das Cmdlet " [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) ". Oder siehe [FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) -Klasse.
 
 ### <a name="modify-the-acl-for-a-file"></a>Ändern der ACL für eine Datei
 
@@ -558,6 +559,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Providers](../About/about_Providers.md)

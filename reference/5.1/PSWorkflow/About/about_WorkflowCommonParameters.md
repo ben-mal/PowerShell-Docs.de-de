@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_workflowcommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen über_WorkflowCommonParameters
-ms.openlocfilehash: 386200475c1dab9735921edd60abbde20ee354c4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: c371666d4f58386848e7ef715b7c804dc1e8f28e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221855"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387786"
 ---
 # <a name="about-workflowcommonparameters"></a>Informationen zu workflowcommonparameters
 
@@ -79,7 +79,7 @@ Gültige Werte sind:
 
 Der Standardwert lautet **Default**.
 
-Informationen zu den Werten dieses Parameters finden Sie in der Beschreibung der- `System.Management.Automation.Runspaces.AuthenticationMechanism` Enumeration in MSDN.
+Informationen zu den Werten dieses Parameters finden Sie in der Beschreibung der- `System.Management.Automation.Runspaces.AuthenticationMechanism` Enumeration im PowerShell SDK.
 
 > [!WARNING]
 > Die Credential Security Support Provider (CredSSP)-Authentifizierung, in der die Anmeldeinformationen des Benutzers zur Authentifizierung an einen Remotecomputer übergeben werden, ist für Befehle gedacht, die Authentifizierung bei mehr als einer Ressource erfordern, z. B. beim Zugriff auf eine Remote-Netzwerkfreigabe. Dieser Mechanismus erhöht das Sicherheitsrisiko des Remotevorgangs. Wenn die Sicherheit des Remotecomputers gefährdet ist, können die an ihn übergebenen Anmeldeinformationen zum Steuern der Netzwerksitzung verwendet werden.
@@ -91,7 +91,7 @@ Der Standardwert lautet **Default**.
 
 Gültige Werte sind:
 
-|Name |BESCHREIBUNG |
+|Name |Beschreibung |
 |---------|---------|
 |**Unverändert** | Die Authentifizierungsebene ist identisch mit der des vorherigen Befehls. |
 |**Standard** | Windows-Authentifizierung. |
@@ -143,7 +143,7 @@ Das Format dieser Zeichenfolge lautet wie folgt:
 
 `<Transport>://<ComputerName>:<Port>/<ApplicationName>`
 
-Der Standardwert ist `http://localhost:5985/WSMAN`.
+Standardwert: `http://localhost:5985/WSMAN`.
 
 Wenn Sie keinen angeben `PSConnectionURI` , können Sie die `PSUseSSL` -,-, `PSComputerName` `PSPort` -und-Parameter verwenden, `PSApplicationName` um die `PSConnectionURI` Werte anzugeben.
 
@@ -166,7 +166,7 @@ Gibt verschiedene allgemeine Workflow Parameterwerte für verschiedene Zielcompu
 
 Geben Sie eine durch Trennzeichen getrennte Liste von Hash Tabellen mit einer Hash Tabelle für jeden Zielcomputer ein. In jeder Hash Tabelle ist der erste Schlüssel, `PSComputerName` und sein Wert ist der Name des Ziel Computers. Platzhalter Zeichen sind im Computernamen zulässig. Bei den restlichen Schlüsseln in der Hash Tabelle ist der Schlüssel der Parameter Name, und der Wert ist der Parameterwert.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 -PSParameterCollection @{PSComputerName="*"; PSElapsedTimeoutSec=20},

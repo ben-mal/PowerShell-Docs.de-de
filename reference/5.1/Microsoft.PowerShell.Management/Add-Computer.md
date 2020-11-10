@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Computer
-ms.openlocfilehash: c1527c04d795206b8de968daf62456837627a098
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e3d1c5c071a334bddbfbc547ef2cc07e9e5c90aa
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215620"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388347"
 ---
 # Add-Computer
 
@@ -40,8 +40,7 @@ Add-Computer [-ComputerName <String[]>] [-LocalCredential <PSCredential>] [-Cred
 
 ## DESCRIPTION
 
-Mit dem- `Add-Computer` Cmdlet werden der lokale Computer oder Remote Computer einer Domäne oder Arbeitsgruppe hinzugefügt oder von einer Domäne in eine andere verschoben.
-Außerdem erstellt das Cmdlet ein Domänenkonto, falls der Computer der Domäne ohne Konto hinzugefügt wird.
+Mit dem- `Add-Computer` Cmdlet werden der lokale Computer oder Remote Computer einer Domäne oder Arbeitsgruppe hinzugefügt oder von einer Domäne in eine andere verschoben. Außerdem erstellt das Cmdlet ein Domänenkonto, falls der Computer der Domäne ohne Konto hinzugefügt wird.
 
 Mit den Parametern dieses Cmdlets können Sie eine Organisationseinheit und einen Domänencontroller angeben oder einen unsicheren Beitritt ausführen.
 
@@ -90,10 +89,7 @@ Dabei wird mit dem Parameter %%amp;quot;OUPath%%amp;quot; die Organisationseinhe
 Add-Computer -ComputerName Server01 -LocalCredential Server01\Admin01 -DomainName Domain02 -Credential Domain02\Admin02 -Restart -Force
 ```
 
-Mit diesem Befehl wird der Computer %%amp;quot;Server01%%amp;quot; der Domäne %%amp;quot;Domain02%%amp;quot; hinzugefügt.
-Mit dem **LocalCredential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Herstellen einer Verbindung mit dem Computer %%amp;quot;Server01%%amp;quot; verfügt.
-Mit dem **Credential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Hinzufügen von Computern zur Domäne verfügt.
-Mit dem **Restart** -Parameter wird der Computer nach Abschluss des Beitrittsvorgangs neu gestartet. Mit dem **Force** -Parameter werden Meldungen zur Benutzerbestätigung unterdrückt.
+Mit diesem Befehl wird der Computer %%amp;quot;Server01%%amp;quot; der Domäne %%amp;quot;Domain02%%amp;quot; hinzugefügt. Mit dem **LocalCredential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Herstellen einer Verbindung mit dem Computer %%amp;quot;Server01%%amp;quot; verfügt. Mit dem **Credential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Hinzufügen von Computern zur Domäne verfügt. Mit dem **Restart** -Parameter wird der Computer nach Abschluss des Beitrittsvorgangs neu gestartet. Mit dem **Force** -Parameter werden Meldungen zur Benutzerbestätigung unterdrückt.
 
 ### Beispiel 6: Verschieben einer Gruppe von Computern in eine neue Domäne
 
@@ -103,9 +99,7 @@ Add-Computer -ComputerName Server01, Server02, localhost -DomainName Domain02 -L
 
 Mit diesem Befehl werden der Computer %%amp;quot;Server01%%amp;quot;, der Computer %%amp;quot;Server02%%amp;quot; und der lokale Computer von %%amp;quot;Domain01%%amp;quot; in %%amp;quot;Domain02%%amp;quot; verschoben.
 
-Mit dem **LocalCredential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Herstellen einer Verbindung mit den drei betroffenen Computern verfügt.
-Mit dem **UnjoinDomainCredential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Trennen der Computer von der Domäne %%amp;quot;Domain01%%amp;quot; verfügt, und mit dem **Credential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Entfernen der Computer aus der Domäne %%amp;quot;Domain02%%amp;quot; verfügt.
-Mit dem **Restart** -Parameter werden alle drei Computer nach dem Verschieben neu gestartet.
+Mit dem **LocalCredential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Herstellen einer Verbindung mit den drei betroffenen Computern verfügt. Mit dem **UnjoinDomainCredential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Trennen der Computer von der Domäne %%amp;quot;Domain01%%amp;quot; verfügt, und mit dem **Credential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Entfernen der Computer aus der Domäne %%amp;quot;Domain02%%amp;quot; verfügt. Mit dem **Restart** -Parameter werden alle drei Computer nach dem Verschieben neu gestartet.
 
 ### Beispiel 7: Verschieben eines Computers in eine neue Domäne und Ändern des Namens des Computers
 
@@ -115,8 +109,7 @@ Add-Computer -ComputerName Server01 -DomainName Domain02 -NewName Server044 -Cre
 
 Mit diesem Befehl wird der Computer %%amp;quot;Server01%%amp;quot; in die Domäne %%amp;quot;Domain02%%amp;quot; verschoben, und der Computername wird in %%amp;quot;Server044%%amp;quot; geändert.
 
-Der Befehl verwendet die Anmeldeinformationen des aktuellen Benutzers, um eine Verbindung mit dem Computer %%amp;quot;Server01%%amp;quot; herzustellen und ihn aus der aktuellen Domäne zu entfernen.
-Mit dem **Credential** -Parameter wird ein Benutzerkonto angegeben, das über die Berechtigung zum Hinzufügen des Computers zur Domäne %%amp;quot;Domain02%%amp;quot; verfügt.
+Der Befehl verwendet die Anmeldeinformationen des aktuellen Benutzers, um eine Verbindung mit dem Computer %%amp;quot;Server01%%amp;quot; herzustellen und ihn aus der aktuellen Domäne zu entfernen. Er verwendet den **Credential** -Parameter, um ein Benutzerkonto anzugeben, das über die Berechtigung zum Hinzufügen des Computers zur Domain02-Domäne verfügt.
 
 ### Beispiel 8: Hinzufügen von in einer Datei aufgeführten Computern zu einer neuen Domäne
 
@@ -124,9 +117,7 @@ Mit dem **Credential** -Parameter wird ein Benutzerkonto angegeben, das über di
 Add-Computer -ComputerName (Get-Content Servers.txt) -DomainName Domain02 -Credential Domain02\Admin02 -Options Win9xUpgrade  -Restart
 ```
 
-Mit diesem Befehl werden die in der Datei %%amp;quot;Servers.txt%%amp;quot; aufgeführten Computer der Domäne %%amp;quot;Domain02%%amp;quot; hinzugefügt.
-Mit dem **Options** -Parameter wird die **Win9xUpgrade** -Option angegeben.
-Mit dem **Restart** -Parameter werden alle neu hinzugefügten Computer nach dem Beitrittsvorgang neu gestartet.
+Mit diesem Befehl werden die in der Datei %%amp;quot;Servers.txt%%amp;quot; aufgeführten Computer der Domäne %%amp;quot;Domain02%%amp;quot; hinzugefügt. Mit dem **Options** -Parameter wird die **Win9xUpgrade** -Option angegeben. Mit dem **Restart** -Parameter werden alle neu hinzugefügten Computer nach dem Beitrittsvorgang neu gestartet.
 
 ### Beispiel 9: Hinzufügen eines Computers zu einer Domäne mithilfe vordefinierter Computer Anmelde Informationen
 
@@ -144,8 +135,7 @@ $joinCred = New-Object pscredential -ArgumentList ([pscustomobject]@{
 Add-Computer -Domain "Domain03" -Options UnsecuredJoin,PasswordPass -Credential $joinCred
 ```
 
-Diese Kombination von Befehlen erstellt ein neues Computer Konto mit einem vordefinierten Namen und einem temporären joinkennwort in einer Domäne mithilfe eines vorhandenen, in die Domäne eingebundenen Computers.
-Ein Computer mit dem vordefinierten Namen wird dann separat mit dem Computernamen und dem Kennwort für den temporären Join verknüpft.
+Diese Kombination von Befehlen erstellt ein neues Computer Konto mit einem vordefinierten Namen und einem temporären joinkennwort in einer Domäne mithilfe eines vorhandenen, in die Domäne eingebundenen Computers. Ein Computer mit dem vordefinierten Namen wird dann separat mit dem Computernamen und dem Kennwort für den temporären Join verknüpft.
 Das vordefinierte Kennwort wird nur zur Unterstützung des Join-Vorgangs verwendet und als Teil der normalen Computer Konto Prozeduren ersetzt, nachdem der Computer den Join abgeschlossen hat.
 
 ## PARAMETERS
@@ -155,11 +145,9 @@ Das vordefinierte Kennwort wird nur zur Unterstützung des Join-Vorgangs verwend
 Gibt die einer Domäne oder Arbeitsgruppe hinzuzufügenden Computer an.
 Die Standardeinstellung ist der lokale Computer.
 
-Geben Sie den NetBIOS-Namen, eine IP-Adresse oder den vollqualifizierten Domänennamen der einzelnen Remotecomputer ein.
-Um den lokalen Computer anzugeben, geben Sie den Computernamen, einen Punkt (.) oder %%amp;quot;localhost%%amp;quot; ein.
+Geben Sie den NetBIOS-Namen, eine IP-Adresse oder den voll qualifizierten Domänen Namen der einzelnen Remote Computer ein. Um den lokalen Computer anzugeben, geben Sie den Computernamen, einen Punkt ( `.` ) oder "localhost" ein.
 
-Dieser Parameter beruht nicht auf Windows PowerShell-Remoting.
-Sie können den **Computername** -Parameter `Add-Computer` auch dann verwenden, wenn der Computer nicht für das Ausführen von Remote Befehlen konfiguriert ist.
+Dieser Parameter beruht nicht auf Windows PowerShell-Remoting. Sie können den **Computername** -Parameter `Add-Computer` auch dann verwenden, wenn der Computer nicht für das Ausführen von Remote Befehlen konfiguriert ist.
 
 Dieser Parameter wird in Windows PowerShell 3.0 eingeführt.
 
@@ -180,11 +168,9 @@ Accept wildcard characters: False
 Gibt ein Benutzerkonto an, das über die Berechtigung zum Hinzufügen der Computer zu einer neuen Domäne verfügt.
 Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
-Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
+Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt. Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
 
-Geben Sie ein Benutzerkonto, das über die Berechtigung zum Entfernen des Computers aus der aktuellen Domäne verfügt, mit dem **UnjoinDomainCredential** -Parameter an.
-Geben Sie ein Benutzerkonto, das über die Berechtigung zum Herstellen einer Verbindung mit einem Remotecomputer verfügt, mit dem **LocalCredential** -Parameter an.
+Geben Sie ein Benutzerkonto, das über die Berechtigung zum Entfernen des Computers aus der aktuellen Domäne verfügt, mit dem **UnjoinDomainCredential** -Parameter an. Geben Sie ein Benutzerkonto, das über die Berechtigung zum Herstellen einer Verbindung mit einem Remotecomputer verfügt, mit dem **LocalCredential** -Parameter an.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -200,8 +186,7 @@ Accept wildcard characters: False
 
 ### -DomainName
 
-Gibt die Domäne an, der die Computer hinzugefügt werden.
-Dieser Parameter ist beim Hinzufügen der Computer zu einer Domäne erforderlich.
+Gibt die Domäne an, der die Computer hinzugefügt werden. Dieser Parameter ist beim Hinzufügen der Computer zu einer Domäne erforderlich.
 
 ```yaml
 Type: System.String
@@ -217,8 +202,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-Unterdrückt die Bestätigungsaufforderung.
-Ohne diesen Parameter erfordert, dass `Add-Computer` Sie das Hinzufügen jedes Computers bestätigen.
+Unterdrückt die Bestätigungsaufforderung. Ohne diesen Parameter erfordert, dass `Add-Computer` Sie das Hinzufügen jedes Computers bestätigen.
 
 Dieser Parameter wird in Windows PowerShell 3.0 eingeführt.
 
@@ -236,14 +220,11 @@ Accept wildcard characters: False
 
 ### -Localcredential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zum Herstellen einer Verbindung mit den durch den **ComputerName** -Parameter angegebenen Computern verfügt.
-Der Standardwert ist der aktuelle Benutzer.
+Gibt ein Benutzerkonto an, das über die Berechtigung zum Herstellen einer Verbindung mit den durch den **ComputerName** -Parameter angegebenen Computern verfügt. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
-Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
+Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt. Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
 
-Geben Sie ein Benutzerkonto, das über die Berechtigung zum Hinzufügen der Computer zu einer neuen Domäne verfügt, mit dem **Credential** -Parameter an.
-Geben Sie ein Benutzerkonto, das über die Berechtigung zum Entfernen der Computer aus der aktuellen Domäne verfügt, mit dem **UnjoinDomainCredential** -Parameter an.
+Geben Sie ein Benutzerkonto, das über die Berechtigung zum Hinzufügen der Computer zu einer neuen Domäne verfügt, mit dem **Credential** -Parameter an. Geben Sie ein Benutzerkonto, das über die Berechtigung zum Entfernen der Computer aus der aktuellen Domäne verfügt, mit dem **UnjoinDomainCredential** -Parameter an.
 
 Dieser Parameter wird in Windows PowerShell 3.0 eingeführt.
 
@@ -261,8 +242,7 @@ Accept wildcard characters: False
 
 ### -Newname
 
-Gibt einen neuen Namen für den Computer in der neuen Domäne an.
-Dieser Parameter ist nur gültig, wenn ein Computer hinzugefügt oder verschoben wird.
+Gibt einen neuen Namen für den Computer in der neuen Domäne an. Dieser Parameter ist nur gültig, wenn ein Computer hinzugefügt oder verschoben wird.
 
 Dieser Parameter wird in Windows PowerShell 3.0 eingeführt.
 
@@ -280,8 +260,7 @@ Accept wildcard characters: False
 
 ### -Optionen
 
-Gibt erweiterte Optionen für den **Add-Computer-** Joinvorgang an.
-Geben Sie Werte in einer durch Trennzeichen getrennten Zeichenfolge ein.
+Gibt erweiterte Optionen für den **Add-Computer-** Joinvorgang an. Geben Sie Werte in einer durch Trennzeichen getrennten Zeichenfolge ein.
 
 Zulässige Werte für diesen Parameter:
 
@@ -297,7 +276,8 @@ Zulässige Werte für diesen Parameter:
 
 - **Joinschreib only** : verwendet ein vorhandenes Computer Konto, um den Computer einem schreibgeschützten Domänen Controller hinzuzufügen. Das Computer Konto muss der Liste der zulässigen Kenn Wort Replikations Richtlinien hinzugefügt werden, und das Konto Kennwort muss vor dem Join-Vorgang auf den schreibgeschützten Domänen Controller repliziert werden.
 
-- **Installrufe** : legt die Create (0x2)-und DELETE (0x4)-Flags des **FJoinOptions** -Parameters der **JoinDomainOrWorkgroup** -Methode fest. Weitere Informationen zur **JoinDomainOrWorkgroup** -Methode finden Sie unter [JoinDomainOrWorkgroup-Methode der Win32_ComputerSystem-Klasse](https://msdn.microsoft.com/library/aa392154) in der MSDN Library. Weitere Informationen zu diesen Optionen finden Sie unter [NetJoinDomain-Funktion](https://msdn.microsoft.com/library/aa370433) in der MSDN Library.
+- **Installrufe** : legt die Create (0x2)-und DELETE (0x4)-Flags des **FJoinOptions** -Parameters der **JoinDomainOrWorkgroup** -Methode fest. Weitere Informationen zur **JoinDomainOrWorkgroup** -Methode finden Sie unter [JoinDomainOrWorkgroup-Methode der Win32_ComputerSystem-Klasse](/windows/win32/cimwin32prov/joindomainorworkgroup-method-in-class-win32-computersystem).
+  Weitere Informationen zu diesen Optionen finden Sie unter " [NetJoinDomain](/windows/win32/api/lmjoin/nf-lmjoin-netjoindomain)"-Funktion.
 
 Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
@@ -316,9 +296,7 @@ Accept wildcard characters: False
 
 ### -Oupath
 
-Gibt eine Organisationseinheit für das Domänenkonto an.
-Geben Sie den vollständigen definierten Namen der Organisationseinheit in Anführungszeichen ein.
-Der Standardwert ist die Standardorganisationseinheit für Computerobjekte in der Domäne.
+Gibt eine Organisationseinheit für das Domänenkonto an. Geben Sie den vollständigen definierten Namen der Organisationseinheit in Anführungszeichen ein. Der Standardwert ist die Standardorganisationseinheit für Computerobjekte in der Domäne.
 
 ```yaml
 Type: System.String
@@ -334,8 +312,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten.
-Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
+Gibt ein Objekt zurück, das das Element darstellt, mit dem Sie arbeiten. Standardmäßig wird von diesem Cmdlet keine Ausgabe generiert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -351,8 +328,7 @@ Accept wildcard characters: False
 
 ### -Restart
 
-Startet die Computer neu, die der Domäne oder Arbeitsgruppe hinzugefügt wurden.
-Ein Neustart ist häufig erforderlich, damit die Änderung wirksam wird.
+Startet die Computer neu, die der Domäne oder Arbeitsgruppe hinzugefügt wurden. Ein Neustart ist häufig erforderlich, damit die Änderung wirksam wird.
 
 Dieser Parameter wird in Windows PowerShell 3.0 eingeführt.
 
@@ -370,9 +346,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-Gibt den Namen eines Domänencontrollers an, der den Computer der Domäne hinzufügt.
-Geben Sie den Namen im Format %%amp;quot;Domänenname\Computername%%amp;quot; ein.
-Standardmäßig ist kein Domänencontroller angegeben.
+Gibt den Namen eines Domänencontrollers an, der den Computer der Domäne hinzufügt. Geben Sie den Namen im Format %%amp;quot;Domänenname\Computername%%amp;quot; ein. Standardmäßig ist kein Domänencontroller angegeben.
 
 ```yaml
 Type: System.String
@@ -388,15 +362,11 @@ Accept wildcard characters: False
 
 ### -Unjoindomaincredential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zum Entfernen der Computer aus ihren aktuellen Domänen verfügt.
-Der Standardwert ist der aktuelle Benutzer.
+Gibt ein Benutzerkonto an, das über die Berechtigung zum Entfernen der Computer aus ihren aktuellen Domänen verfügt. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
-Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
+Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt. Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
 
-Verwenden Sie diesen Parameter, wenn Sie Computer in eine andere Domäne verschieben.
-Geben Sie ein Benutzerkonto, das über die Berechtigung zum Beitreten zur neuen Domäne verfügt, mit dem **Credential** -Parameter an.
-Geben Sie ein Benutzerkonto, das über die Berechtigung zum Herstellen einer Verbindung mit einem Remotecomputer verfügt, mit dem **LocalCredential** -Parameter an.
+Verwenden Sie diesen Parameter, wenn Sie Computer in eine andere Domäne verschieben. Geben Sie ein Benutzerkonto, das über die Berechtigung zum Beitreten zur neuen Domäne verfügt, mit dem **Credential** -Parameter an. Geben Sie ein Benutzerkonto, das über die Berechtigung zum Herstellen einer Verbindung mit einem Remotecomputer verfügt, mit dem **LocalCredential** -Parameter an.
 
 Dieser Parameter wird in Windows PowerShell 3.0 eingeführt.
 
@@ -430,8 +400,7 @@ Accept wildcard characters: False
 
 ### -Workgroupname
 
-Gibt den Namen einer Arbeitsgruppe an, der der Computer hinzugefügt wird.
-Der Standardwert ist %%amp;quot;WORKGROUP%%amp;quot;.
+Gibt den Namen einer Arbeitsgruppe an, der der Computer hinzugefügt wird. Der Standardwert ist %%amp;quot;WORKGROUP%%amp;quot;.
 
 ```yaml
 Type: System.String

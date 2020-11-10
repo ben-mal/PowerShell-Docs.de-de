@@ -6,12 +6,12 @@ ms.date: 07/23/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_desiredstateconfiguration?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_DesiredStateConfiguration
-ms.openlocfilehash: 2f043104c67078b98355b3e54171a8993e534837
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 5d088934ffc953ad19be401bce72f6287f0fde07
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224887"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387021"
 ---
 # <a name="about_desiredstateconfiguration"></a>about_DesiredStateConfiguration
 
@@ -27,12 +27,12 @@ DSC stellt eine Reihe von PowerShell-Spracherweiterungen, neue Cmdlets und Resso
 
 DSC wird in PowerShell 4,0 eingeführt.
 
-Ausführliche Informationen zu DSC finden Sie unter [PowerShell](/powershell/scripting/dsc/overview/overview) DSC (DSC) in der TechNet-Bibliothek.
+Ausführliche Informationen zu DSC finden Sie unter [PowerShell](/powershell/scripting/dsc/overview/overview)DSC (DSC).
 
 ## <a name="developing-dsc-resources-with-classes"></a>Entwickeln von DSC-Ressourcen mit Klassen
 
 Ab PowerShell 5,0 können Sie DSC-Ressourcen mithilfe von Klassen entwickeln.
-Weitere Informationen finden Sie unter [about_Classes](about_Classes.md)und [Schreiben einer benutzerdefinierten DSC-Ressource mit PowerShell-Klassen](/previous-versions//dn948461(v=technet.10)) auf Microsoft TechNet.
+Weitere Informationen finden Sie unter [about_Classes](about_Classes.md)und [Schreiben einer benutzerdefinierten DSC-Ressource mit PowerShell-Klassen](/powershell/scripting/dsc/resources/authoringresourceclass).
 
 ## <a name="using-dsc"></a>Verwenden von DSC
 
@@ -106,7 +106,7 @@ Sie können die folgenden integrierten Ressourcen in ihren Konfigurations Skript
 |----------------------|---------------------------------------------------|
 |Datei                  |{DestinationPath, Attribute, Checksum, Content...}|
 |Archivieren               |{Destination, Path, Prüfsumme, Credential...}       |
-|Environment           |{Name, DependsOn, sicher, Pfad...}                 |
+|Umgebung           |{Name, DependsOn, sicher, Pfad...}                 |
 |Group                 |{GroupName, Credential, DependsOn, Description...} |
 |Log                   |{Message, DependsOn, psdscrunascredential}         |
 |Paket               |{Name, Path, ProductID, Arguments...}              |

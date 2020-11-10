@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/set-strictmode?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-StrictMode
-ms.openlocfilehash: a2830c757b1128ba93c3e3c71bf406416e12793d
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e44cad2bab6c81de67cdd0902af5172438efa19e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212732"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388500"
 ---
 # Set-StrictMode
 
@@ -122,7 +122,7 @@ At line:1 char:4
 ```powershell
 Set-StrictMode -Off
 $string = "This is a string."
-$string.Month -eq $null
+$null -eq $string.Month
 ```
 
 ```Output
@@ -132,7 +132,7 @@ True
 ```powershell
 Set-StrictMode -Version 2.0
 $string = "This is a string."
-$string.Month -eq $null
+$null -eq $string.Month
 ```
 
 ```Output
@@ -158,8 +158,8 @@ Wenn der Strict-Modus auf **Off** festgelegt ist, geben ungültige oder out-of-L
 ```powershell
 # Strict mode is off by default.
 $a = @(1)
-$a[2] -eq $null
-$a['abc'] -eq $null
+$null -eq $a[2]
+$null -eq $a['abc']
 ```
 
 ```Output
@@ -170,21 +170,21 @@ True
 ```powershell
 Set-StrictMode -Version 3
 $a = @(1)
-$a[2] -eq $null
-$a['abc'] -eq $null
+$null -eq $a[2]
+$null -eq $a['abc']
 ```
 
 ```Output
 Index was outside the bounds of the array.
 At line:1 char:1
-+ $a[2] -eq $null
++ $null -eq $a[2]
 + ~~~~~~~~~~~~~~~
     + CategoryInfo          : OperationStopped: (:) [], IndexOutOfRangeException
     + FullyQualifiedErrorId : System.IndexOutOfRangeException
 
 Cannot convert value "abc" to type "System.Int32". Error: "Input string was not in a correct format."
 At line:1 char:1
-+ $a['abc'] -eq $null
++ $null -eq $a['abc']
 + ~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
     + FullyQualifiedErrorId : InvalidCastFromStringToInteger
@@ -216,7 +216,7 @@ Gibt die Bedingungen an, die im Strict-Modus einen Fehler verursachen. Dieser Pa
 
 Die effektiven Werte für diesen Parameter lauten wie folgt:
 
-- 1.0
+- 1,0
   - Verhindert Verweise auf nicht initialisierte Variablen, ausgenommen nicht initialisierte Variablen in Zeichen folgen.
 - 2.0
   - Verhindert Verweise auf nicht initialisierte Variablen. Dies schließt nicht initialisierte Variablen in Zeichen folgen ein.
@@ -227,7 +227,7 @@ Die effektiven Werte für diesen Parameter lauten wie folgt:
   - Verhindert Verweise auf nicht vorhandene Eigenschaften eines Objekts.
   - Verhindert Funktionsaufrufe, die die Syntax zum Aufrufen von Methoden verwenden.
   - Nicht genügend Begrenzungen oder nicht auflösbare Array Indizes.
-- Latest
+- Neueste Version
   - Wählt die neueste verfügbare Version aus. Die neueste Version ist die strengste Version. Verwenden Sie diesen Wert, um sicherzustellen, dass Skripts die strengste verfügbare Version verwenden, auch wenn neue Versionen zu PowerShell hinzugefügt werden.
 
 > [!CAUTION]

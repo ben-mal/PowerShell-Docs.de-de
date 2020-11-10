@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/write-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-EventLog
-ms.openlocfilehash: cae34c4cf942d9aa4abb9a2d716ef9854f70de2e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4044453cb46b407344619f1edd3227213bf67250
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214295"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388245"
 ---
 # Write-EventLog
 
@@ -27,12 +27,11 @@ Write-EventLog [-LogName] <String> [-Source] <String> [[-EntryType] <EventLogEnt
 ```
 
 ## DESCRIPTION
-Das **Write-EventLog-** Cmdlet schreibt ein Ereignis in ein Ereignisprotokoll.
+Mit dem- `Write-EventLog` Cmdlet wird ein Ereignis in ein Ereignisprotokoll geschrieben.
 
 Damit ein Ereignis in ein Ereignisprotokoll geschrieben werden kann, muss das Ereignisprotokoll auf dem Computer vorhanden sein, und die Quelle muss für das Ereignisprotokoll registriert sein.
 
-Die Cmdlets, die das **EventLog** -Substantiv (die **EventLog** -Cmdlets) enthalten, funktionieren nur in klassischen Ereignisprotokollen.
-Verwenden Sie das Cmdlet "Get-WinEvent", um Ereignisse aus Protokollen zu erhalten, in denen die Windows-Ereignisprotokoll Technologie in Windows Vista und höheren Versionen des Windows-Betriebssystems verwendet wird.
+Die Cmdlets, die das **EventLog** -Substantiv (die **EventLog** -Cmdlets) enthalten, funktionieren nur in klassischen Ereignisprotokollen. Verwenden Sie das-Cmdlet, um Ereignisse aus Protokollen zu erhalten, in denen die Windows-Ereignisprotokoll Technologie in Windows Vista und höheren Versionen des Windows-Betriebssystems verwendet wird `Get-WinEvent` .
 
 ## BEISPIELE
 
@@ -55,8 +54,8 @@ Dieser Befehl schreibt ein Ereignis aus der Quelle %%amp;quot;MyApp%%amp;quot; i
 ## PARAMETERS
 
 ### -Kategorie
-Gibt eine Aufgabenkategorie für das Ereignis an.
-Geben Sie eine ganze Zahl ein, die den Zeichenfolgen in der Kategoriemeldungsdatei für das Ereignisprotokoll zugeordnet ist.
+
+Gibt eine Aufgabenkategorie für das Ereignis an. Geben Sie eine ganze Zahl ein, die den Zeichenfolgen in der Kategoriemeldungsdatei für das Ereignisprotokoll zugeordnet ist.
 
 ```yaml
 Type: System.Int16
@@ -71,13 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Gibt einen Remotecomputer an.
-Die Standardeinstellung ist der lokale Computer.
+
+Gibt einen Remotecomputer an. Die Standardeinstellung ist der lokale Computer.
 
 Geben Sie den NetBIOS-Namen, eine IP-Adresse oder den vollqualifizierten Domänennamen eines Remotecomputers ein.
 
-Dieser Parameter beruht nicht auf Windows PowerShell-Remoting.
-Sie können den Computer *Name* -Parameter des Get-EventLog-Cmdlets auch dann verwenden, wenn der Computer nicht für das Ausführen von Remote Befehlen konfiguriert ist.
+Dieser Parameter beruht nicht auf Windows PowerShell-Remoting. Sie können den Computer **Name** -Parameter des `Get-EventLog` Cmdlets auch dann verwenden, wenn der Computer nicht für das Ausführen von Remote Befehlen konfiguriert ist.
 
 ```yaml
 Type: System.String
@@ -92,11 +90,10 @@ Accept wildcard characters: False
 ```
 
 ### -EntryType
-Gibt den Eintragstyp des Ereignisses an.
-Die zulässigen Werte für diesen Parameter sind: Error, Warning, Information, Success Audit und FAILUREAUDIT.
-Der Standardwert ist %%amp;quot;Information%%amp;quot;.
 
-Eine Beschreibung der Werte finden Sie unter [EventLogEntryType-Enumeration](https://go.microsoft.com/fwlink/?LinkId=143599) in der MSDN Library.
+Gibt den Eintragstyp des Ereignisses an. Die zulässigen Werte für diesen Parameter sind: Error, Warning, Information, Success Audit und FAILUREAUDIT. Der Standardwert ist %%amp;quot;Information%%amp;quot;.
+
+Eine Beschreibung der Werte finden Sie unter [EventLogEntryType-Enumeration](/dotnet/api/system.diagnostics.eventlogentrytype).
 
 ```yaml
 Type: System.Diagnostics.EventLogEntryType
@@ -112,9 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventID
-Gibt den Ereignisbezeichner an.
-Dieser Parameter ist erforderlich.
-Der maximale Wert für den *EventID-* Parameter ist 65535.
+
+Gibt den Ereignisbezeichner an. Dieser Parameter ist erforderlich. Der maximale Wert für den **EventID-** Parameter ist 65535.
 
 ```yaml
 Type: System.Int32
@@ -129,10 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogName
-Gibt den Namen des Protokolls an, in das das Ereignis geschrieben wird.
-Geben Sie den Protokollnamen ein.
-Der Protokoll Name ist der Wert der **Log** -Eigenschaft, nicht der **LogDisplayName** .
-Platzhalterzeichen sind nicht zulässig.
+
+Gibt den Namen des Protokolls an, in das das Ereignis geschrieben wird. Geben Sie den Protokollnamen ein. Der Protokoll Name ist der Wert der **Log** -Eigenschaft, nicht der **LogDisplayName**. Platzhalterzeichen sind nicht zulässig.
 Dieser Parameter ist erforderlich.
 
 ```yaml
@@ -148,8 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -Meldung
-Gibt die Ereignismeldung an.
-Dieser Parameter ist erforderlich.
+
+Gibt die Ereignismeldung an. Dieser Parameter ist erforderlich.
 
 ```yaml
 Type: System.String
@@ -164,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawData
+
 Gibt die dem Ereignis zugeordneten Binärdaten in Bytes an.
 
 ```yaml
@@ -179,6 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
+
 Gibt die Ereignisquelle an. Dabei handelt es sich normalerweise um den Namen der Anwendung, die das Ereignis in das Protokoll schreibt.
 
 ```yaml
@@ -194,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## EINGABEN
@@ -208,9 +205,7 @@ Dieses Cmdlet gibt Objekte zurück, die die Ereignisse in den Protokollen darste
 
 ## HINWEISE
 
-* Um **Write-EventLog** zu verwenden, starten Sie Windows PowerShell mit der Option als Administrator ausführen.
-
-*
+Starten Sie `Write-EventLog` Windows PowerShell mit der Option als Administrator ausführen, um zu verwenden.
 
 ## VERWANDTE LINKS
 

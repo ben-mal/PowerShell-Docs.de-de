@@ -7,12 +7,12 @@ ms.date: 5/15/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PSSession
-ms.openlocfilehash: c9c927ccdbc70d07ad8fa2cf13f3e2fe4a83f8c5
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: dfb5d6f46dec89495d19680cec8b73ad12340797
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218215"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388687"
 ---
 # Get-PSSession
 
@@ -292,7 +292,7 @@ Dieser Parameter konfiguriert die temporäre Verbindung, die erstellt wird, um e
 Zulässige Werte für diesen Parameter:
 
 - Standard
-- Basic
+- Standard
 - CredSSP
 - Digest
 - Kerberos
@@ -301,7 +301,7 @@ Zulässige Werte für diesen Parameter:
 
 Der Standardwert ist Default.
 
-Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) in der MSDN Library.
+Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism).
 
 Vorsicht: die Authentifizierung der Credential Security Support Provider (kredssp), bei der die Anmelde Informationen des Benutzers an einen Remote Computer übergeben werden, der authentifiziert werden soll, wurde für Befehle entworfen, die eine Authentifizierung auf mehr als einer Ressource erfordern, z. b. den Zugriff auf eine Remote Netzwerkfreigabe. Dieser Mechanismus erhöht das Sicherheitsrisiko des Remotevorgangs. Wenn die Sicherheit des Remotecomputers gefährdet ist, können die an ihn übergebenen Anmeldeinformationen zum Steuern der Netzwerksitzung verwendet werden.
 
@@ -691,9 +691,9 @@ Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 
 Ein **Availability** -Wert von **None** gibt an, dass eine Verbindung mit der Sitzung hergestellt werden kann. Der Wert **ausgelastet** gibt an, dass keine Verbindung mit der **PSSession** hergestellt werden kann, da Sie mit einer anderen Sitzung verbunden ist.
 
-Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate-Enumeration](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspacestate).
+Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate-Enumeration](/dotnet/api/system.management.automation.runspaces.runspacestate).
 
-Weitere Informationen zu den Werten der **Availability** -Eigenschaft von Sitzungen finden Sie unter [runspaceavailability-Enumeration](https://msdn.microsoft.com/library/system.management.automation.runspaces.runspaceavailability).
+Weitere Informationen zu den Werten der **Availability** -Eigenschaft von Sitzungen finden Sie unter [runspaceavailability-Enumeration](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## VERWANDTE LINKS
 

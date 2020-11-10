@@ -6,12 +6,12 @@ ms.date: 01/03/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pssnapins?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PSSnapins
-ms.openlocfilehash: cc22f8de0b9d8a55dcfa12f3b47f3852d891e67b
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 494b3275e4fe8a3aacdc358317950542962957cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222663"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388891"
 ---
 # <a name="about-pssnapins"></a>Informationen zu pssnapins
 
@@ -57,7 +57,7 @@ Die integrierten Snap-Ins werden im System registriert und der Standard Sitzung 
 
 Bei einem Windows PowerShell-Snap-in handelt es sich um ein Programm, das in einer .NET Framework Sprache geschrieben ist, die in eine DLL-Datei kompiliert wird. Wenn Sie die Anbieter und Cmdlets in einem Snap-in verwenden möchten, müssen Sie zuerst das Snap-in registrieren (es der Registrierung hinzufügen).
 
-Die meisten Snap-Ins enthalten ein Installationsprogramm (eine exe-oder MSI-Datei), das die DLL-Datei für Sie registriert. Wenn Sie jedoch ein Snap-in als DLL-Datei erhalten, können Sie es auf Ihrem System registrieren. Weitere Informationen finden Sie unter [Registrieren von Cmdlets, Anbietern und Host Anwendungen](https://go.microsoft.com/fwlink/?LinkID=143619) in der MSDN Library.
+Die meisten Snap-Ins enthalten ein Installationsprogramm (eine exe-oder MSI-Datei), das die DLL-Datei für Sie registriert. Wenn Sie jedoch ein Snap-in als DLL-Datei erhalten, können Sie es auf Ihrem System registrieren. Weitere Informationen finden Sie unter [Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions//ms714644(v=vs.85)).
 
 Geben Sie Folgendes ein, um alle registrierten Snap-Ins auf Ihrem System zu erhalten oder um zu überprüfen, ob ein Snap-in registriert ist:
 

@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psworkflow/about/about_activitycommonparameters?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen über_ActivityCommonParameters
-ms.openlocfilehash: b745bf17e4ae26156042ecdc25211830177bc692
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 93fdcdb9c5afe0b73e843baf2474ec7d3f96a6cf
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221916"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387803"
 ---
 # <a name="about-activitycommonparameters"></a>Informationen zu activitycommonparameters
 
@@ -150,7 +150,7 @@ Der WinRM-Dienst wählt mit dem Anwendungsnamen einen Listener für die Verbindu
 
 Gibt den Mechanismus an, der zum Authentifizieren der Anmelde Informationen des Benutzers beim Herstellen einer Verbindung mit den Ziel Computern verwendet wird. Zu den gültigen Werten gehören Default, Basic, Credssp, Digest, Kerberos, Negotiate und NegotiateWithImplicitCredential. Der Standardwert ist Default. Dieser allgemeine Aktivitäts Parameter ist auch ein allgemeiner Workflow Parameter.
 
-Informationen zu den Werten dieses Parameters finden Sie unter der Beschreibung der **System.Management.Automation.Runspaces.AuthenticationMechanism** -Enumeration in MSDN.
+Informationen zu den Werten dieses Parameters finden Sie in der Beschreibung der **System. Management. Automation. Runspaces. authenticationmechanism** -Enumeration im PowerShell SDK.
 
 > [!WARNING]
 > Die Credential Security Support Provider (CredSSP)-Authentifizierung, in der die Anmeldeinformationen des Benutzers zur Authentifizierung an einen Remotecomputer übergeben werden, ist für Befehle gedacht, die Authentifizierung bei mehr als einer Ressource erfordern, z. B. beim Zugriff auf eine Remote-Netzwerkfreigabe. Dieser Mechanismus erhöht das Sicherheitsrisiko des Remotevorgangs. Wenn die Sicherheit des Remotecomputers gefährdet ist, können die an ihn übergebenen Anmeldeinformationen zum Steuern der Netzwerksitzung verwendet werden.
@@ -198,7 +198,7 @@ Das Format dieser Zeichenfolge lautet wie folgt:
 <Transport>://<ComputerName>:<Port>/<ApplicationName>
 ```
 
-Der Standardwert ist `http://localhost:5985/WSMAN`.
+Standardwert: `http://localhost:5985/WSMAN`.
 
 Wenn Sie keinen psconnectionuri angeben, können Sie die Parameter psusessl, pscomputername, psport und psapplicationname verwenden, um die psconnectionuri-Werte anzugeben.
 

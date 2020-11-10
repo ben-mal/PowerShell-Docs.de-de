@@ -6,12 +6,12 @@ ms.date: 2/27/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Functions
-ms.openlocfilehash: 4bc921b19951290efd1c8cbe5c8bb014912695f0
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 944cb3fc77406cfbf288655d2740bad6ddcceee4
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221612"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387633"
 ---
 # <a name="about-functions"></a>Informationen zu Functions
 
@@ -454,7 +454,7 @@ Sie können auch die folgende Syntax verwenden.
 $function:help
 ```
 
-Weitere Informationen zum `Function:` Laufwerk finden Sie im Hilfethema für den **Funktions** Anbieter. Geben Sie `Get-Help Function` ein.
+Weitere Informationen zum `Function:` Laufwerk finden Sie im Hilfethema für den **Funktions** Anbieter. Geben Sie `Get-Help Function`ein.
 
 ## <a name="reusing-functions-in-new-sessions"></a>Wieder verwenden von Funktionen in neuen Sitzungen
 
@@ -486,9 +486,9 @@ Sie können die Hilfe für eine Funktion mit einer der beiden folgenden Methoden
 
   Um die Funktion dem XML-basierten Hilfethema zuzuordnen, verwenden Sie das `.ExternalHelp` Kommentar basierte Hilfe Schlüsselwort. Ohne dieses Schlüsselwort `Get-Help` kann das Funktions Hilfethema nicht finden, und Aufrufe von `Get-Help` für die Funktion geben nur automatisch generierte Hilfe zurück.
 
-  Weitere Informationen zum- `ExternalHelp` Schlüsselwort finden Sie unter [about_Comment_Based_Help](about_Comment_Based_Help.md). Weitere Informationen zur XML-basierten Hilfe finden Sie unter [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) in der MSDN Library.
+  Weitere Informationen zum- `ExternalHelp` Schlüsselwort finden Sie unter [about_Comment_Based_Help](about_Comment_Based_Help.md). Weitere Informationen zur XML-basierten Hilfe finden Sie unter [How to Write Cmdlet Help](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets).
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

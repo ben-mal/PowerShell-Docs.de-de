@@ -7,12 +7,12 @@ Module Name: Microsoft.PowerShell.Core
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-PSSession
-ms.openlocfilehash: 39501e0992ba10ae3638dd5178f2913001b5cd32
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.openlocfilehash: a1492c1c334feb4df5635b5bfaf435c0815f80ab
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "93218212"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388585"
 ---
 # Receive-PSSession
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 Gibt den Mechanismus an, der zum Authentifizieren der Benutzer Anmelde Informationen im Befehl verwendet wird, um die Verbindung mit einer getrennten Sitzung wiederherzustellen. Zulässige Werte für diesen Parameter:
 
 - Standard
-- Basic
+- Standard
 - CredSSP
 - Digest
 - Kerberos
@@ -787,7 +787,7 @@ Wenn Sie eine **PSSession** trennen, wird der Sitzungs Status getrennt, und die 
 - Der Wert der **State** Eigenschaft bezieht sich auf die aktuelle Sitzung. Der Wert "getrennt" bedeutet, dass die **PSSession** nicht mit der aktuellen Sitzung verbunden ist. Dies bedeutet jedoch nicht, dass die **PSSession** von allen Sitzungen getrennt ist. Sie kann mit einer anderen Sitzung verbunden sein.
   Um festzustellen, ob Sie eine Sitzungsverbindung herstellen bzw. wiederherstellen können, verwenden Sie die **Availability** -Eigenschaft.
 - Ein **Availability** -Wert von None gibt an, dass eine Verbindung mit der Sitzung hergestellt werden kann. Der Wert ausgelastet gibt an, dass keine Verbindung mit der **PSSession** hergestellt werden kann, da Sie mit einer anderen Sitzung verbunden ist.
-- Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate](/dotnet/api/system.management.automation.runspaces.runspacestate) in der MSDN Library.
+- Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate](/dotnet/api/system.management.automation.runspaces.runspacestate).
 - Weitere Informationen zu den Werten der **Availability** -Eigenschaft von Sitzungen finden Sie unter [runspaceavailability](/dotnet/api/system.management.automation.runspaces.runspaceavailability).
 
 ## VERWANDTE LINKS

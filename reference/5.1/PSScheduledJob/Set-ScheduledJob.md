@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psscheduledjob/set-scheduledjob?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ScheduledJob
-ms.openlocfilehash: 99dbdc84430c0a8b5cf505a22b139cd07236e160
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6144d9f19b86727bc09d07e94f4bcf158e3b7071
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213367"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387905"
 ---
 # Set-ScheduledJob
 
@@ -142,15 +142,14 @@ Gibt den Mechanismus an, der zum Authentifizieren der Anmeldeinformationen des B
 Zulässige Werte für diesen Parameter:
 
 - Standard
-- Basic
+- Standard
 - CredSSP
 - Digest
 - Kerberos
 - Aushandeln
 - NegotiateWithImplicitCredential
 
-Der Standardwert ist Default.
-Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](https://msdn.microsoft.com/library/system.management.automation.runspaces.authenticationmechanism) in der MSDN Library.
+Der Standardwert ist Default. Weitere Informationen zu den Werten dieses Parameters finden Sie unter [authenticationmechanism-Enumeration](/dotnet/api/system.management.automation.runspaces.authenticationmechanism) im PowerShell SDK.
 
 Vorsicht: die Authentifizierung der Credential Security Support Provider (kredssp), bei der die Anmelde Informationen des Benutzers an einen Remote Computer übergeben werden, der authentifiziert werden soll, wurde für Befehle entworfen, die eine Authentifizierung auf mehr als einer Ressource erfordern, z. b. den Zugriff auf eine Remote Netzwerkfreigabe.
 Dieser Mechanismus erhöht das Sicherheitsrisiko des Remotevorgangs.

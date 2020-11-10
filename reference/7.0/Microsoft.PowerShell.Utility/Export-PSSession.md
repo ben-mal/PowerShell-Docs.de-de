@@ -7,12 +7,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: ff1b709b363684e27a1f4eb8fdeada2d5ae1d588
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 5aa9b9967ec6a79a569c9f0e7ca93db9e9e4d5b6
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211036"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387038"
 ---
 # Export-PSSession
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -CommandName
 
-Exportiert nur die Befehle mit den angegebenen Namen oder Namensmustern. Platzhalter sind zulässig. Verwenden Sie **CommandName** oder den Alias **Name** .
+Exportiert nur die Befehle mit den angegebenen Namen oder Namensmustern. Platzhalter sind zulässig. Verwenden Sie **CommandName** oder den Alias **Name**.
 
 Standardmäßig `Export-PSSession` exportiert alle Befehle aus der PSSession mit Ausnahme von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben. Dadurch wird verhindert, dass Befehle ausgeblendet oder durch Befehle in der aktuellen Sitzung ersetzt werden. Verwenden Sie den **allowclobber** -Parameter, um alle Befehle zu exportieren, auch solche, die andere Befehle ausblenden oder ersetzen.
 
@@ -201,7 +201,7 @@ Accept wildcard characters: True
 
 ### -CommandType
 
-Exportiert nur die angegebenen Typen von Befehlsobjekten. Verwenden Sie **CommandType** oder dessen Aliasname **Type** .
+Exportiert nur die angegebenen Typen von Befehlsobjekten. Verwenden Sie **CommandType** oder dessen Aliasname **Type**.
 
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
@@ -213,7 +213,7 @@ Die zulässigen Werte für diesen Parameter lauten wie folgt:
 - Externalscript. Alle PS1-Dateien in den Pfaden, die in der PATH-Umgebungsvariablen () aufgelistet sind `$env:path` .
 - Filter und function. Alle PowerShell-Funktionen.
 - Skript. Skriptblöcke in der aktuellen Sitzung.
-- Workflow. Einen PowerShell-Workflow. Weitere Informationen finden Sie unter [about_Workflows](/powershell/module/psworkflow/about/about_workflows?view=powershell-5.1).
+- Workflow. Einen PowerShell-Workflow. Weitere Informationen finden Sie unter [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows).
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -Codierung
 
-Gibt den Typ der Codierung für die Zieldatei an. Der Standardwert ist `utf8NoBOM`.
+Gibt den Typ der Codierung für die Zieldatei an. Standardwert: `utf8NoBOM`.
 
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
@@ -243,7 +243,6 @@ Die zulässigen Werte für diesen Parameter lauten wie folgt:
 - `utf8BOM`: Codiert im UTF-8-Format mit Byte Reihenfolge Markierung (BOM).
 - `utf8NoBOM`: Codiert im UTF-8-Format ohne Byte Reihenfolge-Markierung (BOM).
 - `utf32`: Codiert im UTF-32-Format.
-
 
 Ab PowerShell 6,2 ermöglicht der **Encoding** -Parameter auch numerische IDs registrierter Codepages (z `-Encoding 1251` . b.) oder Zeichen folgen Namen registrierter Codepages (z `-Encoding "windows-1251"` . b.). Weitere Informationen finden Sie in der .NET-Dokumentation für [Encoding. Codepage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
@@ -300,14 +299,12 @@ Accept wildcard characters: False
 
 ### -Fullyqualifiedmodule
 
-Gibt Module an, deren Namen in Form von **modulespecification** -Objekten angegeben sind.
-Weitere Informationen finden Sie im Abschnitt "Hinweise" des [modulespecification-Konstruktors (Hash Tabelle)](https://msdn.microsoft.com/library/jj136290).
+Gibt Module an, deren Namen in Form von **modulespecification** -Objekten angegeben sind. Weitere Informationen finden Sie im Abschnitt "Hinweise" des [modulespecification-Konstruktors (Hash Tabelle)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
 Der **fullyqualifiedmodule** -Parameter akzeptiert z. b. einen Modulnamen, der in einem der folgenden Formate angegeben ist:
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
-
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
 **ModuleName** und **ModuleVersion** sind erforderlich, aber **Guid** ist optional. Sie können den **fullyqualifiedmodule** -Parameter nicht im selben Befehl wie einen **Modul** Parameter angeben. die beiden Parameter schließen sich gegenseitig aus.
 

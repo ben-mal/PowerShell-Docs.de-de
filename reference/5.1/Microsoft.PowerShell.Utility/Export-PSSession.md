@@ -7,12 +7,12 @@ ms.date: 04/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 67501a78ba577f63c97e595f4bacd28160fea416
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 11533a9b127dc6d088258392c0e142bfbe5c070c
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214031"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94388024"
 ---
 # Export-PSSession
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -CommandName
 
-Exportiert nur die Befehle mit den angegebenen Namen oder Namensmustern. Platzhalter sind zulässig. Verwenden Sie **CommandName** oder den Alias **Name** .
+Exportiert nur die Befehle mit den angegebenen Namen oder Namensmustern. Platzhalter sind zulässig. Verwenden Sie **CommandName** oder den Alias **Name**.
 
 Standardmäßig `Export-PSSession` exportiert alle Befehle aus der PSSession mit Ausnahme von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben. Dadurch wird verhindert, dass Befehle ausgeblendet oder durch Befehle in der aktuellen Sitzung ersetzt werden. Verwenden Sie den **allowclobber** -Parameter, um alle Befehle zu exportieren, auch solche, die andere Befehle ausblenden oder ersetzen.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: True
 
 ### -CommandType
 
-Exportiert nur die angegebenen Typen von Befehlsobjekten. Verwenden Sie **CommandType** oder dessen Aliasname **Type** .
+Exportiert nur die angegebenen Typen von Befehlsobjekten. Verwenden Sie **CommandType** oder dessen Aliasname **Type**.
 
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -Codierung
 
-Gibt den Typ der Codierung für die Zieldatei an. Der Standardwert ist `UTF8`.
+Gibt den Typ der Codierung für die Zieldatei an. Standardwert: `UTF8`.
 
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
@@ -294,14 +294,12 @@ Accept wildcard characters: False
 
 ### -Fullyqualifiedmodule
 
-Gibt Module an, deren Namen in Form von **modulespecification** -Objekten angegeben sind.
-Weitere Informationen finden Sie im Abschnitt "Hinweise" des [modulespecification-Konstruktors (Hash Tabelle)](https://msdn.microsoft.com/library/jj136290).
+Gibt Module an, deren Namen in Form von **modulespecification** -Objekten angegeben sind. Weitere Informationen finden Sie im Abschnitt "Hinweise" des [modulespecification-Konstruktors (Hash Tabelle)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
 
 Der **fullyqualifiedmodule** -Parameter akzeptiert z. b. einen Modulnamen, der in einem der folgenden Formate angegeben ist:
 
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
-
-`@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"}`
+- `@{ModuleName = "modulename"; ModuleVersion = "version_number"; Guid = "GUID"}`
 
 **ModuleName** und **ModuleVersion** sind erforderlich, aber **Guid** ist optional. Sie können den **fullyqualifiedmodule** -Parameter nicht im selben Befehl wie einen **Modul** Parameter angeben. die beiden Parameter schließen sich gegenseitig aus.
 

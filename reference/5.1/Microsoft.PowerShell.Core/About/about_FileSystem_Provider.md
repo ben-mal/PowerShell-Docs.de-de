@@ -6,12 +6,12 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem-Anbieter
-ms.openlocfilehash: 3b37f6e4eb53ef7291c30cbc9820caf83641a9bb
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 204a90dc346e6d4ff483777b9adf7a70017ef093
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223492"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94386909"
 ---
 # <a name="filesystem-provider"></a>FileSystem provider
 
@@ -206,7 +206,7 @@ Dieser Befehl gibt ein [System. Security. AccessControl. FileSecurity](/dotnet/a
 Get-Acl -Path test.txt | Format-List -Property *
 ```
 
-Um weitere Informationen zu diesem Objekt zu erhalten, übergeben Sie den Befehl an das Cmdlet " [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) ". Weitere Informationen finden Sie unter "[File Security](/dotnet/api/system.security.accesscontrol.filesecurity) Class" in der MSDN (Microsoft Developer Network)-Bibliothek.
+Um weitere Informationen zu diesem Objekt zu erhalten, übergeben Sie den Befehl an das Cmdlet " [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member) ". Oder siehe [FileSecurity](/dotnet/api/system.security.accesscontrol.filesecurity) -Klasse.
 
 ### <a name="modify-the-acl-for-a-file"></a>Ändern der ACL für eine Datei
 
@@ -522,10 +522,6 @@ Neue Zeilenumbruchzeichen werden ignoriert. Gibt Inhalte als ein einzelnes Eleme
 
 - [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)
 
-#### <a name="cmdlets-supported"></a>Unterstützte Cmdlets
-
-- [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)
-
 ### <a name="itemtype-string"></a>ItemType \<String\>
 
 Mit diesem Parameter können Sie die Tye des zu erstellenden Elements angeben. `New-Item`
@@ -563,6 +559,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Providers](../About/about_Providers.md)

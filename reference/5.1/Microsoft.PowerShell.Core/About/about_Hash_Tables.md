@@ -6,17 +6,16 @@ ms.date: 11/28/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Hash_Tables
-ms.openlocfilehash: 1e8845e54b96fc3facf8a5b1a19ff52a5293921c
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 3becc982ac49868dca3b0c7ca20707307298547d
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223460"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94387072"
 ---
 # <a name="about-hash-tables"></a>Informationen zu Hash Tabellen
 
 ## <a name="short-description"></a>KURZE BESCHREIBUNG
-
 Beschreibt das Erstellen, verwenden und Sortieren von Hash Tabellen in PowerShell.
 
 ## <a name="long-description"></a>LANGE BESCHREIBUNG
@@ -158,7 +157,7 @@ $hashtable.<key>
 <value>
 ```
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 C:\PS> $hash.Number
@@ -184,7 +183,7 @@ C:\PS> $hash.count
 Hash Tabellen Tabellen sind keine Arrays, daher können Sie keine Ganzzahl als Index in der Hash Tabelle verwenden, aber Sie können einen Schlüsselnamen verwenden, um die Hash Tabelle zu indizieren.
 Wenn der Schlüssel ein Zeichen folgen Wert ist, müssen Sie den Schlüsselnamen in Anführungszeichen einschließen.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 C:\PS> $hash["Number"]
@@ -246,20 +245,20 @@ Wenn Sie z. b. das Schlüssel-Wert-Paar time = now aus der Hash Tabelle im Wert 
 $hash.Remove("Time")
 ```
 
-Sie können alle Eigenschaften und Methoden von Hash fähigen Objekten in PowerShell verwenden, einschließlich "enthält", "Clear", "Clone" und "CopyTo". Weitere Informationen zu Hash fähigen Objekten finden Sie unter "System. Collections. Hashtable" auf der MSDN-Website.
+Sie können alle Eigenschaften und Methoden von Hash fähigen Objekten in PowerShell verwenden, einschließlich "enthält", "Clear", "Clone" und "CopyTo". Weitere Informationen zu Hash fähigen Objekten finden Sie unter [System. Collections. Hashtable](/dotnet/api/system.collections.hashtable).
 
 ### <a name="object-types-in-hashtables"></a>Objekttypen in Hash Tabellen
 
 Die Schlüssel und Werte in einer Hash Tabelle können einen beliebigen .net-Objekttyp haben, und eine einzelne Hash Tabelle kann über Schlüssel und Werte mehrerer Typen verfügen.
 
-Mit der folgenden Anweisung wird eine Hash Tabelle mit Prozessnamen Zeichenfolgen erstellt und Objektwerte verarbeitet und in der \$ p-Variablen gespeichert.
+Mit der folgenden Anweisung wird eine Hash Tabelle mit Prozessnamen Zeichenfolgen erstellt und Objektwerte verarbeitet und in der `$p` Variablen gespeichert.
 
 ```powershell
-$p = @{"PowerShell" = (get-process PowerShell);
-"Notepad" = (get-process notepad)}
+$p = @{"PowerShell" = (Get-Process PowerShell);
+"Notepad" = (Get-Process notepad)}
 ```
 
-Sie können die Hash Tabelle in \$ p anzeigen und die Schlüsselnamen-Eigenschaften verwenden, um die Werte anzuzeigen.
+Sie können die Hash Tabelle in anzeigen `$p` und die Schlüsselnamen-Eigenschaften verwenden, um die Werte anzuzeigen.
 
 ```powershell
 C:\PS> $p
@@ -280,7 +279,7 @@ C:\PS> $p.keys | foreach {$p.$_.handles}
 251
 ```
 
-Bei den Schlüsseln in einer Hash Tabelle kann es sich auch um einen beliebigen .NET-Typ handeln. Mit der folgenden Anweisung wird der Hash Tabelle in der p-Variablen ein Schlüssel/Wert-Paar hinzugefügt \$ . Der Schlüssel ist ein Dienst Objekt, das den WinRM-Dienst darstellt, und der Wert entspricht dem aktuellen Status des Dienstanbieter.
+Bei den Schlüsseln in einer Hash Tabelle kann es sich auch um einen beliebigen .NET-Typ handeln. Mit der folgenden Anweisung wird der Hash Tabelle in der Variablen ein Schlüssel-Wert-Paar hinzugefügt `$p` . Der Schlüssel ist ein Dienst Objekt, das den WinRM-Dienst darstellt, und der Wert entspricht dem aktuellen Status des Dienstanbieter.
 
 ```powershell
 C:\PS> $p = $p + @{(Get-Service WinRM) = ((Get-Service WinRM).Status)}
@@ -309,7 +308,7 @@ C:\PS> $p.keys | foreach {$_.name}
 winrm
 ```
 
-Die Schlüssel und Werte in einer Hash Tabelle können auch Hashtable-Objekte sein. Mit der folgenden Anweisung wird der Hash Tabelle in der p-Variablen, in der der Schlüssel eine Zeichenfolge ist, ein Schlüssel/Wert-Paar hinzugefügt, \$ und der Wert ist eine Hash Tabelle mit drei Schlüssel-Wert-Paaren.
+Die Schlüssel und Werte in einer Hash Tabelle können auch Hashtable-Objekte sein. Mit der folgenden Anweisung wird der Hash Tabelle in der Variablen, in der der Schlüssel eine Zeichenfolge ist, ein Schlüssel/Wert-Paar hinzugefügt, `$p` und der Wert ist eine Hash Tabelle mit drei Schlüssel-Wert-Paaren.
 
 ```powershell
 C:\PS> $p = $p + @{"Hash2"= @{a=1; b=2; c=3}}
@@ -345,7 +344,7 @@ Die Elemente in einer Hash Tabelle sind intrinsisch Unsortiert. Die Schlüssel-W
 
 Obwohl eine Hash Tabelle nicht sortiert werden kann, können Sie die GetEnumerator-Methode von Hash Tabellen verwenden, um die Schlüssel und Werte aufzulisten. verwenden Sie dann das Cmdlet "Sort-Object", um die Enumerationswerte für die Anzeige zu sortieren.
 
-Die folgenden Befehle zählen z. b. die Schlüssel und Werte in der Hash Tabelle in der \$ p-Variablen auf und Sortieren dann die Schlüssel in alphabetischer Reihenfolge.
+Die folgenden Befehle zählen z. b. die Schlüssel und Werte in der Hash Tabelle in der `$p` Variablen auf und Sortieren dann die Schlüssel in alphabetischer Reihenfolge.
 
 ```powershell
 C:\PS> $p.GetEnumerator() | Sort-Object -Property key
