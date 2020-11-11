@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: f46b14e44c32ce31b4da1a14580fe03564bf9946
-ms.sourcegitcommit: 0e18be0a2869beaa711ba3eca7a8a15514e5e962
+ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
+ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91899265"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93239881"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open-Source-Verhaltenskodex
+
+> Aktualisiert: 02.11.2020:
 
 Für dieses Projekt gelten die Microsoft-Verhaltensregeln für Open Source ([Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)). Weitere Informationen finden Sie unter [Code of Conduct FAQ (FAQ zum Verhaltenskodex)](https://opensource.microsoft.com/codeofconduct/faq/). Alternativ können Sie sich mit weiteren Fragen und Kommentaren an [opencode@microsoft.com](mailto:opencode@microsoft.com) wenden.
 
@@ -48,7 +50,7 @@ Nachfolgend werden die Hauptordner dieses Repositorys beschrieben.
 
 ## <a name="contributing"></a>Mitwirken
 
-Wir freuen uns über öffentliche Beiträge zu diesem Repository. Verwenden Sie hierfür [Pullanforderungen](https://help.github.com/articles/using-pull-requests/) im _Staging_-Branch.
+Wir freuen uns über öffentliche Beiträge zu diesem Repository. Verwenden Sie hierfür [Pullanforderungen](https://help.github.com/articles/using-pull-requests/) im _Staging_ -Branch.
 Hinweis: Sie müssen unsere [Lizenzvereinbarung für Mitwirkende](https://cla.microsoft.com/) unterschreiben, damit wir Ihre Pull Requests annehmen können. Dies ist eine einmalige Anforderung.
 
 Weitere Informationen zu Beiträgen finden Sie in unserem [Handbuch für Mitwirkende](https://aka.ms/PSDocsContributor). Das Handbuch für Mitwirkende enthält ausführliche Informationen zum Erstellen von Beiträgen zur Dokumentation, Stil- und Formatierungsvorgaben sowie Vorschlagen von Tools. Verwenden Sie die Vorlagen für Probleme und Pullanforderungen, um die Dokumentation über Versionen hinweg konsistent zu halten.
