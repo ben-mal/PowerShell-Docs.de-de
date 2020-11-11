@@ -2,16 +2,16 @@
 description: Listet die PowerShell-Operatoren in der Rangfolge auf.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/08/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operator_precedence?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operator_Precedence
-ms.openlocfilehash: 88a24c04d3d24d1df1b93ab2eefef401063252a2
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 62b49476760192386ae2c583fd9b7699e893134c
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221463"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483059"
 ---
 # <a name="about-operator-precedence"></a>Informationen zur Operator Rangfolge
 
@@ -32,7 +32,7 @@ In der Spalte Operator sind die Operatoren aufgelistet. In der Spalte Verweis is
 
 |         OPERATOR         |           Angabe            |
 | ------------------------ | ------------------------------ |
-| `$() @() ()`             | [about_Operators][]            |
+| `$() @() () @{}`         | [about_Operators][]            |
 | `.` (Member Access)      | [about_Operators][]            |
 | `::` Kum            | [about_Operators][]            |
 | `[0]` (Index-Operator)   | [about_Operators][]            |

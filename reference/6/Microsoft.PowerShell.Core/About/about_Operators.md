@@ -6,12 +6,12 @@ ms.date: 10/28/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: 9668e635b17f8cbe9f6639e8a13b95d4b9387fbb
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: a76aab20c8fc64f78f3208c42e212a3fbccc7c48
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93225308"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483144"
 ---
 # <a name="about-operators"></a>Informationen zu Operatoren
 
@@ -89,7 +89,7 @@ Wie in anderen Sprachen, `(...)` dient zum Überschreiben der Operator Rangfolge
 
 In PowerShell gibt es jedoch zusätzliche Verhaltensweisen.
 
-- `(...)` ermöglicht das zulassen, dass die Ausgabe eines _Befehls_ an einem Ausdruck teilnimmt. Beispiel:
+- `(...)` ermöglicht das zulassen, dass die Ausgabe eines _Befehls_ an einem Ausdruck teilnimmt. Zum Beispiel:
 
   ```powershell
   PS> (Get-Item *.txt).Count -gt 10
@@ -121,6 +121,11 @@ Gibt das Ergebnis einer oder mehrerer-Anweisungen als Array zurück. Wenn nur ei
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>Literalsyntax der Hash Tabelle `@{}`
+
+Ähnlich wie beim Array Teil Ausdruck wird diese Syntax verwendet, um eine Hash Tabelle zu deklarieren.
+Weitere Informationen finden Sie unter [about_Hash_Tables](about_Hash_Tables.md).
 
 #### <a name="call-operator-"></a>Calloperator `&`
 
@@ -428,7 +433,7 @@ Ruft die statischen Eigenschaften und Methoden einer .NET Framework Klasse auf. 
 'MinValue', 'MaxValue' | Foreach-Object { [int]:: $_ }
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 [about_Arithmetic_Operators](about_Arithmetic_Operators.md)
 

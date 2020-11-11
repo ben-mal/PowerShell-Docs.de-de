@@ -2,16 +2,16 @@
 description: Beschreibt die Operatoren, die von PowerShell unterstützt werden.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/28/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: d442a64be77934cef4636e905c098d9630451b8f
-ms.sourcegitcommit: c1e4739f5d52282fb05a8cff92b0f5d10e2edac1
+ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93225303"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483127"
 ---
 # <a name="about-operators"></a>Informationen zu Operatoren
 
@@ -89,7 +89,7 @@ Wie in anderen Sprachen, `(...)` dient zum Überschreiben der Operator Rangfolge
 
 In PowerShell gibt es jedoch zusätzliche Verhaltensweisen.
 
-- `(...)` ermöglicht das zulassen, dass die Ausgabe eines _Befehls_ an einem Ausdruck teilnimmt. Beispiel:
+- `(...)` ermöglicht das zulassen, dass die Ausgabe eines _Befehls_ an einem Ausdruck teilnimmt. Zum Beispiel:
 
   ```powershell
   PS> (Get-Item *.txt).Count -gt 10
@@ -117,6 +117,11 @@ Gibt das Ergebnis einer oder mehrerer-Anweisungen als Array zurück. Wenn nur ei
 ```powershell
 @(Get-CimInstance win32_logicalDisk)
 ```
+
+#### <a name="hash-table-literal-syntax-"></a>Literalsyntax der Hash Tabelle `@{}`
+
+Ähnlich wie beim Array Teil Ausdruck wird diese Syntax verwendet, um eine Hash Tabelle zu deklarieren.
+Weitere Informationen finden Sie unter [about_Hash_Tables](about_Hash_Tables.md).
 
 #### <a name="call-operator-"></a>Calloperator `&`
 
@@ -498,8 +503,6 @@ $todaysDate ??= (Get-Date).ToShortDateString()
 
 Ein NULL Bedingter Operator wendet einen Element Zugriffs-,- `?.` oder-Element Zugriff,- `?[]` Vorgang auf seinen Operanden nur an, wenn der Operand zu einem anderen Wert als NULL ausgewertet wird; andernfalls wird NULL zurückgegeben.
 
-Da PowerShell erlaubt, dass `?` Teil des Variablennamens ist, ist für die Verwendung dieser Operatoren die formale Angabe des Variablennamens erforderlich. Daher ist es nötig, `{}` um die Variablennamen herum zu platzieren, wie z. B. `${a}` oder wenn `?` Teil des Variablennamens `${a?}` ist.
-
 Im folgenden Beispiel wird der Wert von " **propName** " zurückgegeben.
 
 ```powershell
@@ -536,7 +539,12 @@ $a = $null
 ${a}?[0]
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+> [!NOTE]
+> Da PowerShell erlaubt, dass `?` Teil des Variablennamens ist, ist für die Verwendung dieser Operatoren die formale Angabe des Variablennamens erforderlich. Daher ist es nötig, `{}` um die Variablennamen herum zu platzieren, wie z. B. `${a}` oder wenn `?` Teil des Variablennamens `${a?}` ist.
+>
+> Die Variablennamen Syntax von `${<name>}` sollte nicht mit dem `$()` Teil Ausdruck-Operator verwechselt werden. Weitere Informationen finden Sie im Abschnitt Variablenname [about_Variables](about_Variables.md#Variable-names-that-include-special-characters).
+
+## <a name="see-also"></a>Siehe auch
 
 [about_Arithmetic_Operators](about_Arithmetic_Operators.md)
 

@@ -2,16 +2,16 @@
 description: Beschreibt, wie Variablen Werte speichern, die in PowerShell verwendet werden können.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 03/19/2020
+ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: e301d323fff8f8519c60f8916a019acea324a589
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 2a6daa33cc671bd287b395aa4e1dd6f871c26bf9
+ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221052"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94483161"
 ---
 # <a name="about-variables"></a>Informationen zu Variablen
 
@@ -45,7 +45,7 @@ Um eine neue Variable zu erstellen, verwenden Sie eine Zuweisungsanweisung, um d
 
 Geben Sie ein, um eine Liste aller Variablen in der PowerShell-Sitzung zu erhalten `Get-Variable` . Die Variablennamen werden ohne das vorangehende Dollar `$` Zeichen () angezeigt, das für den Verweis auf Variablen verwendet wird.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 $MyVariable = 1, 2, 3
@@ -55,7 +55,7 @@ $Path = "C:\Windows\System32"
 
 Variablen sind nützlich, um die Ergebnisse von Befehlen zu speichern.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 $Processes = Get-Process
@@ -65,7 +65,7 @@ $Today = (Get-Date).DateTime
 
 Wenn Sie den Wert einer Variablen anzeigen möchten, geben Sie den Variablennamen ein, dem ein Dollarzeichen () vorangestellt ist `$` .
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 $MyVariable
@@ -137,7 +137,7 @@ PowerShell-Variablen sind lose typisiert, was bedeutet, dass Sie nicht auf einen
 
 Der Datentyp einer Variablen wird durch die .NET-Typen der Werte der Variablen bestimmt. Verwenden [Sie Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member), um den Objekttyp einer Variablen anzuzeigen.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 $a = 12                         # System.Int32
@@ -403,7 +403,7 @@ Get-Help <cmdlet-name>
 | `Remove-Variable` | Löscht eine Variable und ihren Wert.          |
 | `Set-Variable`    | Ändert den Wert einer Variablen.           |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 
