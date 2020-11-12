@@ -2,156 +2,144 @@
 description: Enthält Informationen dazu, wie PowerShell-Hintergrund Aufträge einen Befehl oder Ausdruck im Hintergrund ausführen, ohne mit der aktuellen Sitzung zu interagieren.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/16/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Jobs
-ms.openlocfilehash: b28eb480e3f994696738d6053ea7e2622a743ce5
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: d4d4f4b8a2f57edcfa72247d9f9bc224b848789a
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "93224580"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524772"
 ---
-# <a name="about-jobs"></a><span data-ttu-id="14b02-104">Informationen zu Aufträgen</span><span class="sxs-lookup"><span data-stu-id="14b02-104">About Jobs</span></span>
+# <a name="about-jobs"></a><span data-ttu-id="c3352-104">Informationen zu Aufträgen</span><span class="sxs-lookup"><span data-stu-id="c3352-104">About Jobs</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="14b02-105">Kurze Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14b02-105">Short description</span></span>
-<span data-ttu-id="14b02-106">Enthält Informationen dazu, wie PowerShell-Hintergrund Aufträge einen Befehl oder Ausdruck im Hintergrund ausführen, ohne mit der aktuellen Sitzung zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="14b02-106">Provides information about how PowerShell background jobs run a command or expression in the background without interacting with the current session.</span></span>
+## <a name="short-description"></a><span data-ttu-id="c3352-105">Kurze Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c3352-105">Short description</span></span>
+<span data-ttu-id="c3352-106">Enthält Informationen dazu, wie PowerShell-Hintergrund Aufträge einen Befehl oder Ausdruck im Hintergrund ausführen, ohne mit der aktuellen Sitzung zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="c3352-106">Provides information about how PowerShell background jobs run a command or expression in the background without interacting with the current session.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="14b02-107">Lange Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14b02-107">Long description</span></span>
+## <a name="long-description"></a><span data-ttu-id="c3352-107">Lange Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c3352-107">Long description</span></span>
 
-<span data-ttu-id="14b02-108">PowerShell führt gleichzeitig Befehle und Skripts durch Aufträge aus.</span><span class="sxs-lookup"><span data-stu-id="14b02-108">PowerShell concurrently runs commands and script through jobs.</span></span> <span data-ttu-id="14b02-109">Es gibt drei auf Aufträgen basierende Lösungen, die von PowerShell zur Unterstützung von Parallelität bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-109">There are three jobs-based solutions provided by PowerShell to support concurrency.</span></span>
+<span data-ttu-id="c3352-108">PowerShell führt Befehle und Skripts gleichzeitig durch Aufträge aus.</span><span class="sxs-lookup"><span data-stu-id="c3352-108">PowerShell concurrently runs commands and scripts through jobs.</span></span> <span data-ttu-id="c3352-109">Es gibt drei Auftrags Typen, die von PowerShell zur Unterstützung von Parallelität bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-109">There are three jobs types provided by PowerShell to support concurrency.</span></span>
 
-|<span data-ttu-id="14b02-110">Auftrag</span><span class="sxs-lookup"><span data-stu-id="14b02-110">Job</span></span>            |<span data-ttu-id="14b02-111">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="14b02-111">Description</span></span>                                                  |
-|---------------|-------------------------------------------------------------|
-|`RemoteJob`    |<span data-ttu-id="14b02-112">Befehl und Skript werden auf einem Remote Computer ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="14b02-112">Command and script run on a remote computer.</span></span>                 |
-|`BackgroundJob`|<span data-ttu-id="14b02-113">Befehl und Skript werden in einem separaten Prozess auf dem lokalen ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="14b02-113">Command and script run in a separate process on the local</span></span>    |
-|               |<span data-ttu-id="14b02-114">2 virtuelle CPUs zu.</span><span class="sxs-lookup"><span data-stu-id="14b02-114">machine.</span></span>                                                     |
-|`ThreadJob`    |<span data-ttu-id="14b02-115">Befehl und Skript werden in einem separaten Thread innerhalb desselben</span><span class="sxs-lookup"><span data-stu-id="14b02-115">Command and script run in a separate thread within the same</span></span>  |
-|               |<span data-ttu-id="14b02-116">Prozess auf dem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="14b02-116">process on the local machine.</span></span>                                |
+- <span data-ttu-id="c3352-110">`RemoteJob` -Befehle und Skripts werden in einer Remote Sitzung ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c3352-110">`RemoteJob` - Commands and scripts run on a remote session.</span></span> <span data-ttu-id="c3352-111">Weitere Informationen finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="c3352-111">For information, see [about_Remote_Jobs](about_Remote_Jobs.md).</span></span>
+- <span data-ttu-id="c3352-112">`BackgroundJob` -Befehle und Skripts werden in einem separaten Prozess auf dem lokalen Computer ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c3352-112">`BackgroundJob` - Commands and scripts run in a separate process on the local machine.</span></span>
+- <span data-ttu-id="c3352-113">`PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c3352-113">`PSTaskJob` or `ThreadJob` - Commands and scripts run in a separate thread within the same process on the local machine.</span></span> <span data-ttu-id="c3352-114">Weitere Informationen finden Sie unter [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).</span><span class="sxs-lookup"><span data-stu-id="c3352-114">For more information, see [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).</span></span>
 
-<span data-ttu-id="14b02-117">Jeder Auftragstyp hat Vorteile und Nachteile.</span><span class="sxs-lookup"><span data-stu-id="14b02-117">Each type of job has benefits and drawbacks.</span></span> <span data-ttu-id="14b02-118">Die Remote Ausführung von Skripts auf einem separaten Computer oder in einem separaten Prozess hat eine große Isolation.</span><span class="sxs-lookup"><span data-stu-id="14b02-118">Running script remotely on a separate machine or in a separate process has great isolation.</span></span> <span data-ttu-id="14b02-119">Alle Fehler wirken sich nicht auf andere laufende Aufträge oder den Client aus, von dem der Auftrag gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="14b02-119">Any errors won't affect other running jobs or the client that started the job.</span></span> <span data-ttu-id="14b02-120">Die Remoting-Schicht erhöht jedoch den mehr Aufwand, einschließlich Objektserialisierung.</span><span class="sxs-lookup"><span data-stu-id="14b02-120">But the remoting layer adds overhead, including object serialization.</span></span> <span data-ttu-id="14b02-121">Alle Objekte, die an und von der Remote Sitzung weitergeleitet werden, müssen serialisiert und dann deserialisiert werden, wenn Sie zwischen dem Client und der Ziel Sitzung übertragen werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-121">All objects passed to and from the remote session must be serialized and then deserialized as it passes between the client and the target session.</span></span> <span data-ttu-id="14b02-122">Der Serialisierungsvorgang kann viele COMPUTE-und Speicherressourcen für große komplexe Datenobjekte verwenden.</span><span class="sxs-lookup"><span data-stu-id="14b02-122">The serialization operation can use many compute and memory resources for large complex data objects.</span></span>
+<span data-ttu-id="c3352-115">Das Remote Ausführen von Skripts auf einem separaten Computer oder in einem separaten Prozess bietet eine hohe Isolation.</span><span class="sxs-lookup"><span data-stu-id="c3352-115">Running scripts remotely, on a separate machine or in a separate process, provides great isolation.</span></span> <span data-ttu-id="c3352-116">Fehler, die im Remote Auftrag auftreten, wirken sich nicht auf andere laufende Aufträge oder die übergeordnete Sitzung aus, die den Auftrag gestartet hat.</span><span class="sxs-lookup"><span data-stu-id="c3352-116">Any errors that occur in the remote job do not affect other running jobs or the parent session that started the job.</span></span> <span data-ttu-id="c3352-117">Allerdings erhöht die Remoting-Ebene mehr Aufwand, einschließlich Objektserialisierung.</span><span class="sxs-lookup"><span data-stu-id="c3352-117">However, the remoting layer adds overhead, including object serialization.</span></span> <span data-ttu-id="c3352-118">Alle Objekte werden serialisiert und deserialisiert, wenn Sie zwischen der übergeordneten Sitzung und der Remote Sitzung (Auftrags Sitzung) weitergegeben werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-118">All objects are serialized and deserialized as they are passed between the parent session and the remote (job) session.</span></span> <span data-ttu-id="c3352-119">Die Serialisierung von großen komplexen Datenobjekten kann große Mengen an COMPUTE-und Speicherressourcen beanspruchen und große Datenmengen über das Netzwerk übertragen.</span><span class="sxs-lookup"><span data-stu-id="c3352-119">Serialization of large complex data objects can consume large amounts of compute and memory resources and transfer large amounts of data across the network.</span></span>
 
-<span data-ttu-id="14b02-123">In diesem Thema wird erläutert, wie Hintergrund Aufträge in PowerShell auf einem lokalen Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-123">This topic explains how to run background jobs in PowerShell on a local computer.</span></span> <span data-ttu-id="14b02-124">Informationen zum Ausführen von Hintergrund Aufträgen auf Remote Computern finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="14b02-124">For information about running background jobs on remote computers, see [about_Remote_Jobs](about_Remote_Jobs.md).</span></span> <span data-ttu-id="14b02-125">Weitere Informationen zu Thread Aufträgen finden Sie unter [about_Thread_Jobs](about_Thread_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="14b02-125">For more information about thread jobs, see [about_Thread_Jobs](about_Thread_Jobs.md).</span></span>
+<span data-ttu-id="c3352-120">Thread basierte Aufträge sind nicht so robust wie Remote-und Hintergrund Aufträge, da Sie in demselben Prozess in verschiedenen Threads ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-120">Thread-based jobs are not as robust as remote and background jobs, because they run in the same process on different threads.</span></span> <span data-ttu-id="c3352-121">Wenn bei einem Auftrag ein schwerwiegender Fehler auftritt, der den Prozess abstürzt, werden alle anderen Aufträge im Prozess beendet.</span><span class="sxs-lookup"><span data-stu-id="c3352-121">If one job has a critical error that crashes the process, then all other jobs in the process are terminated.</span></span>
 
-<span data-ttu-id="14b02-126">Wenn Sie einen Hintergrund Auftrag starten, wird die Eingabeaufforderung sofort zurückgegeben, auch wenn die Ausführung des Auftrags längere Zeit in Anspruch nimmt.</span><span class="sxs-lookup"><span data-stu-id="14b02-126">When you start a background job, the command prompt returns immediately, even if the job takes an extended time to complete.</span></span> <span data-ttu-id="14b02-127">Sie können ohne Unterbrechung in der Sitzung weiterarbeiten, während der Auftrag abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="14b02-127">You can continue to work in the session without interruption while the job runs.</span></span>
+<span data-ttu-id="c3352-122">Thread basierte Aufträge erfordern jedoch weniger Aufwand.</span><span class="sxs-lookup"><span data-stu-id="c3352-122">However, thread-based jobs require less overhead.</span></span> <span data-ttu-id="c3352-123">Sie verwenden nicht die Remoting-Schicht oder die Serialisierung.</span><span class="sxs-lookup"><span data-stu-id="c3352-123">They don't use the remoting layer or serialization.</span></span> <span data-ttu-id="c3352-124">Die Ergebnis Objekte werden als Verweise auf Live-Objekte in der aktuellen Sitzung zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="c3352-124">The result objects are returned as references to live objects in the current session.</span></span> <span data-ttu-id="c3352-125">Ohne diesen Aufwand werden Thread basierte Aufträge schneller ausgeführt und verbrauchen weniger Ressourcen als die anderen Auftrags Typen.</span><span class="sxs-lookup"><span data-stu-id="c3352-125">Without this overhead, thread-based jobs run faster and use fewer resources than the other job types.</span></span>
 
-## <a name="the-job-cmdlets"></a><span data-ttu-id="14b02-128">Die Job-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="14b02-128">The job cmdlets</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="c3352-126">In der übergeordneten Sitzung, mit der der Auftrag erstellt wurde, wird auch der Auftragsstatus überwacht und Pipeline Daten gesammelt.</span><span class="sxs-lookup"><span data-stu-id="c3352-126">The parent session that created the job also monitors the job status and collects pipeline data.</span></span> <span data-ttu-id="c3352-127">Der untergeordnete Prozess des Auftrags wird vom übergeordneten Prozess beendet, sobald der Auftrag den Status "abgeschlossen" erreicht hat.</span><span class="sxs-lookup"><span data-stu-id="c3352-127">The job child process is terminated by the parent process once the job reaches a finished state.</span></span> <span data-ttu-id="c3352-128">Wenn die übergeordnete Sitzung beendet wird, werden alle untergeordneten Aufträge zusammen mit ihren untergeordneten Prozessen beendet.</span><span class="sxs-lookup"><span data-stu-id="c3352-128">If the parent session is terminated, all running child jobs are terminated along with their child processes.</span></span>
 
-|<span data-ttu-id="14b02-129">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="14b02-129">Cmdlet</span></span>          |<span data-ttu-id="14b02-130">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="14b02-130">Description</span></span>                                            |
+<span data-ttu-id="c3352-129">Es gibt zwei Möglichkeiten, diese Situation zu umgehen:</span><span class="sxs-lookup"><span data-stu-id="c3352-129">There are two ways work around this situation:</span></span>
+
+1. <span data-ttu-id="c3352-130">Verwenden `Invoke-Command` Sie, um Aufträge zu erstellen, die in getrennten Sitzungen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-130">Use `Invoke-Command` to create jobs that run in disconnected sessions.</span></span> <span data-ttu-id="c3352-131">Weitere Informationen finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="c3352-131">For more information, see [about_Remote_Jobs](about_Remote_Jobs.md).</span></span>
+1. <span data-ttu-id="c3352-132">Verwenden `Start-Process` Sie, um anstelle eines Auftrags einen neuen Prozess zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="c3352-132">Use `Start-Process` to create a new process rather than a job.</span></span> <span data-ttu-id="c3352-133">Weitere Informationen finden Sie unter [Start-Process](xref:Microsoft.PowerShell.Management.Start-Process).</span><span class="sxs-lookup"><span data-stu-id="c3352-133">For more information, see [Start-Process](xref:Microsoft.PowerShell.Management.Start-Process).</span></span>
+
+## <a name="the-job-cmdlets"></a><span data-ttu-id="c3352-134">Die Job-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="c3352-134">The job cmdlets</span></span>
+
+|<span data-ttu-id="c3352-135">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="c3352-135">Cmdlet</span></span>          |<span data-ttu-id="c3352-136">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="c3352-136">Description</span></span>                                            |
 |----------------|-------------------------------------------------------|
-|`Start-Job`     |<span data-ttu-id="14b02-131">Startet einen Hintergrundauftrag auf einem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="14b02-131">Starts a background job on a local computer.</span></span>           |
-|`Get-Job`       |<span data-ttu-id="14b02-132">Ruft die Hintergrund Aufträge ab, die im</span><span class="sxs-lookup"><span data-stu-id="14b02-132">Gets the background jobs that were started in the</span></span>      |
-|                |<span data-ttu-id="14b02-133">aktuelle Sitzung.</span><span class="sxs-lookup"><span data-stu-id="14b02-133">current session.</span></span>                                       |
-|`Receive-Job`   |<span data-ttu-id="14b02-134">Ruft die Ergebnisse der Hintergrund Aufträge ab.</span><span class="sxs-lookup"><span data-stu-id="14b02-134">Gets the results of background jobs.</span></span>                   |
-|`Stop-Job`      |<span data-ttu-id="14b02-135">Beendet einen Hintergrund Auftrag.</span><span class="sxs-lookup"><span data-stu-id="14b02-135">Stops a background job.</span></span>                                |
-|`Wait-Job`      |<span data-ttu-id="14b02-136">Unterdrückt die Eingabeaufforderung, bis ein oder alle Aufträge</span><span class="sxs-lookup"><span data-stu-id="14b02-136">Suppresses the command prompt until one or all jobs are</span></span>|
-|                |<span data-ttu-id="14b02-137">ganz.</span><span class="sxs-lookup"><span data-stu-id="14b02-137">complete.</span></span>                                              |
-|`Remove-Job`    |<span data-ttu-id="14b02-138">Löscht einen Hintergrund Auftrag.</span><span class="sxs-lookup"><span data-stu-id="14b02-138">Deletes a background job.</span></span>                              |
-|`Invoke-Command`|<span data-ttu-id="14b02-139">Der **AsJob** -Parameter erstellt einen Hintergrund Auftrag auf einem</span><span class="sxs-lookup"><span data-stu-id="14b02-139">The **AsJob** parameter creates a background job on a</span></span>  |
-|                |<span data-ttu-id="14b02-140">Remote Computer.</span><span class="sxs-lookup"><span data-stu-id="14b02-140">remote computer.</span></span> <span data-ttu-id="14b02-141">Sie können `Invoke-Command` zum Ausführen von verwenden.</span><span class="sxs-lookup"><span data-stu-id="14b02-141">You can use `Invoke-Command` to run</span></span>   |
-|                |<span data-ttu-id="14b02-142">Alle Auftrags Befehle Remote, einschließlich `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-142">any job command remotely, including `Start-Job`.</span></span>       |
+|`Start-Job`     |<span data-ttu-id="c3352-137">Startet einen Hintergrundauftrag auf einem lokalen Computer.</span><span class="sxs-lookup"><span data-stu-id="c3352-137">Starts a background job on a local computer.</span></span>           |
+|`Get-Job`       |<span data-ttu-id="c3352-138">Ruft die Hintergrund Aufträge ab, die im</span><span class="sxs-lookup"><span data-stu-id="c3352-138">Gets the background jobs that were started in the</span></span>      |
+|                |<span data-ttu-id="c3352-139">aktuelle Sitzung.</span><span class="sxs-lookup"><span data-stu-id="c3352-139">current session.</span></span>                                       |
+|`Receive-Job`   |<span data-ttu-id="c3352-140">Ruft die Ergebnisse der Hintergrund Aufträge ab.</span><span class="sxs-lookup"><span data-stu-id="c3352-140">Gets the results of background jobs.</span></span>                   |
+|`Stop-Job`      |<span data-ttu-id="c3352-141">Beendet einen Hintergrund Auftrag.</span><span class="sxs-lookup"><span data-stu-id="c3352-141">Stops a background job.</span></span>                                |
+|`Wait-Job`      |<span data-ttu-id="c3352-142">Unterdrückt die Eingabeaufforderung, bis ein oder alle Aufträge</span><span class="sxs-lookup"><span data-stu-id="c3352-142">Suppresses the command prompt until one or all jobs are</span></span>|
+|                |<span data-ttu-id="c3352-143">ganz.</span><span class="sxs-lookup"><span data-stu-id="c3352-143">complete.</span></span>                                              |
+|`Remove-Job`    |<span data-ttu-id="c3352-144">Löscht einen Hintergrund Auftrag.</span><span class="sxs-lookup"><span data-stu-id="c3352-144">Deletes a background job.</span></span>                              |
+|`Invoke-Command`|<span data-ttu-id="c3352-145">Der **AsJob** -Parameter erstellt einen Hintergrund Auftrag auf einem</span><span class="sxs-lookup"><span data-stu-id="c3352-145">The **AsJob** parameter creates a background job on a</span></span>  |
+|                |<span data-ttu-id="c3352-146">Remote Computer.</span><span class="sxs-lookup"><span data-stu-id="c3352-146">remote computer.</span></span> <span data-ttu-id="c3352-147">Sie können `Invoke-Command` zum Ausführen von verwenden.</span><span class="sxs-lookup"><span data-stu-id="c3352-147">You can use `Invoke-Command` to run</span></span>   |
+|                |<span data-ttu-id="c3352-148">Alle Auftrags Befehle Remote, einschließlich `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="c3352-148">any job command remotely, including `Start-Job`.</span></span>       |
 
-## <a name="how-to-start-a-job-on-the-local-computer"></a><span data-ttu-id="14b02-143">Starten eines Auftrags auf dem lokalen Computer</span><span class="sxs-lookup"><span data-stu-id="14b02-143">How to start a job on the local computer</span></span>
+## <a name="how-to-start-a-job-on-the-local-computer"></a><span data-ttu-id="c3352-149">Starten eines Auftrags auf dem lokalen Computer</span><span class="sxs-lookup"><span data-stu-id="c3352-149">How to start a job on the local computer</span></span>
 
-<span data-ttu-id="14b02-144">Verwenden Sie das-Cmdlet, um einen Hintergrund Auftrag auf dem lokalen Computer zu starten `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-144">To start a background job on the local computer, use the `Start-Job` cmdlet.</span></span>
+<span data-ttu-id="c3352-150">Verwenden Sie das-Cmdlet, um einen Hintergrund Auftrag auf dem lokalen Computer zu starten `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="c3352-150">To start a background job on the local computer, use the `Start-Job` cmdlet.</span></span>
 
-<span data-ttu-id="14b02-145">Um einen Befehl zu schreiben `Start-Job` , schließen Sie den Befehl ein, dass der Auftrag in geschweiften Klammern () ausgeführt wird `{}` .</span><span class="sxs-lookup"><span data-stu-id="14b02-145">To write a `Start-Job` command, enclose the command that the job runs in curly braces (`{}`).</span></span> <span data-ttu-id="14b02-146">Verwenden Sie den **ScriptBlock** -Parameter, um den Befehl anzugeben.</span><span class="sxs-lookup"><span data-stu-id="14b02-146">Use the **ScriptBlock** parameter to specify the command.</span></span>
+<span data-ttu-id="c3352-151">Um einen Befehl zu schreiben `Start-Job` , schließen Sie den Befehl ein, dass der Auftrag in geschweiften Klammern () ausgeführt wird `{}` .</span><span class="sxs-lookup"><span data-stu-id="c3352-151">To write a `Start-Job` command, enclose the command that the job runs in curly braces (`{}`).</span></span> <span data-ttu-id="c3352-152">Verwenden Sie den **ScriptBlock** -Parameter, um den Befehl anzugeben.</span><span class="sxs-lookup"><span data-stu-id="c3352-152">Use the **ScriptBlock** parameter to specify the command.</span></span>
 
-<span data-ttu-id="14b02-147">Der folgende Befehl startet einen Hintergrund Auftrag, der einen `Get-Process` Befehl auf dem lokalen Computer ausführt.</span><span class="sxs-lookup"><span data-stu-id="14b02-147">The following command starts a background job that runs a `Get-Process` command on the local computer.</span></span>
+<span data-ttu-id="c3352-153">Der folgende Befehl startet einen Hintergrund Auftrag, der einen `Get-Process` Befehl auf dem lokalen Computer ausführt.</span><span class="sxs-lookup"><span data-stu-id="c3352-153">The following command starts a background job that runs a `Get-Process` command on the local computer.</span></span>
 
 ```powershell
 Start-Job -ScriptBlock {Get-Process}
 ```
 
-<span data-ttu-id="14b02-148">Der `Start-Job` Befehl gibt ein Objekt zurück, das den Auftrag darstellt.</span><span class="sxs-lookup"><span data-stu-id="14b02-148">The `Start-Job` command returns an object that represents the job.</span></span> <span data-ttu-id="14b02-149">Das Auftragsobjekt enthält nützliche Informationen zum Auftrag, aber keine Auftragsergebnisse.</span><span class="sxs-lookup"><span data-stu-id="14b02-149">The job object contains useful information about the job, but it does not contain the job results.</span></span>
+<span data-ttu-id="c3352-154">Wenn Sie einen Hintergrund Auftrag starten, wird die Eingabeaufforderung sofort zurückgegeben, auch wenn die Ausführung des Auftrags längere Zeit in Anspruch nimmt.</span><span class="sxs-lookup"><span data-stu-id="c3352-154">When you start a background job, the command prompt returns immediately, even if the job takes an extended time to complete.</span></span> <span data-ttu-id="c3352-155">Sie können ohne Unterbrechung in der Sitzung weiterarbeiten, während der Auftrag abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="c3352-155">You can continue to work in the session without interruption while the job runs.</span></span>
 
-<span data-ttu-id="14b02-150">Speichern Sie das Auftrags Objekt in einer Variablen, und verwenden Sie es dann mit den anderen Auftrags-Cmdlets, um den Hintergrund Auftrag zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-150">Save the job object in a variable, and then use it with the other Job cmdlets to manage the background job.</span></span> <span data-ttu-id="14b02-151">Der folgende Befehl startet ein Auftrags Objekt und speichert das resultierende Auftrags Objekt in der `$job` Variablen.</span><span class="sxs-lookup"><span data-stu-id="14b02-151">The following command starts a job object and saves the resulting job object in the `$job` variable.</span></span>
+<span data-ttu-id="c3352-156">Der `Start-Job` Befehl gibt ein Objekt zurück, das den Auftrag darstellt.</span><span class="sxs-lookup"><span data-stu-id="c3352-156">The `Start-Job` command returns an object that represents the job.</span></span> <span data-ttu-id="c3352-157">Das Auftragsobjekt enthält nützliche Informationen zum Auftrag, aber keine Auftragsergebnisse.</span><span class="sxs-lookup"><span data-stu-id="c3352-157">The job object contains useful information about the job, but it does not contain the job results.</span></span>
+
+<span data-ttu-id="c3352-158">Sie können das Auftrags Objekt in einer Variablen speichern und dann mit den anderen **Auftrags** -Cmdlets verwenden, um den Hintergrund Auftrag zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="c3352-158">You can save the job object in a variable and then use it with the other **Job** cmdlets to manage the background job.</span></span> <span data-ttu-id="c3352-159">Der folgende Befehl startet ein Auftrags Objekt und speichert das resultierende Auftrags Objekt in der `$job` Variablen.</span><span class="sxs-lookup"><span data-stu-id="c3352-159">The following command starts a job object and saves the resulting job object in the `$job` variable.</span></span>
 
 ```powershell
 $job = Start-Job -ScriptBlock {Get-Process}
 ```
 
-<span data-ttu-id="14b02-152">Ab PowerShell 6,0 können Sie einen "amersand ()" `&` am Ende einer Pipeline verwenden, um einen Hintergrund Auftrag zu starten.</span><span class="sxs-lookup"><span data-stu-id="14b02-152">Beginning in PowerShell 6.0, you can use an amersand (`&`) at the end of a pipeline to start a background job.</span></span> <span data-ttu-id="14b02-153">Der folgende Befehl ist funktional äquivalent zum obigen Befehl.</span><span class="sxs-lookup"><span data-stu-id="14b02-153">The following command is functionally equivalent to the command above.</span></span>
+<span data-ttu-id="c3352-160">Ab PowerShell 6,0 können Sie den Hintergrund Operator ( `&` ) am Ende einer Pipeline verwenden, um einen Hintergrund Auftrag zu starten.</span><span class="sxs-lookup"><span data-stu-id="c3352-160">Beginning in PowerShell 6.0, you can use the background operator (`&`) at the end of a pipeline to start a background job.</span></span> <span data-ttu-id="c3352-161">Weitere Informationen finden Sie unter [Background-Operator](about_Operators.md#background-operator-).</span><span class="sxs-lookup"><span data-stu-id="c3352-161">For more information, see [background operator](about_Operators.md#background-operator-).</span></span>
+
+<span data-ttu-id="c3352-162">Die Verwendung des Background-Operators ist funktional äquivalent zur Verwendung des- `Start-Job` Cmdlets im vorherigen Beispiel.</span><span class="sxs-lookup"><span data-stu-id="c3352-162">Using the background operator is functionally equivalent to using the `Start-Job` cmdlet in the previous example.</span></span>
 
 ```powershell
 $job = Get-Process &
 ```
 
-<span data-ttu-id="14b02-154">Das kaufmännische und-( `&` ) wird als Background-Operator bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="14b02-154">The ampersand (`&`) is called the background operator.</span></span> <span data-ttu-id="14b02-155">Weitere Informationen finden Sie unter [Background-Operator](about_Operators.md#background-operator-).</span><span class="sxs-lookup"><span data-stu-id="14b02-155">For more information, see [background operator](about_Operators.md#background-operator-).</span></span>
+## <a name="getting-job-objects"></a><span data-ttu-id="c3352-163">Auftrags Objekte werden erhalten.</span><span class="sxs-lookup"><span data-stu-id="c3352-163">Getting job objects</span></span>
 
-<span data-ttu-id="14b02-156">Sie können auch das- `Get-Job` Cmdlet verwenden, um Objekte zu erhalten, die die in der aktuellen Sitzung gestarteten Aufträge darstellen.</span><span class="sxs-lookup"><span data-stu-id="14b02-156">You can also use the `Get-Job` cmdlet to get objects that represent the jobs started in the current session.</span></span> <span data-ttu-id="14b02-157">`Get-Job` Gibt das gleiche Auftrags Objekt zurück, das `Start-Job` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="14b02-157">`Get-Job` returns the same job object that `Start-Job` returns.</span></span>
-
-## <a name="getting-job-objects"></a><span data-ttu-id="14b02-158">Auftrags Objekte werden erhalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-158">Getting job objects</span></span>
-
-<span data-ttu-id="14b02-159">Verwenden Sie das-Cmdlet, um ein Objekt zu erhalten, das die Hintergrund Aufträge darstellt, die in der aktuellen Sitzung gestartet wurden `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-159">To get object that represent the background jobs that were started in the current session, use the `Get-Job` cmdlet.</span></span> <span data-ttu-id="14b02-160">Ohne Parameter `Get-Job` gibt alle Aufträge zurück, die in der aktuellen Sitzung gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="14b02-160">Without parameters, `Get-Job` returns all of the jobs that were started in the current session.</span></span>
-
-<span data-ttu-id="14b02-161">Beispielsweise ruft der folgende Befehl die Aufträge in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="14b02-161">For example, the following command gets the jobs in the current session.</span></span>
-
-```powershell
-PS C:> Get-Job
-
-Id  Name  PSJobTypeName State      HasMoreData  Location   Command
---  ----  ------------- -----      -----------  --------   -------
-1   Job1  BackgroundJob Running    True         localhost  Get-Process
-```
-
-<span data-ttu-id="14b02-162">Sie können auch das Auftrags Objekt in einer Variablen speichern und es verwenden, um den Auftrag in einem späteren Befehl darzustellen.</span><span class="sxs-lookup"><span data-stu-id="14b02-162">You can also save the job object in a variable and use it to represent the job in a later command.</span></span> <span data-ttu-id="14b02-163">Mit dem folgenden Befehl wird der Auftrag mit der ID 1 abgerufen und in der `$job` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="14b02-163">The following command gets the job with ID 1 and saves it in the `$job` variable.</span></span>
-
-```powershell
-$job = Get-Job -Id 1
-```
-
-<span data-ttu-id="14b02-164">Das Auftrags Objekt enthält den Status des Auftrags, der angibt, ob der Auftrag abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="14b02-164">The job object contains the state of the job, which indicates whether the job has finished.</span></span> <span data-ttu-id="14b02-165">Ein fertiggestelltes Auftrag hat den Status " **abgeschlossen** " oder " **failed** ".</span><span class="sxs-lookup"><span data-stu-id="14b02-165">A finished job has a state of **Complete** or **Failed**.</span></span> <span data-ttu-id="14b02-166">Ein Auftrag kann auch **blockiert** werden oder **ausgeführt** werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-166">A job might also be **blocked** or **running**.</span></span>
+<span data-ttu-id="c3352-164">Das- `Get-Job` Cmdlet gibt Objekte zurück, die die Hintergrund Aufträge darstellen, die in der aktuellen Sitzung gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="c3352-164">The `Get-Job` cmdlet returns objects that represent the background jobs that were started in the current session.</span></span> <span data-ttu-id="c3352-165">Ohne Parameter `Get-Job` gibt alle Aufträge zurück, die in der aktuellen Sitzung gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="c3352-165">Without parameters, `Get-Job` returns all of the jobs that were started in the current session.</span></span>
 
 ```powershell
 Get-Job
+```
 
+<span data-ttu-id="c3352-166">Das Auftrags Objekt enthält den Status des Auftrags, der angibt, ob der Auftrag abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="c3352-166">The job object contains the state of the job, which indicates whether the job has finished.</span></span> <span data-ttu-id="c3352-167">Ein fertiggestelltes Auftrag hat den Status " **abgeschlossen** " oder " **failed** ".</span><span class="sxs-lookup"><span data-stu-id="c3352-167">A finished job has a state of **Complete** or **Failed**.</span></span> <span data-ttu-id="c3352-168">Ein Auftrag kann auch **blockiert** werden oder **ausgeführt** werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-168">A job might also be **Blocked** or **Running**.</span></span>
+
+```Output
 Id  Name  PSJobTypeName State      HasMoreData  Location   Command
 --  ----  ------------- -----      -----------  --------   -------
 1   Job1  BackgroundJob Complete   True         localhost  Get-Process
 ```
 
-## <a name="getting-the-results-of-a-job"></a><span data-ttu-id="14b02-167">Erhalten der Ergebnisse eines Auftrags</span><span class="sxs-lookup"><span data-stu-id="14b02-167">Getting the results of a job</span></span>
+<span data-ttu-id="c3352-169">Sie können das Auftrags Objekt in einer Variablen speichern und es verwenden, um den Auftrag in einem späteren Befehl darzustellen.</span><span class="sxs-lookup"><span data-stu-id="c3352-169">You can save the job object in a variable and use it to represent the job in a later command.</span></span> <span data-ttu-id="c3352-170">Mit dem folgenden Befehl wird der Auftrag mit der ID 1 abgerufen und in der `$job` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="c3352-170">The following command gets the job with ID 1 and saves it in the `$job` variable.</span></span>
 
-<span data-ttu-id="14b02-168">Wenn Sie einen Hintergrund Auftrag ausführen, werden die Ergebnisse nicht sofort angezeigt.</span><span class="sxs-lookup"><span data-stu-id="14b02-168">When you run a background job, the results do not appear immediately.</span></span> <span data-ttu-id="14b02-169">Stattdessen gibt das `Start-Job` Cmdlet ein Auftrags Objekt zurück, das den Auftrag darstellt, aber die Ergebnisse nicht enthält.</span><span class="sxs-lookup"><span data-stu-id="14b02-169">Instead, the `Start-Job` cmdlet returns a job object that represents the job, but it does not contain the results.</span></span> <span data-ttu-id="14b02-170">Verwenden Sie das-Cmdlet, um die Ergebnisse eines Hintergrund Auftrags zu erhalten `Receive-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-170">To get the results of a background job, use the `Receive-Job` cmdlet.</span></span>
+```powershell
+$job = Get-Job -Id 1
+```
 
-<span data-ttu-id="14b02-171">Der folgende Befehl verwendet das `Receive-Job` Cmdlet, um die Ergebnisse des Auftrags zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-171">The following command uses the `Receive-Job` cmdlet to get the results of the job.</span></span> <span data-ttu-id="14b02-172">Es verwendet ein in der Variablen gespeichertes Auftrags Objekt `$job` , um den Auftrag zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="14b02-172">It uses a job object saved in the `$job` variable to identify the job.</span></span>
+## <a name="getting-the-results-of-a-job"></a><span data-ttu-id="c3352-171">Erhalten der Ergebnisse eines Auftrags</span><span class="sxs-lookup"><span data-stu-id="c3352-171">Getting the results of a job</span></span>
+
+<span data-ttu-id="c3352-172">Wenn Sie einen Hintergrund Auftrag ausführen, werden die Ergebnisse nicht sofort angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c3352-172">When you run a background job, the results do not appear immediately.</span></span> <span data-ttu-id="c3352-173">Verwenden Sie das-Cmdlet, um die Ergebnisse eines Hintergrund Auftrags zu erhalten `Receive-Job` .</span><span class="sxs-lookup"><span data-stu-id="c3352-173">To get the results of a background job, use the `Receive-Job` cmdlet.</span></span>
+
+<span data-ttu-id="c3352-174">Im folgenden Beispiel ruft das `Receive-Job` Cmdlet die Ergebnisse des Auftrags mithilfe des Auftrags Objekts in der `$job` Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="c3352-174">The following example, the `Receive-Job` cmdlet gets the results of the job using job object in the `$job` variable.</span></span>
 
 ```powershell
 Receive-Job -Job $job
 ```
 
-<span data-ttu-id="14b02-173">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse des Auftrags zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="14b02-173">The `Receive-Job` cmdlet returns the results of the job.</span></span>
-
-```
+```Output
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)    Id ProcessName
 -------  ------    -----      ----- -----   ------    -- -----------
     103       4    11328       9692    56           1176 audiodg
     804      14    12228      14108   100   101.74  1740 CcmExec
     668       7     2672       6168   104    32.26   488 csrss
-# ...
+...
 ```
 
-<span data-ttu-id="14b02-174">Sie können auch die Ergebnisse eines Auftrags in einer Variablen speichern.</span><span class="sxs-lookup"><span data-stu-id="14b02-174">You can also save the results of a job in a variable.</span></span> <span data-ttu-id="14b02-175">Der folgende Befehl speichert die Ergebnisse des Auftrags in der `$job` Variablen in der `$results` Variablen.</span><span class="sxs-lookup"><span data-stu-id="14b02-175">The following command saves the results of the job in the `$job` variable to the `$results` variable.</span></span>
+<span data-ttu-id="c3352-175">Sie können die Ergebnisse eines Auftrags in einer Variablen speichern.</span><span class="sxs-lookup"><span data-stu-id="c3352-175">You can save the results of a job in a variable.</span></span> <span data-ttu-id="c3352-176">Der folgende Befehl speichert die Ergebnisse des Auftrags in der `$job` Variablen in der `$results` Variablen.</span><span class="sxs-lookup"><span data-stu-id="c3352-176">The following command saves the results of the job in the `$job` variable to the `$results` variable.</span></span>
 
 ```powershell
 $results = Receive-Job -Job $job
 ```
 
-<span data-ttu-id="14b02-176">Außerdem können Sie die Ergebnisse des Auftrags in einer Datei speichern, indem Sie den Umleitungs Operator ( `>` ) oder das `Out-File` Cmdlet verwenden.</span><span class="sxs-lookup"><span data-stu-id="14b02-176">And, you can save the results of the job in a file by using the redirection operator (`>`) or the `Out-File` cmdlet.</span></span> <span data-ttu-id="14b02-177">Der folgende Befehl verwendet den Redirect-Operator, um die Ergebnisse des Auftrags in der- `$job` Variable in der-Datei zu speichern `Results.txt` .</span><span class="sxs-lookup"><span data-stu-id="14b02-177">The following command uses the redirection operator to save the results of the job in the `$job` variable in the `Results.txt` file.</span></span>
+### <a name="getting-and-keeping-partial-job-results"></a><span data-ttu-id="c3352-177">Erhalten und Aufbewahren von partiellen Auftrags Ergebnissen</span><span class="sxs-lookup"><span data-stu-id="c3352-177">Getting and keeping partial job results</span></span>
 
-```powershell
-Receive-Job -Job $job > results.txt
-```
+<span data-ttu-id="c3352-178">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse eines Hintergrund Auftrags abgerufen.</span><span class="sxs-lookup"><span data-stu-id="c3352-178">The `Receive-Job` cmdlet gets the results of a background job.</span></span> <span data-ttu-id="c3352-179">Wenn der Auftrag vollständig ist, werden `Receive-Job` alle Auftrags Ergebnisse abgerufen.</span><span class="sxs-lookup"><span data-stu-id="c3352-179">If the job is complete, `Receive-Job` gets all job results.</span></span> <span data-ttu-id="c3352-180">Wenn der Auftrag noch ausgeführt wird, ruft `Receive-Job` die bisher generierten Ergebnisse ab.</span><span class="sxs-lookup"><span data-stu-id="c3352-180">If the job is still running, `Receive-Job` gets the results that have been generated thus far.</span></span> <span data-ttu-id="c3352-181">Sie können `Receive-Job` Befehle erneut ausführen, um die verbleibenden Ergebnisse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="c3352-181">You can run `Receive-Job` commands again to get the remaining results.</span></span>
 
-## <a name="getting-and-keeping-partial-job-results"></a><span data-ttu-id="14b02-178">Erhalten und Aufbewahren von partiellen Auftrags Ergebnissen</span><span class="sxs-lookup"><span data-stu-id="14b02-178">Getting and keeping partial job results</span></span>
+<span data-ttu-id="c3352-182">Standardmäßig `Receive-Job` werden die Ergebnisse aus dem Cache gelöscht, in denen Auftrags Ergebnisse gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-182">By default, `Receive-Job` deletes the results from the cache where job results are stored.</span></span> <span data-ttu-id="c3352-183">Wenn Sie `Receive-Job` erneut ausführen, erhalten Sie nur die neuen Ergebnisse, die nach der ersten Ausführung eingetroffen sind.</span><span class="sxs-lookup"><span data-stu-id="c3352-183">When you run `Receive-Job` again, you get only the new results that arrived after the first run.</span></span>
 
-<span data-ttu-id="14b02-179">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse eines Hintergrund Auftrags abgerufen.</span><span class="sxs-lookup"><span data-stu-id="14b02-179">The `Receive-Job` cmdlet gets the results of a background job.</span></span> <span data-ttu-id="14b02-180">Wenn der Auftrag vollständig ist, werden `Receive-Job` alle Auftrags Ergebnisse abgerufen.</span><span class="sxs-lookup"><span data-stu-id="14b02-180">If the job is complete, `Receive-Job` gets all job results.</span></span> <span data-ttu-id="14b02-181">Wenn der Auftrag noch ausgeführt wird, ruft `Receive-Job` die bisher generierten Ergebnisse ab.</span><span class="sxs-lookup"><span data-stu-id="14b02-181">If the job is still running, `Receive-Job` gets the results that have been generated thus far.</span></span> <span data-ttu-id="14b02-182">Sie können `Receive-Job` Befehle erneut ausführen, um die verbleibenden Ergebnisse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-182">You can run `Receive-Job` commands again to get the remaining results.</span></span>
-
-<span data-ttu-id="14b02-183">Wenn `Receive-Job` Ergebnisse zurückgibt, werden diese Ergebnisse standardmäßig aus dem Cache gelöscht, in dem Auftrags Ergebnisse gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-183">When `Receive-Job` returns results, by default, it deletes those results from the cache where job results are stored.</span></span> <span data-ttu-id="14b02-184">Wenn Sie einen anderen `Receive-Job` Befehl ausführen, werden nur die Ergebnisse angezeigt, die noch nicht empfangen wurden.</span><span class="sxs-lookup"><span data-stu-id="14b02-184">If you run another `Receive-Job` command, you get only the results that are not yet received.</span></span>
-
-<span data-ttu-id="14b02-185">Die folgenden Befehle zeigen die Ergebnisse von `Receive-Job` Befehlen, die vor Abschluss des Auftrags ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-185">The following commands show the results of `Receive-Job` commands run before the job is complete.</span></span>
+<span data-ttu-id="c3352-184">Die folgenden Befehle zeigen die Ergebnisse von `Receive-Job` Befehlen, die vor Abschluss des Auftrags ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-184">The following commands show the results of `Receive-Job` commands run before the job is complete.</span></span>
 
 ```powershell
 C:\PS> Receive-Job -Job $job
@@ -171,9 +159,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
   1121      25    28408      32940   174   430.14   3048 explorer
 ```
 
-<span data-ttu-id="14b02-186">`Receive-Job`Verwenden Sie den **Keep** -Parameter, um zu verhindern, dass die zurückgegebenen Auftrags Ergebnisse gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="14b02-186">To prevent `Receive-Job` from deleting the job results that it has returned, use the **Keep** parameter.</span></span> <span data-ttu-id="14b02-187">Folglich `Receive-Job` gibt alle Ergebnisse zurück, die bis zu diesem Zeitpunkt generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="14b02-187">As a result, `Receive-Job` returns all of the results that have been generated until that time.</span></span>
-
-<span data-ttu-id="14b02-188">Die folgenden Befehle zeigen die Auswirkung der Verwendung des **Keep** -Parameters auf einen Auftrag, der noch nicht beendet ist.</span><span class="sxs-lookup"><span data-stu-id="14b02-188">The following commands show the effect of using the **Keep** parameter on a job that is not yet complete.</span></span>
+<span data-ttu-id="c3352-185">Verwenden Sie den **Keep** -Parameter, um zu verhindern, `Receive-Job` dass die zurückgegebenen Auftrags Ergebnisse gelöscht werden.</span><span class="sxs-lookup"><span data-stu-id="c3352-185">Use the **Keep** parameter to prevent `Receive-Job` from deleting the job results that are returned.</span></span> <span data-ttu-id="c3352-186">Die folgenden Befehle zeigen die Auswirkung der Verwendung des **Keep** -Parameters auf einen Auftrag, der noch nicht beendet ist.</span><span class="sxs-lookup"><span data-stu-id="c3352-186">The following commands show the effect of using the **Keep** parameter on a job that is not yet complete.</span></span>
 
 ```powershell
 C:\PS> Receive-Job -Job $job -Keep
@@ -195,17 +181,17 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
    1121      25    28408      32940   174   430.14   3048 explorer
 ```
 
-## <a name="waiting-for-the-results"></a><span data-ttu-id="14b02-189">Warten auf die Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="14b02-189">Waiting for the results</span></span>
+### <a name="waiting-for-the-results"></a><span data-ttu-id="c3352-187">Warten auf die Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="c3352-187">Waiting for the results</span></span>
 
-<span data-ttu-id="14b02-190">Wenn Sie einen Befehl ausführen, der eine lange Zeit in Anspruch nimmt, können Sie die Eigenschaften des Auftrags Objekts verwenden, um zu bestimmen, wann der Auftrag beendet ist.</span><span class="sxs-lookup"><span data-stu-id="14b02-190">If you run a command that takes a long time to complete, you can use the properties of the job object to determine when the job is complete.</span></span> <span data-ttu-id="14b02-191">Der folgende Befehl verwendet das- `Get-Job` Objekt, um alle Hintergrund Aufträge in der aktuellen Sitzung zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-191">The following command uses the `Get-Job` object to get all of the background jobs in the current session.</span></span>
+<span data-ttu-id="c3352-188">Wenn Sie einen Befehl ausführen, der eine lange Zeit in Anspruch nimmt, können Sie die Eigenschaften des Auftrags Objekts verwenden, um zu bestimmen, wann der Auftrag beendet ist.</span><span class="sxs-lookup"><span data-stu-id="c3352-188">If you run a command that takes a long time to complete, you can use the properties of the job object to determine when the job is complete.</span></span> <span data-ttu-id="c3352-189">Der folgende Befehl verwendet das- `Get-Job` Objekt, um alle Hintergrund Aufträge in der aktuellen Sitzung zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="c3352-189">The following command uses the `Get-Job` object to get all of the background jobs in the current session.</span></span>
 
 ```powershell
 Get-Job
 ```
 
-<span data-ttu-id="14b02-192">Die Ergebnisse werden in einer Tabelle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="14b02-192">The results appear in a table.</span></span> <span data-ttu-id="14b02-193">Der Status des Auftrags wird in der Spalte **Bundesstaat** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="14b02-193">The status of the job appears in the **State** column.</span></span>
+<span data-ttu-id="c3352-190">Die Ergebnisse werden in einer Tabelle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c3352-190">The results appear in a table.</span></span> <span data-ttu-id="c3352-191">Der Status des Auftrags wird in der Spalte **Bundesstaat** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c3352-191">The status of the job appears in the **State** column.</span></span>
 
-```
+```Output
 Id Name  PSJobTypeName State    HasMoreData Location  Command
 -- ----  ------------- -----    ----------- --------  -------
 1  Job1  BackgroundJob Complete True        localhost Get-Process
@@ -213,86 +199,84 @@ Id Name  PSJobTypeName State    HasMoreData Location  Command
 3  Job3  BackgroundJob Complete True        localhost dir -Path C:\* -Re...
 ```
 
-<span data-ttu-id="14b02-194">In diesem Fall zeigt die State-Eigenschaft an, dass Auftrag 2 noch ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="14b02-194">In this case, the State property reveals that Job 2 is still running.</span></span> <span data-ttu-id="14b02-195">Wenn Sie das `Receive-Job` Cmdlet verwenden, um die Auftrags Ergebnisse jetzt zu erhalten, sind die Ergebnisse unvollständig.</span><span class="sxs-lookup"><span data-stu-id="14b02-195">If you were to use the `Receive-Job` cmdlet to get the job results now, the results would be incomplete.</span></span> <span data-ttu-id="14b02-196">Sie können das `Receive-Job` Cmdlet wiederholt verwenden, um alle Ergebnisse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-196">You can use the `Receive-Job` cmdlet repeatedly to get all of the results.</span></span> <span data-ttu-id="14b02-197">Standardmäßig erhalten Sie jedes Mal, wenn Sie Sie verwenden, nur die Ergebnisse, die nicht bereits empfangen wurden, aber Sie können den **Keep** -Parameter des `Receive-Job` Cmdlets verwenden, um die Ergebnisse beizubehalten, auch wenn Sie bereits empfangen wurden.</span><span class="sxs-lookup"><span data-stu-id="14b02-197">By default, each time you use it, you get only the results that were not already received, but you can use the **Keep** parameter of the `Receive-Job` cmdlet to retain the results, even though they were already received.</span></span>
+<span data-ttu-id="c3352-192">In diesem Fall zeigt die **State** -Eigenschaft an, dass Auftrag 2 noch ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c3352-192">In this case, the **State** property reveals that Job 2 is still running.</span></span> <span data-ttu-id="c3352-193">Wenn Sie das `Receive-Job` Cmdlet verwenden, um die Auftrags Ergebnisse jetzt zu erhalten, sind die Ergebnisse unvollständig.</span><span class="sxs-lookup"><span data-stu-id="c3352-193">If you were to use the `Receive-Job` cmdlet to get the job results now, the results would be incomplete.</span></span> <span data-ttu-id="c3352-194">Sie können das `Receive-Job` Cmdlet wiederholt verwenden, um alle Ergebnisse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="c3352-194">You can use the `Receive-Job` cmdlet repeatedly to get all of the results.</span></span> <span data-ttu-id="c3352-195">Verwenden Sie die **State** -Eigenschaft, um zu bestimmen, wann der Auftrag beendet ist.</span><span class="sxs-lookup"><span data-stu-id="c3352-195">Use the **State** property to determine when the job is complete.</span></span>
 
-<span data-ttu-id="14b02-198">Sie können die partiellen Ergebnisse in eine Datei schreiben und dann neue Ergebnisse beim Eintreffen anfügen, oder Sie können warten und den Status des Auftrags später überprüfen.</span><span class="sxs-lookup"><span data-stu-id="14b02-198">You can write the partial results to a file and then append newer results as they arrive or you can wait and check the state of the job later.</span></span>
+<span data-ttu-id="c3352-196">Sie können auch den **Wait** -Parameter des `Receive-Job` Cmdlets verwenden.</span><span class="sxs-lookup"><span data-stu-id="c3352-196">You can also use the **Wait** parameter of the `Receive-Job` cmdlet.</span></span> <span data-ttu-id="c3352-197">Wenn Sie diesen Parameter verwenden, gibt das Cmdlet erst dann die Eingabeaufforderung zurück, wenn der Auftrag abgeschlossen ist und alle Ergebnisse verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="c3352-197">When use use this parameter, the cmdlet does not return the command prompt until the job is completed and all results are available.</span></span>
 
-<span data-ttu-id="14b02-199">Sie können den **Wait** -Parameter des `Receive-Job` Cmdlets verwenden, das die Eingabeaufforderung nicht zurückgibt, bis der Auftrag vollständig ist und alle Ergebnisse verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="14b02-199">You can use the **Wait** parameter of the `Receive-Job` cmdlet, which does not return the command prompt until the job is complete and all results are available.</span></span>
-
-<span data-ttu-id="14b02-200">Sie können auch das- `Wait-Job` Cmdlet verwenden, um auf ein oder alle Ergebnisse des Auftrags zu warten.</span><span class="sxs-lookup"><span data-stu-id="14b02-200">You can also use the `Wait-Job` cmdlet to wait for any or all of the results of the job.</span></span> <span data-ttu-id="14b02-201">`Wait-Job` Hiermit können Sie auf einen bestimmten Auftrag, auf alle Aufträge oder auf den Abschluss eines der Aufträge warten.</span><span class="sxs-lookup"><span data-stu-id="14b02-201">`Wait-Job` lets you wait for a particular job, for all jobs, or for any of the jobs to be completed.</span></span>
-
-<span data-ttu-id="14b02-202">Der folgende Befehl verwendet das `Wait-Job` Cmdlet, um auf einen Auftrag mit der **ID** zu warten.</span><span class="sxs-lookup"><span data-stu-id="14b02-202">The following command uses the `Wait-Job` cmdlet to wait for a job with **ID**</span></span>
+<span data-ttu-id="c3352-198">Sie können auch das- `Wait-Job` Cmdlet verwenden, um auf ein oder alle Ergebnisse des Auftrags zu warten.</span><span class="sxs-lookup"><span data-stu-id="c3352-198">You can also use the `Wait-Job` cmdlet to wait for any or all of the results of the job.</span></span> <span data-ttu-id="c3352-199">`Wait-Job` ermöglicht das warten auf einen oder mehrere bestimmte Aufträge oder auf alle Aufträge.</span><span class="sxs-lookup"><span data-stu-id="c3352-199">`Wait-Job` lets you wait for one or more specific job or for all jobs.</span></span>
+<span data-ttu-id="c3352-200">Der folgende Befehl verwendet das `Wait-Job` Cmdlet, um auf einen Auftrag mit der **ID** zu warten.</span><span class="sxs-lookup"><span data-stu-id="c3352-200">The following command uses the `Wait-Job` cmdlet to wait for a job with **ID**</span></span>
 10.
 
 ```powershell
 Wait-Job -ID 10
 ```
 
-<span data-ttu-id="14b02-203">Folglich wird die PowerShell-Eingabeaufforderung unterdrückt, bis der Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="14b02-203">As a result, the PowerShell prompt is suppressed until the job is completed.</span></span>
+<span data-ttu-id="c3352-201">Folglich wird die PowerShell-Eingabeaufforderung unterdrückt, bis der Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="c3352-201">As a result, the PowerShell prompt is suppressed until the job is completed.</span></span>
 
-<span data-ttu-id="14b02-204">Sie können auch einen vordefinierten Zeitraum warten.</span><span class="sxs-lookup"><span data-stu-id="14b02-204">You can also wait for a predetermined period of time.</span></span> <span data-ttu-id="14b02-205">Dieser Befehl verwendet den **Timeout** -Parameter, um die Wartezeit auf 120 Sekunden einzuschränken.</span><span class="sxs-lookup"><span data-stu-id="14b02-205">This command uses the **Timeout** parameter to limit the wait to 120 seconds.</span></span> <span data-ttu-id="14b02-206">Wenn die Zeit abläuft, wird die Eingabeaufforderung zurückgegeben, aber der Auftrag wird weiterhin im Hintergrund ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="14b02-206">When the time expires, the command prompt returns, but the job continues to run in the background.</span></span>
+<span data-ttu-id="c3352-202">Sie können auch einen vordefinierten Zeitraum warten.</span><span class="sxs-lookup"><span data-stu-id="c3352-202">You can also wait for a predetermined period of time.</span></span> <span data-ttu-id="c3352-203">Dieser Befehl verwendet den **Timeout** -Parameter, um die Wartezeit auf 120 Sekunden einzuschränken.</span><span class="sxs-lookup"><span data-stu-id="c3352-203">This command uses the **Timeout** parameter to limit the wait to 120 seconds.</span></span> <span data-ttu-id="c3352-204">Wenn die Zeit abläuft, wird die Eingabeaufforderung zurückgegeben, aber der Auftrag wird weiterhin im Hintergrund ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="c3352-204">When the time expires, the command prompt returns, but the job continues to run in the background.</span></span>
 
 ```powershell
 Wait-Job -ID 10 -Timeout 120
 ```
 
-## <a name="stopping-a-job"></a><span data-ttu-id="14b02-207">Beenden eines Auftrags</span><span class="sxs-lookup"><span data-stu-id="14b02-207">Stopping a job</span></span>
+## <a name="stopping-a-job"></a><span data-ttu-id="c3352-205">Beenden eines Auftrags</span><span class="sxs-lookup"><span data-stu-id="c3352-205">Stopping a job</span></span>
 
-<span data-ttu-id="14b02-208">Verwenden Sie das-Cmdlet, um einen Hintergrund Auftrag zu unterbinden `Stop-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-208">To stop a background job, use the `Stop-Job` cmdlet.</span></span> <span data-ttu-id="14b02-209">Der folgende Befehl startet einen Auftrag, um jeden Eintrag im System Ereignisprotokoll zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="14b02-209">The following command starts a job to get every entry in the System event log.</span></span> <span data-ttu-id="14b02-210">Das Auftrags Objekt wird in der `$job` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="14b02-210">It saves the job object in the `$job` variable.</span></span>
+<span data-ttu-id="c3352-206">Verwenden Sie das-Cmdlet, um einen Hintergrund Auftrag zu unterbinden `Stop-Job` .</span><span class="sxs-lookup"><span data-stu-id="c3352-206">To stop a background job, use the `Stop-Job` cmdlet.</span></span> <span data-ttu-id="c3352-207">Der folgende Befehl startet einen Auftrag, um jeden Eintrag im System Ereignisprotokoll zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="c3352-207">The following command starts a job to get every entry in the System event log.</span></span> <span data-ttu-id="c3352-208">Das Auftrags Objekt wird in der `$job` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="c3352-208">It saves the job object in the `$job` variable.</span></span>
 
 ```powershell
 $job = Start-Job -ScriptBlock {Get-EventLog -Log System}
 ```
 
-<span data-ttu-id="14b02-211">Mit dem folgenden Befehl wird der Auftrag beendet.</span><span class="sxs-lookup"><span data-stu-id="14b02-211">The following command stops the job.</span></span> <span data-ttu-id="14b02-212">Er verwendet einen Pipeline Operator ( `|` ), um den Auftrag in der `$job` Variablen an zu senden `Stop-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-212">It uses a pipeline operator (`|`) to send the job in the `$job` variable to `Stop-Job`.</span></span>
+<span data-ttu-id="c3352-209">Mit dem folgenden Befehl wird der Auftrag beendet.</span><span class="sxs-lookup"><span data-stu-id="c3352-209">The following command stops the job.</span></span> <span data-ttu-id="c3352-210">Er verwendet einen Pipeline Operator ( `|` ), um den Auftrag in der `$job` Variablen an zu senden `Stop-Job` .</span><span class="sxs-lookup"><span data-stu-id="c3352-210">It uses a pipeline operator (`|`) to send the job in the `$job` variable to `Stop-Job`.</span></span>
 
 ```powershell
 $job | Stop-Job
 ```
 
-## <a name="deleting-a-job"></a><span data-ttu-id="14b02-213">Löschen eines Auftrags</span><span class="sxs-lookup"><span data-stu-id="14b02-213">Deleting a job</span></span>
+## <a name="deleting-a-job"></a><span data-ttu-id="c3352-211">Löschen eines Auftrags</span><span class="sxs-lookup"><span data-stu-id="c3352-211">Deleting a job</span></span>
 
-<span data-ttu-id="14b02-214">Verwenden Sie das-Cmdlet, um einen Hintergrund Auftrag zu löschen `Remove-Job` .</span><span class="sxs-lookup"><span data-stu-id="14b02-214">To delete a background job, use the `Remove-Job` cmdlet.</span></span> <span data-ttu-id="14b02-215">Der folgende Befehl löscht den Auftrag in der `$job` Variablen.</span><span class="sxs-lookup"><span data-stu-id="14b02-215">The following command deletes the job in the `$job` variable.</span></span>
+<span data-ttu-id="c3352-212">Verwenden Sie das-Cmdlet, um einen Hintergrund Auftrag zu löschen `Remove-Job` .</span><span class="sxs-lookup"><span data-stu-id="c3352-212">To delete a background job, use the `Remove-Job` cmdlet.</span></span> <span data-ttu-id="c3352-213">Der folgende Befehl löscht den Auftrag in der `$job` Variablen.</span><span class="sxs-lookup"><span data-stu-id="c3352-213">The following command deletes the job in the `$job` variable.</span></span>
 
 ```powershell
 Remove-Job -Job $job
 ```
 
-## <a name="investigating-a-failed-job"></a><span data-ttu-id="14b02-216">Untersuchen eines fehlgeschlagenen Auftrags</span><span class="sxs-lookup"><span data-stu-id="14b02-216">Investigating a failed job</span></span>
+## <a name="investigating-a-failed-job"></a><span data-ttu-id="c3352-214">Untersuchen eines fehlgeschlagenen Auftrags</span><span class="sxs-lookup"><span data-stu-id="c3352-214">Investigating a failed job</span></span>
 
-<span data-ttu-id="14b02-217">Um herauszufinden, warum ein Auftrag fehlgeschlagen ist, verwenden Sie die **reason** -Eigenschaft des Auftrags Objekts.</span><span class="sxs-lookup"><span data-stu-id="14b02-217">To find out why a job failed, use the **Reason** property of the job object.</span></span>
+<span data-ttu-id="c3352-215">Aufträge können aus vielen Gründen fehlschlagen.</span><span class="sxs-lookup"><span data-stu-id="c3352-215">Jobs can fail for many reasons.</span></span> <span data-ttu-id="c3352-216">das Auftrags Objekt enthält eine **reason** -Eigenschaft, die Informationen über die Ursache des Fehlers enthält.</span><span class="sxs-lookup"><span data-stu-id="c3352-216">the job object contains a **Reason** property that contains information about the cause of the failure.</span></span>
 
-<span data-ttu-id="14b02-218">Der folgende Befehl startet einen Auftrag ohne die erforderlichen Anmelde Informationen.</span><span class="sxs-lookup"><span data-stu-id="14b02-218">The following command starts a job without the required credentials.</span></span> <span data-ttu-id="14b02-219">Das Auftrags Objekt wird in der `$job` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="14b02-219">It saves the job object in the `$job` variable.</span></span>
+<span data-ttu-id="c3352-217">Im folgenden Beispiel wird ein Auftrag ohne die erforderlichen Anmelde Informationen gestartet.</span><span class="sxs-lookup"><span data-stu-id="c3352-217">The following example starts a job without the required credentials.</span></span>
 
 ```powershell
 $job = Start-Job -ScriptBlock {New-Item -Path HKLM:\Software\MyCompany}
+Get-Job $job
 
 Id Name  PSJobTypeName State  HasMoreData  Location  Command
 -- ----  ------------- -----  -----------  --------  -------
 1  Job1  BackgroundJob Failed False        localhost New-Item -Path HKLM:...
 ```
 
-<span data-ttu-id="14b02-220">Der folgende Befehl verwendet die Reason-Eigenschaft, um den Fehler zu finden, durch den der Auftrag fehlgeschlagen ist.</span><span class="sxs-lookup"><span data-stu-id="14b02-220">The following command uses the Reason property to find the error that caused the job to fail.</span></span>
+<span data-ttu-id="c3352-218">Überprüfen Sie die Eigenschaft **Grund** , um den Fehler zu finden, durch den der Auftrag fehlgeschlagen ist.</span><span class="sxs-lookup"><span data-stu-id="c3352-218">Inspect the **Reason** property to find the error that caused the job to fail.</span></span>
 
 ```powershell
 $job.ChildJobs[0].JobStateInfo.Reason
 ```
 
-<span data-ttu-id="14b02-221">In diesem Fall ist der Auftrag nicht erfolgreich, weil der Remote Computer explizite Anmelde Informationen zum Ausführen des Befehls benötigt hat.</span><span class="sxs-lookup"><span data-stu-id="14b02-221">In this case, the job failed because the remote computer required explicit credentials to run the command.</span></span> <span data-ttu-id="14b02-222">Der Wert der **reason** -Eigenschaft ist:</span><span class="sxs-lookup"><span data-stu-id="14b02-222">The value of the **Reason** property is:</span></span>
+<span data-ttu-id="c3352-219">In diesem Fall ist der Auftrag nicht erfolgreich, weil der Remote Computer explizite Anmelde Informationen zum Ausführen des Befehls benötigt hat.</span><span class="sxs-lookup"><span data-stu-id="c3352-219">In this case, the job failed because the remote computer required explicit credentials to run the command.</span></span> <span data-ttu-id="c3352-220">Die **reason** -Eigenschaft enthält die folgende Meldung:</span><span class="sxs-lookup"><span data-stu-id="c3352-220">The **Reason** property contains the following message:</span></span>
 
-<span data-ttu-id="14b02-223">Fehler beim Herstellen einer Verbindung mit dem Remote Server mit der folgenden Fehlermeldung: "der Zugriff wurde verweigert."</span><span class="sxs-lookup"><span data-stu-id="14b02-223">Connecting to remote server failed with the following error message: "Access is denied".</span></span>
+> <span data-ttu-id="c3352-221">Fehler beim Herstellen einer Verbindung mit dem Remote Server mit der folgenden Fehlermeldung: "der Zugriff wurde verweigert."</span><span class="sxs-lookup"><span data-stu-id="c3352-221">Connecting to remote server failed with the following error message: "Access is denied".</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="14b02-224">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="14b02-224">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3352-222">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3352-222">See also</span></span>
 
-- [<span data-ttu-id="14b02-225">about_Remote_Jobs</span><span class="sxs-lookup"><span data-stu-id="14b02-225">about_Remote_Jobs</span></span>](about_Remote_Jobs.md)
-- [<span data-ttu-id="14b02-226">about_Thread_Jobs</span><span class="sxs-lookup"><span data-stu-id="14b02-226">about_Thread_Jobs</span></span>](about_Thread_Jobs.md)
-- [<span data-ttu-id="14b02-227">about_Job_Details</span><span class="sxs-lookup"><span data-stu-id="14b02-227">about_Job_Details</span></span>](about_Job_Details.md)
-- [<span data-ttu-id="14b02-228">about_Remote</span><span class="sxs-lookup"><span data-stu-id="14b02-228">about_Remote</span></span>](about_Remote.md)
-- [<span data-ttu-id="14b02-229">about_PSSessions</span><span class="sxs-lookup"><span data-stu-id="14b02-229">about_PSSessions</span></span>](about_PSSessions.md)
-- [<span data-ttu-id="14b02-230">Start-Job</span><span class="sxs-lookup"><span data-stu-id="14b02-230">Start-Job</span></span>](xref:Microsoft.PowerShell.Core.Start-Job)
-- [<span data-ttu-id="14b02-231">Get-Job</span><span class="sxs-lookup"><span data-stu-id="14b02-231">Get-Job</span></span>](xref:Microsoft.PowerShell.Core.Get-Job)
-- [<span data-ttu-id="14b02-232">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="14b02-232">Receive-Job</span></span>](xref:Microsoft.PowerShell.Core.Receive-Job)
-- [<span data-ttu-id="14b02-233">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="14b02-233">Stop-Job</span></span>](xref:Microsoft.PowerShell.Core.Stop-Job)
-- [<span data-ttu-id="14b02-234">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="14b02-234">Wait-Job</span></span>](xref:Microsoft.PowerShell.Core.Wait-Job)
-- [<span data-ttu-id="14b02-235">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="14b02-235">Remove-Job</span></span>](xref:Microsoft.PowerShell.Core.Remove-Job)
-- [<span data-ttu-id="14b02-236">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="14b02-236">Invoke-Command</span></span>](xref:Microsoft.PowerShell.Core.Invoke-Command)
+- [<span data-ttu-id="c3352-223">about_Remote_Jobs</span><span class="sxs-lookup"><span data-stu-id="c3352-223">about_Remote_Jobs</span></span>](about_Remote_Jobs.md)
+- [<span data-ttu-id="c3352-224">about_Thread_Jobs</span><span class="sxs-lookup"><span data-stu-id="c3352-224">about_Thread_Jobs</span></span>](about_Thread_Jobs.md)
+- [<span data-ttu-id="c3352-225">about_Job_Details</span><span class="sxs-lookup"><span data-stu-id="c3352-225">about_Job_Details</span></span>](about_Job_Details.md)
+- [<span data-ttu-id="c3352-226">about_Remote</span><span class="sxs-lookup"><span data-stu-id="c3352-226">about_Remote</span></span>](about_Remote.md)
+- [<span data-ttu-id="c3352-227">about_PSSessions</span><span class="sxs-lookup"><span data-stu-id="c3352-227">about_PSSessions</span></span>](about_PSSessions.md)
+- [<span data-ttu-id="c3352-228">Start-Job</span><span class="sxs-lookup"><span data-stu-id="c3352-228">Start-Job</span></span>](xref:Microsoft.PowerShell.Core.Start-Job)
+- [<span data-ttu-id="c3352-229">Get-Job</span><span class="sxs-lookup"><span data-stu-id="c3352-229">Get-Job</span></span>](xref:Microsoft.PowerShell.Core.Get-Job)
+- [<span data-ttu-id="c3352-230">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="c3352-230">Receive-Job</span></span>](xref:Microsoft.PowerShell.Core.Receive-Job)
+- [<span data-ttu-id="c3352-231">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="c3352-231">Stop-Job</span></span>](xref:Microsoft.PowerShell.Core.Stop-Job)
+- [<span data-ttu-id="c3352-232">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="c3352-232">Wait-Job</span></span>](xref:Microsoft.PowerShell.Core.Wait-Job)
+- [<span data-ttu-id="c3352-233">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="c3352-233">Remove-Job</span></span>](xref:Microsoft.PowerShell.Core.Remove-Job)
+- [<span data-ttu-id="c3352-234">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="c3352-234">Invoke-Command</span></span>](xref:Microsoft.PowerShell.Core.Invoke-Command)
