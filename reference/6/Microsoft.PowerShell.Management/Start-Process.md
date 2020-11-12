@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/03/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/start-process?view=powershell-6&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Process
-ms.openlocfilehash: a221c6126bbbf22dffb493828f759bcbd4cfe759
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 53c06982abcf980897c049b6f6bd0c159f2eb4b5
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93219060"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524687"
 ---
 # Start-Process
 
@@ -117,6 +117,19 @@ Beachten Sie, dass der erste Befehl eine Zeichenfolge als **argumentlist** angib
 Start-Process -FilePath "$env:comspec" -ArgumentList "/c dir `"%systemdrive%\program files`""
 Start-Process -FilePath "$env:comspec" -ArgumentList "/c","dir","`"%systemdrive%\program files`""
 ```
+
+### Beispiel 8: Erstellen eines getrennten Prozesses unter Linux
+
+Unter Windows `Start-Process` erstellt einen unabhängigen Prozess, der unabhängig von der startenden Shell ausgeführt wird. Auf nicht-Windows-Plattformen wird der neu gestartete Prozess an die gestartete Shell angefügt. Wenn die starsshell geschlossen ist, wird der untergeordnete Prozess beendet.
+
+Um zu vermeiden, dass der untergeordnete Prozess auf Unix-ähnlichen Plattformen beendet wird, können Sie mit kombinieren `Start-Process` `nohup` . Im folgenden Beispiel wird eine Hintergrund Instanz von PowerShell unter Linux gestartet, die weiterhin aktiv bleibt, auch nachdem Sie die Start Sitzung geschlossen haben. Der `nohup` Befehl erfasst die Ausgabe in `nohup.out` der Datei im aktuellen Verzeichnis.
+
+```powershell
+# Runs for 2 minutes and appends output to ./nohup.out
+Start-Process nohup 'pwsh -noprofile -c "1..120 | % { Write-Host . -NoNewline; sleep 1 }"'
+```
+
+In diesem Beispiel `Start-Process` führt den Linux- `nohup` Befehl aus, der `pwsh` als getrennter Prozess gestartet wird. Weitere Informationen finden Sie auf der Seite "man" für [nohup](https://linux.die.net/man/1/nohup).
 
 ## PARAMETERS
 

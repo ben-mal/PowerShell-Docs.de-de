@@ -2,16 +2,16 @@
 description: Enthält Informationen zu PowerShell-Thread basierten Aufträgen. Ein Thread Auftrag ist eine Art von Hintergrund Auftrag, der einen Befehl oder einen Ausdruck in einem separaten Thread innerhalb des aktuellen Sitzungs Prozesses ausführt.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/16/2020
+ms.date: 11/11/2020
 online version: 1.0.0
 schema: 2.0.0
 title: about_Thread_Jobs
-ms.openlocfilehash: 973d0ddf18b63cd7462817cf68f7c5d7466f4724
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: ba6251a195d3efdebd427b3f705386336b069211
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "93224644"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524636"
 ---
 # <a name="about-thread-jobs"></a>Informationen über Thread Aufträge
 
@@ -21,31 +21,40 @@ Enthält Informationen zu PowerShell-Thread basierten Aufträgen. Ein Thread Auf
 
 ## <a name="long-description"></a>Lange Beschreibung
 
-In diesem Artikel wird erläutert, wie Thread Aufträge in PowerShell auf einem lokalen Computer ausgeführt werden.
-Informationen zum Ausführen von Hintergrund Aufträgen auf einem lokalen Computer finden Sie unter [about_Jobs](about_Jobs.md).
+PowerShell führt Befehle und Skripts gleichzeitig durch Aufträge aus. Es gibt drei Auftrags Typen, die von PowerShell zur Unterstützung von Parallelität bereitgestellt werden.
 
-Starten Sie mithilfe des- `Start-ThreadJob` Cmdlets einen Thread Auftrag. Dieses Cmdlet ist im **Thread Job** -Modul verfügbar, das im Lieferumfang von PowerShell enthalten ist.
-`Start-ThreadJob` Gibt ein einzelnes Auftrags Objekt zurück, das den laufenden Befehl oder das Skript kapselt und mit allen PowerShell-Cmdlets für die Auftragsbearbeitung verwendet werden kann.
+- `RemoteJob` -Befehle und Skripts werden in einer Remote Sitzung ausgeführt. Weitere Informationen finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).
+- `BackgroundJob` -Befehle und Skripts werden in einem separaten Prozess auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Jobs](about_Jobs.md).
+- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt.
 
-## <a name="the-job-cmdlets"></a>Die Job-Cmdlets
+Thread basierte Aufträge sind nicht so robust wie Remote-und Hintergrund Aufträge, da Sie in demselben Prozess in verschiedenen Threads ausgeführt werden. Wenn bei einem Auftrag ein schwerwiegender Fehler auftritt, der den Prozess abstürzt, werden alle anderen Aufträge im Prozess beendet.
 
-|Cmdlet           |BESCHREIBUNG                                            |
-|-----------------|-------------------------------------------------------|
-|`Start-ThreadJob`|Startet einen Thread Auftrag auf einem lokalen Computer.               |
-|`Get-Job`        |Ruft die Aufträge ab, die in der aktuellen Sitzung gestartet wurden.|
-|`Receive-Job`    |Ruft die Ergebnisse der Aufträge ab.                              |
-|`Stop-Job`       |Beendet einen laufenden Auftrag.                                   |
-|`Wait-Job`       |Unterdrückt die Eingabeaufforderung, bis ein oder alle Aufträge|
-|                 |ganz.                                              |
-|`Remove-Job`     |Löscht einen Auftrag.                                         |
+Thread basierte Aufträge erfordern jedoch weniger Aufwand. Sie verwenden nicht die Remoting-Schicht oder die Serialisierung. Die Ergebnis Objekte werden als Verweise auf Live-Objekte in der aktuellen Sitzung zurückgegeben. Ohne diesen Aufwand werden Thread basierte Aufträge schneller ausgeführt und verbrauchen weniger Ressourcen als die anderen Auftrags Typen.
 
-## <a name="how-to-start-a-thread-job-on-the-local-computer"></a>Starten eines Thread Auftrags auf dem lokalen Computer
+> [!IMPORTANT]
+> In der übergeordneten Sitzung, mit der der Auftrag erstellt wurde, wird auch der Auftragsstatus überwacht und Pipeline Daten gesammelt. Der untergeordnete Prozess des Auftrags wird vom übergeordneten Prozess beendet, sobald der Auftrag den Status "abgeschlossen" erreicht hat. Wenn die übergeordnete Sitzung beendet wird, werden alle untergeordneten Aufträge zusammen mit ihren untergeordneten Prozessen beendet.
 
-Verwenden Sie das-Cmdlet, um einen Thread Auftrag auf dem lokalen Computer zu starten `Start-ThreadJob` .
+Es gibt zwei Möglichkeiten, diese Situation zu umgehen:
 
-Wenn Sie einen `Start-ThreadJob` Befehl schreiben möchten, schließen Sie den Befehl oder das Skript für den Auftrag in geschweiften Klammern ( `{ }` ) ein.
+1. Verwenden `Invoke-Command` Sie, um Aufträge zu erstellen, die in getrennten Sitzungen ausgeführt werden. Weitere Informationen finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).
+1. Verwenden `Start-Process` Sie, um anstelle eines Auftrags einen neuen Prozess zu erstellen. Weitere Informationen finden Sie unter [Start-Process](xref:Microsoft.PowerShell.Management.Start-Process).
 
-Mit dem folgenden Befehl wird ein Thread Auftrag gestartet, der einen `Get-Process` Befehl auf dem lokalen Computer ausführt.
+## <a name="how-to-start-and-manage-thread-based-jobs"></a>Starten und Verwalten von Thread basierten Aufträgen
+
+Es gibt zwei Möglichkeiten, Thread basierte Aufträge zu starten:
+
+- `Start-ThreadJob` -aus dem **threadjob** -Modul
+- `ForEach-Object -Parallel -AsJob` -das parallele Feature wurde in PowerShell 7,0 hinzugefügt.
+
+Verwenden Sie die gleichen **Auftrags** -Cmdlets, die in [about_Jobs](about_Jobs.md) beschrieben werden, um Thread basierte Aufträge zu verwalten.
+
+### <a name="using-start-threadjob"></a>Verwenden von `Start-ThreadJob`
+
+Das **Thread Job** -Modul wurde zunächst mit PowerShell 6 ausgeliefert. Sie kann auch über die PowerShell-Katalog für Windows PowerShell 5,1 installiert werden.
+
+Um einen Thread Auftrag auf dem lokalen Computer zu starten, verwenden Sie das `Start-ThreadJob` Cmdlet mit einem Befehl oder Skript, der in geschweiften Klammern () eingeschlossen ist `{ }` .
+
+Im folgenden Beispiel wird ein Thread Auftrag gestartet, der einen `Get-Process` Befehl auf dem lokalen Computer ausführt.
 
 ```powershell
 Start-ThreadJob -ScriptBlock { Get-Process }
@@ -53,7 +62,11 @@ Start-ThreadJob -ScriptBlock { Get-Process }
 
 Der `Start-ThreadJob` Befehl gibt ein- `ThreadJob` Objekt zurück, das den laufenden Auftrag darstellt. Das Auftrags Objekt enthält nützliche Informationen zum Auftrag, einschließlich des aktuellen Status. Die Ergebnisse des Auftrags werden erfasst, wenn die Ergebnisse generiert werden.
 
-Um einen Befehl zu schreiben `ForEach-Object -Parallel` , übergeben Sie Daten an den Befehl, und schließen Sie den Befehl oder das Skript für den Auftrag in geschweiften Klammern ( `{}` ) ein. Verwenden Sie den `-AsJob` Parameter Switch, damit ein Job-Objekt zurückgegeben wird.
+### <a name="using-foreach-object--parallel--asjob"></a>Verwenden von `ForEach-Object -Parallel -AsJob`
+
+PowerShell 7,0 hat dem Cmdlet einen neuen Parameter hinzugefügt `ForEach-Object` . Die neuen Parameter ermöglichen es Ihnen, Skriptblöcke in parallelen Threads als PowerShell-Aufträge auszuführen.
+
+Sie können Daten über die Pipeline an senden `ForEach-Object -Parallel` . Die Daten werden an den Skriptblock, der parallel ausgeführt wird, übermittelt. Der- `-AsJob` Parameter erstellt Auftrags Objekte für jeden paralleler Thread.
 
 Der folgende Befehl startet einen Auftrag, der untergeordnete Aufträge für jeden Eingabe Wert enthält, der an den Befehl weitergeleitet wird. Jeder untergeordnete Auftrag führt den `Write-Output` Befehl mit einem weitergeleiteten Eingabe Wert als Argument aus.
 
@@ -91,26 +104,6 @@ Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse der untergeordneten Aufträg
 
 Da jeder untergeordnete Auftrag parallel ausgeführt wird, ist die Reihenfolge der generierten Ergebnisse nicht sichergestellt.
 
-## <a name="powershell-concurrency-and-jobs"></a>PowerShell-Parallelität und-Aufträge
-
-PowerShell führt gleichzeitig Befehle und Skripts durch Aufträge aus. Es gibt drei auf Aufträgen basierende Lösungen, die von PowerShell zur Unterstützung von Parallelität bereitgestellt werden.
-
-|Auftrag            |BESCHREIBUNG                                                  |
-|---------------|-------------------------------------------------------------|
-|`RemoteJob`    |Befehl und Skript werden auf einem Remote Computer ausgeführt.                 |
-|`BackgroundJob`|Befehl und Skript werden in einem separaten Prozess auf dem lokalen ausgeführt.    |
-|               |2 virtuelle CPUs zu.                                                     |
-|`ThreadJob`    |Befehl und Skript werden in einem separaten Thread innerhalb desselben  |
-|               |Prozess auf dem lokalen Computer.                                |
-
-Jeder Auftragstyp hat Vorteile und Nachteile. Die Remote Ausführung von Skripts auf einem separaten Computer oder in einem separaten Prozess hat eine große Isolation. Alle Fehler wirken sich nicht auf andere laufende Aufträge oder den Client aus, von dem der Auftrag gestartet wurde. Die Remoting-Schicht erhöht jedoch den mehr Aufwand, einschließlich Objektserialisierung. Alle Objekte, die an und von der Remote Sitzung weitergeleitet werden, müssen serialisiert und dann deserialisiert werden, wenn Sie zwischen dem Client und der Ziel Sitzung übertragen werden. Der Serialisierungsvorgang kann viele COMPUTE-und Speicherressourcen für große komplexe Datenobjekte verwenden.
-
-## <a name="powershell-thread-based-jobs"></a>PowerShell-Thread basierte Aufträge
-
-Thread basierte Aufträge sind nicht so robust wie Remote-und Hintergrund Aufträge, da Sie in demselben Prozess in verschiedenen Threads ausgeführt werden. Wenn bei einem Auftrag ein schwerwiegender Fehler auftritt, der den Prozess abstürzt, können auch alle anderen Aufträge im Prozess fehlschlagen.
-
-Thread basierte Aufträge haben jedoch viel weniger Aufwand. Sie müssen die remotingschicht oder die Serialisierung nicht verwenden. Das Ergebnis ist, dass Thread basierte Aufträge tendenziell viel schneller ausgeführt werden und weit weniger Ressourcen als die anderen Auftrags Typen verwenden.
-
 ## <a name="thread-job-performance"></a>Thread Auftrags Leistung
 
 Thread Aufträge sind schneller und leichter gewichtet als andere Arten von Aufträgen. Allerdings haben Sie immer noch mehr Aufwand, die im Vergleich zu den Aufgaben, die der Auftrag leistet, groß sein können.
@@ -127,23 +120,39 @@ Thread Aufträge bieten die beste Leistung, wenn die von Ihnen ausgeführten Auf
 (Measure-Command {
     1..1000 | ForEach { Start-ThreadJob { Write-Output "Hello $using:_" } } | Receive-Job -Wait
 }).TotalMilliseconds
-10457.962
-
+36860.8226
 
 (Measure-Command {
     1..1000 | ForEach-Object { "Hello: $_" }
 }).TotalMilliseconds
-24.9277
+7.1975
 ```
 
-Das erste Beispiel oben zeigt eine foreach-Schleife, die 1000 Thread Aufträge erstellt, um eine einfache Zeichenfolge zu schreiben. Aufgrund des Auftrags Aufwands dauert der Abschluss von mehr als 33 Sekunden.
+Das erste Beispiel oben zeigt eine foreach-Schleife, die 1000 Thread Aufträge erstellt, um eine einfache Zeichenfolge zu schreiben. Aufgrund des Auftrags Aufwands dauert der Abschluss von mehr als 36 Sekunden.
 
-Im zweiten Beispiel wird das `ForEach` -Cmdlet ausgeführt, um die gleichen 1000-Vorgänge auszuführen, und jeder Zeichen folgen Schreibvorgang wird ohne jeglichen Auftrags Aufwand sequenziell ausgeführt. Sie wird in nur 25 Millisekunden abgeschlossen.
+Das zweite Beispiel führt das `ForEach` Cmdlet aus, um die gleichen 1000-Vorgänge durchzuführen.
+Dieses Mal wird `ForEach-Object` sequenziell in einem einzelnen Thread ausgeführt, ohne dass ein Auftrag mehr Aufwand erfordert. Sie wird in nur 7 Millisekunden abgeschlossen.
+
+Im folgenden Beispiel werden bis zu 5000 Einträge für 10 separate Systemprotokolle gesammelt. Da das Skript eine Reihe von Protokollen liest, ist es sinnvoll, die Vorgänge parallel auszuführen.
 
 ```powershell
 $logNames.count
 10
 
+Measure-Command {
+    $logs = $logNames | ForEach-Object {
+        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
+    }
+}
+
+TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
+$logs.Count
+50000
+```
+
+Das Skript wird in der Hälfte der Zeit abgeschlossen, wenn die Aufträge parallel ausgeführt werden.
+
+```powershell
 Measure-Command {
     $logs = $logNames | ForEach {
         Start-ThreadJob {
@@ -157,23 +166,9 @@ $logs.Count
 50000
 ```
 
-Im obigen Beispiel werden bis zu 5000 Einträge für 10 separate Systemprotokolle gesammelt. Da das Skript eine Reihe von Protokollen liest, ist es sinnvoll, die Vorgänge parallel auszuführen. Und der Auftrag wird über zwei Mal so schnell abgeschlossen, als wenn das Skript sequenziell ausgeführt wird.
-
-```powershell
-Measure-Command {
-    $logs = $logNames | ForEach-Object {
-        Get-WinEvent -LogName $_ -MaxEvents 5000 2>$null
-    }
-}
-
-TotalMilliseconds : 252398.4321 (4 minutes 12 seconds)
-$logs.Count
-50000
-```
-
 ## <a name="thread-jobs-and-variables"></a>Thread Aufträge und-Variablen
 
-Variablen werden auf verschiedene Weise an Thread Aufträge übermittelt.
+Es gibt mehrere Möglichkeiten, Werte in Thread basierte Aufträge zu übergeben.
 
 `Start-ThreadJob` kann Variablen akzeptieren, die an das Cmdlet weitergeleitet werden, über das Schlüsselwort an den Skriptblock übergeben `$using` oder über den Argument **List** -Parameter übergeben werden.
 
@@ -186,9 +181,9 @@ Start-ThreadJob { Write-Output $using:msg } | Wait-Job | Receive-Job
 
 Start-ThreadJob { param ([string] $message) Write-Output $message } -ArgumentList @($msg) |
   Wait-Job | Receive-Job
+```
 
-`ForEach-Object -Parallel` accepts piped in variables, and variables passed
-directly to the script block via the `$using` keyword.
+`ForEach-Object -Parallel` akzeptiert weitergeleitete Variablen und Variablen, die über das-Schlüsselwort direkt an den Skriptblock übergeben werden `$using` .
 
 ```powershell
 $msg = "Hello"
@@ -199,6 +194,8 @@ $msg | ForEach-Object -Parallel { Write-Output $_ } -AsJob | Wait-Job | Receive-
 ```
 
 Da Thread Aufträge in demselben Prozess ausgeführt werden, müssen alle an den Auftrag über gegebenen Variablen Verweis Typen sorgfältig behandelt werden. Wenn es sich nicht um ein Thread sicheres Objekt handelt, sollte es niemals zugewiesen werden, und die-Methode und die-Eigenschaften sollten niemals darauf aufgerufen werden.
+
+Im folgenden Beispiel wird ein Thread sicheres .net- `ConcurrentDictionary` Objekt an alle untergeordneten Aufträge weitergeleitet, um eindeutig benannte Prozess Objekte zu erfassen. Da es sich um ein Thread sicheres Objekt handelt, kann es sicher verwendet werden, während die Aufträge gleichzeitig im Prozess ausgeführt werden.
 
 ```powershell
 $threadSafeDictionary = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
@@ -221,9 +218,7 @@ NPM(K)  PM(M)   WS(M) CPU(s)    Id SI ProcessName
   112  108.25  124.43  69.75 16272  1 pwsh
 ```
 
-Im obigen Beispiel wird ein Thread sicheres dotnet- `ConcurrentDictionary` Objekt an alle untergeordneten Aufträge weitergeleitet, um eindeutig benannte Prozess Objekte zu erfassen. Da es sich um ein Thread sicheres Objekt handelt, kann es sicher verwendet werden, während die Aufträge gleichzeitig im Prozess ausgeführt werden.
-
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 - [about_Remote_Jobs](about_Remote_Jobs.md)
 - [about_Thread_Jobs](about_Thread_Jobs.md)

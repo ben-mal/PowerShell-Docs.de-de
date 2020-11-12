@@ -2,20 +2,20 @@
 description: Die Umgebungsvariable psmodulepath enthält eine Liste der Ordner Speicherorte, die durchsucht werden, um Module und Ressourcen zu finden.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 04/13/2020
+ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_PSModulePath?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Grundlegendes zu PSModulePath
-ms.openlocfilehash: b904b01cc3fc63f32151885d040fe7b0e618f6d5
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 5d87f550b3aa8774ae81f68848d5aa252b2e5851
+ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223652"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94524653"
 ---
 # <a name="about-psmodulepath"></a>Informationen über psmodulepath
 
-Die `$env:PSModulePath` Umgebungsvariable enthält eine Liste der Ordner Speicherorte, die durchsucht werden, um Module und Ressourcen zu finden.
+Die `$env:PSModulePath` Umgebungsvariable enthält eine Liste der Ordner Speicherorte, die durchsucht werden, um Module und Ressourcen zu finden. PowerShell durchsucht jeden Ordner rekursiv nach `.psd1` Modul `.psm1` Dateien (oder Dateien).
 
 Standardmäßig sind die folgenden effektiven Speicherorte zugewiesen `$env:PSModulePath` :
 
@@ -131,7 +131,22 @@ PowerShell Core 6 überschreibt `$env:PSModulePath` . Es werden keine Änderunge
 
 Der Start von PowerShell 7 wird unverändert fortgesetzt, und es werden die von PowerShell Core 6 hinzugefügten Pfade geerbt. Da die PS7-spezifischen Pfade mit einem Präfix versehen sind, gibt es kein funktionales Problem.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="module-search-behavior"></a>Modul Suchverhalten
+
+PowerShell durchsucht rekursiv jeden Ordner in " **psmodulepath** " nach Modul `.psd1` Dateien (oder `.psm1` Dateien). Dieses Suchmuster ermöglicht das Installieren mehrerer Versionen desselben Moduls in verschiedenen Ordnern. Zum Beispiel:
+
+```Output
+    Directory: C:\Program Files\WindowsPowerShell\Modules\PowerShellGet
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/14/2020  5:56 PM                1.0.0.1
+d----           9/13/2019  3:53 PM                2.1.2
+```
+
+Standardmäßig lädt PowerShell die höchste Versionsnummer eines Moduls, wenn mehrere Versionen gefunden werden. Verwenden Sie zum Laden einer bestimmten Version `Import-Module` mit dem **FullyQualifiedName** -Parameter. Weitere Informationen finden Sie unter [Import-Module](xref:Microsoft.PowerShell.Core.Import-Module).
+
+## <a name="see-also"></a>Siehe auch
 
 - [about_Modules](about_Modules.md)
 - [Umgebungs Methoden](/dotnet/api/system.environment)
