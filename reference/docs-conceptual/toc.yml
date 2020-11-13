@@ -55,24 +55,26 @@
       items:
         - name: Übersicht
           href: learn/deep-dives/overview.md
-        - name: 'Alles, was Sie schon immer über Arrays wissen wollten'
-          href: learn/deep-dives/everything-about-arrays.md
-        - name: 'Alles, was Sie schon immer über Hashtabellen wissen wollten'
-          href: learn/deep-dives/everything-about-hashtable.md
-        - name: 'Alles, was Sie schon immer über PSCustomObject wissen wollten'
-          href: learn/deep-dives/everything-about-pscustomobject.md
-        - name: 'Alles, was Sie schon immer über Zeichenfolgenersetzung wissen wollten'
-          href: learn/deep-dives/everything-about-string-substitutions.md
-        - name: 'Alles, was Sie schon immer über if/then/else wissen wollten'
-          href: learn/deep-dives/everything-about-if.md
-        - name: 'Alles, was Sie schon immer über Switch wissen wollten'
-          href: learn/deep-dives/everything-about-switch.md
-        - name: 'Alles, was Sie schon immer über Ausnahmen wissen wollten'
-          href: learn/deep-dives/everything-about-exceptions.md
-        - name: 'Alles, was Sie schon immer über $null wissen wollten'
-          href: learn/deep-dives/everything-about-null.md
-        - name: 'Alles, was Sie schon immer über ShouldProcess wissen wollten'
-          href: learn/deep-dives/everything-about-shouldprocess.md
+        - name: 'Alles, was Sie schon immer wissen wollten...'
+          items:
+            - name: 'Alles, was Sie schon immer über Arrays wissen wollten'
+              href: learn/deep-dives/everything-about-arrays.md
+            - name: 'Alles, was Sie schon immer über Hashtabellen wissen wollten'
+              href: learn/deep-dives/everything-about-hashtable.md
+            - name: 'Alles, was Sie schon immer über PSCustomObject wissen wollten'
+              href: learn/deep-dives/everything-about-pscustomobject.md
+            - name: 'Alles, was Sie schon immer über Zeichenfolgenersetzung wissen wollten'
+              href: learn/deep-dives/everything-about-string-substitutions.md
+            - name: 'Alles, was Sie schon immer über if/then/else wissen wollten'
+              href: learn/deep-dives/everything-about-if.md
+            - name: 'Alles, was Sie schon immer über Switch wissen wollten'
+              href: learn/deep-dives/everything-about-switch.md
+            - name: 'Alles, was Sie schon immer über Ausnahmen wissen wollten'
+              href: learn/deep-dives/everything-about-exceptions.md
+            - name: 'Alles, was Sie schon immer über $null wissen wollten'
+              href: learn/deep-dives/everything-about-null.md
+            - name: 'Alles, was Sie schon immer über ShouldProcess wissen wollten'
+              href: learn/deep-dives/everything-about-shouldprocess.md
         - name: Schreibfortschritt beim Multithreading
           href: learn/deep-dives/write-progress-across-multiple-threads.md
         - name: Hinzufügen von Unterstützung für Anmeldeinformationen zu PowerShell-Funktionen
@@ -120,6 +122,8 @@
   items:
     - name: Neuigkeiten in PowerShell 7.x
       items:
+        - name: "Neuerungen in PowerShell\_7.1"
+          href: whats-new/what-s-new-in-powershell-71.md
         - name: Neuigkeiten in PowerShell 7.0
           href: whats-new/what-s-new-in-powershell-70.md
     - name: Neuigkeiten in PowerShell Core 6.x
