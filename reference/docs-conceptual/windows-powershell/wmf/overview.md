@@ -52,13 +52,13 @@ Um die verschiedenen Verbesserungen an PowerShell und anderen Komponenten einer 
 | Windows Server 2003<br>*Nicht mehr unterstützt* |              |                             |              |              | Ja          |
 | Windows XP<br>*Nicht mehr unterstützt*          |              |                             |              | Ja          | Ja          |
 
-- **Im Lieferumfang enthalten** : Die Features von der angegebenen WMF-Version waren in den angegebenen Versionen des Windows-Clients und von Windows Server im Lieferumfang enthalten.
+- **Im Lieferumfang enthalten**: Die Features von der angegebenen WMF-Version waren in den angegebenen Versionen des Windows-Clients und von Windows Server im Lieferumfang enthalten.
 - **Nicht mehr unterstützt** Diese Produkte werden von Microsoft nicht mehr unterstützt. Sie müssen ein Upgrade auf eine neue Version ausführen, die unterstützt wird. Weitere Informationen finden Sie auf der Seite [Microsoft Lifecycle-Richtlinie][].
 
 > [!NOTE]
 > Das Installationsprogramm für WMF 5.0 ist nicht mehr verfügbar und wird nicht mehr unterstützt. Es wurde durch WMF 5.1 ersetzt.
 
-[Microsoft-Lebenszyklusrichtlinie]: https://support.microsoft.com/lifecycle
+[Microsoft Lifecycle-Richtlinie]: https://support.microsoft.com/lifecycle
 [WMF 5.1]: https://aka.ms/wmf51download
 [WMF 4.0]: https://aka.ms/wmf4download
 [WMF 3.0]: https://aka.ms/wmf3download
