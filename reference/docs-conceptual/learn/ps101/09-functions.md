@@ -5,12 +5,12 @@ ms.date: 06/02/2020
 ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: ca48f3020fa306f8a24328bd18648d5954c48a94
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
+ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
+ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438201"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94589129"
 ---
 # <a name="chapter-9---functions"></a>Kapitel 9: Funktionen
 
@@ -22,7 +22,7 @@ Machen Sie Dinge nicht komplizierter, als sie sind. Halten Sie es einfach, und v
 
 ## <a name="naming"></a>Benennung
 
-Wenn Sie Ihre Funktionen in PowerShell benennen, verwenden Sie einen [Pascal-Schreibweise][]-Namen mit einem genehmigten Verb und einem Nomen im Singular. Ich empfehle außerdem, dem Nomen ein Präfix voranzustellen. Beispiel: `<ApprovedVerb>-<Prefix><SingularNoun>`.
+Wenn Sie Ihre Funktionen in PowerShell benennen, verwenden Sie einen Namen in [Pascal-Schreibweise][] mit einem genehmigten Verb und einem Nomen im Singular. Ich empfehle außerdem, dem Nomen ein Präfix voranzustellen. Beispiel: `<ApprovedVerb>-<Prefix><SingularNoun>`.
 
 In PowerShell gibt es eine spezifische Liste mit genehmigten Verben, die Sie durch Ausführen von `Get-Verb` abrufen können.
 
@@ -247,7 +247,7 @@ function Test-MrParameter {
 }
 ```
 
-Warum habe ich **ComputerName** und nicht **Computer**, **ServerName**oder **Host** als meinen Parameternamen verwendet? Das liegt daran, dass meine Funktion so standardisiert wie die Standard-Cmdlets sein sollte.
+Warum habe ich **ComputerName** und nicht **Computer**, **ServerName** oder **Host** als meinen Parameternamen verwendet? Das liegt daran, dass meine Funktion so standardisiert wie die Standard-Cmdlets sein sollte.
 
 Ich erstelle eine Funktion, um alle Befehle in einem System abzufragen und die Anzahl der Befehle zurückzugeben, die über bestimmte Parameternamen verfügen.
 
@@ -268,7 +268,7 @@ function Get-MrParameterCount {
 }
 ```
 
-Wie Sie in den unten gezeigten Ergebnissen sehen können, besitzen 39 Befehle einen Parameter **ComputerName**. Es gibt keine Cmdlets, die Parameter wie **Computer**, **ServerName**, **Host**oder **Machine** haben.
+Wie Sie in den unten gezeigten Ergebnissen sehen können, besitzen 39 Befehle einen Parameter **ComputerName**. Es gibt keine Cmdlets, die Parameter wie **Computer**, **ServerName**, **Host** oder **Machine** haben.
 
 ```powershell
 Get-MrParameterCount -ParameterName ComputerName, Computer, ServerName, Host, Machine
@@ -579,7 +579,7 @@ Test-MrVerboseOutput -ComputerName Server01, Server02 -Verbose
 
 Wenn Sie möchten, dass ihre Funktion Pipelineeingaben akzeptiert, ist ein wenig zusätzliche Programmierung erforderlich. Wie bereits in diesem Buch erwähnt, können Befehle Pipelineeingaben **als Wert** (als Typ) oder **als Eigenschaftsname** akzeptieren. Sie können ihre Funktionen genau wie die nativen Befehle schreiben, sodass Sie entweder einen oder beide dieser Eingabetypen akzeptieren.
 
-Um die Pipelineeingabe **als Wert**zu akzeptieren, geben Sie das Parameterattribut `ValueFromPipeline` für diesen bestimmten Parameter an. Denken Sie daran, dass Sie Pipelineeingaben **als Wert** nur von einem des jeweiligen Datentyps akzeptieren können. Wenn Sie beispielsweise über zwei Parameter verfügen, die Zeichenfolgeneingaben (string) akzeptieren, kann nur einer davon Pipelineeingaben **als Wert** akzeptieren, denn wenn Sie dies für beide Zeichenfolgenparameter angeben würden, wüsste die Pipelineeingabe nicht, an welchen sie sich binden sollte. Dies ist ein weiterer Grund, warum ich diese Art von Pipelineeingabe _als Typ_ anstelle von **als Wert** bezeichne.
+Um die Pipelineeingabe **als Wert** zu akzeptieren, geben Sie das Parameterattribut `ValueFromPipeline` für diesen bestimmten Parameter an. Denken Sie daran, dass Sie Pipelineeingaben **als Wert** nur von einem des jeweiligen Datentyps akzeptieren können. Wenn Sie beispielsweise über zwei Parameter verfügen, die Zeichenfolgeneingaben (string) akzeptieren, kann nur einer davon Pipelineeingaben **als Wert** akzeptieren, denn wenn Sie dies für beide Zeichenfolgenparameter angeben würden, wüsste die Pipelineeingabe nicht, an welchen sie sich binden sollte. Dies ist ein weiterer Grund, warum ich diese Art von Pipelineeingabe _als Typ_ anstelle von **als Wert** bezeichne.
 
 Pipelineeingaben gelangen gleichzeitig immer nur in ein Element, ähnlich der Art und Weise, wie Elemente in einer `foreach`-Schleife behandelt werden.
 Es ist mindestens ein `process`-Block erforderlich, um jedes dieser Elemente zu verarbeiten, wenn Sie ein Array als Eingabe akzeptieren. Wenn Sie nur einen einzelnen Wert als Eingabe akzeptieren, ist ein `process`-Block nicht erforderlich, aber ich empfehle dennoch, ihn aus Gründen der Konsistenz anzugeben.
@@ -783,7 +783,7 @@ In diesem Kapitel haben Sie die Grundlagen zum Schreiben von Funktionen in Power
 - [about_Functions_Advanced][]
 - [about_Try_Catch_Finally][]
 - [about_Comment_Based_Help][]
-- [Video: PowerShell-Toolerstellung mit erweiterten Funktionen und Skriptmodulen][]
+- [Video: PowerShell Toolmaking with Advanced Functions and Script Modules][] (PowerShell-Toolerstellung mit erweiterten Funktionen und Skriptmodulen)
 
 <!-- link references -->
 [about_Functions]: /powershell/module/microsoft.powershell.core/about/about_functions
@@ -793,4 +793,5 @@ In diesem Kapitel haben Sie die Grundlagen zum Schreiben von Funktionen in Power
 [about_Functions_Advanced]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
 [about_Try_Catch_Finally]: /powershell/module/microsoft.powershell.core/about/about_try_catch_finally
 [about_Comment_Based_Help]: /powershell/module/microsoft.powershell.core/about/about_comment_based_help
-[Video: PowerShell-Toolerstellung mit erweiterten Funktionen und Skriptmodulen]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/) [Pascal-Schreibweise]: /dotnet/standard/design-guidelines/capitalization-conventionss
+[Video: PowerShell Toolmaking with Advanced Functions and Script Modules]: https://mikefrobbins.com/2016/05/26/video-powershell-toolmaking-with-advanced-functions-and-script-modules/ (PowerShell-Toolerstellung mit erweiterten Funktionen und Skriptmodulen)
+[Pascal-Schreibweise]: /dotnet/standard/design-guidelines/capitalization-conventions
