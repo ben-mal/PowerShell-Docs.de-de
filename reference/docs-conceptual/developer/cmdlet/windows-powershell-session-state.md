@@ -1,15 +1,14 @@
 ---
-title: Windows PowerShell-Sitzungs Status | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Cmdlets [PowerShell], session state
-- session state [PowerShell]
-ms.openlocfilehash: 7436e3ebd0e099ead81f9fea01a0a2994b982213
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell-Sitzungszustand
+description: Windows PowerShell-Sitzungszustand
+ms.openlocfilehash: 51de92f1f392f708cf49c7ccb4a6808fd628076c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783941"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668132"
 ---
 # <a name="windows-powershell-session-state"></a>Windows PowerShell-Sitzungszustand
 
@@ -21,7 +20,7 @@ Aus Sicht des Entwicklers bezieht sich eine Windows PowerShell-Sitzung auf die Z
 
 Modul Sitzungs Zustände werden immer dann erstellt, wenn das Modul oder eines seiner in die Sitzung importierten Module importiert wird. Wenn ein Modul ein Element, z. b. ein Cmdlet, eine Funktion oder ein Skript, exportiert, wird dem globalen Sitzungs Status der Sitzung ein Verweis auf dieses Element hinzugefügt. Wenn das Element ausgeführt wird, wird es jedoch innerhalb des Sitzungs Status des Moduls ausgeführt.
 
-## <a name="session-state-data"></a>Sitzungszustandsdaten
+## <a name="session-state-data"></a>Session-State Daten
 
 Sitzungszustandsdaten können öffentlich oder privat sein. Öffentliche Daten sind für Aufrufe außerhalb des Sitzungs Zustands verfügbar, während private Daten nur für Anrufe innerhalb des Sitzungs Zustands verfügbar sind. Ein Modul kann z. b. über eine private Funktion verfügen, die nur vom Modul oder nur intern von einem öffentlichen, exportierten Element aufgerufen werden kann. Dies ist vergleichbar mit den privaten und öffentlichen Membern eines .NET Framework Typs.
 
@@ -37,7 +36,7 @@ Sitzungszustandsdaten werden von der aktuellen Instanz der Ausführungs-Engine i
 
 - Informationen zu Sitzungs Zustandsvariablen
 
-## <a name="accessing-session-state-data-within-cmdlets"></a>Zugreifen auf Sitzungszustandsdaten innerhalb von Cmdlets
+## <a name="accessing-session-state-data-within-cmdlets"></a>Zugreifen auf Session-State Daten innerhalb von Cmdlets
 
 Cmdlets können auf Sitzungszustandsdaten entweder indirekt über die [System. Management. Automation. PSCmdlet. SessionState *](/dotnet/api/System.Management.Automation.PSCmdlet.SessionState) -Eigenschaft der Cmdlet-Klasse oder direkt über die [System. Management. Automation. SessionState](/dotnet/api/System.Management.Automation.SessionState) -Klasse zugreifen. Die [System. Management. Automation. SessionState](/dotnet/api/System.Management.Automation.SessionState) -Klasse stellt Eigenschaften bereit, die verwendet werden können, um unterschiedliche Typen von Sitzungszustandsdaten zu untersuchen.
 
@@ -51,4 +50,4 @@ Cmdlets können auf Sitzungszustandsdaten entweder indirekt über die [System. M
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)
 
-[Windows PowerShell Shell SDK](../windows-powershell-reference.md)
+[Referenz zu Windows PowerShell](../windows-powershell-reference.md)

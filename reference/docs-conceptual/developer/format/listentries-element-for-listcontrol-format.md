@@ -1,12 +1,14 @@
 ---
-title: ListEntries-Element für ListControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 0fe07e739c2d2fec153599ec6c0c0b3ecc14df18
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ListEntries“ für ListControl (Format)
+description: Element „ListEntries“ für ListControl (Format)
+ms.openlocfilehash: d4d6625bb92ea27863fc30d5bf5625f9275e4f69
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785709"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666602"
 ---
 # <a name="listentries-element-for-listcontrol-format"></a>Element „ListEntries“ für ListControl (Format)
 

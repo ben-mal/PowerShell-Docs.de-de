@@ -1,12 +1,14 @@
 ---
-title: CustomItem-Element für customentry für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: bb8124242496f192717127f201674bc1428e5de0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „CustomItem“ für CustomEntry für Controls für Configuration (Format)
+description: Element „CustomItem“ für CustomEntry für Controls für Configuration (Format)
+ms.openlocfilehash: 06c399e982b6ac0fba9c11e20c468fe8bef6f694
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785862"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666772"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-configuration-format"></a>Element „CustomItem“ für CustomEntry für Controls für Configuration (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „ExpressionBinding“ für CustomItem für Controls für Configuration (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Definiert die Daten, die vom-Steuerelement angezeigt werden.|
 |[Element „Frame“ für CustomItem für Controls für Configuration (Format)](./frame-element-for-customitem-for-controls-for-configuration-format.md)|Optionales Element.<br /><br /> Definiert, wie die Daten angezeigt werden, z. b. das Verschieben der Daten nach links oder rechts.|
@@ -44,7 +46,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomEntry“ für CustomControl für Controls für Configuration (Format)](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)|Stellt eine Definition des-Steuer Elements bereit.|
 

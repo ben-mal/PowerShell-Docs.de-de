@@ -1,12 +1,14 @@
 ---
-title: NewLine-Element für customItem für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e55e07ede3c394cabbda25aa1ec3bf03683c1c6b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „NewLine“ für CustomItem für Controls für View (Format)
+description: Element „NewLine“ für CustomItem für Controls für View (Format)
+ms.openlocfilehash: 3b368f021fcbd2ecabf2032b951afe2979a3d027
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785658"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666432"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-view-format"></a>Element „NewLine“ für CustomItem für Controls für View (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomItem“ für CustomEntry für Controls für View (Format)](./customitem-element-for-customentry-for-controls-for-view-format.md)|Definiert, welche Daten vom Steuerelement angezeigt werden und wie es angezeigt wird.|
 

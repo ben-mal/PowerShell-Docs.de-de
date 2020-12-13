@@ -1,12 +1,14 @@
 ---
-title: Hinzufügen eines Bereichs „Siehe auch“ zu einem Anbieterhilfethema
 ms.date: 09/12/2016
-ms.openlocfilehash: 54adf4bb941888583eb749b7b5322b27d84c7af7
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Hinzufügen eines Bereichs „Siehe auch“ zu einem Anbieterhilfethema
+description: Hinzufügen eines Bereichs „Siehe auch“ zu einem Anbieterhilfethema
+ms.openlocfilehash: df0b14ba84e04baf404081944ef62ef6745d74b2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893474"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667656"
 ---
 # <a name="how-to-add-a-see-also-section-to-a-provider-help-topic"></a>Hinzufügen eines Bereichs „Siehe auch“ zu einem Anbieterhilfethema
 
@@ -23,7 +25,7 @@ Der folgende XML-Code zeigt, wie die-Tags hinzugefügt werden.
 
 1. Fügen Sie in der-Datei im- `<AssemblyName>.dll-help.xml` `providerHelp` Element ein- `RelatedLinks` Element hinzu. Das- `RelatedLinks` Element muss das letzte Element im- `providerHelp` Element sein. Nur ein- `RelatedLinks` Element ist in jedem Hilfethema des Anbieters zulässig.
 
-   Beispiel:
+   Zum Beispiel:
 
     ```xml
     <providerHelp>
@@ -34,7 +36,7 @@ Der folgende XML-Code zeigt, wie die-Tags hinzugefügt werden.
 
 1. Fügen Sie für jedes Thema im Abschnitt **Siehe auch** Abschnitt im- `RelatedLinks` Element ein- `navigationLink` Element hinzu. Fügen Sie dann in jedem `navigationLink` -Element ein `linkText` -Element und ein- `uri` Element hinzu. Wenn Sie das-Element nicht verwenden `uri` , können Sie es als leeres-Element () hinzufügen \<uri/> .
 
-   Beispiel:
+   Zum Beispiel:
 
     ```xml
     <providerHelp>

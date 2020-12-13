@@ -1,12 +1,14 @@
 ---
-title: AutoSize-Element für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: f29b3eb278fd9ff29d2f6f4fbd000513dcaeec7b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „AutoSize“ für TableControl (Format)
+description: Element „AutoSize“ für TableControl (Format)
+ms.openlocfilehash: 39d2f6f10796266cb6e9f1613b68337fb489278a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783890"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668115"
 ---
 # <a name="autosize-element-for-tablecontrol-format"></a>Element „AutoSize“ für TableControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableControl“ (Format)](./tablecontrol-element-format.md)|Definiert ein Tabellenformat für eine Sicht.|
 

@@ -1,12 +1,14 @@
 ---
-title: PropertyName-Element für ExpressionBinding für CustomControl für View (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a4e835f19d88048441076d7fd0bbb1982fbf5ee7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „PropertyName“ für ExpressionBinding für CustomControl für View (Format)
+description: Element „PropertyName“ für ExpressionBinding für CustomControl für View (Format)
+ms.openlocfilehash: c5bb3d22aef66c9c9810f053114bf1f85b070148
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773180"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666160"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Element „PropertyName“ für ExpressionBinding für CustomControl für View (Format)
 

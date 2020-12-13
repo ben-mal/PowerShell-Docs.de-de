@@ -1,12 +1,14 @@
 ---
-title: ScriptBlock-Element für ExpressionBinding für CustomControl für View (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: de8dc60ac92d92b85c88f222db0d8e237cd5c858
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ScriptBlock“ für ExpressionBinding für CustomControl für View (Format)
+description: Element „ScriptBlock“ für ExpressionBinding für CustomControl für View (Format)
+ms.openlocfilehash: 343f4e8621b52f9c268b725a89c97746599ef14a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785471"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665318"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Element „ScriptBlock“ für ExpressionBinding für CustomControl für View (Format)
 

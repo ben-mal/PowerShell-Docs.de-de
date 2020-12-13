@@ -1,12 +1,14 @@
 ---
-title: Control-Element für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 13ea2f09aec7fea8e5460197f133b5f5219cd369
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Control“ für Controls für View (Format)
+description: Element „Control“ für Controls für View (Format)
+ms.openlocfilehash: c48b8b7ecaebfde5e6ed2123b837d92561551766
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783805"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668081"
 ---
 # <a name="control-element-for-controls-for-view--format"></a>Element „Control“ für Controls für View (Format)
 
@@ -33,14 +35,14 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Name-Element für das Steuer Element für die Ansicht (Format)](./name-element-for-control-for-controls-for-view-format.md)|Erforderliches Element.<br /><br /> Gibt den Namen des Steuer Elements an.|
 |[Element „CustomControl“ für Control für Controls für View (Format)](./customcontrol-element-for-control-for-controls-for-view-format.md)|Erforderliches Element.<br /><br /> Definiert das Steuerelement, das von dieser Ansicht verwendet wird.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Controls-Element (Format)](./controls-element-for-view-format.md)|Definiert die Sicht Steuerelemente, die von einer bestimmten Ansicht verwendet werden können.|
 

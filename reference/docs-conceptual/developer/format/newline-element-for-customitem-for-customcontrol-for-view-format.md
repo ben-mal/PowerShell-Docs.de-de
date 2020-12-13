@@ -1,12 +1,14 @@
 ---
-title: NewLine-Element für customItem für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 89fdcfaf8fdea44921ec6967e8e152d81fd63cc9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „NewLine“ für CustomItem für CustomControl für View (Format)
+description: Element „NewLine“ für CustomItem für CustomControl für View (Format)
+ms.openlocfilehash: 0e51d4b70206d2c9823d4fb788fd30f47d24f848
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785641"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666415"
 ---
 # <a name="newline-element-for-customitem-for-customcontrol-for-view-format"></a>Element „NewLine“ für CustomItem für CustomControl für View (Format)
 

@@ -1,12 +1,14 @@
 ---
-title: PropertyName-Element für selectioncondition für entryselectedby für enumerableweiterung (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c0081cb724ccaf1c04241aafa177880d7c0e5dbe
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „PropertyName“ für SelectionCondition für EntrySelectedBy für EnumerableExpansion (Format)
+description: Element „PropertyName“ für SelectionCondition für EntrySelectedBy für EnumerableExpansion (Format)
+ms.openlocfilehash: 8e28118894661b50e90a5ccc86a36fbbe77e4b03
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783465"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665837"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>Element „PropertyName“ für SelectionCondition für EntrySelectedBy für EnumerableExpansion (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „SelectionCondition“ für EntrySelectedBy für EnumerableExpansion (Format)](./selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md)|Definiert die Bedingung, die vorhanden sein muss, um die Auflistungs Objekte dieser Definition zu erweitern.|
 

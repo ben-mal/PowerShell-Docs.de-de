@@ -1,16 +1,18 @@
 ---
-title: Allgemeine Parameter Namen | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: d0939cfa5bf90ec55f0c0afcdeff56223d9dc78d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Allgemeine Parameternamen
+description: Allgemeine Parameternamen
+ms.openlocfilehash: cf39dd3b04660076718336857d79d55c3784ccd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782224"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668217"
 ---
 # <a name="common-parameter-names"></a>Allgemeine Parameternamen
 
-Die in diesem Thema beschriebenen Parameter werden als *Allgemeine Parameter*bezeichnet. Sie werden Cmdlets von der Windows PowerShell-Runtime hinzugefügt und können nicht vom Cmdlet deklariert werden.
+Die in diesem Thema beschriebenen Parameter werden als *Allgemeine Parameter* bezeichnet. Sie werden Cmdlets von der Windows PowerShell-Runtime hinzugefügt und können nicht vom Cmdlet deklariert werden.
 
 > [!NOTE]
 > Diese Parameter werden auch den Anbieter-Cmdlets und Funktionen hinzugefügt, die mit dem-Attribut ergänzt werden `CmdletBinding` .
@@ -67,7 +69,7 @@ Datentyp: Zeichenfolge
 
 Dieser Parameter gibt die Variable an, in der Warnmeldungen gespeichert werden können. Um an diese Variable anzufügen, verwenden Sie +*varname* , anstatt die Variable zu löschen und festzulegen.
 
-## <a name="risk-mitigation-parameters"></a>Risiken: Entschärfungs Parameter
+## <a name="risk-mitigation-parameters"></a>Risk-Mitigation Parameter
 
 Die folgenden Parameter werden den Cmdlets hinzugefügt, die eine Bestätigung anfordern, bevor Sie Ihre Aktion ausführen. Weitere Informationen zu Bestätigungs Anforderungen finden Sie unter [Anfordern einer Bestätigung](./requesting-confirmation-from-cmdlets.md). Diese Parameter werden von der [System. Management. Automation. Internal. schuldprocessparameters](/dotnet/api/System.Management.Automation.Internal.ShouldProcessParameters) -Klasse definiert.
 

@@ -1,14 +1,14 @@
 ---
-title: Validieren einer Argument Anzahl | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateCount attribute, example
-ms.openlocfilehash: e7c0eb364a6975cec089b984c2100d476631a12d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Überprüfen einer Argumentanzahl
+description: Überprüfen einer Argumentanzahl
+ms.openlocfilehash: 46a32d61138fb50bceea98171f76749c9d96734d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782122"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666942"
 ---
 # <a name="how-to-validate-an-argument-count"></a>Überprüfen einer Argumentanzahl
 

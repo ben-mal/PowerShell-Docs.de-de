@@ -1,12 +1,14 @@
 ---
-title: Laden und Exportieren von Formatierungsdaten | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: b449b280ccee561679d58f2f2a8b467c83150766
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Laden und Exportieren von Formatierungsdaten
+description: Laden und Exportieren von Formatierungsdaten
+ms.openlocfilehash: 38857526801051bf6d31d300d5be1a3fd2c80391
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781119"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666517"
 ---
 # <a name="loading-and-exporting-formatting-data"></a>Laden und Exportieren von Formatierungsdaten
 
@@ -28,9 +30,9 @@ Wenn eine Formatierungs Datei geladen wird, wird Sie einer internen Liste hinzug
 
 ## <a name="storing-your-formatting-file"></a>Speichern der Formatierungs Datei
 
-Es ist nicht erforderlich, dass die Formatierungs Dateien auf dem Datenträger gespeichert werden. Es wird jedoch dringend empfohlen, dass Sie diese im folgenden Ordner speichern:`user\documents\windowspowershell\`
+Es ist nicht erforderlich, dass die Formatierungs Dateien auf dem Datenträger gespeichert werden. Es wird jedoch dringend empfohlen, dass Sie diese im folgenden Ordner speichern: `user\documents\windowspowershell\`
 
-#### <a name="loading-a-format-file-using-import-formatdata"></a>Laden einer Format Datei mit Import-formatdata
+#### <a name="loading-a-format-file-using-import-formatdata"></a>Laden einer Format Datei mit Import-FormatData
 
 1. Speichern Sie die Formatierungs Datei auf dem Datenträger.
 

@@ -1,12 +1,14 @@
 ---
-title: StopProcessSample02-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: bab32f5a2544905bd858bcecf5b0b2e2d127e642
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProcessSample02-Beispiel
+description: StopProcessSample02-Beispiel
+ms.openlocfilehash: 96171413f9f04d12460d48ba91c2c927e1856fd1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786440"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666891"
 ---
 # <a name="stopprocesssample02-sample"></a>StopProcessSample02-Beispiel
 
@@ -42,7 +44,7 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet geschrieben wird, das beim Beend
 
     `stop-proc`
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

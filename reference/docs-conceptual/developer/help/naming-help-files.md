@@ -1,12 +1,14 @@
 ---
-title: Benennen von Hilfedateien
 ms.date: 09/12/2016
-ms.openlocfilehash: ea95e6d6c87e553ed11fe6e3f058fc9a1b3d03f8
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Benennen von Hilfedateien
+description: Benennen von Hilfedateien
+ms.openlocfilehash: b77af8f9b9510785a4198fed9da1263184a27b99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893270"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667588"
 ---
 # <a name="naming-help-files"></a>Benennen von Hilfedateien
 
@@ -55,10 +57,10 @@ CIM-Befehle sind in cdxml-Dateien definiert, die in Module als geduckte Module e
 
 ## <a name="script-workflow-help-files"></a>Skripterstellung für Workflow Hilfedateien
 
-Skript Workflows, die in Modulen enthalten sind, können in XML-basierten Hilfedateien dokumentiert werden. Es gibt keine technischen Anforderungen für den Namen der Hilfedatei. Eine bewährte Vorgehensweise besteht jedoch darin, die Hilfedatei für das Skript Modul zu benennen, in dem der Skript Workflow definiert ist. Beispiel:
+Skript Workflows, die in Modulen enthalten sind, können in XML-basierten Hilfedateien dokumentiert werden. Es gibt keine technischen Anforderungen für den Namen der Hilfedatei. Eine bewährte Vorgehensweise besteht jedoch darin, die Hilfedatei für das Skript Modul zu benennen, in dem der Skript Workflow definiert ist. Zum Beispiel:
 
 `<ScriptModule>.psm1-help.xml`
 
-Im Gegensatz zu anderen Skript gesteuerten Befehlen benötigen Skript Workflows kein `.ExternalHelp` Kommentar Schlüsselwort, um Sie einer Hilfedatei zuzuordnen. Stattdessen durchsucht PowerShell die Benutzeroberflächen kulturspezifischen Unterverzeichnisse des Modul Verzeichnisses nach XML-basierten Hilfedateien und sucht in allen Dateien nach Hilfe für den Skript Workflow. `.ExternalHelp`das Kommentar Schlüsselwort wird ignoriert.
+Im Gegensatz zu anderen Skript gesteuerten Befehlen benötigen Skript Workflows kein `.ExternalHelp` Kommentar Schlüsselwort, um Sie einer Hilfedatei zuzuordnen. Stattdessen durchsucht PowerShell die Benutzeroberflächen kulturspezifischen Unterverzeichnisse des Modul Verzeichnisses nach XML-basierten Hilfedateien und sucht in allen Dateien nach Hilfe für den Skript Workflow. `.ExternalHelp` das Kommentar Schlüsselwort wird ignoriert.
 
 Da das `.ExternalHelp` Kommentar Schlüsselwort ignoriert wird, `Get-Help` kann das Cmdlet Hilfe zu Skript Workflows nur dann finden, wenn Sie in Modulen enthalten sind.

@@ -1,14 +1,14 @@
 ---
-title: Validieren eines Argument Bereichs | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateRange attribute, example
-ms.openlocfilehash: b48b1b87425add51e855c48ec700c78c3ae296c1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Überprüfen eines Argumentbereichs
+description: Überprüfen eines Argumentbereichs
+ms.openlocfilehash: 1c1c53d43350a38beb2193200de3bd6b689366a4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782071"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666925"
 ---
 # <a name="how-to-validate-an-argument-range"></a>Überprüfen eines Argumentbereichs
 

@@ -1,12 +1,14 @@
 ---
-title: Customcontrolname-Element für ExpressionBinding für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6f1ffca045b7efcecb4dce4e788a8c508fa6ef08
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „CustomControlName“ für ExpressionBinding für CustomControl für View (Format)
+description: Element „CustomControlName“ für ExpressionBinding für CustomControl für View (Format)
+ms.openlocfilehash: 24b27428c07d7178f0069f6d0e5b7ffc555efe34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783754"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666806"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Element „CustomControlName“ für ExpressionBinding für CustomControl für View (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[ExpressionBinding-Element für customItem (Format)](./expressionbinding-element-for-customitem-for-controls-for-configuration-format.md)|Definiert die Daten, die vom-Steuerelement angezeigt werden.|
 

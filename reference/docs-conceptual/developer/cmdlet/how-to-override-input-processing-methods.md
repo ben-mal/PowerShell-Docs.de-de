@@ -1,12 +1,14 @@
 ---
-title: Überschreiben von Eingabe Verarbeitungsmethoden | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: b245dc56b78ce9b7f1dea80b5d4988057c2f125f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Überschreiben von Eingabeverarbeitungsmethoden
+description: Überschreiben von Eingabeverarbeitungsmethoden
+ms.openlocfilehash: 4e8d71a34a1480ce63435ac6cc5dce60d4219c03
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784111"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667010"
 ---
 # <a name="how-to-override-input-processing-methods"></a>Überschreiben von Eingabeverarbeitungsmethoden
 

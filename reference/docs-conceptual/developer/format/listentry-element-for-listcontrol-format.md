@@ -1,12 +1,14 @@
 ---
-title: ListEntry-Element für ListControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: d98f0b5215eea7668f866d2733214ade79d748f1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ListEntry“ für ListControl (Format)
+description: Element „ListEntry“ für ListControl (Format)
+ms.openlocfilehash: 96ae5fcdd837d2491d6c7ff6a375fef1d83ae3e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785692"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666568"
 ---
 # <a name="listentry-element-for-listcontrol-format"></a>Element „ListEntry“ für ListControl (Format)
 
@@ -33,14 +35,14 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element für ListEntry (Format)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)|Optionales Element.<br /><br /> Definiert die .NET-Objekte, die diese Listen Ansichts Definition verwenden, oder die Bedingung, die für die Verwendung dieser Definition vorhanden sein muss.|
 |[ListItems-Element (Format)](./listitems-element-for-listentry-for-listcontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Eigenschaften und Skripts, deren Werte in der Listenansicht angezeigt werden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[ListEntries-Element (Format)](./listentries-element-for-listcontrol-format.md)|Stellt die Definitionen der Listenansicht bereit.|
 

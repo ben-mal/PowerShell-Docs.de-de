@@ -1,12 +1,14 @@
 ---
-title: PropertyName-Element für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e83ebd49e4f3087c817b3cc8772889dbe85113aa
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „PropertyName“ für GroupBy (Format)
+description: Element „PropertyName“ für GroupBy (Format)
+ms.openlocfilehash: 44351c46ff2386f967644fef4f423b3858dc1619
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785607"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666143"
 ---
 # <a name="propertyname-element-for-groupby-format"></a>Element „PropertyName“ für GroupBy (Format)
 

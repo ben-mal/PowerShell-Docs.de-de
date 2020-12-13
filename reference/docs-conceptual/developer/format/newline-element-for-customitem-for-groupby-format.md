@@ -1,12 +1,14 @@
 ---
-title: NewLine-Element für customItem für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c998c9a85238feaa8bc48fd3eb4f66b4f7f8d66
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „NewLine“ für CustomItem für GroupBy (Format)
+description: Element „NewLine“ für CustomItem für GroupBy (Format)
+ms.openlocfilehash: 7068288e40bf4b7539290ab5deb5f8fe086c4c9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783516"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666398"
 ---
 # <a name="newline-element-for-customitem-for-groupby-format"></a>Element „NewLine“ für CustomItem für GroupBy (Format)
 

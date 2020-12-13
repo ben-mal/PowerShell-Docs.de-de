@@ -1,12 +1,14 @@
 ---
-title: Cmdlet Sets | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 9595c9ca09148de05c69d60a2ede5688c3db61b0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet-Sets
+description: Cmdlet-Sets
+ms.openlocfilehash: b4bcb6548f9d64a8cc5e3fc3a66c671a5566001d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774812"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668234"
 ---
 # <a name="cmdlet-sets"></a>Cmdlet-Sets
 
@@ -26,7 +28,7 @@ Beachten Sie die folgenden Punkte, wenn Sie eine Basisklasse implementieren.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Implementierung einer Basisklasse, die von dem Cmdlet "Get-proc" und "halte-proc" verwendet wird, die von derselben Basisklasse abgeleitet werden.
+Das folgende Beispiel zeigt die Implementierung einer Basisklasse, die von Get-Proc und Stop-Proc Cmdlets verwendet wird, die von derselben Basisklasse abgeleitet werden.
 
 ```csharp
 using System;

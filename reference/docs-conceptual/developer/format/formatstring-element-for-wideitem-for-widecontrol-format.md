@@ -1,12 +1,14 @@
 ---
-title: FormatString-Element für wideitem für widecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 4f1f0826a1cebb1526858875df640baac9d4ce48
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „FormatString“ für WideItem für WideControl (Format)
+description: Element „FormatString“ für WideItem für WideControl (Format)
+ms.openlocfilehash: f67a18e3ec4f1323e7f9be8904db518c679d53e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781527"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667877"
 ---
 # <a name="formatstring-element-for-wideitem-for-widecontrol-format"></a>Element „FormatString“ für WideItem für WideControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „WideItem“ für WideControl (Format)](./wideitem-element-for-widecontrol-format.md)|Definiert die Eigenschaft oder das Skript, dessen Wert in einer Zeile der Listenansicht angezeigt wird.|
 

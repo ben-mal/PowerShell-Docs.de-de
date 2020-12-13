@@ -1,12 +1,14 @@
 ---
-title: Label-Element für ListItem für ListControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: ad80cc0478e7567b12d264ab661d843248ba48e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Label“ für ListItem für ListControl (Format)
+description: Element „Label“ für ListItem für ListControl (Format)
+ms.openlocfilehash: 01ff34c4129abe2c76a0a21794e756b77bff12bf
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783635"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666653"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>Element „Label“ für ListItem für ListControl (Format)
 

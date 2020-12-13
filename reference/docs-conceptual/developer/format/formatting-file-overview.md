@@ -1,12 +1,14 @@
 ---
-title: Übersicht über die Formatierung von Dateien | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: efdd3eed15c5f3c88636fcbe7a39f6c6cfb20ced
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 'Formatierungsdatei: Übersicht'
+description: 'Formatierungsdatei: Übersicht'
+ms.openlocfilehash: b86119c304c895ec08ac67de693b3a052bc7a2a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773503"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667826"
 ---
 # <a name="formatting-file-overview"></a>Formatierungsdatei: Übersicht
 
@@ -23,7 +25,7 @@ Jede Formatierungs Datei kann die folgenden Komponenten definieren, die für all
 
 - Standard Konfigurationseinstellung, z. b. ob die in den Zeilen der Tabellen angezeigten Daten in der nächsten Zeile angezeigt werden, wenn die Daten länger als die Spaltenbreite sind. Weitere Informationen zu diesen Einstellungen finden Sie unter [Definieren allgemeiner Konfigurationseinstellungen](./defining-common-configuration-features.md).
 
-- Sätze von-Objekten, die von einer beliebigen Ansicht der Formatierungs Datei angezeigt werden können. Weitere Informationen zu diesen Sätzen (als *Auswahl Sätze*bezeichnet) finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
+- Sätze von-Objekten, die von einer beliebigen Ansicht der Formatierungs Datei angezeigt werden können. Weitere Informationen zu diesen Sätzen (als *Auswahl Sätze* bezeichnet) finden Sie unter [Definieren von Objekt Sätzen](./defining-selection-sets.md).
 
 - Allgemeine Steuerelemente, die von allen Ansichten der Formatierungs Datei verwendet werden können. Mit Steuerelementen können Sie besser steuern, wie Daten angezeigt werden. Weitere Informationen zu-Steuerelementen finden Sie unter [Definieren von benutzerdefinierten Steuerelementen](./creating-custom-controls.md).
 

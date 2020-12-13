@@ -1,12 +1,14 @@
 ---
-title: Ressourcen Parameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e618951d57ff1cf303b38f0278858144df31afaf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Ressourcenparameter
+description: Ressourcenparameter
+ms.openlocfilehash: 7533f91b6d5858bcefca289eabc7854d6d5d1f2b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786525"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668149"
 ---
 # <a name="resource-parameters"></a>Ressourcenparameter
 

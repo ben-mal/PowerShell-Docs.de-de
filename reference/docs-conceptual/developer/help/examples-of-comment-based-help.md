@@ -1,18 +1,20 @@
 ---
-title: Beispiele für die kommentarbasierte Hilfe
 ms.date: 09/12/2016
-ms.openlocfilehash: fe5d054c84952367a4e7c2d5d9e32551a4e5c3a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Beispiele für die kommentarbasierte Hilfe
+description: Beispiele für die kommentarbasierte Hilfe
+ms.openlocfilehash: 35fe9103a261483c56af629f620dbd6b3c642e68
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772296"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667639"
 ---
 # <a name="examples-of-comment-based-help"></a>Beispiele für die kommentarbasierte Hilfe
 
 Dieses Thema enthält ein Beispiel für die Verwendung der Kommentar basierten Hilfe für Skripts und Funktionen.
 
-## <a name="example-1-comment-based-help-for-a-function"></a>Beispiel 1: Kommentar basierte Hilfe für eine Funktion
+## <a name="example-1-comment-based-help-for-a-function"></a>Beispiel 1: Comment-Based Hilfe für eine Funktion
 
  Die folgende Beispiel Funktion enthält eine Kommentar basierte Hilfe.
 
@@ -134,7 +136,7 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a>Beispiel 2: Kommentar basierte Hilfe für ein Skript
+## <a name="example-2-comment-based-help-for-a-script"></a>Beispiel 2: Comment-Based Hilfe für ein Skript
 
 Die folgende Beispiel Funktion enthält eine Kommentar basierte Hilfe.
 
@@ -275,7 +277,7 @@ function Add-Extension
     #>
 ```
 
-Die Ergebnisse sind identisch mit den Ergebnissen für Beispiel 1. `Get-Help`interpretiert die Parameter Beschreibungen so, als hätten Sie das- `.Parameter` Schlüsselwort begleitet.
+Die Ergebnisse sind identisch mit den Ergebnissen für Beispiel 1. `Get-Help` interpretiert die Parameter Beschreibungen so, als hätten Sie das- `.Parameter` Schlüsselwort begleitet.
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Beispiel 4: Umleiten an eine XML-Datei
 
@@ -304,7 +306,7 @@ function Add-Extension
 
 ## <a name="example-5--redirecting-to-a-different-help-topic"></a>Beispiel 5: Umleiten an ein anderes Hilfethema
 
-Der folgende Code ist ein Auszug aus dem Anfang der integrierten `Help` Funktion in PowerShell, der jeweils einen Bildschirm mit Hilfe Text anzeigt. Da im Hilfethema für das Cmdlet "Get-Help" die Hilfe Funktion beschrieben wird, verwendet die Hilfe Funktion die `.ForwardHelpTargetName` `.ForwardHelpCategory` Schlüsselwörter und, um den Benutzer zum Hilfethema Get-Help Cmdlet umzuleiten.
+Der folgende Code ist ein Auszug aus dem Anfang der integrierten `Help` Funktion in PowerShell, der jeweils einen Bildschirm mit Hilfe Text anzeigt. Da im Hilfethema für das Cmdlet "Get-Help" die Hilfe Funktion beschrieben wird, verwendet die Funktion "Hilfe" die `.ForwardHelpTargetName` -und- `.ForwardHelpCategory` Schlüsselwörter, um den Benutzer zum Get-Help-Cmdlet-Hilfethema umzuleiten.
 
 ```powershell
 function help

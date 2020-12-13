@@ -1,12 +1,14 @@
 ---
-title: PropertyName-Element für wideitem für widecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 7728f960a67faa99eaafb4a4934674e119b8af27
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „PropertyName“ für WideItem für WideControl (Format)
+description: Element „PropertyName“ für WideItem für WideControl (Format)
+ms.openlocfilehash: 1d4d5eaf7708dfbd7997122fac156a36487538ea
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780473"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665616"
 ---
 # <a name="propertyname-element-for-wideitem-for-widecontrol-format"></a>Element „PropertyName“ für WideItem für WideControl (Format)
 

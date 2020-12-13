@@ -1,12 +1,14 @@
 ---
-title: FormatString-Element für ListItem für ListControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 9ec73aa1c2e8180258722627e30344de4e67bda5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „FormatString“ für ListItem für ListControl (Format)
+description: Element „FormatString“ für ListItem für ListControl (Format)
+ms.openlocfilehash: 1c16da92928ea632241942f4f2c63390c4fea706
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781578"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667911"
 ---
 # <a name="formatstring-element-for-listitem-for-listcontrol--format"></a>Element „FormatString“ für ListItem für ListControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[ListItem-Element (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|Definiert die Eigenschaft oder das Skript, dessen Wert in einer Zeile der Listenansicht angezeigt wird.|
 

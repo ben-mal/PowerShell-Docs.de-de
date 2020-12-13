@@ -1,12 +1,14 @@
 ---
-title: ScriptBlock-Element für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e761e02a7910cd598449d564e827889162da9f25
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ScriptBlock“ für GroupBy (Format)
+description: Element „ScriptBlock“ für GroupBy (Format)
+ms.openlocfilehash: 117cbef93889046626741449886a1caaa39815cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787681"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665244"
 ---
 # <a name="scriptblock-element-for-groupby-format"></a>Element „ScriptBlock“ für GroupBy (Format)
 

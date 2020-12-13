@@ -1,12 +1,14 @@
 ---
-title: Label-Element für tablecolumnheader für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: b7b1d6825d3bca0e36b230415d19c2ac48377a46
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Label“ für TableColumnHeader für TableControl (Format)
+description: Element „Label“ für TableColumnHeader für TableControl (Format)
+ms.openlocfilehash: fe4c209903c04e683b44e2bdcbf381adb6874ace
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785743"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92667792"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Element „Label“ für TableColumnHeader für TableControl (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Tablecolumnheader-Element für tableHeaders für tablecontrol (Format)](./tablecolumnheader-element-format.md)|Definiert eine Bezeichnung, die Breite und die Ausrichtung der Daten für eine Spalte der Tabelle.|
 

@@ -1,12 +1,14 @@
 ---
-title: Erweiterte Typsystem-Klassenmember
 ms.date: 07/09/2020
-ms.openlocfilehash: 24a57b7fd0b3db47d0d7138859aa0502ca9016f0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erweiterte Typsystem-Klassenmember
+description: Erweiterte Typsystem-Klassenmember
+ms.openlocfilehash: 06488ce423f363a285ab53b21ab45989654346dc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786270"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92666840"
 ---
 # <a name="extended-type-system-class-members"></a>Erweiterte Typsystem-Klassenmember
 
@@ -22,7 +24,7 @@ Die **psmembership Info** -Klasse dient als Basisklasse für alle ETS-Elementtyp
 
 ## <a name="accessing-members"></a>Zugreifen auf Member
 
-Auf Auflistungen von Membern kann **über die Eigenschaften**, **Methoden**und **Eigenschaften** des **psobject** -Objekts zugegriffen werden.
+Auf Auflistungen von Membern kann **über die Eigenschaften**, **Methoden** und **Eigenschaften** des **psobject** -Objekts zugegriffen werden.
 
 ## <a name="ets-properties"></a>ETS-Eigenschaften
 

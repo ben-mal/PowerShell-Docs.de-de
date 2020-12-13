@@ -1,18 +1,20 @@
 ---
-title: Erstellen eines Cmdlet für den Zugriff auf einen Datenspeicher
 ms.date: 09/13/2016
-ms.openlocfilehash: a595805a820c355937e581f0e00fa2a9a9fc3df0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Cmdlet für den Zugriff auf einen Datenspeicher
+description: Erstellen eines Cmdlet für den Zugriff auf einen Datenspeicher
+ms.openlocfilehash: d6ae4779a96b0789f11952a1d66bb96a394c3211
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782139"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668183"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Erstellen eines Cmdlet für den Zugriff auf einen Datenspeicher
 
 In diesem Abschnitt wird beschrieben, wie Sie ein Cmdlet erstellen, das über einen Windows PowerShell-Anbieter auf gespeicherte Daten zugreift. Diese Art von Cmdlet verwendet die Windows PowerShell-Anbieter Infrastruktur der Windows PowerShell-Laufzeit. Daher muss die Cmdlet-Klasse von der Basisklasse " [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) " abgeleitet werden.
 
-Das hier beschriebene Select-Str-Cmdlet kann Zeichen folgen in einer Datei oder einem Objekt suchen und auswählen. Die zum Identifizieren der Zeichenfolge verwendeten Muster können explizit durch den- `Path` Parameter des Cmdlets oder implizit durch den- `Script` Parameter angegeben werden.
+Das hier beschriebene Cmdlet "Select-Str" kann Zeichen folgen in einer Datei oder einem Objekt suchen und auswählen. Die zum Identifizieren der Zeichenfolge verwendeten Muster können explizit durch den- `Path` Parameter des Cmdlets oder implizit durch den- `Script` Parameter angegeben werden.
 
 Das-Cmdlet ist für die Verwendung eines beliebigen Windows PowerShell-Anbieters konzipiert, der von [System. Management. Automation. Provider. icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider)abgeleitet wird. Beispielsweise kann das Cmdlet den File System-Anbieter oder den Variablen Anbieter angeben, der von Windows PowerShell bereitgestellt wird. Weitere Informationen zu Windows PowerShell-Anbietern finden Sie unter [Entwerfen des Windows PowerShell-Anbieters](../prog-guide/designing-your-windows-powershell-provider.md).
 
@@ -22,7 +24,7 @@ Der erste Schritt bei der Cmdlet-Erstellung ist die Benennung des Cmdlets und da
 
 Die .NET-Klasse für dieses Cmdlet muss von der Basisklasse " [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) " abgeleitet werden, da Sie die von der Windows PowerShell-Laufzeit benötigte Unterstützung bereitstellt, um die Windows PowerShell-Anbieter Infrastruktur verfügbar zu machen. Beachten Sie, dass dieses Cmdlet auch die .NET Framework regulären Ausdrucks Klassen verwendet, wie z. b. [System. Text. RegularExpressions. Regex](/dotnet/api/System.Text.RegularExpressions.Regex).
 
-Der folgende Code stellt die Klassendefinition für dieses SELECT-Str-Cmdlet dar.
+Der folgende Code stellt die Klassendefinition für dieses Select-Str-Cmdlet dar.
 
 ```csharp
 [Cmdlet(VerbsCommon.Select, "Str", DefaultParameterSetName="PatternParameterSet")]
@@ -170,7 +172,7 @@ internal WildcardPattern[] include = null;
 
 ### <a name="declaring-parameter-sets"></a>Deklarieren von Parameter Sätzen
 
-Dieses Cmdlet verwendet zwei Parametersätze ( `ScriptParameterSet` und `PatternParameterSet` , das ist die Standardeinstellung) als Namen von zwei Parametersätzen, die beim Datenzugriff verwendet werden. `PatternParameterSet`der Standardparameter Satz, der verwendet wird, wenn der- `Pattern` Parameter angegeben wird. `ScriptParameterSet`wird verwendet, wenn der Benutzer einen alternativen Suchmechanismus durch den- `Script` Parameter angibt. Weitere Informationen zu Parametersätzen finden Sie unter [Hinzufügen von Parametersätzen zu einem Cmdlet](./adding-parameter-sets-to-a-cmdlet.md).
+Dieses Cmdlet verwendet zwei Parametersätze ( `ScriptParameterSet` und `PatternParameterSet` , das ist die Standardeinstellung) als Namen von zwei Parametersätzen, die beim Datenzugriff verwendet werden. `PatternParameterSet` der Standardparameter Satz, der verwendet wird, wenn der- `Pattern` Parameter angegeben wird. `ScriptParameterSet` wird verwendet, wenn der Benutzer einen alternativen Suchmechanismus durch den- `Script` Parameter angibt. Weitere Informationen zu Parametersätzen finden Sie unter [Hinzufügen von Parametersätzen zu einem Cmdlet](./adding-parameter-sets-to-a-cmdlet.md).
 
 ## <a name="overriding-input-processing-methods"></a>Überschreiben von Eingabe Verarbeitungsmethoden
 
@@ -368,11 +370,11 @@ protected override void ProcessRecord()
 
 Ihr Cmdlet muss den Anbieter öffnen, der durch den Windows PowerShell-Pfad angegeben wird, sodass er auf die Daten zugreifen kann. Das [System. Management. Automation. SessionState](/dotnet/api/System.Management.Automation.SessionState) -Objekt für den Runspace wird für den Zugriff auf den Anbieter verwendet, während die [System. Management. Automation. PSCmdlet. invokeprovider *](/dotnet/api/System.Management.Automation.PSCmdlet.InvokeProvider) -Eigenschaft des Cmdlets zum Öffnen des Anbieters verwendet wird. Der Zugriff auf den Inhalt wird durch Abrufen des [System. Management. Automation. providerintrinsics](/dotnet/api/System.Management.Automation.ProviderIntrinsics) -Objekts für den geöffneten Anbieter bereitgestellt.
 
-In diesem Beispiel Select-Str-Cmdlet wird die [System. Management. Automation. providerintrinsics. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) -Eigenschaft verwendet, um den zu überprüfenden Inhalt verfügbar zu machen. Anschließend kann die [System. Management. Automation. contentcmdletproviderintrinsics. GetReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) -Methode aufgerufen werden, um den erforderlichen Windows PowerShell-Pfad zu übergeben.
+Dieses Beispiel Select-Str Cmdlet verwendet die [System. Management. Automation. providerintrinsics. Content *](/dotnet/api/System.Management.Automation.ProviderIntrinsics.Content) -Eigenschaft, um den zu überprüfenden Inhalt verfügbar zu machen. Anschließend kann die [System. Management. Automation. contentcmdletproviderintrinsics. GetReader *](/dotnet/api/System.Management.Automation.ContentCmdletProviderIntrinsics.GetReader) -Methode aufgerufen werden, um den erforderlichen Windows PowerShell-Pfad zu übergeben.
 
 ## <a name="code-sample"></a>Codebeispiel
 
-Der folgende Code zeigt die Implementierung dieser Version dieses SELECT-Str-Cmdlets. Beachten Sie, dass dieser Code die Cmdlet-Klasse, private Methoden, die vom Cmdlet verwendet werden, und den Windows PowerShell-Snap-in-Code enthält, der zum Registrieren des Cmdlets verwendet wird. Weitere Informationen zum Registrieren des Cmdlets finden Sie unter [Building the Cmdlet](#defining-the-cmdlet-class).
+Der folgende Code zeigt die Implementierung dieser Version dieses Select-Str Cmdlets. Beachten Sie, dass dieser Code die Cmdlet-Klasse, private Methoden, die vom Cmdlet verwendet werden, und den Windows PowerShell-Snap-in-Code enthält, der zum Registrieren des Cmdlets verwendet wird. Weitere Informationen zum Registrieren des Cmdlets finden Sie unter [Building the Cmdlet](#defining-the-cmdlet-class).
 
 ```csharp
 //
@@ -1087,7 +1089,7 @@ Nachdem Sie ein Cmdlet implementiert haben, müssen Sie es über ein Windows Pow
 
 ## <a name="testing-the-cmdlet"></a>Testen des Cmdlets
 
-Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Das folgende Verfahren kann verwendet werden, um das Beispiel-"Select-Str"-Cmdlet zu testen.
+Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Das folgende Verfahren kann verwendet werden, um das Beispiel Select-Str-Cmdlet zu testen.
 
 1. Starten Sie Windows PowerShell, und suchen Sie in der Notizen-Datei nach Vorkommen von Zeilen mit dem Ausdruck ".net". Beachten Sie, dass die Anführungszeichen um den Namen des Pfads nur erforderlich sind, wenn der Pfad aus mehr als einem Wort besteht.
 
