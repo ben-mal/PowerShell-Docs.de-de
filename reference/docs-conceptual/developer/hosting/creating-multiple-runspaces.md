@@ -1,20 +1,22 @@
 ---
-title: Erstellen mehrerer Runspaces | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1047492d2b859ae14ddd279e25e5e1dff0013820
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen von mehreren Runspaces
+description: Erstellen von mehreren Runspaces
+ms.openlocfilehash: 2dc9cc0397178d679a4d418b7b19fb0895a4e1b7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779624"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649407"
 ---
-# <a name="creating-multiple-runspaces"></a><span data-ttu-id="18083-102">Erstellen von mehreren Runspaces</span><span class="sxs-lookup"><span data-stu-id="18083-102">Creating multiple runspaces</span></span>
+# <a name="creating-multiple-runspaces"></a><span data-ttu-id="8ff4d-103">Erstellen von mehreren Runspaces</span><span class="sxs-lookup"><span data-stu-id="8ff4d-103">Creating multiple runspaces</span></span>
 
-<span data-ttu-id="18083-103">Wenn Sie eine große Anzahl von Runspaces erstellen, empfiehlt es sich, einen Runspace-Pool zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="18083-103">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="18083-104">Die Verwendung eines [System. Management. Automation. Runspaces. runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) -Objekts, anstatt eine große Anzahl einzelner Runspaces mit denselben Merkmalen zu erstellen, kann die Leistung verbessern.</span><span class="sxs-lookup"><span data-stu-id="18083-104">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
+<span data-ttu-id="8ff4d-104">Wenn Sie eine große Anzahl von Runspaces erstellen, empfiehlt es sich, einen Runspace-Pool zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="8ff4d-104">If you create a large number of runspaces, you might consider creating a runspace pool.</span></span> <span data-ttu-id="8ff4d-105">Die Verwendung eines [System. Management. Automation. Runspaces. runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) -Objekts, anstatt eine große Anzahl einzelner Runspaces mit denselben Merkmalen zu erstellen, kann die Leistung verbessern.</span><span class="sxs-lookup"><span data-stu-id="8ff4d-105">Using a [System.Management.Automation.Runspaces.Runspacepool](/dotnet/api/System.Management.Automation.Runspaces.RunspacePool) object, rather than creating a large number of individual runspaces with the same characteristics, can improve performance.</span></span>
 
-## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="18083-105">Erstellen und Verwenden eines Runspace-Pools.</span><span class="sxs-lookup"><span data-stu-id="18083-105">Creating and using a runspace pool.</span></span>
+## <a name="creating-and-using-a-runspace-pool"></a><span data-ttu-id="8ff4d-106">Erstellen und Verwenden eines Runspace-Pools.</span><span class="sxs-lookup"><span data-stu-id="8ff4d-106">Creating and using a runspace pool.</span></span>
 
- <span data-ttu-id="18083-106">Im folgenden Beispiel wird gezeigt, wie ein Runspace-Pool erstellt wird und wie ein Befehl asynchron in einem Runspace des Pools ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="18083-106">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
+ <span data-ttu-id="8ff4d-107">Im folgenden Beispiel wird gezeigt, wie ein Runspace-Pool erstellt wird und wie ein Befehl asynchron in einem Runspace des Pools ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8ff4d-107">The following example shows how to create a runspace pool and how to run a command asynchronously in a runspace of the pool.</span></span>
 
 ```csharp
 namespace HostRunspacePool
@@ -72,6 +74,6 @@ namespace HostRunspacePool
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="18083-107">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="18083-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ff4d-108">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="8ff4d-108">See Also</span></span>
 
- [<span data-ttu-id="18083-108">Erstellen von InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="18083-108">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
+ [<span data-ttu-id="8ff4d-109">Erstellen von InitialSessionState</span><span class="sxs-lookup"><span data-stu-id="8ff4d-109">Creating an InitialSessionState</span></span>](./creating-an-initialsessionstate.md)
