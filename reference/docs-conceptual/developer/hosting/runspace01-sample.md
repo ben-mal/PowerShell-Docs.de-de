@@ -1,34 +1,36 @@
 ---
-title: Runspace01-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace01-Beispiel
+description: Runspace01-Beispiel
+ms.openlocfilehash: f47f79dd507db258119016353dc5a72d110d9252
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772194"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657924"
 ---
-# <a name="runspace01-sample"></a><span data-ttu-id="aaa90-102">Runspace01-Beispiel</span><span class="sxs-lookup"><span data-stu-id="aaa90-102">Runspace01 Sample</span></span>
+# <a name="runspace01-sample"></a><span data-ttu-id="6ec2a-103">Runspace01-Beispiel</span><span class="sxs-lookup"><span data-stu-id="6ec2a-103">Runspace01 Sample</span></span>
 
-<span data-ttu-id="aaa90-103">In diesem Beispiel wird gezeigt, wie die [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Klasse verwendet wird, um das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet synchron auszuführen.</span><span class="sxs-lookup"><span data-stu-id="aaa90-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously.</span></span> <span data-ttu-id="aaa90-104">Das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet gibt [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="aaa90-104">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer.</span></span> <span data-ttu-id="aaa90-105">Die Werte der Eigenschaften [System. Diagnostics. Process. ProcessName \*](/dotnet/api/System.Diagnostics.Process.ProcessName) und [System. Diagnostics. Process. Lenker count \*](/dotnet/api/System.Diagnostics.Process.Handlecount) werden dann aus den zurückgegebenen Objekten extrahiert und in einem Konsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="aaa90-105">The values of the [System.Diagnostics.Process.Processname\*](/dotnet/api/System.Diagnostics.Process.ProcessName) and [System.Diagnostics.Process.Handlecount\*](/dotnet/api/System.Diagnostics.Process.Handlecount) properties are then extracted from the returned objects and displayed in a console window.</span></span>
+<span data-ttu-id="6ec2a-104">In diesem Beispiel wird gezeigt, wie die [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Klasse verwendet wird, um das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet synchron auszuführen.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-104">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously.</span></span> <span data-ttu-id="6ec2a-105">Das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet gibt [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-105">The [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet returns [System.Diagnostics.Process](/dotnet/api/System.Diagnostics.Process) objects for each process running on the local computer.</span></span> <span data-ttu-id="6ec2a-106">Die Werte der Eigenschaften [System. Diagnostics. Process. ProcessName \*](/dotnet/api/System.Diagnostics.Process.ProcessName) und [System. Diagnostics. Process. Lenker count \*](/dotnet/api/System.Diagnostics.Process.Handlecount) werden dann aus den zurückgegebenen Objekten extrahiert und in einem Konsolenfenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-106">The values of the [System.Diagnostics.Process.Processname\*](/dotnet/api/System.Diagnostics.Process.ProcessName) and [System.Diagnostics.Process.Handlecount\*](/dotnet/api/System.Diagnostics.Process.Handlecount) properties are then extracted from the returned objects and displayed in a console window.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="aaa90-106">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="aaa90-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="6ec2a-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6ec2a-107">Requirements</span></span>
 
- <span data-ttu-id="aaa90-107">Dieses Beispiel erfordert Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="aaa90-107">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="6ec2a-108">Dieses Beispiel erfordert Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-108">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="aaa90-108">Zeigt</span><span class="sxs-lookup"><span data-stu-id="aaa90-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="6ec2a-109">Zeigt</span><span class="sxs-lookup"><span data-stu-id="6ec2a-109">Demonstrates</span></span>
 
-- <span data-ttu-id="aaa90-109">Erstellen eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts zum Ausführen eines Befehls.</span><span class="sxs-lookup"><span data-stu-id="aaa90-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a command.</span></span>
+- <span data-ttu-id="6ec2a-110">Erstellen eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts zum Ausführen eines Befehls.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object to run a command.</span></span>
 
-- <span data-ttu-id="aaa90-110">Hinzufügen eines Befehls zur Pipeline des [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts.</span><span class="sxs-lookup"><span data-stu-id="aaa90-110">Adding a command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="6ec2a-111">Hinzufügen eines Befehls zur Pipeline des [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-111">Adding a command to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="aaa90-111">Synchrones Ausführen des Befehls.</span><span class="sxs-lookup"><span data-stu-id="aaa90-111">Running the command synchronously.</span></span>
+- <span data-ttu-id="6ec2a-112">Synchrones Ausführen des Befehls.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-112">Running the command synchronously.</span></span>
 
-- <span data-ttu-id="aaa90-112">Verwenden von [System. Management. Automation. psobject](/dotnet/api/System.Management.Automation.PSObject) -Objekten zum Extrahieren von Eigenschaften aus den Objekten, die vom Befehl zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="aaa90-112">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract properties from the objects returned by the command.</span></span>
+- <span data-ttu-id="6ec2a-113">Verwenden von [System. Management. Automation. psobject](/dotnet/api/System.Management.Automation.PSObject) -Objekten zum Extrahieren von Eigenschaften aus den Objekten, die vom Befehl zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-113">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract properties from the objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="aaa90-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="aaa90-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6ec2a-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6ec2a-114">Example</span></span>
 
- <span data-ttu-id="aaa90-114">Dieses Beispiel führt das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet synchron in dem von Windows PowerShell bereitgestellten standardrunspace aus.</span><span class="sxs-lookup"><span data-stu-id="aaa90-114">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously in the default runspace provided by Windows PowerShell.</span></span>
+ <span data-ttu-id="6ec2a-115">Dieses Beispiel führt das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet synchron in dem von Windows PowerShell bereitgestellten standardrunspace aus.</span><span class="sxs-lookup"><span data-stu-id="6ec2a-115">This sample runs the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet synchronously in the default runspace provided by Windows PowerShell.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -85,4 +87,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="aaa90-115">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="aaa90-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ec2a-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6ec2a-116">See Also</span></span>

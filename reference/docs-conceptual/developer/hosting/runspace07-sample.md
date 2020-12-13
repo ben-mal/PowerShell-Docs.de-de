@@ -1,38 +1,40 @@
 ---
-title: Runspace07-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c7cca58a67e522a0e0fb1d362a60c0ca94953f3e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace07-Beispiel
+description: Runspace07-Beispiel
+ms.openlocfilehash: 4356f33a1d962a0a6c5ca1ebb8c3e4c579463022
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783176"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657667"
 ---
-# <a name="runspace07-sample"></a><span data-ttu-id="cff3b-102">Runspace07-Beispiel</span><span class="sxs-lookup"><span data-stu-id="cff3b-102">Runspace07 Sample</span></span>
+# <a name="runspace07-sample"></a><span data-ttu-id="5d3e0-103">Runspace07-Beispiel</span><span class="sxs-lookup"><span data-stu-id="5d3e0-103">Runspace07 Sample</span></span>
 
-<span data-ttu-id="cff3b-103">Dieses Beispiel zeigt, wie ein Runspace erstellt und dann mit diesem Runspace zwei Cmdlets synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="cff3b-103">This sample shows how to create a runspace, and then use that runspace to run two cmdlets synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+<span data-ttu-id="5d3e0-104">Dieses Beispiel zeigt, wie ein Runspace erstellt und dann mit diesem Runspace zwei Cmdlets synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-104">This sample shows how to create a runspace, and then use that runspace to run two cmdlets synchronously by using a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="cff3b-104">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="cff3b-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="5d3e0-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5d3e0-105">Requirements</span></span>
 
-<span data-ttu-id="cff3b-105">Dieses Beispiel erfordert Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="cff3b-105">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="5d3e0-106">Dieses Beispiel erfordert Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-106">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="cff3b-106">Zeigt</span><span class="sxs-lookup"><span data-stu-id="cff3b-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="5d3e0-107">Zeigt</span><span class="sxs-lookup"><span data-stu-id="5d3e0-107">Demonstrates</span></span>
 
-<span data-ttu-id="cff3b-107">In diesem Beispiel wird Folgendes veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="cff3b-107">This sample demonstrates the following.</span></span>
+<span data-ttu-id="5d3e0-108">In diesem Beispiel wird Folgendes veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="5d3e0-108">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="cff3b-108">Erstellen eines [System. Management. Automation. Runspaces. Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) -Objekts mithilfe der [System. Management. Automation. Runspaces. runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) -Klasse.</span><span class="sxs-lookup"><span data-stu-id="cff3b-108">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object by using the [System.Management.Automation.Runspaces.Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) class.</span></span>
+- <span data-ttu-id="5d3e0-109">Erstellen eines [System. Management. Automation. Runspaces. Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) -Objekts mithilfe der [System. Management. Automation. Runspaces. runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) -Klasse.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-109">Creating a [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) object by using the [System.Management.Automation.Runspaces.Runspacefactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) class.</span></span>
 
-- <span data-ttu-id="cff3b-109">Erstellen eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts, das den Runspace verwendet.</span><span class="sxs-lookup"><span data-stu-id="cff3b-109">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
+- <span data-ttu-id="5d3e0-110">Erstellen eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts, das den Runspace verwendet.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object that uses the runspace.</span></span>
 
-- <span data-ttu-id="cff3b-110">Hinzufügen von Cmdlets zur Pipeline des [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts.</span><span class="sxs-lookup"><span data-stu-id="cff3b-110">Adding cmdlets to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="5d3e0-111">Hinzufügen von Cmdlets zur Pipeline des [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-111">Adding cmdlets to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="cff3b-111">Synchrones Ausführen der Cmdlets.</span><span class="sxs-lookup"><span data-stu-id="cff3b-111">Running the cmdlets synchronously.</span></span>
+- <span data-ttu-id="5d3e0-112">Synchrones Ausführen der Cmdlets.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-112">Running the cmdlets synchronously.</span></span>
 
-- <span data-ttu-id="cff3b-112">Extrahieren von Eigenschaften aus den [System. Management. Automation. psobject](/dotnet/api/System.Management.Automation.PSObject) -Objekten, die vom Befehl zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="cff3b-112">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
+- <span data-ttu-id="5d3e0-113">Extrahieren von Eigenschaften aus den [System. Management. Automation. psobject](/dotnet/api/System.Management.Automation.PSObject) -Objekten, die vom Befehl zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-113">Extracting properties from the [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects returned by the command.</span></span>
 
-## <a name="example"></a><span data-ttu-id="cff3b-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cff3b-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5d3e0-114">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5d3e0-114">Example</span></span>
 
-<span data-ttu-id="cff3b-114">In diesem Beispiel wird ein Runspace erstellt, der von einem [System. Management. Automation. psobject](/dotnet/api/System.Management.Automation.PSObject) -Objekt verwendet wird, um die Cmdlets " [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) " und " [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) " auszuführen.</span><span class="sxs-lookup"><span data-stu-id="cff3b-114">This sample creates a runspace that used by a [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) object to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) cmdlets.</span></span>
+<span data-ttu-id="5d3e0-115">In diesem Beispiel wird ein Runspace erstellt, der von einem [System. Management. Automation. psobject](/dotnet/api/System.Management.Automation.PSObject) -Objekt verwendet wird, um die Cmdlets " [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) " und " [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) " auszuführen.</span><span class="sxs-lookup"><span data-stu-id="5d3e0-115">This sample creates a runspace that used by a [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) object to run the [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) and [Measure-Object](/powershell/module/microsoft.powershell.utility/measure-object) cmdlets.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -135,6 +137,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cff3b-115">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="cff3b-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d3e0-116">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="5d3e0-116">See Also</span></span>
 
-[<span data-ttu-id="cff3b-116">Schreiben einer Windows PowerShell-Hostanwendung</span><span class="sxs-lookup"><span data-stu-id="cff3b-116">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="5d3e0-117">Schreiben einer Windows PowerShell-Hostanwendung</span><span class="sxs-lookup"><span data-stu-id="5d3e0-117">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
