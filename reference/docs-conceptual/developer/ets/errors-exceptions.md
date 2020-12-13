@@ -1,12 +1,14 @@
 ---
-title: Fehler und Ausnahmen im erweiterten Typsystem
 ms.date: 07/09/2020
-ms.openlocfilehash: f60c53e33c031168eda53726e0d296bf91139fda
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Fehler und Ausnahmen im erweiterten Typsystem
+description: Fehler und Ausnahmen im erweiterten Typsystem
+ms.openlocfilehash: 295c16ad9abb67b0c4967bf32125bfc7ee0a35da
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786287"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652481"
 ---
 # <a name="errors-and-exceptions-in-the-extended-type-system"></a>Fehler und Ausnahmen im erweiterten Typsystem
 
@@ -31,7 +33,7 @@ Alle Fehler, die beim Aufrufen einer ETS-Methode auftreten, bewirken, dass eine 
 
 ## <a name="casting-errors"></a>Umwandlungs Fehler
 
-Wenn versucht wird, eine ungültige Umwandlung auszuführen, wird eine **psinvalidcastexception** ausgelöst. Da diese Ausnahme von **System. InvalidCastException**abgeleitet wird, kann Sie nicht direkt aus dem Skript eingeschlossen werden. Beachten Sie, dass die Entität, die die Umwandlung versucht, **psinvalidcastexception** in einer **psruntimeexception** umschließen muss, damit diese von Skripts abrechenbar ist. Wenn versucht wird, den Wert eines **pspropertyset**-, **psmembership set**-, **psmethodinfo**-Elements oder eines Members der "read **onlypsmembership infocollection ' 1"** festzulegen, wird eine **NotSupportedException** ausgelöst.
+Wenn versucht wird, eine ungültige Umwandlung auszuführen, wird eine **psinvalidcastexception** ausgelöst. Da diese Ausnahme von **System. InvalidCastException** abgeleitet wird, kann Sie nicht direkt aus dem Skript eingeschlossen werden. Beachten Sie, dass die Entität, die die Umwandlung versucht, **psinvalidcastexception** in einer **psruntimeexception** umschließen muss, damit diese von Skripts abrechenbar ist. Wenn versucht wird, den Wert eines **pspropertyset**-, **psmembership set**-, **psmethodinfo**-Elements oder eines Members der "read **onlypsmembership infocollection ' 1"** festzulegen, wird eine **NotSupportedException** ausgelöst.
 
 ## <a name="common-runtime-errors"></a>Allgemeine Laufzeitfehler
 

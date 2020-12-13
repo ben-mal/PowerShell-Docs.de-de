@@ -1,12 +1,14 @@
 ---
-title: Erweitern von Ausgabe Objekten | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 48f4f2996159d84257ad72d499e3a796aeaa9116
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erweitern von Ausgabeobjekten
+description: Erweitern von Ausgabeobjekten
+ms.openlocfilehash: 9fea476e3032002bd206609313581cc6373dfddc
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784315"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652903"
 ---
 # <a name="extending-output-objects"></a>Erweitern von Ausgabeobjekten
 
@@ -50,7 +52,7 @@ Get            Method        System.Object Get(Int32 )
 Length         Property      System.Int32 Length {get;}
 ```
 
-Sie können entweder die- `Count` Eigenschaft oder die- `Length` Eigenschaft verwenden, um zu bestimmen, wie viele Objekte in einem Array sind. Beispiel:
+Sie können entweder die- `Count` Eigenschaft oder die- `Length` Eigenschaft verwenden, um zu bestimmen, wie viele Objekte in einem Array sind. Zum Beispiel:
 
 ```powershell
 PS> (1, 2, 3, 4).Count

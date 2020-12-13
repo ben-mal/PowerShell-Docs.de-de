@@ -1,12 +1,14 @@
 ---
-title: Tyname-Element für entryselectedby für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c514d3e6155278ddd3a0565c87e9377dc8419356
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TypeName“ für EntrySelectedBy für TableControl (Format)
+description: Element „TypeName“ für EntrySelectedBy für TableControl (Format)
+ms.openlocfilehash: 5a9f5cda1810d461d19ffb48a1cfa2d41f87ca96
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780201"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651419"
 ---
 # <a name="typename-element-for-entryselectedby-for-tablecontrol-format"></a>Element „TypeName“ für EntrySelectedBy für TableControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Definiert die .NET-Typen, die diesen Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 

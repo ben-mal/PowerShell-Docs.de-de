@@ -1,12 +1,14 @@
 ---
-title: Selectioncondition-Element für entryselectedby für ListControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 29626b181f21d168e1ebf973e01afeb411d9ef54
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionCondition“ für EntrySelectedBy für ListControl (Format)
+description: Element „SelectionCondition“ für EntrySelectedBy für ListControl (Format)
+ms.openlocfilehash: e93499691dd0046265e43abd26497b2974546083
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772772"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655097"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Element „SelectionCondition“ für EntrySelectedBy für ListControl (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[PropertyName-Element für selectioncondition für entryselectedby für ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt die .net-Eigenschaft an, die die Bedingung auslöst.|
 |[ScriptBlock-Element für selectioncondition für entryselectedby für ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das die Bedingung auslöst.|
@@ -44,7 +46,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element für tablerowentry (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Definiert die .NET-Typen, die diesen Tabelleneintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 

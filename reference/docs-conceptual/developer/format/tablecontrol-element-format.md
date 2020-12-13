@@ -1,12 +1,14 @@
 ---
-title: Tablecontrol-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 34e20006a7501650f2a22f71a3d7e999fb8b2337
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TableControl“ (Format)
+description: Element „TableControl“ (Format)
+ms.openlocfilehash: 93e05e22d61504d7781b6f3c07f9a3fd0b3c9e8a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785131"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651466"
 ---
 # <a name="tablecontrol-element-format"></a>Element „TableControl“ (Format)
 
@@ -36,7 +38,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „AutoSize“ für TableControl (Format)](./autosize-element-for-tablecontrol-format.md)|Optionales Element.<br /><br /> Gibt an, ob die Spaltengröße und die Anzahl der Spalten basierend auf der Größe der Daten angepasst werden.|
 |[Hidetableheaders-Element für tablecontrol (Format)](./hidetableheaders-element-format.md)|Optionales Element.<br /><br /> Gibt an, ob der Header der Tabelle nicht angezeigt wird.|
@@ -45,7 +47,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „View“ (Format)](./view-element-format.md)|Definiert eine Ansicht, die zum Anzeigen der Member von einem oder mehreren-Objekten verwendet wird.|
 

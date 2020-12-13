@@ -1,12 +1,14 @@
 ---
-title: Selectioncondition-Element für entryselectedby für widecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 4115ad1ee8729ea4fc16bc19698018d2f4ed9be1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionCondition“ für EntrySelectedBy für WideControl (Format)
+description: Element „SelectionCondition“ für EntrySelectedBy für WideControl (Format)
+ms.openlocfilehash: 8c51ca72edc6ad174dc289c61a8987e8f9495d19
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772704"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655113"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-widecontrol-format"></a>Element „SelectionCondition“ für EntrySelectedBy für WideControl (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „PropertyName“ für SelectionCondition für EntrySelectedBy für WideEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)|Optionales Element.<br /><br /> Gibt die .net-Eigenschaft an, die die Bedingung auslöst.|
 |[ScriptBlock-Element für selectioncondition für entryselectedby für wideentry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt den Skriptblock an, der die Bedingung auslöst.|
@@ -44,7 +46,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „EntrySelectedBy“ für WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Definiert die .NET-Typen, die diesen breiten Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 

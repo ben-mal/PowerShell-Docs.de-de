@@ -1,16 +1,18 @@
 ---
-title: SelectStr-Tutorial
 ms.date: 09/13/2016
-ms.openlocfilehash: 500cf055afe1ccc04f6a4a28f92abb80886dfa43
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: SelectStr-Tutorial
+description: SelectStr-Tutorial
+ms.openlocfilehash: 06c74dfceeb93d75c139d2782c1e40bcaf986992
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786491"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652557"
 ---
 # <a name="selectstr-tutorial"></a>SelectStr-Tutorial
 
-Dieser Abschnitt enthält ein Tutorial zum Erstellen des Select-Str-Cmdlets, das dem von Windows PowerShell bereitgestellten [Select-String](/powershell/module/microsoft.powershell.utility/select-string) -Cmdlet sehr ähnlich ist. Dieses Tutorial enthält Code Fragmente, die veranschaulichen, wie Cmdlets implementiert werden, und eine Erläuterung des Codes.
+Dieser Abschnitt enthält ein Tutorial zum Erstellen des-Select-Str-Cmdlets, das dem von Windows PowerShell bereitgestellten Cmdlet " [Select-String](/powershell/module/microsoft.powershell.utility/select-string) " sehr ähnlich ist. Dieses Tutorial enthält Code Fragmente, die veranschaulichen, wie Cmdlets implementiert werden, und eine Erläuterung des Codes.
 
 ## <a name="topic-in-this-tutorial"></a>Thema in diesem Tutorial
 

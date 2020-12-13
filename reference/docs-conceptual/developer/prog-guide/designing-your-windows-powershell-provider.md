@@ -1,14 +1,14 @@
 ---
-title: Entwerfen Ihres Windows PowerShell-Anbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- providers [PowerShell Programmer's Guide], designing
-ms.openlocfilehash: dec6c71a2d7bbe5636f96dc140e701213d6f6487
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Entwerfen eines Windows PowerShell-Anbieters
+description: Entwerfen eines Windows PowerShell-Anbieters
+ms.openlocfilehash: 89e1fa9cfc0a2e5928a358aad4244c8e9152fe1a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778923"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654541"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Entwerfen eines Windows PowerShell-Anbieters
 
@@ -20,19 +20,19 @@ Windows PowerShell Runtime verwendet Windows PowerShell-Pfade, um auf den entspr
 
 Weitere Informationen zu Windows PowerShell-Pfaden finden Sie unter Funktionsweise von Windows PowerShell.
 
-### <a name="defining-a-drive-qualified-path"></a>Definieren eines Laufwerk qualifizierten Pfads
+### <a name="defining-a-drive-qualified-path"></a>Definieren eines Drive-Qualified Pfades
 
 Um dem Benutzer den Zugriff auf Daten zu ermöglichen, die sich auf einem physischen Laufwerk befinden, muss der Windows PowerShell-Anbieter einen Laufwerk qualifizierten Pfad unterstützen. Dieser Pfad beginnt mit dem Namen des Laufwerks, gefolgt von einem Doppelpunkt:) (z. b. mydrive: \ abc\bar.
 
-### <a name="defining-a-provider-qualified-path"></a>Definieren eines vom Anbieter qualifizierten Pfads
+### <a name="defining-a-provider-qualified-path"></a>Definieren eines Provider-Qualified Pfades
 
 Damit die Windows PowerShell-Laufzeit den Anbieter initialisieren und deren Initialisierung initialisieren kann, muss der Windows PowerShell-Anbieter einen von einem Anbieter qualifizierten Pfad unterstützen. File System:: \\ \uncshare\abc\bar ist beispielsweise der vom Anbieter qualifizierte Pfad für den File System-Anbieter, der von Windows PowerShell bereitgestellt wird.
 
-### <a name="defining-a-provider-direct-path"></a>Definieren eines direkten Pfads für einen Anbieter
+### <a name="defining-a-provider-direct-path"></a>Definieren eines Provider-Direct Pfades
 
 Um den Remote Zugriff auf Ihren Windows PowerShell-Anbieter zuzulassen, sollte er einen Anbieter-Direct-Pfad unterstützen, um direkt an den Windows PowerShell-Anbieter für den aktuellen Speicherort zu übergeben. Der Windows PowerShell-Anbieter für die Registrierung kann z \\ . b. \server\regkeypath als Anbieter-Direct-Pfad verwenden.
 
-### <a name="defining-a-provider-internal-path"></a>Definieren eines internen Anbieter Pfads
+### <a name="defining-a-provider-internal-path"></a>Definieren eines Provider-Internal Pfades
 
 Um dem Anbieter-Cmdlet den Zugriff auf Daten mit nicht-Windows PowerShell-APIs (Application Programming Interface) zu gestatten, sollte der Windows PowerShell-Anbieter einen Anbieter internen Pfad unterstützen. Dieser Pfad wird nach dem "::" im vom Anbieter qualifizierten Pfad angegeben. Beispielsweise ist der Anbieter interne Pfad für den Windows PowerShell-Anbieter "File System" \\ \uncshare\abc\bar.
 
@@ -101,10 +101,10 @@ Die [System. Management. Automation. Provider. navigationcmdletprovider](/dotnet
 
 |    Cmdlet    |                                                                      Definition                                                                      |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Kombinieren-Pfad | Kombiniert zwei Pfade zu einem einzelnen Pfad, wobei ein Anbieter spezifisches Trennzeichen zwischen Pfaden verwendet wird. Dieses Cmdlet streamt Zeichen folgen.                               |
+| Combine-Path | Kombiniert zwei Pfade zu einem einzelnen Pfad, wobei ein Anbieter spezifisches Trennzeichen zwischen Pfaden verwendet wird. Dieses Cmdlet streamt Zeichen folgen.                               |
 | `Move-Item`  | Verschiebt Elemente an den angegebenen Speicherort. Dieses Cmdlet übergibt kein Ausgabe Objekt über die Pipeline, es sei denn, der `PassThru` Parameter wurde angegeben. |
 
-Ein verwandtes Cmdlet ist das grundlegende Cmdlet "Cmdlet", das von Windows PowerShell bereitgestellt wird. Dieses Cmdlet kann zum Analysieren eines Windows PowerShell-Pfads verwendet werden, um den-Parameter zu unterstützen `Parent` . Die übergeordnete Pfad Zeichenfolge wird gestreamt.
+Ein verwandtes Cmdlet ist das grundlegende Parse-Path Cmdlet, das von Windows PowerShell bereitgestellt wird. Dieses Cmdlet kann zum Analysieren eines Windows PowerShell-Pfads verwendet werden, um den-Parameter zu unterstützen `Parent` . Die übergeordnete Pfad Zeichenfolge wird gestreamt.
 
 ## <a name="select-provider-interfaces-to-support"></a>Anbieter Schnittstellen zur Unterstützung auswählen
 

@@ -1,12 +1,14 @@
 ---
-title: Tablecolumnheader-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6296aea5c567663b1c3c0a2cf0a57b21aa5394de
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TableColumnHeader“ (Format)
+description: Element „TableColumnHeader“ (Format)
+ms.openlocfilehash: 30368512875b7c5c4cf3c686f3d09540dea1bd26
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785182"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651528"
 ---
 # <a name="tablecolumnheader-element-format"></a>Element „TableColumnHeader“ (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Label-Element für tablecolumnheader für tablecontrol (Format)](./label-element-for-tablecolumnheader-for-tablecontrol-format.md)|Optionales Element.<br /><br /> Definiert die Bezeichnung, die am oberen Rand der Spalte angezeigt wird. Wenn keine Bezeichnung angegeben ist, wird der Name der Eigenschaft verwendet, deren Wert in den Zeilen angezeigt wird.|
 |[Element „Width“ für TableColumnHeader für TableControl (Format)](./width-element-for-tablecolumnheader-for-tablecontrol-format.md)|Erforderliches Element.<br /><br /> Gibt die Breite (in Zeichen) der Spalte an.|
@@ -42,7 +44,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableHeaders“ (Format)](./tableheaders-element-format.md)|Definiert die Spalten einer Tabellen Sicht.|
 

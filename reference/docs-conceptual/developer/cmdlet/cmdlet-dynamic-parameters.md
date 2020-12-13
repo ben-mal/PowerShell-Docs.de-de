@@ -1,12 +1,14 @@
 ---
-title: Dynamische Cmdlet-Parameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: f44f71326d4711242c754c332a151dd997721595
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Dynamische Cmdlet-Parameter
+description: Dynamische Cmdlet-Parameter
+ms.openlocfilehash: b44dda2354e8b689e419c7bf4deefadfc4edcb07
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782360"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653421"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Dynamische Cmdlet-Parameter
 
@@ -56,7 +58,7 @@ Um dynamische Parameter zu unterstützen, müssen die folgenden Elemente im Cmdl
 [System. Management. Automation. idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters).
 Diese Schnittstelle stellt die Methode bereit, die die dynamischen Parameter abruft.
 
-Beispiel:
+Zum Beispiel:
 
 `public class SendGreetingCommand : Cmdlet, IDynamicParameters`
 
@@ -65,7 +67,7 @@ Beispiel:
 [System. Management. Automation. idynamicparameters. getdynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters).
 Diese Methode ruft das-Objekt ab, das die dynamischen Parameter Definitionen enthält.
 
-Beispiel:
+Beispiele:
 
 ```csharp
  public object GetDynamicParameters()
@@ -84,7 +86,7 @@ private SendGreetingCommandDynamicParameters context;
 
 Eine Klasse, die die dynamischen Parameter definiert, die hinzugefügt werden sollen. Diese Klasse muss ein **Parameter** Attribut für jeden Parameter und alle optionalen **Alias** -und **Validierungs** Attribute enthalten, die vom Cmdlet benötigt werden.
 
-Beispiel:
+Zum Beispiel:
 
 ```csharp
 public class SendGreetingCommandDynamicParameters
@@ -102,7 +104,7 @@ public class SendGreetingCommandDynamicParameters
 
 Ein umfassendes Beispiel für ein Cmdlet, das dynamische Parameter unterstützt, finden [Sie unter deklarieren dynamischer Parameter](./how-to-declare-dynamic-parameters.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [System. Management. Automation. idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
 

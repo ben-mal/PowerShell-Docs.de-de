@@ -1,12 +1,14 @@
 ---
-title: Selectionsets-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 718b08e02220f285ef215fdca727492fd4407466
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSets“ (Format)
+description: Element „SelectionSets“ (Format)
+ms.openlocfilehash: e5c928dfb82bc6963b4a87aef9ec06d34cacfdcb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785199"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654923"
 ---
 # <a name="selectionsets-element-format"></a>Element „SelectionSets“ (Format)
 
@@ -32,13 +34,13 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „SelectionSet“ (Format)](./selectionset-element-format.md)|Erforderliches Element.<br /><br /> Definiert einen einzelnen Satz von .NET-Objekten, auf die durch den Namen des Satzes verwiesen werden kann.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Configuration-Element](./configuration-element-format.md)|Stellt das Element der obersten Ebene einer Formatierungs Datei dar.|
 
@@ -50,7 +52,7 @@ Beim Definieren der Sichten der Formatierungs Datei oder der Definitionen der Si
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Configuration-Element](./configuration-element-format.md)
+[Konfigurationselement](./configuration-element-format.md)
 
 [Definieren von Auswahlgruppen](./defining-selection-sets.md)
 

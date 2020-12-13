@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für selectioncondition für entryselectedby für wideentry (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 44c88ce75ae485e1c48ceb08bfd12f739a632996
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für SelectionCondition für EntrySelectedBy für WideEntry (Format)
+description: Element „SelectionSetName“ für SelectionCondition für EntrySelectedBy für WideEntry (Format)
+ms.openlocfilehash: c6466e3ac6e1f194df9172468d26448f9630da6a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787443"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655006"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format"></a>Element „SelectionSetName“ für SelectionCondition für EntrySelectedBy für WideEntry (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Selectioncondition-Element für entryselectedby für wideentry (Format)](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|Definiert die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 

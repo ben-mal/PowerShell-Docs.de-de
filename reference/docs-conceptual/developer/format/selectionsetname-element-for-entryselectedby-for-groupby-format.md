@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für entryselectedby für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 362f7844c09a52494387a62e329adfb309767427
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für EntrySelectedBy für GroupBy (Format)
+description: Element „SelectionSetName“ für EntrySelectedBy für GroupBy (Format)
+ms.openlocfilehash: 7ebe5d884061243c8b4af196788187d84c15a92e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785284"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651840"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-groupby-format"></a>Element „SelectionSetName“ für EntrySelectedBy für GroupBy (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „EntrySelectedBy“ für CustomEntry für GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Definiert die .NET-Typen, die diesen benutzerdefinierten Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 

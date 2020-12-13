@@ -1,12 +1,14 @@
 ---
-title: Erweitern von Eigenschaften für Objekte | Microsoft-Dokumentation
 ms.date: 08/21/2019
-ms.openlocfilehash: acd20c7e2b6ef84a9c932538eb8e167d68c8a660
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erweitern Objekteigenschaften
+description: Erweitern Objekteigenschaften
+ms.openlocfilehash: 37803d9fd87319204565c2abde62f269744481b9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784298"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652889"
 ---
 # <a name="extending-properties-for-objects"></a>Erweitern Objekteigenschaften
 
@@ -19,7 +21,7 @@ Wenn Sie .NET Framework Objekte erweitern, können Sie den-Objekten Alias Eigens
 
 Eine Alias Eigenschaft definiert einen neuen Namen für eine vorhandene Eigenschaft.
 
-Im folgenden Beispiel wird die **count** -Eigenschaft dem [System. Array](/dotnet/api/System.Array) -Typ hinzugefügt. Das [aliasproperty](/dotnet/api/system.management.automation.psaliasproperty) -Element definiert die erweiterte Eigenschaft als Alias Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den neuen Namen an. Und das [referencedmembership Name](/dotnet/api/system.management.automation.psaliasproperty.referencedmembername) -Element gibt die vorhandene Eigenschaft an, auf die vom Alias verwiesen wird. Sie können auch das- `AliasProperty` Element den Membern des Members [MemberSets](/dotnet/api/system.management.automation.psmemberset) -Elements hinzufügen.
+Im folgenden Beispiel wird die **count** -Eigenschaft dem [System. Array](/dotnet/api/System.Array) -Typ hinzugefügt. Das [aliasproperty](/dotnet/api/system.management.automation.psaliasproperty) -Element definiert die erweiterte Eigenschaft als Alias Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den neuen Namen an. Und das [referencedmembership Name](/dotnet/api/system.management.automation.psaliasproperty.referencedmembername) -Element gibt die vorhandene Eigenschaft an, auf die vom Alias verwiesen wird. Sie können auch das- `AliasProperty` Element den Membern des Members [](/dotnet/api/system.management.automation.psmemberset) -Elements hinzufügen.
 
 ```xml
 <Type>
@@ -37,7 +39,7 @@ Im folgenden Beispiel wird die **count** -Eigenschaft dem [System. Array](/dotne
 
 Eine Code Eigenschaft verweist auf eine statische Eigenschaft eines .NET Framework Objekts.
 
-Im folgenden Beispiel wird die **Mode** -Eigenschaft dem [System. IO. directoriyinfo](/dotnet/api/System.IO.DirectoryInfo) -Typ hinzugefügt. Das [CodeProperty](/dotnet/api/system.management.automation.pscodeproperty) -Element definiert die erweiterte Eigenschaft als Code Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den Namen der erweiterten Eigenschaft an. Und das [getcodereferenzierungselement](/dotnet/api/system.management.automation.pscodeproperty.gettercodereference) definiert die statische Methode, auf die von der erweiterten Eigenschaft verwiesen wird. Sie können auch das- `CodeProperty` Element den Membern des Members [MemberSets](/dotnet/api/system.management.automation.psmemberset) -Elements hinzufügen.
+Im folgenden Beispiel wird die **Mode** -Eigenschaft dem [System. IO. directoriyinfo](/dotnet/api/System.IO.DirectoryInfo) -Typ hinzugefügt. Das [CodeProperty](/dotnet/api/system.management.automation.pscodeproperty) -Element definiert die erweiterte Eigenschaft als Code Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den Namen der erweiterten Eigenschaft an. Und das [getcodereferenzierungselement](/dotnet/api/system.management.automation.pscodeproperty.gettercodereference) definiert die statische Methode, auf die von der erweiterten Eigenschaft verwiesen wird. Sie können auch das- `CodeProperty` Element den Membern des Members [](/dotnet/api/system.management.automation.psmemberset) -Elements hinzufügen.
 
 ```xml
 <Type>
@@ -58,7 +60,7 @@ Im folgenden Beispiel wird die **Mode** -Eigenschaft dem [System. IO. directoriy
 
 Eine Hinweis Eigenschaft definiert eine Eigenschaft, die über einen statischen Wert verfügt.
 
-Im folgenden Beispiel wird die **Status** -Eigenschaft, deren Wert immer **Erfolg**ist, dem [System. IO. directoriyinfo](/dotnet/api/System.IO.DirectoryInfo) -Typ hinzugefügt. Das [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) -Element definiert die erweiterte Eigenschaft als Note-Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den Namen der erweiterten Eigenschaft an. Das [value](/dotnet/api/system.management.automation.psnoteproperty.value) -Element gibt den statischen Wert der erweiterten Eigenschaft an. Das- `NoteProperty` Element kann auch den Membern des Elements Members [MemberSets](/dotnet/api/system.management.automation.psmemberset) hinzugefügt werden.
+Im folgenden Beispiel wird die **Status** -Eigenschaft, deren Wert immer **Erfolg** ist, dem [System. IO. directoriyinfo](/dotnet/api/System.IO.DirectoryInfo) -Typ hinzugefügt. Das [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) -Element definiert die erweiterte Eigenschaft als Note-Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den Namen der erweiterten Eigenschaft an. Das [value](/dotnet/api/system.management.automation.psnoteproperty.value) -Element gibt den statischen Wert der erweiterten Eigenschaft an. Das- `NoteProperty` Element kann auch den Membern des Elements Members [](/dotnet/api/system.management.automation.psmemberset) hinzugefügt werden.
 
 ```xml
 <Type>
@@ -76,7 +78,7 @@ Im folgenden Beispiel wird die **Status** -Eigenschaft, deren Wert immer **Erfol
 
 Eine Skript Eigenschaft definiert eine Eigenschaft, deren Wert die Ausgabe eines Skripts ist.
 
-Im folgenden Beispiel wird die **VERSIONINFO** -Eigenschaft dem [System. IO. FileInfo](/dotnet/api/System.IO.FileInfo) -Typ hinzugefügt. Das [scriptproperty](/dotnet/api/system.management.automation.psscriptproperty) -Element definiert die erweiterte Eigenschaft als Skript Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den Namen der erweiterten Eigenschaft an. Das [getscriptblock](/dotnet/api/system.management.automation.psscriptproperty.getterscript) -Element gibt das Skript an, das den Eigenschafts Wert generiert. Sie können auch das- `ScriptProperty` Element den Membern des Members [MemberSets](/dotnet/api/system.management.automation.psmemberset) -Elements hinzufügen.
+Im folgenden Beispiel wird die **VERSIONINFO** -Eigenschaft dem [System. IO. FileInfo](/dotnet/api/System.IO.FileInfo) -Typ hinzugefügt. Das [scriptproperty](/dotnet/api/system.management.automation.psscriptproperty) -Element definiert die erweiterte Eigenschaft als Skript Eigenschaft. Das [Name](/dotnet/api/system.management.automation.psmemberinfo.name) -Element gibt den Namen der erweiterten Eigenschaft an. Das [getscriptblock](/dotnet/api/system.management.automation.psscriptproperty.getterscript) -Element gibt das Skript an, das den Eigenschafts Wert generiert. Sie können auch das- `ScriptProperty` Element den Membern des Members [](/dotnet/api/system.management.automation.psmemberset) -Elements hinzufügen.
 
 ```xml
 <Type>
@@ -127,6 +129,6 @@ Im folgenden Beispiel wird der Wert der **defaultdisplaypropertyset** -Eigenscha
 
 [Informationen zu Types.ps1XML](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)
 
-[System. Management. Automation](/dotnet/api/System.Management.Automation)
+[System.Management.Automation](/dotnet/api/System.Management.Automation)
 
 [Schreiben eines Windows PowerShell-Cmdlets](./writing-a-windows-powershell-cmdlet.md)

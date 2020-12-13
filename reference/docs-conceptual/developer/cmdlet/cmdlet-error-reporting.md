@@ -1,18 +1,14 @@
 ---
-title: Cmdlet-Fehlerberichterstattung | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- error records [PowerShell], terminating
-- non-terminating errors [PowerShell]
-- error records [PowerShell]
-- terminating errors [PowerShell]
-- error records [PowerShell], non-terminating
-ms.openlocfilehash: 30b19914253db5f517f5ab76623b54aced0c0598
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet-Fehlerberichterstattung
+description: Cmdlet-Fehlerberichterstattung
+ms.openlocfilehash: f06cf98183d56249080623895bd1f5a3e070cefd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784468"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653412"
 ---
 # <a name="cmdlet-error-reporting"></a>Cmdlet-Fehlerberichterstattung
 
@@ -40,7 +36,7 @@ Die Berichterstellung eines Fehlers ohne Abbruch sollte immer innerhalb der Cmdl
 
 ## <a name="reporting-terminating-errors"></a>Melden von abschließenden Fehlern
 
-Abschließende Fehler werden gemeldet, indem Ausnahmen ausgelöst oder die [System. Management. Automation. Cmdlet. ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) -Methode aufgerufen wird. Beachten Sie, dass Cmdlets Ausnahmen wie z. b. **oudefmemory**auch abfangen und erneut auslösen können, aber Sie müssen Ausnahmen nicht erneut auslösen, da Sie von der PowerShell-Laufzeit ebenfalls abgefangen werden.
+Abschließende Fehler werden gemeldet, indem Ausnahmen ausgelöst oder die [System. Management. Automation. Cmdlet. ThrowTerminatingError](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) -Methode aufgerufen wird. Beachten Sie, dass Cmdlets Ausnahmen wie z. b. **oudefmemory** auch abfangen und erneut auslösen können, aber Sie müssen Ausnahmen nicht erneut auslösen, da Sie von der PowerShell-Laufzeit ebenfalls abgefangen werden.
 
 Sie können auch eigene Ausnahmen für Probleme definieren, die für Ihre Situation spezifisch sind, oder einer vorhandenen Ausnahme mithilfe des Fehler Datensatzes zusätzliche Informationen hinzufügen.
 
@@ -75,9 +71,9 @@ Fehlerkategorien werden zum Gruppieren von Fehlern für den Benutzer verwendet. 
 
 Eine Beschreibung der verfügbaren Fehlerkategorien finden Sie unter der [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) -Enumeration. Im Allgemeinen sollten Sie, wenn möglich, die Verwendung von " **noError**", " **undefinederror**" und " **genericerror** " vermeiden.
 
-Benutzer können Fehler basierend auf der Kategorie anzeigen, wenn Sie `$ErrorView` auf **categoryview**festgelegt haben.
+Benutzer können Fehler basierend auf der Kategorie anzeigen, wenn Sie `$ErrorView` auf **categoryview** festgelegt haben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Cmdlet-Übersicht](./cmdlet-overview.md)
 

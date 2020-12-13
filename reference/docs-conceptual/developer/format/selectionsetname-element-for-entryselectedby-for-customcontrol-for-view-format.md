@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für entryselectedby für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 3728a1886d5406b8fa4888125d1c031d0f9b1b03
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für EntrySelectedBy für CustomControl für View (Format)
+description: Element „SelectionSetName“ für EntrySelectedBy für CustomControl für View (Format)
+ms.openlocfilehash: a158c5476fb3a168a146ce67565c0ed6f7859519
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785301"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651923"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format"></a>Element „SelectionSetName“ für EntrySelectedBy für CustomControl für View (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element für customentry für View (Format)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Definiert die .NET-Typen, die diesen benutzerdefinierten Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 

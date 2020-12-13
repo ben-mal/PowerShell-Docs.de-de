@@ -1,12 +1,14 @@
 ---
-title: Vorgehensweise beim Erstellen einer Formatierungs Datei (.format.ps1XML) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: abdbd4e15b0c4cb1dafcde087d24ed5792c86c3d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen einer Formatierungsdatei (.format.ps1xml)
+description: Erstellen einer Formatierungsdatei (.format.ps1xml)
+ms.openlocfilehash: 5bbc1ba40bfccf13636abc0f0751938aa724b761
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781255"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652003"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Erstellen einer Formatierungsdatei (.format.ps1xml)
 
@@ -33,7 +35,7 @@ In diesem Thema wird beschrieben, wie eine Formatierungs Datei (.format.ps1XML) 
 
    - Die `<ViewDefinitions></ViewDefinitions>` Tags definieren den `ViewDefinitions` Knoten. Alle Sichten werden innerhalb dieses Knotens definiert.
 
-3. Speichern Sie die Datei im Installationsordner von Windows PowerShell, in Ihrem Modul Ordner oder in einem Unterordner des Modul Ordners. Verwenden Sie das folgende Namensformat, wenn Sie die Datei speichern: `MyFile.format.ps1xml` . Beim Formatieren von Dateien muss die Erweiterung verwendet werden `.format.ps1xml` .
+3. Speichern Sie die Datei im Installationsordner von Windows PowerShell, in Ihrem Modul Ordner oder in einem Unterordner des Modul Ordners. Verwenden Sie das folgende Namensformat, wenn Sie die Datei speichern:  `MyFile.format.ps1xml` . Beim Formatieren von Dateien muss die Erweiterung verwendet werden `.format.ps1xml` .
 
    Nun können Sie der Formatierungs Datei Ansichten hinzufügen. Es gibt keine Beschränkung für die Anzahl der Sichten, die in einer Formatierungs Datei definiert werden können. Sie können eine einzelne Ansicht für jedes Objekt, mehrere Ansichten für dasselbe Objekt oder eine einzelne Ansicht hinzufügen, die von mehreren Objekten verwendet wird.
 

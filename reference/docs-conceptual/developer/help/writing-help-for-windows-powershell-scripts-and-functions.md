@@ -1,12 +1,14 @@
 ---
-title: Schreiben von Hilfe für PowerShell-Skripts und-Funktionen
 ms.date: 09/13/2016
-ms.openlocfilehash: 381c501d87b7381075f89412f654c6121493856e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Schreiben von Hilfe für PowerShell-Skripts und-Funktionen
+description: Schreiben von Hilfe für PowerShell-Skripts und-Funktionen
+ms.openlocfilehash: f72742e2a131f41ba8ffdcec4901c7c3ea1da1ad
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892913"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654631"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>Schreiben von Hilfe für PowerShell-Skripts und-Funktionen
 
@@ -23,7 +25,7 @@ In diesem Dokument werden das Format und die richtige Platzierung der Hilfe Them
 
 Das Hilfethema, das ein Skript oder eine Funktion beschreibt, kann als Satz von Kommentaren innerhalb des Skripts oder der Funktion implementiert werden. Beachten Sie beim Schreiben der Kommentar basierten Hilfe für ein Skript und für Funktionen in einem Skript sorgfältig die Regeln zum Platzieren der Kommentar basierten Hilfe. Die Platzierung bestimmt, ob das `Get-Help` Cmdlet das Hilfethema dem Skript oder einer Funktion zuordnet. Weitere Informationen zum Schreiben von Kommentar basierten Hilfe Themen finden Sie unter [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
-### <a name="xml-based-command-help"></a>XML-basierte Befehls Hilfe
+### <a name="xml-based-command-help"></a>Hilfe zum XML-Based-Befehl
 
 Das Hilfethema, das ein Skript oder eine Funktion beschreibt, kann in einer XML-Datei implementiert werden, die das Befehls Hilfe Schema verwendet. Um das Skript oder die Funktion der XML-Datei zuzuordnen, verwenden Sie das `ExternalHelp` Kommentar Schlüsselwort, gefolgt vom Pfad und Namen der XML-Datei.
 
@@ -45,7 +47,7 @@ Sie können jedoch konzeptionelle Themen im Internet auflisten. die Themen und d
   In der folgenden detaillierten Beschreibung ist beispielsweise angegeben, dass der New-Topic-Befehl ein Skript ist.
   Dadurch werden Benutzer daran erinnert, dass Sie den Pfad und den vollständigen Namen angeben müssen, wenn Sie Sie ausführen.
 
-  > "Das New-Topic-Skript erstellt ein leeres konzeptionelles Thema für jeden Themen Namen in der Eingabedatei..."
+  > "Das New-Topic Skript erstellt ein leeres konzeptionelles Thema für jeden Themen Namen in der Eingabedatei..."
 
   Die folgende ausführliche Beschreibung gibt an, dass `Disable-PSRemoting` eine Funktion ist. Diese Informationen sind besonders nützlich für Benutzer, wenn die Sitzung mehrere Befehle mit demselben Namen enthält, von denen einige möglicherweise durch einen Befehl mit höherer Rangfolge ausgeblendet werden.
 
@@ -58,7 +60,7 @@ Sie können jedoch konzeptionelle Themen im Internet auflisten. die Themen und d
 
 - Erinnern Sie sich in einem Funktions Hilfethema an Benutzer, dass die Funktion nur in der aktuellen Sitzung vorhanden ist, und um Sie in anderen Sitzungen zu verwenden. Sie müssen Sie hinzufügen oder ihr ein PowerShell-Profil hinzufügen.
 
-- `Get-Help`zeigt das Hilfethema für ein Skript oder eine Funktion nur an, wenn die Skriptdatei und die Hilfe Themendateien an den richtigen Speicherorten gespeichert werden. Daher ist es nicht sinnvoll, Anweisungen zum Installieren von PowerShell oder zum Speichern oder Installieren des Skripts oder der Funktion in einem Skript oder in einem Hilfethema zu erhalten. Fügen Sie stattdessen alle Installationsanweisungen in das Dokument ein, das Sie zum Verteilen des Skripts oder der Funktion verwenden.
+- `Get-Help` zeigt das Hilfethema für ein Skript oder eine Funktion nur an, wenn die Skriptdatei und die Hilfe Themendateien an den richtigen Speicherorten gespeichert werden. Daher ist es nicht sinnvoll, Anweisungen zum Installieren von PowerShell oder zum Speichern oder Installieren des Skripts oder der Funktion in einem Skript oder in einem Hilfethema zu erhalten. Fügen Sie stattdessen alle Installationsanweisungen in das Dokument ein, das Sie zum Verteilen des Skripts oder der Funktion verwenden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -1,12 +1,14 @@
 ---
-title: Configuration-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 90be02f8e27c0bd391e01da1a08ecd8eeb29b84c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Configuration“ (Format)
+description: Element „Configuration“ (Format)
+ms.openlocfilehash: 0524736d40dd7a7acb0b6fb61d1438b75672c240
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783839"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655688"
 ---
 # <a name="configuration-element-format"></a>Element „Configuration“ (Format)
 
@@ -36,7 +38,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „Controls“ für Configuration (Format)](./controls-element-for-configuration-format.md)|Optionales Element.<br /><br /> Definiert die allgemeinen Steuerelemente, die von allen Ansichten der Formatierungs Datei verwendet werden können.|
 |[Element „DefaultSettings“ (Format)](./defaultsettings-element-format.md)|Optionales Element.<br /><br /> Definiert allgemeine Einstellungen, die für alle Sichten der Formatierungs Datei gelten.|

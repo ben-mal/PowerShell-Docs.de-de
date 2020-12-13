@@ -1,14 +1,16 @@
 ---
-title: Schreiben von Hilfe für PowerShell-Module
 ms.date: 04/10/2020
-ms.openlocfilehash: 115ea3f3c5941e74ed6ddbc8480d4a21576bc5c6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Schreiben einer Hilfe für PowerShell-Module
+description: Schreiben einer Hilfe für PowerShell-Module
+ms.openlocfilehash: 3bef45c0dd8a7e63bc419bb3e5a7a1783810105b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893066"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654655"
 ---
-# <a name="writing-help-for-powershell-modules"></a>Schreiben von Hilfe für PowerShell-Module
+# <a name="writing-help-for-powershell-modules"></a>Schreiben einer Hilfe für PowerShell-Module
 
 PowerShell-Module können Hilfe Themen über das Modul und über die Modulmember enthalten, wie z. b. Cmdlets, Anbieter, Funktionen und Skripts. Das `Get-Help` -Cmdlet zeigt die Modul Hilfe Themen im gleichen Format an, in dem die Hilfe für andere PowerShell-Elemente angezeigt wird, und Benutzer verwenden Standard `Get-Help` Befehle, um die Hilfe Themen zu erhalten.
 

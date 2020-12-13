@@ -1,12 +1,14 @@
 ---
-title: Grundlegendes zu einem Windows PowerShell-Modul | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 9308ad0fd41aa67ffa8510ae7a3c9cd6a13f4220
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Grundlegendes zum Windows PowerShell-Modul
+description: Grundlegendes zum Windows PowerShell-Modul
+ms.openlocfilehash: 882e9db59dc1bc8570676d1da7ce84c808d076e8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779232"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651154"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Grundlegendes zum Windows PowerShell-Modul
 
@@ -84,7 +86,7 @@ Unabhängig davon wird der Pfad des Ordners als *Basis* des Moduls (modulebase) 
 
 - Dynamische Module, die vom `New-Module` Cmdlet erstellt werden, können mithilfe des- `Name` Parameters des Cmdlets benannt werden.
 
-- Module, die durch den ** `Import-Module` -Assembly-** Befehl aus assemblyobjekten importiert werden, werden gemäß der folgenden Syntax benannt: `"dynamic_code_module_" + assembly.GetName()` .
+- Module, die durch den **`Import-Module` -Assembly-** Befehl aus assemblyobjekten importiert werden, werden gemäß der folgenden Syntax benannt: `"dynamic_code_module_" + assembly.GetName()` .
 
   Weitere Informationen finden Sie unter [Installieren eines PowerShell-Moduls](./installing-a-powershell-module.md) und [Ändern des psmodulepath-Installations Pfads](./modifying-the-psmodulepath-installation-path.md).
 

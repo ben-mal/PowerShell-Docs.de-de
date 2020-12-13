@@ -1,12 +1,14 @@
 ---
-title: GroupBy-Element für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 2f9071a3ebbc7cc2ccb7721dd518e82723e9cc4e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „GroupBy“ für View (Format)
+description: Element „GroupBy“ für View (Format)
+ms.openlocfilehash: d8ca93a3b2c1490928885579919c07f5eb274cd8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781425"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652106"
 ---
 # <a name="groupby-element-for-view-format"></a>Element „GroupBy“ für View (Format)
 

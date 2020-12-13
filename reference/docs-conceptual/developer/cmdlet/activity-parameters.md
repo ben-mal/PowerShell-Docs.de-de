@@ -1,12 +1,14 @@
 ---
-title: Aktivitäts Parameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c3014b21aca85f3efa161c185e691bdd1f19f79b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Aktivitätsparameter
+description: Aktivitätsparameter
+ms.openlocfilehash: 241fb8a7796d1c9dc10e8410d6daef4db70c9b4e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784604"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653699"
 ---
 # <a name="activity-parameters"></a>Aktivitätsparameter
 
@@ -20,12 +22,12 @@ In der folgenden Tabelle sind die empfohlenen Namen und Funktionen für Aktivit�
 |**Compatibleversion**<br>Datentyp: System. Version-Objekt|Implementieren Sie diesen Parameter, sodass der Benutzer die Semantik angeben kann, mit der das Cmdlet für die Kompatibilität mit früheren Versionen kompatibel sein muss.|
 |**Komprimieren**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit die Datenkomprimierung verwendet wird, wenn der-Parameter angegeben wird.|
 |**Komprimieren**<br>Datentyp: Schlüsselwort|Implementieren Sie diesen Parameter, sodass der Benutzer den Algorithmus angeben kann, der für die Datenkomprimierung verwendet werden soll.|
-|**Fortlaufend**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit die Daten verarbeitet werden, bis der Benutzer das Cmdlet beendet, wenn der-Parameter angegeben wird. Wenn der-Parameter nicht angegeben wird, verarbeitet das Cmdlet eine vordefinierte Datenmenge und beendet dann den Vorgang.|
+|**Continuous**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit die Daten verarbeitet werden, bis der Benutzer das Cmdlet beendet, wenn der-Parameter angegeben wird. Wenn der-Parameter nicht angegeben wird, verarbeitet das Cmdlet eine vordefinierte Datenmenge und beendet dann den Vorgang.|
 |**Erstellen**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, um anzugeben, dass eine Ressource erstellt wird, wenn Sie nicht bereits vorhanden ist, wenn der-Parameter angegeben wird.|
 |**Löschen**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit Ressourcen gelöscht werden, wenn das Cmdlet den Vorgang abgeschlossen hat, wenn der-Parameter angegeben wird.|
 |**Entladen**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, um anzugeben, dass ausstehende Arbeitselemente verarbeitet werden, bevor das Cmdlet neue Daten verarbeitet, wenn der Parameter angegeben wird. Wenn der-Parameter nicht angegeben wird, werden die Arbeitselemente sofort verarbeitet.|
 |**Löschen**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer angeben kann, wie oft eine Ressource gelöscht werden soll, bevor Sie gelöscht wird.|
-|**ERRORLEVEL**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer die Ebene der Fehler angeben kann, die gemeldet werden sollen.|
+|**ErrorLevel**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer die Ebene der Fehler angeben kann, die gemeldet werden sollen.|
 |**Schli**<br>Datentyp: Zeichenfolge []|Implementieren Sie diesen Parameter, sodass der Benutzer etwas von einer Aktivität ausschließen kann. Weitere Informationen zum Verwenden von Eingabe Filtern finden Sie unter [Eingabe Filter Parameter](input-filter-parameters.md).|
 |**Filter**<br>Datentyp: Schlüsselwort|Implementieren Sie diesen Parameter, sodass der Benutzer einen Filter angeben kann, mit dem die Ressourcen ausgewählt werden, für die die Cmdlet-Aktion ausgeführt werden soll. Weitere Informationen zum Verwenden von Eingabe Filtern finden Sie unter [Eingabe Filter Parameter](./input-filter-parameters.md).|
 |**Führen Sie**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, sodass der Fortschritt nachverfolgt wird, wenn der-Parameter angegeben wird.|
@@ -44,11 +46,11 @@ In der folgenden Tabelle sind die empfohlenen Namen und Funktionen für Aktivit�
 |**Eingabeaufforderung**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer eine Eingabeaufforderung für das Cmdlet angeben kann.|
 |**Still**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit das Cmdlet Benutzer Feedback während seiner Aktionen unterdrückt, wenn der Parameter angegeben wird.|
 |**Recurse**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit das Cmdlet rekursiv seine Aktionen für Ressourcen ausführt, wenn der Parameter angegeben wird.|
-|**Reparatur**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit das Cmdlet versucht, etwas aus einem fehlerfreien Zustand zu korrigieren, wenn der Parameter angegeben wird.|
+|**Repair**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit das Cmdlet versucht, etwas aus einem fehlerfreien Zustand zu korrigieren, wenn der Parameter angegeben wird.|
 |**Repairren String**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer eine Zeichenfolge angeben kann, die verwendet wird, wenn der **Repair** -Parameter angegeben wird.|
 |**Wiederholung**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer angeben kann, wie oft das Cmdlet versucht, eine Aktion durchzuführen.|
 |**Auswählen**<br>Datentyp: Schlüsselwort Array|Implementieren Sie diesen Parameter, sodass der Benutzer ein Array der Elementtypen angeben kann.|
-|**Stream**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, sodass der Benutzer mehrere Ausgabe Objekte über die Pipeline streamen kann, wenn der-Parameter angegeben wird.|
+|**STREAM**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, sodass der Benutzer mehrere Ausgabe Objekte über die Pipeline streamen kann, wenn der-Parameter angegeben wird.|
 |**Strengeren**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, sodass alle Fehler als Fehler beim Abbrechen behandelt werden, wenn der-Parameter angegeben wird.|
 |**Templocation**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer den Speicherort der temporären Daten angeben kann, die während der Ausführung des Cmdlets verwendet werden.|
 |**Timeout**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer das Timeout Intervall (in Millisekunden) angeben kann.|

@@ -1,12 +1,14 @@
 ---
-title: Entryselectedby-Element für customentry für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d4900cefb0d499397fc9dff7e037ce0a541f72f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „EntrySelectedBy“ für CustomEntry für CustomControl für View (Format)
+description: Element „EntrySelectedBy“ für CustomEntry für CustomControl für View (Format)
+ms.openlocfilehash: 4821f22560f35034f90d018e5a109004f331441f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783686"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655358"
 ---
 # <a name="entryselectedby-element-for-customentry-for-customcontrol-for-view-format"></a>Element „EntrySelectedBy“ für CustomEntry für CustomControl für View (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Selectioncondition-Element für entryselectedby für customentry (Format)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|Optionales Element.<br /><br /> Definiert die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 |[Selectionsetname-Element für entryselectedby für customentry (Format)](./selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md)|Optionales Element.<br /><br /> Gibt einen Satz von .NET-Typen an, die diese Definition der Steuerelement Ansicht verwenden.|
@@ -42,7 +44,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Customentry-Element für customentries für View (Format)](./customentry-element-for-customentries-for-customcontrol-for-view-format.md)|Definiert die Steuerelemente, die von bestimmten .NET-Objekten verwendet werden.|
 

@@ -1,12 +1,14 @@
 ---
-title: Eigenschafts Parameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 0ded22dcda2b4eb957834ec092466767a4121f0e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Eigenschaftenparameter
+description: Eigenschaftenparameter
+ms.openlocfilehash: eff51fcd395e5f9570193ea91684f9e70030bc7d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781833"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652594"
 ---
 # <a name="property-parameters"></a>Eigenschaftenparameter
 
@@ -28,7 +30,7 @@ In der folgenden Tabelle sind die empfohlenen Namen und Funktionen für Eigensch
 |**`Reason`**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer angeben kann, warum dieses Cmdlet aufgerufen wird.|
 |**Regex**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, sodass reguläre Ausdrücke verwendet werden, wenn der-Parameter angegeben wird. Wenn dieser Parameter angegeben wird, werden Platzhalter Zeichen nicht aufgelöst.|
 |**Geschwindigkeit**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer die Baudrate angeben kann. Der Benutzer legt diesen Parameter auf die Geschwindigkeit der Ressource fest.|
-|**State**<br>Datentyp: Schlüsselwort Array|Implementieren Sie diesen Parameter, sodass der Benutzer die Namen von Zuständen angeben kann, z. b. KeyDown.|
+|**Zustand**<br>Datentyp: Schlüsselwort Array|Implementieren Sie diesen Parameter, sodass der Benutzer die Namen von Zuständen angeben kann, z. b. KeyDown.|
 |**Wert**<br>Datentyp: Object|Implementieren Sie diesen Parameter, sodass der Benutzer einen Wert angeben kann, der für das Cmdlet bereitgestellt werden soll.|
 |**Version**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer die Version der Eigenschaft angeben kann.|
 

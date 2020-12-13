@@ -1,12 +1,14 @@
 ---
-title: Itemselectioncondition-Element für ExpressionBinding für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a9b74f1882efc578f7d9ab27b8cd2f8a52833ab8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ItemSelectionCondition“ für ExpressionBinding für GroupBy (Format)
+description: Element „ItemSelectionCondition“ für ExpressionBinding für GroupBy (Format)
+ms.openlocfilehash: 92120ace5ed316fbfbf1d51422071c27d5a604cf
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773435"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651992"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-groupby-format"></a>Element „ItemSelectionCondition“ für ExpressionBinding für GroupBy (Format)
 

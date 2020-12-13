@@ -1,12 +1,14 @@
 ---
-title: Erstellen eines eingeschränkten Runspace | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 30ecb80dbd96278ee9aa5a609d27bfc4eaa423e9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines eingeschränkten Runspaces
+description: Erstellen eines eingeschränkten Runspaces
+ms.openlocfilehash: 53fee3cc7d8625425bc6a73196aee9eee7f17ed6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779810"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651162"
 ---
 # <a name="creating-a-constrained-runspace"></a>Erstellen eines eingeschränkten Runspaces
 
@@ -102,7 +104,7 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 
 ## <a name="making-commands-private"></a>Erstellen von Befehlen als privat
 
- Sie können einen Befehl auch als privat festlegen, indem Sie die [System. Management. Automation. CommandInfo. Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) -Eigenschaft von System. Management [. Automation. sessionstateentryvisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **private**festlegen. Die Host Anwendung und andere Befehle können diesen Befehl abrufen, der Benutzer der Anwendung jedoch nicht. Im folgenden Beispiel ist der Befehl [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) privat.
+ Sie können einen Befehl auch als privat festlegen, indem Sie die [System. Management. Automation. CommandInfo. Visibility](/dotnet/api/System.Management.Automation.CommandInfo.Visibility) -Eigenschaft von System. Management [. Automation. sessionstateentryvisibility](/dotnet/api/System.Management.Automation.SessionStateEntryVisibility) **private** festlegen. Die Host Anwendung und andere Befehle können diesen Befehl abrufen, der Benutzer der Anwendung jedoch nicht. Im folgenden Beispiel ist der Befehl [Get-ChildItem](/powershell/module/Microsoft.PowerShell.Management/Get-ChildItem) privat.
 
 ```csharp
 defaultSessionState = InitialSessionState.CreateDefault();

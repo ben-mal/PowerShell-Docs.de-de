@@ -1,16 +1,18 @@
 ---
-title: GetProcessSample04-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 4858c44302f7315625be02dd0dc1d335b9c3f158
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample04-Beispiel
+description: GetProcessSample04-Beispiel
+ms.openlocfilehash: 4b2b7f7ed5fd87711d0d7872caaf75d453de4832
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774421"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652734"
 ---
 # <a name="getprocesssample04-sample"></a>GetProcessSample04-Beispiel
 
-In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Prozesse auf dem lokalen Computer abruft. Wenn beim Abrufen eines Prozesses ein Fehler auftritt, wird ein Fehler vom Typ "nicht abgebrochen" generiert. Dieses Cmdlet ist eine vereinfachte Version des `Get-Process` Cmdlets, das von Windows PowerShell 2,0 bereitgestellt wird.
+In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Prozesse auf dem lokalen Computer abruft. Darin wird ein Fehler ohne Abbruch generiert, wenn es beim Abrufen eines Prozesses zu einem Fehler kommt. Dieses Cmdlet ist eine vereinfachte Version des `Get-Process` Cmdlets, das von Windows PowerShell 2,0 bereitgestellt wird.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio.
 
@@ -40,7 +42,7 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Proz
 
     `get-proc`
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

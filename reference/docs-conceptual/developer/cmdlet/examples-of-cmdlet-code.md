@@ -1,12 +1,14 @@
 ---
-title: Beispiele für Cmdlet-Code | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 2d2597d3d3f64cae1c1494eb2f05873f6feae5e0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet-Codebeispiele
+description: Cmdlet-Codebeispiele
+ms.openlocfilehash: 91dd2019300504697ad9a7a0c155a04600d09c58
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784332"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652911"
 ---
 # <a name="examples-of-cmdlet-code"></a>Cmdlet-Codebeispiele
 

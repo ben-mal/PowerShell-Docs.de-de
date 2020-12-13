@@ -1,12 +1,14 @@
 ---
-title: Erweitertes Typsystem (Übersicht)
 ms.date: 07/09/2020
-ms.openlocfilehash: 5c190f0d9b852a4b5658227085092f33d71453c9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erweitertes Typsystem (Übersicht)
+description: Erweitertes Typsystem (Übersicht)
+ms.openlocfilehash: f4a789f779fa8a52f0fe524abff7ec3311e93b6c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786219"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655722"
 ---
 # <a name="extended-type-system-overview"></a>Erweitertes Typsystem (Übersicht)
 
@@ -94,6 +96,6 @@ Wenn ein Basisobjekt ein Meta-Objekt ist, das Daten in einer generischen Weise e
 
 Zusätzlich zu den Membern, die aus dem Basisobjekt oder den von PowerShell erstellten angepassten Membern verfügbar gemacht werden, kann ein **psobject** auch erweiterte Member definieren, die das ursprüngliche Basisobjekt mit zusätzlichen Informationen erweitern, die in der Skript Umgebung nützlich sind.
 
-Beispielsweise nehmen alle Kern-Cmdlets, die von PowerShell bereitgestellt werden, wie z. b. die Cmdlets Get-Content und Set-Content, einen path-Parameter an. Um sicherzustellen, dass diese Cmdlets und andere mit Objekten unterschiedlicher Typen arbeiten können, kann diesen Objekten ein pfadmember hinzugefügt werden, sodass Sie alle Ihre Informationen auf eine gängige Weise angeben. Dieser erweiterte pfadmember stellt sicher, dass die Cmdlets für alle diese Typen funktionieren, auch wenn die Basisklasse möglicherweise keinen pfadmember hat.
+Beispielsweise nehmen alle Kern-Cmdlets, die von PowerShell bereitgestellt werden, z. b. die Get-Content-und Set-Content-Cmdlets, einen path-Parameter an. Um sicherzustellen, dass diese Cmdlets und andere mit Objekten unterschiedlicher Typen arbeiten können, kann diesen Objekten ein pfadmember hinzugefügt werden, sodass Sie alle Ihre Informationen auf eine gängige Weise angeben. Dieser erweiterte pfadmember stellt sicher, dass die Cmdlets für alle diese Typen funktionieren, auch wenn die Basisklasse möglicherweise keinen pfadmember hat.
 
 Auf Erweiterte Member, angepasste Member und Basisobjekt Elemente wird alle über die Members-Eigenschaft zugegriffen.

@@ -1,12 +1,14 @@
 ---
-title: Cmdlet-Übersicht
 ms.date: 06/11/2020
-ms.openlocfilehash: 576df03f35dff80479d1fce18cf4306c9219d42f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet-Übersicht
+description: Cmdlet-Übersicht
+ms.openlocfilehash: ed3082e1a821bb9643ea2eef13b7348eb48488e4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784400"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653233"
 ---
 # <a name="cmdlet-overview"></a>Cmdlet-Übersicht
 
@@ -15,7 +17,7 @@ Ein Cmdlet ist ein Lightweight-Befehl, der in der PowerShell-Umgebung verwendet 
 ## <a name="cmdlets"></a>Cmdlets
 
 -Cmdlets führen eine Aktion aus und geben in der Regel ein Microsoft .NET Objekt an den nächsten Befehl in der Pipeline zurück. Ein Cmdlet ist ein einzelner Befehl, der an der Pipeline Semantik von PowerShell beteiligt ist.
-Dies schließt binäre Cmdlets (c#), erweiterte Skriptfunktionen, cdxml und Workflows ein.
+Dies schließt binäre (C#-) Cmdlets, erweiterte Skriptfunktionen, CDXML und Workflows ein.
 
 In dieser SDK-Dokumentation wird beschrieben, wie in c# geschriebene binäre Cmdlets erstellt werden. Informationen zu skriptbasierten Cmdlets finden Sie unter:
 

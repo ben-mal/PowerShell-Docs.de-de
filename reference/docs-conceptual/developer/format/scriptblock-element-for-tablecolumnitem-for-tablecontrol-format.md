@@ -1,12 +1,14 @@
 ---
-title: ScriptBlock-Element für tablecolumnitem für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 676d2462de077213a933eff632a4e3d23757b731
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ScriptBlock“ für TableColumnItem für TableControl (Format)
+description: Element „ScriptBlock“ für TableColumnItem für TableControl (Format)
+ms.openlocfilehash: 5928a67fc09ddc2dcace64635fee055c620b17d3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783431"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651943"
 ---
 # <a name="scriptblock-element-for-tablecolumnitem-for-tablecontrol-format"></a>Element „ScriptBlock“ für TableColumnItem für TableControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Tablecolumnitem-Element (Format)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)|Definiert die Eigenschaft oder das Skript, dessen Wert in der Spalte der Zeile angezeigt wird.|
 

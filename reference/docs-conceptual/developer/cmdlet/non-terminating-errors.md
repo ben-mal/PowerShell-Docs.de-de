@@ -1,12 +1,14 @@
 ---
-title: Fehler ohne Abbruch | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: d74c248e6ef54151400b8060d76524e89d87352c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Fehler ohne Abbruch
+description: Fehler ohne Abbruch
+ms.openlocfilehash: d23642103e005c6d3a6168b317b11f40001b6bbe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786559"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655742"
 ---
 # <a name="non-terminating-errors"></a>Fehler ohne Abbruch
 

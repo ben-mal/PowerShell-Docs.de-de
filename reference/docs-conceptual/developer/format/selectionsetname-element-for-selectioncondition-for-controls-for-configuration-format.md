@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für selectioncondition für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 62f186be9e4b1dd5a297add0ce82011bc1ccdcd1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für SelectionCondition für Controls für Configuration (Format)
+description: Element „SelectionSetName“ für SelectionCondition für Controls für Configuration (Format)
+ms.openlocfilehash: 4177aace5a6a9374900e7339167c69b531c1e2e7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785233"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651666"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format"></a>Element „SelectionSetName“ für SelectionCondition für Controls für Configuration (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „SelectionCondition“ für EntrySelectedBy für Controls für Configuration (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md)|Definiert eine Bedingung, die vorhanden sein muss, damit die Steuerelement Definition verwendet werden muss.|
 

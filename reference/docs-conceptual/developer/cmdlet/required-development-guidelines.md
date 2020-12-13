@@ -1,12 +1,14 @@
 ---
-title: Erforderliche Entwicklungs Richtlinien | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: ca0168050e3c1c2e7537036f96da62f52d50982e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erforderliche Entwicklungsrichtlinien
+description: Erforderliche Entwicklungsrichtlinien
+ms.openlocfilehash: 98db075b314eb7f54f2deb56022799d9f830f9ef
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781697"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655754"
 ---
 # <a name="required-development-guidelines"></a>Erforderliche Entwicklungsrichtlinien
 
@@ -52,19 +54,19 @@ Beim Entwerfen von Cmdlets müssen die folgenden Richtlinien befolgt werden, um 
 
 Das im Cmdlet-Attribut angegebene Verb muss aus dem erkannten Satz von Verben stammen, die von Windows PowerShell bereitgestellt werden. Es darf sich nicht um eines der unzulässigen Synonyme handeln. Verwenden Sie die Konstanten Zeichen folgen, die durch die folgenden Enumerationen definiert werden, um Cmdlet-Verben anzugeben:
 
-- [System. Management. Automation. verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon)
+- [System.Management.Automation.VerbsCommon](/dotnet/api/System.Management.Automation.VerbsCommon)
 
-- [System. Management. Automation. verbscommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
+- [System.Management.Automation.VerbsCommunications](/dotnet/api/System.Management.Automation.VerbsCommunications)
 
-- [System. Management. Automation. verbsdata](/dotnet/api/System.Management.Automation.VerbsData)
+- [System.Management.Automation.VerbsData](/dotnet/api/System.Management.Automation.VerbsData)
 
-- [System. Management. Automation. verbsdiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
+- [System.Management.Automation.VerbsDiagnostic](/dotnet/api/System.Management.Automation.VerbsDiagnostic)
 
-- [System. Management. Automation. verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
+- [System.Management.Automation.VerbsLifeCycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle)
 
-- [System. Management. Automation. verbssecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
+- [System.Management.Automation.VerbsSecurity](/dotnet/api/System.Management.Automation.VerbsSecurity)
 
-- [System. Management. Automation. verbsother](/dotnet/api/System.Management.Automation.VerbsOther)
+- [System.Management.Automation.VerbsOther](/dotnet/api/System.Management.Automation.VerbsOther)
 
 Weitere Informationen zu den genehmigten Verb Namen finden Sie unter [Cmdlet-Verben](./approved-verbs-for-windows-powershell-commands.md).
 
@@ -82,7 +84,7 @@ Wenn Sie Cmdlets benennen, dürfen Sie keines der folgenden Sonderzeichen verwen
 |{}|Klammern|
 |[]|angegeben|
 |&|kaufmännisches und|
-|-|Bindestrich **Hinweis:** der Bindestrich kann verwendet werden, um das Verb vom Substantiv zu trennen, aber es kann nicht innerhalb des Substantiv oder innerhalb des Verbs verwendet werden.|
+|-|Bindestrich **Hinweis:**  der Bindestrich kann verwendet werden, um das Verb vom Substantiv zu trennen, aber es kann nicht innerhalb des Substantiv oder innerhalb des Verbs verwendet werden.|
 |/|Schrägstrich|
 |\\| umgekehrter Schrägstrich|
 |$|Dollarzeichen|
@@ -167,7 +169,7 @@ Weitere Informationen zum Deklarieren des Cmdlet-Attributs finden Sie unter [Cmd
 
 ### <a name="override-an-input-processing-method-rc03"></a>Überschreiben einer Eingabe Verarbeitungsmethode (RC03)
 
-Damit das Cmdlet an der Windows PowerShell-Umgebung teilnimmt, muss es mindestens eine der folgenden *Eingabe Verarbeitungsmethoden*überschreiben.
+Damit das Cmdlet an der Windows PowerShell-Umgebung teilnimmt, muss es mindestens eine der folgenden *Eingabe Verarbeitungsmethoden* überschreiben.
 
 [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) diese Methode wird einmal aufgerufen und wird verwendet, um Vorverarbeitungs Funktionen bereitzustellen.
 

@@ -1,12 +1,14 @@
 ---
-title: Tablerowentries-Element für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 4cc5d354df3e552e181a95148caa020f0041db92
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TableRowEntries“ für TableControl (Format)
+description: Element „TableRowEntries“ für TableControl (Format)
+ms.openlocfilehash: 1df63e645234da8276c7ccc5af34e81a56475e43
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785114"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651480"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>Element „TableRowEntries“ für TableControl (Format)
 
@@ -32,13 +34,13 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableRowEntry“ für TableRowEntries für TableControl (Format)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Daten, die in einer Zeile der Tabelle angezeigt werden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableControl“ (Format)](./tablecontrol-element-format.md)|Definiert ein Tabellenformat für eine Sicht.|
 

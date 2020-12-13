@@ -1,12 +1,14 @@
 ---
-title: Control-Element für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 9447efac84cff3cc33468aeebc97a8bdd6137518
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Control“ für Controls für Configuration (Format)
+description: Element „Control“ für Controls für Configuration (Format)
+ms.openlocfilehash: 43424de025cb89d81533e973abd7c39c09533747
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783822"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92655651"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Element „Control“ für Controls für Configuration (Format)
 
@@ -33,14 +35,14 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomControl“ für Control für Controls für Configuration (Format)](./customcontrol-element-for-control-for-controls-for-configuration-format.md)|Erforderliches Element.<br /><br /> Definiert das Steuerelement.|
 |[Name-Element für das Steuer Element für die Konfiguration (Format)](./name-element-for-control-for-controls-for-configuration-format.md)|Erforderliches Element.<br /><br /> Gibt den Namen an, mit dem auf das Steuerelement verwiesen wird.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Controls-Element der Konfiguration (Format)](./controls-element-for-configuration-format.md)|Definiert die allgemeinen Steuerelemente, die von allen Ansichten der Formatierungs Datei oder von anderen Steuerelementen verwendet werden können.|
 

@@ -1,12 +1,14 @@
 ---
-title: Frame-Element für customItem für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1568236ff7b6142f7e41be70a3ae5e28307cf790
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Frame“ für CustomItem für GroupBy (Format)
+description: Element „Frame“ für CustomItem für GroupBy (Format)
+ms.openlocfilehash: 86b51766974ebfcae06583ade237a77c6db92866
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785760"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652163"
 ---
 # <a name="frame-element-for-customitem-for-groupby-format"></a>Element „Frame“ für CustomItem für GroupBy (Format)
 
@@ -36,7 +38,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`CustomItem Element`|Erforderliches Element|
 |[Element „FirstLineHanging“ für Frame für GroupBy (Format)](./firstlinehanging-element-for-frame-for-groupby-format.md)|Optionales Element.<br /><br /> Gibt an, wie viele Zeichen die erste Zeile der Daten nach links verschoben wird.|
@@ -46,7 +48,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomItem“ für CustomEntry für GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)|Definiert, welche Daten vom Steuerelement angezeigt werden und wie es angezeigt wird.|
 

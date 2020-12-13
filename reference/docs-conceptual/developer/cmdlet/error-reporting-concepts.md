@@ -1,21 +1,18 @@
 ---
-title: Konzepte für die Fehlerberichterstattung | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- non-terminating errors [PowerShell SDK]
-- errors [PowerShell SDK], described
-- terminating errors [PowerShell SDK]
-- errors [PowerShell SDK]
-ms.openlocfilehash: ff010bbe1a87daa351ec13ed249ffc899781a8c3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Konzepte der Fehlerberichterstattung
+description: Konzepte der Fehlerberichterstattung
+ms.openlocfilehash: 353e628c63667a2db010556b2ed9169809b742f4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774506"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653031"
 ---
 # <a name="error-reporting-concepts"></a>Konzepte der Fehlerberichterstattung
 
-Windows PowerShell bietet zwei Mechanismen zum Melden von Fehlern: einen Mechanismus zum *Beenden von Fehlern* und einen anderen Mechanismus für *Fehler ohne*Abbruch. Es ist wichtig, dass das Cmdlet Fehler ordnungsgemäß meldet, damit die Host Anwendung, die die Cmdlets ausführen, auf angemessene Weise reagieren kann.
+Windows PowerShell bietet zwei Mechanismen zum Melden von Fehlern: einen Mechanismus zum *Beenden von Fehlern* und einen anderen Mechanismus für *Fehler ohne* Abbruch. Es ist wichtig, dass das Cmdlet Fehler ordnungsgemäß meldet, damit die Host Anwendung, die die Cmdlets ausführen, auf angemessene Weise reagieren kann.
 
 Ihr Cmdlet sollte bei Auftreten eines Fehlers die [System. Management. Automation. Cmdlet. ThrowTerminatingError *](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) -Methode aufgerufen werden, bei der das Cmdlet die Verarbeitung seiner Eingabe Objekte nicht zulässt. Ihr Cmdlet muss die [System. Management. Automation. Cmdlet. Write-error](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) -Methode zum Melden von Fehlern ohne Abbruch verwenden, wenn das Cmdlet die Verarbeitung der Eingabe Objekte fortsetzen kann. Beide Methoden stellen einen Fehler Daten Satz bereit, der von der Host Anwendung verwendet werden kann, um die Ursache des Fehlers zu untersuchen.
 

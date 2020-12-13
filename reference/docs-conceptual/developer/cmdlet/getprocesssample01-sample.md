@@ -1,12 +1,14 @@
 ---
-title: GetProcessSample01-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 84956fbafdd58623ca4f332efc940fb93b421c6e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample01-Beispiel
+description: GetProcessSample01-Beispiel
+ms.openlocfilehash: 159c277d17a8551d2b5c52377a230babacafc9ab
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784247"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92652774"
 ---
 # <a name="getprocesssample01-sample"></a>GetProcessSample01-Beispiel
 
@@ -57,7 +59,7 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Proz
    A file was created in the TEMP directory
    ```
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Für dieses Beispiel ist Windows PowerShell 1,0 oder höher erforderlich.
 

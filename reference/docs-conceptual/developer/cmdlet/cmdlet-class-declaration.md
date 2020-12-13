@@ -1,15 +1,14 @@
 ---
-title: Cmdlet-Klassen Deklaration | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], declaring
-- declaring cmdlets [PowerShell SDK]
-ms.openlocfilehash: 96ce8144795346b6f46878ee6163ce69cdb1799a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Deklaration der Cmdlet-Klasse
+description: Deklaration der Cmdlet-Klasse
+ms.openlocfilehash: 854b0a4ca9f6c87c4fad3b71ee726beade585e02
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784502"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653502"
 ---
 # <a name="cmdlet-class-declaration"></a>Deklaration der Cmdlet-Klasse
 

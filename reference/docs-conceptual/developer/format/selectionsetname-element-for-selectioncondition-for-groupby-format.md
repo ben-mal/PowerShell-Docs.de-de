@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für selectioncondition für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6d0263aa335287f20be5b94a8eb65696d06d82a8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für SelectionCondition für GroupBy (Format)
+description: Element „SelectionSetName“ für SelectionCondition für GroupBy (Format)
+ms.openlocfilehash: a4f28c1caba3790718b99f63659cb0cbed8def16
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772619"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92654993"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-groupby-format"></a>Element „SelectionSetName“ für SelectionCondition für GroupBy (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „SelectionCondition“ für EntrySelectedBy für GroupBy (Format)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)|Definiert eine Bedingung, die vorhanden sein muss, damit die Steuerelement Definition verwendet werden muss.|
 

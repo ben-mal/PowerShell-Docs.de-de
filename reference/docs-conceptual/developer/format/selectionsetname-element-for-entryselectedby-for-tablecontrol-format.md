@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für entryselectedby für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e68aa74b201abf345e87411db6cb2787ddd4f72b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für EntrySelectedBy für TableControl (Format)
+description: Element „SelectionSetName“ für EntrySelectedBy für TableControl (Format)
+ms.openlocfilehash: a5a395f718d0e1a2d7f33d120ce4fd2ff787cc34
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772687"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92651787"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-tablecontrol-format"></a>Element „SelectionSetName“ für EntrySelectedBy für TableControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Definiert die .NET-Typen, die diesen Eintrag verwenden, oder die Bedingung, die für die Verwendung dieses Eintrags vorhanden sein muss.|
 

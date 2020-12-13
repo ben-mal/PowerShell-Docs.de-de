@@ -1,14 +1,14 @@
 ---
-title: Cmdlet-Eingabe Verarbeitungsmethoden | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- virtual methods (PowerShell SDK]
-ms.openlocfilehash: e69c5a366b2d74ddd92c844bda0b1e3a65539c10
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet-Eingabeverarbeitungsmethoden
+description: Cmdlet-Eingabeverarbeitungsmethoden
+ms.openlocfilehash: e1a7b58517d6285250edbf16d14810388c242218
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784451"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92653396"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Cmdlet-Eingabeverarbeitungsmethoden
 
@@ -81,4 +81,4 @@ protected override void EndProcessing()
 
 [System.IDisposable](/dotnet/api/System.IDisposable)
 
-[Windows PowerShell Shell SDK](../windows-powershell-reference.md)
+[Referenz zu Windows PowerShell](../windows-powershell-reference.md)
