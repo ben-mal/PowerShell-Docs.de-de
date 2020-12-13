@@ -1,18 +1,20 @@
 ---
-title: Runspace02-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 7a2dce436aceb1d8744377c37671a66398614851
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace02-Beispiel
+description: Runspace02-Beispiel
+ms.openlocfilehash: 0206e1a80f3e5488fd2dd5628985756a5ca343c8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784961"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657903"
 ---
 # <a name="runspace02-sample"></a>Runspace02-Beispiel
 
 In diesem Beispiel wird gezeigt, wie die [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Klasse zum synchronen Ausführen der Cmdlets " [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) " und " [Sort-Object](/powershell/module/Microsoft.PowerShell.Utility/Sort-Object) " verwendet wird. Das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet gibt [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird, und `Sort-Object` sortiert die Objekte basierend auf Ihrer [System.Diagnostics.Process.ID *](/dotnet/api/System.Diagnostics.Process.Id) -Eigenschaft. Die Ergebnisse dieser Befehle werden mithilfe eines [System. Windows. Forms. DataGridView](/dotnet/api/System.Windows.Forms.DataGridView) -Steuer Elements angezeigt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

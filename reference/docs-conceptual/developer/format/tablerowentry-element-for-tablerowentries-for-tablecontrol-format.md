@@ -1,12 +1,14 @@
 ---
-title: Tablerowentry-Element für tablerowentries für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 83076ae5b2c48992ce5e621c65fc9937efb68b87
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TableRowEntry“ für TableRowEntries für TableControl (Format)
+description: Element „TableRowEntry“ für TableRowEntries für TableControl (Format)
+ms.openlocfilehash: 60d64b7c14b40e87825ada36e19f52a66fe8b6cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787409"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659763"
 ---
 # <a name="tablerowentry-element-for-tablerowentries-for-tablecontrol-format"></a>Element „TableRowEntry“ für TableRowEntries für TableControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element für tablerowentry für tablecontrol (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Objekte, deren Eigenschaftswerte in der Zeile angezeigt werden.|
 |[Element „TableColumnItems“ für TableRowEntry für TableControl (Format)](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Eigenschaften oder Skripts, deren Werte angezeigt werden.|
@@ -42,7 +44,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableRowEntries“ für TableControl (Format)](./tablerowentries-element-for-tablecontrol-format.md)|Definiert die Zeilen der Tabelle.|
 

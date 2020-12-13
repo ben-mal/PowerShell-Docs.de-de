@@ -1,18 +1,20 @@
 ---
-title: Ablegen der kommentarbasierten Hilfe in Funktionen
 ms.date: 09/12/2016
-ms.openlocfilehash: c7a8f8db6c71fa2ef12aaa4df0f78815626ec8d6
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Ablegen der kommentarbasierten Hilfe in Funktionen
+description: Ablegen der kommentarbasierten Hilfe in Funktionen
+ms.openlocfilehash: 3bd72f0c71d8f6ad54c43c99f044423c072fdeeb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893202"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658199"
 ---
 # <a name="placing-comment-based-help-in-functions"></a>Ablegen der kommentarbasierten Hilfe in Funktionen
 
 In diesem Thema wird erläutert, wo Sie eine Kommentar basierte Hilfe für eine Funktion platzieren können, damit das `Get-Help` Cmdlet das Kommentar basierte Hilfethema der richtigen Funktion zuordnet.
 
-## <a name="where-to-place-comment-based-help-for-a-function"></a>Speicherort der Kommentar basierten Hilfe für eine Funktion
+## <a name="where-to-place-comment-based-help-for-a-function"></a>Speicherort Comment-Based Hilfe für eine Funktion
 
 - Am Anfang des Funktions Texts.
 

@@ -1,12 +1,14 @@
 ---
-title: Anbieter Typen | Microsoft-Dokumentation
 ms.date: 08/21/2019
-ms.openlocfilehash: 03b6b2d02d603632399ea455c2832742e0964d62
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Anbietertypen
+description: Anbietertypen
+ms.openlocfilehash: 9d3b458d7647a297fcda086db3540a0c15c576db
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778252"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661766"
 ---
 # <a name="provider-types"></a>Anbietertypen
 
@@ -112,7 +114,7 @@ Die **System. Management. Automation. Provider. icontentcmdletprovider** -Schnit
 ## <a name="property-enabled-providers"></a>Eigenschaften aktivierte Anbieter
 
 Eigenschaften aktivierte Anbieter ermöglichen es dem Benutzer, die Eigenschaften der Elemente im Datenspeicher zu verwalten.
-Zum Erstellen eines Eigenschafts aktivierten Anbieters muss ihre Anbieter Klasse die Methoden der Schnittstellen [System. Management. Automation. Provider. ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) und [System. Management. Automation. Provider. idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) implementieren. In den meisten Fällen müssen Sie zur Unterstützung eines Anbieter-Cmdlets die von der PowerShell-Engine aufgerufene Methode überschreiben, um das Cmdlet aufzurufen, z. b. die `ClearProperty` -Methode für das Clear-Property-Cmdlet, und optional können Sie eine zweite Methode überschreiben, z `ClearPropertyDynamicParameters` . b., um dem Cmdlet dynamische Parameter hinzuzufügen.
+Zum Erstellen eines Eigenschafts aktivierten Anbieters muss ihre Anbieter Klasse die Methoden der Schnittstellen [System. Management. Automation. Provider. ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider) und [System. Management. Automation. Provider. idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) implementieren. In den meisten Fällen müssen Sie zur Unterstützung eines Anbieter-Cmdlets die Methode überschreiben, die das PowerShell-Modul aufruft, um das Cmdlet aufzurufen, wie z. b. die `ClearProperty` -Methode für das Clear-Property-Cmdlet, und optional können Sie eine zweite Methode überschreiben, z `ClearPropertyDynamicParameters` . b., um dem Cmdlet dynamische Parameter hinzuzufügen.
 
 Die **System. Management. Automation. Provider. ipropertycmdletprovider** -Schnittstelle definiert die folgenden Methoden für die Implementierung spezifischer Anbieter-Cmdlets:
 
@@ -134,7 +136,7 @@ Die **System. Management. Automation. Provider. ipropertycmdletprovider** -Schni
 
 - Die [System. Management. Automation. Provider. idynamicpropertycmdletprovider. renameproperty](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenameProperty) -Methode und die [System. Management. Automation. Provider. idynamicpropertycmdletprovider. renamepropertydynamicparameters](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider.RenamePropertyDynamicParameters) -Methode definieren, wie Ihr Anbieter das `Rename-ItemProperty` Cmdlet unterstützt. Mit diesem Cmdlet kann der Benutzer den Namen einer Eigenschaft ändern.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [about_Providers](/powershell/module/microsoft.powershell.core/about/about_providers)
 

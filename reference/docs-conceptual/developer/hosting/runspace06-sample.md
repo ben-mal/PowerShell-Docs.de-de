@@ -1,18 +1,20 @@
 ---
-title: Runspace06-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c16324c61ee3c7123777294952999f75b2f7aef2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace06-Beispiel
+description: Runspace06-Beispiel
+ms.openlocfilehash: 39841478f115eda089e4d4b1f822954b6ba7d09b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771990"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657687"
 ---
 # <a name="runspace06-sample"></a>Runspace06-Beispiel
 
-In diesem Beispiel wird gezeigt, wie ein Modul einem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzugefügt wird, damit das Modul geladen wird, wenn der Runspace geöffnet wird. Das Modul stellt ein Get-proc-Cmdlet bereit (definiert durch das [GetProcessSample02-Beispiel](../cmdlet/getprocesssample02-sample.md)), das synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
+In diesem Beispiel wird gezeigt, wie ein Modul einem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzugefügt wird, damit das Modul geladen wird, wenn der Runspace geöffnet wird. Das Modul stellt ein Get-Proc Cmdlet bereit (definiert durch das [GetProcessSample02-Beispiel](../cmdlet/getprocesssample02-sample.md)), das synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
@@ -36,7 +38,7 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird ein Runspace erstellt, der ein [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt verwendet, um die Elemente zu definieren, die beim Öffnen des Runspace verfügbar sind. In diesem Beispiel wird ein Modul, das ein Get-proc-Cmdlet definiert, dem anfänglichen Sitzungszustand hinzugefügt.
+In diesem Beispiel wird ein Runspace erstellt, der ein [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt verwendet, um die Elemente zu definieren, die beim Öffnen des Runspace verfügbar sind. In diesem Beispiel wird ein Modul, das ein Get-Proc-Cmdlet definiert, dem anfänglichen Sitzungszustand hinzugefügt.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

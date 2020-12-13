@@ -1,12 +1,14 @@
 ---
-title: Installieren das Windows PowerShell SDK
 ms.date: 03/30/2020
-ms.openlocfilehash: 91cf57510bb7f44799cfdaf7cadcc7bcd505c977
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Installieren das Windows PowerShell SDK
+description: Installieren das Windows PowerShell SDK
+ms.openlocfilehash: 07108ede640b8c6c02bea6d9e2b63116b5b8f969
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771973"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657305"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Installieren das Windows PowerShell SDK
 
@@ -74,8 +76,8 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. Die folgenden Abschnitte 
 - Runspace02: zeigt, wie die PowerShell-Klasse zum `Get-Process` `Sort-Object` synchronen Ausführen der Cmdlets und verwendet wird. Das `Get-Process` -Cmdlet gibt Prozess Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird, und `Sort-Object` sortiert die Objekte basierend auf Ihrer ID-Eigenschaft. Die Ergebnisse dieser Befehle werden anhand des Steuerelements DataGridView angezeigt.
 - Runspace03: zeigt, wie die PowerShell-Klasse zum synchronen Ausführen eines Skripts verwendet wird und wie Fehler ohne Abbruch behandelt werden. Das Skript empfängt eine Liste von Prozessnamen und ruft diese Prozesse anschließend ab. Die Ergebnisse des Skripts, einschließlich Fehler ohne Abbruch, die beim Ausführen des Skripts generiert wurden, werden in einem Konsolenfenster angezeigt.
 - Runspace04: zeigt, wie die PowerShell-Klasse zum Ausführen von Befehlen verwendet wird, und wie abschließende Fehler abgefangen werden, die beim Ausführen der Befehle ausgelöst werden. Zwei Befehle werden ausgeführt. An den letzten Befehl wird ein ungültiges Parameterargument übergeben. Daher werden keine Objekte zurückgegeben, und ein Fehler mit Abbruch wird ausgelöst.
-- Runspace05: zeigt, wie einem initialsessionstate-Objekt ein Snap-in hinzugefügt wird, sodass das Cmdlet des Snap-Ins verfügbar ist, wenn der Runspace geöffnet wird. Das Snap-in stellt ein Get-proc-Cmdlet bereit (definiert durch das GetProcessSample01-Beispiel), das synchron mithilfe eines PowerShell-Objekts ausgeführt wird.
-- Runspace06: zeigt, wie ein Modul einem initialsessionstate-Objekt hinzugefügt wird, damit das Modul geladen wird, wenn der Runspace geöffnet wird. Das Modul stellt ein Get-proc-Cmdlet bereit (definiert durch das GetProcessSample02-Beispiel), das synchron mithilfe eines PowerShell-Objekts ausgeführt wird.
+- Runspace05: zeigt, wie einem initialsessionstate-Objekt ein Snap-in hinzugefügt wird, sodass das Cmdlet des Snap-Ins verfügbar ist, wenn der Runspace geöffnet wird. Das-Snap-in stellt ein Get-Proc Cmdlet bereit (definiert durch das GetProcessSample01-Beispiel), das synchron mithilfe eines PowerShell-Objekts ausgeführt wird.
+- Runspace06: zeigt, wie ein Modul einem initialsessionstate-Objekt hinzugefügt wird, damit das Modul geladen wird, wenn der Runspace geöffnet wird. Das Modul stellt ein Get-Proc Cmdlet bereit (definiert durch das GetProcessSample02-Beispiel), das synchron mithilfe eines PowerShell-Objekts ausgeführt wird.
 - Runspace07: zeigt, wie ein Runspace erstellt wird, und verwendet dann diesen Runspace, um zwei Cmdlets mithilfe eines PowerShell-Objekts synchron auszuführen.
 - Runspace08: zeigt, wie Sie der Pipeline eines PowerShell-Objekts Befehle und Argumente hinzufügen und wie die Befehle synchron ausgeführt werden.
 - Runspace09: zeigt, wie ein Skript zur Pipeline eines PowerShell-Objekts hinzugefügt wird und wie das Skript asynchron ausgeführt wird. Ereignisse werden verwendet, um die Ausgabe des Skripts zu verarbeiten.

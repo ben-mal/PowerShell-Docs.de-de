@@ -1,24 +1,26 @@
 ---
-title: Hinzufügen von Aliasen, Platzhalter Erweiterungen und Hilfe zu Cmdlet-Parametern | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 244c50c73972c2760e0029c7fa4f4b5764b066da
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Hinzufügen von Aliasen, Platzhaltererweiterung und Hilfe zu Cmdlet-Parametern
+description: Hinzufügen von Aliasen, Platzhaltererweiterung und Hilfe zu Cmdlet-Parametern
+ms.openlocfilehash: f0f07796370b4613b1ca0ad17b16c6598bfa438d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774965"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660651"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Hinzufügen von Aliasen, Platzhaltererweiterung und Hilfe zu Cmdlet-Parametern
 
-In diesem Abschnitt wird beschrieben, wie Aliase, Platzhalter Erweiterung und Hilfe Meldungen den Parametern des Cmdlets "-Beendigung-proc" hinzugefügt werden (siehe [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md)).
+In diesem Abschnitt wird beschrieben, wie Aliase, Platzhalter Erweiterung und Hilfe Meldungen den Parametern des Stop-Proc-Cmdlets hinzugefügt werden (siehe [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md)).
 
-Dieses Cmdlet "Pause-proc" versucht, Prozesse zu unterbinden, die mithilfe des Cmdlets "Get-proc" abgerufen werden (siehe [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md)).
+Dieses Cmdlet Stop-Proc versucht, Prozesse zu unterbinden, die mithilfe des Get-Proc-Cmdlets abgerufen werden (siehe [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md)).
 
 ## <a name="defining-the-cmdlet"></a>Definieren des Cmdlets
 
 Der erste Schritt bei der Cmdlet-Erstellung ist die Benennung des Cmdlets und das Deklarieren der .NET-Klasse, die das Cmdlet implementiert. Da Sie ein Cmdlet schreiben, um das System zu ändern, sollte es entsprechend benannt werden. Da dieses Cmdlet System Prozesse stoppt, wird das Verb "Stopp", das von der [System. Management. Automation. verbslifecycle](/dotnet/api/System.Management.Automation.VerbsLifeCycle) -Klasse definiert wird, mit dem Substantiv "proc" verwendet, um den Prozess anzugeben. Weitere Informationen zu genehmigten Cmdlet-Verben finden Sie unter [Cmdlet-Verb Namen](./approved-verbs-for-windows-powershell-commands.md).
 
-Der folgende Code stellt die Klassendefinition für dieses Cmdlet "Pause-proc" dar.
+Der folgende Code stellt die Klassendefinition für dieses Stop-Proc-Cmdlet dar.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -63,7 +65,7 @@ Zusätzlich zur Verwendung des [System. Management. Automation. Aliasattribute](
 
 Mit Windows PowerShell können Sie Hilfe für Cmdlet-Parameter erstellen. Verwenden Sie dies für alle Parameter, die für die Systemänderung und das Benutzer Feedback verwendet werden. Für jeden Parameter zur Unterstützung der Hilfe können Sie das `HelpMessage` Attribute-Schlüsselwort in der [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attribut Deklaration festlegen. Dieses Schlüsselwort definiert den Text, der dem Benutzer zur Unterstützung bei der Verwendung des-Parameters angezeigt werden soll. Sie können auch das- `HelpMessageBaseName` Schlüsselwort festlegen, um den Basis Namen einer Ressource zu identifizieren, die für die Nachricht verwendet werden soll. Wenn Sie dieses Schlüsselwort festlegen, müssen Sie auch das- `HelpMessageResourceId` Schlüsselwort festlegen, um den Ressourcen Bezeichner anzugeben.
 
-Der folgende Code aus diesem Cmdlet "Pause-proc" definiert das `HelpMessage` Attribut Schlüsselwort für den `Name` Parameter.
+Der folgende Code aus diesem Stop-Proc Cmdlet definiert das `HelpMessage` Attribut Schlüsselwort für den `Name` Parameter.
 
 ```csharp
 /// <summary>
@@ -135,9 +137,9 @@ Nachdem ein Cmdlet implementiert wurde, muss es über ein Windows PowerShell-Sna
 
 ## <a name="testing-the-cmdlet"></a>Testen des Cmdlets
 
-Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Testen Sie das Beispiel-Cmdlet "Stopp-proc". Weitere Informationen zur Verwendung von Cmdlets über die Befehlszeile finden Sie unter [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Testen Sie nun das Cmdlet "Sample Stop-Proc". Weitere Informationen zur Verwendung von Cmdlets über die Befehlszeile finden Sie unter [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Starten Sie Windows PowerShell, und verwenden Sie "Ende-proc", um einen Prozess mit dem ProcessName-Alias für den Parameter zu starten `Name` .
+- Starten Sie Windows PowerShell, und verwenden Sie Stop-Proc, um einen Prozess mit dem ProcessName-Alias für den Parameter zu unterbinden `Name` .
 
     ```powershell
     PS> stop-proc -ProcessName notepad

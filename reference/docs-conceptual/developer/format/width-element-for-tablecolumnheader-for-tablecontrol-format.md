@@ -1,12 +1,14 @@
 ---
-title: Width-Element für tablecolumnheader für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e9540d3d351041ad7cb98a21bb360ebea7eca117
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Width“ für TableColumnHeader für TableControl (Format)
+description: Element „Width“ für TableColumnHeader für TableControl (Format)
+ms.openlocfilehash: bde84f1d33b3d6b3b8c4462f870f978611cb434b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779912"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658260"
 ---
 # <a name="width-element-for-tablecolumnheader-for-tablecontrol-format"></a>Element „Width“ für TableColumnHeader für TableControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Tablecolumnheader-Element für tableHeaders für tablecontrol (Format)](./tablecolumnheader-element-format.md)|Definiert eine Bezeichnung, eine Breite und eine Ausrichtung der Daten für eine Spalte der Tabelle.|
 

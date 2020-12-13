@@ -1,12 +1,14 @@
 ---
-title: TableHeaders-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: b3176cbe1316d5b30cb61831d9915a80389709a5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TableHeaders“ (Format)
+description: Element „TableHeaders“ (Format)
+ms.openlocfilehash: 5ac4dccae746c167ebf95add9f3d18030a2b3a99
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787426"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659818"
 ---
 # <a name="tableheaders-element-format"></a>Element „TableHeaders“ (Format)
 
@@ -33,13 +35,13 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableColumnHeader“ (Format)](./tablecolumnheader-element-format.md)|Optionales Element.<br /><br /> Definiert die Bezeichnung, die Breite und die Ausrichtung der Daten für eine Spalte einer Tabellen Sicht.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „TableControl“ (Format)](./tablecontrol-element-format.md)|Definiert ein Tabellenformat für eine Sicht.|
 

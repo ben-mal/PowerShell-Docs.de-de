@@ -1,12 +1,14 @@
 ---
-title: ScriptBlock-Element für selectioncondition für CustomControl für View (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: d3506188d32ce85ad6345dc0d0866dd789a1f293
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ScriptBlock“ für SelectionCondition für CustomControl für View (Format)
+description: Element „ScriptBlock“ für SelectionCondition für CustomControl für View (Format)
+ms.openlocfilehash: 78b977548243b6f3a658f15a0249d8cad12e2f1b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785403"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664921"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Element „ScriptBlock“ für SelectionCondition für CustomControl für View (Format)
 

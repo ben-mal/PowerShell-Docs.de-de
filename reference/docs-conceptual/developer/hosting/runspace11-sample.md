@@ -1,18 +1,20 @@
 ---
-title: Runspace11-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e8a4080bb4fb33f7e0d428e24483b5cfac5c70e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace11-Beispiel
+description: Runspace11-Beispiel
+ms.openlocfilehash: bb2fac179d6d3b939ed145fe98c208c202a97623
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784927"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657558"
 ---
 # <a name="runspace11-sample"></a>Runspace11-Beispiel
 
 In diesem Beispiel wird gezeigt, wie Sie mit der [System. Management. Automation. ProxyCommand](/dotnet/api/System.Management.Automation.ProxyCommand) -Klasse einen Proxy Befehl erstellen, der ein vorhandenes Cmdlet aufruft, aber den Satz verfügbarer Parameter einschränkt. Der Proxybefehl wird anschließend zu einem anfänglichen Sitzungsstatus hinzugefügt, der dazu verwendet wird, einen eingeschränkten Runspace zu erstellen. Dies bedeutet, dass der Benutzer nur über den Proxybefehl auf die Funktionalität des Cmdlets zugreifen kann.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

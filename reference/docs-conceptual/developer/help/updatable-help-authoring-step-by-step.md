@@ -1,12 +1,14 @@
 ---
-title: 'Aktualisierbare Hilfe Erstellung: Schritt für Schritt'
 ms.date: 09/13/2016
-ms.openlocfilehash: c9214be3c3363a4e6354595b50cf76a17d49aa67
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: 'Aktualisierbare Hilfe Erstellung: Schritt für Schritt'
+description: 'Aktualisierbare Hilfe Erstellung: Schritt für Schritt'
+ms.openlocfilehash: c4aecdb801cac16c9cb07853317835fd87e6a0a8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893117"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658822"
 ---
 # <a name="updatable-help-authoring-step-by-step"></a>Aktualisierbare Hilfeerstellung: Ausführliche Anleitung
 
@@ -26,7 +28,7 @@ Der erste Schritt bei der Erstellung der aktualisierbaren Hilfe ist die Suche na
 
 Fügen Sie dem Modul Manifest einen **helpinfouri** -Schlüssel hinzu. Der Wert des Schlüssels ist die Uniform Resource Identifier (URI) des Speicher Orts der helpinfo-XML-Informationsdatei für das Modul. Aus Sicherheitsgründen muss die Adresse mit "http" oder "https" beginnen. Der URI sollte einen Internet Speicherort angeben, darf jedoch nicht den helpinfo-XML-Dateinamen enthalten.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 

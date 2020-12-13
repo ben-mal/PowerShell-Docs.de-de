@@ -1,18 +1,18 @@
 ---
-title: Erstellen einer Konsolen Shell | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Make-Shell [PowerShell Programmer's Guide]
-ms.openlocfilehash: 5d8231363ab804bfd7113ef69f0bdede445149a2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen einer Konsolenshell
+description: Erstellen einer Konsolenshell
+ms.openlocfilehash: 9ea67c43b1ee35b1fbfc553b22a1423419317ca2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771616"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657228"
 ---
 # <a name="how-to-create-a-console-shell"></a>Erstellen einer Konsolenshell
 
-Windows PowerShell stellt ein Make-Shell-Tool bereit, das auch als "Make-Kit" bezeichnet wird und zum Erstellen einer Konsolen Shell verwendet wird, die nicht erweiterbar ist. Mit diesem neuen Tool erstellte Shells können nicht später über ein Windows PowerShell-Snap-in erweitert werden.
+Windows PowerShell bietet ein Make-Shell Tool, das auch als "Make-Kit" bezeichnet wird und zum Erstellen einer Konsolen Shell verwendet wird, die nicht erweiterbar ist. Mit diesem neuen Tool erstellte Shells können nicht später über ein Windows PowerShell-Snap-in erweitert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -20,20 +20,20 @@ Im folgenden finden Sie die Syntax, die zum Ausführen von Make-Shell aus einer 
 
 ```
 make-shell
-  -out n.exe
-  -namespace ns
-  [ -lib libdirectory1[,libdirectory2,..] ]
-  [ -reference ca1.dll[,ca2.dll,...] ]
-  [ -formatdata fd1.format.ps1xml[,fd2.format.ps1xml,...] ]
-  [ -typedata td1.type.ps1xml[,td2.type.ps1xml,...] ]
-  [ -source c1.cs [,c2.cs,...] ]
-  [ -authorizationmanager authorizationManagerType ]
-  [ -win32icon i.ico ]
-  [ -initscript p.ps1 ]
-  [ -builtinscript s1.ps1[,s2.ps1,...] ]
-  [ -resource resourcefile.txt ]
-  [ -cscflags cscFlags ]
-  [ -? | -help ]
+  -out n.exe
+  -namespace ns
+  [ -lib libdirectory1[,libdirectory2,..] ]
+  [ -reference ca1.dll[,ca2.dll,...] ]
+  [ -formatdata fd1.format.ps1xml[,fd2.format.ps1xml,...] ]
+  [ -typedata td1.type.ps1xml[,td2.type.ps1xml,...] ]
+  [ -source c1.cs [,c2.cs,...] ]
+  [ -authorizationmanager authorizationManagerType ]
+  [ -win32icon i.ico ]
+  [ -initscript p.ps1 ]
+  [ -builtinscript s1.ps1[,s2.ps1,...] ]
+  [ -resource resourcefile.txt ]
+  [ -cscflags cscFlags ]
+  [ -? | -help ]
 ```
 
 ## <a name="parameters"></a>Parameter
@@ -45,7 +45,7 @@ Im folgenden finden Sie eine kurze Beschreibung der Parameter von Make-Shell.
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|-Out n.exe|Erforderlich. Der Name der zu erstellenden Shell. Der Pfad wird als Teil dieses Parameters angegeben.<br /><br /> "Make-Shell" fügt ". exe" an diesen Wert an, wenn er nicht angegeben ist. **Vorsicht:**  Erstellen Sie keine Ausgabedatei mit demselben Namen wie die DLL-Datei, auf die verwiesen wird. Wenn Sie dies versuchen, erstellt das Make-Shell-Tool eine CS-Datei mit dem gleichen Namen, die die CS-Datei mit dem Cmdlet-Quellcode überschreibt.|
+|-Out n.exe|Erforderlich. Der Name der zu erstellenden Shell. Der Pfad wird als Teil dieses Parameters angegeben.<br /><br /> "Make-Shell" fügt ". exe" an diesen Wert an, wenn er nicht angegeben ist. **Vorsicht:**  Erstellen Sie keine Ausgabedatei mit demselben Namen wie die DLL-Datei, auf die verwiesen wird. Wenn Sie dies versuchen, erstellt das Make-Shell Tool eine CS-Datei mit dem gleichen Namen, die die CS-Datei mit dem Cmdlet-Quellcode überschreibt.|
 |-Namespace-NS|Erforderlich. Der Namespace, der für die abgeleitete [System. Management. Automation. Runspaces. runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) -Klasse verwendet werden soll, die vom Make-Kit generiert und kompiliert wird.|
 |-lib libdirectory1 [, libdirectory2,..]|Die Verzeichnisse, die nach .NET-Assemblys durchsucht werden, einschließlich der Windows PowerShell-Assemblys, der durch den-Parameter angegebenen Assemblys, Assemblys, `reference` auf die von einer anderen Assembly indirekt verwiesen|
 |-Verweis ca1.dll [, ca2.dll,...]|Eine durch Trennzeichen getrennte Liste der Assemblys, die in der Shell enthalten sein sollen. Diese Assemblys enthalten alle Cmdlets und anbieteassemblys sowie Ressourcenassemblys, die geladen werden sollten. Wenn dieser Parameter nicht angegeben wird, wird eine Shell erstellt, die nur die Kern-Cmdlets und Anbieter enthält, die von Windows PowerShell bereitgestellt werden.<br /><br /> Die Assemblys können mithilfe Ihres vollständigen Pfads angegeben werden. andernfalls werden Sie nach dem durch den-Parameter angegebenen Pfad durchsucht `lib` .|
@@ -58,7 +58,7 @@ Im folgenden finden Sie eine kurze Beschreibung der Parameter von Make-Shell.
 |-builtinscript s1.ps1 [, s2.ps1,...]|Eine Liste der integrierten Skripts für die Shell. Diese Skripts werden vor Skripts im Pfad erkannt, und ihre Inhalte können nicht mehr geändert werden, nachdem die Shell erstellt wurde.<br /><br /> Die Dateien sind unverändert enthalten. keine Gültigkeits Überprüfung erfolgt durch make-Shell.|
 |-Ressourcen resourcefile.txt|Die txt-Datei, die Hilfe-und Banner Ressourcen für die Shell enthält. Die erste Ressource heißt "shellhelp" und enthält den Text, der angezeigt wird, wenn die Shell mit dem-Parameter aufgerufen wird `help` . Die zweite Ressource heißt shellbanner und enthält den Text und die Copyright Informationen, die angezeigt werden, wenn die Shell im interaktiven Modus gestartet wird.<br /><br /> Wenn dieser Parameter nicht angegeben wird oder diese Ressourcen nicht vorhanden sind, werden eine generische Hilfe und ein Banner verwendet.|
 |cscflags-cscflags|Flags, die an den c#-Compiler übergeben werden sollen (csc.exe). Diese werden unverändert übermittelt. Wenn dieser Parameter Leerzeichen enthält, sollte er in doppelte Anführungszeichen eingeschlossen werden.|
-|-?<br /><br /> -help|Zeigt die Copyright Meldung und die Befehlszeilenoptionen für die Befehlszeile an.|
+|-?<br /><br /> -help|Zeigt die Copyright Meldung und Make-Shell Befehlszeilenoptionen an.|
 |-verbose|Zeigt ausführliche Informationen an, während die Shell erstellt wird.|
 
 ## <a name="see-also"></a>Weitere Informationen

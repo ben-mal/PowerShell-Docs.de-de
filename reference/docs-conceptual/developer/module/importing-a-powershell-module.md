@@ -1,19 +1,21 @@
 ---
-title: Importieren eines PowerShell-Moduls | Microsoft-Dokumentation
 ms.date: 02/03/2020
-ms.openlocfilehash: 8cd1938d0a7b49b4a594753d8ce5ebe60625025d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Importieren eines PowerShell-Moduls
+description: Importieren eines PowerShell-Moduls
+ms.openlocfilehash: 688509c0943a9a0289e75b80543f278e16cfedfe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784876"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658786"
 ---
 # <a name="importing-a-powershell-module"></a>Importieren eines PowerShell-Moduls
 
 Wenn Sie ein Modul auf einem System installiert haben, möchten Sie wahrscheinlich das Modul importieren. Beim Importieren wird das Modul in den aktiven Arbeitsspeicher geladen, sodass ein Benutzer in der PowerShell-Sitzung auf das Modul zugreifen kann. In PowerShell 2,0 können Sie ein neu installiertes PowerShell-Modul mit dem Cmdlet " [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) " importieren. In PowerShell 3,0 kann PowerShell ein Modul implizit importieren, wenn eine der Funktionen oder Cmdlets im Modul von einem Benutzer aufgerufen wird. Beachten Sie, dass bei beiden Versionen angenommen wird, dass Sie das Modul an einem Speicherort installieren, an dem PowerShell ihn finden kann. Weitere Informationen finden Sie unter [Installieren eines PowerShell-Moduls](./installing-a-powershell-module.md).
 Mithilfe eines Modul Manifests können Sie einschränken, welche Teile des Moduls exportiert werden, und Sie können Parameter des `Import-Module` Aufrufes verwenden, um einzuschränken, welche Teile importiert werden.
 
-## <a name="importing-a-snap-in-powershell-10"></a>Importieren eines Snap-Ins (PowerShell 1,0)
+## <a name="importing-a-snap-in-powershell-10"></a>Importieren einer Snap-In (PowerShell 1,0)
 
 Module waren in PowerShell 1,0 nicht vorhanden: stattdessen mussten Sie Snap-Ins registrieren und verwenden. Es wird jedoch nicht empfohlen, diese Technologie zu diesem Zeitpunkt zu verwenden, da Module im Allgemeinen einfacher zu installieren und zu importieren sind. Weitere Informationen finden Sie unter [Erstellen eines Windows PowerShell-Snap-Ins](../cmdlet/how-to-create-a-windows-powershell-snap-in.md).
 
@@ -32,7 +34,7 @@ Wenn sich MyModule im Verzeichnis befindet `PSModulePath` , lädt PowerShell MyM
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 ```
 
-Sie können auch den `-Verbose` -Parameter verwenden, um zu ermitteln, was aus dem Modul exportiert wird und was in den aktiven Speicher importiert wird. Sowohl Exporte als auch Importe schränken die Informationen ein, die dem Benutzer zur Verfügung stehen: der Unterschied besteht darin, wer die Sichtbarkeit steuert. Im Grunde werden Exporte durch Code im Modul gesteuert. Im Gegensatz dazu werden Importe durch den-Befehl gesteuert `Import-Module` . Weitere Informationen finden Sie weiter unten unter **Einschränken von importierten**Membern.
+Sie können auch den `-Verbose` -Parameter verwenden, um zu ermitteln, was aus dem Modul exportiert wird und was in den aktiven Speicher importiert wird. Sowohl Exporte als auch Importe schränken die Informationen ein, die dem Benutzer zur Verfügung stehen: der Unterschied besteht darin, wer die Sichtbarkeit steuert. Im Grunde werden Exporte durch Code im Modul gesteuert. Im Gegensatz dazu werden Importe durch den-Befehl gesteuert `Import-Module` . Weitere Informationen finden Sie weiter unten unter **Einschränken von importierten** Membern.
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>Implizites Importieren eines Moduls (PowerShell 3,0)
 

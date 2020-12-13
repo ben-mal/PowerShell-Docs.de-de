@@ -1,18 +1,20 @@
 ---
-title: Windows PowerShell02 Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a82366a88addb08e186eede79e621d90d915c50f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell02-Beispiel
+description: Windows PowerShell02-Beispiel
+ms.openlocfilehash: 61dedd72d93d4000edf9a12f12bbb49fbaeb9f3c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779385"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657360"
 ---
 # <a name="windows-powershell02-sample"></a>Windows PowerShell02-Beispiel
 
 Dieses Beispiel zeigt, wie Befehle asynchron mit den Runspaces eines Runspace-Pools ausgeführt werden. Das Beispiel generiert eine Liste mit Befehlen und führt diese Befehle aus, während die Windows PowerShell-Engine einen Runspace aus dem Pool öffnet, wenn Sie benötigt wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 - Dieses Beispiel erfordert Windows PowerShell 2,0.
 

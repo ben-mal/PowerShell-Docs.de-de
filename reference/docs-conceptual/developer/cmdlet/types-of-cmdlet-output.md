@@ -1,14 +1,14 @@
 ---
-title: Typen der Cmdlet-Ausgabe | Microsoft-Dokumentation
 ms.date: 01/18/2019
-helpviewer_keywords:
-- cmdlets [PowerShell SDK], output
-ms.openlocfilehash: 8f761fdddd264b7c580c4a860081fdc5d2776ee7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Cmdlet-Ausgabetypen
+description: Cmdlet-Ausgabetypen
+ms.openlocfilehash: 591b7699e951db9016e48d5ef623265e23791e11
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786355"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660503"
 ---
 # <a name="types-of-cmdlet-output"></a>Cmdlet-Ausgabetypen
 

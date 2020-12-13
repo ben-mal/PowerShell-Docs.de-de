@@ -1,12 +1,14 @@
 ---
-title: XML-Schema von HelpInfo
 ms.date: 09/12/2016
-ms.openlocfilehash: f94d053b8fc558d9efc13e6b9fbd597287970e38
-ms.sourcegitcommit: 37abf054ad9eda8813be8ff4487803b10e1842ef
+ms.topic: reference
+title: XML-Schema von HelpInfo
+description: XML-Schema von HelpInfo
+ms.openlocfilehash: 157fd9c0f47c57efbaa9b7888fa174a34ad9567d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953249"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92662019"
 ---
 # <a name="helpinfo-xml-schema"></a>XML-Schema von HelpInfo
 
@@ -55,4 +57,4 @@ Die helpinfo-XML-Datei enthält die folgenden Elemente:
 
 - **Uiculturename** : enthält den Sprachcode für die Benutzeroberflächen Kultur, in der die Hilfedateien geschrieben werden.
 
-- **Uicultureversion** : enthält eine 4-teilige Versionsnummer in "N1. N2. N3. N4-Format, das die Version der Hilfe-CAB-Datei in der Benutzeroberflächen Kultur darstellt. Erhöhen Sie diese Versionsnummer immer dann, wenn Sie neue Hilfe-CAB-Dateien in der Benutzeroberflächen Kultur hochladen, die von **uiculturename**angegeben wird. Weitere Informationen zu diesem Wert finden Sie unter [Version Class](/dotnet/api/system.version).
+- **Uicultureversion** : enthält eine 4-teilige Versionsnummer in "N1. N2. N3. N4-Format, das die Version der Hilfe-CAB-Datei in der Benutzeroberflächen Kultur darstellt. Erhöhen Sie diese Versionsnummer immer dann, wenn Sie neue Hilfe-CAB-Dateien in der Benutzeroberflächen Kultur hochladen, die von **uiculturename** angegeben wird. Weitere Informationen zu diesem Wert finden Sie unter [Version Class](/dotnet/api/system.version).

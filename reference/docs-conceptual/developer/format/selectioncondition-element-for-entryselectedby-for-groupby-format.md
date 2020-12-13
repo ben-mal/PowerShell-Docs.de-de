@@ -1,12 +1,14 @@
 ---
-title: Selectioncondition-Element für entryselectedby für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 0930d8076c314c12cac6cdfa2b33716b7efeb6a9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionCondition“ für EntrySelectedBy für GroupBy (Format)
+description: Element „SelectionCondition“ für EntrySelectedBy für GroupBy (Format)
+ms.openlocfilehash: 14c293b6bc6d6accc201de35be9219349079801d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772840"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664751"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-groupby-format"></a>Element „SelectionCondition“ für EntrySelectedBy für GroupBy (Format)
 

@@ -1,18 +1,20 @@
 ---
-title: Runspace10-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 4d858c432c6221f2347f6de664d1e4ee299f5801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace10-Beispiel
+description: Runspace10-Beispiel
+ms.openlocfilehash: fd58cea553e6b830a56df7edfa7901d39f46a06c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784944"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657581"
 ---
 # <a name="runspace10-sample"></a>Runspace10-Beispiel
 
 In diesem Beispiel wird gezeigt, wie ein ursprünglicher Standard Sitzungszustand erstellt wird, wie ein Cmdlet zum [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState)hinzugefügt wird, wie ein Runspace erstellt wird, der den anfänglichen Sitzungs Status verwendet, und wie der Befehl mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
@@ -34,7 +36,7 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird ein Runspace erstellt, der ein [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt verwendet, um die Elemente zu definieren, die beim Öffnen des Runspace verfügbar sind. In diesem Beispiel wird das Get-proc-Cmdlet (definiert durch die Host Anwendung) dem anfänglichen Sitzungszustand hinzugefügt, und das Cmdlet wird mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts synchron ausgeführt.
+In diesem Beispiel wird ein Runspace erstellt, der ein [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt verwendet, um die Elemente zu definieren, die beim Öffnen des Runspace verfügbar sind. In diesem Beispiel wird das Cmdlet "Get-Proc" (definiert durch die Host Anwendung) dem anfänglichen Sitzungs Status hinzugefügt, und das Cmdlet wird mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts synchron ausgeführt.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

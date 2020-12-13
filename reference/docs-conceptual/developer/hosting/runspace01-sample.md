@@ -1,18 +1,20 @@
 ---
-title: Runspace01-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1ac286512f3cb3b97a6b3179c9dd45f1fefe1ecf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace01-Beispiel
+description: Runspace01-Beispiel
+ms.openlocfilehash: f47f79dd507db258119016353dc5a72d110d9252
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772194"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657924"
 ---
 # <a name="runspace01-sample"></a>Runspace01-Beispiel
 
 In diesem Beispiel wird gezeigt, wie die [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Klasse verwendet wird, um das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet synchron auszuführen. Das [Get-Process-](/powershell/module/Microsoft.PowerShell.Management/Get-Process) Cmdlet gibt [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) -Objekte für jeden Prozess zurück, der auf dem lokalen Computer ausgeführt wird. Die Werte der Eigenschaften [System. Diagnostics. Process. ProcessName *](/dotnet/api/System.Diagnostics.Process.ProcessName) und [System. Diagnostics. Process. Lenker count *](/dotnet/api/System.Diagnostics.Process.Handlecount) werden dann aus den zurückgegebenen Objekten extrahiert und in einem Konsolenfenster angezeigt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
  Dieses Beispiel erfordert Windows PowerShell 2,0.
 
@@ -85,4 +87,4 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch

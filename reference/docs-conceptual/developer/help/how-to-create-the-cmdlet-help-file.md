@@ -1,12 +1,14 @@
 ---
-title: Erstellen der Hilfedatei für das Cmdlet | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ab0404e5d0122a64483883e6e2d4760dfa5038d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen der Cmdlet-Hilfedatei
+description: Erstellen der Cmdlet-Hilfedatei
+ms.openlocfilehash: 40259c8f9496b10380805a78f3711aed6f1bf2e5
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779827"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659088"
 ---
 # <a name="how-to-create-the-cmdlet-help-file"></a>Erstellen der Cmdlet-Hilfedatei
 
@@ -29,7 +31,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine gültige XML-Datei erstellen,
 
    In der folgenden Tabelle wird das XML-Element für jeden Knoten aufgeführt, gefolgt von einer Beschreibung der einzelnen Knoten.
 
-   |           Node           |                                                                                                     BESCHREIBUNG                                                                                                     |
+   |           Knoten           |                                                                                                     Beschreibung                                                                                                     |
    | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | `<details>`              | Fügt Inhalt für die Abschnitte "Name" und "Synopsis" des Cmdlet-Hilfe Themas hinzu. Weitere Informationen finden Sie unter Vorgehens [Weise beim Hinzufügen des Cmdlet-namens und der Synchronisierungs](./how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md)Datei. |
    | `<maml:description>`     | Fügt Inhalt für den Beschreibungs Abschnitt des Cmdlet-Hilfe Themas hinzu. Weitere Informationen finden Sie unter Vorgehens [Weise beim Hinzufügen der ausführlichen Beschreibung zu einem Cmdlet-Hilfethema](./how-to-add-a-cmdlet-description.md).                    |

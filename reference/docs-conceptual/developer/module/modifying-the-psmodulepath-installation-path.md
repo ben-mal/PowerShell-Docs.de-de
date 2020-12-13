@@ -1,12 +1,14 @@
 ---
-title: Ändern des psmodulepath-Installations Pfads | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 795f2bd52aeceddd3c0ca092d0c0cf2ef44bcf23
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Ändern des Installationspfads PSModulePath
+description: Ändern des Installationspfads PSModulePath
+ms.openlocfilehash: b802492bf9b49e8165e296817e3f80b9ae8265a6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784842"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92661953"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Ändern des Installationspfads PSModulePath
 

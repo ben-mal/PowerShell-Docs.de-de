@@ -1,12 +1,14 @@
 ---
-title: Runspace-Beispiele | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: f7c11101a570f89657f9ffc4d52fa6ebce3a91e1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace-Beispiele
+description: Runspace-Beispiele
+ms.openlocfilehash: 0171622f3ade3b341bc226f14398d6d293262f0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772211"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657957"
 ---
 # <a name="runspace-samples"></a>Runspace-Beispiele
 
@@ -25,9 +27,9 @@ Dieser Abschnitt enthält Beispielcode, der zeigt, wie verschiedene Typen von Ru
 
  [Runspace04-Beispiel](./runspace04-sample.md) Dieses Beispiel zeigt, wie Sie mit der [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Klasse Befehle ausführen und abschließende Fehler abfangen, die beim Ausführen der Befehle ausgelöst werden. Zwei Befehle werden ausgeführt. An den letzten Befehl wird ein ungültiges Parameterargument übergeben. Folglich werden keine Objekte zurückgegeben, und es wird ein Abbruch Fehler ausgelöst.
 
- [Runspace05-Beispiel](./runspace05-sample.md) In diesem Beispiel wird gezeigt, wie ein Snap-in zu einem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzugefügt wird, sodass das Cmdlet des Snap-Ins verfügbar ist, wenn der Runspace geöffnet wird. Das Snap-in stellt ein Get-proc-Cmdlet bereit (definiert durch das [GetProcessSample01-Beispiel](../cmdlet/getprocesssample01-sample.md)), das synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
+ [Runspace05-Beispiel](./runspace05-sample.md) In diesem Beispiel wird gezeigt, wie ein Snap-in zu einem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzugefügt wird, sodass das Cmdlet des Snap-Ins verfügbar ist, wenn der Runspace geöffnet wird. Das-Snap-in stellt ein Get-Proc Cmdlet bereit (definiert durch das [GetProcessSample01-Beispiel](../cmdlet/getprocesssample01-sample.md)), das synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
 
- [Runspace06-Beispiel](./runspace06-sample.md) In diesem Beispiel wird gezeigt, wie ein Modul einem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzugefügt wird, damit das Modul geladen wird, wenn der Runspace geöffnet wird. Das Modul stellt ein Get-proc-Cmdlet bereit (definiert durch das [GetProcessSample02-Beispiel](../cmdlet/getprocesssample02-sample.md)), das synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
+ [Runspace06-Beispiel](./runspace06-sample.md) In diesem Beispiel wird gezeigt, wie ein Modul einem [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt hinzugefügt wird, damit das Modul geladen wird, wenn der Runspace geöffnet wird. Das Modul stellt ein Get-Proc Cmdlet bereit (definiert durch das [GetProcessSample02-Beispiel](../cmdlet/getprocesssample02-sample.md)), das synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt wird.
 
  [Runspace07-Beispiel](./runspace07-sample.md) Dieses Beispiel zeigt, wie ein Runspace erstellt und dann mit diesem Runspace zwei Cmdlets synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt werden.
 
@@ -39,4 +41,4 @@ Dieser Abschnitt enthält Beispielcode, der zeigt, wie verschiedene Typen von Ru
 
  [Runspace11-Beispiel](./runspace11-sample.md) Dies zeigt, wie Sie mit der [System. Management. Automation. ProxyCommand](/dotnet/api/System.Management.Automation.ProxyCommand) -Klasse einen Proxy Befehl erstellen, der ein vorhandenes Cmdlet aufruft, aber den Satz verfügbarer Parameter einschränkt. Der Proxybefehl wird anschließend zu einem anfänglichen Sitzungsstatus hinzugefügt, der dazu verwendet wird, einen eingeschränkten Runspace zu erstellen. Dies bedeutet, dass der Benutzer nur über den Proxybefehl auf die Funktionalität des Cmdlets zugreifen kann.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch

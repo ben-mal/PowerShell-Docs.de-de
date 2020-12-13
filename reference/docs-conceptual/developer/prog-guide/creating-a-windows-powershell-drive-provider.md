@@ -1,16 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Laufwerk Anbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- drive providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], drive provider
-- drives [PowerShell Programmer's Guide]
-ms.openlocfilehash: 2a2178714ed548986fe1a1a4de8828e8e0a938cb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Laufwerkanbieters
+description: Erstellen eines Windows PowerShell-Laufwerkanbieters
+ms.openlocfilehash: 639518fce27d941b7529b091364c5905c91a5c0c
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787188"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663039"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Erstellen eines Windows PowerShell-Laufwerkanbieters
 
@@ -99,7 +97,7 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
 
 1. Führen Sie das- `Get-PSProvider` Cmdlet aus, um die Liste der Anbieter abzurufen und sicherzustellen, dass der accessdb-Laufwerks Anbieter vorhanden ist:
 
-   **PS->`Get-PSProvider`**
+   **PS-> `Get-PSProvider`**
 
    Die folgende Ausgabe wird angezeigt:
 
@@ -130,7 +128,7 @@ Wenn Ihr Windows PowerShell-Anbieter bei Windows PowerShell registriert wurde, k
    mydb     AccessDB     c:\ps\northwind.mdb
    ```
 
-4. Überprüfen Sie die Verbindung. Da die Verbindung als Mitglied des Laufwerks definiert ist, können Sie Sie mithilfe des Cmdlets Get-pddrive überprüfen.
+4. Überprüfen Sie die Verbindung. Da die Verbindung als Mitglied des Laufwerks definiert ist, können Sie Sie mit dem Cmdlet "Get-PDDrive" überprüfen.
 
    > [!NOTE]
    > Der Benutzer kann noch nicht als Laufwerk mit dem Anbieter interagieren, da der Anbieter für diese Interaktion Container Funktionen benötigt. Weitere Informationen finden Sie unter [Erstellen eines Windows PowerShell-Container Anbieters](./creating-a-windows-powershell-container-provider.md).

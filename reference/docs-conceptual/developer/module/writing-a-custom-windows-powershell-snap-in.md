@@ -1,15 +1,14 @@
 ---
-title: Schreiben eines benutzerdefinierten Windows PowerShell-Snap-Ins | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], custom PSSnapin example
-- cmdlets [PowerShell SDK], specified in snap-ins
-ms.openlocfilehash: 3672dcc2e962b6795888ab5be3d461380e379315
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Schreiben eines benutzerdefinierten Windows PowerShell-Snap-Ins
+description: Schreiben eines benutzerdefinierten Windows PowerShell-Snap-Ins
+ms.openlocfilehash: e79c0c3db583fa0add9287745e97958a71360592
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779215"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659528"
 ---
 # <a name="writing-a-custom-windows-powershell-snap-in"></a>Schreiben eines benutzerdefinierten Windows PowerShell-Snap-Ins
 
@@ -24,7 +23,7 @@ Bei dieser Art von Snap-in geben Sie an, welche Cmdlets, Anbieter, Typen oder Fo
 
    In diesem Beispiel lautet der Klassenname "custompssnapintest".
 
-3. Fügen Sie eine öffentliche Eigenschaft für den Namen des Snap-Ins hinzu (erforderlich). Verwenden Sie beim Benennen von Snap-Ins keines der folgenden Zeichen: `#` , `.` , `,` , `(` , `)` , `{` , `}` , `[` , `]` , `&` , `-` , `/` , `\` , `$` , `;` , `:` , `"` , `'` , `<` , `>` , `|` , `?` , `@` , `` ` `` ,`*`
+3. Fügen Sie eine öffentliche Eigenschaft für den Namen des Snap-Ins hinzu (erforderlich). Verwenden Sie beim Benennen von Snap-Ins keines der folgenden Zeichen: `#` , `.` , `,` , `(` , `)` , `{` , `}` , `[` , `]` , `&` , `-` , `/` , `\` , `$` , `;` , `:` , `"` , `'` , `<` , `>` , `|` , `?` , `@` , `` ` `` , `*`
 
    In diesem Beispiel lautet der Name des Snap-Ins "custompssnapintest".
 
@@ -44,7 +43,7 @@ Bei dieser Art von Snap-in geben Sie an, welche Cmdlets, Anbieter, Typen oder Fo
 
    In diesem Beispiel lautet die Ressource "Vendor" wie folgt:
 
-   > Custompssnapintest ist ein benutzerdefiniertes Windows PowerShell-Snap-in, das die Cmdlets "Test-HelloWorld" und "Test-customsnapintest" enthält.
+   > Custompssnapintest ist ein benutzerdefiniertes Windows PowerShell-Snap-in, das die Test-HelloWorld-und Test-CustomSnapinTest-Cmdlets enthält.
 
 8. Geben Sie die Cmdlets, die zum benutzerdefinierten Snap-in (optional) gehören, mithilfe der [System. Management. Automation. Runspaces. cmdletconfigurationentry](/dotnet/api/System.Management.Automation.Runspaces.CmdletConfigurationEntry) -Klasse an. Die hier hinzugefügten Informationen umfassen den Namen des Cmdlets, den .NET-Typ und den Namen der Cmdlet-Hilfedatei (das Format des Cmdlet-Hilfe Dateinamens sollte lauten `name.dll-help.xml` ).
 
@@ -213,4 +212,4 @@ Weitere Informationen zum Registrieren von Snap-Ins finden [Sie unter Registrier
 
 [Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions/ms714644(v=vs.85))
 
-[Windows PowerShell Shell SDK](../windows-powershell-reference.md)
+[Referenz zu Windows PowerShell](../windows-powershell-reference.md)

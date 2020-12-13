@@ -1,12 +1,14 @@
 ---
-title: ScriptBlock-Element für selectioncondition für entryselectedby für ListControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 56bd04c9af74bdaa7a186a208fc15a67cb08b004
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für ListControl (Format)
+description: Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für ListControl (Format)
+ms.openlocfilehash: ec7691358d0ff3758411317a349221e1704a1895
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772857"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659908"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für ListControl (Format)
 

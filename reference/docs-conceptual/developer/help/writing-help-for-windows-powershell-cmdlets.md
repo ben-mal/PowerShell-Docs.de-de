@@ -1,14 +1,16 @@
 ---
-title: Schreiben von Hilfe für PowerShell-Cmdlets
 ms.date: 09/13/2016
-ms.openlocfilehash: 4e1070e90cf3ed83c1d97a3b620e00f65d09989e
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Schreiben einer Hilfe für PowerShell-Cmdlets
+description: Schreiben einer Hilfe für PowerShell-Cmdlets
+ms.openlocfilehash: b1deaa5998dbc54add93764db785d57afcc0a779
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893083"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658096"
 ---
-# <a name="writing-help-for-powershell-cmdlets"></a>Schreiben von Hilfe für PowerShell-Cmdlets
+# <a name="writing-help-for-powershell-cmdlets"></a>Schreiben einer Hilfe für PowerShell-Cmdlets
 
 PowerShell-Cmdlets können nützlich sein, aber wenn in den Hilfe Themen nicht klar erklärt wird, was das Cmdlet tut und wie es verwendet werden kann, wird das Cmdlet möglicherweise nicht verwendet, oder es ist noch schlimmer, dass es die Benutzer beeinträchtigen könnte. Das XML-basierte Cmdlet-Hilfedatei Format erhöht die Konsistenz, aber die großartige Hilfe erfordert viel mehr.
 
@@ -42,7 +44,7 @@ Listen Sie kurz alle Elemente auf, die das Cmdlet in der ausführlichen Beschrei
 
 ### <a name="use-conventional-syntax"></a>Konventionelle Syntax verwenden
 
-Verwenden Sie das standardmäßige Backus-Naur-Format, das bei der Windows-und UNIX-Befehlszeilen Hilfe üblich ist.
+Verwenden Sie das standardmäßige Backus-Naur-Format, das bei der Windows-und UNIX-Befehlszeilen Hilfe häufig verwendet wird.
 
 ### <a name="use-microsoft-net-types-for-parameter-values"></a>Verwenden von Microsoft .NET Typen für Parameterwerte
 

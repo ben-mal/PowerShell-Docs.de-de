@@ -1,12 +1,14 @@
 ---
-title: Entryselectedby-Element für customentry für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 5c82e02d23b1694d05f7a32578ccc5d33686f13f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)
+description: Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)
+ms.openlocfilehash: 29b0574a95d81962fb3f72a526f89273baeea647
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774251"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660267"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-view-format"></a>Element „EntrySelectedBy“ für CustomEntry für Controls für View (Format)
 

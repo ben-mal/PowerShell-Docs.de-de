@@ -1,12 +1,14 @@
 ---
-title: Text-Element für customItem für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: d9f9687f9fb47f2085b25899193dda85b8fa068b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Text“ für CustomItem für Controls für Configuration (Format)
+description: Element „Text“ für CustomItem für Controls für Configuration (Format)
+ms.openlocfilehash: 9ea70ade8e86d8278ee95bd4d93dfa5ba9d8160b
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787392"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664710"
 ---
 # <a name="text-element-for-customitem-for-controls-for-configuration-format"></a>Element „Text“ für CustomItem für Controls für Configuration (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[CustomItem-Element für customentry für Steuerelemente für die Konfiguration](./customitem-element-for-customentry-for-controls-for-configuration-format.md)|Definiert, welche Daten vom Steuerelement angezeigt werden und wie es angezeigt wird.|
 

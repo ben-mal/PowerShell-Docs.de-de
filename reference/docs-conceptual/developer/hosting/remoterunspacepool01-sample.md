@@ -1,18 +1,20 @@
 ---
-title: RemoteRunspacePool01-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 77283008f1c6bce79cec60d426e3933508fced64
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RemoteRunspacePool01-Beispiel
+description: RemoteRunspacePool01-Beispiel
+ms.openlocfilehash: 6594faca17b472140b6b0843bf8ede8e803675e3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783193"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657971"
 ---
 # <a name="remoterunspacepool01-sample"></a>RemoteRunspacePool01-Beispiel
 
 Dieses Beispiel zeigt, wie Sie einen Remote-Runspace-Pool erstellen und mehrere Befehle gleichzeitig mit diesem Pool ausführen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
  Dieses Beispiel erfordert Windows PowerShell 2,0.
 
@@ -125,4 +127,4 @@ namespace Samples
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch

@@ -1,16 +1,14 @@
 ---
-title: Validateset-Attribut Deklaration | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidateSet
-- ValidateSet attribute, described
-- ValidateSet attribute
-ms.openlocfilehash: 0b6833efb0ce8e9474e9d91049fd201fc845cbea
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 'Attributdeklaration: ValidateSet'
+description: 'Attributdeklaration: ValidateSet'
+ms.openlocfilehash: 7894d00561366ada492911e8147acbd8d3454a55
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787766"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660462"
 ---
 # <a name="validateset-attribute-declaration"></a>Attributdeklaration: ValidateSet
 
@@ -27,14 +25,14 @@ Wenn dieses Attribut angegeben wird, bestimmt die Windows PowerShell-Laufzeit, o
 
 #### <a name="parameters"></a>Parameter
 
-`ValidValues`([System. String](/dotnet/api/System.String)) erforderlich. Gibt die gültigen Parameter Element Werte an. Im folgenden Beispiel wird gezeigt, wie ein-Element oder mehrere-Elemente angegeben werden.
+`ValidValues` ([System. String](/dotnet/api/System.String)) erforderlich. Gibt die gültigen Parameter Element Werte an. Im folgenden Beispiel wird gezeigt, wie ein-Element oder mehrere-Elemente angegeben werden.
 
 ```csharp
 [ValidateSetAttribute("Steve")]
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase`([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. Der Standardwert `true` gibt an, dass der Fall ignoriert wird. Bei einem Wert von `false` wird beim Cmdlet die Groß-/Kleinschreibung beachtet.
+`IgnoreCase` ([System. Boolean](/dotnet/api/System.Boolean)) optionaler benannter Parameter. Der Standardwert `true` gibt an, dass der Fall ignoriert wird. Bei einem Wert von `false` wird beim Cmdlet die Groß-/Kleinschreibung beachtet.
 
 ## <a name="remarks"></a>Bemerkungen
 

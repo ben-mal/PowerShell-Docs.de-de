@@ -1,12 +1,14 @@
 ---
-title: Typname-Element für Typen (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 40fad73c66124d6c3b0d969b4268713a492c963a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TypeName“ für Types (Format)
+description: Element „TypeName“ für Types (Format)
+ms.openlocfilehash: c656b8e7e5877b72ff2164e5b417857273cada61
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772534"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664620"
 ---
 # <a name="typename-element-for-types-format"></a>Element „TypeName“ für Types (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Types-Element (Format)](./types-element-for-selectionset-format.md)|Definiert die .NET-Objekte, die sich im Auswahl Satz befinden.|
 

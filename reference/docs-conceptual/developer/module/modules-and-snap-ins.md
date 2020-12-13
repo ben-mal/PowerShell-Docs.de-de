@@ -1,12 +1,14 @@
 ---
-title: Module und Snap-Ins | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 07cdc55fd6d1462130f1a81deb30056623a525e6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Module und Snap-Ins
+description: Module und Snap-Ins
+ms.openlocfilehash: de4ff1de9a29b78d7783fe7ed0265f5516db1fb4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787307"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658674"
 ---
 # <a name="modules-and-snap-ins"></a>Module und Snap-Ins
 

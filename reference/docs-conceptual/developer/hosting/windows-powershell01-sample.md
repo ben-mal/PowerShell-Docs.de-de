@@ -1,18 +1,20 @@
 ---
-title: Windows PowerShell01 Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6e799f35c0c5e3820c6471b49c8b0d8c47b1c6b2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell01-Beispiel
+description: Windows PowerShell01-Beispiel
+ms.openlocfilehash: 70ae67bfc2da9d3cc085ecb42de9cef4b163418d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87771939"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657365"
 ---
 # <a name="windows-powershell01-sample"></a>Windows PowerShell01-Beispiel
 
 In diesem Beispiel wird gezeigt, wie ein [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) -Objekt verwendet wird, um die Funktionalität eines Runspace einzuschränken. In der Ausgabe dieses Beispiels wird veranschaulicht, wie der Sprachmodus des Runspace eingeschränkt wird, wie ein Cmdlet als privat markiert wird, wie Cmdlets und Anbieter hinzugefügt und entfernt werden, wie ein Proxy Befehl hinzugefügt wird und vieles mehr. Dieses Beispiel konzentriert sich darauf, wie der Runspace Programm gesteuert eingeschränkt wird. Skript Alternativen zum Einschränken des Runspace umfassen die Befehle $ExecutionContext. SessionState. languagemode und pssessionconfiguration.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

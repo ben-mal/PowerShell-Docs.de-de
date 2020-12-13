@@ -1,12 +1,14 @@
 ---
-title: Wideentry-Element für widecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 13dd1f6ad7ac1e9d8d0524f0a0f18fe80ffaf8e2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „WideEntry“ für WideControl (Format)
+description: Element „WideEntry“ für WideControl (Format)
+ms.openlocfilehash: 3faaf767d11914792effd6765beed956a502c642
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87780014"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664547"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>Element „WideEntry“ für WideControl (Format)
 
@@ -33,14 +35,14 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „EntrySelectedBy“ für WideEntry (Format)](./entryselectedby-element-for-wideentry-format.md)|Optionales Element.<br /><br /> Definiert die .NET-Typen, die diese Breite Eingabe Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 |[Wideitem-Element (Format)](./wideitem-element-for-widecontrol-format.md)|Erforderliches Element.<br /><br /> Definiert die Eigenschaft oder das Skript, dessen Wert angezeigt wird.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Wideentries-Element (Format)](./wideentries-element-for-widecontrol-format.md)|Stellt die Definitionen der breiten Ansicht bereit.|
 

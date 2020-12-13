@@ -1,18 +1,20 @@
 ---
-title: RemoteRunspace01-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: f9ae846d70412858b32bfe32ba5bfbf2063d9eb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: RemoteRunspace01-Beispiel
+description: RemoteRunspace01-Beispiel
+ms.openlocfilehash: 13c6213089700e779eb185fe48a67c1616fad437
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783210"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658015"
 ---
 # <a name="remoterunspace01-sample"></a>RemoteRunspace01-Beispiel
 
 Dieses Beispiel zeigt, wie Sie einen Remoterunspace erstellen, der zum Herstellen einer Remote Verbindung verwendet wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
  Dieses Beispiel erfordert Windows PowerShell 2,0.
 

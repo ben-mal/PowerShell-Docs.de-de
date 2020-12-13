@@ -1,12 +1,14 @@
 ---
-title: GetProcessSample03-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 09df93792ab611e167279bc35755d8d6c28e7cf3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProcessSample03-Beispiel
+description: GetProcessSample03-Beispiel
+ms.openlocfilehash: 7827247238f3dad2018b55e396b73d1fa434eb97
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784213"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660721"
 ---
 # <a name="getprocesssample03-sample"></a>GetProcessSample03-Beispiel
 
@@ -40,7 +42,7 @@ In diesem Beispiel wird gezeigt, wie ein Cmdlet implementiert wird, das die Proz
 
     `get-proc`
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 
@@ -60,7 +62,7 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt eine Implementierung des Get-proc-Cmdlets, das einen `Name` Parameter enthält, der Eingaben aus der Pipeline akzeptiert.
+Dieses Beispiel zeigt eine Implementierung des Get-Proc-Cmdlets, das einen `Name` Parameter enthält, der Eingaben aus der Pipeline akzeptiert.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Commands

@@ -1,12 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Navigationsanbieters
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c9714c396a023516cd1c409e598d61bb6cda3ce
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Navigationsanbieters
+description: Erstellen eines Windows PowerShell-Navigationsanbieters
+ms.openlocfilehash: 73d4971fb91acaef9e1f20226e7b9b883730e394
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778974"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92658673"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Erstellen eines Windows PowerShell-Navigationsanbieters
 
@@ -43,7 +45,7 @@ Um die untergeordneten Elemente (oder deren Namen) des Datenspeicher sowie Metho
 
 ## <a name="creating-a-windows-powershell-path"></a>Erstellen eines Windows PowerShell-Pfads
 
-Windows PowerShell-Navigations Anbieter verwenden Sie einen Anbieter internen Windows PowerShell-Pfad, um durch die Elemente des Datenspeicher zu navigieren. Um einen Anbieter internen Pfad zu erstellen, muss der Anbieter die [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode implementieren, um Aufrufe vom Cmdlet "Combine-Path" zu unterstützen. Diese Methode kombiniert einen übergeordneten und untergeordneten Pfad zu einem Anbieter internen Pfad, wobei ein Anbieter spezifisches Pfad Trennzeichen zwischen den übergeordneten und untergeordneten Pfaden verwendet wird.
+Windows PowerShell-Navigations Anbieter verwenden Sie einen Anbieter internen Windows PowerShell-Pfad, um durch die Elemente des Datenspeicher zu navigieren. Um einen Anbieter internen Pfad zu erstellen, muss der Anbieter die [System. Management. Automation. Provider. navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) -Methode implementieren, um Aufrufe vom Combine-Path-Cmdlet zu unterstützen. Diese Methode kombiniert einen übergeordneten und untergeordneten Pfad zu einem Anbieter internen Pfad, wobei ein Anbieter spezifisches Pfad Trennzeichen zwischen den übergeordneten und untergeordneten Pfaden verwendet wird.
 
 Die Standard Implementierung verwendet Pfade mit "/" oder " \\ " als Pfad Trennzeichen, normalisiert das Pfad \\ Trennzeichen in "", kombiniert die übergeordneten und untergeordneten Pfad Teile mit dem Trennzeichen zwischen diesen und gibt dann eine Zeichenfolge zurück, die die kombinierten Pfade enthält.
 

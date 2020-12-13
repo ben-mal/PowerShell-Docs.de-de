@@ -1,12 +1,14 @@
 ---
-title: Enumerableexpansions-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 2b536b1ab9b34b0089d0a38d3c5dc7a937176443
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „EnumerableExpansions“ (Format)
+description: Element „EnumerableExpansions“ (Format)
+ms.openlocfilehash: 789599e6ff368b4685c7937d5b6eb38618752f9e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774013"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660172"
 ---
 # <a name="enumerableexpansions-element-format"></a>Element „EnumerableExpansions“ (Format)
 
@@ -44,7 +46,7 @@ Keine
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element wird verwendet, um zu definieren, wie Auflistungs Objekte und die Objekte in der Auflistung angezeigt werden. In diesem Fall bezieht sich ein Auflistungs Objekt auf jedes Objekt, das die **System. Collections. ICollection** -Schnittstelle unterstützt.
+Dieses Element wird verwendet, um zu definieren, wie Auflistungs Objekte und die Objekte in der Auflistung angezeigt werden. In diesem Fall bezieht sich ein Auflistungs Objekt auf jedes Objekt, das die  **System. Collections. ICollection** -Schnittstelle unterstützt.
 
 ## <a name="see-also"></a>Weitere Informationen
 

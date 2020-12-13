@@ -1,19 +1,21 @@
 ---
-title: GetProc03-Code Beispiele | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a31b17968c3a6066d2304f3029853c8d4e35e3f3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: GetProc03-Codebeispiele
+description: GetProc03-Codebeispiele
+ms.openlocfilehash: 2866f3652072e1d89780c818543dbfc72a0606f0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787137"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92659280"
 ---
 # <a name="getproc03-code-samples"></a>GetProc03-Codebeispiele
 
 Im folgenden finden Sie die Codebeispiele für das Cmdlet "GetProc03 Sample". Dies ist das `Get-Process` Cmdlet-Beispiel, das unter [Hinzufügen von Parametern zum Verarbeiten von Pipeline Eingaben](../cmdlet/adding-parameters-that-process-pipeline-input.md)beschrieben wird Dieses `Get-Process` Cmdlet verwendet einen `Name` Parameter, der Eingaben von einem Pipeline Objekt akzeptiert, Prozessinformationen auf der Grundlage der angegebenen Namen vom lokalen Computer abruft und dann Informationen zu den Prozessen in der Befehlszeile anzeigt.
 
 > [!NOTE]
-> Sie können die c#-Quelldatei (getprov03.cs) für dieses Get-proc-Cmdlet mit dem Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0-Laufzeitkomponenten herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> Sie können die c#-Quelldatei (getprov03.cs) für dieses Get-Proc-Cmdlet mit dem Microsoft Windows Software Development Kit für Windows Vista und .NET Framework 3,0-Laufzeitkomponenten herunterladen. Anweisungen zum Herunterladen finden Sie unter [Installieren von Windows PowerShell und Herunterladen des Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
 > Die heruntergeladenen Quelldateien sind im **\<PowerShell Samples>** Verzeichnis verfügbar.
 

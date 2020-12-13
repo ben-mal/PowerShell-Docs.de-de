@@ -1,18 +1,20 @@
 ---
-title: Runspace09-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6110fcb96af25f55682064c466ba2add6377902d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace09-Beispiel
+description: Runspace09-Beispiel
+ms.openlocfilehash: 8dedc3e2ee7c1d41f7b7ad367d8cebeb5f58b8e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783142"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657605"
 ---
 # <a name="runspace09-sample"></a>Runspace09-Beispiel
 
 In diesem Beispiel wird gezeigt, wie ein Skript zur Pipeline eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts hinzugefügt wird und wie das Skript asynchron ausgeführt wird. Ereignisse werden verwendet, um die Ausgabe des Skripts zu verarbeiten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

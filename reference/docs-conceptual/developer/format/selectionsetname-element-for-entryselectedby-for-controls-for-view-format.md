@@ -1,12 +1,14 @@
 ---
-title: Selectionsetname-Element für entryselectedby für Steuerelemente für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 5c762a626fff746266919d1f7fcb991a8cdbcdf2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSetName“ für EntrySelectedBy für Controls für View (Format)
+description: Element „SelectionSetName“ für EntrySelectedBy für Controls für View (Format)
+ms.openlocfilehash: 3211b7cacd7e57770b48b03f4aade33da506f180
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787545"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664729"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-view-format"></a>Element „SelectionSetName“ für EntrySelectedBy für Controls für View (Format)
 

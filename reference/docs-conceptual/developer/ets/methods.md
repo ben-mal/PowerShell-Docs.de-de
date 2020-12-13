@@ -1,12 +1,14 @@
 ---
-title: Methoden für erweiterte Typsystem Klassen
 ms.date: 07/09/2020
-ms.openlocfilehash: bd03b873893f8aa9cb92eda33538c1703ead9773
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Methoden für erweiterte Typsystem Klassen
+description: Methoden für erweiterte Typsystem Klassen
+ms.openlocfilehash: b53604a36e0a0c3587f345262e8f274e3a2c4859
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786236"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92660374"
 ---
 # <a name="ets-class-methods"></a>ETS-Klassen Methoden
 
@@ -19,10 +21,10 @@ ETS-Methoden sind Member, die Argumente annehmen, möglicherweise Ergebnisse zur
 
 Eine Code Methode ist ein erweiterter Member, der in einer CLR-Sprache definiert ist. Sie bietet eine ähnliche Funktionalität wie eine Methode, die für ein Basisobjekt definiert ist. eine Code Methode kann jedoch dynamisch einem **psobject** -Objekt hinzugefügt werden. Damit eine Code Methode verfügbar wird, muss ein Entwickler die-Eigenschaft in einer CLR-Sprache schreiben, kompilieren und die resultierende Assembly versenden. Diese Assembly muss im Runspace verfügbar sein, in dem die Code Methode erwünscht ist. Beachten Sie, dass eine Implementierung der Code Methode Thread sicher sein muss. Der Zugriff auf diese Methoden erfolgt über [pscodemethod](/dotnet/api/system.management.automation.pscodemethod) -Objekte, die die folgenden öffentlichen Methoden und Eigenschaften bereitstellen.
 
-- `PSCodeMethod.Copy`Method: erstellt eine exakte Kopie des **pscodemethod** -Objekts.
-- `PSCodeMethod.Invoke(System.Object[])`Method: Ruft die zugrunde liegende Code Methode auf.
-- `PSCodeMethod.ToString`Method: konvertiert das **pscodemethod** -Objekt in eine Zeichenfolge.
-- `PSCodeMethod.CodeReference`Property: Ruft die zugrunde liegende Methode ab, auf der die Code Methode basiert.
+- `PSCodeMethod.Copy` Method: erstellt eine exakte Kopie des **pscodemethod** -Objekts.
+- `PSCodeMethod.Invoke(System.Object[])` Method: Ruft die zugrunde liegende Code Methode auf.
+- `PSCodeMethod.ToString` Method: konvertiert das **pscodemethod** -Objekt in eine Zeichenfolge.
+- `PSCodeMethod.CodeReference` Property: Ruft die zugrunde liegende Methode ab, auf der die Code Methode basiert.
 - **Psmembership Info. isInstance** -Eigenschaft: Ruft einen **booleschen** Wert ab, der die Quelle des Members angibt.
 - **Pscodemethod. Membership Type** -Eigenschaft: Ruft eine **psmembership Types. codemethod** -Enumerationskonstante ab, die diese Methode als Code Methode identifiziert.
 - **PSMemberInfo.Name** Property: Ruft den Namen der zugrunde liegenden Code Methode ab.
@@ -34,9 +36,9 @@ Eine Code Methode ist ein erweiterter Member, der in einer CLR-Sprache definiert
 
 Eine PowerShell-Methode ist eine CLR-Methode, die für das Basisobjekt definiert ist oder über einen Adapter zugänglich gemacht wird. Der Zugriff auf diese Methoden erfolgt über **psmethod** -Objekte, die die folgenden öffentlichen Methoden und Eigenschaften bereitstellen.
 
-- `PSMethod.Copy`Method: erstellt eine exakte Kopie des **psmethod** -Objekts.
-- `PSMethod.Invoke(System.Object[])`Method: Ruft die zugrunde liegende Methode auf.
-- `PSMethod.ToString`Method: konvertiert das **psmethod** -Objekt in eine Zeichenfolge.
+- `PSMethod.Copy` Method: erstellt eine exakte Kopie des **psmethod** -Objekts.
+- `PSMethod.Invoke(System.Object[])` Method: Ruft die zugrunde liegende Methode auf.
+- `PSMethod.ToString` Method: konvertiert das **psmethod** -Objekt in eine Zeichenfolge.
 - **Psmembership Info. isInstance** -Eigenschaft: Ruft einen **booleschen** Wert ab, der die Quelle des Members angibt.
 - **Psmethod. Membership Type** -Eigenschaft: Ruft eine **psmembership Types. Method** -Enumerationskonstante ab, die diese Methode als PowerShell-Methode identifiziert.
 - **PSMemberInfo.Name** -Eigenschaft: Ruft den Namen der zugrunde liegenden Methode ab.
@@ -48,9 +50,9 @@ Eine PowerShell-Methode ist eine CLR-Methode, die für das Basisobjekt definiert
 
 Eine Skript Methode ist ein erweiterter Member, der in der PowerShell-Sprache definiert ist. Sie bietet eine ähnliche Funktionalität wie eine Methode, die für ein Basisobjekt definiert ist. eine Skript Methode kann jedoch dynamisch einem **psobject** -Objekt hinzugefügt werden. Der Zugriff auf diese Methoden erfolgt über [psscriptmethod](/dotnet/api/system.management.automation.psscriptmethod) -Objekte, die die folgenden öffentlichen Methoden und Eigenschaften bereitstellen.
 
-- `PSScriptMethod.Copy`Method: erstellt eine exakte Kopie des **psscriptmethod** -Objekts.
-- `PSScriptMethod.Invoke(System.Object[])`Method: Ruft die zugrunde liegende Skript Methode auf.
-- `PSScriptMethod.ToString`Method: konvertiert das **psscriptmethod** -Objekt in eine Zeichenfolge.
+- `PSScriptMethod.Copy` Method: erstellt eine exakte Kopie des **psscriptmethod** -Objekts.
+- `PSScriptMethod.Invoke(System.Object[])` Method: Ruft die zugrunde liegende Skript Methode auf.
+- `PSScriptMethod.ToString` Method: konvertiert das **psscriptmethod** -Objekt in eine Zeichenfolge.
 - **Psmembership Info. isInstance** -Eigenschaft: Ruft einen **booleschen** Wert ab, der die Quelle des Members angibt.
 - **Psscriptmethod. Membership Type** -Eigenschaft: Ruft eine **psmembership Types. ScriptMethod** -Enumerationskonstante ab, die diese Methode als Skript Methode identifiziert.
 - **PSMemberInfo.Name** Property: Ruft den Namen der zugrunde liegenden Code Methode ab.

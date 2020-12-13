@@ -1,14 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Snap-Ins | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- snap-ins [PowerShell SDK], examples
-ms.openlocfilehash: 4150ba582544d1daa4a898f0ff20b169c24a0ee0
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Snap-Ins
+description: Erstellen eines Windows PowerShell-Snap-Ins
+ms.openlocfilehash: 29394ebcd2f7c4a547aabcb88685ff494b2c381d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787324"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657272"
 ---
 # <a name="how-to-create-a-windows-powershell-snap-in"></a>Erstellen eines Windows PowerShell-Snap-Ins
 
@@ -34,4 +34,4 @@ Alle Windows PowerShell-Snap-in-Klassen werden von der [System. Management. Auto
 
 [Registrieren von Cmdlets](./registering-cmdlets.md)
 
-[Windows PowerShell Shell SDK](../windows-powershell-reference.md)
+[Referenz zu Windows PowerShell](../windows-powershell-reference.md)

@@ -1,18 +1,20 @@
 ---
-title: Runspace07-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c7cca58a67e522a0e0fb1d362a60c0ca94953f3e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace07-Beispiel
+description: Runspace07-Beispiel
+ms.openlocfilehash: 4356f33a1d962a0a6c5ca1ebb8c3e4c579463022
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783176"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92657667"
 ---
 # <a name="runspace07-sample"></a>Runspace07-Beispiel
 
 Dieses Beispiel zeigt, wie ein Runspace erstellt und dann mit diesem Runspace zwei Cmdlets synchron mithilfe eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts ausgeführt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 Dieses Beispiel erfordert Windows PowerShell 2,0.
 

@@ -1,12 +1,14 @@
 ---
-title: ScriptBlock-Element für selectioncondition für entryselectedby für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e70e1555a8f2fe0d15d3e864d80d35527af81b03
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für GroupBy (Format)
+description: Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für GroupBy (Format)
+ms.openlocfilehash: cc92aa642b42fa3e4c4f974e954d5eac73179de3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785386"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92664889"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format"></a>Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für GroupBy (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „SelectionCondition“ für EntrySelectedBy für GroupBy (Format)](./selectioncondition-element-for-entryselectedby-for-groupby-format.md)|Definiert eine Bedingung, die vorhanden sein muss, damit die Steuerelement Definition verwendet werden muss.|
 

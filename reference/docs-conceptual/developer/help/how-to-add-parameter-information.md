@@ -1,12 +1,14 @@
 ---
-title: Hinzufügen von Parameterinformationen
 ms.date: 09/12/2016
-ms.openlocfilehash: 15d0194a1d5449c65977703faf245e449d75d176
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Hinzufügen von Parameterinformationen
+description: Hinzufügen von Parameterinformationen
+ms.openlocfilehash: 8f4fc46ef256a77b058df4ba506124f80732cb39
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893389"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92663043"
 ---
 # <a name="how-to-add-parameter-information"></a>Hinzufügen von Parameterinformationen
 
@@ -165,7 +167,7 @@ Beachten Sie beim Hinzufügen von Parametern die folgenden Punkte.
 
 Der Standardwert des-Parameters ist der Wert, der verwendet wird, wenn der-Parameter nicht in der Befehlszeile angegeben wird. Beachten Sie, dass der Standardwert optional ist und für einige Parameter, wie z. b. erforderliche Parameter, nicht benötigt wird. Sie sollten jedoch einen Standardwert für die meisten optionalen Parameter angeben.
 
-Der Standardwert unterstützt den Benutzer dabei, die Auswirkungen der Verwendung des-Parameters zu verstehen. Beschreiben Sie den Standardwert sehr spezifisch, z. b. das "aktuelle Verzeichnis" oder "PowerShell-Installationsverzeichnis ( `$PSHOME` )", um einen optionalen Pfad zu erhalten. Sie können auch einen Satz schreiben, der den Standard beschreibt, z. b. den folgenden Satz, der für den **passthru** -Parameter verwendet wird: "Wenn passthru nicht angegeben ist, übergibt das Cmdlet Objekte nicht in der Pipeline." Da der Wert im Gegensatz zum **Standardwert**für den Feldnamen angezeigt wird, müssen Sie den Begriff "Standardwert" nicht in den Eintrag einschließen.
+Der Standardwert unterstützt den Benutzer dabei, die Auswirkungen der Verwendung des-Parameters zu verstehen. Beschreiben Sie den Standardwert sehr spezifisch, z. b. das "aktuelle Verzeichnis" oder "PowerShell-Installationsverzeichnis ( `$PSHOME` )", um einen optionalen Pfad zu erhalten. Sie können auch einen Satz schreiben, der den Standard beschreibt, z. b. den folgenden Satz, der für den **passthru** -Parameter verwendet wird: "Wenn passthru nicht angegeben ist, übergibt das Cmdlet Objekte nicht in der Pipeline." Da der Wert im Gegensatz zum **Standardwert** für den Feldnamen angezeigt wird, müssen Sie den Begriff "Standardwert" nicht in den Eintrag einschließen.
 
 Der Standardwert des-Parameters wird nicht in allen Ansichten des Hilfe Themas für das Cmdlet angezeigt. Sie wird jedoch in einer Tabelle (zusammen mit den Parameter Attributen) nach der Parameter Beschreibung angezeigt, wenn der Benutzer die **vollständige** ( `Get-Help <cmdletname> -full` ) oder die **Parameter** `Get-Help
 <cmdletname> -parameter` Ansicht () des Themas anfordert.
