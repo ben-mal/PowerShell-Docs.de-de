@@ -1,12 +1,14 @@
 ---
-title: Itemselectioncondition-Element für ExpressionBinding für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 3bfd3efe916b4d88c024de8f959482cab515f777
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ItemSelectionCondition“ für ExpressionBinding für Controls für Configuration (Format)
+description: Element „ItemSelectionCondition“ für ExpressionBinding für Controls für Configuration (Format)
+ms.openlocfilehash: 6bd3d386ba64b33a1744fcc9e602cf13404765a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781221"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648099"
 ---
 # <a name="itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format"></a>Element „ItemSelectionCondition“ für ExpressionBinding für Controls für Configuration (Format)
 

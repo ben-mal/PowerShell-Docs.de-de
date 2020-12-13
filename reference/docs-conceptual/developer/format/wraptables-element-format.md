@@ -1,12 +1,14 @@
 ---
-title: Wraptables-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: bb0bf4785eed0c2d271e01968cf2ccbc862d94c7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „WrapTables“ (Format)
+description: Element „WrapTables“ (Format)
+ms.openlocfilehash: 005aea73126b7187645c3aa34cc318b142c56666
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772313"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647781"
 ---
 # <a name="wraptables-element-format"></a>Element „WrapTables“ (Format)
 

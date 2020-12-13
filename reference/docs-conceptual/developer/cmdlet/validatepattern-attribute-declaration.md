@@ -1,16 +1,14 @@
 ---
-title: Validatepattern-Attribut Deklaration | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- attributes, ValidatePattern
-- ValidatePattern attribute, described
-- ValidatePattern attribute
-ms.openlocfilehash: 713fa7a46a8eeefdbfd679a5e8436285fac085f8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 'Attributdeklaration: ValidatePattern'
+description: 'Attributdeklaration: ValidatePattern'
+ms.openlocfilehash: 364f63d2c52563eaefe64bcbb2bbae511bccb074
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787800"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646175"
 ---
 # <a name="validatepattern-attribute-declaration"></a>Attributdeklaration: ValidatePattern
 
@@ -27,7 +25,7 @@ Wenn validatepattern innerhalb eines Cmdlets aufgerufen wird, konvertiert Window
 
 #### <a name="parameters"></a>Parameter
 
-`RegexString`([System. String](/dotnet/api/System.String)) erforderlich. Gibt einen regulären Ausdruck an, der das Parameter Argument überprüft.
+`RegexString` ([System. String](/dotnet/api/System.String)) erforderlich. Gibt einen regulären Ausdruck an, der das Parameter Argument überprüft.
 
 Optionen ([System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions)) optionaler benannter Parameter. Gibt eine bitweise Kombination von [System. Text. RegularExpressions. RegexOptions](/dotnet/api/System.Text.RegularExpressions.RegexOptions) -Flags an, die Optionen für reguläre Ausdrücke angeben.
 

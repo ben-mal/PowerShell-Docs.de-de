@@ -1,12 +1,14 @@
 ---
-title: Erstellen mehrerer Runspaces | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1047492d2b859ae14ddd279e25e5e1dff0013820
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen von mehreren Runspaces
+description: Erstellen von mehreren Runspaces
+ms.openlocfilehash: 2dc9cc0397178d679a4d418b7b19fb0895a4e1b7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779624"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649407"
 ---
 # <a name="creating-multiple-runspaces"></a>Erstellen von mehreren Runspaces
 

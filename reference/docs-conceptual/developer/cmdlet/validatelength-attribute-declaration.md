@@ -1,16 +1,14 @@
 ---
-title: ValidateLength-Attribut Deklaration | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- ValidateLength attribute, described
-- attributes, ValidateLength
-- ValidateLength attribute
-ms.openlocfilehash: 7145dde55e79eeea6e3ceb91dfc1c93043a8857c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 'Attributdeklaration: ValidateLength'
+description: 'Attributdeklaration: ValidateLength'
+ms.openlocfilehash: b35fe24c6fc44aaca6a39d819d6e3fc2d8a2cade
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786304"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646185"
 ---
 # <a name="validatelength-attribute-declaration"></a>Attributdeklaration: ValidateLength
 
@@ -24,9 +22,9 @@ Das validateLength-Attribut gibt die minimale und maximale Anzahl von Zeichen f�
 
 #### <a name="parameters"></a>Parameter
 
-`MinLength`([System. Int32](/dotnet/api/System.Int32)) erforderlich. Gibt die Mindestanzahl von Zeichen an, die zulässig ist.
+`MinLength` ([System. Int32](/dotnet/api/System.Int32)) erforderlich. Gibt die Mindestanzahl von Zeichen an, die zulässig ist.
 
-`MaxLength`([System. Int32](/dotnet/api/System.Int32)) erforderlich. Gibt die maximal zulässige Anzahl von Zeichen an.
+`MaxLength` ([System. Int32](/dotnet/api/System.Int32)) erforderlich. Gibt die maximal zulässige Anzahl von Zeichen an.
 
 ## <a name="remarks"></a>Bemerkungen
 

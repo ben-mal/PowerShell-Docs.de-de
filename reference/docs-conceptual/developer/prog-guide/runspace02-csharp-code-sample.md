@@ -1,12 +1,14 @@
 ---
-title: Runspace02 (c#)-Code Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1e58f035f20baa7443d9031499062a45beae01b9
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Runspace02-Codebeispiel (C#)
+description: Runspace02-Codebeispiel (C#)
+ms.openlocfilehash: 9e2c0cf37d1bf12a92f4fbf781928c0241202915
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778453"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647439"
 ---
 # <a name="runspace02-c-code-sample"></a>Runspace02-Codebeispiel (C#)
 

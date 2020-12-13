@@ -1,12 +1,14 @@
 ---
-title: Customentry-Element für CustomControl für Steuerelemente für die Konfiguration (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 8b9d18bbb1abce8135f4c27418ad54a1736eb5a6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „CustomEntry“ für CustomControl für Controls für Configuration (Format)
+description: Element „CustomEntry“ für CustomControl für Controls für Configuration (Format)
+ms.openlocfilehash: 3967be86a1d6c12c7215ef19d50bac9fafd5ad6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785930"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648282"
 ---
 # <a name="customentry-element-for-customcontrol-for-controls-for-configuration-format"></a>Element „CustomEntry“ für CustomControl für Controls für Configuration (Format)
 

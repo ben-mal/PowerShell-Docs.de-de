@@ -1,12 +1,14 @@
 ---
-title: Typname-Element für entryselectedby für customentry für View (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: f8dc2c808e6eb3d6a7873cdbddc936b95d94c541
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TypeName“ für EntrySelectedBy für CustomEntry für View (Format)
+description: Element „TypeName“ für EntrySelectedBy für CustomEntry für View (Format)
+ms.openlocfilehash: 72bb88bccc2bbd62f7ed160b820cf9169cb69341
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785097"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645752"
 ---
 # <a name="typename-element-for-entryselectedby-for-customentry-for-view-format"></a>Element „TypeName“ für EntrySelectedBy für CustomEntry für View (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element für customentry für View (Format)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Definiert die .NET-Typen, die diese Definition für die benutzerdefinierte Steuerelement Ansicht oder die Bedingung verwenden, die für die Verwendung dieser Definition vorhanden sein muss.|
 

@@ -1,12 +1,14 @@
 ---
-title: Selectioncondition-Element für entryselectedby für enumerableexpansion (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: d5858145e092dc962174a776889a4f62db366d71
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionCondition“ für EntrySelectedBy für EnumerableExpansion (Format)
+description: Element „SelectionCondition“ für EntrySelectedBy für EnumerableExpansion (Format)
+ms.openlocfilehash: 3ecf7fde99b9ee66a153eea416792f351ff62af3
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785335"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647923"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format"></a>Element „SelectionCondition“ für EntrySelectedBy für EnumerableExpansion (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „PropertyName“ für SelectionCondition für EntrySelectedBy für EnumerableExpansion (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Optionales Element.<br /><br /> Gibt die .net-Eigenschaft an, die die Bedingung auslöst.|
 |[Element „ScriptBlock“ für SelectionCondition für EntrySelectedBy für EnumerableExpansion (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das die Bedingung auslöst.|
@@ -44,7 +46,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „EntrySelectedBy“ für EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|Definiert, welche .net-Auflistungs Objekte durch diese Definition erweitert werden.|
 

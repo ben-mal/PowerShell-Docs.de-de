@@ -1,12 +1,14 @@
 ---
-title: Entryselectedby-Element für tablerowentry für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 047a10fb6b38dfa8f78a7741fd50b781d4a14b6d
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „EntrySelectedBy“ für TableRowEntry für TableControl (Format)
+description: Element „EntrySelectedBy“ für TableRowEntry für TableControl (Format)
+ms.openlocfilehash: 1b7fc60b6fa9864b66e9edfebb3e4a86e287f3f8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787698"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645902"
 ---
 # <a name="entryselectedby-element-for-tablerowentry--for-tablecontrol-format"></a>Element „EntrySelectedBy“ für TableRowEntry für TableControl (Format)
 

@@ -1,12 +1,14 @@
 ---
-title: Hinzufügen von dynamischen Parametern zu einem Anbieterhilfethema
 ms.date: 09/13/2016
-ms.openlocfilehash: ddf964292ee7bf477767a2ca17c717aef84bad51
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Hinzufügen von dynamischen Parametern zu einem Anbieterhilfethema
+description: Hinzufügen von dynamischen Parametern zu einem Anbieterhilfethema
+ms.openlocfilehash: 9542538cfacf5fb293ca8d1350b80fb250c71ac6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86893457"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649630"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>Hinzufügen von dynamischen Parametern zu einem Anbieterhilfethema
 
@@ -24,7 +26,7 @@ Wenn ein Anbieter keine dynamischen Parameter implementiert, enthält das Hilfet
 
 1. Fügen Sie in der-Datei im- `<AssemblyName>.dll-help.xml` `providerHelp` Element ein- `DynamicParameters` Element hinzu. Das `DynamicParameters` -Element sollte nach dem `Tasks` -Element und vor dem-Element angezeigt werden `RelatedLinks` .
 
-   Beispiel:
+   Zum Beispiel:
 
     ```xml
     <providerHelp>
@@ -41,7 +43,7 @@ Wenn ein Anbieter keine dynamischen Parameter implementiert, enthält das Hilfet
 
 1. `DynamicParameters`Fügen Sie im-Element für jeden dynamischen Parameter ein- `DynamicParameter` Element hinzu.
 
-   Beispiel:
+   Zum Beispiel:
 
     ```xml
     <DynamicParameters/>

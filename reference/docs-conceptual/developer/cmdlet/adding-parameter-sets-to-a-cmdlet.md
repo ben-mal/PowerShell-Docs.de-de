@@ -1,14 +1,14 @@
 ---
-title: Hinzufügen von Parameter Sätzen zu einem Cmdlet | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- parameter sets [PowerShell Programmer's Guide]
-ms.openlocfilehash: b1e808694b02676d81101a2678cbea341c7bd52c
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Hinzufügen von Parametersätzen zu einem Cmdlet
+description: Hinzufügen von Parametersätzen zu einem Cmdlet
+ms.openlocfilehash: dd5ee2a880a4d516ea82e5afe0ced12369197243
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774982"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648659"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Hinzufügen von Parametersätzen zu einem Cmdlet
 
@@ -20,7 +20,7 @@ Ein Beispiel für ein Cmdlet, das zwei Parametersätze verwendet, um unterschied
 
 Zwei wichtige Punkte, die bei Parametersätzen beachtet werden sollten, besteht darin, dass die Windows PowerShell-Runtime nur einen Parametersatz für eine bestimmte Eingabe verwendet und jeder Parametersatz mindestens einen Parameter aufweisen muss, der für diesen Parametersatz eindeutig ist.
 
-Um den letzten Punkt zu veranschaulichen, verwendet dieses Cmdlet "Break-proc" drei Parametersätze: `ProcessName` , `ProcessId` und `InputObject` . Jeder dieser Parametersätze verfügt über einen Parameter, der nicht in den anderen Parametersätzen liegt. Die Parametersätze können andere Parameter gemeinsam verwenden, aber das Cmdlet verwendet die eindeutigen Parameter, `ProcessName` `ProcessId` und, `InputObject` um zu ermitteln, welche Parametergruppe von der Windows PowerShell-Laufzeit verwendet werden soll.
+Um den letzten Punkt zu veranschaulichen, verwendet dieses Stop-Proc Cmdlet drei Parametersätze: `ProcessName` , `ProcessId` und `InputObject` . Jeder dieser Parametersätze verfügt über einen Parameter, der nicht in den anderen Parametersätzen liegt. Die Parametersätze können andere Parameter gemeinsam verwenden, aber das Cmdlet verwendet die eindeutigen Parameter, `ProcessName` `ProcessId` und, `InputObject` um zu ermitteln, welche Parametergruppe von der Windows PowerShell-Laufzeit verwendet werden soll.
 
 ## <a name="declaring-the-cmdlet-class"></a>Deklarieren der Cmdlet-Klasse
 
@@ -29,7 +29,7 @@ Der erste Schritt bei der Cmdlet-Erstellung ist die Benennung des Cmdlets und da
 > [!NOTE]
 > Weitere Informationen zu genehmigten Cmdlet-Verb Namen finden Sie unter [Cmdlet-Verb Namen](./approved-verbs-for-windows-powershell-commands.md).
 
-Der folgende Code stellt die Klassendefinition für dieses Cmdlet "Pause-proc" dar.
+Der folgende Code stellt die Klassendefinition für dieses Stop-Proc-Cmdlet dar.
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "Proc",
@@ -220,7 +220,7 @@ Nachdem Sie ein Cmdlet implementiert haben, müssen Sie es über ein Windows Pow
 
 Wenn das Cmdlet bei Windows PowerShell registriert wurde, testen Sie es, indem Sie es in der Befehlszeile ausführen. Im folgenden finden Sie einige Tests, die zeigen, wie die Parameter `ProcessId` und `InputObject` verwendet werden können, um Ihre Parametersätze zu testen, um einen Prozess zu verhindern.
 
-- Führen Sie bei der Ausführung von Windows PowerShell das Cmdlet "Break-proc" mit dem `ProcessId` festgelegten Parameter aus, um einen Prozess auf der Grundlage des Bezeichners anzuhalten. In diesem Fall verwendet das Cmdlet den `ProcessId` Parametersatz, um den Prozess zu verhindern.
+- Führen Sie das Stop-Proc-Cmdlet mit Windows PowerShell gestartet aus, und legen Sie fest, dass `ProcessId` ein Prozess auf der Grundlage seines Bezeichners beendet wird. In diesem Fall verwendet das Cmdlet den `ProcessId` Parametersatz, um den Prozess zu verhindern.
 
   ```
   PS> stop-proc -Id 444
@@ -230,7 +230,7 @@ Wenn das Cmdlet bei Windows PowerShell registriert wurde, testen Sie es, indem S
   [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
   ```
 
-- Führen Sie in Windows PowerShell das Cmdlet "Break-proc" mit dem `InputObject` Parameter Set aus, um die Prozesse für das vom Befehl abgerufene Notepad-Objekt zu verhindern `Get-Process` .
+- Führen Sie mit Windows PowerShell gestartet das Stop-Proc-Cmdlet mit dem- `InputObject` Parameter aus, um die Prozesse auf dem vom Befehl abgerufenen Notepad-Objekt zu verhindern `Get-Process` .
 
   ```
   PS> get-process notepad | stop-proc

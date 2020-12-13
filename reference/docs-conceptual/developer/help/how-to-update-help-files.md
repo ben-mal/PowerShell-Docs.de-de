@@ -1,12 +1,14 @@
 ---
-title: Aktualisieren von Hilfedateien
 ms.date: 09/12/2016
-ms.openlocfilehash: 80f7c8865729515de98648765fa36ce540e00162
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Aktualisieren von Hilfedateien
+description: Aktualisieren von Hilfedateien
+ms.openlocfilehash: 19bf501cf91b1eb5dabb334c2179953590b40232
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892947"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649582"
 ---
 # <a name="how-to-update-help-files"></a>Aktualisieren von Hilfedateien
 

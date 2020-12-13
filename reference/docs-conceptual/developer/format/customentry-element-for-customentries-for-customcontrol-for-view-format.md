@@ -1,12 +1,14 @@
 ---
-title: Customentry-Element für customentries für CustomControl für Ansicht (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a13e83ec941bed80eaab02e40131054432fcce00
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „CustomEntry“ für CustomEntries für CustomControl für View (Format)
+description: Element „CustomEntry“ für CustomEntries für CustomControl für View (Format)
+ms.openlocfilehash: ff481f13e6f16267bdda4c3053faebc96d9a6d3a
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785879"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646045"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>Element „CustomEntry“ für CustomEntries für CustomControl für View (Format)
 
@@ -33,14 +35,14 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Entryselectedby-Element für customentry für View (Format)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Optionales Element.<br /><br /> Definiert die .NET-Typen, die die Definition der benutzerdefinierten Steuerelement Ansicht oder die Bedingung verwenden, die für die Verwendung dieser Definition vorhanden sein muss.|
 |[CustomItem-Element für customentry für View (Format)](./customitem-element-for-customentry-for-customcontrol-for-view-format.md)|Definiert ein Steuerelement für die benutzerdefinierte Steuerelement Definition.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomEntries“ für CustomControl für View (Format)](./customentries-element-for-customcontrol-for-view-format.md)|Stellt die Definitionen der benutzerdefinierten Steuerelement Ansicht bereit. Die benutzerdefinierte Steuerelement Ansicht muss mindestens eine Definition angeben.|
 

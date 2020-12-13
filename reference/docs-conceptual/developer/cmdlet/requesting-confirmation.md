@@ -1,12 +1,14 @@
 ---
-title: Anfordern der Bestätigung | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 42ab001e3e8894f2ca17332634214af108fc5918
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Anfordern der Bestätigung
+description: Anfordern der Bestätigung
+ms.openlocfilehash: fd7b9eb9f697e15577d1836b8d8b689f231d33a1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781782"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648480"
 ---
 # <a name="requesting-confirmation"></a>Anfordern der Bestätigung
 

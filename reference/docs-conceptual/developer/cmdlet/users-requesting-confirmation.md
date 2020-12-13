@@ -1,12 +1,14 @@
 ---
-title: Benutzer, die eine Bestätigung anfordern | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6f0effb35a110f33248a582fab874e3ab95c7df4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Anfordern der Bestätigung von Benutzern
+description: Anfordern der Bestätigung von Benutzern
+ms.openlocfilehash: 58dbe27635ca38886b728f585fec063645b3597e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786338"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646306"
 ---
 # <a name="users-requesting-confirmation"></a>Anfordern der Bestätigung von Benutzern
 

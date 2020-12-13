@@ -1,12 +1,14 @@
 ---
-title: Text-Element für customItem für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 811dc3a6f83f93513bd8380a7c3b66a813fe7801
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Text“ für CustomItem für GroupBy (Format)
+description: Element „Text“ für CustomItem für GroupBy (Format)
+ms.openlocfilehash: 4c8158c9c8e77044732e473f57291194280f4e79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783363"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649756"
 ---
 # <a name="text-element-for-customitem-for-groupby-format"></a>Element „Text“ für CustomItem für GroupBy (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomItem“ für CustomEntry für GroupBy (Format)](./customitem-element-for-customentry-for-groupby-format.md)|Definiert ein Steuerelement für die benutzerdefinierte Steuerelement Ansicht.|
 

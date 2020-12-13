@@ -1,12 +1,14 @@
 ---
-title: Typname-Element für selectioncondition für entryselectedby für widecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 5021f665b994581f9ff982e13af922d7940ebf2b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „TypeName“ für SelectionCondition für EntrySelectedBy für WideControl (Format)
+description: Element „TypeName“ für SelectionCondition für EntrySelectedBy für WideControl (Format)
+ms.openlocfilehash: af6e4782c345b43e16bce59c333bdaaceba0d845
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783312"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645505"
 ---
 # <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a>Element „TypeName“ für SelectionCondition für EntrySelectedBy für WideControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Selectioncondition-Element für entryselectedby für wideentry (Format)](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|Definiert die Bedingung, die für die Verwendung dieses breiten Eintrags vorhanden sein muss.|
 

@@ -1,12 +1,14 @@
 ---
-title: Erweiterte Typsystem Eigenschaften
 ms.date: 07/09/2020
-ms.openlocfilehash: c0a994e5b946117dcc1a2d647d07ae62af883861
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erweiterte Typsystem Eigenschaften
+description: Erweiterte Typsystem Eigenschaften
+ms.openlocfilehash: cccd3c400a8822ee25c44e8e1625e35571420259
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786202"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646131"
 ---
 # <a name="ets-properties"></a>ETS-Eigenschaften
 

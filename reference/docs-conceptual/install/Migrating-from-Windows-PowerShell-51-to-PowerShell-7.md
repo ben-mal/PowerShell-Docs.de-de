@@ -3,10 +3,10 @@ title: Migrieren von Windows PowerShell 5.1 zu PowerShell 7
 description: Informationen zum Update von PowerShell 5.1 auf PowerShell 7 für Ihre Windows-Plattformen.
 ms.date: 03/25/2020
 ms.openlocfilehash: cb14a4f159b6dc33f31386da4264c0ebb640aef8
-ms.sourcegitcommit: 2aec310ad0c0b048400cb56f6fa64c1e554c812a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "83809206"
 ---
 # <a name="migrating-from-windows-powershell-51-to-powershell-7"></a>Migrieren von Windows PowerShell 5.1 zu PowerShell 7
@@ -170,7 +170,7 @@ Die Cmdlets `New-PSSession`, `Enter-PSSession` und `Invoke-Command` weisen neue 
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Um eine Remotesitzung zu erstellen, geben Sie den Zielcomputer mit dem Parameter **HostName**an, und fügen Sie mit **UserName** den Benutzernamen hinzu. Wenn Sie die Cmdlets interaktiv ausführen, werden Sie zur Kennworteingabe aufgefordert.
+Um eine Remotesitzung zu erstellen, geben Sie den Zielcomputer mit dem Parameter **HostName** an, und fügen Sie mit **UserName** den Benutzernamen hinzu. Wenn Sie die Cmdlets interaktiv ausführen, werden Sie zur Kennworteingabe aufgefordert.
 
 ```powershell
 Enter-PSSession -HostName <Computer> -UserName <Username>
@@ -238,7 +238,7 @@ Die aktualisierte PowerShell-Erweiterung umfasst Folgendes:
 - Neue CodeLens-Integration
 - Verbesserte automatische Pfadvervollständigung
 
-Um den Umstieg auf Visual Studio Code zu erleichtern, verwenden Sie in der **Befehlspalette** die Funktion ** ISE-Modus aktivieren**. Über diese Option wird auf ein Layout im ISE-Stil umgestellt. Das Layout im ISE-Stil bietet Ihnen alle neuen Features und Funktionen von PowerShell in einer vertrauten Benutzerumgebung.
+Um den Umstieg auf Visual Studio Code zu erleichtern, verwenden Sie in der **Befehlspalette** die Funktion **ISE-Modus aktivieren**. Über diese Option wird auf ein Layout im ISE-Stil umgestellt. Das Layout im ISE-Stil bietet Ihnen alle neuen Features und Funktionen von PowerShell in einer vertrauten Benutzerumgebung.
 
 Um auf das neue ISE-Layout umzustellen, drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>P</kbd>, um die **Befehlspalette** zu öffnen. Geben Sie `PowerShell` ein, und wählen Sie folgende Option aus: **PowerShell: ISE-Modus aktivieren**.
 

@@ -1,26 +1,25 @@
 ---
-title: Erstellen eines Cmdlets ohne Parameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmers Guide], creating
-- cmdlets [PowerShell Programmers Guide], basic cmdlet
-ms.openlocfilehash: a14d25660d596ebd12cd7d74b607eab6ac9fd1be
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Cmdlet ohne Parameter
+description: Erstellen eines Cmdlet ohne Parameter
+ms.openlocfilehash: 5df27ac4c1f6dfcc3e7596d93f8db0f97aae71c1
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784383"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646552"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Erstellen eines Cmdlet ohne Parameter
 
-In diesem Abschnitt wird beschrieben, wie Sie ein Cmdlet erstellen, das Informationen vom lokalen Computer abruft, ohne Parameter zu verwenden, und dann die Informationen in die Pipeline schreibt. Das hier beschriebene Cmdlet ist ein Get-proc-Cmdlet, das Informationen zu den Prozessen des lokalen Computers abruft und diese Informationen dann in der Befehlszeile anzeigt.
+In diesem Abschnitt wird beschrieben, wie Sie ein Cmdlet erstellen, das Informationen vom lokalen Computer abruft, ohne Parameter zu verwenden, und dann die Informationen in die Pipeline schreibt. Das hier beschriebene Cmdlet ist ein Get-Proc Cmdlet, das Informationen zu den Prozessen des lokalen Computers abruft und diese Informationen dann in der Befehlszeile anzeigt.
 
 > [!NOTE]
 > Beachten Sie, dass beim Schreiben von Cmdlets die Windows PowerShell-® Verweisassemblys auf den Datenträger heruntergeladen werden (standardmäßig unter "c:\Programme\Reference assemblies\microsoft\windowspowershell\v1.0"). Sie sind nicht im globalen Assemblycache (GAC) installiert.
 
 ## <a name="naming-the-cmdlet"></a>Benennen des Cmdlets
 
-Ein Cmdlet-Name besteht aus einem Verb, das die Aktion angibt, die das Cmdlet annimmt, und einem Substantiv, das die Elemente angibt, auf die das Cmdlet angewendet wird. Da das Get-proc-Beispiel-Cmdlet Prozess Objekte abruft, wird das Verb "Get" verwendet, das von der [System. Management. Automation. verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) -Enumeration definiert wird, und das Nomen "proc", um anzugeben, dass das Cmdlet für Prozesselemente funktioniert.
+Ein Cmdlet-Name besteht aus einem Verb, das die Aktion angibt, die das Cmdlet annimmt, und einem Substantiv, das die Elemente angibt, auf die das Cmdlet angewendet wird. Da dieses Beispiel Get-Proc Cmdlet Prozess Objekte abruft, verwendet es das Verb "Get", das von der [System. Management. Automation. verbscommon](/dotnet/api/System.Management.Automation.VerbsCommon) -Enumeration definiert wird, und das Substantiv "proc", um anzugeben, dass das Cmdlet für Prozesselemente funktioniert.
 
 Verwenden Sie beim Benennen von Cmdlets keines der folgenden Zeichen: #, () {} [] &-/\ $;: "' <> &#124; ? @ ` .
 
@@ -34,7 +33,7 @@ Sie sollten ein Verb aus dem Satz genehmigter Cmdlet-Verb Namen verwenden. Weite
 
 ## <a name="defining-the-cmdlet-class"></a>Definieren der Cmdlet-Klasse
 
-Nachdem Sie einen Cmdlet-Namen ausgewählt haben, definieren Sie eine .NET-Klasse, um das Cmdlet zu implementieren. Hier ist die Klassendefinition für dieses Beispiel-Get-proc-Cmdlet:
+Nachdem Sie einen Cmdlet-Namen ausgewählt haben, definieren Sie eine .NET-Klasse, um das Cmdlet zu implementieren. Im folgenden finden Sie die Klassendefinition für dieses Beispiel Get-Proc Cmdlet:
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "Proc")]
@@ -47,12 +46,12 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-Beachten Sie, dass das [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) -Attribut mit der-Syntax vor der Klassendefinition `[Cmdlet(verb, noun, ...)]` verwendet wird, um diese Klasse als Cmdlet zu identifizieren. Dies ist das einzige erforderliche Attribut für alle Cmdlets und ermöglicht es der Windows PowerShell-Laufzeit, Sie ordnungsgemäß aufzurufen. Sie können Attribut Schlüsselwörter festlegen, um die Klasse bei Bedarf weiter zu deklarieren. Beachten Sie, dass die Attribut Deklaration für die getproccommand-Beispiel Klasse nur die Substantiv-und Verb Namen für das Get-proc-Cmdlet deklariert.
+Beachten Sie, dass das [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) -Attribut mit der-Syntax vor der Klassendefinition `[Cmdlet(verb, noun, ...)]` verwendet wird, um diese Klasse als Cmdlet zu identifizieren. Dies ist das einzige erforderliche Attribut für alle Cmdlets und ermöglicht es der Windows PowerShell-Laufzeit, Sie ordnungsgemäß aufzurufen. Sie können Attribut Schlüsselwörter festlegen, um die Klasse bei Bedarf weiter zu deklarieren. Beachten Sie, dass die Attribut Deklaration für die getproccommand-Beispiel Klasse nur die Substantiv-und Verb Namen für das Get-Proc-Cmdlet deklariert.
 
 > [!NOTE]
 > Für alle Windows PowerShell-Attribut Klassen entsprechen die Schlüsselwörter, die Sie festlegen können, den Eigenschaften der Attribut Klasse.
 
-Wenn Sie die Klasse des Cmdlets benennen, empfiehlt es sich, den Cmdlet-Namen im Klassennamen widerzuspiegeln. Verwenden Sie hierzu das Format "verbnouncommand", und ersetzen Sie "Verb" und "Substantiv" durch das Verb und das Substantiv, das im Cmdlet-Namen verwendet wird. Wie in der vorherigen Klassendefinition gezeigt, definiert das Get-proc-Beispiel Cmdlet eine Klasse mit dem Namen "getproccommand", die von der Basisklasse " [System. Management. Automation. Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) " abgeleitet ist.
+Wenn Sie die Klasse des Cmdlets benennen, empfiehlt es sich, den Cmdlet-Namen im Klassennamen widerzuspiegeln. Verwenden Sie hierzu das Format "verbnouncommand", und ersetzen Sie "Verb" und "Substantiv" durch das Verb und das Substantiv, das im Cmdlet-Namen verwendet wird. Wie in der vorherigen Klassendefinition gezeigt, definiert das Cmdlet "Sample Get-Proc" eine Klasse mit dem Namen "getproccommand", die von der Basisklasse " [System. Management. Automation. Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) " abgeleitet wird.
 
 > [!IMPORTANT]
 > Wenn Sie ein Cmdlet definieren möchten, das direkt auf die Windows PowerShell-Laufzeit zugreift, sollte Ihre .NET-Klasse von der Basisklasse " [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) " abgeleitet werden. Weitere Informationen zu dieser Klasse finden Sie unter [Erstellen eines Cmdlets zum Definieren von Parameter Sätzen](./adding-parameter-sets-to-a-cmdlet.md).
@@ -75,7 +74,7 @@ Wenn das Cmdlet Pipeline Eingaben annimmt, muss es die [System. Management. Auto
 
 Wenn das Cmdlet keine Pipeline Eingaben annimmt, sollte es die [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) -Methode überschreiben. Beachten Sie, dass diese Methode häufig anstelle von [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) verwendet wird, wenn das Cmdlet nicht gleichzeitig auf einem Element agieren kann, wie es bei einem Sortierungs-Cmdlet der Fall ist.
 
-Da dieses Beispiel-Cmdlet "Get-proc" eine Pipeline Eingabe empfangen muss, überschreibt es die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode und verwendet die Standard Implementierungen für " [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) " und " [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing)". Die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Überschreibung ruft Prozesse ab und schreibt Sie mithilfe der [System. Management. Automation. Cmdlet. Write-Object](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) -Methode in die Befehlszeile.
+Da dieses Beispiel Get-Proc Cmdlet Pipeline Eingaben empfangen muss, überschreibt es die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode und verwendet die Standard Implementierungen für [System. Management. Automation. Cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) und [System. Management. Automation. Cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing). Die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Überschreibung ruft Prozesse ab und schreibt Sie mithilfe der [System. Management. Automation. Cmdlet. Write-Object](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) -Methode in die Befehlszeile.
 
 ```csharp
 protected override void ProcessRecord()
@@ -136,7 +135,7 @@ Nachdem Sie ein Cmdlet implementiert haben, müssen Sie es über ein Windows Pow
 
 ## <a name="testing-the-cmdlet"></a>Testen des Cmdlets
 
-Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Der Code für das Beispiel-Cmdlet "Get-proc" ist klein, verwendet jedoch weiterhin die Windows PowerShell-Laufzeit und ein vorhandenes .NET-Objekt, das ausreichend ist, um es zu nutzen. Testen Sie es, um besser zu verstehen, was Get-proc tun kann und wie seine Ausgabe verwendet werden kann. Weitere Informationen zur Verwendung von Cmdlets über die Befehlszeile finden Sie unter [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Der Code für das Cmdlet "Sample Get-Proc" ist klein, aber es werden immer noch die Windows PowerShell-Laufzeit und ein vorhandenes .NET-Objekt verwendet, das ausreichend ist, um es zu nutzen. Testen Sie es, um besser zu verstehen, was Get-Proc können und wie seine Ausgabe verwendet werden kann. Weitere Informationen zur Verwendung von Cmdlets über die Befehlszeile finden Sie unter [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
 1. Starten Sie Windows PowerShell, und holen Sie sich die aktuellen Prozesse, die auf dem Computer ausgeführt werden.
 

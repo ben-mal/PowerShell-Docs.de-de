@@ -1,12 +1,14 @@
 ---
-title: SelectionSet-Element (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: cf47229993458492c712d28e04913e75d1bde386
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionSet“ (Format)
+description: Element „SelectionSet“ (Format)
+ms.openlocfilehash: 944aa83569ad8ca789746a71f60e5da5c19fbf01
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783397"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647862"
 ---
 # <a name="selectionset-element-format"></a>Element „SelectionSet“ (Format)
 
@@ -33,14 +35,14 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „Name“ für SelectionSet (Format)](./name-element-for-selectionset-format.md)|Erforderliches Element.<br /><br /> Gibt den Namen an, mit dem auf den Auswahl Satz verwiesen wird.|
 |[Types-Element (Format)](./types-element-for-selectionset-format.md)|Erforderliches Element.<br /><br /> Definiert die .NET-Objekte, die sich im Auswahl Satz befinden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Selectionsets-Element Format](./selectionsets-element-format.md)|Definiert die allgemeinen Sätze von .NET-Objekten, die von allen Sichten der Formatierungs Datei verwendet werden können.|
 

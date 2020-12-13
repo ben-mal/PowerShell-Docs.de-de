@@ -1,20 +1,22 @@
 ---
-title: Hintergrund Aufträge | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 2a1297b8dfe087474564078cca2a5a0526ed0f36
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Hintergrundaufträge
+description: Hintergrundaufträge
+ms.openlocfilehash: 5478789a2ee1f2eabc71a46673e3a707643cdba8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87774846"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648618"
 ---
 # <a name="background-jobs"></a>Hintergrundaufträge
 
-Cmdlets können Ihre Aktion intern oder als Windows PowerShell-*Hintergrund Auftrag*ausführen. Wenn ein Cmdlet als Hintergrund Auftrag ausgeführt wird, wird die Arbeit asynchron in einem eigenen Thread ausgeführt, getrennt vom Pipeline Thread, der vom Cmdlet verwendet wird. Aus Sicht des Benutzers, wenn ein Cmdlet als Hintergrund Auftrag ausgeführt wird, wird die Eingabeaufforderung sofort zurückgegeben, auch wenn die Ausführung des Auftrags längere Zeit in Anspruch nimmt und der Benutzer ohne Unterbrechung fortfahren kann, während der Auftrag ausgeführt wird.
+Cmdlets können Ihre Aktion intern oder als Windows PowerShell-*Hintergrund Auftrag* ausführen. Wenn ein Cmdlet als Hintergrund Auftrag ausgeführt wird, wird die Arbeit asynchron in einem eigenen Thread ausgeführt, getrennt vom Pipeline Thread, der vom Cmdlet verwendet wird. Aus Sicht des Benutzers, wenn ein Cmdlet als Hintergrund Auftrag ausgeführt wird, wird die Eingabeaufforderung sofort zurückgegeben, auch wenn die Ausführung des Auftrags längere Zeit in Anspruch nimmt und der Benutzer ohne Unterbrechung fortfahren kann, während der Auftrag ausgeführt wird.
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>Hintergrund Aufträge, untergeordnete Aufträge und das auftragsrepository
 
-Das Auftrags Objekt, das von den Cmdlets zurückgegeben wird, die Hintergrund Aufträge unterstützen, definiert den Auftrag. (Das [Start-Job-](/powershell/module/Microsoft.PowerShell.Core/Start-Job) Cmdlet gibt auch ein Auftrags Objekt zurück.) Der Name des Auftrags, ein Bezeichner, der verwendet wird, um den Auftrag, die Zustandsinformationen und die untergeordneten Aufträge anzugeben, sind in dieser Definition enthalten. Der Auftrag führt keine der Arbeit aus. Jeder Hintergrund Auftrag hat mindestens einen untergeordneten Auftrag, da der untergeordnete Auftrag die tatsächliche Arbeit ausführt. Wenn Sie ein Cmdlet ausführen, sodass die Arbeit als Hintergrund Auftrag ausgeführt wird, muss das Cmdlet den Auftrag und die untergeordneten Aufträge einem gemeinsamen Repository hinzufügen, das als *auftragsrepository*bezeichnet wird.
+Das Auftrags Objekt, das von den Cmdlets zurückgegeben wird, die Hintergrund Aufträge unterstützen, definiert den Auftrag. (Das [Start-Job-](/powershell/module/Microsoft.PowerShell.Core/Start-Job) Cmdlet gibt auch ein Auftrags Objekt zurück.) Der Name des Auftrags, ein Bezeichner, der verwendet wird, um den Auftrag, die Zustandsinformationen und die untergeordneten Aufträge anzugeben, sind in dieser Definition enthalten. Der Auftrag führt keine der Arbeit aus. Jeder Hintergrund Auftrag hat mindestens einen untergeordneten Auftrag, da der untergeordnete Auftrag die tatsächliche Arbeit ausführt. Wenn Sie ein Cmdlet ausführen, sodass die Arbeit als Hintergrund Auftrag ausgeführt wird, muss das Cmdlet den Auftrag und die untergeordneten Aufträge einem gemeinsamen Repository hinzufügen, das als *auftragsrepository* bezeichnet wird.
 
 Weitere Informationen zur Verarbeitung von Hintergrund Aufträgen in der Befehlszeile finden Sie in den folgenden Bereichen:
 
@@ -40,7 +42,7 @@ Zum Schreiben eines Cmdlets, das als Hintergrund Auftrag ausgeführt werden kann
 
 Ein Codebeispiel finden [Sie unter How to Support Jobs](./how-to-support-jobs.md).
 
-## <a name="background-job-related-apis"></a>Im Hintergrund für Aufträge relevante APIs
+## <a name="background-job-related-apis"></a>Hintergrund Job-Related APIs
 
 Die folgenden APIs werden von Windows PowerShell zur Verwaltung von Hintergrund Aufträgen bereitgestellt.
 

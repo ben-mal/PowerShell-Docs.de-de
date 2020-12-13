@@ -1,12 +1,14 @@
 ---
-title: Schreiben eines einfachen Cmdlets | Microsoft-Dokumentation
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ff0b47454804c9becd6f03ac521946b9596bb8b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Schreiben eines einfaches Cmdlet
+description: Schreiben eines einfaches Cmdlet
+ms.openlocfilehash: 59dce5d797f80647e0b70a1f80faf67198652082
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784060"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646495"
 ---
 # <a name="how-to-write-a-cmdlet"></a>Schreiben eines Cmdlets
 
@@ -71,7 +73,7 @@ namespace SendGreeting
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [System. Management. Automation. Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet)
 

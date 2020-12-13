@@ -1,12 +1,14 @@
 ---
-title: Wideitem-Element für widecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6b2f7c97978c20350caeec894589c5995ae7ccc4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „WideItem“ für WideControl (Format)
+description: Element „WideItem“ für WideControl (Format)
+ms.openlocfilehash: b9c416bbe3befcd689b8a2c0b72a8ff1301b9659
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779895"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647804"
 ---
 # <a name="wideitem-element-for-widecontrol-format"></a>Element „WideItem“ für WideControl (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „FormatString“ für WideItem für WideControl (Format)](./formatstring-element-for-wideitem-for-widecontrol-format.md)|Optionales Element.<br /><br /> Gibt ein Format Muster an, das definiert, wie der Eigenschafts-oder Skript Wert in der Ansicht angezeigt wird.|
 |[PropertyName-Element für wideitem (Format)](./propertyname-element-for-wideitem-for-widecontrol-format.md)|Gibt die-Eigenschaft des-Objekts an, dessen Wert in der breiten Ansicht angezeigt wird.|
@@ -42,7 +44,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Wideentry-Element (Format)](./wideentry-element-for-widecontrol-format.md)|Stellt eine Definition der breiten Ansicht bereit.|
 

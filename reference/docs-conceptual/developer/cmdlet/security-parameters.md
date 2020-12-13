@@ -1,12 +1,14 @@
 ---
-title: Sicherheitsparameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 290905b04547af932182005869b18dc1bc210ca4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Sicherheitsparameter
+description: Sicherheitsparameter
+ms.openlocfilehash: 2c73a3372fa719ea436d4a3ae1223d4cbaaf9108
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786508"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650248"
 ---
 # <a name="security-parameters"></a>Sicherheitsparameter
 
@@ -25,7 +27,7 @@ In der folgenden Tabelle werden die empfohlenen Namen und Funktionen für Parame
 |**Credential**<br>Datentyp: [System. Management. Automation. PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Implementieren Sie diesen Parameter, damit das Cmdlet den Benutzer automatisch zur Eingabe eines Benutzernamens oder Kennworts auffordert. Wenn keine vollständigen Anmelde Informationen direkt bereitgestellt werden, wird eine Eingabeaufforderung für beide angezeigt.|
 |**CSPName**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer den Namen des Zertifikat Dienstanbieters (Certificate Service Provider, CSP) angeben kann.|
 |**Csptype**<br>Datentyp: Ganzzahl|Implementieren Sie diesen Parameter, sodass der Benutzer den Typ des CSP angeben kann.|
-|**Gruppe**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer eine Auflistung von Prinzipale für den Zugriff angeben kann. Weitere Informationen finden Sie in der Beschreibung des **Prinzipal** Parameters.|
+|**Gruppieren**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer eine Auflistung von Prinzipale für den Zugriff angeben kann. Weitere Informationen finden Sie in der Beschreibung des **Prinzipal** Parameters.|
 |**KeyAlgorithm**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer den Algorithmus für die Schlüsselgenerierung angeben kann, der für die Sicherheit verwendet werden soll.|
 |**KeyContainerName**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer den Namen des Schlüssel Containers angeben kann.|
 |**KeyLength**<br>Datentyp: Ganzzahl|Implementieren Sie diesen Parameter, sodass der Benutzer die Länge des Schlüssels in Bits angeben kann.|
@@ -35,7 +37,7 @@ In der folgenden Tabelle werden die empfohlenen Namen und Funktionen für Parame
 |**Berechtigungen**<br>Datentyp: Array von Berechtigungen|Implementieren Sie diesen Parameter, sodass der Benutzer die Rechte angeben kann, die ein Cmdlet zum Ausführen des Vorgangs für einen bestimmten Eintrag benötigt.|
 |**Rolle**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer eine Reihe von Vorgängen angeben kann, die von einer Entität ausgeführt werden können.|
 |**Savecred**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit Anmelde Informationen, die zuvor vom Benutzer gespeichert wurden, verwendet werden, wenn der-Parameter angegeben wird.|
-|**Umfang**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer die Gruppe der geschützten Objekte für das Cmdlet angeben kann.|
+|**Bereich**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer die Gruppe der geschützten Objekte für das Cmdlet angeben kann.|
 |**SID**<br>Datentyp: Zeichenfolge|Implementieren Sie diesen Parameter, sodass der Benutzer einen eindeutigen Bezeichner angeben kann, der einen Prinzipal darstellt.|
 |**Würdiges**<br>Datentyp: Switchparameter|Implementieren Sie diesen Parameter, damit Vertrauens Ebenen unterstützt werden, wenn der-Parameter angegeben wird.|
 |**Trust Level**<br>Datentyp: Schlüsselwort|Implementieren Sie diesen Parameter, sodass der Benutzer die Vertrauens Ebene angeben kann, die unterstützt wird. Mögliche Werte sind z. b. "Internet", "Intranet" und "FullTrust".|

@@ -1,12 +1,14 @@
 ---
-title: Label-Element für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 07b4d037472a9dd2329e94576ec10f5b82f46b34
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „Label“ für GroupBy (Format)
+description: Element „Label“ für GroupBy (Format)
+ms.openlocfilehash: ff4b0dec01bb5b472b1813540661791b91568eed
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785777"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649786"
 ---
 # <a name="label-element-for-groupby-format"></a>Element „Label“ für GroupBy (Format)
 
@@ -34,7 +36,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „GroupBy“ für View (Format)](./groupby-element-for-view-format.md)|Definiert, wie eine neue Gruppe von Objekten angezeigt wird.|
 
@@ -48,7 +50,7 @@ Zusätzlich zum von diesem Element angegebenen Text zeigt Windows PowerShell den
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Bezeichnung für eine neue Gruppe. Die angezeigte Bezeichnung sieht in etwa wie folgt aus:`Service Type: NewValueofProperty`
+Das folgende Beispiel zeigt die Bezeichnung für eine neue Gruppe. Die angezeigte Bezeichnung sieht in etwa wie folgt aus: `Service Type: NewValueofProperty`
 
 ```xml
 <GroupBy>

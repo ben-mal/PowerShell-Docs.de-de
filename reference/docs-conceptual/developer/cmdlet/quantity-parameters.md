@@ -1,12 +1,14 @@
 ---
-title: Mengen Parameter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 7ff6562380bb6336b08879b31d8d9fed47bfb6a7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Mengenparameter
+description: Mengenparameter
+ms.openlocfilehash: 3f7c23eec34a709b1f2d59f611c93909b20f4124
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87781816"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92650298"
 ---
 # <a name="quantity-parameters"></a>Mengenparameter
 
@@ -18,7 +20,7 @@ In der folgenden Tabelle werden die empfohlenen Namen und Funktionen für die An
 |**Speicherbelegung**<br>Datentyp: Int32|Implementieren Sie diesen Parameter, sodass der Benutzer die Anzahl der zuzuordnenden Elemente angeben kann.|
 |**Blockcount**<br>Datentyp: Int64|Implementieren Sie diesen Parameter, sodass der Benutzer die Anzahl der Blöcke angeben kann.|
 |**Count**<br>Datentyp: Int64|Implementieren Sie diesen Parameter, sodass der Benutzer die Anzahl angeben kann.|
-|**Umfang**<br>Datentyp: Schlüsselwort|Implementieren Sie diesen Parameter, sodass der Benutzer den Bereich angeben kann, der verarbeitet werden soll.|
+|**Bereich**<br>Datentyp: Schlüsselwort|Implementieren Sie diesen Parameter, sodass der Benutzer den Bereich angeben kann, der verarbeitet werden soll.|
 
 ## <a name="see-also"></a>Weitere Informationen
 

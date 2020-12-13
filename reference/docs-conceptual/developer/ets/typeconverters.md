@@ -1,12 +1,14 @@
 ---
-title: Typkonverter für erweiterte Typsysteme
 ms.date: 07/09/2020
-ms.openlocfilehash: 0d04293fffde9901ed2e33a9bab21e6612ce9cd5
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Typkonverter für erweiterte Typsysteme
+description: Typkonverter für erweiterte Typsysteme
+ms.openlocfilehash: 0774e9eaae1187162b3d55cc45b902f7411a1f18
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786185"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648424"
 ---
 # <a name="ets-type-converters"></a>ETS-Typkonverter
 
@@ -20,11 +22,11 @@ Diese Standard Konvertierungen werden vor allen benutzerdefinierten Konvertierun
 | --------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Null                  | String            | ""                                                                                                                                                                  |
 | Null                  | Char              | '\0'                                                                                                                                                                |
-| Null                  | Numerisch           | `0`des Typs, der im **ResultType** -Parameter angegeben ist.                                                                                                          |
+| Null                  | Numeric           | `0` des Typs, der im **ResultType** -Parameter angegeben ist.                                                                                                          |
 | Null                  | Boolean           | Ergebnisse des Aufrufes der- `IsTrue(System.Object)(Null)` Methode.                                                                                                        |
 | Null                  | PSObject          | Neues Objekt vom Typ " **psobject**".                                                                                                                                    |
-| Null                  | Nicht-Werttyp    | Normal.                                                                                                                                                               |
-| Null                  | Nullable &lt; T&gt; | Normal.                                                                                                                                                               |
+| Null                  | Nicht-Werttyp    | Null.                                                                                                                                                               |
+| Null                  | Nullable &lt; T&gt; | Null.                                                                                                                                                               |
 | Abgeleitete Klasse         | Basisklasse        | **valueToConvert**                                                                                                                                                  |
 | Dagegen              | Void              | **Automationnull. Value**                                                                                                                                            |
 | Dagegen              | String            | Ruft den `ToString` Mechanismus auf.                                                                                                                                         |
@@ -32,12 +34,12 @@ Diese Standard Konvertierungen werden vor allen benutzerdefinierten Konvertierun
 | Dagegen              | PSObject          | Ergebnisse des Aufrufes der- `AsPSObject(System.Object) (valueToConvert)` Methode.                                                                                         |
 | Dagegen              | XML-Dokument      | Konvertiert **valueToConvert** in eine Zeichenfolge und ruft dann den **XmlDocument** -Konstruktor auf.                                                                                      |
 | Array                 | Array             | Versucht, jedes Element des Arrays zu konvertieren.                                                                                                                      |
-| Singleton             | Array             | `Array[0]`entspricht **valueToConvert** , das in den Elementtyp des Arrays konvertiert wird.                                                                            |
+| Singleton             | Array             | `Array[0]` entspricht **valueToConvert** , das in den Elementtyp des Arrays konvertiert wird.                                                                            |
 | IDictionary           | Hash Tabelle        | Ergebnisse des Aufrufes Hashtable-Aufrufes (valueToConvert).                                                                                                                       |
 | String                | Char[]            | `valueToConvert.ToCharArray`                                                                                                                                        |
 | String                | Regex             | Ergebnisse des Aufrufes `Regx(valueToConvert)` .                                                                                                                          |
 | String                | type              | Gibt den entsprechenden Typ mithilfe des **valueToConvert** -Parameters zum Durchsuchen von **runspaceconfiguration.** Assemblys zurück.                                                 |
-| String                | Numeric           | Wenn **valueToConvert** den Wert "" hat, wird `0` der **ResultType**zurückgegeben. Andernfalls wird die Kultur "Kultur invariant" verwendet, um einen numerischen Wert zu erhalten.                       |
+| String                | Numeric           | Wenn **valueToConvert** den Wert "" hat, wird `0` der **ResultType** zurückgegeben. Andernfalls wird die Kultur "Kultur invariant" verwendet, um einen numerischen Wert zu erhalten.                       |
 | Integer               | System.Enum       | Konvertiert die Ganzzahl in die Konstante, wenn die Ganzzahl durch die-Enumeration definiert wird. Wenn die Ganzzahl nicht definiert ist, wird eine **psinvalidcastexception** -Ausnahme ausgelöst. |
 
 ## <a name="custom-conversions"></a>Benutzerdefinierte Konvertierungen
@@ -51,8 +53,8 @@ PowerShell-Typkonverter werden zum Konvertieren eines einzelnen Typs oder einer 
 - Durch die typkonfigurationsdatei
 - Durch Anwenden des **TypeConverterAttribute** -Attributs auf die Zielklasse
 
-PowerShell-Typkonverter, die von der " [pstypeer Converter](/dotnet/api/system.management.automation.pstypeconverter) "-Klasse abgeleitet sind, stellen Methoden zum Konvertieren eines Objekts in einen bestimmten Typ oder von einem bestimmten Typ bereit. Wenn der **valueToConvert** -Parameter ein Objekt enthält, dem ein PowerShell-Typkonverter zugeordnet ist, ruft PowerShell das`PSTypeConverter.ConvertTo(System.Object, System.Type,System.IFormatProvider, System.Boolean)`
--Methode des zugeordneten Konverters, um das Objekt in den durch den **ResultType** -Parameter angegebenen Typ zu konvertieren. Wenn der **ResultType** -Parameter auf einen Typ verweist, dem ein PowerShell-Typkonverter zugeordnet ist, ruft PowerShell das`PSTypeConverter.ConvertFrom(System.Object,System.Type, System.IFormatProvider, System.Boolean)`
+PowerShell-Typkonverter, die von der " [pstypeer Converter](/dotnet/api/system.management.automation.pstypeconverter) "-Klasse abgeleitet sind, stellen Methoden zum Konvertieren eines Objekts in einen bestimmten Typ oder von einem bestimmten Typ bereit. Wenn der **valueToConvert** -Parameter ein Objekt enthält, dem ein PowerShell-Typkonverter zugeordnet ist, ruft PowerShell das `PSTypeConverter.ConvertTo(System.Object, System.Type,System.IFormatProvider, System.Boolean)`
+-Methode des zugeordneten Konverters, um das Objekt in den durch den **ResultType** -Parameter angegebenen Typ zu konvertieren. Wenn der **ResultType** -Parameter auf einen Typ verweist, dem ein PowerShell-Typkonverter zugeordnet ist, ruft PowerShell das `PSTypeConverter.ConvertFrom(System.Object,System.Type, System.IFormatProvider, System.Boolean)`
 -Methode des zugeordneten Konverters, um das Objekt von dem durch den **ResultType** -Parameter angegebenen Typ zu konvertieren.
 
 ## <a name="system-type-converter"></a>Systemtyp Konverter
@@ -72,8 +74,8 @@ Wenn der Objekttyp des **ResultType** -Parameters über einen Konstruktor verfü
 
 ## <a name="implicit-cast-operator-converter"></a>Impliziter Umwandlungs Operator Konverter
 
-Wenn der **valueToConvert** -Parameter einen impliziten Umwandlungs Operator aufweist, der in **ResultType**konvertiert, wird der Umwandlungs Operator aufgerufen. Wenn der **ResultType** -Parameter über einen impliziten Umwandlungs Operator verfügt, der von **valueToConvert**konvertiert, wird der Cast-Operator aufgerufen.
+Wenn der **valueToConvert** -Parameter einen impliziten Umwandlungs Operator aufweist, der in **ResultType** konvertiert, wird der Umwandlungs Operator aufgerufen. Wenn der **ResultType** -Parameter über einen impliziten Umwandlungs Operator verfügt, der von **valueToConvert** konvertiert, wird der Cast-Operator aufgerufen.
 
 ## <a name="explicit-cast-operator-converter"></a>Expliziter Cast Operator Konverter
 
-Wenn der **valueToConvert** -Parameter über einen expliziten Umwandlungs Operator verfügt, der in **ResultType**konvertiert wird, wird der Cast-Operator aufgerufen. Wenn der **ResultType** -Parameter über einen expliziten Umwandlungs Operator verfügt, der von **valueToConvert**konvertiert, wird der Cast-Operator aufgerufen.
+Wenn der **valueToConvert** -Parameter über einen expliziten Umwandlungs Operator verfügt, der in **ResultType** konvertiert wird, wird der Cast-Operator aufgerufen. Wenn der **ResultType** -Parameter über einen expliziten Umwandlungs Operator verfügt, der von **valueToConvert** konvertiert, wird der Cast-Operator aufgerufen.

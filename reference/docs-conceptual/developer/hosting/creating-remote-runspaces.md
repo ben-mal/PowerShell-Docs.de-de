@@ -1,16 +1,18 @@
 ---
-title: Erstellen von Remoterunspaces | Microsoft-Dokumentation
 ms.date: 09/12/2016
-ms.openlocfilehash: 2b3c76eeae70de9ef116851313953bba1a1d890f
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen von Remoterunspaces
+description: Erstellen von Remoterunspaces
+ms.openlocfilehash: 4a2af4094ff2503fc12ee460d49565f035f0e4fe
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779589"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649369"
 ---
 # <a name="creating-remote-runspaces"></a>Erstellen von Remoterunspaces
 
-PowerShell-Befehle, die einen **Computername** -Parameter annehmen, können auf jedem Computer ausgeführt werden, auf dem PowerShell ausgeführt wird. Zum Ausführen von Befehlen, die keinen **Computername** -Parameter verwenden, können Sie die WS-Verwaltung verwenden, um einen Runspace zu konfigurieren, der eine Verbindung mit einem angegebenen Computer herstellt, und Befehle auf diesem Computer auszuführen.
+PowerShell-Befehle, die einen **Computername** -Parameter annehmen, können auf jedem Computer ausgeführt werden, auf dem PowerShell ausgeführt wird. Zum Ausführen von Befehlen, die keinen **Computername** -Parameter verwenden, können Sie WS-Management verwenden, um einen Runspace zu konfigurieren, der eine Verbindung mit einem angegebenen Computer herstellt, und Befehle auf diesem Computer auszuführen.
 
 ## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>Verwenden von wsmanconnection zum Erstellen eines Remoterunspace
 

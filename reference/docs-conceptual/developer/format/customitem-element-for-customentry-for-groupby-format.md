@@ -1,12 +1,14 @@
 ---
-title: CustomItem-Element für customentry für GroupBy (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e8086c5330b6644f83316ad4ae33c33ba40d9eee
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „CustomItem“ für CustomEntry für GroupBy (Format)
+description: Element „CustomItem“ für CustomEntry für GroupBy (Format)
+ms.openlocfilehash: 5db23ad4dad5bd66ea64b9c6e91b8224a4aa4eca
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783720"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645976"
 ---
 # <a name="customitem-element-for-customentry-for-groupby-format"></a>Element „CustomItem“ für CustomEntry für GroupBy (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „ExpressionBinding“ für CustomItem für GroupBy (Format)](./expressionbinding-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert die Daten, die vom-Steuerelement angezeigt werden.|
 |[Element „Frame“ für CustomItem für GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)|Optionales Element.<br /><br /> Definiert, welche Daten von der benutzerdefinierten Steuerelement Ansicht und der Anzeige angezeigt werden.|
@@ -44,7 +46,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „CustomEntry“ für CustomControl für GroupBy (Format)](./customentry-element-for-customcontrol-for-groupby-format.md)|Stellt eine Definition der benutzerdefinierten Steuerelement Ansicht bereit.|
 

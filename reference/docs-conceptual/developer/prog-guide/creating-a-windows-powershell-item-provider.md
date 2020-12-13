@@ -1,15 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Element Anbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- item providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], item provider
-ms.openlocfilehash: b00af7d6fbb75b08027dc18ee6647472d23b83b7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Elementanbieters
+description: Erstellen eines Windows PowerShell-Elementanbieters
+ms.openlocfilehash: f98ea90bf9ce7222076a91fb26dc42977c70bff2
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779053"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645178"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Erstellen eines Windows PowerShell-Elementanbieters
 
@@ -99,7 +98,7 @@ Diese Methode wird von diesem Anbieter nicht implementiert. Der folgende Code is
 
 Um ein Element festzulegen, muss der Windows PowerShell-Element Anbieter die [System. Management. Automation. Provider. itemcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) -Methode überschreiben, um Aufrufe aus dem `Set-Item` Cmdlet zu unterstützen. Diese Methode legt den Wert des Elements im angegebenen Pfad fest.
 
-Dieser Anbieter stellt keine außer Kraft setzung für die [System. Management. Automation. Provider. itemcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) -Methode bereit. Im folgenden finden Sie jedoch die Standard Implementierung dieser Methode.
+Dieser Anbieter stellt keine außer Kraft setzung für die  [System. Management. Automation. Provider. itemcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) -Methode bereit. Im folgenden finden Sie jedoch die Standard Implementierung dieser Methode.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidersetitem](Msh_samplestestcmdlets#testprovidersetitem)]  -->
 

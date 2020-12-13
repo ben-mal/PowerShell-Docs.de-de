@@ -1,12 +1,14 @@
 ---
-title: Erstellen eines initialsessionstate | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 946adf1006d1afcad2810c85e39f14514e837327
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen von InitialSessionState
+description: Erstellen von InitialSessionState
+ms.openlocfilehash: d58a32c2ae8a22132f3095d093e3cb322f65c486
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779725"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649423"
 ---
 # <a name="creating-an-initialsessionstate"></a>Erstellen von InitialSessionState
 
@@ -23,7 +25,7 @@ Die Methode " **samatedefault** " erstellt einen " **initialsessionstate** ", wo
 Wenn Sie die in der Host Anwendung verfügbaren Befehle weiter einschränken möchten, müssen Sie einen eingeschränkten Runspace erstellen.
 Weitere Informationen finden Sie unter [Erstellen eines eingeschränkten Runspace](creating-a-constrained-runspace.md).
 
-Der folgende Code zeigt, wie Sie einen **initialsessionstate**erstellen, ihn einem Runspace zuweisen, der Pipeline in diesem Runspace Befehle hinzufügen und die Befehle aufrufen.
+Der folgende Code zeigt, wie Sie einen **initialsessionstate** erstellen, ihn einem Runspace zuweisen, der Pipeline in diesem Runspace Befehle hinzufügen und die Befehle aufrufen.
 Weitere Informationen zum Hinzufügen und Aufrufen von Befehlen finden Sie unter [Hinzufügen und Aufrufen von Befehlen](adding-and-invoking-commands.md).
 
 ```csharp

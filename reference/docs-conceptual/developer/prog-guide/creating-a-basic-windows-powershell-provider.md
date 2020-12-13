@@ -1,15 +1,14 @@
 ---
-title: Erstellen eines einfachen Windows PowerShell-Anbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- base provider [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], base provider
-ms.openlocfilehash: 16cadb6099bb4f315bacda4aea617b89f9af5626
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Standardanbieters
+description: Erstellen eines Windows PowerShell-Standardanbieters
+ms.openlocfilehash: 03b5784fd063b5457fc64d92a32e286e3bf9cce4
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787222"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647511"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Erstellen eines Windows PowerShell-Standardanbieters
 
@@ -40,7 +39,7 @@ Sie können Attribut Schlüsselwörter festlegen, um die Klasse bei Bedarf weite
 > [!NOTE]
 > Der voll qualifizierte Name des Windows PowerShell-Anbieters schließt den Assemblynamen und andere Attribute ein, die von Windows PowerShell bei der Registrierung des Anbieters festgelegt wurden.
 
-## <a name="defining-provider-specific-state-information"></a>Definieren Anbieter spezifischer Zustandsinformationen
+## <a name="defining-provider-specific-state-information"></a>Definieren von Provider-Specific Zustandsinformationen
 
 Die [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) -Basisklasse und alle abgeleiteten Klassen werden als zustandslos angesehen, weil die Windows PowerShell-Laufzeit nur dann Anbieter Instanzen erstellt, wenn dies erforderlich ist. Wenn Ihr Anbieter eine vollständige Kontrolle und Zustands Verwaltung für anbieterspezifische Daten erfordert, muss daher eine Klasse von der [System. Management. Automation. ProviderInfo](/dotnet/api/System.Management.Automation.ProviderInfo) -Klasse abgeleitet werden. Ihre abgeleitete Klasse sollte die für die Beibehaltung des Zustands erforderlichen Elemente definieren, damit auf die anbieterspezifischen Daten zugegriffen werden kann, wenn die Windows PowerShell-Laufzeit die [System. Management. Automation. Provider. cmdletprovider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) -Methode aufruft, um den Anbieter zu initialisieren.
 

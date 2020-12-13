@@ -1,12 +1,14 @@
 ---
-title: Beispiele für benutzerdefinierte Hosts | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6a10d3da6d8bf93986a3f5b029fdae3afb23a903
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Beispiele für benutzerdefinierte Hosts
+description: Beispiele für benutzerdefinierte Hosts
+ms.openlocfilehash: 939b9f5d6bbc3ccf1ac95343e897ecffef0a2f42
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779521"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649314"
 ---
 # <a name="custom-host-samples"></a>Beispiele für benutzerdefinierte Hosts
 
@@ -26,4 +28,4 @@ Dieser Abschnitt enthält Beispielcode zum Schreiben eines benutzerdefinierten H
 
  [Host06-Beispiel](./host06-sample.md) Dieses Beispiel zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt. Darüber hinaus verwendet dieses Beispiel die Tokenizer-APIs, um die Farbe des vom Benutzer eingegebenen Texts anzugeben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch

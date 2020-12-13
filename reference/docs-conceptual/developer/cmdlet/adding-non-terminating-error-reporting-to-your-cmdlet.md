@@ -1,12 +1,14 @@
 ---
-title: Hinzufügen von Fehlerberichten ohne Abbruch zum Cmdlet | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 6421d510f3701c12807568ad8786459123e80223
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Hinzufügen von Berichten für Fehler ohne Abbruch zu Cmdlet
+description: Hinzufügen von Berichten für Fehler ohne Abbruch zu Cmdlet
+ms.openlocfilehash: 883ff2d522266495e409fb0d45f29713baa6f047
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784587"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648661"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Hinzufügen von Berichten für Fehler ohne Abbruch zu Cmdlet
 
@@ -35,9 +37,9 @@ Public Class GetProcCommand
 
 ## <a name="defining-parameters"></a>Definieren von Parametern
 
-Bei Bedarf muss das Cmdlet Parameter für die Verarbeitung von Eingaben definieren. Dieses Cmdlet "Get-proc" definiert einen **namens** Parameter, wie unter [Hinzufügen von Parametern zur Verarbeitung der Befehlszeilen Eingabe](adding-parameters-that-process-command-line-input.md)beschrieben.
+Bei Bedarf muss das Cmdlet Parameter für die Verarbeitung von Eingaben definieren. Dieses Get-Proc Cmdlet definiert einen **namens** Parameter, wie unter [Hinzufügen von Parametern zum Verarbeiten von Command-Line Eingaben](adding-parameters-that-process-command-line-input.md)beschrieben.
 
-Hier ist die Parameter Deklaration für den **Name** -Parameter dieses Get-proc-Cmdlets.
+Hier ist die Parameter Deklaration für den **Name** -Parameter dieses Get-Proc Cmdlets.
 
 ```csharp
 [Parameter(
@@ -76,7 +78,7 @@ Alle Cmdlets müssen mindestens eine der Eingabe Verarbeitungsmethoden überschr
 > [!NOTE]
 > Ihr Cmdlet sollte jeden Datensatz so unabhängig wie möglich verarbeiten.
 
-Dieses Get-proc-Cmdlet überschreibt die [System. Management. Automation. Cmdlet. ProcessRecord][] -Methode, um den **namens** Parameter für die vom Benutzer oder einem Skript bereitgestellte Eingabe zu verarbeiten. Diese Methode erhält die Prozesse für die einzelnen angeforderten Prozessnamen oder alle Prozesse, wenn kein Name angegeben wird. Details dieser außer Kraft Setzung werden bei [der Erstellung des ersten Cmdlets](creating-a-cmdlet-without-parameters.md)angegeben.
+Dieses Get-Proc Cmdlet überschreibt die [System. Management. Automation. Cmdlet. ProcessRecord][] -Methode, um den **namens** Parameter für die vom Benutzer oder einem Skript bereitgestellte Eingabe zu verarbeiten. Diese Methode erhält die Prozesse für die einzelnen angeforderten Prozessnamen oder alle Prozesse, wenn kein Name angegeben wird. Details dieser außer Kraft Setzung werden bei [der Erstellung des ersten Cmdlets](creating-a-cmdlet-without-parameters.md)angegeben.
 
 ### <a name="things-to-remember-when-reporting-errors"></a>Dinge, die beim Melden von Fehlern beachtet werden sollten
 
@@ -110,7 +112,7 @@ Nicht behandelte Ausnahmen werden von PowerShell unter den folgenden Bedingungen
 
 Jede der Eingabe Verarbeitungsmethoden kann mithilfe der [System. Management. Automation. Cmdlet. Write-error][] -Methode einen Fehler ohne Abbruch an den Ausgabestream melden.
 
-Im folgenden finden Sie ein Codebeispiel aus diesem Get-proc-Cmdlet, das den [System. Management. Automation. Cmdlet. Write-error][] -Befehl in der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord][] -Methode veranschaulicht. In diesem Fall wird der-Befehl durchgeführt, wenn das Cmdlet keinen Prozess für einen angegebenen Prozess Bezeichner finden kann.
+Im folgenden finden Sie ein Codebeispiel aus diesem Get-Proc Cmdlet, das den [System. Management. Automation. Cmdlet. Write-error][] -Befehl in der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord][] -Methode veranschaulicht. In diesem Fall wird der-Befehl durchgeführt, wenn das Cmdlet keinen Prozess für einen angegebenen Prozess Bezeichner finden kann.
 
 ```csharp
 protected override void ProcessRecord()
@@ -172,9 +174,9 @@ Nachdem Sie ein Cmdlet implementiert haben, müssen Sie es über ein Windows Pow
 
 ## <a name="testing-the-cmdlet"></a>Testen des Cmdlets
 
-Wenn das Cmdlet in PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Testen Sie das Get-proc-Beispiel Cmdlet, um zu sehen, ob es einen Fehler meldet:
+Wenn das Cmdlet in PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Testen Sie das Beispiel Get-Proc Cmdlet, um zu sehen, ob es einen Fehler meldet:
 
-- Starten Sie PowerShell, und verwenden Sie das Get-proc-Cmdlet zum Abrufen der Prozesse mit dem Namen "Test".
+- Starten Sie PowerShell, und verwenden Sie das Cmdlet "Get-Proc" zum Abrufen der Prozesse mit dem Namen "Test".
 
   ```powershell
   get-proc -name test
@@ -192,7 +194,7 @@ Wenn das Cmdlet in PowerShell registriert wurde, können Sie es in der Befehlsze
 
 [Hinzufügen von Parametern, die Pipelineeingaben verarbeiten](./adding-parameters-that-process-pipeline-input.md)
 
-[Hinzufügen von Parametern zur Verarbeitung der Befehlszeilen Eingabe](./adding-parameters-that-process-command-line-input.md)
+[Hinzufügen von Parametern, die Command-Line Eingabe verarbeiten](./adding-parameters-that-process-command-line-input.md)
 
 [Erstellen Ihres ersten Cmdlets](./creating-a-cmdlet-without-parameters.md)
 

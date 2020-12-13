@@ -1,12 +1,14 @@
 ---
-title: Selectioncondition-Element für entryselectedby für CustomControl (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 52858dba5c7a5222b5410835f3374546ce8b88a2
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „SelectionCondition“ für EntrySelectedBy für CustomControl (Format)
+description: Element „SelectionCondition“ für EntrySelectedBy für CustomControl (Format)
+ms.openlocfilehash: 6d4cc5a2d5fef0445d586e320b3729d3a7044063
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87785352"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649776"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-customcontrol-format"></a>Element „SelectionCondition“ für EntrySelectedBy für CustomControl (Format)
 
@@ -35,7 +37,7 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „PropertyName“ für SelectionCondition für CustomControl für View (Format)](./propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md)|Optionales Element.<br /><br /> Gibt eine .net-Eigenschaft an, die die Bedingung auslöst.|
 |[Element „ScriptBlock“ für SelectionCondition für CustomControl für View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md)|Optionales Element.<br /><br /> Gibt das Skript an, das die Bedingung auslöst.|
@@ -44,7 +46,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |[Element „EntrySelectedBy“ für CustomEntry für CustomControl für View (Format)](./entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md)|Definiert die .NET-Typen, die diese Steuerelement Definition verwenden, oder die Bedingung, die vorhanden sein muss, damit diese Definition verwendet werden muss.|
 

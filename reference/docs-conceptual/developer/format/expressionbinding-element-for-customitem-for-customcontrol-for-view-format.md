@@ -1,12 +1,14 @@
 ---
-title: ExpressionBinding-Element für customItem für CustomControl für View (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 1885a2820c0cb250aa6fda80544f58d06136cfeb
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „ExpressionBinding“ für CustomItem für CustomControl für View (Format)
+description: Element „ExpressionBinding“ für CustomItem für CustomControl für View (Format)
+ms.openlocfilehash: 8f4bfef4f6c65c6dabc7a776dda1083bac11fdf7
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87773792"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648196"
 ---
 # <a name="expressionbinding-element-for-customitem-for-customcontrol-for-view-format"></a>Element „ExpressionBinding“ für CustomItem für CustomControl für View (Format)
 

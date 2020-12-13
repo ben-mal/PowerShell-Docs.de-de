@@ -1,12 +1,14 @@
 ---
-title: Deklaration der Credential-Attribute | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a6deca52fa6c9e46138ae92401f58ac5dbd15852
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 'Attributdeklaration: Credential'
+description: 'Attributdeklaration: Credential'
+ms.openlocfilehash: fb826d9a46cadc021fe0c667091bbc7a9251aaa8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784366"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92648596"
 ---
 # <a name="credential-attribute-declaration"></a>Attributdeklaration: Credential
 

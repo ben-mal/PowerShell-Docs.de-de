@@ -1,16 +1,18 @@
 ---
-title: Stop proc-Tutorial | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: e298c729b7ac59141638052d19b95ab77aa25cd6
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: StopProc-Tutorial
+description: StopProc-Tutorial
+ms.openlocfilehash: 95229ee3c4905d295bd6991fe8ccf8c9840c3cdd
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786474"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92646435"
 ---
 # <a name="stopproc-tutorial"></a>StopProc-Tutorial
 
-Dieser Abschnitt enthält ein Tutorial zum Erstellen des Cmdlets "Break-proc", das dem von Windows PowerShell bereitgestellten Cmdlet " [Process-Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) " sehr ähnlich ist. Dieses Tutorial enthält Code Fragmente, die veranschaulichen, wie Cmdlets implementiert werden, und eine Erläuterung des Codes.
+Dieser Abschnitt enthält ein Lernprogramm zum Erstellen des-Stop-Proc Cmdlets, das dem von Windows PowerShell bereitgestellten Cmdlet " [Process-Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) " sehr ähnlich ist. Dieses Tutorial enthält Code Fragmente, die veranschaulichen, wie Cmdlets implementiert werden, und eine Erläuterung des Codes.
 
 ## <a name="topics-in-this-tutorial"></a>Themen in diesem Tutorial
 

@@ -1,12 +1,14 @@
 ---
-title: Schreiben eines PowerShell-Modul Manifests | Microsoft-Dokumentation
 ms.date: 10/16/2019
-ms.openlocfilehash: 734adab5ce26df6e26353de8e0bc9084e0fd3f3b
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Schreiben eines PowerShell-Binärmoduls
+description: Schreiben eines PowerShell-Binärmoduls
+ms.openlocfilehash: 42db71968ccac1cc3c1c05c5be2e72327e5e28d9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784910"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92647697"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Schreiben eines PowerShell-Modul Manifests
 
@@ -20,7 +22,7 @@ Für einfache Module, die nur eine einzelne `.psm1` oder binäre Assembly enthal
 
 ### <a name="to-create-and-use-a-module-manifest"></a>So erstellen und verwenden Sie ein Modul Manifest
 
-1. Die bewährte Vorgehensweise zum Erstellen eines Modul Manifests ist die Verwendung des [New-modulemanifest-](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) Cmdlets. Mit Parametern können Sie einen oder mehrere Standardschlüssel und-Werte des Manifests angeben. Die einzige Anforderung besteht darin, die Datei zu benennen. `New-ModuleManifest`erstellt ein Modul Manifest mit den angegebenen Werten und schließt die restlichen Schlüssel und deren Standardwerte ein. Wenn Sie mehrere Module erstellen müssen, verwenden Sie, `New-ModuleManifest` um eine Modul Manifest-Vorlage zu erstellen, die für die verschiedenen Module geändert werden kann. Ein Beispiel für ein Standardmodul Manifest finden Sie im Beispiel [Modul Manifest](#sample-module-manifest).
+1. Die bewährte Vorgehensweise zum Erstellen eines Modul Manifests ist die Verwendung des [New-modulemanifest-](/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest) Cmdlets. Mit Parametern können Sie einen oder mehrere Standardschlüssel und-Werte des Manifests angeben. Die einzige Anforderung besteht darin, die Datei zu benennen. `New-ModuleManifest` erstellt ein Modul Manifest mit den angegebenen Werten und schließt die restlichen Schlüssel und deren Standardwerte ein. Wenn Sie mehrere Module erstellen müssen, verwenden Sie, `New-ModuleManifest` um eine Modul Manifest-Vorlage zu erstellen, die für die verschiedenen Module geändert werden kann. Ein Beispiel für ein Standardmodul Manifest finden Sie im Beispiel [Modul Manifest](#sample-module-manifest).
 
    `New-ModuleManifest -Path C:\myModuleName.psd1 -ModuleVersion "2.0" -Author "YourNameHere"`
 
@@ -52,12 +54,12 @@ Für einfache Module, die nur eine einzelne `.psm1` oder binäre Assembly enthal
 
 In der folgenden Tabelle werden die Elemente beschrieben, die in einem Modul Manifest enthalten sein können.
 
-|Element|Standard|BESCHREIBUNG|
+|Element|Standard|Beschreibung|
 |-------------|-------------|-----------------|
 |**RootModule**<br /> Typ: `String`|`<empty string>`|Skript Modul oder binäre Modul Datei, die diesem Manifest zugeordnet ist. In früheren Versionen von PowerShell wurde dieses Element als " **moduletoprocess**" bezeichnet.<br /> Mögliche Typen für das Stamm Modul können leer sein, wodurch ein **Manifest** -Modul, der Name eines Skript Moduls ( `.psm1` ) oder der Name eines binären Moduls ( `.exe` oder) erstellt wird `.dll` . Wenn Sie den Namen eines Modul Manifests ( `.psd1` ) oder einer Skriptdatei ( `.ps1` ) in diesem Element platzieren, wird ein Fehler verursacht. <br /> Beispiel: `RootModule = 'ScriptModule.psm1'`|
-|**ModuleVersion**<br /> Typ: `Version`|`'0.0.1'`|Versionsnummer dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den Standardwert. Die Zeichenfolge muss z. b. in den-Typ konvertiert werden können `Version` `#.#.#.#.#` . `Import-Module`lädt das erste gefundene Modul auf dem **$PSModulePath** , das mit dem Namen übereinstimmt, und verfügt mindestens über eine " **moduleversion**", wie der **MinimumVersion** -Parameter. Um eine bestimmte Version zu importieren, verwenden Sie den "Requirements `Import-Module` **dversion** "-Parameter des Cmdlets.<br /> Beispiel: `ModuleVersion = '1.0'`|
-|**GUID**<br /> Typ: `GUID`|`'<GUID>'`|ID, die zur eindeutigen Identifizierung dieses Moduls verwendet wird. Wenn kein Wert angegeben wird, wird `New-ModuleManifest` der Wert von automatisch generiert. Ein Modul kann zurzeit nicht nach **GUID**importiert werden. <br /> Beispiel: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
-|**Author**<br /> Typ: `String`|`'<Current user>'`|Autor dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den aktuellen Benutzer. <br /> Beispiel: `Author = 'AuthorNameHere'`|
+|**ModuleVersion**<br /> Typ: `Version`|`'0.0.1'`|Versionsnummer dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest`   verwendet den Standardwert. Die Zeichenfolge muss z. b. in den-Typ konvertiert werden können `Version` `#.#.#.#.#` . `Import-Module` lädt das erste gefundene Modul auf dem **$PSModulePath** , das mit dem Namen übereinstimmt, und verfügt mindestens über eine " **moduleversion**", wie der **MinimumVersion** -Parameter. Um eine bestimmte Version zu importieren, verwenden Sie den "Requirements `Import-Module` **dversion** "-Parameter des Cmdlets.<br /> Beispiel: `ModuleVersion = '1.0'`|
+|**GUID**<br /> Typ: `GUID`|`'<GUID>'`|ID, die zur eindeutigen Identifizierung dieses Moduls verwendet wird. Wenn kein Wert angegeben wird, wird `New-ModuleManifest` der Wert von automatisch generiert. Ein Modul kann zurzeit nicht nach **GUID** importiert werden. <br /> Beispiel: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
+|**Autor**<br /> Typ: `String`|`'<Current user>'`|Autor dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den aktuellen Benutzer. <br /> Beispiel: `Author = 'AuthorNameHere'`|
 |**CompanyName**<br /> Typ: `String`|`'Unknown'`|Unternehmen oder Hersteller dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den Standardwert.<br /> Beispiel: `CompanyName = 'Fabrikam'`|
 |**Copyright**<br /> Typ: `String`|`'(c) <Author>. All rights reserved.'`| Copyright-Anweisung für dieses Modul. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den Standardwert mit dem aktuellen Benutzer als `<Author>` . Um einen Autor anzugeben, verwenden Sie den **Author** -Parameter. <br /> Beispiel: `Copyright = '2019 AuthorName. All rights reserved.'`|
 |**Beschreibung**<br /> Typ: `String`|`<empty string>`|Beschreibung der von diesem Modul bereitgestellten Funktionalität.<br /> Beispiel: `Description = 'This is the module's description.'`|
@@ -79,8 +81,8 @@ In der folgenden Tabelle werden die Elemente beschrieben, die in einem Modul Man
 |**AliasesToExport**<br /> Typ: `String[]`|`@()`|Gibt die Aliase an, die aus diesem Modul exportiert werden sollen. um eine optimale Leistung zu erzielen, verwenden Sie keine Platzhalter, und löschen Sie den Eintrag nicht. verwenden Sie ein leeres Array, wenn keine zu exportierenden Aliase vorhanden sind. Standardmäßig werden keine Aliase exportiert. Mit diesem Schlüssel können Sie die Aliase auflisten, die vom Modul exportiert werden.<br /> Das Modul exportiert die Aliase in den Sitzungs Status des Aufrufers. Der Sitzungszustand des Aufrufers kann der globale Sitzungs Status oder, bei einem anderen Modul, der Sitzungszustand eines anderen Moduls sein. Beim Verketten von geschachtelte-Modulen werden alle Aliase, die von einem geschachtelte-Modul exportiert werden, letztendlich in den globalen Sitzungs Status exportiert, es sei denn, ein Modul in der Kette schränkt den Alias mithilfe des **aliasestoexport** -Schlüssels ein. <br /> Beispiel: `AliasesToExport = @("MyAlias1", "MyAlias2", "MyAlias3")`|
 |**DscResourcesToExport**<br /> Typ: `String[]`|`@()`|Gibt DSC-Ressourcen an, die aus diesem Modul exportiert werden sollen. Platzhalter sind zulässig. <br /> Beispiel: `DscResourcesToExport = @("DscResource1", "DscResource2", "DscResource3")`|
 |**Modulliste**<br /> Typ: `Object[]`|`@()`|Gibt alle Module an, die mit diesem Modul verpackt werden. Diese Module können mithilfe einer durch Trennzeichen getrennten Zeichenfolge oder als Hash Tabelle mit **ModuleName** -und **GUID** -Schlüsseln eingegeben werden. Die Hash Tabelle kann auch einen optionalen **moduleversion** -Schlüssel aufweisen. Der **moduelist** -Schlüssel ist so konzipiert, dass er als Modul bestand fungiert. Diese Module werden nicht automatisch verarbeitet. <br /> Beispiel: `ModuleList = @("SampleModule", "MyModule", @{ModuleName="MyModule"; ModuleVersion="1.0.0.0"; GUID="50cdb55f-5ab7-489f-9e94-4ec21ff51e59"})`|
-|**Dateiliste**<br /> Typ: `String[]`|`@()`|Liste aller mit diesem Modul verpackten Dateien. Wie bei **modulelist**ist **FileList** eine Inventur Liste und wird andernfalls nicht verarbeitet. <br /> Beispiel: `FileList = @("File1", "File2", "File3")`|
-|**PrivateData**<br /> Typ: `Object`|`@{...}`|Gibt alle privaten Daten an, die an das Stamm Modul übergeben werden müssen, das durch den Schlüssel **rootmodule** (alias: **moduletoprocess**) angegeben wird. **PRIVATEDATA** ist eine Hash Tabelle, die mehrere Elemente umfasst: **Tags**, **licentaruri**, **projecturi**, **iconuri**, **ReleaseNotes**, **Prerelease**, **requirelicenabacceptance**und **externalmoduledependen.** |
+|**FileList**<br /> Typ: `String[]`|`@()`|Liste aller mit diesem Modul verpackten Dateien. Wie bei **modulelist** ist **FileList** eine Inventur Liste und wird andernfalls nicht verarbeitet. <br /> Beispiel: `FileList = @("File1", "File2", "File3")`|
+|**PrivateData**<br /> Typ: `Object`|`@{...}`|Gibt alle privaten Daten an, die an das Stamm Modul übergeben werden müssen, das durch den Schlüssel **rootmodule** (alias: **moduletoprocess**) angegeben wird. **PRIVATEDATA** ist eine Hash Tabelle, die mehrere Elemente umfasst: **Tags**, **licentaruri**, **projecturi**, **iconuri**, **ReleaseNotes**, **Prerelease**, **requirelicenabacceptance** und **externalmoduledependen.** |
 |**Tags** <br /> Typ: `String[]` |`@()`| Tags helfen bei der Modul Ermittlung in Online Galerien. <br /> Beispiel: `Tags = "PackageManagement", "PowerShell", "Manifest"`|
 |**LicenseUri**<br /> Typ: `Uri` |`<empty string>`| Eine URL zur Lizenz für dieses Modul. <br /> Beispiel: `LicenseUri = 'https://www.contoso.com/license'`|
 |**ProjectUri**<br /> Typ: `Uri` |`<empty string>`| Eine URL zur Hauptwebsite für dieses Projekt. <br /> Beispiel: `ProjectUri = 'https://www.contoso.com/project'`|

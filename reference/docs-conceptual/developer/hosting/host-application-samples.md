@@ -1,18 +1,20 @@
 ---
-title: Beispiele für Host Anwendungen | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 260f813c8c8c8f699c6af209d64ad71f18c91c7a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Beispiele für Hostanwendungen
+description: Beispiele für Hostanwendungen
+ms.openlocfilehash: eee5fd2952cfbd1e577b9d0d79cbc956efc602d8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772279"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92649282"
 ---
 # <a name="host-application-samples"></a>Beispiele für Hostanwendungen
 
 Dieser Abschnitt enthält Beispielcode, der im Windows PowerShell 2,0 SDK bereitgestellt wird.
 
- Sie können den vollständigen Beispielcode aus den Themen in diesem Abschnitt kopieren oder die mit dem SDK installierten Quelldateien verwenden. Das [Windows PowerShell 2,0 Software Development Kit (SDK)](https://www.microsoft.com/download/details.aspx?id=2560) stellt Info Dateien, Quelldateien und Visual Studio-Projektdateien für die einzelnen Beispiele bereit.
+ Sie können den vollständigen Beispielcode aus den Themen in diesem Abschnitt kopieren oder die mit dem SDK installierten Quelldateien verwenden. Das [Windows PowerShell 2.0 Software Development Kit (SDK)](https://www.microsoft.com/download/details.aspx?id=2560) enthält Infodateien, Quelldateien und Visual Studio-Projektdateien für jedes Beispiel.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -24,4 +26,4 @@ Dieser Abschnitt enthält Beispielcode, der im Windows PowerShell 2,0 SDK bereit
 
  [Beispiele für Remote-Runspace](./remote-runspace-samples.md) Dieser Abschnitt enthält Beispielcode, der zeigt, wie Sie Runspaces erstellen, die zum Herstellen einer Verbindung mit einem Computer mithilfe von WS-Management-basierten Windows PowerShell-Remoting verwendet werden können.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
