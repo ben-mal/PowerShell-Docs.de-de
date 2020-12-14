@@ -4,10 +4,10 @@ ms.topic: reference
 title: Genehmigte Verben für PowerShell-Befehle
 description: Genehmigte Verben für PowerShell-Befehle
 ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "93355101"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Genehmigte Verben für PowerShell-Befehle
@@ -16,7 +16,7 @@ PowerShell verwendet Verb-Substantiv-Paare für die Namen von Cmdlets und deren 
 Der Verbteil des Namens bezeichnet die Aktion, die das Cmdlet ausführt. Der Substantivteil des Namens bezeichnet die Entität, für die die Aktion ausgeführt wird. Beispielsweise ruft das Cmdlet `Get-Command` alle Befehle ab, die in PowerShell registriert sind.
 
 > [!NOTE]
-> PowerShell verwendet den Begriff _Verb_ , um ein Wort zu beschreiben, das eine Aktion impliziert, auch wenn es sich dabei in der englischen Sprache nicht um ein Verb handelt. Beispielsweise ist der Begriff _New_ ein gültiger PowerShell-Verbname, da er eine Aktion impliziert, auch wenn er im Englischen kein Verb ist.
+> PowerShell verwendet den Begriff _Verb_, um ein Wort zu beschreiben, das eine Aktion impliziert, auch wenn es sich dabei in der englischen Sprache nicht um ein Verb handelt. Beispielsweise ist der Begriff _New_ ein gültiger PowerShell-Verbname, da er eine Aktion impliziert, auch wenn er im Englischen kein Verb ist.
 
 Für jedes genehmigte Verb ist ein entsprechendes _Aliaspräfix_ definiert. Dieses Aliaspräfix wird in Aliasen für Befehle verwendet, die dieses Verb verwenden. Das Aliaspräfix für `Import` ist beispielsweise `ip` und der Alias für `Import-Module` folglich `ipmo`. Es handelt sich hierbei um eine Empfehlung und nicht um eine Regel. Diese muss insbesondere nicht bei Befehlsaliasen beachtet werden, die bekannte Befehle aus anderen Umgebungen imitieren.
 

@@ -1,14 +1,14 @@
 ---
-title: Windows PowerShell-Referenz | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- Windows PowerShell SDK
-ms.openlocfilehash: 1c1a3a4de2df2043fe12cad6a69b7bc36ab9d3d7
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Windows PowerShell-Referenz
+description: Windows PowerShell-Referenz
+ms.openlocfilehash: 9c1547ac5ec5134c99aa9213e6aaca1af8d5b3e9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786678"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390234"
 ---
 # <a name="windows-powershell-reference"></a>Windows PowerShell-Referenz
 
@@ -30,7 +30,7 @@ Zusätzlich zum Windows PowerShell SDK bieten die folgenden Ressourcen weitere I
 
 [Schreiben eines Windows PowerShell-Cmdlets](./cmdlet/writing-a-windows-powershell-cmdlet.md) Enthält Informationen und Codebeispiele für Programm-Manager, die Cmdlets entwerfen, sowie für Entwickler, die Cmdlet-Code implementieren.
 
-[Windows PowerShell-Teamblog](https://blogs.msdn.microsoft.com/PowerShell/) Die beste Ressource für das Erlernen von und die Zusammenarbeit mit anderen Windows PowerShell-Benutzern. Lesen Sie den Windows PowerShell-Teamblog, und nehmen Sie am Windows PowerShell-Benutzer Forum Teil (Microsoft. public. Windows. PowerShell).
+[Windows PowerShell-Teamblog](https://devblogs.microsoft.com/powershell/) Die beste Ressource für das Erlernen von und die Zusammenarbeit mit anderen Windows PowerShell-Benutzern. Lesen Sie den Windows PowerShell-Teamblog, und nehmen Sie am Windows PowerShell-Benutzer Forum Teil (Microsoft. public. Windows. PowerShell).
 Verwenden Sie Windows Live Search, um weitere Windows PowerShell-Blogs und-Ressourcen zu finden. Wenn Sie Ihr Know-how entwickeln, können Sie Ihre Ideen kostenlos einbringen.
 
 [PowerShell-Modul Browser](/powershell/module/) Stellt die neuesten Versionen der Hilfe Themen für die Befehlszeile bereit.
@@ -41,7 +41,7 @@ Verwenden Sie Windows Live Search, um weitere Windows PowerShell-Blogs und-Resso
 
 [System. Management. Automation. Provider](/dotnet/api/System.Management.Automation.Provider) dieser Namespace enthält die Klassen, Enumerationen und Schnittstellen, die erforderlich sind, um einen Windows PowerShell-Anbieter zu implementieren. Insbesondere die [System. Management. Automation. Provider. cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) -Klasse ist die Basisklasse, von der alle Windows PowerShell-Anbieter Klassen abgeleitet werden müssen.
 
-[Microsoft. PowerShell. Commands](/dotnet/api/Microsoft.PowerShell.Commands) dieser Namespace enthält die Klassen für die Cmdlets und Anbieter, die von Windows PowerShell implementiert werden. Ebenso empfiehlt es sich, einen *yourname*zu erstellen. Der Befehle-Namespace für die Cmdlets, die Sie implementieren.
+[Microsoft. PowerShell. Commands](/dotnet/api/Microsoft.PowerShell.Commands) dieser Namespace enthält die Klassen für die Cmdlets und Anbieter, die von Windows PowerShell implementiert werden. Ebenso empfiehlt es sich, einen *yourname* zu erstellen. Der Befehle-Namespace für die Cmdlets, die Sie implementieren.
 
 [System. Management. Automation. Host](/dotnet/api/System.Management.Automation.Host) dieser Namespace enthält die Klassen, Enumerationen und Schnittstellen, die vom Cmdlet zum Definieren der Interaktion zwischen dem Benutzer und Windows PowerShell verwendet werden.
 

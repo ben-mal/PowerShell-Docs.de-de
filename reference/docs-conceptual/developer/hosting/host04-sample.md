@@ -1,20 +1,22 @@
 ---
-title: Host04-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a34c8424fd661b9c41e6233c4d8d48177a9cfb4e
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host04-Beispiel
+description: Host04-Beispiel
+ms.openlocfilehash: a768258d58d39d0067c5a2a9c40d74e32bf64943
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87783278"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355424"
 ---
 # <a name="host04-sample"></a>Host04-Beispiel
 
 Dieses Beispiel zeigt, wie eine interaktive konsolenbasierte Host Anwendung erstellt wird, die Befehle in der Befehlszeile liest, die Befehle ausführt und die Ergebnisse anschließend in der Konsole anzeigt. Diese Hostanwendung unterstützt auch das Anzeigen von Eingabeaufforderungen, die es den Benutzern ermöglichen, mehrere Auswahlmöglichkeiten anzugeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
- Dieses Beispiel erfordert Windows PowerShell 2,0.
+Dieses Beispiel erfordert Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Zeigt
 
@@ -25,18 +27,15 @@ Dieses Beispiel zeigt, wie eine interaktive konsolenbasierte Host Anwendung erst
 - Erstellen einer `$profile` Variablen und Laden der folgenden Profile
 
   - Aktueller Benutzer, aktueller Host
-
   - Aktueller Benutzer, alle Hosts
-
   - alle Benutzer, aktueller Host
-
   - alle Benutzer, alle Hosts
 
 - Implementieren Sie die [System. Management. Automation. Host. ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) -Schnittstelle.
 
-## <a name="example"></a>Beispiel
+## <a name="example-1"></a>Beispiel 1
 
- In diesem Beispiel kann der Benutzer Befehle in einer Befehlszeile eingeben, diese Befehle verarbeiten und dann die Ergebnisse ausgeben.
+In diesem Beispiel kann der Benutzer Befehle in einer Befehlszeile eingeben, diese Befehle verarbeiten und dann die Ergebnisse ausgeben.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -373,9 +372,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-2"></a>Beispiel 2
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -555,9 +554,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-3"></a>Beispiel 3
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -1073,9 +1072,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-4"></a>Beispiel 4
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

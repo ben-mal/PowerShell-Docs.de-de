@@ -3,12 +3,12 @@ ms.date: 07/17/2020
 ms.topic: reference
 title: DSC für Linux-Resource „nxFile“
 description: DSC für Linux-Resource „nxFile“
-ms.openlocfilehash: 6ec2d8201f3594879b781fe04e32a28cc87ba934
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 14a8174a92f1bbde9b1f16cf814ef7c83309c737
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92644749"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389027"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>DSC für Linux-Resource „nxFile“
 
@@ -40,15 +40,15 @@ nxFile <string> #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DestinationPath |Gibt den Speicherort an, an dem Sie den Zustand einer Datei oder eines Verzeichnisses sicherstellen möchten. |
-|SourcePath |Gibt den Pfad an, aus dem die Datei- oder Ordnerressource kopiert werden soll. Dieser Pfad kann ein lokaler Pfad oder eine URL des Typs `http/https/ftp` sein. Remote-URLs des Typs `http/https/ftp` werden nur unterstützt, wenn der Wert der **Type** -Eigenschaft **file** ist. |
-|type |Gibt an, ob die zu konfigurierende Ressource ein Verzeichnis oder eine Datei ist. Legen Sie diese Eigenschaft auf **directory** fest, um anzugeben, dass die Ressource ein Verzeichnis ist. Legen Sie sie auf **file** fest, um anzugeben, dass die Ressource eine Datei ist. Der Standardwert ist **file** . |
+|SourcePath |Gibt den Pfad an, aus dem die Datei- oder Ordnerressource kopiert werden soll. Dieser Pfad kann ein lokaler Pfad oder eine URL des Typs `http/https/ftp` sein. Remote-URLs des Typs `http/https/ftp` werden nur unterstützt, wenn der Wert der **Type**-Eigenschaft **file** ist. |
+|type |Gibt an, ob die zu konfigurierende Ressource ein Verzeichnis oder eine Datei ist. Legen Sie diese Eigenschaft auf **directory** fest, um anzugeben, dass die Ressource ein Verzeichnis ist. Legen Sie sie auf **file** fest, um anzugeben, dass die Ressource eine Datei ist. Der Standardwert ist **file**. |
 |Contents |Gibt den Inhalt einer Datei an, z. B. eine bestimmte Zeichenfolge. |
-|Checksum |Definiert den zu verwendenden Typ, wenn bestimmt wird, ob zwei Dateien identisch sind. Wenn **Checksum** nicht angegeben ist, wird nur der Datei- oder Verzeichnisnamen für den Vergleich verwendet. Werte sind: **ctime** , **mtime** oder **md5** . |
-|Recurse |Gibt an, ob Unterverzeichnisse enthalten sind. Legen Sie diese Eigenschaft auf `$true` fest, um anzugeben, dass Unterverzeichnisse enthalten sein sollen. Der Standardwert lautet `$false`. Diese Eigenschaft ist nur gültig, wenn die **Type** -Eigenschaft auf **directory** festgelegt ist. |
-|Force |Bestimmte Dateioperationen (z. B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist), führen zu einem Fehler. Bei Verwenden der **Force** -Eigenschaft werden solche Fehler überschrieben. Standardwert: `$false`. |
+|Checksum |Definiert den zu verwendenden Typ, wenn bestimmt wird, ob zwei Dateien identisch sind. Wenn **Checksum** nicht angegeben ist, wird nur der Datei- oder Verzeichnisnamen für den Vergleich verwendet. Werte sind: **ctime**, **mtime** oder **md5**. |
+|Recurse |Gibt an, ob Unterverzeichnisse enthalten sind. Legen Sie diese Eigenschaft auf `$true` fest, um anzugeben, dass Unterverzeichnisse enthalten sein sollen. Der Standardwert lautet `$false`. Diese Eigenschaft ist nur gültig, wenn die **Type**-Eigenschaft auf **directory** festgelegt ist. |
+|Force |Bestimmte Dateioperationen (z. B. das Überschreiben einer Datei oder Löschen eines Verzeichnisses, das nicht leer ist), führen zu einem Fehler. Bei Verwenden der **Force**-Eigenschaft werden solche Fehler überschrieben. Standardwert: `$false`. |
 |Links |Gibt das gewünschte Verhalten für symbolische Verknüpfungen an. Legen Sie diese Eigenschaft auf **follow** fest, um symbolischen Verknüpfungen zu folgen und Aktionen auf das Ziel der Verknüpfung anzuwenden. Ein Beispiel ist das Kopieren der Datei anstatt der Verknüpfung. Legen Sie diese Eigenschaft auf **manage** fest, um eine Aktion auf die Verknüpfung anzuwenden. Ein Beispiel ist das Kopieren der Verknüpfung selbst. Legen Sie diese Eigenschaft auf **ignore** fest, um symbolische Verknüpfungen zu ignorieren. |
-|Group |Der Name der **Gruppe** , die über Zugriffsberechtigungen auf die Datei oder das Verzeichnis besitzen soll. |
-|Mode |Gibt die gewünschten Berechtigungen für die Ressource in der Oktal- oder symbolischen Schreibweise an. Beispiele hierfür sind  **777** oder **rwxrwxrwx** . Geben Sie bei Verwenden der symbolischen Schreibweise nicht das erste Zeichen an, welches Verzeichnis oder Datei angibt. |
+|Group |Der Name der **Gruppe**, die über Zugriffsberechtigungen auf die Datei oder das Verzeichnis besitzen soll. |
+|Mode |Gibt die gewünschten Berechtigungen für die Ressource in der Oktal- oder symbolischen Schreibweise an. Beispiele hierfür sind **777** oder **rwxrwxrwx**. Geben Sie bei Verwenden der symbolischen Schreibweise nicht das erste Zeichen an, welches Verzeichnis oder Datei angibt. |
 |Besitzer |Der Name der Gruppe, die die Datei oder das Verzeichnis besitzen soll. |
 
 ## <a name="common-properties"></a>Allgemeine Eigenschaften
@@ -56,7 +56,7 @@ nxFile <string> #ResourceName
 |Eigenschaft |BESCHREIBUNG |
 |---|---|
 |DependsOn |Gibt an, dass die Konfiguration einer anderen Ressource ausgeführt werden muss, bevor diese Ressource konfiguriert wird. Wenn beispielsweise die ID des Skriptblocks mit der Ressourcenkonfiguration, den Sie zuerst ausführen möchten, „ResourceName“ und dessen Typ „ResourceType“ ist, lautet die Syntax für das Verwenden dieser Eigenschaft `DependsOn = "[ResourceType]ResourceName"`. |
-|Ensure |Bestimmt, ob das Vorhandensein der Datei geprüft werden soll. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass die Datei vorhanden ist. Legen Sie sie auf **Absent** fest, um sicherzustellen, dass die Datei nicht vorhanden ist. Der Standardwert ist **Present** . |
+|Ensure |Bestimmt, ob das Vorhandensein der Datei geprüft werden soll. Legen Sie diese Eigenschaft auf **Present** fest, um sicherzustellen, dass die Datei vorhanden ist. Legen Sie sie auf **Absent** fest, um sicherzustellen, dass die Datei nicht vorhanden ist. Der Standardwert ist **Present**. |
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 
@@ -64,7 +64,7 @@ Linux und Windows verwenden in Textdateien standardmäßig unterschiedliche Zeil
 
 1. Kopieren der Datei aus einer Remotequelle (HTTP, HTTPS oder FTP)
 
-   Erstellen Sie eine Datei unter Linux mit dem gewünschten Inhalt, und stellen Sie sie auf einem Web- oder FTP-Server bereit, auf den die Knoten zugreifen können, die Sie konfigurieren. Legen Sie die **SourcePath** -Eigenschaft in der Ressource **nxFile** auf die Web- oder FTP-URL zur Datei fest.
+   Erstellen Sie eine Datei unter Linux mit dem gewünschten Inhalt, und stellen Sie sie auf einem Web- oder FTP-Server bereit, auf den die Knoten zugreifen können, die Sie konfigurieren. Legen Sie die **SourcePath**-Eigenschaft in der Ressource **nxFile** auf die Web- oder FTP-URL zur Datei fest.
 
    ```powershell
    Import-DSCResource -Module nx
@@ -81,7 +81,7 @@ Linux und Windows verwenden in Textdateien standardmäßig unterschiedliche Zeil
    }
    ```
 
-1. Lesen Sie den Inhalt der Datei im PowerShell-Skript mit [Get-Content](https://technet.microsoft.com/library/hh849787.aspx), nachdem Sie die **$OFS** -Eigenschaft auf das Verwenden des Linux-Zeilenumbruchzeichens festgelegt haben.
+1. Lesen Sie den Inhalt der Datei im PowerShell-Skript mit [Get-Content](xref:Microsoft.PowerShell.Management.Get-Content), nachdem Sie die **$OFS**-Eigenschaft auf das Verwenden des Linux-Zeilenumbruchzeichens festgelegt haben.
 
    ```powershell
    Import-DSCResource -Module nx

@@ -1,35 +1,14 @@
 ---
-title: Hinzufügen von Benutzer Nachrichten zum Cmdlet | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- WriteWarning
-- notifications, writing
-- progress notification
-- WriteVerbose
-- Stop-Proc
-- WriteProgress
-- WriteDebug
-- notifications, debug
-- ProgressRecord
-- samples, Stop-Proc cmdlet
-- notifications, progress
-- notifications, warning
-- WriteObject
-- WriteError
-- verbose notification
-- ProcessRecord
-- notifications, verbose
-- debug notification
-- cmdlet, writing notifications
-- warning
-- code sample, user notifications
-- user notifications
-ms.openlocfilehash: 9e324058401bc979d8ac8c23690ca86beaa67fd1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Hinzufügen von Benutzermeldungen zum Cmdlet
+description: Hinzufügen von Benutzermeldungen zum Cmdlet
+ms.openlocfilehash: de6fcc093af1d01287eed1eb8cc7b81cf5d2fdd8
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782462"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668336"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Hinzufügen von Benutzermeldungen zum Cmdlet
 
@@ -49,9 +28,9 @@ Es gibt keine Beschränkung für die Anzahl der Nachrichten, die das Cmdlet schr
 
 Der erste Schritt bei der Cmdlet-Erstellung ist die Benennung des Cmdlets und das Deklarieren der .NET-Klasse, die das Cmdlet implementiert. Jede Art von Cmdlet kann Benutzer Benachrichtigungen von den Eingabe Verarbeitungsmethoden schreiben. im Allgemeinen können Sie dieses Cmdlet mit einem beliebigen Verb benennen, das angibt, welche Systemänderungen das Cmdlet ausführt. Weitere Informationen zu genehmigten Cmdlet-Verben finden Sie unter [Cmdlet-Verb Namen](./approved-verbs-for-windows-powershell-commands.md).
 
-Das Cmdlet "halte-proc" wurde entwickelt, um das System zu ändern. Daher muss die [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) -Deklaration für die .NET-Klasse das `SupportsShouldProcess` Attribute-Schlüsselwort einschließen und auf festgelegt werden `true` .
+Das Cmdlet "Stop-Proc" wurde entwickelt, um das System zu ändern. Daher muss die [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) -Deklaration für die .NET-Klasse das `SupportsShouldProcess` Attribute-Schlüsselwort einschließen und auf festgelegt werden `true` .
 
-Der folgende Code ist die Definition für diese Cmdlet-Klasse "". Weitere Informationen zu dieser Definition finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
+Der folgende Code ist die Definition für diese Stop-Proc Cmdlet-Klasse. Weitere Informationen zu dieser Definition finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
 
 ```csharp
 [Cmdlet(VerbsLifecycle.Stop, "proc",
@@ -61,9 +40,9 @@ public class StopProcCommand : Cmdlet
 
 ## <a name="defining-parameters-for-system-modification"></a>Definieren von Parametern für die System Änderung
 
-Das Cmdlet "Break-proc" definiert drei Parameter: `Name` , `Force` und `PassThru` . Weitere Informationen zum Definieren dieser Parameter finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
+Das-Cmdlet "Stop-Proc" definiert drei Parameter: `Name` , `Force` und `PassThru` . Weitere Informationen zum Definieren dieser Parameter finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
 
-Hier ist die Parameter Deklaration für das Cmdlet "halte-proc".
+Hier ist die Parameter Deklaration für das Cmdlet "Stop-Proc".
 
 ```csharp
 [Parameter(
@@ -108,7 +87,7 @@ private bool passThru;
 
 ## <a name="overriding-an-input-processing-method"></a>Überschreiben einer Eingabe Verarbeitungsmethode
 
-Ihr Cmdlet muss eine Eingabe Verarbeitungsmethode überschreiben, meistens handelt es sich um [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Dieses Cmdlet "Pause-proc" überschreibt die Eingabe Verarbeitungsmethode " [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) ". In dieser Implementierung des Cmdlets "halte-proc" werden Aufrufe zum Schreiben ausführlicher Nachrichten, Debugmeldungen und Warnmeldungen durchgeführt.
+Ihr Cmdlet muss eine Eingabe Verarbeitungsmethode überschreiben, meistens handelt es sich um [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Dieses Stop-Proc-Cmdlet überschreibt die Eingabe Verarbeitungsmethode [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . In dieser Implementierung des Stop-Proc-Cmdlets werden Aufrufe zum Schreiben ausführlicher Nachrichten, Debugmeldungen und Warnmeldungen durchgeführt.
 
 > [!NOTE]
 > Weitere Informationen dazu, wie diese Methode die Methoden " [System. Management. Automation. Cmdlet. schuldprocess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) " und " [System. Management. Automation. Cmdlet. dendcontinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) " aufruft, finden Sie unter [Erstellen eines Cmdlets, das das System ändert](./creating-a-cmdlet-that-modifies-the-system.md).
@@ -117,7 +96,7 @@ Ihr Cmdlet muss eine Eingabe Verarbeitungsmethode überschreiben, meistens hande
 
 Die [System. Management. Automation. Cmdlet. Write-Verbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) -Methode wird verwendet, um allgemeine Informationen auf Benutzerebene zu schreiben, die mit bestimmten Fehlerbedingungen nicht verknüpft sind. Der Systemadministrator kann diese Informationen dann verwenden, um mit der Verarbeitung anderer Befehle fortzufahren. Außerdem sollten alle Informationen, die mit dieser Methode geschrieben wurden, nach Bedarf lokalisiert werden.
 
-Der folgende Code aus diesem Cmdlet "Pause-proc" zeigt zwei Aufrufe der [System. Management. Automation. Cmdlet. Write](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) Items-Methode aus der außer Kraft setzung der [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
+Der folgende Code aus diesem Stop-Proc Cmdlet zeigt zwei Aufrufe der [System. Management. Automation. Cmdlet. Write](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) Items-Methode aus der außer Kraft setzung der [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
 
 ```csharp
 message = String.Format("Attempting to stop process \"{0}\".", name);
@@ -138,7 +117,7 @@ Die [System. Management. Automation. Cmdlet. Write-Debug](/dotnet/api/System.Man
 > [!NOTE]
 > Windows PowerShell definiert auch einen `Debug` Parameter, der sowohl ausführliche als auch Debuginformationen darstellt. Wenn das Cmdlet diesen Parameter unterstützt, muss das [System. Management. Automation. Cmdlet. Write-Debug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) nicht im gleichen Code aufgerufen werden, der [System. Management. Automation. Cmdlet. Write-Verbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose)aufruft.
 
-Die folgenden beiden Code Abschnitte aus dem Beispiel-Cmdlet "Pause-proc" zeigen Aufrufe der [System. Management. Automation. Cmdlet. Write Team Debug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) -Methode aus der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode an.
+Die folgenden beiden Code Abschnitte aus dem Beispiel Stop-Proc-Cmdlet zeigen Aufrufe der [System. Management. Automation. Cmdlet. Write Team Debug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) -Methode aus der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode an.
 
 Diese Debugmeldung wird unmittelbar vor dem Aufruf von [System. Management. Automation. Cmdlet. Schulter Process](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) geschrieben.
 
@@ -167,7 +146,7 @@ Windows PowerShell leitet automatisch alle [System. Management. Automation. Cmdl
 
 Die [System. Management. Automation. Cmdlet. WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) -Methode wird verwendet, um eine Warnung zu schreiben, wenn das Cmdlet einen Vorgang ausführt, der möglicherweise ein unerwartetes Ergebnis hat, z. b. eine schreibgeschützte Datei.
 
-Der folgende Code aus dem Beispiel Ende-proc-Cmdlet zeigt den aufzurufenden Befehl der [System. Management. Automation. Cmdlet. Write-Warning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) -Methode aus der außer Kraft setzung der [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
+Der folgende Code aus dem Beispiel Stop-Proc-Cmdlet zeigt den aufzurufenden Befehl der [System. Management. Automation. Cmdlet. Write-Warning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) -Methode aus der Überschreibung der [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
 
 ```csharp
  if (criticalProcess)
@@ -184,7 +163,7 @@ Der folgende Code aus dem Beispiel Ende-proc-Cmdlet zeigt den aufzurufenden Befe
 Der [System. Management. Automation. Cmdlet. Write Progress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) wird zum Schreiben von Statusmeldungen verwendet, wenn die Ausführung von Cmdlet-Vorgängen eine längere Zeit in Anspruch nimmt. Ein System [. Management. Automation. Cmdlet. Write](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) -Vorgang übergibt ein [System. Management. Automation. progressrecord](/dotnet/api/System.Management.Automation.ProgressRecord) -Objekt, das zum Rendern an den Benutzer an die Host Anwendung gesendet wird.
 
 > [!NOTE]
-> Dieses Cmdlet "Pause-proc" enthält keinen aufrufsvorgang der [System. Management. Automation. Cmdlet. Write Progress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) -Methode.
+> Dieses Stop-Proc-Cmdlet enthält keinen aufrufsvorgang der [System. Management. Automation. Cmdlet. Write Progress](/dotnet/api/System.Management.Automation.Cmdlet.WriteProgress) -Methode.
 
 Der folgende Code ist ein Beispiel für eine Fortschrittsmeldung, die von einem Cmdlet geschrieben wird, das versucht, ein Element zu kopieren.
 
@@ -213,9 +192,9 @@ Nachdem ein Cmdlet implementiert wurde, muss es über ein Windows PowerShell-Sna
 
 ## <a name="testing-the-cmdlet"></a>Testen des Cmdlets
 
-Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Testen Sie das Beispiel-Cmdlet "Stopp-proc". Weitere Informationen zur Verwendung von Cmdlets über die Befehlszeile finden Sie unter [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
+Wenn das Cmdlet bei Windows PowerShell registriert wurde, können Sie es in der Befehlszeile testen. Testen Sie nun das Cmdlet "Sample Stop-Proc". Weitere Informationen zur Verwendung von Cmdlets über die Befehlszeile finden Sie unter [Getting Started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell).
 
-- Der folgende Befehlszeilen Eintrag verwendet "Ende-proc", um den Prozess mit dem Namen "Notepad" anzuhalten, ausführliche Benachrichtigungen bereitzustellen und Debuginformationen zu drucken.
+- Im folgenden Befehlszeilen Eintrag wird Stop-Proc verwendet, um den Prozess mit dem Namen "Notepad" anzuhalten, ausführliche Benachrichtigungen bereitzustellen und Debuginformationen zu drucken.
 
     ```powershell
     PS> stop-proc -Name notepad -Verbose -Debug

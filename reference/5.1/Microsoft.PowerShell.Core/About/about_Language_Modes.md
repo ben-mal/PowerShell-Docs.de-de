@@ -6,12 +6,12 @@ ms.date: 09/09/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Language_Modes
-ms.openlocfilehash: a75afd5149f3d290a8ec377417d4920b0ad6b526
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 91e3021c854945d86822c5d8219542eff7118aa7
+ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222692"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94625651"
 ---
 # <a name="about-language-modes"></a>Informationen zu sprach Modi
 
@@ -123,7 +123,7 @@ Zulässige Typen:
 - char
 - Cmdletbindingattribute
 - DateTime
-- decimal
+- Decimal
 - DirectoryEntry
 - DirectorySearcher
 - double
@@ -148,7 +148,7 @@ Zulässige Typen:
 - Pstypameattribute
 - RegEx
 - SByte
-- string
+- Zeichenfolge
 - Supportswildcardsattribute
 - SwitchParameter
 - System. Globalization. CultureInfo
@@ -176,7 +176,7 @@ Bei anderen Sitzungs Konfigurationen können Sie den Sprachmodus indirekt ermitt
 
 Sie können den Sprachmodus einer vollständigen Sprache oder einschräninedlanguage-Sitzung ermitteln, indem Sie den Wert der languagemode-Eigenschaft des Sitzungs Zustands abrufen.
 
-Beispiel:
+Zum Beispiel:
 
 ```powershell
 $ExecutionContext.SessionState.LanguageMode
@@ -193,13 +193,6 @@ Wenn Sie den `$ExecutionContext.SessionState.LanguageMode` Befehl in einer restr
 Wenn Sie den `$ExecutionContext.SessionState.LanguageMode` Befehl in einer nolanguage-Sitzung ausführen, gibt PowerShell die scripznotallowed-Fehlermeldung zurück.
 
 - Scripznotallowed: die Syntax wird von diesem Runspace nicht unterstützt. Dies liegt möglicherweise daran, dass es sich um einen nicht Sprachmodus handelt.
-
-## <a name="keywords"></a>Keywords
-
-- about_ConstrainedLanguage
-- about_FullLanguage
-- about_NoLanguage
-- about_RestrictedLanguage
 
 ## <a name="see-also"></a>SIEHE AUCH
 

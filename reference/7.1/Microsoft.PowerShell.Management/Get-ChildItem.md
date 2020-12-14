@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: c29a938fc73b8b69ea1bbf96f12f5d42d16f79bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 0bcd46e49559ad625621a7ff81162af695f6f93c
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217660"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661323"
 ---
 # Get-ChildItem
 
@@ -72,7 +72,7 @@ d-----        2/15/2019     08:29                Logs
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-In der Standardeinstellung werden `Get-ChildItem` der Modus ( **Attribute** ), **lastschreitezeit** , Dateigröße ( **Länge** ) und der **Name** des Elements aufgelistet. Die Buchstaben in der **Mode** -Eigenschaft können wie folgt interpretiert werden:
+In der Standardeinstellung werden `Get-ChildItem` der Modus (**Attribute**), **lastschreitezeit**, Dateigröße (**Länge**) und der **Name** des Elements aufgelistet. Die Buchstaben in der **Mode** -Eigenschaft können wie folgt interpretiert werden:
 
 - `l` Verknüpfen
 - `d` befinden
@@ -173,17 +173,17 @@ Mode                LastWriteTime         Length Name
 -ar---        2/12/2019     14:31             27 ReadOnlyFile.txt
 ```
 
-Das `Get-ChildItem` Cmdlet verwendet den **path** -Parameter, um das Verzeichnis " **c:\test** " anzugeben. Der **path** -Parameter enthält einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben.
+Das `Get-ChildItem` Cmdlet verwendet den **path** -Parameter, um das Verzeichnis " **c:\test**" anzugeben. Der **path** -Parameter enthält einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben.
 Der **include** -Parameter verwendet ein Sternchen-Platzhalter Zeichen ( `*` ), um alle Dateien mit der Dateinamenerweiterung **. txt** anzugeben.
 
-Wenn der **include** -Parameter verwendet wird, benötigt der **path** -Parameter einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben. Beispiel: `-Path C:\Test\*`.
+Wenn der **include** -Parameter verwendet wird, benötigt der **path** -Parameter einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben. Beispielsweise `-Path C:\Test\*`.
 
 - Wenn der **recurse** -Parameter dem Befehl hinzugefügt wird, ist das nachfolgende Sternchen ( `*` ) im **path** -Parameter optional. Der **recurse** -Parameter ruft Elemente aus dem **Pfad** Verzeichnis und seinen Unterverzeichnissen ab. Zum Beispiel, `-Path C:\Test\ -Recurse -Include *.txt`
-- Wenn ein nach gestelltes Sternchen ( `*` ) nicht im **path** -Parameter enthalten ist, gibt der Befehl keine Ausgabe zurück und kehrt zur PowerShell-Eingabeaufforderung zurück. Beispiel: `-Path C:\Test\`.
+- Wenn ein nach gestelltes Sternchen ( `*` ) nicht im **path** -Parameter enthalten ist, gibt der Befehl keine Ausgabe zurück und kehrt zur PowerShell-Eingabeaufforderung zurück. Beispielsweise `-Path C:\Test\`.
 
 ### Beispiel 5: Aufrufen von untergeordneten Elementen mit dem Exclude-Parameter
 
-Die Ausgabe des Beispiels zeigt den Inhalt des Verzeichnisses " **c:\test\logs** ". Bei der Ausgabe handelt es sich um einen Verweis auf die anderen Befehle, die die **Exclude** -und **recurse** -Parameter verwenden.
+Die Ausgabe des Beispiels zeigt den Inhalt des Verzeichnisses " **c:\test\logs**". Bei der Ausgabe handelt es sich um einen Verweis auf die anderen Befehle, die die **Exclude** -und **recurse** -Parameter verwenden.
 
 ```powershell
 Get-ChildItem -Path C:\Test\Logs
@@ -317,9 +317,9 @@ In PowerShell 6,2 wurde eine Alternative Ansicht hinzugefügt, um hardlinkinform
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### Beispiel 9: Ausgabe für die experimentelle Funktion psunixfilestat
+### Beispiel 9: Ausgabe für nicht-Windows-Betriebssysteme
 
-In PowerShell 7 auf UNIX-Systemen stellt die experimentelle Funktion **psunixfilestat** eine UNIX-ähnliche Ausgabe bereit:
+In PowerShell 7,1 auf UNIX `Get-ChildItem` -Systemen stellt eine UNIX-ähnliche Ausgabe bereit:
 
 ```powershell
 PS> Get-ChildItem /etc/r*
@@ -349,6 +349,9 @@ Die neuen Eigenschaften, die nun Teil der Ausgabe sind, sind:
 - **Gruppe** ist der Gruppenbesitzer
 - **Größe** ist die Größe der Datei oder des Verzeichnisses, die auf einem UNIX-System dargestellt wird.
 
+> [!NOTE]
+> Diese Funktion wurde in PowerShell 7,1 von "experimentell" in "Mainstream" verlagert.
+
 ## Parameter
 
 ### -Attribute
@@ -359,7 +362,7 @@ Geben Sie z. B. Folgendes ein, um Nicht-Systemdateien (keine Verzeichnisse) zu e
 
 `Get-ChildItem -Attributes !Directory+!System+Encrypted, !Directory+!System+Compressed`
 
-Um Dateien und Ordner mit häufig verwendeten Attributen zu suchen, verwenden Sie den **Attribute** -Parameter. Oder, das Parameter **Verzeichnis** , **Datei** , **ausgeblendet** , **schreibgeschützt und** **System**.
+Um Dateien und Ordner mit häufig verwendeten Attributen zu suchen, verwenden Sie den **Attribute** -Parameter. Oder, das Parameter **Verzeichnis**, **Datei**, **ausgeblendet**, **schreibgeschützt und** **System**.
 
 Der **Attribute** -Parameter unterstützt die folgenden Eigenschaften:
 
@@ -373,7 +376,7 @@ Der **Attribute** -Parameter unterstützt die folgenden Eigenschaften:
 - **Normal**
 - **Noscrubdata**
 - **Notcontentindiziert**
-- **Aufzu**
+- **Offline**
 - **ReadOnly**
 - **Analyse Punkt**
 - **Sparpfad**
@@ -450,7 +453,7 @@ Accept wildcard characters: False
 ### -Ausschließen
 
 Gibt als Zeichen folgen Array eine Eigenschaft oder eine Eigenschaft an, die von diesem Cmdlet aus dem Vorgang ausgeschlossen wird.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` `A*` . b. oder. Platzhalterzeichen werden akzeptiert.
+Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` `A*` . b. oder. Platzhalterzeichen werden akzeptiert.
 
 Ein nach gestelltes Sternchen ( `*` ) im **path** -Parameter ist optional. Zum Beispiel: `-Path C:\Test\Logs` oder `-Path C:\Test\Logs\*`. Wenn ein nach gestelltes Sternchen ( `*` ) eingeschlossen ist, wird der Befehl in die Unterverzeichnisse des **path** -Parameters rekurdieren. Ohne das Sternchen ( `*` ) wird der Inhalt des **path** -Parameters angezeigt. Weitere Informationen finden Sie in Beispiel 5 und im Abschnitt "Hinweise".
 
@@ -550,7 +553,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
+Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
 
 ```yaml
 Type: System.String[]
@@ -648,7 +651,7 @@ Accept wildcard characters: False
 
 ### -System
 
-Ruft nur Systemdateien und Verzeichnisse ab. Um nur Systemdateien und Ordner zu erhalten, verwenden **System** Sie die System Eigenschaft System **Parameter oder** **Attribute** des Parameters.
+Ruft nur Systemdateien und Verzeichnisse ab. Um nur Systemdateien und Ordner zu erhalten, verwenden  Sie die System Eigenschaft System **Parameter oder** **Attribute** des Parameters.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -685,7 +688,7 @@ Wenn Sie den **Name** -Parameter verwenden, werden `Get-ChildItem` die Objektnam
 ## HINWEISE
 
 - `Get-ChildItem` kann mithilfe einer der integrierten Aliase, `ls` , und ausgeführt werden `dir` `gci` . Weitere Informationen finden Sie unter [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
-- `Get-ChildItem` Standardmäßig werden keine ausgeblendeten Elemente erhalten. Wenn Sie ausgeblendete Elemente abrufen möchten, verwenden Sie den **Force** -Parameter.
+- `Get-ChildItem` Standardmäßig werden keine ausgeblendeten Elemente erhalten. Wenn Sie ausgeblendete Elemente abrufen möchten, verwenden Sie den **Force**-Parameter.
 - Das- `Get-ChildItem` Cmdlet ist für die Arbeit mit den Daten konzipiert, die von beliebigen Anbietern verfügbar gemacht werden. Um die in Ihrer Sitzung verfügbaren Anbieter aufzulisten, geben Sie ein `Get-PSProvider` .
   Weitere Informationen finden Sie unter [about_Providers](../Microsoft.PowerShell.Core/About/about_Providers.md).
 

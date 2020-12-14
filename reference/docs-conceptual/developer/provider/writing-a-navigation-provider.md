@@ -1,12 +1,14 @@
 ---
-title: Schreiben eines navigationsanbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: 2fd27314a2b8547a15dd1bb72aa8f970d40b18cc
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Schreiben eines Navigationsanbieters
+description: Schreiben eines Navigationsanbieters
+ms.openlocfilehash: 3123672d3365c97714557bd0e72a6e444ac228a0
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786780"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355220"
 ---
 # <a name="writing-a-navigation-provider"></a>Schreiben eines Navigationsanbieters
 
@@ -18,7 +20,7 @@ Weitere Informationen zu Windows PowerShell-Anbietern finden Sie unter Übersich
 
 ## <a name="implementing-navigation-methods"></a>Implementieren von Navigationsmethoden
 
-Die [System. Management. Automation. Provider. navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) -Klasse implementiert Methoden, die die Unterstützung von unterstützten Containern, relativen Pfaden und Verschiebungs Elementen unterstützen. Eine umfassende Liste dieser Methoden finden Sie unter [navigationcmdletprovider-Methoden](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods).
+Die [System. Management. Automation. Provider. navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) -Klasse implementiert Methoden, die die Unterstützung von unterstützten Containern, relativen Pfaden und Verschiebungs Elementen unterstützen. Eine umfassende Liste dieser Methoden finden Sie unter [navigationcmdletprovider-Methoden](/dotnet/api/system.management.automation.provider.navigationcmdletprovider#methods).
 
 > [!NOTE]
 > Dieses Thema baut auf den Informationen in der Schnellstartanleitung für den [Windows PowerShell-Anbieter](./windows-powershell-provider-quickstart.md)auf. Dieses Thema behandelt nicht die Grundlagen der Einrichtung eines Anbieter Projekts oder die Implementierung der Methoden, die von der [System. Management. Automation. Provider. drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) -Klasse geerbt werden, die Laufwerke erstellt und entfernt. Außerdem wird in diesem Thema nicht behandelt, wie Methoden implementiert werden, die von der [System. Management. Automation. Provider. itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) -Klasse oder der [System. Management. Automation. Provider. containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) -Klasse verfügbar gemacht werden. Ein Beispiel, das zeigt, wie Item-Cmdlets implementiert werden, finden Sie unter [Schreiben eines Element Anbieters](./writing-an-item-provider.md). Ein Beispiel für das Implementieren von Container-Cmdlets finden Sie unter [Schreiben eines Container Anbieters](./writing-a-container-provider.md).

@@ -1,22 +1,24 @@
 ---
-title: Host01-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: a2ef53d36697d5637dff3de8a286902984f3c5a1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host01-Beispiel
+description: Host01-Beispiel
+ms.openlocfilehash: b4f1a81044a51855ad7decc25e1f5b1215ab0d62
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772248"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355475"
 ---
 # <a name="host01-sample"></a>Host01-Beispiel
 
 Dieses Beispiel zeigt, wie eine Host Anwendung implementiert wird, die einen benutzerdefinierten Host verwendet. In diesem Beispiel wird ein Runspace erstellt, der den benutzerdefinierten Host verwendet, und dann wird die [System. Management. Automation. PowerShell](/dotnet/api/System.Management.Automation.PowerShell) -API zum Ausführen eines Skripts verwendet, das "Exit" aufruft. Die Hostanwendung untersucht anschließend die Ausgabe des Skripts und gibt die Ergebnisse aus.
 
- In diesem Beispiel werden die standardmäßigen Benutzeroberflächen Features von Windows PowerShell verwendet. Weitere Informationen zum Implementieren der Benutzeroberflächen Funktionen eines benutzerdefinierten Hosts finden Sie unter [Host02 Sample](./host02-sample.md).
+In diesem Beispiel werden die standardmäßigen Benutzeroberflächen Features von Windows PowerShell verwendet. Weitere Informationen zum Implementieren der Benutzeroberflächen Funktionen eines benutzerdefinierten Hosts finden Sie unter [Host02 Sample](./host02-sample.md).
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
- Dieses Beispiel erfordert Windows PowerShell 2,0.
+Dieses Beispiel erfordert Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Zeigt
 
@@ -28,9 +30,9 @@ Dieses Beispiel zeigt, wie eine Host Anwendung implementiert wird, die einen ben
 
 - Es wird überprüft, ob der richtige Exitcode im Beendigungs Prozess verwendet wurde.
 
-## <a name="example"></a>Beispiel
+## <a name="example-1"></a>Beispiel 1
 
- Der folgende Code zeigt eine Implementierung einer Host Anwendung, die eine einfache benutzerdefinierte Host Schnittstelle verwendet.
+Der folgende Code zeigt eine Implementierung einer Host Anwendung, die eine einfache benutzerdefinierte Host Schnittstelle verwendet.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -130,9 +132,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-2"></a>Beispiel 2
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -301,4 +303,4 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch

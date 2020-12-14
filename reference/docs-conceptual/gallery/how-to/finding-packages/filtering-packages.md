@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Filtern von Suchergebnissen
 description: In diesem Artikel wird die Benutzeroberfläche beschrieben, die zum Filtern von Inhalten im PowerShell-Katalog verwendet wird.
-ms.openlocfilehash: cc375f3ddb35c95ed134776500bd326bc3db6b1a
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: a769daae903e614b96be1056e3ff14eca41970bd
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92661400"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389826"
 ---
 # <a name="filtering-search-results"></a>Filtern von Suchergebnissen
 
@@ -22,7 +22,7 @@ Mit der Dropdownliste „Filtern nach“ können Benutzer die Ergebnisse nach fo
 - Vorabversion einbeziehen
 - Nur stabile
 
-Informationen zu „Vorabversion“ und „stabil“ finden Sie im PowerShell-Teamblog unter [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Versionsverwaltung von Vorabversionen zu PowerShellGet und dem PowerShell-Katalog hinzugefügt).
+Informationen zu „Vorabversion“ und „stabil“ finden Sie im PowerShell-Teamblog unter [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://devblogs.microsoft.com/powershell/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Versionsverwaltung von Vorabversionen zu PowerShellGet und dem PowerShell-Katalog hinzugefügt).
 
 Mithilfe der Kontrollkästchen unter der Dropdownliste können Benutzer die Ergebnisse nach folgenden Kriterien filtern:
 

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 title: Häufig gestellte Fragen zum PowerShell-Katalog
 description: Häufig gestellte Fragen zum PowerShell-Katalog
-ms.openlocfilehash: 045db04d49e0c65f807fef254a17bf20bb877ff6
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 52c89d570041e1fce3466f574af7de25f05ec4c5
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92654157"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389891"
 ---
 # <a name="frequently-asked-questions-about-the-powershell-gallery"></a>Häufig gestellte Fragen zum PowerShell-Katalog
 
@@ -17,14 +17,14 @@ Ein PowerShell-Modul ist ein wiederverwendbares Paket, das einige PowerShell-Fun
 
 ## <a name="what-is-a-powershell-script"></a>Was ist ein PowerShell-Skript?
 
-Ein PowerShell-Skript ist eine Reihe von Befehlen, die in einer PS1-Datei gespeichert sind, um die Wiederverwendung und Freigabe zu ermöglichen. PowerShell-Workflows sind auch PowerShell-Skripts, die eine Reihe von Aufgaben zeigen und Sequenzierungen für diese Aufgaben bereitstellen. Weitere Informationen finden Sie unter [Einführung in Windows PowerShell Workflow](https://technet.microsoft.com/library/jj134242.aspx).
+Ein PowerShell-Skript ist eine Reihe von Befehlen, die in einer PS1-Datei gespeichert sind, um die Wiederverwendung und Freigabe zu ermöglichen. PowerShell-Workflows sind auch PowerShell-Skripts, die eine Reihe von Aufgaben zeigen und Sequenzierungen für diese Aufgaben bereitstellen. Weitere Informationen finden Sie unter [Einführung in Windows PowerShell Workflow](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134242(v=ws.11)).
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>Worin unterscheiden sich PowerShell-Skripts von PowerShell-Modulen?
 
 In der Regel sind Module besser für das Teilen, aber wir ermöglichen die Skriptfreigabe, damit Sie Workflows und Skripts leichter zur Community beitragen können. Weitere Informationen finden Sie auf den folgenden Blogs:
 
-- [Schreiben Sie keine Skripts, schreiben Sie PowerShell-Module (in englischer Sprache)](https://blogs.technet.microsoft.com/heyscriptingguy/2011/06/27/dont-write-scripts-write-powershell-modules/)
-- [Grundlegendes zu PowerShell-Modulen (in englischer Sprache)](https://blogs.technet.microsoft.com/heyscriptingguy/2015/07/10/understanding-powershell-modules/)
+- [Schreiben Sie keine Skripts, schreiben Sie PowerShell-Module (in englischer Sprache)](https://devblogs.microsoft.com/scripting/dont-write-scripts-write-powershell-modules/)
+- [Grundlegendes zu PowerShell-Modulen (in englischer Sprache)](https://devblogs.microsoft.com/scripting/understanding-powershell-modules/)
 
 ## <a name="how-can-i-publish-to-the-powershell-gallery"></a>Wie kann ich etwas im PowerShell-Katalog veröffentlichen?
 
@@ -55,16 +55,16 @@ Durch Aktivieren eines „Kategorie“-Kontrollkästchens geben Sie an, dass Sie
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>Welche sind die Voraussetzungen, um ein Modul im PowerShell-Katalog veröffentlichen zu können?
 
-Jede Art von PowerShell-Modul (Skriptmodule, binäre Module oder Manifestmodule) können im Katalog veröffentlicht werden. PowerShellGet benötigt zum Veröffentlichen einige Informationen über das Modul, wie z.B. Version, Beschreibung, Autor und Lizenzierung. Diese Informationen werden im Rahmen des Veröffentlichungsprozesses in der *Modulmanifest* -Datei (.psd1) oder aus dem Wert des **LicenseUri** -Parameter des Cmdlets [Publish-Module][] gelesen. Alle im Katalog veröffentlichten Module müssen über Modulmanifeste verfügen. Jedes Modul, das die folgenden Informationen in seinem Manifest enthält, kann im Katalog veröffentlicht werden:
+Jede Art von PowerShell-Modul (Skriptmodule, binäre Module oder Manifestmodule) können im Katalog veröffentlicht werden. PowerShellGet benötigt zum Veröffentlichen einige Informationen über das Modul, wie z.B. Version, Beschreibung, Autor und Lizenzierung. Diese Informationen werden im Rahmen des Veröffentlichungsprozesses in der *Modulmanifest*-Datei (.psd1) oder aus dem Wert des **LicenseUri**-Parameter des Cmdlets [Publish-Module][] gelesen. Alle im Katalog veröffentlichten Module müssen über Modulmanifeste verfügen. Jedes Modul, das die folgenden Informationen in seinem Manifest enthält, kann im Katalog veröffentlicht werden:
 
 - Version
 - Beschreibung
 - Autor
-- Ein URI zu den Lizenzbedingungen des Moduls, entweder als Teil des **PrivateData** -Abschnitts des Manifests oder im **LicenseUri** -Parameter des Cmdlets [Publish-Module][].
+- Ein URI zu den Lizenzbedingungen des Moduls, entweder als Teil des **PrivateData**-Abschnitts des Manifests oder im **LicenseUri**-Parameter des Cmdlets [Publish-Module][].
 
 ## <a name="how-do-i-create-a-correctly-formatted-module-manifest"></a>Wie erstelle ich ein korrekt formatiertes Modulmanifest?
 
-Die einfachste Möglichkeit, ein Modulmanifest zu erstellen, ist die Ausführung des Cmdlets [New-ModuleManifest][]. In PowerShell 5.0 oder höher, generiert New-ModuleManifest eine korrekt formatiertes Modulmanifest mit leeren Feldern für nützliche Metadaten wie **ProjectUri** , **LicenseUri** und **Tags**. Tragen Sie einfach etwas in die leeren Felder ein, oder verwenden Sie das generierte Manifest als Beispiel für die richtige Formatierung.
+Die einfachste Möglichkeit, ein Modulmanifest zu erstellen, ist die Ausführung des Cmdlets [New-ModuleManifest][]. In PowerShell 5.0 oder höher, generiert New-ModuleManifest eine korrekt formatiertes Modulmanifest mit leeren Feldern für nützliche Metadaten wie **ProjectUri**, **LicenseUri** und **Tags**. Tragen Sie einfach etwas in die leeren Felder ein, oder verwenden Sie das generierte Manifest als Beispiel für die richtige Formatierung.
 
 Verwenden Sie das Cmdlet [Test-ModuleManifest][], um zu überprüfen, ob alle erforderlichen Metadatenfelder ordnungsgemäß ausgefüllt wurden.
 
@@ -72,12 +72,12 @@ Verwenden Sie das Cmdlet [Update-ModuleManifest][], um die Felder der Modulmanif
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>Welche Voraussetzungen müssen erfüllt sein, damit ich ein Modul im Katalog veröffentlichen kann?
 
-Jede Art von PowerShell-Skript (Skripts oder Workflows) kann im Katalog veröffentlicht werden. PowerShellGet benötigt zum Veröffentlichen einige Informationen über das Skript, wie z.B. Version, Beschreibung, Autor und Lizenzierung. Diese Informationen werden im Rahmen des Veröffentlichungsprozesses aus dem Abschnitt *PSScriptInfo* der Skriptdatei oder aus dem Wert des **LicenseUri** -Parameters des Cmdlets [Publish-Script][] gelesen. Alle im Katalog veröffentlichten Skripts müssen Metadateninformationen besitzen. Jedes Skript, das die folgenden Informationen im Abschnitt „PSScriptInfo“ enthält, kann im Katalog veröffentlicht werden:
+Jede Art von PowerShell-Skript (Skripts oder Workflows) kann im Katalog veröffentlicht werden. PowerShellGet benötigt zum Veröffentlichen einige Informationen über das Skript, wie z.B. Version, Beschreibung, Autor und Lizenzierung. Diese Informationen werden im Rahmen des Veröffentlichungsprozesses aus dem Abschnitt *PSScriptInfo* der Skriptdatei oder aus dem Wert des **LicenseUri**-Parameters des Cmdlets [Publish-Script][] gelesen. Alle im Katalog veröffentlichten Skripts müssen Metadateninformationen besitzen. Jedes Skript, das die folgenden Informationen im Abschnitt „PSScriptInfo“ enthält, kann im Katalog veröffentlicht werden:
 
 - Version
 - Beschreibung
 - Autor
-- Ein URI zu den Lizenzbedingungen des Skripts, entweder als Teil des Abschnitts **PSScriptInfo** des Skripts oder im **LicenseUri** -Parameter des Cmdlets [Publish-Script][].
+- Ein URI zu den Lizenzbedingungen des Skripts, entweder als Teil des Abschnitts **PSScriptInfo** des Skripts oder im **LicenseUri**-Parameter des Cmdlets [Publish-Script][].
 
 ## <a name="how-do-i-search"></a>Wie führe ich eine Suche aus?
 
@@ -93,7 +93,7 @@ Wenn Sie beispielsweise nach „PowerShellVersion:"2.0"“ suchen, werden die Er
 
 ## <a name="how-do-i-create-a-correctly-formatted-script-file"></a>Wie erstelle ich eine korrekt formatierte Skriptdatei?
 
-Am einfachste Weg, eine korrekt formatierte Skriptdatei zu erstellen, ist das Cmdlet [New-ScriptFileInfo][] auszuführen. In PowerShell 5.0 generiert New-ScriptFileInfo eine korrekt formatierte Skriptdatei mit leeren Feldern für nützliche Metadaten wie **ProjectUri** , **LicenseUri** und **Tags**. Tragen Sie einfach etwas in die leeren Felder ein, oder verwenden Sie das generierte Skript als Beispiel für die richtige Formatierung.
+Am einfachste Weg, eine korrekt formatierte Skriptdatei zu erstellen, ist das Cmdlet [New-ScriptFileInfo][] auszuführen. In PowerShell 5.0 generiert New-ScriptFileInfo eine korrekt formatierte Skriptdatei mit leeren Feldern für nützliche Metadaten wie **ProjectUri**, **LicenseUri** und **Tags**. Tragen Sie einfach etwas in die leeren Felder ein, oder verwenden Sie das generierte Skript als Beispiel für die richtige Formatierung.
 
 Verwenden Sie das Cmdlet [Test-ScriptFileInfo][], um zu überprüfen, ob alle erforderlichen Metadatenfelder ordnungsgemäß ausgefüllt wurden.
 
@@ -144,7 +144,7 @@ Abbildung 1: PowerShellGet-Architektur
 
 Im Allgemeinen wird empfohlen, die neueste Version des PowerShellGet-Moduls auszuwählen (beachten Sie, dass .NET Version 4.5 notwendig ist).
 
-Für das **PowerShellGet** -Modul ist **PowerShell 3.0 oder neuer** erforderlich.
+Für das **PowerShellGet**-Modul ist **PowerShell 3.0 oder neuer** erforderlich.
 
 Aus diesem Grund erfordert **PowerShellGet** eines der folgenden Betriebssysteme:
 
@@ -156,7 +156,7 @@ Aus diesem Grund erfordert **PowerShellGet** eines der folgenden Betriebssysteme
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-Für **PowerShellGet** ist außerdem .NET Framework 4.5 oder höher erforderlich. Von [hier](https://msdn.microsoft.com/library/5a4x27ek.aspx) können Sie .NET Framework 4.5 oder höher installieren.
+Für **PowerShellGet** ist außerdem .NET Framework 4.5 oder höher erforderlich. Weitere Informationen finden Sie unter [Installieren von .NET Framework für Entwickler](/dotnet/framework/install/guide-for-developers).
 
 ## <a name="is-it-possible-to-reserve-names-for-packages-that-will-be-published-in-future"></a>Lassen sich Namen für Pakete reservieren, die in Zukunft veröffentlicht werden?
 

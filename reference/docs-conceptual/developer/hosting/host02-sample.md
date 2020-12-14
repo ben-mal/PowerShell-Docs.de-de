@@ -1,20 +1,22 @@
 ---
-title: Host02-Beispiel | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: ed95cdcdcf20de6687f463b9d560a69510638c79
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Host02-Beispiel
+description: Host02-Beispiel
+ms.openlocfilehash: 7bb07dec3fd6b7ac5844d247a7a06cbda67c619e
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772259"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355458"
 ---
 # <a name="host02-sample"></a>Host02-Beispiel
 
 In diesem Beispiel wird gezeigt, wie eine Host Anwendung geschrieben wird, die die Windows PowerShell-Laufzeit zusammen mit einer benutzerdefinierten Host Implementierung verwendet. Die Hostanwendung legt die Hostkultur auf Deutsch fest, führt das Cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) aus und zeigt die Ergebnisse so an, wie sie über „pwrsh.exe“ dargestellt würden, und gibt dann das aktuelle Datum und die Uhrzeit auf Deutsch aus.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
- Dieses Beispiel erfordert Windows PowerShell 2,0.
+Dieses Beispiel erfordert Windows PowerShell 2,0.
 
 ## <a name="demonstrates"></a>Zeigt
 
@@ -26,9 +28,9 @@ In diesem Beispiel wird gezeigt, wie eine Host Anwendung geschrieben wird, die d
 
 - Erstellen eines [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) -Objekts, das ein Skript ausführt, um die Prozesse abzurufen und zu sortieren, und ruft dann das aktuelle Datum ab, das in Deutsch angezeigt wird.
 
-## <a name="example"></a>Beispiel
+## <a name="example-1"></a>Beispiel 1
 
- Der folgende Code zeigt eine Implementierung einer Host Anwendung, die den benutzerdefinierten Host verwendet.
+Der folgende Code zeigt eine Implementierung einer Host Anwendung, die den benutzerdefinierten Host verwendet.
 
 ```csharp
 // Copyright (c) 2006 Microsoft Corporation. All rights reserved.
@@ -125,9 +127,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-2"></a>Beispiel 2
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshost](/dotnet/api/System.Management.Automation.Host.PSHost) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -307,9 +309,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-3"></a>Beispiel 3
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host
@@ -558,9 +560,9 @@ namespace Microsoft.Samples.PowerShell.Host
 }
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-4"></a>Beispiel 4
 
- Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
+Der folgende Code ist die Implementierung der [System. Management. Automation. Host. pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) -Klasse, die von dieser Host Anwendung verwendet wird. Die Elemente, die nicht implementiert werden, lösen eine Ausnahme aus oder geben nichts zurück.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Host

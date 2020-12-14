@@ -1,12 +1,14 @@
 ---
-title: Schreiben eines Container Anbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: da91f18226d6e6c236c6a6e469db0f692af48abf
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Schreiben eines Containeranbieters
+description: Schreiben eines Containeranbieters
+ms.openlocfilehash: 17ec3e11258ee77a8e569df1af3a0e9bcd9798b6
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87786797"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93354931"
 ---
 # <a name="writing-a-container-provider"></a>Schreiben eines Containeranbieters
 
@@ -18,7 +20,7 @@ Weitere Informationen zu Windows PowerShell-Anbietern finden Sie unter Übersich
 
 ## <a name="implementing-container-methods"></a>Implementieren von Container Methoden
 
-Die [System. Management. Automation. Provider. containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) -Klasse implementiert Methoden, die Container unterstützen, und erstellt, kopiert und entfernt Elemente. Eine umfassende Liste dieser Methoden finden Sie unter [System. Management. Automation. Provider. containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods).
+Die [System. Management. Automation. Provider. containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) -Klasse implementiert Methoden, die Container unterstützen, und erstellt, kopiert und entfernt Elemente. Eine umfassende Liste dieser Methoden finden Sie unter [System. Management. Automation. Provider. containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider#methods).
 
 > [!NOTE]
 > Dieses Thema baut auf den Informationen in der Schnellstartanleitung für den [Windows PowerShell-Anbieter](./windows-powershell-provider-quickstart.md)auf. Dieses Thema behandelt nicht die Grundlagen der Einrichtung eines Anbieter Projekts oder die Implementierung der Methoden, die von der [System. Management. Automation. Provider. drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) -Klasse geerbt werden, die Laufwerke erstellt und entfernt. Außerdem wird in diesem Thema nicht behandelt, wie Methoden implementiert werden, die von der [System. Management. Automation. Provider. itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) -Klasse verfügbar gemacht werden. Ein Beispiel, das zeigt, wie Item-Cmdlets implementiert werden, finden Sie unter [Schreiben eines Element Anbieters](./writing-an-item-provider.md).
@@ -531,7 +533,8 @@ protected override void RemoveItem(string path, bool recurse)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein typischer Real-World-Anbieter ist in der Lage, Elemente innerhalb des Laufwerks von einem Pfad zu einem anderen zu verschieben. Ein Beispiel für einen Anbieter, der das Verschieben von Elementen unterstützt, finden Sie unter [Schreiben eines navigationsanbieters](./writing-a-navigation-provider.md).
+Ein typischer Real-World-Anbieter ist in der Lage, Elemente innerhalb des Laufwerks von einem Pfad zu einem anderen zu verschieben.
+Ein Beispiel für einen Anbieter, der das Verschieben von Elementen unterstützt, finden Sie unter [Schreiben eines navigationsanbieters](./writing-a-navigation-provider.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

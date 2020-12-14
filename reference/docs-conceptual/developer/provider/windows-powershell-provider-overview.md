@@ -1,12 +1,14 @@
 ---
-title: Übersicht über den Windows PowerShell-Anbieter | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: c248f1c337e96a1b83cbeb5fb486147504777eb1
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: 'Windows PowerShell-Anbieter: Übersicht'
+description: 'Windows PowerShell-Anbieter: Übersicht'
+ms.openlocfilehash: 2f1c5f5991a64fb2b85ece7feba915164ebd34ee
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778239"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "93355509"
 ---
 # <a name="windows-powershell-provider-overview"></a>Windows PowerShell-Anbieter: Übersicht
 
@@ -20,7 +22,8 @@ Wenn Sie einen Anbieter schreiben, können Sie Standard Laufwerke angeben, die a
 
 ## <a name="type-of-providers"></a>Typ der Anbieter
 
-Es gibt mehrere Typen von Anbietern, von denen jede eine andere Ebene der Funktionalität bietet. Ein Anbieter wird als Klasse implementiert, die von einem der nachfolgenden der [System. Management. Automation. Sessionstatus ecategory](/dotnet/api/system.management.automation.sessionstatecategory?view=pscore-6.2.0) - **cmdletprovider** -Klasse abgeleitet wird. Informationen zu den verschiedenen Typen von Anbietern finden Sie unter [Anbieter Typen](./provider-types.md).
+Es gibt mehrere Typen von Anbietern, von denen jede eine andere Ebene der Funktionalität bietet. Ein Anbieter wird als Klasse implementiert, die von einem der nachfolgenden der [System. Management. Automation. Sessionstatus ecategory](/dotnet/api/system.management.automation.sessionstatecategory)- 
+ **cmdletprovider** -Klasse abgeleitet wird. Informationen zu den verschiedenen Typen von Anbietern finden Sie unter [Anbieter Typen](./provider-types.md).
 
 ## <a name="provider-cmdlets"></a>Anbieter-Cmdlets
 
@@ -56,7 +59,9 @@ Anbieter können dynamische Parameter definieren, die einem Anbieter-Cmdlet hinz
 
 ## <a name="provider-capabilities"></a>Anbieter Funktionen
 
-Die [System. Management. Automation. Provider. providerfunktionalitäten](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) -Enumeration definiert eine Reihe von Funktionen, die Anbieter unterstützen können. Hierzu gehören die Möglichkeit, Platzhalter zu verwenden, Elemente zu filtern und Transaktionen zu unterstützen. Fügen Sie zum Angeben von Funktionen für einen Anbieter eine Liste der Werte des [Systems hinzu. die Management. Automation. Provider. provideroperations](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) -Enumeration, kombiniert mit einer logischen `OR` Operation, als die [System. Management. Automation. Provider. cmdletproviderattribute. providerfunktionalitäten *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) -Eigenschaft (der zweite Parameter des Attributs) des [System. Management. Automation. Provider. cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) -Attributs für Ihre Anbieter Klasse. Das folgende Attribut gibt z. b. an, dass der Anbieter die **Transaktions** Funktionen " [System. Management. Automation. Provider. Providerfunktionen](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) **" und "** [System. Management. Automation. Provider. Providerfunktionen](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities?view=pscore-6.2.0) " unterstützt.
+Die [System. Management. Automation. Provider. providerfunktionalitäten](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) -Enumeration definiert eine Reihe von Funktionen, die Anbieter unterstützen können. Hierzu gehören die Möglichkeit, Platzhalter zu verwenden, Elemente zu filtern und Transaktionen zu unterstützen. Fügen Sie zum Angeben von Funktionen für einen Anbieter eine Liste der Werte des [Systems hinzu. die Management. Automation. Provider. provideroperations](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) -Enumeration, kombiniert mit einer logischen `OR` Operation, als die [System. Management. Automation. Provider. cmdletproviderattribute. providerfunktionalitäten *](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute.ProviderCapabilities) -Eigenschaft (der zweite Parameter des Attributs) des [System. Management. Automation. Provider. cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) -Attributs für Ihre Anbieter Klasse. Das folgende Attribut gibt z. b. an, dass der Anbieter die Transaktionsfunktionen " [System. Management. Automation. Provider. Providerfunktionen](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)" 
+  und " [System. Management. Automation. Provider. Providerfunktionen](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)" unterstützt 
+  .
 
 ```csharp
 [CmdletProvider(RegistryProvider.ProviderName, ProviderCapabilities.ShouldProcess | ProviderCapabilities.Transactions)]
@@ -65,9 +70,11 @@ Die [System. Management. Automation. Provider. providerfunktionalitäten](/dotne
 
 ## <a name="provider-cmdlet-help"></a>Hilfe zum Anbieter-Cmdlet
 
-Wenn Sie einen Anbieter schreiben, können Sie Ihre eigene Hilfe für die von Ihnen unterstützten Anbieter-Cmdlets implementieren. Dies umfasst ein einzelnes Hilfethema für jedes Provider-Cmdlet oder mehrere Versionen eines Hilfe Themas für Fälle, in denen das Provider-Cmdlet auf der Grundlage der Verwendung dynamischer Parameter unterschiedlich agiert. Zur Unterstützung von Anbieter-Cmdlet-spezifischer Hilfe muss Ihr Anbieter die [System. Management. Automation. Provider. icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) -Schnittstelle implementieren.
+Wenn Sie einen Anbieter schreiben, können Sie Ihre eigene Hilfe für die von Ihnen unterstützten Anbieter-Cmdlets implementieren.
+Dies umfasst ein einzelnes Hilfethema für jedes Provider-Cmdlet oder mehrere Versionen eines Hilfe Themas für Fälle, in denen das Provider-Cmdlet auf der Grundlage der Verwendung dynamischer Parameter unterschiedlich agiert. Zur Unterstützung von Anbieter-Cmdlet-spezifischer Hilfe muss Ihr Anbieter die [System. Management. Automation. Provider. icmdletprovidersupportshelp](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp) -Schnittstelle implementieren.
 
-Die Windows PowerShell-Engine ruft die [System. Management. Automation. Provider. icmdletprovidersupportshelp. gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) -Methode auf, um das Hilfethema für die Anbieter-Cmdlets anzuzeigen. Die Engine gibt den Namen des Cmdlets an, das der Benutzer beim Ausführen des `Get-Help` Cmdlets angegeben hat, und den aktuellen Pfad des Benutzers. Der aktuelle Pfad ist erforderlich, wenn Ihr Anbieter verschiedene Versionen desselben Anbieter-Cmdlets für verschiedene Laufwerke implementiert. Die-Methode muss eine Zeichenfolge zurückgeben, die den XML-Code für die Cmdlet-Hilfe enthält.
+Die Windows PowerShell-Engine ruft die [System. Management. Automation. Provider. icmdletprovidersupportshelp. gethelpmaml *](/dotnet/api/System.Management.Automation.Provider.ICmdletProviderSupportsHelp.GetHelpMaml) -Methode auf, um das Hilfethema für die Anbieter-Cmdlets anzuzeigen. Die Engine gibt den Namen des Cmdlets an, das der Benutzer beim Ausführen des `Get-Help` Cmdlets angegeben hat, und den aktuellen Pfad des Benutzers.
+Der aktuelle Pfad ist erforderlich, wenn Ihr Anbieter verschiedene Versionen desselben Anbieter-Cmdlets für verschiedene Laufwerke implementiert. Die-Methode muss eine Zeichenfolge zurückgeben, die den XML-Code für die Cmdlet-Hilfe enthält.
 
 Der Inhalt der Hilfedatei wird mithilfe von psmaml XML geschrieben. Dabei handelt es sich um dasselbe XML-Schema, das zum Schreiben von Hilfe Inhalten für eigenständige Cmdlets verwendet wird. Fügen Sie den Inhalt für die benutzerdefinierte Cmdlet-Hilfe der Hilfedatei für Ihren Anbieter unter dem- `CmdletHelpPaths` Element hinzu. Das folgende Beispiel zeigt das `command` -Element für ein einzelnes Provider-Cmdlet und zeigt, wie Sie den Namen des Anbieter-Cmdlets für Ihren Anbieter angeben. stützten
 

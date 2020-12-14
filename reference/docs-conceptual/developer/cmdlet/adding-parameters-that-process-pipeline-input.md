@@ -1,27 +1,26 @@
 ---
-title: Hinzufügen von Parametern, die Pipeline Eingaben verarbeiten | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- cmdlets [PowerShell Programmer's Guide], pipeline input
-- parameters [PowerShell Programmer's Guide], pipeline input
-ms.openlocfilehash: a678df30a13086b317d5680ee0fbc4d3c3391235
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Hinzufügen von Parametern, die Pipelineeingaben verarbeiten
+description: Hinzufügen von Parametern, die Pipelineeingaben verarbeiten
+ms.openlocfilehash: b150d5be93207d9c010a6d2d4de901b4526f1d79
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87784553"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92668353"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Hinzufügen von Parametern, die Pipelineeingaben verarbeiten
 
-Eine Eingabe Quelle für ein Cmdlet ist ein Objekt in der Pipeline, das aus einem Upstream-Cmdlet stammt. In diesem Abschnitt wird beschrieben, wie Sie dem Get-proc-Cmdlet (beschrieben unter [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md)) einen Parameter hinzufügen, damit das Cmdlet Pipeline Objekte verarbeiten kann.
+Eine Eingabe Quelle für ein Cmdlet ist ein Objekt in der Pipeline, das aus einem Upstream-Cmdlet stammt. In diesem Abschnitt wird beschrieben, wie Sie dem Get-Proc-Cmdlet (beschrieben unter [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md)) einen Parameter hinzufügen, damit das Cmdlet Pipeline Objekte verarbeiten kann.
 
-Dieses Get-proc-Cmdlet verwendet einen `Name` Parameter, der Eingaben von einem Pipeline Objekt akzeptiert, Prozessinformationen auf der Grundlage der angegebenen Namen vom lokalen Computer abruft und dann Informationen zu den Prozessen in der Befehlszeile anzeigt.
+Dieses Get-Proc Cmdlet verwendet einen `Name` Parameter, der Eingaben von einem Pipeline Objekt akzeptiert, Prozessinformationen auf der Grundlage der angegebenen Namen vom lokalen Computer abruft und dann Informationen zu den Prozessen in der Befehlszeile anzeigt.
 
 ## <a name="defining-the-cmdlet-class"></a>Definieren der Cmdlet-Klasse
 
 Der erste Schritt bei der Cmdlet-Erstellung ist die Benennung des Cmdlets und das Deklarieren der .NET-Klasse, die das Cmdlet implementiert. Dieses Cmdlet ruft Prozessinformationen ab, daher lautet der hier gewählte Verb Name "Get". (Fast jede Art von Cmdlet, das Informationen abrufen kann, kann die Befehlszeilen Eingabe verarbeiten.) Weitere Informationen zu genehmigten Cmdlet-Verben finden Sie unter [Cmdlet-Verb Namen](./approved-verbs-for-windows-powershell-commands.md).
 
-Im folgenden finden Sie die Definition für dieses Get-proc-Cmdlet. Einzelheiten zu dieser Definition finden Sie unter [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md).
+Im folgenden finden Sie die Definition für dieses Get-Proc Cmdlet. Einzelheiten zu dieser Definition finden Sie unter [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md).
 
 ```csharp
 [Cmdlet(VerbsCommon.Get, "proc")]
@@ -36,12 +35,12 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>Definieren von Eingaben aus der Pipeline
 
-In diesem Abschnitt wird beschrieben, wie Eingaben aus der Pipeline für ein Cmdlet definiert werden. Dieses Cmdlet "Get-proc" definiert eine Eigenschaft, die den Parameter darstellt, `Name` wie unter [Hinzufügen von Parametern zur Verarbeitung der Befehlszeilen Eingabe](./adding-parameters-that-process-command-line-input.md)beschrieben.
+In diesem Abschnitt wird beschrieben, wie Eingaben aus der Pipeline für ein Cmdlet definiert werden. Dieses Get-Proc Cmdlet definiert eine Eigenschaft, die den `Name` Parameter darstellt, wie unter [Hinzufügen von Parametern zur Verarbeitung der Befehlszeilen Eingabe](./adding-parameters-that-process-command-line-input.md)beschrieben.
 (In diesem Thema finden Sie allgemeine Informationen zum Deklarieren von Parametern.)
 
 Wenn jedoch ein Cmdlet Pipeline Eingaben verarbeiten muss, muss die Parameter von der Windows PowerShell-Laufzeit an die Eingabewerte gebunden werden. Zu diesem Zweck müssen Sie das-Schlüsselwort hinzufügen oder das- `ValueFromPipeline` `ValueFromPipelineByProperty` Schlüsselwort der [System. Management. Automation. Parameterattribute](/dotnet/api/System.Management.Automation.ParameterAttribute) -Attribut Deklaration hinzufügen. Geben Sie das `ValueFromPipeline` Schlüsselwort an, wenn das Cmdlet auf das gesamte Eingabe Objekt zugreift. Geben Sie `ValueFromPipelineByProperty` an, wenn das Cmdlet nur auf eine Eigenschaft des Objekts zugreift.
 
-Hier ist die Parameter Deklaration für den `Name` Parameter dieses Get-proc-Cmdlets, das Pipeline Eingaben annimmt.
+Hier ist die Parameter Deklaration für den `Name` Parameter dieses Get-Proc Cmdlets, das Pipeline Eingaben annimmt.
 
 :::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
@@ -71,7 +70,7 @@ In der vorherigen Deklaration `ValueFromPipeline` wird das-Schlüsselwort auf fe
 
 Wenn das Cmdlet Pipeline Eingaben verarbeiten soll, müssen die entsprechenden Eingabe Verarbeitungsmethoden überschrieben werden. Die grundlegenden Eingabe Verarbeitungsmethoden werden beim [Erstellen des ersten Cmdlets](./creating-a-cmdlet-without-parameters.md)eingeführt.
 
-Dieses Get-proc-Cmdlet überschreibt die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode, um die `Name` vom Benutzer oder einem Skript bereitgestellten Parameter Eingaben zu verarbeiten. Diese Methode erhält die Prozesse für die einzelnen angeforderten Prozessnamen oder alle Prozesse, wenn kein Name angegeben wird. Beachten Sie, dass innerhalb von [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)der Aufrufe von [Write Object (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) der Ausgabe Mechanismus zum Senden von Ausgabe Objekten an die Pipeline ist. Der zweite Parameter dieses `enumerateCollection` Aufrufes,, ist auf festgelegt, `true` um der Windows PowerShell-Laufzeit mitzuteilen, das Array von Prozess Objekten aufzulisten und jeweils einen Prozess in die Befehlszeile zu schreiben.
+Dieses Get-Proc-Cmdlet überschreibt die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode, um die `Name` vom Benutzer oder einem Skript bereitgestellten Parameter Eingaben zu verarbeiten. Diese Methode erhält die Prozesse für die einzelnen angeforderten Prozessnamen oder alle Prozesse, wenn kein Name angegeben wird. Beachten Sie, dass innerhalb von [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)der Aufrufe von [Write Object (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) der Ausgabe Mechanismus zum Senden von Ausgabe Objekten an die Pipeline ist. Der zweite Parameter dieses `enumerateCollection` Aufrufes,, ist auf festgelegt, `true` um der Windows PowerShell-Laufzeit mitzuteilen, das Array von Prozess Objekten aufzulisten und jeweils einen Prozess in die Befehlszeile zu schreiben.
 
 ```csharp
 protected override void ProcessRecord()

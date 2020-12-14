@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 description: In diesem Artikel werden die empfohlenen Schritte beschrieben, um sicherzustellen, dass die im PowerShell-Katalog veröffentlichten Pakete umfassend angenommen werden und Benutzern einen hohen Nutzen bieten.
 title: Veröffentlichungsrichtlinien und Best Practices für den PowerShell-Katalog
-ms.openlocfilehash: 949340aeba36df26c68f92422b8c11869ed3bf11
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 97af3761fad1efb849b7197761a3855c9f1b05a4
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656154"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391169"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Veröffentlichungsrichtlinien und Best Practices für den PowerShell-Katalog
 
@@ -71,7 +71,7 @@ Ein gutes Muster für Beispiele finden Sie im [PSDscResource-Modul](https://www.
 
 ## <a name="manage-dependencies"></a>Verwalten von Abhängigkeiten
 
-Es ist wichtig, im Modulmanifest die Module anzugeben, von denen Ihr Modul abhängig ist. Auf diese Weise müssen sich die Endbenutzer keine Sorgen um die Installation der richtigen Versionen von Modulen machen, von denen Ihr Modul abhängt. Um die Modulabhängigkeiten anzugeben, verwenden Sie das Feld für erforderliche Module im Modulmanifest. So werden vor dem Import Ihres Moduls alle aufgelisteten Module in die globale Umgebung geladen, sofern nicht bereits geschehen. Einige Module könnten beispielsweise bereits durch ein anderes Modul geladen worden sein. Anstelle des **ModuleVersion** -Felds kann auch das **RequiredVersion** -Feld verwendet werden, um eine bestimmte Version anzugeben, die geladen werden soll. Bei Verwendung des **ModuleVersion** -Felds wird die neueste verfügbare Version unter Berücksichtigung der angegebenen Mindestversion geladen. Wenn das **RequiredVersion** -Feld nicht zum Angeben einer bestimmten Version verwendet wird, ist es wichtig, das erforderliche Modul auf Versionsupdates zu überwachen. Insbesondere müssen Breaking Changes berücksichtigt werden, die die Benutzerfreundlichkeit Ihres Moduls beeinträchtigen könnten.
+Es ist wichtig, im Modulmanifest die Module anzugeben, von denen Ihr Modul abhängig ist. Auf diese Weise müssen sich die Endbenutzer keine Sorgen um die Installation der richtigen Versionen von Modulen machen, von denen Ihr Modul abhängt. Um die Modulabhängigkeiten anzugeben, verwenden Sie das Feld für erforderliche Module im Modulmanifest. So werden vor dem Import Ihres Moduls alle aufgelisteten Module in die globale Umgebung geladen, sofern nicht bereits geschehen. Einige Module könnten beispielsweise bereits durch ein anderes Modul geladen worden sein. Anstelle des **ModuleVersion**-Felds kann auch das **RequiredVersion**-Feld verwendet werden, um eine bestimmte Version anzugeben, die geladen werden soll. Bei Verwendung des **ModuleVersion**-Felds wird die neueste verfügbare Version unter Berücksichtigung der angegebenen Mindestversion geladen. Wenn das **RequiredVersion**-Feld nicht zum Angeben einer bestimmten Version verwendet wird, ist es wichtig, das erforderliche Modul auf Versionsupdates zu überwachen. Insbesondere müssen Breaking Changes berücksichtigt werden, die die Benutzerfreundlichkeit Ihres Moduls beeinträchtigen könnten.
 
 ```powershell
 Example: RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})
@@ -165,7 +165,7 @@ Das Signieren von PowerShell-Dateien ist ein bewährtes Vorgehen, mit dem sicher
 Die Katalogsignierung von Modulen ist ein Feature, das PowerShell in Version 5.1 hinzugefügt wurde. Das Signieren eines Moduls wird im Artikel [Katalog-Cmdlets](/powershell/scripting/wmf/whats-new/new-updated-cmdlets#catalog-cmdlets) erläutert.
 Allgemein ausgedrückt wird bei der Katalogsignierung eine Katalogdatei erstellt, die einen Hashwert für jede Datei im Modul enthält, und anschließend wird diese Datei signiert.
 
-Die **PowerShellGet** -Cmdlets `Publish-Module`, `Install-Module` und `Update-Module` überprüfen die Signatur auf Gültigkeit und bestätigen dann, dass der Hashwert für jedes Paket den Daten im Katalog entspricht. `Save-Module` überprüft keine Signaturen. Wenn eine vorherige Version des Moduls im System installiert ist, wird mit `Install-Module` bestätigt, dass die Signaturstelle für die neue Version derjenigen der vorherigen Installation entspricht. `Install-Module` und `Update-Module` verwenden die Signatur in einer `.PSD1`-Datei, wenn das Paket nicht durch den Katalog signiert wurde. Die Katalogsignierung kann zusammen mit dem Signieren von Skriptdateien verwendet werden, ersetzt diese Methode aber nicht. PowerShell führt beim Laden von Modulen keine Überprüfung von Katalogsignaturen durch.
+Die **PowerShellGet**-Cmdlets `Publish-Module`, `Install-Module` und `Update-Module` überprüfen die Signatur auf Gültigkeit und bestätigen dann, dass der Hashwert für jedes Paket den Daten im Katalog entspricht. `Save-Module` überprüft keine Signaturen. Wenn eine vorherige Version des Moduls im System installiert ist, wird mit `Install-Module` bestätigt, dass die Signaturstelle für die neue Version derjenigen der vorherigen Installation entspricht. `Install-Module` und `Update-Module` verwenden die Signatur in einer `.PSD1`-Datei, wenn das Paket nicht durch den Katalog signiert wurde. Die Katalogsignierung kann zusammen mit dem Signieren von Skriptdateien verwendet werden, ersetzt diese Methode aber nicht. PowerShell führt beim Laden von Modulen keine Überprüfung von Katalogsignaturen durch.
 
 ## <a name="follow-semver-guidelines-for-versioning"></a>Folgen Sie bei der Versionsverwaltung den SemVer-Richtlinien
 
@@ -180,7 +180,7 @@ Die **PowerShellGet** -Cmdlets `Publish-Module`, `Install-Module` und `Update-Mo
 
 PowerShell wurde vor Herausgabe der SemVer-Richtlinien entwickelt und bietet daher Unterstützung für die meisten, aber nicht alle Elemente von SemVer. Hierbei gilt insbesondere Folgendes:
 
-- In Versionsnummern werden keine Zeichenfolgen für Vorabreleases unterstützt. Dies ist nützlich, wenn ein Herausgeber ein Vorschaurelease einer neuen Hauptversion bereitstellen möchte, nachdem eine Version `1.0.0` veröffentlicht wurde. Diese Option wird in einer zukünftigen Version des PowerShell-Katalogs und der **PowerShellGet** -Cmdlets unterstützt.
+- In Versionsnummern werden keine Zeichenfolgen für Vorabreleases unterstützt. Dies ist nützlich, wenn ein Herausgeber ein Vorschaurelease einer neuen Hauptversion bereitstellen möchte, nachdem eine Version `1.0.0` veröffentlicht wurde. Diese Option wird in einer zukünftigen Version des PowerShell-Katalogs und der **PowerShellGet**-Cmdlets unterstützt.
 - PowerShell und der PowerShell-Katalog lassen Versionszeichenfolgen mit 1, 2 und 4 Segmenten zu. Viele frühere Module entsprachen nicht den Richtlinien, und Produktversionen von Microsoft enthalten Buildinformationen als 4. Zahlenblock (z. B. `5.1.14393.1066`). Vom Standpunkt der Versionsverwaltung aus werden diese Unterschiede ignoriert.
 
 ## <a name="test-using-a-local-repository"></a>Testen mit einem lokalen Repository
@@ -188,20 +188,20 @@ PowerShell wurde vor Herausgabe der SemVer-Richtlinien entwickelt und bietet dah
 Der PowerShell-Katalog ist nicht als Ziel zum Testen des Veröffentlichungsprozesses konzipiert. Die beste Methode, um den End-to-End-Prozess der Veröffentlichung im PowerShell-Katalog zu testen, ist das Einrichten und Verwenden Ihres eigenen lokalen Repositorys. Dies kann auf verschiedene Arten erfolgen, einschließlich folgender:
 
 - Richten Sie mithilfe des [PS Private Gallery-Projekts](https://github.com/PowerShell/PSPrivateGallery) in GitHub eine lokale Instanz des PowerShell-Katalogs ein. Dieses Vorschauprojekt wird Sie beim Einrichten einer Instanz des PowerShell-Katalogs unterstützen, die Sie steuern und für Ihre Tests benutzen können.
-- Richten Sie ein [internes NuGet-Repository](https://blogs.msdn.microsoft.com/powershell/2014/05/20/setting-up-an-internal-powershellget-repository/) ein.
+- Richten Sie ein [internes NuGet-Repository](https://devblogs.microsoft.com/powershell/setting-up-an-internal-powershellget-repository/) ein.
   Dieses einzurichten erfordert mehr Arbeit. Es hat jedoch den Vorteil, dass einige zusätzliche Anforderungen damit überprüft werden können. Dazu zählt insbesondere die Überprüfung der Verwendung eines API-Schlüssels und ob beim Veröffentlichen Abhängigkeiten im Ziel vorhanden sind.
 - Richten Sie eine Dateifreigabe als **Testrepository** ein. Die Einrichtung ist einfach, aber da es sich dabei um eine Dateifreigabe handelt, werden die oben aufgeführten Überprüfungen nicht ausgeführt. Ein möglicher Vorteil in diesem Fall ist, dass die Dateifreigabe den benötigten API-Schlüssel nicht überprüft, sodass Sie denselben Schlüssel verwenden können, den Sie auch bei der Veröffentlichung im PowerShell-Katalog verwenden würden.
 
-Definieren Sie bei all diesen Lösungen mithilfe von `Register-PSRepository` ein neues **Repository** , das Sie im `-Repository`-Parameter für `Publish-Module` verwenden.
+Definieren Sie bei all diesen Lösungen mithilfe von `Register-PSRepository` ein neues **Repository**, das Sie im `-Repository`-Parameter für `Publish-Module` verwenden.
 
 Ein weiterer Punkt beim Testen von Veröffentlichungen: Ein Paket, das Sie im PowerShell-Katalog veröffentlichen, kann nicht ohne die Hilfe des Betriebsteams wieder gelöscht werden. Dieses muss bestätigen, dass kein anderes Element von dem Paket abhängig ist, das Sie veröffentlichen möchten. Aus diesem Grund unterstützen wir den PowerShell-Katalog nicht als Testziel und werden jeden Herausgeber kontaktieren, der dies tut.
 
 ## <a name="use-powershellget-to-publish"></a>Verwenden von PowerShell für die Veröffentlichung
 
-Herausgebern wird beim Arbeiten mit dem PowerShell-Katalog dringend die Verwendung der Cmdlets `Publish-Module` und `Publish-Script` empfohlen. **PowerShellGet** wurde entwickelt, damit Sie sich nicht alle wichtigen Informationen zur Installation aus dem und Veröffentlichung im PowerShell-Katalog merken müssen. Gelegentlich nutzen Herausgeber **PowerShellGet** nicht und verwenden den **NuGet** -Client oder auch **PackageManagement** -Cmdlets anstelle von `Publish-Module`. Es gibt viele Informationen, die leicht übersehen werden, wodurch eine Vielzahl von Supportanfragen aufkommt.
+Herausgebern wird beim Arbeiten mit dem PowerShell-Katalog dringend die Verwendung der Cmdlets `Publish-Module` und `Publish-Script` empfohlen. **PowerShellGet** wurde entwickelt, damit Sie sich nicht alle wichtigen Informationen zur Installation aus dem und Veröffentlichung im PowerShell-Katalog merken müssen. Gelegentlich nutzen Herausgeber **PowerShellGet** nicht und verwenden den **NuGet**-Client oder auch **PackageManagement**-Cmdlets anstelle von `Publish-Module`. Es gibt viele Informationen, die leicht übersehen werden, wodurch eine Vielzahl von Supportanfragen aufkommt.
 
 Wenn es einen Grund dafür gibt, dass Sie `Publish-Module` oder `Publish-Script` nicht verwenden können, informieren Sie uns darüber.
-Öffnen Sie ein Issue im GitHub-Repository für **PowerShellGet** , und geben Sie an, warum Sie sich für **NuGet** oder **PackageManagement** entschieden haben.
+Öffnen Sie ein Issue im GitHub-Repository für **PowerShellGet**, und geben Sie an, warum Sie sich für **NuGet** oder **PackageManagement** entschieden haben.
 
 ## <a name="recommended-workflow"></a>Empfohlener Workflow
 

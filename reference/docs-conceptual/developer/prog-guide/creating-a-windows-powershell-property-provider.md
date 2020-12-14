@@ -1,15 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Eigenschaften Anbieters | Microsoft-Dokumentation
 ms.date: 09/13/2016
-helpviewer_keywords:
-- property providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], property provider
-ms.openlocfilehash: e8ef92629fe036154cdd2f0facbe0cbe8add7533
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Eigenschaftenanbieters
+description: Erstellen eines Windows PowerShell-Eigenschaftenanbieters
+ms.openlocfilehash: 5370624afa784598ca784b201f7e7345eb958ff9
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87778947"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "94390914"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Erstellen eines Windows PowerShell-Eigenschaftenanbieters
 
@@ -111,7 +110,7 @@ Die folgenden Bedingungen können für Ihre Implementierung von [System. Managem
 
   Nachdem der System. [Management. Automation. Provider. cmdletprovider. dauerdprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) -Befehl zurück `true` gegeben wurde, sollte die System. Management. Automation. [Provider. ipropertycmdletprovider. clearproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) -Methode die [System. Management. Automation. Provider. cmdletprovider. dendcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) -Methode aufrufen, wenn potenziell gefährliche Systemänderungen vorgenommen werden können. Diese Methode sendet eine Bestätigungsmeldung an den Benutzer, damit zusätzliches Feedback angezeigt werden kann, um anzugeben, dass der potenziell gefährliche Vorgang fortgesetzt werden soll.
 
-## <a name="attaching-dynamic-parameters-to-the-clear-itemproperty-cmdlet"></a>Anfügen dynamischer Parameter an das Clear-ItemProperty-Cmdlet
+## <a name="attaching-dynamic-parameters-to-the-clear-itemproperty-cmdlet"></a>Anfügen dynamischer Parameter an das Cmdlet "Clear-ItemProperty"
 
 Das `Clear-ItemProperty` Cmdlet erfordert möglicherweise zusätzliche Parameter, die zur Laufzeit dynamisch angegeben werden. Um diese dynamischen Parameter bereitzustellen, muss der Windows PowerShell-Eigenschaften Anbieter die [System. Management. Automation. Provider. ipropertycmdletprovider. clearpropertydynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearPropertyDynamicParameters) -Methode implementieren. Diese Methode gibt ein Objekt zurück, das über Eigenschaften und Felder mit Attribut Attributen verfügt, die einer Cmdlet-Klasse oder einem [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt ähneln. Der `null` Wert kann zurückgegeben werden, wenn keine dynamischen Parameter hinzugefügt werden sollen.
 
@@ -121,7 +120,7 @@ Dies ist die Standard Implementierung von [System. Management. Automation. Provi
 
 ## <a name="building-the-windows-powershell-provider"></a>Entwickeln des Windows PowerShell-Anbieters
 
-Weitere Informationen finden [Sie unter Registrieren von Cmdlets, Anbietern und Host Anwendungen](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Weitere Informationen finden [Sie unter Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -129,6 +128,6 @@ Weitere Informationen finden [Sie unter Registrieren von Cmdlets, Anbietern und 
 
 [Entwerfen Ihres Windows PowerShell-Anbieters](./designing-your-windows-powershell-provider.md)
 
-[Erweitern von Objekttypen und Formatierung](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Erweitern von Objekttypen und Formatierung](/previous-versions//ms714665(v=vs.85))
 
-[Registrieren von Cmdlets, Anbietern und Host Anwendungen](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Registrieren von Cmdlets, Anbietern und Host Anwendungen](/previous-versions//ms714644(v=vs.85))

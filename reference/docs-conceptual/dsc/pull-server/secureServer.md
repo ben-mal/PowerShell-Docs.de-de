@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 description: Dieses Dokument bietet bewährte Methoden zur Unterstützung von Technikern, die den DSC-Pullserver bereitstellen.
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Bewährte Methoden für Pullserver
-ms.openlocfilehash: 0021baa219a0936405eccf2cc7741e042f8bf09f
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 6c754e6d035cc714a86da86ec916ba2c7f833268
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92664334"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389384"
 ---
 # <a name="pull-server-best-practices"></a>Bewährte Methoden für Pullserver
 
 Gilt für: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> Der Pull-Server (Windows-Feature *DSC-Dienst* ) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
+> Der Pull-Server (Windows-Feature *DSC-Dienst*) ist eine von Windows Server unterstützte Komponente, jedoch sollen keine neuen Features oder Funktionen angeboten werden. Es wird empfohlen, verwaltete Clients auf [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) umzustellen (enthält Features zusätzlich zum Pull-Server unter Windows Server) oder auf eine der [hier](pullserver.md#community-solutions-for-pull-service) aufgeführten Communitylösungen.
 
 Zusammenfassung: Dieses Dokument soll Prozesse und Erweiterungen enthalten und Techniker unterstützen, die die Lösung vorbereiten. Details sollten bewährte Methoden bereitstellen, die von Kunden ermittelt und dann vom Produktteam bestätigt wurden, um sicherzustellen, dass die Empfehlungen in die Zukunft gerichtet sind und als stabil angesehen werden.
 
@@ -72,7 +72,7 @@ Windows Server 2012 R2 umfasst ein Feature namens DSC-Dienst. Das DSC-Dienstfeat
 
 ### <a name="dsc-resource"></a>DSC-Ressource
 
-Eine Pullserverbereitstellung kann durch die Bereitstellung des Dienstes mithilfe eines DSC-Konfigurationsskripts vereinfacht werden. Dieses Dokument enthält Konfigurationsskripts, die verwendet werden können, um einen Serverknoten bereitzustellen, der für die Produktion geeignet ist. Für die Verwendung der Konfigurationsskripts ist ein DSC-Modul erforderlich, das nicht in Windows Server enthalten ist. Der erforderliche Modulname lautet **xPSDesiredStateConfiguration** und enthält die DSC-Ressource **xDscWebService**. Das Modul xPSDesiredStateConfiguration kann [hier](https://gallery.technet.microsoft.com/xPSDesiredStateConfiguratio-417dc71d) heruntergeladen werden.
+Eine Pullserverbereitstellung kann durch die Bereitstellung des Dienstes mithilfe eines DSC-Konfigurationsskripts vereinfacht werden. Dieses Dokument enthält Konfigurationsskripts, die verwendet werden können, um einen Serverknoten bereitzustellen, der für die Produktion geeignet ist. Für die Verwendung der Konfigurationsskripts ist ein DSC-Modul erforderlich, das nicht in Windows Server enthalten ist. Der erforderliche Modulname lautet **xPSDesiredStateConfiguration** und enthält die DSC-Ressource **xDscWebService**. Das Modul xPSDesiredStateConfiguration kann [hier](https://github.com/dsccommunity/xPSDesiredStateConfiguration) heruntergeladen werden.
 
 Verwenden Sie das Cmdlet `Install-Module` aus dem Modul **PowerShellGet**.
 
@@ -141,7 +141,7 @@ Planungsaufgabe
 In den meisten Unternehmen muss Netzwerkdatenverkehr, insbesondere Datenverkehr, der vertrauliche Daten wie die Serverkonfiguration enthält, heutzutage bei der Übertragung bestätigt und/oder verschlüsselt werden.
 Es ist zwar möglich, einen Pullserver mithilfe von HTTP bereitzustellen, was Clientanforderungen im Klartext vereinfacht, aber die bewährte Methode ist ein mit HTTPS gesicherter Datenverkehr. Der Dienst kann mithilfe einer Reihe von Parametern in der DSC-Ressource **xPSDesiredStateConfiguration** zur Verwendung von HTTPS konfiguriert werden.
 
-Die Zertifikatanforderungen zur Sicherung von HTTPS-Datenverkehr für Pullserver unterscheiden sich nicht von der Sicherung anderer HTTPS-Websites. Die **Webserver** -Vorlage in einem Windows Server Certificate Service erfüllt die erforderlichen Funktionen.
+Die Zertifikatanforderungen zur Sicherung von HTTPS-Datenverkehr für Pullserver unterscheiden sich nicht von der Sicherung anderer HTTPS-Websites. Die **Webserver**-Vorlage in einem Windows Server Certificate Service erfüllt die erforderlichen Funktionen.
 
 Planungsaufgabe
 
@@ -206,7 +206,7 @@ Ein Pullserver dient zur Bereitstellung eines zentralisierten Mechanismus für d
 
 #### <a name="guids"></a>GUIDs
 
-Das Planen der Konfigurations- **GUIDs** lohnt sich besonders, wenn Sie eine Pullserverbereitstellung planen. Es bestehen keine besonderen Anforderungen für die Behandlung von **GUIDs** , und der Prozess wird wahrscheinlich für jede Umgebung einzigartig sein. Der Prozess kann einfach bis komplex sein: eine zentral gespeicherte CSV-Datei, eine einfache SQL-Tabelle, eine CMDB oder eine komplexe Lösung, die eine Integration mit einem anderen Tool oder einer Softwarelösung erfordert. Es gibt zwei allgemeine Vorgehensweisen:
+Das Planen der Konfigurations-**GUIDs** lohnt sich besonders, wenn Sie eine Pullserverbereitstellung planen. Es bestehen keine besonderen Anforderungen für die Behandlung von **GUIDs**, und der Prozess wird wahrscheinlich für jede Umgebung einzigartig sein. Der Prozess kann einfach bis komplex sein: eine zentral gespeicherte CSV-Datei, eine einfache SQL-Tabelle, eine CMDB oder eine komplexe Lösung, die eine Integration mit einem anderen Tool oder einer Softwarelösung erfordert. Es gibt zwei allgemeine Vorgehensweisen:
 
 - **Zuweisen von GUIDs pro Server** – Hiermit kann sichergestellt werden, dass jede Serverkonfiguration einzeln gesteuert wird. Dies bietet einen Grad an Genauigkeit um Updates und kann auch in Umgebungen mit wenigen Servern ausgeführt werden.
 - **Zuweisen von GUIDs pro Serverrolle** – Alle Server, die die gleiche Funktion erfüllen, z.B. Webserver, verwenden dieselbe GUID, um auf die erforderlichen Konfigurationsdaten zu verweisen. Beachten Sie, dass wenn viele Server dieselbe GUID verwenden, alle gleichzeitig aktualisiert werden würden, wenn die Konfiguration geändert wird.
@@ -536,7 +536,7 @@ Die PowerShell-Funktion [Create a Checksum and Publish DSC MOF to SMB Pull Serve
 
 Eine Datendatei wird gespeichert, um während der Bereitstellung eines Pullservers Informationen zu erstellen, die den OData-Webdienst enthalten. Wie unten beschrieben, hängt der Dateityp vom Betriebssystem ab.
 
-- **Windows Server 2012** : Der Dateityp ist stets `.mdb`.
-- **Windows Server 2012 R2** : Der Dateityp wird standardmäßig auf `.edb` festgelegt, es sei denn, in der Konfiguration wird eine `.mdb`-Datei angegeben.
+- **Windows Server 2012**: Der Dateityp ist stets `.mdb`.
+- **Windows Server 2012 R2**: Der Dateityp wird standardmäßig auf `.edb` festgelegt, es sei denn, in der Konfiguration wird eine `.mdb`-Datei angegeben.
 
 Im [erweiterte Beispielskript](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) für die Installation eines Pullservers finden Sie außerdem ein Beispiel für die automatische Steuerung der web.config-Dateieinstellungen, um mögliche Fehler durch den Dateityp zu verhindern.

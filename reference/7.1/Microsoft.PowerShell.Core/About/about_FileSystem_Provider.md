@@ -2,16 +2,16 @@
 description: FileSystem
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 06/18/2019
+ms.date: 11/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_filesystem_provider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: FileSystem-Anbieter
-ms.openlocfilehash: fb4135663d368867661e87327aa52a9213757d08
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: a1ea71d8ce402c71ae872260e8a38b03de89cf1d
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94391475"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661408"
 ---
 # <a name="filesystem-provider"></a>FileSystem provider
 
@@ -25,7 +25,7 @@ FileSystem
 
 ## <a name="capabilities"></a>Funktionen
 
-**Filter** , **Schulter verarbeiten**
+**Filter**, **Schulter verarbeiten**
 
 ## <a name="short-description"></a>Kurze Beschreibung
 
@@ -35,12 +35,12 @@ Ermöglicht den Zugriff auf Dateien und Verzeichnisse.
 
 Mit dem PowerShell- **Dateisystem** Anbieter können Sie Dateien und Verzeichnisse in PowerShell erhalten, hinzufügen, ändern, löschen und löschen.
 
-Die **Dateisystem** Laufwerke sind ein hierarchischer Namespace, der die Verzeichnisse und Dateien auf Ihrem Computer enthält. Bei einem **Dateisystem** Laufwerk kann es sich um ein logisches oder ein phsyisches Laufwerk, ein Verzeichnis oder eine zugeordnete Netzwerkfreigabe handeln.
+Die **Dateisystem** Laufwerke sind ein hierarchischer Namespace, der die Verzeichnisse und Dateien auf Ihrem Computer enthält. Bei einem **Dateisystem** Laufwerk kann es sich um ein logisches oder physisches Laufwerk, ein Verzeichnis oder eine zugeordnete Netzwerkfreigabe handeln.
 
 Ein Laufwerk `TEMP:` mit dem Namen wird dem temporären Verzeichnispfad des Benutzers zugeordnet.
 
 >[!NOTE]
-> Der Inhalt des Temp:-Laufwerks wird nicht automatisch von PowerShell entfernt und ist für den Benutzer oder das Betriebssystem zur Verwaltung fest.
+> Der Inhalt des Temp:-Laufwerks wird nicht automatisch von PowerShell entfernt und ist für den Benutzer oder das Betriebssystem zur Verwaltung fest. Diese Funktion wurde aus experimentellen Features in PowerShell, Version 7,0, verschoben.
 
 Der **File System** -Anbieter unterstützt die folgenden Cmdlets, die in diesem Artikel behandelt werden.
 
@@ -65,11 +65,11 @@ Der **File System** -Anbieter unterstützt die folgenden Cmdlets, die in diesem 
 
 ## <a name="types-exposed-by-this-provider"></a>Von diesem Anbieter verfügbar gemachte Typen
 
-Dateien sind Instanzen der [System. IO. FileInfo](/dotnet/api/system.io.fileinfo) -Klasse.  Verzeichnisse sind Instanzen der [System. IO. DirectoryInfo](/dotnet/api/system.io.directoryinfo) -Klasse.
+Dateien sind Instanzen der [System. IO. FileInfo](/dotnet/api/system.io.fileinfo) -Klasse. Verzeichnisse sind Instanzen der [System. IO. DirectoryInfo](/dotnet/api/system.io.directoryinfo) -Klasse.
 
 ## <a name="navigating-the-filesystem-drives"></a>Navigieren in den Dateisystem Laufwerken
 
-Der **File System** -Anbieter macht seine Datenspeicher verfügbar, indem logische Laufwerke auf dem Computer als PowerShell-Laufwerke dargestellt werden. Wenn Sie mit einem **Dateisystem** Laufwerk arbeiten möchten, können Sie den Speicherort in ein Laufwerk ändern, auf den der Laufwerk Name folgt, gefolgt von einem Doppelpunkt ( `:` ).
+Der **File System** -Anbieter macht seine Datenspeicher verfügbar, indem logische Laufwerke auf dem Computer als PowerShell-Laufwerke dargestellt werden. Wenn Sie mit einem **Dateisystem** Laufwerk arbeiten möchten, können Sie den Speicherort auf ein Laufwerk mit dem Namen des Laufwerks, gefolgt von einem Doppelpunkt ( `:` ) ändern.
 
 ```powershell
 Set-Location C:
@@ -340,18 +340,18 @@ Dynamische Parameter sind Cmdlet-Parameter, die von einem PowerShell-Anbieter hi
 
 Gibt die Dateicodierung an. Der Standardwert ist ASCII.
 
-- **ASCII** : verwendet die Codierung für den ASCII-Zeichensatz (7-Bit).
-- **BigEndianUnicode** : codiert im UTF-16-Format unter Verwendung der Big-Endian-Byte Reihenfolge.
-- **String** : verwendet den Codierungstyp für eine Zeichenfolge.
-- **Unicode** : codiert im UTF-16-Format unter Verwendung der Little-Endian-Byte Reihenfolge.
-- **UTF7** : codiert im UTF-7-Format.
-- **UTF8** : codiert im UTF-8-Format.
-- **UTF8BOM** : codiert im UTF-8-Format mit Byte Reihenfolge Markierung (BOM).
-- **UF8NOBOM** : codiert im UTF-8-Format ohne Byte Reihenfolge-Markierung (BOM).
-- **UTF32** : codiert im UTF-32-Format.
-- **Standard** : codiert auf der standardmäßigen installierten Codepage.
-- **OEM** : verwendet die Standard Codierung für MS-DOS-und-Konsolen Programme.
-- **Unbekannt** : der Codierungstyp ist unbekannt oder ungültig. Die Daten können als Binärdateien behandelt werden.
+- **ASCII**: verwendet die Codierung für den ASCII-Zeichensatz (7-Bit).
+- **BigEndianUnicode**: codiert im UTF-16-Format unter Verwendung der Big-Endian-Byte Reihenfolge.
+- **String**: verwendet den Codierungstyp für eine Zeichenfolge.
+- **Unicode**: codiert im UTF-16-Format unter Verwendung der Little-Endian-Byte Reihenfolge.
+- **UTF7**: codiert im UTF-7-Format.
+- **UTF8**: codiert im UTF-8-Format.
+- **UTF8BOM**: codiert im UTF-8-Format mit Byte Reihenfolge Markierung (BOM).
+- **UF8NOBOM**: codiert im UTF-8-Format ohne Byte Reihenfolge-Markierung (BOM).
+- **UTF32**: codiert im UTF-32-Format.
+- **Standard**: codiert auf der standardmäßigen installierten Codepage.
+- **OEM**: verwendet die Standard Codierung für MS-DOS-und-Konsolen Programme.
+- **Unbekannt**: der Codierungstyp ist unbekannt oder ungültig. Die Daten können als Binärdateien behandelt werden.
 
 #### <a name="cmdlets-supported"></a>Unterstützte Cmdlets
 
@@ -405,7 +405,7 @@ Der- `-Attributes` Parameter unterstützt die folgenden Attribute:
 - **Hidden**
 - **Normal**
 - **Notcontentindiziert**
-- **Aufzu**
+- **Offline**
 - **ReadOnly**
 - **Analyse Punkt**
 - **Sparpfad**
@@ -468,7 +468,7 @@ Ruft nur schreibgeschützte Dateien und Verzeichnisse (Ordner) ab.
 
 Der- `-ReadOnly` Parameter wurde in Windows PowerShell 3,0 eingeführt.
 
-Um nur schreibgeschützte Elemente zu erhalten, verwenden Sie den- `-ReadOnly` Parameter, den `ar` Alias oder **ReadOnly** den schreibgeschützten Wert des- `-Attributes` Parameters. Um schreibgeschützte Elemente auszuschließen, verwenden Sie den- `-Attributes` Parameter.
+Um nur schreibgeschützte Elemente zu erhalten, verwenden Sie den- `-ReadOnly` Parameter, den `ar` Alias oder  den schreibgeschützten Wert des- `-Attributes` Parameters. Um schreibgeschützte Elemente auszuschließen, verwenden Sie den- `-Attributes` Parameter.
 
 #### <a name="cmdlets-supported"></a>Unterstützte Cmdlets
 
@@ -564,6 +564,6 @@ Get-Help Get-ChildItem
 Get-Help Get-ChildItem -Path c:
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [about_Providers](../About/about_Providers.md)
