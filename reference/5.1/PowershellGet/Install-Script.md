@@ -7,21 +7,21 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-script?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Script
-ms.openlocfilehash: ae3d0e3c9f70381884f3e12b19111e4c4eb47307
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 734fb13b228c3f2c99e310f472fe3dd2c79497c8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215244"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889792"
 ---
-# <span data-ttu-id="d897f-103">Install-Script</span><span class="sxs-lookup"><span data-stu-id="d897f-103">Install-Script</span></span>
+# <span data-ttu-id="e217a-103">Install-Script</span><span class="sxs-lookup"><span data-stu-id="e217a-103">Install-Script</span></span>
 
-## <span data-ttu-id="d897f-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="d897f-104">SYNOPSIS</span></span>
-<span data-ttu-id="d897f-105">Installiert ein Skript.</span><span class="sxs-lookup"><span data-stu-id="d897f-105">Installs a script.</span></span>
+## <span data-ttu-id="e217a-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="e217a-104">SYNOPSIS</span></span>
+<span data-ttu-id="e217a-105">Installiert ein Skript.</span><span class="sxs-lookup"><span data-stu-id="e217a-105">Installs a script.</span></span>
 
-## <span data-ttu-id="d897f-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="d897f-106">SYNTAX</span></span>
+## <span data-ttu-id="e217a-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="e217a-106">SYNTAX</span></span>
 
-### <span data-ttu-id="d897f-107">Nameparameterset (Standard)</span><span class="sxs-lookup"><span data-stu-id="d897f-107">NameParameterSet (Default)</span></span>
+### <span data-ttu-id="e217a-107">Nameparameterset (Standard)</span><span class="sxs-lookup"><span data-stu-id="e217a-107">NameParameterSet (Default)</span></span>
 
 ```
 Install-Script [-Name] <String[]> [-MinimumVersion <String>] [-MaximumVersion <String>]
@@ -31,7 +31,7 @@ Install-Script [-Name] <String[]> [-MinimumVersion <String>] [-MaximumVersion <S
 
 ```
 
-### <span data-ttu-id="d897f-108">InputObject</span><span class="sxs-lookup"><span data-stu-id="d897f-108">InputObject</span></span>
+### <span data-ttu-id="e217a-108">InputObject</span><span class="sxs-lookup"><span data-stu-id="e217a-108">InputObject</span></span>
 
 ```
 Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-Proxy <Uri>]
@@ -39,15 +39,15 @@ Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-P
  [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="d897f-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="d897f-109">DESCRIPTION</span></span>
+## <span data-ttu-id="e217a-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="e217a-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="d897f-110">Das- `Install-Script` Cmdlet ruft eine Skript Nutzlast aus einem Repository ab, überprüft, ob die Nutzlast ein gültiges PowerShell-Skript ist, und kopiert die Skriptdatei an einen angegebenen Installations Speicherort.</span><span class="sxs-lookup"><span data-stu-id="d897f-110">The `Install-Script` cmdlet acquires a script payload from a repository, verifies that the payload is a valid PowerShell script, and copies the script file to a specified installation location.</span></span>
+<span data-ttu-id="e217a-110">Das- `Install-Script` Cmdlet ruft eine Skript Nutzlast aus einem Repository ab, überprüft, ob die Nutzlast ein gültiges PowerShell-Skript ist, und kopiert die Skriptdatei an einen angegebenen Installations Speicherort.</span><span class="sxs-lookup"><span data-stu-id="e217a-110">The `Install-Script` cmdlet acquires a script payload from a repository, verifies that the payload is a valid PowerShell script, and copies the script file to a specified installation location.</span></span>
 
-<span data-ttu-id="d897f-111">Die standardrepositorys `Install-Script` können mit den `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` Cmdlets,, und konfiguriert werden `Get-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="d897f-111">The default repositories `Install-Script` operates against are configurable through the `Register-PSRepository`, `Set-PSRepository`, `Unregister-PSRepository`, and `Get-PSRepository` cmdlets.</span></span> <span data-ttu-id="d897f-112">Wenn Sie mit mehreren Depots arbeiten, wird `Install-Script` das erste Skript, das den angegebenen Suchkriterien ( **Name** , **MinimumVersion** oder **MaximumVersion** ) entspricht, aus dem ersten Repository ohne Fehler installiert.</span><span class="sxs-lookup"><span data-stu-id="d897f-112">When operating against multiple repositories, `Install-Script` installs the first script that matches the specified search criteria ( **Name** , **MinimumVersion** , or **MaximumVersion** ) from the first repository without any error.</span></span>
+<span data-ttu-id="e217a-111">Die standardrepositorys `Install-Script` können mit den `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` Cmdlets,, und konfiguriert werden `Get-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="e217a-111">The default repositories `Install-Script` operates against are configurable through the `Register-PSRepository`, `Set-PSRepository`, `Unregister-PSRepository`, and `Get-PSRepository` cmdlets.</span></span> <span data-ttu-id="e217a-112">Wenn Sie mit mehreren Depots arbeiten, wird `Install-Script` das erste Skript, das den angegebenen Suchkriterien (**Name**, **MinimumVersion** oder **MaximumVersion**) entspricht, aus dem ersten Repository ohne Fehler installiert.</span><span class="sxs-lookup"><span data-stu-id="e217a-112">When operating against multiple repositories, `Install-Script` installs the first script that matches the specified search criteria (**Name**, **MinimumVersion**, or **MaximumVersion**) from the first repository without any error.</span></span>
 
-## <span data-ttu-id="d897f-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="d897f-113">EXAMPLES</span></span>
+## <span data-ttu-id="e217a-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="e217a-113">EXAMPLES</span></span>
 
-### <span data-ttu-id="d897f-114">Beispiel 1: Suchen eines Skripts und Installieren des Skripts</span><span class="sxs-lookup"><span data-stu-id="d897f-114">Example 1: Find a script and install it</span></span>
+### <span data-ttu-id="e217a-114">Beispiel 1: Suchen eines Skripts und Installieren des Skripts</span><span class="sxs-lookup"><span data-stu-id="e217a-114">Example 1: Find a script and install it</span></span>
 
 ```
 PS C:\> Find-Script -Repository "Local1" -Name "Required-Script2"
@@ -89,17 +89,17 @@ PackageManagementProvider  : NuGet
 InstalledLocation          : C:\Users\pattif\Documents\WindowsPowerShell\Scripts
 ```
 
-<span data-ttu-id="d897f-115">Der erste Befehl sucht das Skript `Required-Script2` aus dem local1-Repository und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="d897f-115">The first command finds the script named `Required-Script2` from the Local1 repository and displays the results.</span></span>
+<span data-ttu-id="e217a-115">Der erste Befehl sucht das Skript `Required-Script2` aus dem local1-Repository und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="e217a-115">The first command finds the script named `Required-Script2` from the Local1 repository and displays the results.</span></span>
 
-<span data-ttu-id="d897f-116">Mit dem zweiten Befehl `Required-Script2` wird das Skript gefunden und dann mithilfe des Pipeline Operators an das `Install-Script` Cmdlet übergeben, um es zu installieren.</span><span class="sxs-lookup"><span data-stu-id="d897f-116">The second command finds the `Required-Script2` script, and then uses the pipeline operator to pass it to the `Install-Script` cmdlet to install it.</span></span>
+<span data-ttu-id="e217a-116">Mit dem zweiten Befehl `Required-Script2` wird das Skript gefunden und dann mithilfe des Pipeline Operators an das `Install-Script` Cmdlet übergeben, um es zu installieren.</span><span class="sxs-lookup"><span data-stu-id="e217a-116">The second command finds the `Required-Script2` script, and then uses the pipeline operator to pass it to the `Install-Script` cmdlet to install it.</span></span>
 
-<span data-ttu-id="d897f-117">Der dritte Befehl verwendet das `Get-Command` Cmdlet, um die Ergebnisse zu erhalten `Required-Script2` , und zeigt dann die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="d897f-117">The third command uses the `Get-Command` cmdlet to get `Required-Script2`, and then displays the results.</span></span>
+<span data-ttu-id="e217a-117">Der dritte Befehl verwendet das `Get-Command` Cmdlet, um die Ergebnisse zu erhalten `Required-Script2` , und zeigt dann die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="e217a-117">The third command uses the `Get-Command` cmdlet to get `Required-Script2`, and then displays the results.</span></span>
 
-<span data-ttu-id="d897f-118">Der vierte Befehl verwendet das `Get-InstalledScript` Cmdlet, um `Required-Script2` die Ergebnisse zu erhalten und anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="d897f-118">The fourth command uses the `Get-InstalledScript` cmdlet to get `Required-Script2` and display the results.</span></span>
+<span data-ttu-id="e217a-118">Der vierte Befehl verwendet das `Get-InstalledScript` Cmdlet, um `Required-Script2` die Ergebnisse zu erhalten und anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e217a-118">The fourth command uses the `Get-InstalledScript` cmdlet to get `Required-Script2` and display the results.</span></span>
 
-<span data-ttu-id="d897f-119">Mit dem fünften Befehl wird `Required-Script2` der Pipeline Operator abgerufen und verwendet, um ihn an das `Format-List` Cmdlet zu übergeben, um die Ausgabe zu formatieren.</span><span class="sxs-lookup"><span data-stu-id="d897f-119">The fifth command gets `Required-Script2` and uses the pipeline operator to pass it to the `Format-List` cmdlet to format the output.</span></span>
+<span data-ttu-id="e217a-119">Mit dem fünften Befehl wird `Required-Script2` der Pipeline Operator abgerufen und verwendet, um ihn an das `Format-List` Cmdlet zu übergeben, um die Ausgabe zu formatieren.</span><span class="sxs-lookup"><span data-stu-id="e217a-119">The fifth command gets `Required-Script2` and uses the pipeline operator to pass it to the `Format-List` cmdlet to format the output.</span></span>
 
-### <span data-ttu-id="d897f-120">Beispiel 2: Installieren eines Skripts mit dem Bereich "ALLUSERS"</span><span class="sxs-lookup"><span data-stu-id="d897f-120">Example 2: Install a script with AllUsers scope</span></span>
+### <span data-ttu-id="e217a-120">Beispiel 2: Installieren eines Skripts mit dem Bereich "ALLUSERS"</span><span class="sxs-lookup"><span data-stu-id="e217a-120">Example 2: Install a script with AllUsers scope</span></span>
 
 ```
 PS C:\> Install-Script -Repository "Local1" -Name "Required-Script3" -Scope "AllUsers"
@@ -131,13 +131,13 @@ PackageManagementProvider  : NuGet
 InstalledLocation          : C:\Program Files\WindowsPowerShell\Scripts
 ```
 
-<span data-ttu-id="d897f-121">Der erste Befehl installiert das Skript mit dem Namen `Required-Script3` und weist es dem Bereich "ALLUSERS" zu.</span><span class="sxs-lookup"><span data-stu-id="d897f-121">The first command installs the script named `Required-Script3` and assigns it AllUsers scope.</span></span>
+<span data-ttu-id="e217a-121">Der erste Befehl installiert das Skript mit dem Namen `Required-Script3` und weist es dem Bereich "ALLUSERS" zu.</span><span class="sxs-lookup"><span data-stu-id="e217a-121">The first command installs the script named `Required-Script3` and assigns it AllUsers scope.</span></span>
 
-<span data-ttu-id="d897f-122">Mit dem zweiten Befehl wird das installierte Skript abgerufen `Required-Script3` und Informationen darüber angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d897f-122">The second command gets the installed script `Required-Script3` and displays information about it.</span></span>
+<span data-ttu-id="e217a-122">Mit dem zweiten Befehl wird das installierte Skript abgerufen `Required-Script3` und Informationen darüber angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e217a-122">The second command gets the installed script `Required-Script3` and displays information about it.</span></span>
 
-<span data-ttu-id="d897f-123">Der dritte Befehl ruft `Required-Script3` den Pipeline Operator ab und verwendet ihn, um ihn an das `Format-List` Cmdlet zu übergeben, um die Ausgabe zu formatieren.</span><span class="sxs-lookup"><span data-stu-id="d897f-123">The third command gets `Required-Script3` and uses the pipeline operator to pass it to the `Format-List` cmdlet to format the output.</span></span>
+<span data-ttu-id="e217a-123">Der dritte Befehl ruft `Required-Script3` den Pipeline Operator ab und verwendet ihn, um ihn an das `Format-List` Cmdlet zu übergeben, um die Ausgabe zu formatieren.</span><span class="sxs-lookup"><span data-stu-id="e217a-123">The third command gets `Required-Script3` and uses the pipeline operator to pass it to the `Format-List` cmdlet to format the output.</span></span>
 
-### <span data-ttu-id="d897f-124">Beispiel 3: Installieren eines Skripts und seiner Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="d897f-124">Example 3: Install a script and its dependencies</span></span>
+### <span data-ttu-id="e217a-124">Beispiel 3: Installieren eines Skripts und seiner Abhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="e217a-124">Example 3: Install a script and its dependencies</span></span>
 
 ```
 PS C:\> Find-Script -Repository "Local1" -Name "Script-WithDependencies2" -IncludeDependencies
@@ -183,25 +183,25 @@ Version    Name                        Type       Repository    Description
 2.5        Required-Script3            Script     local1        Description for the Required-Script3 script
 ```
 
-<span data-ttu-id="d897f-125">Der erste Befehl sucht das Skript `Script-WithDependencies2` und seine Abhängigkeiten im Repository local1 und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="d897f-125">The first command finds the script named `Script-WithDependencies2` and its dependencies in the Local1 repository and displays the results.</span></span>
+<span data-ttu-id="e217a-125">Der erste Befehl sucht das Skript `Script-WithDependencies2` und seine Abhängigkeiten im Repository local1 und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="e217a-125">The first command finds the script named `Script-WithDependencies2` and its dependencies in the Local1 repository and displays the results.</span></span>
 
-<span data-ttu-id="d897f-126">Mit dem zweiten Befehl wird installiert `Script-WithDependencies2` .</span><span class="sxs-lookup"><span data-stu-id="d897f-126">The second command installs `Script-WithDependencies2`.</span></span>
+<span data-ttu-id="e217a-126">Mit dem zweiten Befehl wird installiert `Script-WithDependencies2` .</span><span class="sxs-lookup"><span data-stu-id="e217a-126">The second command installs `Script-WithDependencies2`.</span></span>
 
-<span data-ttu-id="d897f-127">Der dritte Befehl verwendet das `Get-InstalledScript` Script-Cmdlet, um installierte Skripts zu erhalten und die Ergebnisse anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="d897f-127">The third command uses the `Get-InstalledScript` script cmdlet to get installed scripts and display the results.</span></span>
+<span data-ttu-id="e217a-127">Der dritte Befehl verwendet das `Get-InstalledScript` Script-Cmdlet, um installierte Skripts zu erhalten und die Ergebnisse anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e217a-127">The third command uses the `Get-InstalledScript` script cmdlet to get installed scripts and display the results.</span></span>
 
-<span data-ttu-id="d897f-128">Der vierte Befehl verwendet das `Get-InstalledModule` Cmdlet, um installierte Module zu erhalten und die Ergebnisse anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="d897f-128">The fourth command uses the `Get-InstalledModule` cmdlet to get installed modules and display the results.</span></span>
+<span data-ttu-id="e217a-128">Der vierte Befehl verwendet das `Get-InstalledModule` Cmdlet, um installierte Module zu erhalten und die Ergebnisse anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e217a-128">The fourth command uses the `Get-InstalledModule` cmdlet to get installed modules and display the results.</span></span>
 
-<span data-ttu-id="d897f-129">Der fünfte Befehl verwendet das `Find-Script` Cmdlet, um Skripts zu suchen, bei denen der Name mit beginnt, `Required-Script` und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="d897f-129">The fifth command uses the `Find-Script` cmdlet to find scripts where the name begins with `Required-Script` and display the results.</span></span>
+<span data-ttu-id="e217a-129">Der fünfte Befehl verwendet das `Find-Script` Cmdlet, um Skripts zu suchen, bei denen der Name mit beginnt, `Required-Script` und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="e217a-129">The fifth command uses the `Find-Script` cmdlet to find scripts where the name begins with `Required-Script` and display the results.</span></span>
 
-<span data-ttu-id="d897f-130">Der sechste Befehl installiert die Skripts, bei denen der Name mit beginnt, `Required-Script` im local1-Repository.</span><span class="sxs-lookup"><span data-stu-id="d897f-130">The sixth command installs the scripts where the name begins with `Required-Script` in the Local1 repository.</span></span>
+<span data-ttu-id="e217a-130">Der sechste Befehl installiert die Skripts, bei denen der Name mit beginnt, `Required-Script` im local1-Repository.</span><span class="sxs-lookup"><span data-stu-id="e217a-130">The sixth command installs the scripts where the name begins with `Required-Script` in the Local1 repository.</span></span>
 
-<span data-ttu-id="d897f-131">Der letzte Befehl ruft installierte Skripts ab und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="d897f-131">The final command gets installed scripts and displays the results.</span></span>
+<span data-ttu-id="e217a-131">Der letzte Befehl ruft installierte Skripts ab und zeigt die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="e217a-131">The final command gets installed scripts and displays the results.</span></span>
 
-## <span data-ttu-id="d897f-132">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="d897f-132">PARAMETERS</span></span>
+## <span data-ttu-id="e217a-132">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="e217a-132">PARAMETERS</span></span>
 
-### <span data-ttu-id="d897f-133">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="d897f-133">-AcceptLicense</span></span>
+### <span data-ttu-id="e217a-133">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="e217a-133">-AcceptLicense</span></span>
 
-<span data-ttu-id="d897f-134">Akzeptieren Sie den Lizenzvertrag während der Installation automatisch, wenn dies für das Modul erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="d897f-134">Automatically accept the license agreement during installation if the module requires it.</span></span>
+<span data-ttu-id="e217a-134">Akzeptieren Sie den Lizenzvertrag während der Installation automatisch, wenn dies für das Modul erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="e217a-134">Automatically accept the license agreement during installation if the module requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -215,9 +215,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-135">-Allowprerelease</span><span class="sxs-lookup"><span data-stu-id="d897f-135">-AllowPrerelease</span></span>
+### <span data-ttu-id="e217a-135">-Allowprerelease</span><span class="sxs-lookup"><span data-stu-id="e217a-135">-AllowPrerelease</span></span>
 
-<span data-ttu-id="d897f-136">Ermöglicht das Installieren eines als Vorabversion markierten Skripts.</span><span class="sxs-lookup"><span data-stu-id="d897f-136">Allows you to install a script marked as a prerelease.</span></span>
+<span data-ttu-id="e217a-136">Ermöglicht das Installieren eines als Vorabversion markierten Skripts.</span><span class="sxs-lookup"><span data-stu-id="e217a-136">Allows you to install a script marked as a prerelease.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -231,9 +231,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-137">-Confirm</span><span class="sxs-lookup"><span data-stu-id="d897f-137">-Confirm</span></span>
+### <span data-ttu-id="e217a-137">-Confirm</span><span class="sxs-lookup"><span data-stu-id="e217a-137">-Confirm</span></span>
 
-<span data-ttu-id="d897f-138">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="d897f-138">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="e217a-138">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="e217a-138">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -247,9 +247,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-139">-Credential</span><span class="sxs-lookup"><span data-stu-id="d897f-139">-Credential</span></span>
+### <span data-ttu-id="e217a-139">-Credential</span><span class="sxs-lookup"><span data-stu-id="e217a-139">-Credential</span></span>
 
-<span data-ttu-id="d897f-140">Gibt ein Benutzerkonto an, das über Rechte zum Installieren eines Skripts für einen angegebenen Paketanbieter oder eine angegebene Quelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="d897f-140">Specifies a user account that has rights to install a script for a specified package provider or source.</span></span>
+<span data-ttu-id="e217a-140">Gibt ein Benutzerkonto an, das über Rechte zum Installieren eines Skripts für einen angegebenen Paketanbieter oder eine angegebene Quelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="e217a-140">Specifies a user account that has rights to install a script for a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -263,9 +263,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-141">-Force</span><span class="sxs-lookup"><span data-stu-id="d897f-141">-Force</span></span>
+### <span data-ttu-id="e217a-141">-Force</span><span class="sxs-lookup"><span data-stu-id="e217a-141">-Force</span></span>
 
-<span data-ttu-id="d897f-142">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="d897f-142">Forces the command to run without asking for user confirmation.</span></span>
+<span data-ttu-id="e217a-142">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="e217a-142">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -279,9 +279,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-143">-InputObject</span><span class="sxs-lookup"><span data-stu-id="d897f-143">-InputObject</span></span>
+### <span data-ttu-id="e217a-143">-InputObject</span><span class="sxs-lookup"><span data-stu-id="e217a-143">-InputObject</span></span>
 
-<span data-ttu-id="d897f-144">Wird für Pipeline Eingaben verwendet.</span><span class="sxs-lookup"><span data-stu-id="d897f-144">Used for pipeline input.</span></span>
+<span data-ttu-id="e217a-144">Wird für Pipeline Eingaben verwendet.</span><span class="sxs-lookup"><span data-stu-id="e217a-144">Used for pipeline input.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject[]
@@ -295,25 +295,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-145">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="d897f-145">-MaximumVersion</span></span>
+### <span data-ttu-id="e217a-145">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="e217a-145">-MaximumVersion</span></span>
 
-<span data-ttu-id="d897f-146">Gibt die maximale Version eines einzelnen Skripts an, das installiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="d897f-146">Specifies the maximum version of a single scripts to install.</span></span> <span data-ttu-id="d897f-147">Sie können diesen Parameter nicht hinzufügen, wenn Sie versuchen, mehrere Skripts zu installieren.</span><span class="sxs-lookup"><span data-stu-id="d897f-147">You cannot add this parameter if you are attempting to install multiple scripts.</span></span> <span data-ttu-id="d897f-148">Die Parameter " **MaximumVersion** " und "Requirements **dversion** " schließen sich gegenseitig aus. beide Parameter können nicht im selben Befehl verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d897f-148">The **MaximumVersion** and the **RequiredVersion** parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NameParameterSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="d897f-149">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="d897f-149">-MinimumVersion</span></span>
-
-<span data-ttu-id="d897f-150">Gibt die Mindestversion eines einzelnen Skripts an, das installiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="d897f-150">Specifies the minimum version of a single script to install.</span></span> <span data-ttu-id="d897f-151">Sie können diesen Parameter nicht hinzufügen, wenn Sie versuchen, mehrere Skripts zu installieren.</span><span class="sxs-lookup"><span data-stu-id="d897f-151">You cannot add this parameter if you are attempting to install multiple scripts.</span></span> <span data-ttu-id="d897f-152">Der **MinimumVersion** -Parameter und der Requirements- **Version** -Parameter schließen sich gegenseitig aus. beide Parameter können nicht im selben Befehl verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="d897f-152">The **MinimumVersion** and the **RequiredVersion** parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
+<span data-ttu-id="e217a-146">Gibt die maximale Version eines einzelnen Skripts an, das installiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="e217a-146">Specifies the maximum version of a single scripts to install.</span></span> <span data-ttu-id="e217a-147">Sie können diesen Parameter nicht hinzufügen, wenn Sie versuchen, mehrere Skripts zu installieren.</span><span class="sxs-lookup"><span data-stu-id="e217a-147">You cannot add this parameter if you are attempting to install multiple scripts.</span></span> <span data-ttu-id="e217a-148">Die Parameter " **MaximumVersion** " und "Requirements **dversion** " schließen sich gegenseitig aus. beide Parameter können nicht im selben Befehl verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e217a-148">The **MaximumVersion** and the **RequiredVersion** parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
 
 ```yaml
 Type: System.String
@@ -327,9 +311,25 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-153">-Name</span><span class="sxs-lookup"><span data-stu-id="d897f-153">-Name</span></span>
+### <span data-ttu-id="e217a-149">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="e217a-149">-MinimumVersion</span></span>
 
-<span data-ttu-id="d897f-154">Gibt ein Array von Namen von Skripts an, die installiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d897f-154">Specifies an array of names of scripts to install.</span></span>
+<span data-ttu-id="e217a-150">Gibt die Mindestversion eines einzelnen Skripts an, das installiert werden soll.</span><span class="sxs-lookup"><span data-stu-id="e217a-150">Specifies the minimum version of a single script to install.</span></span> <span data-ttu-id="e217a-151">Sie können diesen Parameter nicht hinzufügen, wenn Sie versuchen, mehrere Skripts zu installieren.</span><span class="sxs-lookup"><span data-stu-id="e217a-151">You cannot add this parameter if you are attempting to install multiple scripts.</span></span> <span data-ttu-id="e217a-152">Der **MinimumVersion** -Parameter und der Requirements- **Version** -Parameter schließen sich gegenseitig aus. beide Parameter können nicht im selben Befehl verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e217a-152">The **MinimumVersion** and the **RequiredVersion** parameters are mutually exclusive; you cannot use both parameters in the same command.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NameParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="e217a-153">-Name</span><span class="sxs-lookup"><span data-stu-id="e217a-153">-Name</span></span>
+
+<span data-ttu-id="e217a-154">Gibt ein Array von Namen von Skripts an, die installiert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="e217a-154">Specifies an array of names of scripts to install.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -343,7 +343,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-155">-Nopathupdate</span><span class="sxs-lookup"><span data-stu-id="d897f-155">-NoPathUpdate</span></span>
+### <span data-ttu-id="e217a-155">-Nopathupdate</span><span class="sxs-lookup"><span data-stu-id="e217a-155">-NoPathUpdate</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -357,7 +357,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-156">-PassThru</span><span class="sxs-lookup"><span data-stu-id="d897f-156">-PassThru</span></span>
+### <span data-ttu-id="e217a-156">-PassThru</span><span class="sxs-lookup"><span data-stu-id="e217a-156">-PassThru</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -371,9 +371,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-157">-Proxy</span><span class="sxs-lookup"><span data-stu-id="d897f-157">-Proxy</span></span>
+### <span data-ttu-id="e217a-157">-Proxy</span><span class="sxs-lookup"><span data-stu-id="e217a-157">-Proxy</span></span>
 
-<span data-ttu-id="d897f-158">Gibt einen Proxy Server für die Anforderung an, anstatt eine direkte Verbindung mit der Internet Ressource herzustellen.</span><span class="sxs-lookup"><span data-stu-id="d897f-158">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
+<span data-ttu-id="e217a-158">Gibt einen Proxy Server für die Anforderung an, anstatt eine direkte Verbindung mit der Internet Ressource herzustellen.</span><span class="sxs-lookup"><span data-stu-id="e217a-158">Specifies a proxy server for the request, rather than connecting directly to the Internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -387,9 +387,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-159">-Proxy Credential</span><span class="sxs-lookup"><span data-stu-id="d897f-159">-ProxyCredential</span></span>
+### <span data-ttu-id="e217a-159">-Proxy Credential</span><span class="sxs-lookup"><span data-stu-id="e217a-159">-ProxyCredential</span></span>
 
-<span data-ttu-id="d897f-160">Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="d897f-160">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="e217a-160">Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="e217a-160">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -403,9 +403,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-161">-Repository</span><span class="sxs-lookup"><span data-stu-id="d897f-161">-Repository</span></span>
+### <span data-ttu-id="e217a-161">-Repository</span><span class="sxs-lookup"><span data-stu-id="e217a-161">-Repository</span></span>
 
-<span data-ttu-id="d897f-162">Gibt den anzeigen Amen eines Repository an, das beim `Register-PSRepository` Cmdlet registriert wurde.</span><span class="sxs-lookup"><span data-stu-id="d897f-162">Specifies the friendly name of a repository that has been registered with the `Register-PSRepository` cmdlet.</span></span> <span data-ttu-id="d897f-163">Der Standardwert ist alle registrierten Depots.</span><span class="sxs-lookup"><span data-stu-id="d897f-163">The default is all registered repositories.</span></span>
+<span data-ttu-id="e217a-162">Gibt den anzeigen Amen eines Repository an, das beim `Register-PSRepository` Cmdlet registriert wurde.</span><span class="sxs-lookup"><span data-stu-id="e217a-162">Specifies the friendly name of a repository that has been registered with the `Register-PSRepository` cmdlet.</span></span> <span data-ttu-id="e217a-163">Der Standardwert ist alle registrierten Depots.</span><span class="sxs-lookup"><span data-stu-id="e217a-163">The default is all registered repositories.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -419,9 +419,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-164">-Requirements dversion</span><span class="sxs-lookup"><span data-stu-id="d897f-164">-RequiredVersion</span></span>
+### <span data-ttu-id="e217a-164">-Requirements dversion</span><span class="sxs-lookup"><span data-stu-id="e217a-164">-RequiredVersion</span></span>
 
-<span data-ttu-id="d897f-165">Gibt die genaue Versionsnummer des zu installierenden Skripts an.</span><span class="sxs-lookup"><span data-stu-id="d897f-165">Specifies the exact version number of the script to install.</span></span>
+<span data-ttu-id="e217a-165">Gibt die genaue Versionsnummer des zu installierenden Skripts an.</span><span class="sxs-lookup"><span data-stu-id="e217a-165">Specifies the exact version number of the script to install.</span></span>
 
 ```yaml
 Type: System.String
@@ -435,20 +435,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-166">-Bereich</span><span class="sxs-lookup"><span data-stu-id="d897f-166">-Scope</span></span>
+### <span data-ttu-id="e217a-166">-Bereich</span><span class="sxs-lookup"><span data-stu-id="e217a-166">-Scope</span></span>
 
-<span data-ttu-id="d897f-167">Gibt den Bereich der Installation des Skripts an.</span><span class="sxs-lookup"><span data-stu-id="d897f-167">Specifies the installation scope of the script.</span></span>
-<span data-ttu-id="d897f-168">Gültige Werte sind: AllUsers und CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="d897f-168">Valid values are: AllUsers and CurrentUser.</span></span>
+<span data-ttu-id="e217a-167">Gibt den Bereich der Installation des Skripts an.</span><span class="sxs-lookup"><span data-stu-id="e217a-167">Specifies the installation scope of the script.</span></span>
+<span data-ttu-id="e217a-168">Gültige Werte sind: AllUsers und CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e217a-168">Valid values are: AllUsers and CurrentUser.</span></span>
 
-<span data-ttu-id="d897f-169">Mit dem Bereich "ALLUSERS" können Module an einem Speicherort installiert werden, der für alle Benutzer des Computers zugänglich ist, d `$env:ProgramFiles\WindowsPowerShell\Scripts` . h..</span><span class="sxs-lookup"><span data-stu-id="d897f-169">The AllUsers scope lets modules be installed in a location that is accessible to all users of the computer, that is, `$env:ProgramFiles\WindowsPowerShell\Scripts`.</span></span>
+<span data-ttu-id="e217a-169">Mit dem Bereich "ALLUSERS" können Module an einem Speicherort installiert werden, der für alle Benutzer des Computers zugänglich ist, d `$env:ProgramFiles\WindowsPowerShell\Scripts` . h..</span><span class="sxs-lookup"><span data-stu-id="e217a-169">The AllUsers scope lets modules be installed in a location that is accessible to all users of the computer, that is, `$env:ProgramFiles\WindowsPowerShell\Scripts`.</span></span>
 
-<span data-ttu-id="d897f-170">Mit dem Bereich CurrentUser können Module nur für installiert werden `$home\Documents\WindowsPowerShell\Scripts` , damit das Modul nur für den aktuellen Benutzer verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="d897f-170">The CurrentUser scope lets modules be installed only to `$home\Documents\WindowsPowerShell\Scripts`, so that the module is available only to the current user.</span></span>
+<span data-ttu-id="e217a-170">Mit dem Bereich CurrentUser können Module nur für installiert werden `$home\Documents\WindowsPowerShell\Scripts` , damit das Modul nur für den aktuellen Benutzer verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="e217a-170">The CurrentUser scope lets modules be installed only to `$home\Documents\WindowsPowerShell\Scripts`, so that the module is available only to the current user.</span></span>
 
-<span data-ttu-id="d897f-171">Wenn kein **Bereich** definiert ist, wird der Standardwert basierend auf der aktuellen Sitzung festgelegt:</span><span class="sxs-lookup"><span data-stu-id="d897f-171">When no **Scope** is defined, the default will be set based on the current session:</span></span>
+<span data-ttu-id="e217a-171">Wenn kein **Bereich** definiert ist, wird der Standardwert basierend auf der aktuellen Sitzung festgelegt:</span><span class="sxs-lookup"><span data-stu-id="e217a-171">When no **Scope** is defined, the default will be set based on the current session:</span></span>
 
-- <span data-ttu-id="d897f-172">Für eine PowerShell-Sitzung mit erhöhten Rechten wird der Gültigkeits **Bereich** auf ALLUSERS eingestellt.</span><span class="sxs-lookup"><span data-stu-id="d897f-172">For an elevated PowerShell session, **Scope** defaults to AllUsers;</span></span>
-- <span data-ttu-id="d897f-173">Für PowerShell-Sitzungen ohne erhöhte Rechte in [PowerShellGet, Version 2.0.0](https://www.powershellgallery.com/packages/PowerShellGet) und höher, liegt der Gültigkeits **Bereich** bei CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="d897f-173">For non-elevated PowerShell sessions in [PowerShellGet versions 2.0.0](https://www.powershellgallery.com/packages/PowerShellGet) and above, **Scope** is CurrentUser;</span></span>
-- <span data-ttu-id="d897f-174">Bei nicht erhöhten PowerShell-Sitzungen in PowerShellGet-Versionen 1.6.7 und früher ist der Gültigkeits **Bereich** nicht definiert und `Install-Module` schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="d897f-174">For non-elevated PowerShell sessions in PowerShellGet versions 1.6.7 and earlier, **Scope** is undefined, and `Install-Module` fails.</span></span>
+- <span data-ttu-id="e217a-172">Für eine PowerShell-Sitzung mit erhöhten Rechten wird der Gültigkeits **Bereich** auf ALLUSERS eingestellt.</span><span class="sxs-lookup"><span data-stu-id="e217a-172">For an elevated PowerShell session, **Scope** defaults to AllUsers;</span></span>
+- <span data-ttu-id="e217a-173">Für PowerShell-Sitzungen ohne erhöhte Rechte in [PowerShellGet, Version 2.0.0](https://www.powershellgallery.com/packages/PowerShellGet) und höher, liegt der Gültigkeits **Bereich** bei CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="e217a-173">For non-elevated PowerShell sessions in [PowerShellGet versions 2.0.0](https://www.powershellgallery.com/packages/PowerShellGet) and above, **Scope** is CurrentUser;</span></span>
+- <span data-ttu-id="e217a-174">Bei nicht erhöhten PowerShell-Sitzungen in PowerShellGet-Versionen 1.6.7 und früher ist der Gültigkeits **Bereich** nicht definiert und `Install-Module` schlägt fehl.</span><span class="sxs-lookup"><span data-stu-id="e217a-174">For non-elevated PowerShell sessions in PowerShellGet versions 1.6.7 and earlier, **Scope** is undefined, and `Install-Module` fails.</span></span>
 
 ```yaml
 Type: System.String
@@ -463,9 +463,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-175">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="d897f-175">-WhatIf</span></span>
+### <span data-ttu-id="e217a-175">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="e217a-175">-WhatIf</span></span>
 
-<span data-ttu-id="d897f-176">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d897f-176">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="d897f-177">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="d897f-177">The cmdlet is not run.</span></span>
+<span data-ttu-id="e217a-176">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e217a-176">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="e217a-177">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="e217a-177">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -479,35 +479,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="d897f-178">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d897f-178">CommonParameters</span></span>
+### <span data-ttu-id="e217a-178">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="e217a-178">CommonParameters</span></span>
 
-<span data-ttu-id="d897f-179">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d897f-179">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d897f-180">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="d897f-180">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="e217a-179">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="e217a-179">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="e217a-180">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="e217a-180">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="d897f-181">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="d897f-181">INPUTS</span></span>
+## <span data-ttu-id="e217a-181">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="e217a-181">INPUTS</span></span>
 
-### <span data-ttu-id="d897f-182">System.String[]</span><span class="sxs-lookup"><span data-stu-id="d897f-182">System.String[]</span></span>
+### <span data-ttu-id="e217a-182">System.String[]</span><span class="sxs-lookup"><span data-stu-id="e217a-182">System.String[]</span></span>
 
-### <span data-ttu-id="d897f-183">System. Management. Automation. psobject []</span><span class="sxs-lookup"><span data-stu-id="d897f-183">System.Management.Automation.PSObject[]</span></span>
+### <span data-ttu-id="e217a-183">System. Management. Automation. psobject []</span><span class="sxs-lookup"><span data-stu-id="e217a-183">System.Management.Automation.PSObject[]</span></span>
 
-### <span data-ttu-id="d897f-184">System.String</span><span class="sxs-lookup"><span data-stu-id="d897f-184">System.String</span></span>
+### <span data-ttu-id="e217a-184">System.String</span><span class="sxs-lookup"><span data-stu-id="e217a-184">System.String</span></span>
 
-### <span data-ttu-id="d897f-185">System.Uri</span><span class="sxs-lookup"><span data-stu-id="d897f-185">System.Uri</span></span>
+### <span data-ttu-id="e217a-185">System.Uri</span><span class="sxs-lookup"><span data-stu-id="e217a-185">System.Uri</span></span>
 
-### <span data-ttu-id="d897f-186">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="d897f-186">System.Management.Automation.PSCredential</span></span>
+### <span data-ttu-id="e217a-186">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="e217a-186">System.Management.Automation.PSCredential</span></span>
 
-## <span data-ttu-id="d897f-187">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="d897f-187">OUTPUTS</span></span>
+## <span data-ttu-id="e217a-187">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="e217a-187">OUTPUTS</span></span>
 
-### <span data-ttu-id="d897f-188">System.Object</span><span class="sxs-lookup"><span data-stu-id="d897f-188">System.Object</span></span>
-## <span data-ttu-id="d897f-189">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="d897f-189">NOTES</span></span>
+### <span data-ttu-id="e217a-188">System.Object</span><span class="sxs-lookup"><span data-stu-id="e217a-188">System.Object</span></span>
 
-## <span data-ttu-id="d897f-190">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="d897f-190">RELATED LINKS</span></span>
+## <span data-ttu-id="e217a-189">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="e217a-189">NOTES</span></span>
 
-[<span data-ttu-id="d897f-191">Find-Script</span><span class="sxs-lookup"><span data-stu-id="d897f-191">Find-Script</span></span>](Find-Script.md)
+> [!IMPORTANT]
+> <span data-ttu-id="e217a-190">Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1.</span><span class="sxs-lookup"><span data-stu-id="e217a-190">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="e217a-191">Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="e217a-191">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="e217a-192">Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:</span><span class="sxs-lookup"><span data-stu-id="e217a-192">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="e217a-193">Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.</span><span class="sxs-lookup"><span data-stu-id="e217a-193">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="d897f-192">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="d897f-192">Publish-Script</span></span>](Publish-Script.md)
+## <span data-ttu-id="e217a-194">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="e217a-194">RELATED LINKS</span></span>
 
-[<span data-ttu-id="d897f-193">Save-Script</span><span class="sxs-lookup"><span data-stu-id="d897f-193">Save-Script</span></span>](Save-Script.md)
+[<span data-ttu-id="e217a-195">Find-Script</span><span class="sxs-lookup"><span data-stu-id="e217a-195">Find-Script</span></span>](Find-Script.md)
 
-[<span data-ttu-id="d897f-194">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="d897f-194">Uninstall-Script</span></span>](Uninstall-Script.md)
+[<span data-ttu-id="e217a-196">Publish-Script</span><span class="sxs-lookup"><span data-stu-id="e217a-196">Publish-Script</span></span>](Publish-Script.md)
 
-[<span data-ttu-id="d897f-195">Update-Script</span><span class="sxs-lookup"><span data-stu-id="d897f-195">Update-Script</span></span>](Update-Script.md)
+[<span data-ttu-id="e217a-197">Save-Script</span><span class="sxs-lookup"><span data-stu-id="e217a-197">Save-Script</span></span>](Save-Script.md)
+
+[<span data-ttu-id="e217a-198">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="e217a-198">Uninstall-Script</span></span>](Uninstall-Script.md)
+
+[<span data-ttu-id="e217a-199">Update-Script</span><span class="sxs-lookup"><span data-stu-id="e217a-199">Update-Script</span></span>](Update-Script.md)

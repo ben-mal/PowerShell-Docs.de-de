@@ -7,21 +7,21 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 9bbcda92b98410835a2380296a06fd053c01b52c
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 83336a97f13dc100943c3d0008ee97d28873adfb
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210916"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890299"
 ---
-# <span data-ttu-id="174bf-103">Find-Package</span><span class="sxs-lookup"><span data-stu-id="174bf-103">Find-Package</span></span>
+# <span data-ttu-id="5bc27-103">Find-Package</span><span class="sxs-lookup"><span data-stu-id="5bc27-103">Find-Package</span></span>
 
-## <span data-ttu-id="174bf-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="174bf-104">SYNOPSIS</span></span>
-<span data-ttu-id="174bf-105">Findet Softwarepakete in verfügbaren Paketquellen.</span><span class="sxs-lookup"><span data-stu-id="174bf-105">Finds software packages in available package sources.</span></span>
+## <span data-ttu-id="5bc27-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="5bc27-104">SYNOPSIS</span></span>
+<span data-ttu-id="5bc27-105">Findet Softwarepakete in verfügbaren Paketquellen.</span><span class="sxs-lookup"><span data-stu-id="5bc27-105">Finds software packages in available package sources.</span></span>
 
-## <span data-ttu-id="174bf-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="174bf-106">SYNTAX</span></span>
+## <span data-ttu-id="5bc27-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="5bc27-106">SYNTAX</span></span>
 
-### <span data-ttu-id="174bf-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="174bf-107">NuGet</span></span>
+### <span data-ttu-id="5bc27-107">NuGet</span><span class="sxs-lookup"><span data-stu-id="5bc27-107">NuGet</span></span>
 
 ```
 Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Credential <PSCredential>]
@@ -31,7 +31,7 @@ Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Creden
  [-FilterOnTag <String[]>] [-Contains <String>] [-AllowPrereleaseVersions] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="174bf-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="174bf-108">PowerShellGet</span></span>
+### <span data-ttu-id="5bc27-108">PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="5bc27-108">PowerShellGet</span></span>
 
 ```
 Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Credential <PSCredential>]
@@ -44,15 +44,15 @@ Find-Package [-IncludeDependencies] [-AllVersions] [-Source <String[]>] [-Creden
  [<CommonParameters>]
 ```
 
-## <span data-ttu-id="174bf-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="174bf-109">DESCRIPTION</span></span>
+## <span data-ttu-id="5bc27-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="5bc27-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="174bf-110">`Find-Package` findet Softwarepakete, die in Paketquellen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="174bf-110">`Find-Package` finds software packages that are available in package sources.</span></span> <span data-ttu-id="174bf-111">`Get-PackageProvider` und `Get-PackageSource` zeigen Sie Details zu ihren Anbietern an.</span><span class="sxs-lookup"><span data-stu-id="174bf-111">`Get-PackageProvider` and `Get-PackageSource` display details about your providers.</span></span>
+<span data-ttu-id="5bc27-110">`Find-Package` findet Softwarepakete, die in Paketquellen verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="5bc27-110">`Find-Package` finds software packages that are available in package sources.</span></span> <span data-ttu-id="5bc27-111">`Get-PackageProvider` und `Get-PackageSource` zeigen Sie Details zu ihren Anbietern an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-111">`Get-PackageProvider` and `Get-PackageSource` display details about your providers.</span></span>
 
-## <span data-ttu-id="174bf-112">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="174bf-112">EXAMPLES</span></span>
+## <span data-ttu-id="5bc27-112">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="5bc27-112">EXAMPLES</span></span>
 
-### <span data-ttu-id="174bf-113">Beispiel 1: Suchen aller verfügbaren Pakete von einem Paketanbieter</span><span class="sxs-lookup"><span data-stu-id="174bf-113">Example 1: Find all available packages from a package provider</span></span>
+### <span data-ttu-id="5bc27-113">Beispiel 1: Suchen aller verfügbaren Pakete von einem Paketanbieter</span><span class="sxs-lookup"><span data-stu-id="5bc27-113">Example 1: Find all available packages from a package provider</span></span>
 
-<span data-ttu-id="174bf-114">Mit diesem Befehl werden alle verfügbaren PowerShell-Modul Pakete in einem registrierten Katalog gefunden.</span><span class="sxs-lookup"><span data-stu-id="174bf-114">This command finds all available PowerShell module packages in a registered gallery.</span></span> <span data-ttu-id="174bf-115">Verwenden `Get-PackageProvider` Sie, um den Anbieter Namen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="174bf-115">Use `Get-PackageProvider` to get the provider name.</span></span>
+<span data-ttu-id="5bc27-114">Mit diesem Befehl werden alle verfügbaren PowerShell-Modul Pakete in einem registrierten Katalog gefunden.</span><span class="sxs-lookup"><span data-stu-id="5bc27-114">This command finds all available PowerShell module packages in a registered gallery.</span></span> <span data-ttu-id="5bc27-115">Verwenden `Get-PackageProvider` Sie, um den Anbieter Namen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-115">Use `Get-PackageProvider` to get the provider name.</span></span>
 
 ```
 Find-Package -ProviderName NuGet
@@ -69,11 +69,11 @@ bootstrap          4.3.1     MyNuGet    Bootstrap framework in CSS. Includes fon
 NuGet.Core         2.14.0    MyNuGet    NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="174bf-116">`Find-Package` verwendet den **Provider** -Parameter, um den **nuget** -Anbieter anzugeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-116">`Find-Package` uses the **Provider** parameter to specify the provider **NuGet** .</span></span>
+<span data-ttu-id="5bc27-116">`Find-Package` verwendet den **Provider** -Parameter, um den **nuget**-Anbieter anzugeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-116">`Find-Package` uses the **Provider** parameter to specify the provider **NuGet**.</span></span>
 
-### <span data-ttu-id="174bf-117">Beispiel 2: Suchen eines Pakets aus einer Paketquelle</span><span class="sxs-lookup"><span data-stu-id="174bf-117">Example 2: Find a package from a package source</span></span>
+### <span data-ttu-id="5bc27-117">Beispiel 2: Suchen eines Pakets aus einer Paketquelle</span><span class="sxs-lookup"><span data-stu-id="5bc27-117">Example 2: Find a package from a package source</span></span>
 
-<span data-ttu-id="174bf-118">Dieser Befehl sucht die neueste Version eines Pakets aus einer angegebenen Paketquelle.</span><span class="sxs-lookup"><span data-stu-id="174bf-118">This command finds the newest version of a package from a specified package source.</span></span> <span data-ttu-id="174bf-119">Wenn keine Paketquelle bereitgestellt wird, `Find-Package` durchsucht die einzelnen installierten Paketanbieter und die zugehörigen Paketquellen.</span><span class="sxs-lookup"><span data-stu-id="174bf-119">If a package source isn't provided, `Find-Package` searches each installed package provider and its package sources.</span></span> <span data-ttu-id="174bf-120">Verwenden `Get-PackageSource` Sie, um den Quellnamen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="174bf-120">Use `Get-PackageSource` to get the source name.</span></span>
+<span data-ttu-id="5bc27-118">Dieser Befehl sucht die neueste Version eines Pakets aus einer angegebenen Paketquelle.</span><span class="sxs-lookup"><span data-stu-id="5bc27-118">This command finds the newest version of a package from a specified package source.</span></span> <span data-ttu-id="5bc27-119">Wenn keine Paketquelle bereitgestellt wird, `Find-Package` durchsucht die einzelnen installierten Paketanbieter und die zugehörigen Paketquellen.</span><span class="sxs-lookup"><span data-stu-id="5bc27-119">If a package source isn't provided, `Find-Package` searches each installed package provider and its package sources.</span></span> <span data-ttu-id="5bc27-120">Verwenden `Get-PackageSource` Sie, um den Quellnamen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-120">Use `Get-PackageSource` to get the source name.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -Source MyNuGet
@@ -85,11 +85,11 @@ Name         Version   Source    Summary
 NuGet.Core   2.14.0    MyNuGet   NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="174bf-121">`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core** " anzugeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-121">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core** .</span></span> <span data-ttu-id="174bf-122">Der **Source** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-122">The **Source** parameter specifies to search for the package in **MyNuGet** .</span></span>
+<span data-ttu-id="5bc27-121">`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core**" anzugeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-121">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core**.</span></span> <span data-ttu-id="5bc27-122">Der **Source** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-122">The **Source** parameter specifies to search for the package in **MyNuGet**.</span></span>
 
-### <span data-ttu-id="174bf-123">Beispiel 3: Suchen aller Versionen eines Pakets</span><span class="sxs-lookup"><span data-stu-id="174bf-123">Example 3: Find all versions of a package</span></span>
+### <span data-ttu-id="5bc27-123">Beispiel 3: Suchen aller Versionen eines Pakets</span><span class="sxs-lookup"><span data-stu-id="5bc27-123">Example 3: Find all versions of a package</span></span>
 
-<span data-ttu-id="174bf-124">Mit diesem Befehl werden alle verfügbaren Paketversionen von einem angegebenen Anbieter ermittelt.</span><span class="sxs-lookup"><span data-stu-id="174bf-124">This command finds all available package versions from a specified provider.</span></span>
+<span data-ttu-id="5bc27-124">Mit diesem Befehl werden alle verfügbaren Paketversionen von einem angegebenen Anbieter ermittelt.</span><span class="sxs-lookup"><span data-stu-id="5bc27-124">This command finds all available package versions from a specified provider.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -Source MyNuGet -AllVersions
@@ -106,11 +106,11 @@ NuGet.Core    1.1.229.159      MyNuGet      NuGet.Core is the core framework ass
 Nuget.Core    1.0.1120.104     MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="174bf-125">`Find-Package` verwendet den **Name** -Parameter, um das **nuget. Core** -Paket anzugeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-125">`Find-Package` uses the **Name** parameter to specify the package **NuGet.Core** .</span></span> <span data-ttu-id="174bf-126">Der **providerName** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-126">The **ProviderName** parameter specifies to search for the package in **MyNuGet** .</span></span> <span data-ttu-id="174bf-127">**Allversions** gibt an, dass alle verfügbaren Versionen zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="174bf-127">**AllVersions** specifies that all available versions are returned.</span></span>
+<span data-ttu-id="5bc27-125">`Find-Package` verwendet den **Name** -Parameter, um das **nuget. Core**-Paket anzugeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-125">`Find-Package` uses the **Name** parameter to specify the package **NuGet.Core**.</span></span> <span data-ttu-id="5bc27-126">Der **providerName** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-126">The **ProviderName** parameter specifies to search for the package in **MyNuGet**.</span></span> <span data-ttu-id="5bc27-127">**Allversions** gibt an, dass alle verfügbaren Versionen zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5bc27-127">**AllVersions** specifies that all available versions are returned.</span></span>
 
-### <span data-ttu-id="174bf-128">Beispiel 4: Suchen eines Pakets mit einem bestimmten Namen und einer bestimmten Version</span><span class="sxs-lookup"><span data-stu-id="174bf-128">Example 4: Find a package with a specific name and version</span></span>
+### <span data-ttu-id="5bc27-128">Beispiel 4: Suchen eines Pakets mit einem bestimmten Namen und einer bestimmten Version</span><span class="sxs-lookup"><span data-stu-id="5bc27-128">Example 4: Find a package with a specific name and version</span></span>
 
-<span data-ttu-id="174bf-129">Dieser Befehl sucht eine bestimmte Paketversion von einem angegebenen Anbieter.</span><span class="sxs-lookup"><span data-stu-id="174bf-129">This command finds a specific package version from a specified provider.</span></span>
+<span data-ttu-id="5bc27-129">Dieser Befehl sucht eine bestimmte Paketversion von einem angegebenen Anbieter.</span><span class="sxs-lookup"><span data-stu-id="5bc27-129">This command finds a specific package version from a specified provider.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -ProviderName NuGet -RequiredVersion 2.9.0
@@ -122,11 +122,11 @@ Name          Version          Source       Summary
 NuGet.Core    2.9.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="174bf-130">`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core** " anzugeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-130">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core** .</span></span> <span data-ttu-id="174bf-131">Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-131">The **ProviderName** parameter specifies to search for the package in **NuGet** .</span></span> <span data-ttu-id="174bf-132">Requirements **dversion** gibt an, dass nur Version **2.9.0** zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="174bf-132">**RequiredVersion** specifies that only version **2.9.0** is returned.</span></span>
+<span data-ttu-id="5bc27-130">`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core**" anzugeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-130">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core**.</span></span> <span data-ttu-id="5bc27-131">Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-131">The **ProviderName** parameter specifies to search for the package in **NuGet**.</span></span> <span data-ttu-id="5bc27-132">Requirements **dversion** gibt an, dass nur Version **2.9.0** zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="5bc27-132">**RequiredVersion** specifies that only version **2.9.0** is returned.</span></span>
 
-### <span data-ttu-id="174bf-133">Beispiel 5: Suchen nach Paketen innerhalb eines Bereichs von Versionen</span><span class="sxs-lookup"><span data-stu-id="174bf-133">Example 5: Find packages within a range of versions</span></span>
+### <span data-ttu-id="5bc27-133">Beispiel 5: Suchen nach Paketen innerhalb eines Bereichs von Versionen</span><span class="sxs-lookup"><span data-stu-id="5bc27-133">Example 5: Find packages within a range of versions</span></span>
 
-<span data-ttu-id="174bf-134">Dieser Befehl sucht einen Bereich von Versionen für ein angegebenes Paket.</span><span class="sxs-lookup"><span data-stu-id="174bf-134">This command finds a range of versions for a specified package.</span></span>
+<span data-ttu-id="5bc27-134">Dieser Befehl sucht einen Bereich von Versionen für ein angegebenes Paket.</span><span class="sxs-lookup"><span data-stu-id="5bc27-134">This command finds a range of versions for a specified package.</span></span>
 
 ```
 Find-Package -Name NuGet.Core -ProviderName NuGet -MinimumVersion 2.7.0 -MaximumVersion 2.9.0 -AllVersions
@@ -141,13 +141,13 @@ NuGet.Core    2.8.0            MyNuGet      NuGet.Core is the core framework ass
 NuGet.Core    2.7.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-<span data-ttu-id="174bf-135">`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core** " anzugeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-135">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core** .</span></span> <span data-ttu-id="174bf-136">Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-136">The **ProviderName** parameter specifies to search for the package in **NuGet** .</span></span> <span data-ttu-id="174bf-137">**MinimumVersion** gibt die niedrigste Version an **2.7.0** an.</span><span class="sxs-lookup"><span data-stu-id="174bf-137">**MinimumVersion** specifies the lowest version **2.7.0** .</span></span> <span data-ttu-id="174bf-138">**MaximumVersion** gibt die höchste Version an **2.9.0** an.</span><span class="sxs-lookup"><span data-stu-id="174bf-138">**MaximumVersion** specifies the highest version **2.9.0** .</span></span>
-<span data-ttu-id="174bf-139">**Allversions** gibt an, dass der Bereich gemäß dem minimal-und Maximalwert zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="174bf-139">**AllVersions** determines the range is returned as specified by the minimum and maximum.</span></span>
+<span data-ttu-id="5bc27-135">`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core**" anzugeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-135">`Find-Package` uses the **Name** parameter to specify the package name **NuGet.Core**.</span></span> <span data-ttu-id="5bc27-136">Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-136">The **ProviderName** parameter specifies to search for the package in **NuGet**.</span></span> <span data-ttu-id="5bc27-137">**MinimumVersion** gibt die niedrigste Version an **2.7.0** an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-137">**MinimumVersion** specifies the lowest version **2.7.0**.</span></span> <span data-ttu-id="5bc27-138">**MaximumVersion** gibt die höchste Version an **2.9.0** an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-138">**MaximumVersion** specifies the highest version **2.9.0**.</span></span>
+<span data-ttu-id="5bc27-139">**Allversions** gibt an, dass der Bereich gemäß dem minimal-und Maximalwert zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="5bc27-139">**AllVersions** determines the range is returned as specified by the minimum and maximum.</span></span>
 
-### <span data-ttu-id="174bf-140">Beispiel 6: Suchen eines Pakets aus einem Dateisystem</span><span class="sxs-lookup"><span data-stu-id="174bf-140">Example 6: Find a package from a file system</span></span>
+### <span data-ttu-id="5bc27-140">Beispiel 6: Suchen eines Pakets aus einem Dateisystem</span><span class="sxs-lookup"><span data-stu-id="5bc27-140">Example 6: Find a package from a file system</span></span>
 
-<span data-ttu-id="174bf-141">Dieser Befehl sucht Pakete mit der Dateierweiterung `.nupkg` , die auf dem lokalen Computer gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="174bf-141">This command finds packages with the file extension `.nupkg` that are stored on the local computer.</span></span>
-<span data-ttu-id="174bf-142">Bei den Dateien handelt es sich um Pakete, die aus einem Katalog wie **nuget** heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="174bf-142">The files are packages downloaded from a gallery such as the **NuGet** .</span></span>
+<span data-ttu-id="5bc27-141">Dieser Befehl sucht Pakete mit der Dateierweiterung `.nupkg` , die auf dem lokalen Computer gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="5bc27-141">This command finds packages with the file extension `.nupkg` that are stored on the local computer.</span></span>
+<span data-ttu-id="5bc27-142">Bei den Dateien handelt es sich um Pakete, die aus einem Katalog wie **nuget** heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="5bc27-142">The files are packages downloaded from a gallery such as the **NuGet**.</span></span>
 
 ```
 PS> Find-Package -Source C:\LocalPkg
@@ -160,11 +160,11 @@ Microsoft.Web.Xdt    3.0.0      C:\LocalPkg\     Microsoft Xml Document Transfor
 NuGet.Core           2.14.0     C:\LocalPkg\     NuGet.Core is the core framework assembly...
 ```
 
-## <span data-ttu-id="174bf-143">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="174bf-143">PARAMETERS</span></span>
+## <span data-ttu-id="5bc27-143">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="5bc27-143">PARAMETERS</span></span>
 
-### <span data-ttu-id="174bf-144">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="174bf-144">-AcceptLicense</span></span>
+### <span data-ttu-id="5bc27-144">-AcceptLicense</span><span class="sxs-lookup"><span data-stu-id="5bc27-144">-AcceptLicense</span></span>
 
-<span data-ttu-id="174bf-145">Akzeptiert automatisch einen Lizenzvertrag, wenn dies für das Paket erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="174bf-145">Automatically accepts a license agreement if the package requires it.</span></span>
+<span data-ttu-id="5bc27-145">Akzeptiert automatisch einen Lizenzvertrag, wenn dies für das Paket erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="5bc27-145">Automatically accepts a license agreement if the package requires it.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,25 +178,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-146">-Allowprereleaseversions</span><span class="sxs-lookup"><span data-stu-id="174bf-146">-AllowPrereleaseVersions</span></span>
+### <span data-ttu-id="5bc27-146">-Allowprereleaseversions</span><span class="sxs-lookup"><span data-stu-id="5bc27-146">-AllowPrereleaseVersions</span></span>
 
-<span data-ttu-id="174bf-147">Schließt Pakete ein, die in den Ergebnissen als Vorabversion gekennzeichnet sind.</span><span class="sxs-lookup"><span data-stu-id="174bf-147">Includes packages marked as a prerelease in the results.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-148">-Allversions</span><span class="sxs-lookup"><span data-stu-id="174bf-148">-AllVersions</span></span>
-
-<span data-ttu-id="174bf-149">Gibt an, dass `Find-Package` alle verfügbaren Versionen des Pakets zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="174bf-149">Indicates that `Find-Package` returns all available versions of the package.</span></span> <span data-ttu-id="174bf-150">Standardmäßig wird `Find-Package` nur die neueste verfügbare Version zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-150">By default, `Find-Package` only returns the newest available version.</span></span>
+<span data-ttu-id="5bc27-147">Schließt Pakete ein, die in den Ergebnissen als Vorabversion gekennzeichnet sind.</span><span class="sxs-lookup"><span data-stu-id="5bc27-147">Includes packages marked as a prerelease in the results.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -210,9 +194,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-151">-Command</span><span class="sxs-lookup"><span data-stu-id="174bf-151">-Command</span></span>
+### <span data-ttu-id="5bc27-148">-Allversions</span><span class="sxs-lookup"><span data-stu-id="5bc27-148">-AllVersions</span></span>
 
-<span data-ttu-id="174bf-152">Gibt ein Array von Befehlen an, die von gesucht werden `Find-Package` .</span><span class="sxs-lookup"><span data-stu-id="174bf-152">Specifies an array of commands searched by `Find-Package`.</span></span>
+<span data-ttu-id="5bc27-149">Gibt an, dass `Find-Package` alle verfügbaren Versionen des Pakets zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="5bc27-149">Indicates that `Find-Package` returns all available versions of the package.</span></span> <span data-ttu-id="5bc27-150">Standardmäßig wird `Find-Package` nur die neueste verfügbare Version zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-150">By default, `Find-Package` only returns the newest available version.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-151">-Command</span><span class="sxs-lookup"><span data-stu-id="5bc27-151">-Command</span></span>
+
+<span data-ttu-id="5bc27-152">Gibt ein Array von Befehlen an, die von gesucht werden `Find-Package` .</span><span class="sxs-lookup"><span data-stu-id="5bc27-152">Specifies an array of commands searched by `Find-Package`.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -226,25 +226,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-153">-Configfile</span><span class="sxs-lookup"><span data-stu-id="174bf-153">-ConfigFile</span></span>
+### <span data-ttu-id="5bc27-153">-Configfile</span><span class="sxs-lookup"><span data-stu-id="5bc27-153">-ConfigFile</span></span>
 
-<span data-ttu-id="174bf-154">Gibt eine Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="174bf-154">Specifies a configuration file.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-155">-Enthält</span><span class="sxs-lookup"><span data-stu-id="174bf-155">-Contains</span></span>
-
-<span data-ttu-id="174bf-156">`Find-Package` Ruft Objekte ab, wenn ein beliebiges Element in den Eigenschafts Werten des Objekts eine genaue Entsprechung für den angegebenen Wert ist.</span><span class="sxs-lookup"><span data-stu-id="174bf-156">`Find-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+<span data-ttu-id="5bc27-154">Gibt eine Konfigurationsdatei an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-154">Specifies a configuration file.</span></span>
 
 ```yaml
 Type: System.String
@@ -258,9 +242,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-157">-Credential</span><span class="sxs-lookup"><span data-stu-id="174bf-157">-Credential</span></span>
+### <span data-ttu-id="5bc27-155">-Enthält</span><span class="sxs-lookup"><span data-stu-id="5bc27-155">-Contains</span></span>
 
-<span data-ttu-id="174bf-158">Gibt ein Benutzerkonto an, das über die Berechtigung zum Suchen nach Paketen verfügt.</span><span class="sxs-lookup"><span data-stu-id="174bf-158">Specifies a user account that has permission to search for packages.</span></span>
+<span data-ttu-id="5bc27-156">`Find-Package` Ruft Objekte ab, wenn ein beliebiges Element in den Eigenschafts Werten des Objekts eine genaue Entsprechung für den angegebenen Wert ist.</span><span class="sxs-lookup"><span data-stu-id="5bc27-156">`Find-Package` gets objects if any item in the object's property values are an exact match for the specified value.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-157">-Credential</span><span class="sxs-lookup"><span data-stu-id="5bc27-157">-Credential</span></span>
+
+<span data-ttu-id="5bc27-158">Gibt ein Benutzerkonto an, das über die Berechtigung zum Suchen nach Paketen verfügt.</span><span class="sxs-lookup"><span data-stu-id="5bc27-158">Specifies a user account that has permission to search for packages.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -274,9 +274,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-159">-Dscresource</span><span class="sxs-lookup"><span data-stu-id="174bf-159">-DscResource</span></span>
+### <span data-ttu-id="5bc27-159">-Dscresource</span><span class="sxs-lookup"><span data-stu-id="5bc27-159">-DscResource</span></span>
 
-<span data-ttu-id="174bf-160">Gibt ein Array von DSC-Ressourcen (DSC) an, die von diesem Cmdlet durchsucht werden.</span><span class="sxs-lookup"><span data-stu-id="174bf-160">Specifies an array of Desired State Configuration (DSC) resources that this cmdlet searches.</span></span>
+<span data-ttu-id="5bc27-160">Gibt ein Array von DSC-Ressourcen (DSC) an, die von diesem Cmdlet durchsucht werden.</span><span class="sxs-lookup"><span data-stu-id="5bc27-160">Specifies an array of Desired State Configuration (DSC) resources that this cmdlet searches.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -290,9 +290,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-161">-Filter</span><span class="sxs-lookup"><span data-stu-id="174bf-161">-Filter</span></span>
+### <span data-ttu-id="5bc27-161">-Filter</span><span class="sxs-lookup"><span data-stu-id="5bc27-161">-Filter</span></span>
 
-<span data-ttu-id="174bf-162">Gibt die Begriffe an, nach denen in den Eigenschaften **Name** und **Description** gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-162">Specifies terms to search for within the **Name** and **Description** properties.</span></span>
+<span data-ttu-id="5bc27-162">Gibt die Begriffe an, nach denen in den Eigenschaften **Name** und **Description** gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-162">Specifies terms to search for within the **Name** and **Description** properties.</span></span>
 
 ```yaml
 Type: System.String
@@ -306,57 +306,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-163">-Filterontag</span><span class="sxs-lookup"><span data-stu-id="174bf-163">-FilterOnTag</span></span>
+### <span data-ttu-id="5bc27-163">-Filterontag</span><span class="sxs-lookup"><span data-stu-id="5bc27-163">-FilterOnTag</span></span>
 
-<span data-ttu-id="174bf-164">Gibt das Tag an, das die Ergebnisse filtert.</span><span class="sxs-lookup"><span data-stu-id="174bf-164">Specifies the tag that filters the results.</span></span> <span data-ttu-id="174bf-165">Ergebnisse, die das angegebene Tag nicht enthalten, werden ausgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="174bf-165">Results that don't contain the specified tag are excluded.</span></span>
-
-```yaml
-Type: System.String[]
-Parameter Sets: NuGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-166">-Force</span><span class="sxs-lookup"><span data-stu-id="174bf-166">-Force</span></span>
-
-<span data-ttu-id="174bf-167">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="174bf-167">Forces the command to run without asking for user confirmation.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-168">-Forcebootstrap</span><span class="sxs-lookup"><span data-stu-id="174bf-168">-ForceBootstrap</span></span>
-
-<span data-ttu-id="174bf-169">Gibt an, dass `Find-Package` **packagemanagement** zwingt, den Paketanbieter automatisch zu installieren.</span><span class="sxs-lookup"><span data-stu-id="174bf-169">Indicates that `Find-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-170">-Header</span><span class="sxs-lookup"><span data-stu-id="174bf-170">-Headers</span></span>
-
-<span data-ttu-id="174bf-171">Gibt die Header für das Paket an.</span><span class="sxs-lookup"><span data-stu-id="174bf-171">Specifies the headers for the package.</span></span>
+<span data-ttu-id="5bc27-164">Gibt das Tag an, das die Ergebnisse filtert.</span><span class="sxs-lookup"><span data-stu-id="5bc27-164">Specifies the tag that filters the results.</span></span> <span data-ttu-id="5bc27-165">Ergebnisse, die das angegebene Tag nicht enthalten, werden ausgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="5bc27-165">Results that don't contain the specified tag are excluded.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -370,9 +322,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-172">-Includababhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="174bf-172">-IncludeDependencies</span></span>
+### <span data-ttu-id="5bc27-166">-Force</span><span class="sxs-lookup"><span data-stu-id="5bc27-166">-Force</span></span>
 
-<span data-ttu-id="174bf-173">Gibt an, dass dieses Cmdlet Paketabhängigkeiten in den Ergebnissen enthält.</span><span class="sxs-lookup"><span data-stu-id="174bf-173">Indicates that this cmdlet includes package dependencies in the results.</span></span>
+<span data-ttu-id="5bc27-167">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="5bc27-167">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -386,17 +338,65 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-174">-Includes</span><span class="sxs-lookup"><span data-stu-id="174bf-174">-Includes</span></span>
+### <span data-ttu-id="5bc27-168">-Forcebootstrap</span><span class="sxs-lookup"><span data-stu-id="5bc27-168">-ForceBootstrap</span></span>
 
-<span data-ttu-id="174bf-175">Gibt an, ob `Find-Package` alle Pakete innerhalb einer Kategorie finden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-175">Specifies whether `Find-Package` should find all packages within a category.</span></span>
+<span data-ttu-id="5bc27-169">Gibt an, dass `Find-Package` **packagemanagement** zwingt, den Paketanbieter automatisch zu installieren.</span><span class="sxs-lookup"><span data-stu-id="5bc27-169">Indicates that `Find-Package` forces **PackageManagement** to automatically install the package provider.</span></span>
 
-<span data-ttu-id="174bf-176">Die zulässigen Werte lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="174bf-176">The accepted values are as follows:</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-- <span data-ttu-id="174bf-177">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="174bf-177">Cmdlet</span></span>
-- <span data-ttu-id="174bf-178">DscResource</span><span class="sxs-lookup"><span data-stu-id="174bf-178">DscResource</span></span>
-- <span data-ttu-id="174bf-179">Funktion</span><span class="sxs-lookup"><span data-stu-id="174bf-179">Function</span></span>
-- <span data-ttu-id="174bf-180">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="174bf-180">RoleCapability</span></span>
-- <span data-ttu-id="174bf-181">Workflow</span><span class="sxs-lookup"><span data-stu-id="174bf-181">Workflow</span></span>
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-170">-Header</span><span class="sxs-lookup"><span data-stu-id="5bc27-170">-Headers</span></span>
+
+<span data-ttu-id="5bc27-171">Gibt die Header für das Paket an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-171">Specifies the headers for the package.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: NuGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-172">-Includababhängigkeiten</span><span class="sxs-lookup"><span data-stu-id="5bc27-172">-IncludeDependencies</span></span>
+
+<span data-ttu-id="5bc27-173">Gibt an, dass dieses Cmdlet Paketabhängigkeiten in den Ergebnissen enthält.</span><span class="sxs-lookup"><span data-stu-id="5bc27-173">Indicates that this cmdlet includes package dependencies in the results.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-174">-Includes</span><span class="sxs-lookup"><span data-stu-id="5bc27-174">-Includes</span></span>
+
+<span data-ttu-id="5bc27-175">Gibt an, ob `Find-Package` alle Pakete innerhalb einer Kategorie finden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-175">Specifies whether `Find-Package` should find all packages within a category.</span></span>
+
+<span data-ttu-id="5bc27-176">Die zulässigen Werte lauten wie folgt:</span><span class="sxs-lookup"><span data-stu-id="5bc27-176">The accepted values are as follows:</span></span>
+
+- <span data-ttu-id="5bc27-177">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="5bc27-177">Cmdlet</span></span>
+- <span data-ttu-id="5bc27-178">DscResource</span><span class="sxs-lookup"><span data-stu-id="5bc27-178">DscResource</span></span>
+- <span data-ttu-id="5bc27-179">Funktion</span><span class="sxs-lookup"><span data-stu-id="5bc27-179">Function</span></span>
+- <span data-ttu-id="5bc27-180">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="5bc27-180">RoleCapability</span></span>
+- <span data-ttu-id="5bc27-181">Workflow</span><span class="sxs-lookup"><span data-stu-id="5bc27-181">Workflow</span></span>
 
 ```yaml
 Type: System.String[]
@@ -411,25 +411,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-182">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="174bf-182">-MaximumVersion</span></span>
+### <span data-ttu-id="5bc27-182">-MaximumVersion</span><span class="sxs-lookup"><span data-stu-id="5bc27-182">-MaximumVersion</span></span>
 
-<span data-ttu-id="174bf-183">Gibt die maximale Paketversion an, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="174bf-183">Specifies the maximum package version that you want to find.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-184">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="174bf-184">-MinimumVersion</span></span>
-
-<span data-ttu-id="174bf-185">Gibt die minimale Paketversion an, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="174bf-185">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="174bf-186">Wenn eine höhere Version verfügbar ist, wird diese Version zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="174bf-186">If a higher version is available, that version is returned.</span></span>
+<span data-ttu-id="5bc27-183">Gibt die maximale Paketversion an, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-183">Specifies the maximum package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -443,9 +427,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-187">-Name</span><span class="sxs-lookup"><span data-stu-id="174bf-187">-Name</span></span>
+### <span data-ttu-id="5bc27-184">-MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="5bc27-184">-MinimumVersion</span></span>
 
-<span data-ttu-id="174bf-188">Gibt einen oder mehrere Paketnamen oder Paketnamen mit Platzhalter Zeichen an.</span><span class="sxs-lookup"><span data-stu-id="174bf-188">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="174bf-189">Trennen Sie mehrere Paketnamen durch Kommas.</span><span class="sxs-lookup"><span data-stu-id="174bf-189">Separate multiple package names with commas.</span></span>
+<span data-ttu-id="5bc27-185">Gibt die minimale Paketversion an, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-185">Specifies the minimum package version that you want to find.</span></span> <span data-ttu-id="5bc27-186">Wenn eine höhere Version verfügbar ist, wird diese Version zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="5bc27-186">If a higher version is available, that version is returned.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-187">-Name</span><span class="sxs-lookup"><span data-stu-id="5bc27-187">-Name</span></span>
+
+<span data-ttu-id="5bc27-188">Gibt einen oder mehrere Paketnamen oder Paketnamen mit Platzhalter Zeichen an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-188">Specifies one or more package names, or package names with wildcard characters.</span></span> <span data-ttu-id="5bc27-189">Trennen Sie mehrere Paketnamen durch Kommas.</span><span class="sxs-lookup"><span data-stu-id="5bc27-189">Separate multiple package names with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -459,9 +459,9 @@ Accept pipeline input: False
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="174bf-190">-Packagemanagementprovider</span><span class="sxs-lookup"><span data-stu-id="174bf-190">-PackageManagementProvider</span></span>
+### <span data-ttu-id="5bc27-190">-Packagemanagementprovider</span><span class="sxs-lookup"><span data-stu-id="5bc27-190">-PackageManagementProvider</span></span>
 
-<span data-ttu-id="174bf-191">Gibt den Namen eines Paket Verwaltungs Anbieters an.</span><span class="sxs-lookup"><span data-stu-id="174bf-191">Specifies the name of a package management provider.</span></span>
+<span data-ttu-id="5bc27-191">Gibt den Namen eines Paket Verwaltungs Anbieters an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-191">Specifies the name of a package management provider.</span></span>
 
 ```yaml
 Type: System.String
@@ -475,10 +475,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-192">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="174bf-192">-ProviderName</span></span>
+### <span data-ttu-id="5bc27-192">-ProviderName</span><span class="sxs-lookup"><span data-stu-id="5bc27-192">-ProviderName</span></span>
 
-<span data-ttu-id="174bf-193">Gibt einen oder mehrere Paketanbieter Namen an.</span><span class="sxs-lookup"><span data-stu-id="174bf-193">Specifies one or more package provider names.</span></span> <span data-ttu-id="174bf-194">Trennen Sie mehrere Paketanbieter Namen durch Kommas.</span><span class="sxs-lookup"><span data-stu-id="174bf-194">Separate multiple package provider names with commas.</span></span>
-<span data-ttu-id="174bf-195">Verwenden `Get-PackageProvider` Sie, um eine Liste der verfügbaren Paketanbieter zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="174bf-195">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
+<span data-ttu-id="5bc27-193">Gibt einen oder mehrere Paketanbieter Namen an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-193">Specifies one or more package provider names.</span></span> <span data-ttu-id="5bc27-194">Trennen Sie mehrere Paketanbieter Namen durch Kommas.</span><span class="sxs-lookup"><span data-stu-id="5bc27-194">Separate multiple package provider names with commas.</span></span>
+<span data-ttu-id="5bc27-195">Verwenden `Get-PackageProvider` Sie, um eine Liste der verfügbaren Paketanbieter zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-195">Use `Get-PackageProvider` to get a list of available package providers.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -493,9 +493,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-196">-Proxy</span><span class="sxs-lookup"><span data-stu-id="174bf-196">-Proxy</span></span>
+### <span data-ttu-id="5bc27-196">-Proxy</span><span class="sxs-lookup"><span data-stu-id="5bc27-196">-Proxy</span></span>
 
-<span data-ttu-id="174bf-197">Gibt einen Proxy Server für die Anforderung an, anstatt eine direkte Verbindung mit der Internet Ressource herzustellen.</span><span class="sxs-lookup"><span data-stu-id="174bf-197">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
+<span data-ttu-id="5bc27-197">Gibt einen Proxy Server für die Anforderung an, anstatt eine direkte Verbindung mit der Internet Ressource herzustellen.</span><span class="sxs-lookup"><span data-stu-id="5bc27-197">Specifies a proxy server for the request, rather than a direct connection to the internet resource.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -509,9 +509,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-198">-Proxy Credential</span><span class="sxs-lookup"><span data-stu-id="174bf-198">-ProxyCredential</span></span>
+### <span data-ttu-id="5bc27-198">-Proxy Credential</span><span class="sxs-lookup"><span data-stu-id="5bc27-198">-ProxyCredential</span></span>
 
-<span data-ttu-id="174bf-199">Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="174bf-199">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
+<span data-ttu-id="5bc27-199">Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="5bc27-199">Specifies a user account that has permission to use the proxy server that is specified by the **Proxy** parameter.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -525,9 +525,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-200">-Publishlocation</span><span class="sxs-lookup"><span data-stu-id="174bf-200">-PublishLocation</span></span>
+### <span data-ttu-id="5bc27-200">-Publishlocation</span><span class="sxs-lookup"><span data-stu-id="5bc27-200">-PublishLocation</span></span>
 
-<span data-ttu-id="174bf-201">Gibt einen Speicherort für die Veröffentlichung des Pakets an.</span><span class="sxs-lookup"><span data-stu-id="174bf-201">Specifies a location for publishing the package.</span></span>
+<span data-ttu-id="5bc27-201">Gibt einen Speicherort für die Veröffentlichung des Pakets an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-201">Specifies a location for publishing the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -541,9 +541,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-202">-Requirements dversion</span><span class="sxs-lookup"><span data-stu-id="174bf-202">-RequiredVersion</span></span>
+### <span data-ttu-id="5bc27-202">-Requirements dversion</span><span class="sxs-lookup"><span data-stu-id="5bc27-202">-RequiredVersion</span></span>
 
-<span data-ttu-id="174bf-203">Gibt eine genaue Paketversion an, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="174bf-203">Specifies an exact package version that you want to find.</span></span>
+<span data-ttu-id="5bc27-203">Gibt eine genaue Paketversion an, die Sie suchen möchten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-203">Specifies an exact package version that you want to find.</span></span>
 
 ```yaml
 Type: System.String
@@ -557,9 +557,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-204">-Rolecapability</span><span class="sxs-lookup"><span data-stu-id="174bf-204">-RoleCapability</span></span>
+### <span data-ttu-id="5bc27-204">-Rolecapability</span><span class="sxs-lookup"><span data-stu-id="5bc27-204">-RoleCapability</span></span>
 
-<span data-ttu-id="174bf-205">Gibt ein Array von Rollen Funktionen an.</span><span class="sxs-lookup"><span data-stu-id="174bf-205">Specifies an array of role capabilities.</span></span>
+<span data-ttu-id="5bc27-205">Gibt ein Array von Rollen Funktionen an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-205">Specifies an array of role capabilities.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -573,25 +573,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-206">-Scriptpublishlocation</span><span class="sxs-lookup"><span data-stu-id="174bf-206">-ScriptPublishLocation</span></span>
+### <span data-ttu-id="5bc27-206">-Scriptpublishlocation</span><span class="sxs-lookup"><span data-stu-id="5bc27-206">-ScriptPublishLocation</span></span>
 
-<span data-ttu-id="174bf-207">Gibt einen Speicherort für die Skript Veröffentlichung für das Paket an.</span><span class="sxs-lookup"><span data-stu-id="174bf-207">Specifies a script publishing location for the package.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: PowerShellGet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="174bf-208">-Scriptsourcelokation</span><span class="sxs-lookup"><span data-stu-id="174bf-208">-ScriptSourceLocation</span></span>
-
-<span data-ttu-id="174bf-209">Gibt einen Skript Quell Speicherort an.</span><span class="sxs-lookup"><span data-stu-id="174bf-209">Specifies a script source location.</span></span>
+<span data-ttu-id="5bc27-207">Gibt einen Speicherort für die Skript Veröffentlichung für das Paket an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-207">Specifies a script publishing location for the package.</span></span>
 
 ```yaml
 Type: System.String
@@ -605,9 +589,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-210">-Skipvalidate</span><span class="sxs-lookup"><span data-stu-id="174bf-210">-SkipValidate</span></span>
+### <span data-ttu-id="5bc27-208">-Scriptsourcelokation</span><span class="sxs-lookup"><span data-stu-id="5bc27-208">-ScriptSourceLocation</span></span>
 
-<span data-ttu-id="174bf-211">Der Schalter, der die Überprüfung der Paket Anmelde Informationen überspringt.</span><span class="sxs-lookup"><span data-stu-id="174bf-211">Switch that skips package credential validation.</span></span>
+<span data-ttu-id="5bc27-209">Gibt einen Skript Quell Speicherort an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-209">Specifies a script source location.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: PowerShellGet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bc27-210">-Skipvalidate</span><span class="sxs-lookup"><span data-stu-id="5bc27-210">-SkipValidate</span></span>
+
+<span data-ttu-id="5bc27-211">Der Schalter, der die Überprüfung der Paket Anmelde Informationen überspringt.</span><span class="sxs-lookup"><span data-stu-id="5bc27-211">Switch that skips package credential validation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -621,9 +621,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-212">-Source</span><span class="sxs-lookup"><span data-stu-id="174bf-212">-Source</span></span>
+### <span data-ttu-id="5bc27-212">-Source</span><span class="sxs-lookup"><span data-stu-id="5bc27-212">-Source</span></span>
 
-<span data-ttu-id="174bf-213">Gibt mindestens eine Paketquelle an.</span><span class="sxs-lookup"><span data-stu-id="174bf-213">Specifies one or more package sources.</span></span> <span data-ttu-id="174bf-214">Verwenden `Get-PackageSource` Sie, um eine Liste der verfügbaren Paketquellen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="174bf-214">Use `Get-PackageSource` to get a list of available package sources.</span></span> <span data-ttu-id="174bf-215">Ein Dateisystem Verzeichnis kann als Quelle für Download Pakete verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="174bf-215">A file system directory can be used as a source for download packages.</span></span>
+<span data-ttu-id="5bc27-213">Gibt mindestens eine Paketquelle an.</span><span class="sxs-lookup"><span data-stu-id="5bc27-213">Specifies one or more package sources.</span></span> <span data-ttu-id="5bc27-214">Verwenden `Get-PackageSource` Sie, um eine Liste der verfügbaren Paketquellen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="5bc27-214">Use `Get-PackageSource` to get a list of available package sources.</span></span> <span data-ttu-id="5bc27-215">Ein Dateisystem Verzeichnis kann als Quelle für Download Pakete verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5bc27-215">A file system directory can be used as a source for download packages.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -637,9 +637,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="174bf-216">-Tag</span></span>
+### <span data-ttu-id="5bc27-216">-Tag</span><span class="sxs-lookup"><span data-stu-id="5bc27-216">-Tag</span></span>
 
-<span data-ttu-id="174bf-217">Gibt eine oder mehrere Zeichen folgen an, die in den Paket Metadaten gesucht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="174bf-217">Specifies one or more strings to search for in the package metadata.</span></span>
+<span data-ttu-id="5bc27-217">Gibt eine oder mehrere Zeichen folgen an, die in den Paket Metadaten gesucht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5bc27-217">Specifies one or more strings to search for in the package metadata.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -653,9 +653,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-218">-Type</span><span class="sxs-lookup"><span data-stu-id="174bf-218">-Type</span></span>
+### <span data-ttu-id="5bc27-218">-Type</span><span class="sxs-lookup"><span data-stu-id="5bc27-218">-Type</span></span>
 
-<span data-ttu-id="174bf-219">Gibt an, ob nach Paketen mit einem Modul, einem Skript oder einer der beiden Optionen gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="174bf-219">Specifies whether to search for packages with a module, a script, or either.</span></span>
+<span data-ttu-id="5bc27-219">Gibt an, ob nach Paketen mit einem Modul, einem Skript oder einer der beiden Optionen gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="5bc27-219">Specifies whether to search for packages with a module, a script, or either.</span></span>
 
 ```yaml
 Type: System.String
@@ -670,36 +670,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="174bf-220">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="174bf-220">CommonParameters</span></span>
+### <span data-ttu-id="5bc27-220">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5bc27-220">CommonParameters</span></span>
 
-<span data-ttu-id="174bf-221">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="174bf-221">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="174bf-222">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="174bf-222">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="5bc27-221">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5bc27-221">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5bc27-222">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="5bc27-222">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="174bf-223">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="174bf-223">INPUTS</span></span>
+## <span data-ttu-id="5bc27-223">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="5bc27-223">INPUTS</span></span>
 
-### <span data-ttu-id="174bf-224">Keine</span><span class="sxs-lookup"><span data-stu-id="174bf-224">None</span></span>
+### <span data-ttu-id="5bc27-224">Keine</span><span class="sxs-lookup"><span data-stu-id="5bc27-224">None</span></span>
 
-<span data-ttu-id="174bf-225">`Find-Package` akzeptiert keine Eingaben aus der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="174bf-225">`Find-Package` doesn't accept input from the pipeline.</span></span>
+<span data-ttu-id="5bc27-225">`Find-Package` akzeptiert keine Eingaben aus der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="5bc27-225">`Find-Package` doesn't accept input from the pipeline.</span></span>
 
-## <span data-ttu-id="174bf-226">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="174bf-226">OUTPUTS</span></span>
+## <span data-ttu-id="5bc27-226">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="5bc27-226">OUTPUTS</span></span>
 
-### <span data-ttu-id="174bf-227">Softwareidentify []</span><span class="sxs-lookup"><span data-stu-id="174bf-227">SoftwareIdentify[]</span></span>
+### <span data-ttu-id="5bc27-227">Softwareidentify []</span><span class="sxs-lookup"><span data-stu-id="5bc27-227">SoftwareIdentify[]</span></span>
 
-<span data-ttu-id="174bf-228">`Find-Package` Gibt ein **softwareidentity** -Objekt aus.</span><span class="sxs-lookup"><span data-stu-id="174bf-228">`Find-Package` outputs a **SoftwareIdentity** object.</span></span>
+<span data-ttu-id="5bc27-228">`Find-Package` Gibt ein **softwareidentity** -Objekt aus.</span><span class="sxs-lookup"><span data-stu-id="5bc27-228">`Find-Package` outputs a **SoftwareIdentity** object.</span></span>
 
-## <span data-ttu-id="174bf-229">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="174bf-229">NOTES</span></span>
+## <span data-ttu-id="5bc27-229">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="5bc27-229">NOTES</span></span>
 
-## <span data-ttu-id="174bf-230">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="174bf-230">RELATED LINKS</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="5bc27-230">Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1.</span><span class="sxs-lookup"><span data-stu-id="5bc27-230">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="5bc27-231">Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="5bc27-231">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="5bc27-232">Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:</span><span class="sxs-lookup"><span data-stu-id="5bc27-232">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="5bc27-233">Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.</span><span class="sxs-lookup"><span data-stu-id="5bc27-233">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-[<span data-ttu-id="174bf-231">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="174bf-231">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
+## <span data-ttu-id="5bc27-234">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="5bc27-234">RELATED LINKS</span></span>
 
-[<span data-ttu-id="174bf-232">Get-Package</span><span class="sxs-lookup"><span data-stu-id="174bf-232">Get-Package</span></span>](Get-Package.md)
+[<span data-ttu-id="5bc27-235">about_PackageManagement</span><span class="sxs-lookup"><span data-stu-id="5bc27-235">about_PackageManagement</span></span>](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
 
-[<span data-ttu-id="174bf-233">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="174bf-233">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+[<span data-ttu-id="5bc27-236">Get-Package</span><span class="sxs-lookup"><span data-stu-id="5bc27-236">Get-Package</span></span>](Get-Package.md)
 
-[<span data-ttu-id="174bf-234">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="174bf-234">Get-PackageSource</span></span>](Get-PackageSource.md)
+[<span data-ttu-id="5bc27-237">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="5bc27-237">Get-PackageProvider</span></span>](Get-PackageProvider.md)
 
-[<span data-ttu-id="174bf-235">Install-Package</span><span class="sxs-lookup"><span data-stu-id="174bf-235">Install-Package</span></span>](Install-Package.md)
+[<span data-ttu-id="5bc27-238">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="5bc27-238">Get-PackageSource</span></span>](Get-PackageSource.md)
 
-[<span data-ttu-id="174bf-236">Save-Package</span><span class="sxs-lookup"><span data-stu-id="174bf-236">Save-Package</span></span>](Save-Package.md)
+[<span data-ttu-id="5bc27-239">Install-Package</span><span class="sxs-lookup"><span data-stu-id="5bc27-239">Install-Package</span></span>](Install-Package.md)
 
-[<span data-ttu-id="174bf-237">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="174bf-237">Uninstall-Package</span></span>](Uninstall-Package.md)
+[<span data-ttu-id="5bc27-240">Save-Package</span><span class="sxs-lookup"><span data-stu-id="5bc27-240">Save-Package</span></span>](Save-Package.md)
+
+[<span data-ttu-id="5bc27-241">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="5bc27-241">Uninstall-Package</span></span>](Uninstall-Package.md)

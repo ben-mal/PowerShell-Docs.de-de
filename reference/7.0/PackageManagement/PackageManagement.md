@@ -8,56 +8,63 @@ Module Name: PackageManagement
 ms.date: 06/09/2017
 schema: 2.0.0
 title: PackageManagement
-ms.openlocfilehash: 28138731e65e14ceb4295466891fcbd772333c87
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 01b1bce187cd0526e56abc812f91b44a2c022a29
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93220324"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890854"
 ---
-# <span data-ttu-id="971a9-103">PackageManagement-Modul</span><span class="sxs-lookup"><span data-stu-id="971a9-103">PackageManagement Module</span></span>
+# <span data-ttu-id="d6ff1-103">PackageManagement-Modul</span><span class="sxs-lookup"><span data-stu-id="d6ff1-103">PackageManagement Module</span></span>
 
-## <span data-ttu-id="971a9-104">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="971a9-104">Description</span></span>
+## <span data-ttu-id="d6ff1-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d6ff1-104">Description</span></span>
 
-<span data-ttu-id="971a9-105">In diesem Thema werden die Hilfe Themen für die Paketverwaltung-Cmdlets angezeigt.</span><span class="sxs-lookup"><span data-stu-id="971a9-105">This topic displays help topics for the Package Management Cmdlets.</span></span>
+<span data-ttu-id="d6ff1-105">In diesem Thema werden die Hilfe Themen für die Paketverwaltung-Cmdlets angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-105">This topic displays help topics for the Package Management Cmdlets.</span></span>
 
-## <span data-ttu-id="971a9-106">PackageManagement-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="971a9-106">PackageManagement Cmdlets</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="d6ff1-106">Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-106">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="d6ff1-107">Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-107">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="d6ff1-108">Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:</span><span class="sxs-lookup"><span data-stu-id="d6ff1-108">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="d6ff1-109">Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-109">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-### [<span data-ttu-id="971a9-107">Find-Package</span><span class="sxs-lookup"><span data-stu-id="971a9-107">Find-Package</span></span>](Find-Package.md)
-<span data-ttu-id="971a9-108">Findet Softwarepakete in verfügbaren Paketquellen.</span><span class="sxs-lookup"><span data-stu-id="971a9-108">Finds software packages in available package sources.</span></span>
+## <span data-ttu-id="d6ff1-110">PackageManagement-Cmdlets</span><span class="sxs-lookup"><span data-stu-id="d6ff1-110">PackageManagement Cmdlets</span></span>
 
-### [<span data-ttu-id="971a9-109">Find-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="971a9-109">Find-PackageProvider</span></span>](Find-PackageProvider.md)
-<span data-ttu-id="971a9-110">Gibt eine Liste von Paketverwaltung Paket Anbietern zurück, die für die Installation verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="971a9-110">Returns a list of Package Management package providers available for installation.</span></span>
+### [<span data-ttu-id="d6ff1-111">Find-Package</span><span class="sxs-lookup"><span data-stu-id="d6ff1-111">Find-Package</span></span>](Find-Package.md)
+<span data-ttu-id="d6ff1-112">Findet Softwarepakete in verfügbaren Paketquellen.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-112">Finds software packages in available package sources.</span></span>
 
-### [<span data-ttu-id="971a9-111">Get-Package</span><span class="sxs-lookup"><span data-stu-id="971a9-111">Get-Package</span></span>](Get-Package.md)
-<span data-ttu-id="971a9-112">Gibt eine Liste aller Softwarepakete zurück, die mit **packagemanagement** installiert wurden.</span><span class="sxs-lookup"><span data-stu-id="971a9-112">Returns a list of all software packages that were installed with **PackageManagement** .</span></span>
+### [<span data-ttu-id="d6ff1-113">Find-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="d6ff1-113">Find-PackageProvider</span></span>](Find-PackageProvider.md)
+<span data-ttu-id="d6ff1-114">Gibt eine Liste von Paketverwaltung Paket Anbietern zurück, die für die Installation verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-114">Returns a list of Package Management package providers available for installation.</span></span>
 
-### [<span data-ttu-id="971a9-113">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="971a9-113">Get-PackageProvider</span></span>](Get-PackageProvider.md)
-<span data-ttu-id="971a9-114">Gibt eine Liste von Paket Anbietern zurück, die mit Paketverwaltung verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="971a9-114">Returns a list of package providers that are connected to Package Management.</span></span>
+### [<span data-ttu-id="d6ff1-115">Get-Package</span><span class="sxs-lookup"><span data-stu-id="d6ff1-115">Get-Package</span></span>](Get-Package.md)
+<span data-ttu-id="d6ff1-116">Gibt eine Liste aller Softwarepakete zurück, die mit **packagemanagement** installiert wurden.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-116">Returns a list of all software packages that were installed with **PackageManagement**.</span></span>
 
-### [<span data-ttu-id="971a9-115">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="971a9-115">Get-PackageSource</span></span>](Get-PackageSource.md)
-<span data-ttu-id="971a9-116">Ruft eine Liste der Paketquellen ab, die für einen Paketanbieter registriert sind.</span><span class="sxs-lookup"><span data-stu-id="971a9-116">Gets a list of package sources that are registered for a package provider.</span></span>
+### [<span data-ttu-id="d6ff1-117">Get-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="d6ff1-117">Get-PackageProvider</span></span>](Get-PackageProvider.md)
+<span data-ttu-id="d6ff1-118">Gibt eine Liste von Paket Anbietern zurück, die mit Paketverwaltung verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-118">Returns a list of package providers that are connected to Package Management.</span></span>
 
-### [<span data-ttu-id="971a9-117">Import-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="971a9-117">Import-PackageProvider</span></span>](Import-PackageProvider.md)
-<span data-ttu-id="971a9-118">Fügt der aktuellen Sitzung Paketverwaltung Paketanbieter hinzu.</span><span class="sxs-lookup"><span data-stu-id="971a9-118">Adds Package Management package providers to the current session.</span></span>
+### [<span data-ttu-id="d6ff1-119">Get-PackageSource</span><span class="sxs-lookup"><span data-stu-id="d6ff1-119">Get-PackageSource</span></span>](Get-PackageSource.md)
+<span data-ttu-id="d6ff1-120">Ruft eine Liste der Paketquellen ab, die für einen Paketanbieter registriert sind.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-120">Gets a list of package sources that are registered for a package provider.</span></span>
 
-### [<span data-ttu-id="971a9-119">Install-Package</span><span class="sxs-lookup"><span data-stu-id="971a9-119">Install-Package</span></span>](Install-Package.md)
-<span data-ttu-id="971a9-120">Installiert mindestens ein Softwarepaket.</span><span class="sxs-lookup"><span data-stu-id="971a9-120">Installs one or more software packages.</span></span>
+### [<span data-ttu-id="d6ff1-121">Import-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="d6ff1-121">Import-PackageProvider</span></span>](Import-PackageProvider.md)
+<span data-ttu-id="d6ff1-122">Fügt der aktuellen Sitzung Paketverwaltung Paketanbieter hinzu.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-122">Adds Package Management package providers to the current session.</span></span>
 
-### [<span data-ttu-id="971a9-121">Install-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="971a9-121">Install-PackageProvider</span></span>](Install-PackageProvider.md)
-<span data-ttu-id="971a9-122">Installiert einen oder mehrere Paketverwaltung Paketanbieter.</span><span class="sxs-lookup"><span data-stu-id="971a9-122">Installs one or more Package Management package providers.</span></span>
+### [<span data-ttu-id="d6ff1-123">Install-Package</span><span class="sxs-lookup"><span data-stu-id="d6ff1-123">Install-Package</span></span>](Install-Package.md)
+<span data-ttu-id="d6ff1-124">Installiert mindestens ein Softwarepaket.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-124">Installs one or more software packages.</span></span>
 
-### [<span data-ttu-id="971a9-123">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="971a9-123">Register-PackageSource</span></span>](Register-PackageSource.md)
-<span data-ttu-id="971a9-124">Fügt eine Paketquelle für einen angegebenen Paketanbieter hinzu.</span><span class="sxs-lookup"><span data-stu-id="971a9-124">Adds a package source for a specified package provider.</span></span>
+### [<span data-ttu-id="d6ff1-125">Install-PackageProvider</span><span class="sxs-lookup"><span data-stu-id="d6ff1-125">Install-PackageProvider</span></span>](Install-PackageProvider.md)
+<span data-ttu-id="d6ff1-126">Installiert einen oder mehrere Paketverwaltung Paketanbieter.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-126">Installs one or more Package Management package providers.</span></span>
 
-### [<span data-ttu-id="971a9-125">Save-Package</span><span class="sxs-lookup"><span data-stu-id="971a9-125">Save-Package</span></span>](Save-Package.md)
-<span data-ttu-id="971a9-126">Speichert Pakete auf dem lokalen Computer, ohne Sie zu installieren.</span><span class="sxs-lookup"><span data-stu-id="971a9-126">Saves packages to the local computer without installing them.</span></span>
+### [<span data-ttu-id="d6ff1-127">Register-PackageSource</span><span class="sxs-lookup"><span data-stu-id="d6ff1-127">Register-PackageSource</span></span>](Register-PackageSource.md)
+<span data-ttu-id="d6ff1-128">Fügt eine Paketquelle für einen angegebenen Paketanbieter hinzu.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-128">Adds a package source for a specified package provider.</span></span>
 
-### [<span data-ttu-id="971a9-127">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="971a9-127">Set-PackageSource</span></span>](Set-PackageSource.md)
-<span data-ttu-id="971a9-128">Ersetzt eine Paketquelle für einen angegebenen Paketanbieter.</span><span class="sxs-lookup"><span data-stu-id="971a9-128">Replaces a package source for a specified package provider.</span></span>
+### [<span data-ttu-id="d6ff1-129">Save-Package</span><span class="sxs-lookup"><span data-stu-id="d6ff1-129">Save-Package</span></span>](Save-Package.md)
+<span data-ttu-id="d6ff1-130">Speichert Pakete auf dem lokalen Computer, ohne Sie zu installieren.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-130">Saves packages to the local computer without installing them.</span></span>
 
-### [<span data-ttu-id="971a9-129">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="971a9-129">Uninstall-Package</span></span>](Uninstall-Package.md)
-<span data-ttu-id="971a9-130">Deinstalliert mindestens ein Softwarepaket.</span><span class="sxs-lookup"><span data-stu-id="971a9-130">Uninstalls one or more software packages.</span></span>
+### [<span data-ttu-id="d6ff1-131">Set-PackageSource</span><span class="sxs-lookup"><span data-stu-id="d6ff1-131">Set-PackageSource</span></span>](Set-PackageSource.md)
+<span data-ttu-id="d6ff1-132">Ersetzt eine Paketquelle für einen angegebenen Paketanbieter.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-132">Replaces a package source for a specified package provider.</span></span>
 
-### [<span data-ttu-id="971a9-131">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="971a9-131">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
-<span data-ttu-id="971a9-132">Entfernt eine registrierte Paketquelle.</span><span class="sxs-lookup"><span data-stu-id="971a9-132">Removes a registered package source.</span></span>
+### [<span data-ttu-id="d6ff1-133">Uninstall-Package</span><span class="sxs-lookup"><span data-stu-id="d6ff1-133">Uninstall-Package</span></span>](Uninstall-Package.md)
+<span data-ttu-id="d6ff1-134">Deinstalliert mindestens ein Softwarepaket.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-134">Uninstalls one or more software packages.</span></span>
+
+### [<span data-ttu-id="d6ff1-135">Unregister-PackageSource</span><span class="sxs-lookup"><span data-stu-id="d6ff1-135">Unregister-PackageSource</span></span>](Unregister-PackageSource.md)
+<span data-ttu-id="d6ff1-136">Entfernt eine registrierte Paketquelle.</span><span class="sxs-lookup"><span data-stu-id="d6ff1-136">Removes a registered package source.</span></span>

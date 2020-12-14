@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/25/2019
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-service?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Service
-ms.openlocfilehash: 81920303d130a306674033b2b1ba57a3e71c949c
-ms.sourcegitcommit: 177ae45034b58ead716853096b2e72e4864e6df6
+ms.openlocfilehash: 39c03ec53056c5ec8e2d68f9b71a17a6f4a8ea8a
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94347430"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890415"
 ---
-# <span data-ttu-id="df6d8-103">New-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-103">New-Service</span></span>
+# <span data-ttu-id="190f7-103">New-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-103">New-Service</span></span>
 
-## <span data-ttu-id="df6d8-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="df6d8-104">SYNOPSIS</span></span>
-<span data-ttu-id="df6d8-105">Erstellt einen neuen Windows-Dienst.</span><span class="sxs-lookup"><span data-stu-id="df6d8-105">Creates a new Windows service.</span></span>
+## <span data-ttu-id="190f7-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="190f7-104">SYNOPSIS</span></span>
+<span data-ttu-id="190f7-105">Erstellt einen neuen Windows-Dienst.</span><span class="sxs-lookup"><span data-stu-id="190f7-105">Creates a new Windows service.</span></span>
 
-## <span data-ttu-id="df6d8-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="df6d8-106">SYNTAX</span></span>
+## <span data-ttu-id="190f7-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="190f7-106">SYNTAX</span></span>
 
 ```
 New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] [-Description <String>]
@@ -27,28 +27,28 @@ New-Service [-Name] <String> [-BinaryPathName] <String> [-DisplayName <String>] 
  [-DependsOn <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="df6d8-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="df6d8-107">DESCRIPTION</span></span>
+## <span data-ttu-id="190f7-107">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="190f7-107">DESCRIPTION</span></span>
 
-<span data-ttu-id="df6d8-108">`New-Service`Mit dem-Cmdlet wird ein neuer Eintrag für einen Windows-Dienst in der Registrierung und in der Dienst Datenbank erstellt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-108">The `New-Service` cmdlet creates a new entry for a Windows service in the registry and in the service database.</span></span> <span data-ttu-id="df6d8-109">Ein neuer Dienst erfordert eine ausführbare Datei, die während des Dienstanbieter ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="df6d8-109">A new service requires an executable file that runs during the service.</span></span>
+<span data-ttu-id="190f7-108">`New-Service`Mit dem-Cmdlet wird ein neuer Eintrag für einen Windows-Dienst in der Registrierung und in der Dienst Datenbank erstellt.</span><span class="sxs-lookup"><span data-stu-id="190f7-108">The `New-Service` cmdlet creates a new entry for a Windows service in the registry and in the service database.</span></span> <span data-ttu-id="190f7-109">Ein neuer Dienst erfordert eine ausführbare Datei, die während des Dienstanbieter ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="190f7-109">A new service requires an executable file that runs during the service.</span></span>
 
-<span data-ttu-id="df6d8-110">Mit den Parametern dieses Cmdlets können Sie den Anzeigenamen, die Beschreibung, den Starttyp und die Abhängigkeiten des Diensts festlegen.</span><span class="sxs-lookup"><span data-stu-id="df6d8-110">The parameters of this cmdlet let you set the display name, description, startup type, and dependencies of the service.</span></span>
+<span data-ttu-id="190f7-110">Mit den Parametern dieses Cmdlets können Sie den Anzeigenamen, die Beschreibung, den Starttyp und die Abhängigkeiten des Diensts festlegen.</span><span class="sxs-lookup"><span data-stu-id="190f7-110">The parameters of this cmdlet let you set the display name, description, startup type, and dependencies of the service.</span></span>
 
-## <span data-ttu-id="df6d8-111">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="df6d8-111">EXAMPLES</span></span>
+## <span data-ttu-id="190f7-111">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="190f7-111">EXAMPLES</span></span>
 
-### <span data-ttu-id="df6d8-112">Beispiel 1: Erstellen eines Dienstanbieter</span><span class="sxs-lookup"><span data-stu-id="df6d8-112">Example 1: Create a service</span></span>
+### <span data-ttu-id="190f7-112">Beispiel 1: Erstellen eines Dienstanbieter</span><span class="sxs-lookup"><span data-stu-id="190f7-112">Example 1: Create a service</span></span>
 
 ```powershell
-New-Service -Name "TestService" -BinaryPathName "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+New-Service -Name "TestService" -BinaryPathName '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
 ```
 
-<span data-ttu-id="df6d8-113">Dieser Befehl erstellt einen Dienst mit dem Namen "TestService".</span><span class="sxs-lookup"><span data-stu-id="df6d8-113">This command creates a service named TestService.</span></span>
+<span data-ttu-id="190f7-113">Dieser Befehl erstellt einen Dienst mit dem Namen "TestService".</span><span class="sxs-lookup"><span data-stu-id="190f7-113">This command creates a service named TestService.</span></span>
 
-### <span data-ttu-id="df6d8-114">Beispiel 2: Erstellen eines diensnamens, der Beschreibung, Starttyp und Anzeige Name enthält</span><span class="sxs-lookup"><span data-stu-id="df6d8-114">Example 2: Create a service that includes description, startup type, and display name</span></span>
+### <span data-ttu-id="190f7-114">Beispiel 2: Erstellen eines diensnamens, der Beschreibung, Starttyp und Anzeige Name enthält</span><span class="sxs-lookup"><span data-stu-id="190f7-114">Example 2: Create a service that includes description, startup type, and display name</span></span>
 
 ```powershell
 $params = @{
   Name = "TestService"
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName = "Test Service"
   StartupType = "Manual"
@@ -57,9 +57,9 @@ $params = @{
 New-Service @params
 ```
 
-<span data-ttu-id="df6d8-115">Dieser Befehl erstellt einen Dienst mit dem Namen "TestService".</span><span class="sxs-lookup"><span data-stu-id="df6d8-115">This command creates a service named TestService.</span></span> <span data-ttu-id="df6d8-116">Er verwendet die Parameter von, `New-Service` um eine Beschreibung, einen Starttyp und den anzeigen Amen für den neuen Dienst anzugeben.</span><span class="sxs-lookup"><span data-stu-id="df6d8-116">It uses the parameters of `New-Service` to specify a description, startup type, and display name for the new service.</span></span>
+<span data-ttu-id="190f7-115">Dieser Befehl erstellt einen Dienst mit dem Namen "TestService".</span><span class="sxs-lookup"><span data-stu-id="190f7-115">This command creates a service named TestService.</span></span> <span data-ttu-id="190f7-116">Er verwendet die Parameter von, `New-Service` um eine Beschreibung, einen Starttyp und den anzeigen Amen für den neuen Dienst anzugeben.</span><span class="sxs-lookup"><span data-stu-id="190f7-116">It uses the parameters of `New-Service` to specify a description, startup type, and display name for the new service.</span></span>
 
-### <span data-ttu-id="df6d8-117">Beispiel 3: Anzeigen des neuen Dienstanbieter</span><span class="sxs-lookup"><span data-stu-id="df6d8-117">Example 3: View the new service</span></span>
+### <span data-ttu-id="190f7-117">Beispiel 3: Anzeigen des neuen Dienstanbieter</span><span class="sxs-lookup"><span data-stu-id="190f7-117">Example 3: View the new service</span></span>
 
 ```powershell
 Get-CimInstance -ClassName Win32_Service -Filter "Name='testservice'"
@@ -74,16 +74,16 @@ State     : Stopped
 Status    : OK
 ```
 
-<span data-ttu-id="df6d8-118">Dieser Befehl verwendet `Get-CimInstance` , um das **Win32_Service** -Objekt für den neuen Dienst zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="df6d8-118">This command uses `Get-CimInstance` to get the **Win32_Service** object for the new service.</span></span> <span data-ttu-id="df6d8-119">Dieses Objekt enthält den Startmodus und die Dienstbeschreibung.</span><span class="sxs-lookup"><span data-stu-id="df6d8-119">This object includes the start mode and the service description.</span></span>
+<span data-ttu-id="190f7-118">Dieser Befehl verwendet `Get-CimInstance` , um das **Win32_Service** -Objekt für den neuen Dienst zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="190f7-118">This command uses `Get-CimInstance` to get the **Win32_Service** object for the new service.</span></span> <span data-ttu-id="190f7-119">Dieses Objekt enthält den Startmodus und die Dienstbeschreibung.</span><span class="sxs-lookup"><span data-stu-id="190f7-119">This object includes the start mode and the service description.</span></span>
 
-### <span data-ttu-id="df6d8-120">Beispiel 4: Festlegen des securitydescriptors eines Dienstanbieter bei der Erstellung.</span><span class="sxs-lookup"><span data-stu-id="df6d8-120">Example 4: Set the SecurityDescriptor of a service when creating.</span></span>
+### <span data-ttu-id="190f7-120">Beispiel 4: Festlegen des securitydescriptors eines Dienstanbieter bei der Erstellung.</span><span class="sxs-lookup"><span data-stu-id="190f7-120">Example 4: Set the SecurityDescriptor of a service when creating.</span></span>
 
-<span data-ttu-id="df6d8-121">In diesem Beispiel wird der **securityDescriptor** des erstellten Dienstanbieter hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-121">This example adds the **SecurityDescriptor** of the service being created.</span></span>
+<span data-ttu-id="190f7-121">In diesem Beispiel wird der **securityDescriptor** des erstellten Dienstanbieter hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="190f7-121">This example adds the **SecurityDescriptor** of the service being created.</span></span>
 
 ```powershell
 $SDDL = "D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;SU)"
 $params = @{
-  BinaryPathName = "C:\WINDOWS\System32\svchost.exe -k netsvcs"
+  BinaryPathName = '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
   DependsOn = "NetLogon"
   DisplayName "Test Service"
   StartupType = "Manual"
@@ -93,13 +93,19 @@ $params = @{
 New-Service @params
 ```
 
-<span data-ttu-id="df6d8-122">Der **securityDescriptor** wird in der `$SDDLToSet` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="df6d8-122">The **SecurityDescriptor** is stored in the `$SDDLToSet` variable.</span></span> <span data-ttu-id="df6d8-123">Der **securitydescriptorsddl** -Parameter verwendet `$SDDL` , um den **securityDescriptor** des neuen Dienstanbieter festzulegen.</span><span class="sxs-lookup"><span data-stu-id="df6d8-123">The **SecurityDescriptorSddl** parameter uses `$SDDL` to set the **SecurityDescriptor** of the new service.</span></span>
+<span data-ttu-id="190f7-122">Der **securityDescriptor** wird in der `$SDDLToSet` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="190f7-122">The **SecurityDescriptor** is stored in the `$SDDLToSet` variable.</span></span> <span data-ttu-id="190f7-123">Der **securitydescriptorsddl** -Parameter verwendet `$SDDL` , um den **securityDescriptor** des neuen Dienstanbieter festzulegen.</span><span class="sxs-lookup"><span data-stu-id="190f7-123">The **SecurityDescriptorSddl** parameter uses `$SDDL` to set the **SecurityDescriptor** of the new service.</span></span>
 
-## <span data-ttu-id="df6d8-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="df6d8-124">PARAMETERS</span></span>
+## <span data-ttu-id="190f7-124">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="190f7-124">PARAMETERS</span></span>
 
-### <span data-ttu-id="df6d8-125">-Binarypathname</span><span class="sxs-lookup"><span data-stu-id="df6d8-125">-BinaryPathName</span></span>
+### <span data-ttu-id="190f7-125">-Binarypathname</span><span class="sxs-lookup"><span data-stu-id="190f7-125">-BinaryPathName</span></span>
 
-<span data-ttu-id="df6d8-126">Gibt den Pfad der ausführbaren Datei für den Dienst an.</span><span class="sxs-lookup"><span data-stu-id="df6d8-126">Specifies the path of the executable file for the service.</span></span> <span data-ttu-id="df6d8-127">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="df6d8-127">This parameter is required.</span></span>
+<span data-ttu-id="190f7-126">Gibt den Pfad der ausführbaren Datei für den Dienst an.</span><span class="sxs-lookup"><span data-stu-id="190f7-126">Specifies the path of the executable file for the service.</span></span> <span data-ttu-id="190f7-127">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="190f7-127">This parameter is required.</span></span>
+
+<span data-ttu-id="190f7-128">Der voll qualifizierte Pfad der Dienst Binärdatei.</span><span class="sxs-lookup"><span data-stu-id="190f7-128">The fully qualified path to the service binary file.</span></span> <span data-ttu-id="190f7-129">Wenn der Pfad ein Leerzeichen enthält, muss er in Anführungszeichen eingeschlossen werden, damit er ordnungsgemäß interpretiert wird.</span><span class="sxs-lookup"><span data-stu-id="190f7-129">If the path contains a space, it must be quoted so that it is correctly interpreted.</span></span> <span data-ttu-id="190f7-130">Beispielsweise muss `d:\my share\myservice.exe` als angegeben werden `'"d:\my share\myservice.exe"'` .</span><span class="sxs-lookup"><span data-stu-id="190f7-130">For example, `d:\my share\myservice.exe` should be specified as `'"d:\my share\myservice.exe"'`.</span></span>
+
+<span data-ttu-id="190f7-131">Der Pfad kann auch Argumente für einen automatischen Start Dienst enthalten.</span><span class="sxs-lookup"><span data-stu-id="190f7-131">The path can also include arguments for an auto-start service.</span></span> <span data-ttu-id="190f7-132">Beispielsweise `'"d:\myshare\myservice.exe arg1 arg2"'`.</span><span class="sxs-lookup"><span data-stu-id="190f7-132">For example, `'"d:\myshare\myservice.exe arg1 arg2"'`.</span></span> <span data-ttu-id="190f7-133">Diese Argumente werden an den Dienst Einstiegspunkt übermittelt.</span><span class="sxs-lookup"><span data-stu-id="190f7-133">These arguments are passed to the service entry point.</span></span>
+
+<span data-ttu-id="190f7-134">Weitere Informationen finden Sie unter dem **lpbinarypathname** -Parameter der " [feateservicew](/windows/win32/api/winsvc/nf-winsvc-createservicew) "-API.</span><span class="sxs-lookup"><span data-stu-id="190f7-134">For more information, see the **lpBinaryPathName** parameter of [CreateServiceW](/windows/win32/api/winsvc/nf-winsvc-createservicew) API.</span></span>
 
 ```yaml
 Type: System.String
@@ -113,16 +119,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-128">-Credential</span><span class="sxs-lookup"><span data-stu-id="df6d8-128">-Credential</span></span>
+### <span data-ttu-id="190f7-135">-Credential</span><span class="sxs-lookup"><span data-stu-id="190f7-135">-Credential</span></span>
 
-<span data-ttu-id="df6d8-129">Gibt das Konto an, das vom Dienst als [Dienst Anmelde Konto](/windows/desktop/ad/about-service-logon-accounts)verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="df6d8-129">Specifies the account used by the service as the [Service Logon Account](/windows/desktop/ad/about-service-logon-accounts).</span></span>
+<span data-ttu-id="190f7-136">Gibt das Konto an, das vom Dienst als [Dienst Anmelde Konto](/windows/desktop/ad/about-service-logon-accounts)verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="190f7-136">Specifies the account used by the service as the [Service Logon Account](/windows/desktop/ad/about-service-logon-accounts).</span></span>
 
-<span data-ttu-id="df6d8-130">Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01** , oder geben Sie ein **PSCredential** -Objekt ein, z. b. ein vom `Get-Credential` Cmdlet generiertes Objekt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-130">Type a user name, such as **User01** or **Domain01\User01** , or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="df6d8-131">Wenn Sie einen Benutzernamen eingeben, werden Sie von diesem Cmdlet zur Eingabe eines Kennworts aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="df6d8-131">If you type a user name, this cmdlet prompts you for a password.</span></span>
+<span data-ttu-id="190f7-137">Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01**, oder geben Sie ein **PSCredential** -Objekt ein, z. b. ein vom `Get-Credential` Cmdlet generiertes Objekt.</span><span class="sxs-lookup"><span data-stu-id="190f7-137">Type a user name, such as **User01** or **Domain01\User01**, or enter a **PSCredential** object, such as one generated by the `Get-Credential` cmdlet.</span></span> <span data-ttu-id="190f7-138">Wenn Sie einen Benutzernamen eingeben, werden Sie von diesem Cmdlet zur Eingabe eines Kennworts aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="190f7-138">If you type a user name, this cmdlet prompts you for a password.</span></span>
 
-<span data-ttu-id="df6d8-132">Anmelde Informationen werden in einem [PSCredential](/dotnet/api/system.management.automation.pscredential) -Objekt gespeichert, und das Kennwort wird als [SecureString](/dotnet/api/system.security.securestring)gespeichert.</span><span class="sxs-lookup"><span data-stu-id="df6d8-132">Credentials are stored in a [PSCredential](/dotnet/api/system.management.automation.pscredential) object and the password is stored as a [SecureString](/dotnet/api/system.security.securestring).</span></span>
+<span data-ttu-id="190f7-139">Anmelde Informationen werden in einem [PSCredential](/dotnet/api/system.management.automation.pscredential) -Objekt gespeichert, und das Kennwort wird als [SecureString](/dotnet/api/system.security.securestring)gespeichert.</span><span class="sxs-lookup"><span data-stu-id="190f7-139">Credentials are stored in a [PSCredential](/dotnet/api/system.management.automation.pscredential) object and the password is stored as a [SecureString](/dotnet/api/system.security.securestring).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="df6d8-133">Weitere Informationen zum Schutz von **SecureString** -Daten finden Sie unter [wie sicher ist SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span><span class="sxs-lookup"><span data-stu-id="df6d8-133">For more information about **SecureString** data protection, see [How secure is SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span></span>
+> <span data-ttu-id="190f7-140">Weitere Informationen zum Schutz von **SecureString** -Daten finden Sie unter [wie sicher ist SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span><span class="sxs-lookup"><span data-stu-id="190f7-140">For more information about **SecureString** data protection, see [How secure is SecureString?](/dotnet/api/system.security.securestring#how-secure-is-securestring).</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -136,9 +142,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-134">-DependsOn</span><span class="sxs-lookup"><span data-stu-id="df6d8-134">-DependsOn</span></span>
+### <span data-ttu-id="190f7-141">-DependsOn</span><span class="sxs-lookup"><span data-stu-id="190f7-141">-DependsOn</span></span>
 
-<span data-ttu-id="df6d8-135">Gibt die Namen anderer Dienste an, von denen der neue Dienst abhängt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-135">Specifies the names of other services upon which the new service depends.</span></span> <span data-ttu-id="df6d8-136">Trennen Sie zum Eingeben mehrerer Dienstnamen die Namen durch Trennzeichen.</span><span class="sxs-lookup"><span data-stu-id="df6d8-136">To enter multiple service names, use a comma to separate the names.</span></span>
+<span data-ttu-id="190f7-142">Gibt die Namen anderer Dienste an, von denen der neue Dienst abhängt.</span><span class="sxs-lookup"><span data-stu-id="190f7-142">Specifies the names of other services upon which the new service depends.</span></span> <span data-ttu-id="190f7-143">Trennen Sie zum Eingeben mehrerer Dienstnamen die Namen durch Trennzeichen.</span><span class="sxs-lookup"><span data-stu-id="190f7-143">To enter multiple service names, use a comma to separate the names.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -152,25 +158,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-137">-Description</span><span class="sxs-lookup"><span data-stu-id="df6d8-137">-Description</span></span>
+### <span data-ttu-id="190f7-144">-Description</span><span class="sxs-lookup"><span data-stu-id="190f7-144">-Description</span></span>
 
-<span data-ttu-id="df6d8-138">Gibt eine Beschreibung des Diensts an.</span><span class="sxs-lookup"><span data-stu-id="df6d8-138">Specifies a description of the service.</span></span>
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="df6d8-139">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="df6d8-139">-DisplayName</span></span>
-
-<span data-ttu-id="df6d8-140">Gibt einen Anzeigenamen für den Dienst an.</span><span class="sxs-lookup"><span data-stu-id="df6d8-140">Specifies a display name for the service.</span></span>
+<span data-ttu-id="190f7-145">Gibt eine Beschreibung des Diensts an.</span><span class="sxs-lookup"><span data-stu-id="190f7-145">Specifies a description of the service.</span></span>
 
 ```yaml
 Type: System.String
@@ -184,9 +174,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-141">-Name</span><span class="sxs-lookup"><span data-stu-id="df6d8-141">-Name</span></span>
+### <span data-ttu-id="190f7-146">-DisplayName</span><span class="sxs-lookup"><span data-stu-id="190f7-146">-DisplayName</span></span>
 
-<span data-ttu-id="df6d8-142">Gibt den Namen des Diensts an.</span><span class="sxs-lookup"><span data-stu-id="df6d8-142">Specifies the name of the service.</span></span> <span data-ttu-id="df6d8-143">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="df6d8-143">This parameter is required.</span></span>
+<span data-ttu-id="190f7-147">Gibt einen Anzeigenamen für den Dienst an.</span><span class="sxs-lookup"><span data-stu-id="190f7-147">Specifies a display name for the service.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="190f7-148">-Name</span><span class="sxs-lookup"><span data-stu-id="190f7-148">-Name</span></span>
+
+<span data-ttu-id="190f7-149">Gibt den Namen des Diensts an.</span><span class="sxs-lookup"><span data-stu-id="190f7-149">Specifies the name of the service.</span></span> <span data-ttu-id="190f7-150">Dieser Parameter ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="190f7-150">This parameter is required.</span></span>
 
 ```yaml
 Type: System.String
@@ -200,18 +206,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-144">-StartupType</span><span class="sxs-lookup"><span data-stu-id="df6d8-144">-StartupType</span></span>
+### <span data-ttu-id="190f7-151">-StartupType</span><span class="sxs-lookup"><span data-stu-id="190f7-151">-StartupType</span></span>
 
-<span data-ttu-id="df6d8-145">Legt den Starttyp des Diensts fest.</span><span class="sxs-lookup"><span data-stu-id="df6d8-145">Sets the startup type of the service.</span></span> <span data-ttu-id="df6d8-146">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="df6d8-146">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="190f7-152">Legt den Starttyp des Diensts fest.</span><span class="sxs-lookup"><span data-stu-id="190f7-152">Sets the startup type of the service.</span></span> <span data-ttu-id="190f7-153">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="190f7-153">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="df6d8-147">**Automatisch** : der Dienst wurde gestartet oder vom Betriebssystem beim Systemstart gestartet.</span><span class="sxs-lookup"><span data-stu-id="df6d8-147">**Automatic** - The service is started or was started by the operating system, at system start-up.</span></span>
-  <span data-ttu-id="df6d8-148">Wenn ein automatisch gestarteter Dienst von einem manuell gestarteten Dienst abhängig ist, wird der manuell gestartete Dienst beim Systemstart ebenfalls automatisch gestartet.</span><span class="sxs-lookup"><span data-stu-id="df6d8-148">If an automatically started service depends on a manually started service, the manually started service is also started automatically at system startup.</span></span>
-- <span data-ttu-id="df6d8-149">**Automaticdelayedstart** : startet kurz nach dem Systemstart.</span><span class="sxs-lookup"><span data-stu-id="df6d8-149">**AutomaticDelayedStart** - Starts shortly after the system boots.</span></span>
-- <span data-ttu-id="df6d8-150">**Deaktiviert** : der Dienst ist deaktiviert und kann nicht von einem Benutzer oder einer Anwendung gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="df6d8-150">**Disabled** - The service is disabled and cannot be started by a user or application.</span></span>
-- <span data-ttu-id="df6d8-151">**Invalidvalue** : dieser Wert wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-151">**InvalidValue** - This value is not supported.</span></span> <span data-ttu-id="df6d8-152">Die Verwendung dieses Werts führt zu einem Fehler.</span><span class="sxs-lookup"><span data-stu-id="df6d8-152">Using this value results in an error.</span></span>
-- <span data-ttu-id="df6d8-153">**Manuell: der** Dienst wird nur manuell von einem Benutzer, über den Dienststeuerungs-Manager oder durch eine Anwendung gestartet.</span><span class="sxs-lookup"><span data-stu-id="df6d8-153">**Manual** - The service is started only manually, by a user, using the Service Control Manager, or by an application.</span></span>
+- <span data-ttu-id="190f7-154">**Automatisch** : der Dienst wurde gestartet oder vom Betriebssystem beim Systemstart gestartet.</span><span class="sxs-lookup"><span data-stu-id="190f7-154">**Automatic** - The service is started or was started by the operating system, at system start-up.</span></span>
+  <span data-ttu-id="190f7-155">Wenn ein automatisch gestarteter Dienst von einem manuell gestarteten Dienst abhängig ist, wird der manuell gestartete Dienst beim Systemstart ebenfalls automatisch gestartet.</span><span class="sxs-lookup"><span data-stu-id="190f7-155">If an automatically started service depends on a manually started service, the manually started service is also started automatically at system startup.</span></span>
+- <span data-ttu-id="190f7-156">**Automaticdelayedstart** : startet kurz nach dem Systemstart.</span><span class="sxs-lookup"><span data-stu-id="190f7-156">**AutomaticDelayedStart** - Starts shortly after the system boots.</span></span>
+- <span data-ttu-id="190f7-157">**Deaktiviert** : der Dienst ist deaktiviert und kann nicht von einem Benutzer oder einer Anwendung gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="190f7-157">**Disabled** - The service is disabled and cannot be started by a user or application.</span></span>
+- <span data-ttu-id="190f7-158">**Invalidvalue** : dieser Wert wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="190f7-158">**InvalidValue** - This value is not supported.</span></span> <span data-ttu-id="190f7-159">Die Verwendung dieses Werts führt zu einem Fehler.</span><span class="sxs-lookup"><span data-stu-id="190f7-159">Using this value results in an error.</span></span>
+- <span data-ttu-id="190f7-160">**Manuell: der** Dienst wird nur manuell von einem Benutzer, über den Dienststeuerungs-Manager oder durch eine Anwendung gestartet.</span><span class="sxs-lookup"><span data-stu-id="190f7-160">**Manual** - The service is started only manually, by a user, using the Service Control Manager, or by an application.</span></span>
 
- <span data-ttu-id="df6d8-154">Der Standardwert ist **automatisch**.</span><span class="sxs-lookup"><span data-stu-id="df6d8-154">The default value is **Automatic**.</span></span>
+ <span data-ttu-id="190f7-161">Der Standardwert ist **automatisch**.</span><span class="sxs-lookup"><span data-stu-id="190f7-161">The default value is **Automatic**.</span></span>
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.ServiceStartupType
@@ -226,9 +232,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-155">-SecurityDescriptor SDDL</span><span class="sxs-lookup"><span data-stu-id="df6d8-155">-SecurityDescriptorSddl</span></span>
+### <span data-ttu-id="190f7-162">-SecurityDescriptor SDDL</span><span class="sxs-lookup"><span data-stu-id="190f7-162">-SecurityDescriptorSddl</span></span>
 
-<span data-ttu-id="df6d8-156">Gibt den **securityDescriptor** für den Dienst im **SDDL** -Format an.</span><span class="sxs-lookup"><span data-stu-id="df6d8-156">Specifies the **SecurityDescriptor** for the service in **Sddl** format.</span></span>
+<span data-ttu-id="190f7-163">Gibt den **securityDescriptor** für den Dienst im **SDDL** -Format an.</span><span class="sxs-lookup"><span data-stu-id="190f7-163">Specifies the **SecurityDescriptor** for the service in **Sddl** format.</span></span>
 
 ```yaml
 Type: System.String
@@ -242,9 +248,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-157">-Confirm</span><span class="sxs-lookup"><span data-stu-id="df6d8-157">-Confirm</span></span>
+### <span data-ttu-id="190f7-164">-Confirm</span><span class="sxs-lookup"><span data-stu-id="190f7-164">-Confirm</span></span>
 
-<span data-ttu-id="df6d8-158">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="df6d8-158">Prompts you for confirmation before running the cmdlet.</span></span>
+<span data-ttu-id="190f7-165">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="190f7-165">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -258,9 +264,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-159">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="df6d8-159">-WhatIf</span></span>
+### <span data-ttu-id="190f7-166">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="190f7-166">-WhatIf</span></span>
 
-<span data-ttu-id="df6d8-160">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="df6d8-160">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="df6d8-161">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-161">The cmdlet is not run.</span></span>
+<span data-ttu-id="190f7-167">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="190f7-167">Shows what would happen if the cmdlet runs.</span></span> <span data-ttu-id="190f7-168">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="190f7-168">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -274,42 +280,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="df6d8-162">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="df6d8-162">CommonParameters</span></span>
+### <span data-ttu-id="190f7-169">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="190f7-169">CommonParameters</span></span>
 
-<span data-ttu-id="df6d8-163">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="df6d8-163">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="df6d8-164">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="df6d8-164">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="190f7-170">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="190f7-170">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="190f7-171">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="190f7-171">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="df6d8-165">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="df6d8-165">INPUTS</span></span>
+## <span data-ttu-id="190f7-172">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="190f7-172">INPUTS</span></span>
 
-### <span data-ttu-id="df6d8-166">Keine</span><span class="sxs-lookup"><span data-stu-id="df6d8-166">None</span></span>
+### <span data-ttu-id="190f7-173">Keine</span><span class="sxs-lookup"><span data-stu-id="190f7-173">None</span></span>
 
-<span data-ttu-id="df6d8-167">Eingaben können nicht an dieses Cmdlet weitergereicht werden.</span><span class="sxs-lookup"><span data-stu-id="df6d8-167">You cannot pipe input to this cmdlet.</span></span>
+<span data-ttu-id="190f7-174">Eingaben können nicht an dieses Cmdlet weitergereicht werden.</span><span class="sxs-lookup"><span data-stu-id="190f7-174">You cannot pipe input to this cmdlet.</span></span>
 
-## <span data-ttu-id="df6d8-168">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="df6d8-168">OUTPUTS</span></span>
+## <span data-ttu-id="190f7-175">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="190f7-175">OUTPUTS</span></span>
 
-### <span data-ttu-id="df6d8-169">System.ServiceProcess.ServiceController</span><span class="sxs-lookup"><span data-stu-id="df6d8-169">System.ServiceProcess.ServiceController</span></span>
+### <span data-ttu-id="190f7-176">System.ServiceProcess.ServiceController</span><span class="sxs-lookup"><span data-stu-id="190f7-176">System.ServiceProcess.ServiceController</span></span>
 
-<span data-ttu-id="df6d8-170">Dieses Cmdlet gibt ein Objekt zurück, das den neuen Dienst darstellt.</span><span class="sxs-lookup"><span data-stu-id="df6d8-170">This cmdlet returns an object that represents the new service.</span></span>
+<span data-ttu-id="190f7-177">Dieses Cmdlet gibt ein Objekt zurück, das den neuen Dienst darstellt.</span><span class="sxs-lookup"><span data-stu-id="190f7-177">This cmdlet returns an object that represents the new service.</span></span>
 
-## <span data-ttu-id="df6d8-171">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="df6d8-171">NOTES</span></span>
+## <span data-ttu-id="190f7-178">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="190f7-178">NOTES</span></span>
 
-<span data-ttu-id="df6d8-172">Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="df6d8-172">This cmdlet is only available on Windows platforms.</span></span>
+<span data-ttu-id="190f7-179">Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="190f7-179">This cmdlet is only available on Windows platforms.</span></span>
 
-<span data-ttu-id="df6d8-173">Starten Sie PowerShell mit der Option **als Administrator ausführen** , um dieses Cmdlet auszuführen.</span><span class="sxs-lookup"><span data-stu-id="df6d8-173">To run this cmdlet, start PowerShell by using the **Run as administrator** option.</span></span>
+<span data-ttu-id="190f7-180">Starten Sie PowerShell mit der Option **als Administrator ausführen** , um dieses Cmdlet auszuführen.</span><span class="sxs-lookup"><span data-stu-id="190f7-180">To run this cmdlet, start PowerShell by using the **Run as administrator** option.</span></span>
 
-## <span data-ttu-id="df6d8-174">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="df6d8-174">RELATED LINKS</span></span>
+## <span data-ttu-id="190f7-181">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="190f7-181">RELATED LINKS</span></span>
 
-[<span data-ttu-id="df6d8-175">Get-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-175">Get-Service</span></span>](Get-Service.md)
+[<span data-ttu-id="190f7-182">Get-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-182">Get-Service</span></span>](Get-Service.md)
 
-[<span data-ttu-id="df6d8-176">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-176">Restart-Service</span></span>](Restart-Service.md)
+[<span data-ttu-id="190f7-183">Restart-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-183">Restart-Service</span></span>](Restart-Service.md)
 
-[<span data-ttu-id="df6d8-177">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-177">Resume-Service</span></span>](Resume-Service.md)
+[<span data-ttu-id="190f7-184">Resume-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-184">Resume-Service</span></span>](Resume-Service.md)
 
-[<span data-ttu-id="df6d8-178">Set-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-178">Set-Service</span></span>](Set-Service.md)
+[<span data-ttu-id="190f7-185">Set-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-185">Set-Service</span></span>](Set-Service.md)
 
-[<span data-ttu-id="df6d8-179">Start-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-179">Start-Service</span></span>](Start-Service.md)
+[<span data-ttu-id="190f7-186">Start-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-186">Start-Service</span></span>](Start-Service.md)
 
-[<span data-ttu-id="df6d8-180">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-180">Stop-Service</span></span>](Stop-Service.md)
+[<span data-ttu-id="190f7-187">Stop-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-187">Stop-Service</span></span>](Stop-Service.md)
 
-[<span data-ttu-id="df6d8-181">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-181">Suspend-Service</span></span>](Suspend-Service.md)
+[<span data-ttu-id="190f7-188">Suspend-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-188">Suspend-Service</span></span>](Suspend-Service.md)
 
-[<span data-ttu-id="df6d8-182">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="df6d8-182">Remove-Service</span></span>](Remove-Service.md)
+[<span data-ttu-id="190f7-189">Remove-Service</span><span class="sxs-lookup"><span data-stu-id="190f7-189">Remove-Service</span></span>](Remove-Service.md)
