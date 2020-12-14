@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: 5a76f8ec454ad8144f193d8927f913b89a429fec
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 17c3ef3046ba8f0cca9a85cf41aaf683212a58e9
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214039"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913340"
 ---
 # Export-Csv
 
@@ -375,7 +374,7 @@ Accept wildcard characters: False
 
 ### -Literalpath
 
-Gibt den Pfad zur CSV-Ausgabedatei an. Im Gegensatz zu **Path** wird der Wert des **LiteralPath** -Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, verwenden Sie einfache Anführungszeichen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
+Gibt den Pfad zur CSV-Ausgabedatei an. Im Gegensatz zu **Path** wird der Wert des **LiteralPath**-Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, verwenden Sie einfache Anführungszeichen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
 
 ```yaml
 Type: System.String
@@ -509,7 +508,7 @@ In der CSV-Datei wird jedes Objekt durch eine durch Trennzeichen getrennte Liste
 
 Die CSV-Zeichen folgen werden wie folgt ausgegeben:
 
-- Standardmäßig enthält die erste Zeichenfolge den **#Type** Informations Header, gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process** .
+- Standardmäßig enthält die erste Zeichenfolge den **#Type** Informations Header, gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process**.
 - Wenn **notypeinformation** verwendet wird, enthält die erste Zeichenfolge die Spaltenüberschriften. Die Header enthalten die Eigenschaftsnamen des ersten Objekts als durch Trennzeichen getrennte Liste.
 - Die übrigen Zeichen folgen enthalten durch Trennzeichen getrennte Listen der Eigenschaftswerte jedes Objekts.
 

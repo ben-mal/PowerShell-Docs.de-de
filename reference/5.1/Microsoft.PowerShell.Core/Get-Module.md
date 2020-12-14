@@ -1,23 +1,22 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 5/15/2019
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Module
-ms.openlocfilehash: d3a2aae9318da7235070b68dd379081467fa611a
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 15a7d7e6488e4b3d11375649fdbc810e1aeb2b2f
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388704"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564355"
 ---
 # Get-Module
 
 ## ZUSAMMENFASSUNG
-Ruft die Module ab, die in die aktuelle Sitzung importiert wurden oder importiert werden können.
+Listet die in der aktuellen Sitzung importierten Module auf oder kann aus dem psmodulepath importiert werden.
 
 ## SYNTAX
 
@@ -50,19 +49,18 @@ Get-Module [[-Name] <String[]>] [-FullyQualifiedName <ModuleSpecification[]>] [-
 
 ## DESCRIPTION
 
-Das- `Get-Module` Cmdlet ruft die PowerShell-Module ab, die importiert oder in eine PowerShell-Sitzung importiert werden können. Das Modul Objekt, das `Get-Module` zurückgibt, enthält wertvolle Informationen über das Modul. Sie können die Modul Objekte auch an andere Cmdlets weiterreichen, wie z `Import-Module` . b. die-und- `Remove-Module` Cmdlets.
+Mit dem- `Get-Module` Cmdlet werden die PowerShell-Module aufgelistet, die importiert oder in eine PowerShell-Sitzung importiert werden können. Ohne Parameter ruft `Get-Module` Module ab, die in die aktuelle Sitzung importiert wurden. Der **listavailable** -Parameter wird verwendet, um die Module aufzulisten, die aus den Pfaden, die in der psmodulepath-Umgebungsvariablen () angegeben sind, importiert werden können `$env:PSModulePath` .
 
-Ohne Parameter ruft `Get-Module` Module ab, die in die aktuelle Sitzung importiert wurden. Um alle installierten Module zu erhalten, geben Sie den **listavailable** -Parameter an.
+Das Modul Objekt, das `Get-Module` zurückgibt, enthält wertvolle Informationen über das Modul. Sie können die Modul Objekte auch an andere Cmdlets weiterreichen, wie z `Import-Module` . b. die-und- `Remove-Module` Cmdlets.
 
-`Get-Module` Ruft Module ab, importiert diese jedoch nicht. Ab Windows PowerShell 3,0 werden Module automatisch importiert, wenn Sie einen Befehl im Modul verwenden, aber ein `Get-Module` Befehl löst keinen automatischen Import aus. Sie können die Module auch mithilfe des Cmdlets in Ihre Sitzung importieren `Import-Module` .
+`Get-Module` Listet Module auf, importiert diese jedoch nicht. Ab Windows PowerShell 3,0 werden Module automatisch importiert, wenn Sie einen Befehl im Modul verwenden, aber ein `Get-Module` Befehl löst keinen automatischen Import aus. Sie können die Module auch mithilfe des Cmdlets in Ihre Sitzung importieren `Import-Module` .
 
 Ab Windows PowerShell 3,0 können Sie Module aus Remote Sitzungen in die lokale Sitzung importieren und dann importieren. Diese Strategie verwendet das implizite Remoting-Feature von PowerShell und entspricht der Verwendung des- `Import-PSSession` Cmdlets. Wenn Sie Befehle in Modulen verwenden, die aus einer anderen Sitzung importiert wurden, werden die Befehle implizit in der Remote Sitzung ausgeführt. Mit dieser Funktion können Sie den Remote Computer über die lokale Sitzung verwalten.
 
-Außerdem können Sie ab Windows PowerShell 3,0 und verwenden, `Get-Module` `Import-Module` um Common Information Model (CIM)-Module zu erhalten und zu importieren, in denen die Cmdlets in Cmdlet-Definitions-XML-Dateien (cdxml) definiert sind. Mit dieser Funktion können Sie Cmdlets verwenden, die in nicht verwalteten Codeassemblys implementiert sind, z. b. in C++ geschriebene Assemblys.
+Außerdem können Sie ab Windows PowerShell 3,0 und verwenden, `Get-Module` `Import-Module` um Common Information Model (CIM)-Module zu erhalten und zu importieren. CIM-Module definieren Cmdlets in cdxml-Dateien (Cmdlet Definition XML). Mit dieser Funktion können Sie Cmdlets verwenden, die in nicht verwalteten Codeassemblys implementiert sind, z. b. in C++ geschriebene Assemblys.
 
-Mit diesen neuen Features werden die `Get-Module` -und- `Import-Module` Cmdlets zu den wichtigsten Tools für die Verwaltung heterogener Unternehmen, die Computer, auf denen das Windows-Betriebssystem ausgeführt wird, sowie Computer mit anderen Betriebssystemen enthalten.
-
-Zum Verwalten von Remote Computern, auf denen das Windows-Betriebssystem ausgeführt wird, auf dem PowerShell und PowerShell-Remoting aktiviert sind, erstellen Sie eine **PSSession** auf dem Remote Computer, und verwenden Sie dann den **PSSession** -Parameter von `Get-Module` zum Aufrufen der PowerShell-Module in der **PSSession**. Wenn Sie die Module importieren und dann die importierten Befehle in der aktuellen Sitzung verwenden, werden die Befehle implizit in der **PSSession** auf dem Remote Computer ausgeführt. Mit dieser Strategie können Sie den Remotecomputer verwalten.
+Implizites Remoting kann zum Verwalten von Remote Computern verwendet werden, auf denen PowerShell-Remoting aktiviert ist.
+Erstellen Sie eine **PSSession** auf dem Remote Computer, und verwenden Sie dann den **PSSession** -Parameter von `Get-Module` , um die PowerShell-Module in der Remote Sitzung abzurufen. Wenn Sie ein Modul aus der Remote Sitzung importieren, werden die importierten Befehle in der Sitzung auf dem Remote Computer ausgeführt.
 
 Sie können eine ähnliche Strategie zum Verwalten von Computern verwenden, auf denen PowerShell-Remoting nicht aktiviert ist.
 Dies umfasst Computer, auf denen das Windows-Betriebssystem nicht ausgeführt wird, sowie Computer, auf denen PowerShell, aber nicht PowerShell-Remoting aktiviert ist.
@@ -165,7 +163,7 @@ Mit diesem Befehl werden die Eigenschaften des **psmoduleinfo** -Objekts abgeruf
 
 Mit den Eigenschaften können Sie die Modulobjekte formatieren und filtern. Weitere Informationen zu den Eigenschaften finden Sie unter [psmoduleinfo-Eigenschaften](/dotnet/api/system.management.automation.psmoduleinfo).
 
-Die Ausgabe enthält die neuen Eigenschaften, z. b. " **Author** " und " **CompanyName** ", die in Windows PowerShell 3,0 eingeführt wurden.
+Die Ausgabe enthält die neuen Eigenschaften, z. b. " **Author** " und " **CompanyName**", die in Windows PowerShell 3,0 eingeführt wurden.
 
 ### Beispiel 6: Gruppieren aller Module nach Name
 
@@ -376,7 +374,7 @@ Gibt eine CIM-Sitzung auf dem Remotecomputer an. Geben Sie eine Variable ein, di
 
 Sie können diesen Parameter verwenden, um Module von Computern und Geräten, auf denen das Windows-Betriebssystem ausgeführt wird, sowie für Computer mit PowerShell, für die PowerShell-Remoting nicht aktiviert ist, zu erhalten.
 
-Der **CimSession** -Parameter ruft alle Module in der **CIMSession** ab. Sie können jedoch nur CIM- und CDXML (Cmdlet Definition XML)-basierte Module importieren.
+Der **CimSession**-Parameter ruft alle Module in der **CIMSession** ab. Sie können jedoch nur CIM- und CDXML (Cmdlet Definition XML)-basierte Module importieren.
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession
@@ -415,7 +413,7 @@ Accept wildcard characters: False
 
 ### -Listavailable
 
-Gibt an, dass dieses Cmdlet alle installierten Module abruft. `Get-Module` Ruft Module in Pfaden ab, die in der **psmodulepath** -Umgebungsvariablen aufgelistet sind. Ohne diesen Parameter ruft `Get-Module` nur die Module ab, die in der **psmodulepath** -Umgebungsvariablen aufgelistet sind und in die aktuelle Sitzung geladen werden. **ListAvailable** gibt keine Informationen zu Modulen zurück, die in der **PSModulePath** -Umgebungsvariablen nicht gefunden wurden, selbst wenn diese Module in der aktuellen Sitzung geladen sind.
+Gibt an, dass dieses Cmdlet alle installierten Module abruft. `Get-Module` Ruft Module in Pfaden ab, die in der **psmodulepath** -Umgebungsvariablen aufgelistet sind. Ohne diesen Parameter ruft `Get-Module` nur die Module ab, die in der **psmodulepath** -Umgebungsvariablen aufgelistet sind und in die aktuelle Sitzung geladen werden. **ListAvailable** gibt keine Informationen zu Modulen zurück, die in der **PSModulePath**-Umgebungsvariablen nicht gefunden wurden, selbst wenn diese Module in der aktuellen Sitzung geladen sind.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -478,7 +476,7 @@ Accept wildcard characters: False
 
 ### -PSSession
 
-Ruft die Module in der angegebenen Benutzer verwalteten PowerShell-Sitzung ( **PSSession** ) ab. Geben Sie eine Variable ein, die die Sitzung enthält, einen Befehl, der die Sitzung abruft, z. b. einen- `Get-PSSession` Befehl oder einen Befehl, der die Sitzung erstellt, z. b. einen- `New-PSSession` Befehl.
+Ruft die Module in der angegebenen Benutzer verwalteten PowerShell-Sitzung (**PSSession**) ab. Geben Sie eine Variable ein, die die Sitzung enthält, einen Befehl, der die Sitzung abruft, z. b. einen- `Get-PSSession` Befehl oder einen Befehl, der die Sitzung erstellt, z. b. einen- `New-PSSession` Befehl.
 
 Wenn die Sitzung mit einem Remote Computer verbunden ist, müssen Sie den **listavailable** -Parameter angeben.
 
@@ -510,7 +508,7 @@ Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: PsSession, Available, CimSession
+Parameter Sets: Available, PsSession, CimSession
 Aliases:
 
 Required: False
@@ -539,14 +537,16 @@ Wenn Sie den **listavailable** -Parameter angeben, `Get-Module` gibt ein **modul
 
 ## HINWEISE
 
-- Ab Windows PowerShell 3,0 werden die in PowerShell enthaltenen Hauptbefehle in Module gepackt. Die Ausnahme ist " **Microsoft. PowerShell. Core** ", bei der es sich um ein Snap-in ( **PSSnapIn** ) handelt. Standardmäßig wird nur das **Microsoft.PowerShell.Core** -Snap-In der Sitzung hinzugefügt.
-Module werden bei der ersten Verwendung automatisch importiert, und Sie können das `Import-Module` Cmdlet verwenden, um Sie zu importieren.
-- Ab Windows PowerShell 3,0 werden die mit PowerShell installierten Hauptbefehle in Module gepackt. In Windows PowerShell 2,0 und in Host Programmen, die in neueren Versionen von PowerShell ältere Sitzungen erstellen, werden die Hauptbefehle in Snap-Ins ( **pssnapins** ) gepackt. Die Ausnahme ist **Microsoft. PowerShell. Core** , bei der es sich immer um ein Snap-in handelt. Remote Sitzungen, wie z. b. die vom `New-PSSession` Cmdlet gestarteten, sind auch ältere Sitzungen, die Core-Snap-Ins enthalten.
+- Ab Windows PowerShell 3,0 werden die in PowerShell enthaltenen Hauptbefehle in Module gepackt. Die Ausnahme ist " **Microsoft. PowerShell. Core**", bei der es sich um ein Snap-in (**PSSnapIn**) handelt. Standardmäßig wird nur das **Microsoft.PowerShell.Core**-Snap-In der Sitzung hinzugefügt. Module werden bei der ersten Verwendung automatisch importiert, und Sie können das `Import-Module` Cmdlet verwenden, um Sie zu importieren.
+
+- In Windows PowerShell 2,0 und in Host Programmen, die in neueren Versionen von PowerShell ältere Sitzungen erstellen, werden die Hauptbefehle in Snap-Ins (**pssnapins**) gepackt. Die Ausnahme ist **Microsoft. PowerShell. Core**, bei der es sich immer um ein Snap-in handelt. Remote Sitzungen, wie z. b. die vom `New-PSSession` Cmdlet gestarteten, sind auch ältere Sitzungen, die Core-Snap-Ins enthalten.
 
   Weitere Informationen über die **CreateDefault2** -Methode, die Sitzungen im neueren Stil mit Kernmodulen erstellt, finden Sie unter [CreateDefault2-Methode](/dotnet/api/system.management.automation.runspaces.initialsessionstate.createdefault2).
 
-- `Get-Module` Ruft nur Module an Speicherorten ab, die im Wert der **psmodulepath** -Umgebungsvariablen gespeichert sind ($env:P smodulepath). Sie können den **path** -Parameter des `Import-Module` Cmdlets verwenden, um Module an anderen Speicherorten zu importieren, aber Sie können das `Get-Module` Cmdlet nicht verwenden, um Sie zu erhalten.
-- Außerdem wurden ab PowerShell 3,0 neue Eigenschaften zum Objekt hinzugefügt, das zurückgibt, die das `Get-Module` Erlernen von Modulen vor dem Importieren vereinfachen. Alle Eigenschaften werden vor dem Importieren aufgefüllt. Hierzu gehören die **exportedcommands** -, **exportedcmdlets** -und **exportedfunctions** -Eigenschaften, die die Befehle auflisten, die das Modul exportiert.
+- `Get-Module` Ruft nur Module an Speicherorten ab, die im Wert der **psmodulepath** -Umgebungsvariablen gespeichert sind ($env:P smodulepath). Das `Import-Module` Cmdlet kann Module an anderen Speicherorten importieren, aber Sie können das `Get-Module` Cmdlet nicht verwenden, um Sie zu erhalten.
+
+- Außerdem wurden ab PowerShell 3,0 neue Eigenschaften zum Objekt hinzugefügt, das zurückgibt, die das `Get-Module` Erlernen von Modulen vor dem Importieren vereinfachen. Alle Eigenschaften werden vor dem Importieren aufgefüllt. Hierzu gehören die **exportedcommands**-, **exportedcmdlets** -und **exportedfunctions** -Eigenschaften, die die Befehle auflisten, die das Modul exportiert.
+
 - Der **listavailable** -Parameter ruft nur wohlgeformte Module ab, d. h. Ordner, die mindestens eine Datei enthalten, deren Basisname mit dem Namen des Modul Ordners identisch ist. Der Basisname ist der Name ohne die Dateinamenerweiterung. Ordner, die Dateien mit unterschiedlichen Namen enthalten, gelten als Container, jedoch nicht als Module.
 
   Zum erhalten von Modulen, die als DLL-Dateien implementiert sind, aber nicht in einem Modul Ordner enthalten sind, geben Sie sowohl den **listavailable** -Parameter als auch **alle** -Parameter an.
@@ -555,8 +555,7 @@ Module werden bei der ersten Verwendung automatisch importiert, und Sie können 
 
   Sie können die CIM-Sitzungs Funktion auf Computern verwenden, auf denen das Windows-Betriebssystem nicht ausgeführt wird, sowie auf Windows-Computern, auf denen PowerShell ausgeführt wird, für die PowerShell-Remoting jedoch nicht aktiviert ist.
 
-  Sie können auch die CIM-Parameter verwenden, um CIM-Module von Computern zu erhalten, auf denen PowerShell-Remoting aktiviert ist. Dies schließt den lokalen Computer ein.
-Wenn Sie eine CIM-Sitzung auf dem lokalen Computer erstellen, verwendet PowerShell DCOM anstelle von WMI, um die Sitzung zu erstellen.
+  Sie können auch die CIM-Parameter verwenden, um CIM-Module von Computern zu erhalten, auf denen PowerShell-Remoting aktiviert ist. Dies schließt den lokalen Computer ein. Wenn Sie eine CIM-Sitzung auf dem lokalen Computer erstellen, verwendet PowerShell DCOM anstelle von WMI, um die Sitzung zu erstellen.
 
 ## VERWANDTE LINKS
 

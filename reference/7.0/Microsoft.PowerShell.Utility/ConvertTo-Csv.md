@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 858ae1098d271d28fd9b758855f0952a6307eb95
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9638577ef63a6f5d81fa1f84aee355c080ab6538
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211068"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913375"
 ---
 # ConvertTo-Csv
 
@@ -139,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Includecotypeinformation
 
-Wenn dieser Parameter verwendet wird, enthält die erste Zeile der Ausgabe **#Type** , gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process** .
+Wenn dieser Parameter verwendet wird, enthält die erste Zeile der Ausgabe **#Type** , gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process**.
 
 Dieser Parameter wurde in PowerShell 6,0 eingeführt.
 
@@ -205,7 +204,7 @@ Accept wildcard characters: False
 
 ### -Quotefields
 
-Gibt die Namen der Spalten an, die in Anführungszeichen eingeschlossen werden sollen. Wenn dieser Parameter verwendet wird, werden nur die angegebenen Spalten in Anführungszeichen eingeschlossen.
+Gibt die Namen der Spalten an, die in Anführungszeichen eingeschlossen werden sollen. Wenn dieser Parameter verwendet wird, werden nur die angegebenen Spalten in Anführungszeichen eingeschlossen. Dieser Parameter wurde in PowerShell 7,0 hinzugefügt.
 
 ```yaml
 Type: System.String[]
@@ -226,6 +225,8 @@ Gibt an, wann Anführungszeichen in den CSV-Dateien verwendet werden. Mögliche 
 - Niemals etwas angeben
 - Alles immer angeben (Standardverhalten)
 - Asbedarf-nur Anführungszeichen Felder, die ein Trennzeichen enthalten
+
+Dieser Parameter wurde in PowerShell 7,0 hinzugefügt.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -261,7 +262,7 @@ Im CSV-Format wird jedes Objekt durch eine durch Trennzeichen getrennte Liste se
 
 Die CSV-Zeichen folgen werden wie folgt ausgegeben:
 
-- Wenn **includetypeinformation** verwendet wird, besteht die erste Zeichenfolge aus **#Type** gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process** .
+- Wenn **includetypeinformation** verwendet wird, besteht die erste Zeichenfolge aus **#Type** gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process**.
 - Wenn **include TypeInformation** nicht verwendet wird, enthält die erste Zeichenfolge die Spaltenüberschriften. Die Header enthalten die Eigenschaftsnamen des ersten Objekts als durch Trennzeichen getrennte Liste.
 - Die übrigen Zeichen folgen enthalten durch Trennzeichen getrennte Listen der Eigenschaftswerte jedes Objekts.
 
@@ -273,6 +274,6 @@ Wenn Sie mehrere Objekte an senden `ConvertTo-CSV` , `ConvertTo-CSV` ordnet die 
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[Export-CSV](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)

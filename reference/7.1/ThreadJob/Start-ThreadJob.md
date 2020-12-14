@@ -1,17 +1,17 @@
 ---
-external help file: ThreadJob.dll-Help.xml
+external help file: Microsoft.PowerShell.ThreadJob.dll-Help.xml
 Locale: en-US
 Module Name: ThreadJob
-ms.date: 01/28/2020
+ms.date: 12/05/2020
 online version: https://docs.microsoft.com/powershell/module/threadjob/start-threadjob?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ThreadJob
-ms.openlocfilehash: 9ac0570a5e26de47438a48817785836348de19cd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bced2b87c3843833414ebfd189d003e83af9718f
+ms.sourcegitcommit: f9d855dd73b916559a22e337672dea3fbb11c634
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212612"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96777746"
 ---
 # Start-ThreadJob
 
@@ -24,14 +24,16 @@ Erstellt Hintergrund Aufträge, die dem- `Start-Job` Cmdlet ähneln.
 
 ```
 Start-ThreadJob [-ScriptBlock] <ScriptBlock> [-Name <String>] [-InitializationScript <ScriptBlock>]
- [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>]
+ [-StreamingHost <PSHost>] [<CommonParameters>]
 ```
 
 ### FilePath
 
 ```
 Start-ThreadJob [-FilePath] <String> [-Name <String>] [-InitializationScript <ScriptBlock>]
- [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-ArgumentList <Object[]>] [-ThrottleLimit <Int32>]
+ [-StreamingHost <PSHost>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,6 +107,29 @@ $j | Wait-Job | Receive-Job
      94   145.80     159.02      18.31   18276   1 pwsh
     101   163.30     222.05      29.00   35928   1 pwsh
 ```
+
+### Beispiel 4: Streamen der Auftrags Ausgabe an den übergeordneten Host
+
+Mithilfe des Parameters " **streaminghost** " können Sie einen Auftrag anweisen, die gesamte Host Ausgabe an einen bestimmten Host weiterzuleiten. Ohne diesen Parameter wird die Ausgabe an die Auftragsdaten Strom-Sammlung gesendet und wird erst dann in einer Host Konsole angezeigt, wenn Sie die Ausgabe des Auftrags erhalten.
+
+In diesem Beispiel wird der aktuelle Host `Start-ThreadJob` mithilfe der automatischen Variablen an die-Variable übermittelt `$Host` .
+
+```powershell
+PS> Start-ThreadJob -ScriptBlock { Read-Host 'Say hello'; Write-Warning 'Warning output' } -StreamingHost $Host
+
+Id   Name   PSJobTypeName   State         HasMoreData     Location      Command
+--   ----   -------------   -----         -----------     --------      -------
+7    Job7   ThreadJob       NotStarted    False           PowerShell    Read-Host 'Say hello'; �
+
+PS> Say hello: Hello
+WARNING: Warning output
+PS> Receive-Job -Id 7
+Hello
+WARNING: Warning output
+PS>
+```
+
+Beachten Sie, dass die Eingabeaufforderung von `Read-Host` angezeigt wird, und Sie können Eingaben eingeben. Anschließend wird die Meldung von `Write-Warning` angezeigt. Mit dem- `Receive-Job` Cmdlet wird die gesamte Ausgabe des Auftrags zurückgegeben.
 
 ## PARAMETERS
 
@@ -267,4 +292,3 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 [Stop-Job](../Microsoft.PowerShell.Core/Stop-Job.md)
 
 [Receive-Job](../Microsoft.PowerShell.Core/Receive-Job.md)
-

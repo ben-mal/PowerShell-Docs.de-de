@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 1/7/2019
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: cb58276c8582f9cd1f88a114baae2ce5d0039f45
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: bb2d077b3584d4501db00a927b83034d37dceaec
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211047"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913358"
 ---
 # Export-Csv
 
@@ -391,7 +390,7 @@ Accept wildcard characters: False
 
 ### -Includecotypeinformation
 
-Wenn dieser Parameter verwendet wird, enthält die erste Zeile der CSV-Ausgabe **#Type** gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process** .
+Wenn dieser Parameter verwendet wird, enthält die erste Zeile der CSV-Ausgabe **#Type** gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process**.
 
 Dieser Parameter wurde in PowerShell 6,0 eingeführt.
 
@@ -425,7 +424,7 @@ Accept wildcard characters: False
 
 ### -Literalpath
 
-Gibt den Pfad zur CSV-Ausgabedatei an. Im Gegensatz zu **Path** wird der Wert des **LiteralPath** -Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, verwenden Sie einfache Anführungszeichen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
+Gibt den Pfad zur CSV-Ausgabedatei an. Im Gegensatz zu **Path** wird der Wert des **LiteralPath**-Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, verwenden Sie einfache Anführungszeichen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
 
 ```yaml
 Type: System.String
@@ -537,7 +536,7 @@ Accept wildcard characters: False
 
 ### -Quotefields
 
-Gibt die Namen der Spalten an, die in Anführungszeichen eingeschlossen werden sollen. Wenn dieser Parameter verwendet wird, werden nur die angegebenen Spalten in Anführungszeichen eingeschlossen.
+Gibt die Namen der Spalten an, die in Anführungszeichen eingeschlossen werden sollen. Wenn dieser Parameter verwendet wird, werden nur die angegebenen Spalten in Anführungszeichen eingeschlossen. Dieser Parameter wurde in PowerShell 7,0 hinzugefügt.
 
 ```yaml
 Type: System.String[]
@@ -558,6 +557,8 @@ Gibt an, wann Anführungszeichen in den CSV-Dateien verwendet werden. Mögliche 
 - Niemals etwas angeben
 - Alles immer angeben (Standardverhalten)
 - Asbedarf-nur Anführungszeichen Felder, die ein Trennzeichen enthalten
+
+Dieser Parameter wurde in PowerShell 7,0 hinzugefügt.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -596,7 +597,7 @@ In der CSV-Datei wird jedes Objekt durch eine durch Trennzeichen getrennte Liste
 Die CSV-Zeichen folgen werden wie folgt ausgegeben:
 
 - Wenn **includetypeinformation** verwendet wird, enthält die erste Zeichenfolge den **#Type** Informations Header, gefolgt vom voll qualifizierten Namen des Objekt Typs.
-  #Type z. b. **System. Diagnostics. Process** .
+  #Type z. b. **System. Diagnostics. Process**.
 - Wenn **include TypeInformation** nicht verwendet wird, enthält die erste Zeichenfolge die Spaltenüberschriften. Die Header enthalten die Eigenschaftsnamen des ersten Objekts als durch Trennzeichen getrennte Liste.
 - Die übrigen Zeichen folgen enthalten durch Trennzeichen getrennte Listen der Eigenschaftswerte jedes Objekts.
 

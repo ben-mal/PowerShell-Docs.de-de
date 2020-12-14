@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/18/2020
+ms.date: 12/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Csv
-ms.openlocfilehash: ad2b2a2b32fa1dfbf722ff0af25bfafaf57de84a
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: f920130ec8354b61b0bb3617e061520271df0eed
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219679"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913235"
 ---
 # Export-Csv
 
@@ -360,7 +359,7 @@ Die zulässigen Werte für diesen Parameter lauten wie folgt:
 Ab PowerShell 6,2 ermöglicht der **Encoding** -Parameter auch numerische IDs registrierter Codepages (z `-Encoding 1251` . b.) oder Zeichen folgen Namen registrierter Codepages (z `-Encoding "windows-1251"` . b.). Weitere Informationen finden Sie in der .NET-Dokumentation für [Encoding. Codepage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
 > [!NOTE]
-> **UTF-7** * wird nicht mehr zur Verwendung von empfohlen. In PowerShell 7,1 wird eine Warnung geschrieben, wenn Sie `utf7` für den **Encoding** -Parameter angeben.
+> **UTF-7** _ wird nicht mehr für die Verwendung von empfohlen. In PowerShell 7,1 wird eine Warnung geschrieben, wenn Sie `utf7` für den Parameter "_ *Encoding**" angeben.
 
 ```yaml
 Type: System.Text.Encoding
@@ -429,7 +428,7 @@ Accept wildcard characters: False
 
 ### -Literalpath
 
-Gibt den Pfad zur CSV-Ausgabedatei an. Im Gegensatz zu **Path** wird der Wert des **LiteralPath** -Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, verwenden Sie einfache Anführungszeichen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
+Gibt den Pfad zur CSV-Ausgabedatei an. Im Gegensatz zu **Path** wird der Wert des **LiteralPath**-Parameters genauso verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, verwenden Sie einfache Anführungszeichen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
 
 ```yaml
 Type: System.String
@@ -541,7 +540,7 @@ Accept wildcard characters: False
 
 ### -Quotefields
 
-Gibt die Namen der Spalten an, die in Anführungszeichen eingeschlossen werden sollen. Wenn dieser Parameter verwendet wird, werden nur die angegebenen Spalten in Anführungszeichen eingeschlossen.
+Gibt die Namen der Spalten an, die in Anführungszeichen eingeschlossen werden sollen. Wenn dieser Parameter verwendet wird, werden nur die angegebenen Spalten in Anführungszeichen eingeschlossen. Dieser Parameter wurde in PowerShell 7,0 hinzugefügt.
 
 ```yaml
 Type: System.String[]
@@ -562,6 +561,8 @@ Gibt an, wann Anführungszeichen in den CSV-Dateien verwendet werden. Mögliche 
 - Niemals etwas angeben
 - Alles immer angeben (Standardverhalten)
 - Asbedarf-nur Anführungszeichen Felder, die ein Trennzeichen enthalten
+
+Dieser Parameter wurde in PowerShell 7,0 hinzugefügt.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.BaseCsvWritingCommand+QuoteKind
@@ -623,4 +624,3 @@ Die `ConvertTo-Csv` -und- `ConvertFrom-Csv` Cmdlets konvertieren Objekte in CSV-
 [Import-Csv](Import-Csv.md)
 
 [Select-Object](Select-Object.md)
-

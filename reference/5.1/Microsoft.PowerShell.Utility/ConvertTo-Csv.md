@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
 ms.date: 1/7/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-csv?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Csv
-ms.openlocfilehash: 7d399661e4514c0a39ad00601d554c41c2897ff9
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: be590368539f396f0aac694e9565674393543f2c
+ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214135"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96913201"
 ---
 # ConvertTo-Csv
 
@@ -180,7 +179,7 @@ Im CSV-Format wird jedes Objekt durch eine durch Trennzeichen getrennte Liste se
 
 Die CSV-Zeichen folgen werden wie folgt ausgegeben:
 
-- Standardmäßig enthält die erste Zeichenfolge den **#Type** Informations Header, gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process** .
+- Standardmäßig enthält die erste Zeichenfolge den **#Type** Informations Header, gefolgt vom voll qualifizierten Namen des Objekt Typs. #Type z. b. **System. Diagnostics. Process**.
 - Wenn **notypeinformation** verwendet wird, enthält die erste Zeichenfolge die Spaltenüberschriften. Die Header enthalten die Eigenschaftsnamen des ersten Objekts als durch Trennzeichen getrennte Liste.
 - Die übrigen Zeichen folgen enthalten durch Trennzeichen getrennte Listen der Eigenschaftswerte jedes Objekts.
 
@@ -190,6 +189,6 @@ Wenn Sie mehrere Objekte an senden `ConvertTo-CSV` , `ConvertTo-CSV` ordnet die 
 
 [ConvertFrom-Csv](ConvertFrom-Csv.md)
 
-[Export-Csv](Export-Csv.md)
+[Export-CSV](Export-Csv.md)
 
 [Import-Csv](Import-Csv.md)

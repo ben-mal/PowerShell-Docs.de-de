@@ -1,17 +1,16 @@
 ---
 description: Erläutert das installieren, importieren und Verwenden von PowerShell-Modulen.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 09/15/2020
+ms.date: 12/03/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Modules
-ms.openlocfilehash: 8e7f91ca54c0d464e50432a958f006943f4c6caa
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: aebebc3f41a091151fbbecd9925a4ebc063e678e
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224116"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564601"
 ---
 # <a name="about-modules"></a>Informationen zu Modulen
 
@@ -20,7 +19,7 @@ Erläutert das installieren, importieren und Verwenden von PowerShell-Modulen.
 
 ## <a name="long-description"></a>Lange Beschreibung
 
-Ein Modul ist ein Paket, das PowerShell-Befehle wie z. b. Cmdlets, Anbieter, Funktionen, Workflows, Variablen und Aliase enthält.
+Ein Modul ist ein Paket, das PowerShell-Member enthält, z. b. Cmdlets, Anbieter, Funktionen, Workflows, Variablen und Aliase.
 
 Personen, die Befehle schreiben, können Module verwenden, um ihre Befehle zu organisieren und für andere Benutzer freizugeben. Personen, die Module erhalten, können die Befehle in den Modulen ihren PowerShell-Sitzungen hinzufügen und wie die integrierten Befehle verwenden.
 
@@ -28,13 +27,13 @@ In diesem Thema wird die Verwendung von PowerShell-Modulen erläutert. Informati
 
 ## <a name="what-is-a-module"></a>Was ist ein Modul?
 
-Ein Modul ist ein Paket mit Befehlen. Alle Cmdlets und Anbieter in Ihrer Sitzung werden von einem Modul oder einem Snap-in hinzugefügt.
+Ein Modul ist ein Paket, das PowerShell-Member enthält, z. b. Cmdlets, Anbieter, Funktionen, Workflows, Variablen und Aliase. Die Mitglieder dieses Pakets können in einem PowerShell-Skript, einer kompilierten DLL oder einer Kombination aus beidem implementiert werden. Diese Dateien werden normalerweise in einem Verzeichnis zusammengefasst. Weitere Informationen finden Sie Untergrund Legendes zu [einem Windows PowerShell-Modul](/powershell/scripting/developer/module/understanding-a-windows-powershell-module) in der SDK-Dokumentation.
 
 ## <a name="module-auto-loading"></a>Automatisches Laden von Modulen
 
 Ab PowerShell 3,0 importiert PowerShell automatisch Module, wenn Sie zum ersten Mal einen Befehl in einem installierten Modul ausführen. Sie können jetzt die Befehle in einem Modul ohne weitere Einrichtung oder Profilkonfiguration verwenden, daher besteht keine Notwendigkeit, Module nach der Installation auf Ihrem Computer zu verwalten.
 
-Die Befehle in einem Modul sind auch leichter zu finden. Das `Get-Command` Cmdlet ruft nun alle Befehle in allen installierten Modulen ab, auch wenn Sie sich noch nicht in der Sitzung befinden, sodass Sie einen Befehl Suchen und ihn ohne Import verwenden können.
+Die Befehle in einem Modul sind auch leichter zu finden. Das `Get-Command` Cmdlet ruft nun alle Befehle in allen installierten Modulen ab, auch wenn Sie noch nicht in der Sitzung sind. Sie können einen Befehl Suchen und verwenden, ohne zu importieren, dass Sie zuerst das Modul importieren müssen.
 
 Jedes der folgenden Beispiele bewirkt, dass das cimcmdlets-Modul, das enthält `Get-CimInstance` , in Ihre Sitzung importiert wird.
 
@@ -307,7 +306,7 @@ Verwenden Sie den **all** -Parameter des Cmdlets, um Namenskonflikte zu erkennen
 
 Um Namenskonflikte zu vermeiden, verwenden Sie die **noClobber** -oder **prefix** -Parameter des `Import-Module` Cmdlets. Der **prefix** -Parameter fügt den Namen importierter Befehle ein Präfix hinzu, damit Sie in der Sitzung eindeutig sind. Der **noClobber** -Parameter importiert keine Befehle, die vorhandene Befehle in der Sitzung ausblenden oder ersetzen würden.
 
-Sie können auch die Parameter **Alias** , **Cmdlet** , **Function** und **Variable** von verwenden, `Import-Module` um nur die Befehle auszuwählen, die Sie importieren möchten, und Sie können die Befehle ausschließen, die in Ihrer Sitzung zu Namenskonflikten führen.
+Sie können auch die Parameter **Alias**, **Cmdlet**, **Function** und **Variable** von verwenden, `Import-Module` um nur die Befehle auszuwählen, die Sie importieren möchten, und Sie können die Befehle ausschließen, die in Ihrer Sitzung zu Namenskonflikten führen.
 
 Modul Autoren können Namenskonflikte mithilfe der **defaultcommandprefix** -Eigenschaft des Modul Manifests verhindern, um allen Befehlsnamen ein Standard Präfix hinzuzufügen.
 Der Wert des **prefix** -Parameters hat Vorrang vor dem Wert von **defaultcommandprefix**.
