@@ -7,12 +7,12 @@ ms.date: 06/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-command?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Command
-ms.openlocfilehash: d872f53c504874f69f1e39c506a72bfefa072aa6
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 824e5b0012f8cf8394252704d0e16e49b3f7fa39
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210135"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892687"
 ---
 # Find-Command
 
@@ -98,7 +98,7 @@ Version   Name               Repository   Description
 1.2.0.0   SystemLocaleDsc    PSGallery    This DSC Resource allows configuration of the Windows...
 ```
 
-`Find-Command` verwendet den **Name** -Parameter, um den Befehl " **Get-targetresource** " anzugeben. Der **Repository** -Parameter durchsucht den **psgallery**. Der **ModuleName** -Parameter gibt das Modul an, das Sie installieren möchten, **systemlocaledsc**. Das-Objekt wird an die Pipeline gesendet, `Install-Module` und das-Modul wird installiert. Nachdem die Installation abgeschlossen ist, können Sie verwenden, `Get-InstalledModule` um die Ergebnisse anzuzeigen.
+`Find-Command` verwendet den **Name** -Parameter, um den Befehl " **Get-targetresource**" anzugeben. Der **Repository** -Parameter durchsucht den **psgallery**. Der **ModuleName** -Parameter gibt das Modul an, das Sie installieren möchten, **systemlocaledsc**. Das-Objekt wird an die Pipeline gesendet, `Install-Module` und das-Modul wird installiert. Nachdem die Installation abgeschlossen ist, können Sie verwenden, `Get-InstalledModule` um die Ergebnisse anzuzeigen.
 
 ### Beispiel 4: Suchen eines Befehls und Speichern des Moduls
 
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -320,6 +320,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 `Find-Command` Gibt ein **psgetcommandinfo** -Objekt aus.
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

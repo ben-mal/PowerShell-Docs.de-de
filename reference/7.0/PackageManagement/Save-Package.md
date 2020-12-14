@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/save-package?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Package
-ms.openlocfilehash: 97ba55f4185d784e4b32bbe669296d44989f72d2
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: b46bf983120a71a530fdc9715b68eff0b1ce3af6
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210423"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892721"
 ---
 # Save-Package
 
@@ -81,7 +81,7 @@ Save-Package [-Path <String>] [-LiteralPath <String>] [-Credential <PSCredential
 ## DESCRIPTION
 
 Mit dem- `Save-Package` Cmdlet werden Pakete auf dem lokalen Computer gespeichert, die Pakete werden jedoch nicht installiert.
-Dieses Cmdlet speichert die neueste Version eines Pakets, es sei denn, Sie geben eine "Requirements **dverion" an** . Die **path** -und **literalpath** -Parameter schließen sich gegenseitig aus und können dem gleichen Befehl nicht hinzugefügt werden.
+Dieses Cmdlet speichert die neueste Version eines Pakets, es sei denn, Sie geben eine "Requirements **dverion" an**. Die **path** -und **literalpath** -Parameter schließen sich gegenseitig aus und können dem gleichen Befehl nicht hinzugefügt werden.
 
 ## BEISPIELE
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -719,6 +719,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ### Dieses Cmdlet generiert keine Ausgabe.
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

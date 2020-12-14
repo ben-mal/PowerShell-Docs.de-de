@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-package?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Package
-ms.openlocfilehash: aad8b6f033674c65b4cc56708e09e5320bb046dd
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: bc6ba83a6f0d585e166b1bdc419c8b9c7148e47c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213343"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892881"
 ---
 # Get-Package
 
@@ -29,7 +29,7 @@ Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <S
  [-AdditionalArguments <String[]>] [<CommonParameters>]
 ```
 
-### Programme
+### Programs
 
 ```
 Get-Package [[-Name] <String[]>] [-RequiredVersion <String>] [-MinimumVersion <String>]
@@ -84,7 +84,7 @@ Mit diesem Befehl wird eine Liste der Pakete abgerufen, die von **packagemanagem
 PS> Invoke-Command -ComputerName Server01 -Credential CONTOSO\TestUser -ScriptBlock {Get-Package}
 ```
 
-`Invoke-Command` verwendet den **Computername** -Parameter, um einen Remote Computer anzugeben, **Server01** . Der **Credential** -Parameter gibt eine Domäne und einen Benutzernamen mit Berechtigungen zum Ausführen von Befehlen auf dem Computer an. Der **ScriptBlock** -Parameter führt das `Get-Package` Cmdlet auf dem Remote Computer aus.
+`Invoke-Command` verwendet den **Computername** -Parameter, um einen Remote Computer anzugeben, **Server01**. Der **Credential** -Parameter gibt eine Domäne und einen Benutzernamen mit Berechtigungen zum Ausführen von Befehlen auf dem Computer an. Der **ScriptBlock** -Parameter führt das `Get-Package` Cmdlet auf dem Remote Computer aus.
 
 ### Beispiel 3: Paket für einen angegebenen Anbieter erhalten
 
@@ -103,7 +103,7 @@ posh-git              0.7.3        https://www.powershellgallery.com/api/v2   Po
 PowerShellGet         2.0.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` verwendet den **providerName** -Parameter, um einen bestimmten Anbieter, **PowerShellGet** , anzugeben.
+`Get-Package` verwendet den **providerName** -Parameter, um einen bestimmten Anbieter, **PowerShellGet**, anzugeben.
 Mit dem Parameter **alle Versionen** wird jede installierte Version angezeigt.
 
 ### Beispiel 4: beziehen einer exakten Version eines bestimmten Pakets
@@ -120,7 +120,7 @@ Name                  Version      Source                                     Pr
 PackageManagement     1.3.1        https://www.powershellgallery.com/api/v2   PowerShellGet
 ```
 
-`Get-Package` verwendet den **Name** -Parameter, um den Paketnamen, **packagemanagement** , anzugeben. Der **providerName** -Parameter gibt den Anbieter **PowerShellGet** an. Der **erforderliche-Version-** Parameter gibt eine installierte Version an.
+`Get-Package` verwendet den **Name** -Parameter, um den Paketnamen, **packagemanagement**, anzugeben. Der **providerName** -Parameter gibt den Anbieter **PowerShellGet** an. Der **erforderliche-Version-** Parameter gibt eine installierte Version an.
 
 ### Beispiel 5: Deinstallieren eines Pakets
 
@@ -130,7 +130,7 @@ In diesem Beispiel werden Paketinformationen abgerufen und dann das Paket deinst
 Get-Package -Name posh-git -RequiredVersion 0.7.3 | Uninstall-Package
 ```
 
-`Get-Package` verwendet den **Name** -Parameter zum Angeben des Paket namens **Posh-git** . Der Parameter "Requirements **dversion** " ist eine bestimmte Version des Pakets. Das Objekt wird über die Pipeline an das `Uninstall-Package` Cmdlet gesendet. `Uninstall-Package` entfernt das Paket.
+`Get-Package` verwendet den **Name** -Parameter zum Angeben des Paket namens **Posh-git**. Der Parameter "Requirements **dversion** " ist eine bestimmte Version des Pakets. Das Objekt wird über die Pipeline an das `Uninstall-Package` Cmdlet gesendet. `Uninstall-Package` entfernt das Paket.
 
 ## PARAMETERS
 
@@ -503,6 +503,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ## HINWEISE
 
 Durch das Einschließen eines Paket Anbieters in einen Befehl können dynamische Parameter für ein Cmdlet verfügbar gemacht werden. Dynamische Parameter sind für einen Paketanbieter spezifisch. Das `Get-Help` -Cmdlet listet die Parametersätze eines Cmdlets auf und schließt den Parametersatz des Anbieters ein. Beispielsweise `Get-Package` ist für den **PowerShellGet** -Parameter festgelegt, der `-NoPathUpdate` , und enthält `AllowClobber` `SkipPublisherCheck` .
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

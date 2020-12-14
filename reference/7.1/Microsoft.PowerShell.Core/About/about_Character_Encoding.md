@@ -1,16 +1,16 @@
 ---
-title: about_Character_Encoding
 description: Beschreibt, wie PowerShell die Zeichencodierung für die Eingabe und Ausgabe von Zeichen folgen Daten verwendet.
-ms.date: 10/21/2020
 Locale: en-US
+ms.date: 10/21/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_character_encoding?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 6e2f515f774d7bc333baf6346cd6c8bd517cb6fa
-ms.sourcegitcommit: df80c558e9a4b89c9798f084bd04012ece15155c
+title: about_Character_Encoding
+ms.openlocfilehash: 27a5d818c1ed8e114e15d8a121626fc79101a59f
+ms.sourcegitcommit: cc72c40315fd2981d3009b335accbfa52d57640c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "93225151"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96349771"
 ---
 # <a name="about_character_encoding"></a>about_Character_Encoding
 
@@ -43,7 +43,7 @@ Die folgenden Cmdlets haben den **Codierungs** Parameter:
 
 ## <a name="the-byte-order-mark"></a>Byte-Reihenfolge Markierung
 
-Byte-Order-Mark (BOM) ist eine _Unicode-Signatur_ in den ersten Bytes einer Datei oder eines Textstreams, die angeben, welche Unicode-Codierung für die Daten verwendet wird. Weitere Informationen finden Sie im Artikel zur [Byte Reihenfolge-Markierung](https://wikipedia.org/wiki/Byte_order_mark) in Wikipedia.
+Byte-Order-Mark (BOM) ist eine _Unicode-Signatur_ in den ersten Bytes einer Datei oder eines Textstreams, die angeben, welche Unicode-Codierung für die Daten verwendet wird. Weitere Informationen finden Sie in der Dokumentation zur [Byte Reihenfolge-Marke](/globalization/encoding/byte-order-mark) .
 
 In Windows PowerShell erstellt jede Unicode-Codierung, außer `UTF7` , immer eine BOM. PowerShell Core wird standardmäßig `utf8NoBOM` für die gesamte Textausgabe verwendet.
 

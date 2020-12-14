@@ -7,12 +7,12 @@ ms.date: 04/22/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/set-psrepository?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSRepository
-ms.openlocfilehash: 277bfc0ae4662e0c822ae7c227490eaf887c8ecb
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 95289839fc491cc90def6df7b7ef6bbbdf9ea014
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93209948"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892602"
 ---
 # Set-PSRepository
 
@@ -40,7 +40,7 @@ Mit dem- `Set-PSRepository` Cmdlet werden Werte für ein registriertes modulrepo
 Set-PSRepository -Name "myInternalSource" -InstallationPolicy Trusted
 ```
 
-Mit diesem Befehl wird die Installations Richtlinie für das **myinternalsource** -Repository auf " **vertrauenswürdig** " festgelegt, sodass Sie vor der Installation von Modulen aus dieser Quelle nicht aufgefordert werden.
+Mit diesem Befehl wird die Installations Richtlinie für das **myinternalsource** -Repository auf " **vertrauenswürdig**" festgelegt, sodass Sie vor der Installation von Modulen aus dieser Quelle nicht aufgefordert werden.
 
 ### Beispiel 2: Festlegen der Quell-und Veröffentlichungs Speicherorte für ein Repository
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -Installationpolicy
 
-Gibt die Installations Richtlinie an. Gültige Werte sind: **vertrauenswürdig** , **nicht vertrauenswürdig** .
+Gibt die Installations Richtlinie an. Gültige Werte sind: **vertrauenswürdig**, **nicht vertrauenswürdig**.
 
 ```yaml
 Type: System.String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -228,6 +228,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ### System.Object
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

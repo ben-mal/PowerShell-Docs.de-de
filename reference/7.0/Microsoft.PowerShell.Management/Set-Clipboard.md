@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/09/2019
-online version: https://go.microsoft.com/fwlink/?linkid=526220
+ms.date: 12/03/2020
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-clipboard?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Clipboard
-ms.openlocfilehash: 271d9191a0968b03b1e7ec3d283eacc36e633516
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: efb24b14122ad37043636d999afaa4199eb3097b
+ms.sourcegitcommit: 7b376314e7640c39a53aac9f0db8bb935514a960
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239801"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564372"
 ---
 # Set-Clipboard
 
@@ -38,6 +37,14 @@ Mit dem- `Set-Clipboard` Cmdlet wird der Inhalt der Zwischenablage festgelegt.
 
 ```powershell
 Set-Clipboard -Value "This is a test string"
+```
+
+### Beispiel 2: Kopieren des Inhalts einer Datei in die Zwischenablage
+
+In diesem Beispiel wird der Inhalt einer Datei in die Zwischenablage geleitet. In diesem Beispiel erhalten wir einen öffentlichen SSH-Schlüssel, damit er in eine andere Anwendung wie GitHub eingefügt werden kann.
+
+```powershell
+Get-Content C:\Users\user1\.ssh\id_ed25519.pub | Set-Clipboard
 ```
 
 ## PARAMETERS

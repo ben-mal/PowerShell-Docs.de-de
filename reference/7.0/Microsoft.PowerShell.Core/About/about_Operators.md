@@ -6,12 +6,12 @@ ms.date: 11/09/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Operators
-ms.openlocfilehash: 736ca53ff4992ea430ec89ad1795dcf278b0da41
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 88369b1ccf3157e56dd5266784d8ca16e55b1f8f
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483127"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892520"
 ---
 # <a name="about-operators"></a>Informationen zu Operatoren
 
@@ -542,7 +542,7 @@ ${a}?[0]
 > [!NOTE]
 > Da PowerShell erlaubt, dass `?` Teil des Variablennamens ist, ist für die Verwendung dieser Operatoren die formale Angabe des Variablennamens erforderlich. Daher ist es nötig, `{}` um die Variablennamen herum zu platzieren, wie z. B. `${a}` oder wenn `?` Teil des Variablennamens `${a?}` ist.
 >
-> Die Variablennamen Syntax von `${<name>}` sollte nicht mit dem `$()` Teil Ausdruck-Operator verwechselt werden. Weitere Informationen finden Sie im Abschnitt Variablenname [about_Variables](about_Variables.md#Variable-names-that-include-special-characters).
+> Die Variablennamen Syntax von `${<name>}` sollte nicht mit dem `$()` Teil Ausdruck-Operator verwechselt werden. Weitere Informationen finden Sie im Abschnitt Variablenname [about_Variables](about_Variables.md#variable-names-that-include-special-characters).
 
 ## <a name="see-also"></a>Siehe auch
 

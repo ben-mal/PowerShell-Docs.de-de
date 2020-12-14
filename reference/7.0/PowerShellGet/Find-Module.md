@@ -7,12 +7,12 @@ ms.date: 03/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Module
-ms.openlocfilehash: 33b7861f4e776b992d3483b9b0776c32a88599fc
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c6468d2f8226cb26ec5385c7d5a8a895155ad673
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210119"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892653"
 ---
 # Find-Module
 
@@ -39,7 +39,7 @@ Das- `Find-Module` Cmdlet sucht Module in einem Repository, die den angegebenen 
 Wenn Sie zum ersten Mal `Find-Module` versuchen, ein Repository zu verwenden, werden Sie möglicherweise aufgefordert, Updates zu installieren.
 Wenn die Repository-Quelle nicht mit dem- `Register-PSRepository` Cmdlet registriert ist, wird ein Fehler zurückgegeben.
 
-`Find-Module` Gibt die neueste Version eines Moduls zurück, wenn keine Parameter verwendet werden, um die Version einzuschränken. Um die Liste der Versionen eines-Repository zu erhalten, verwenden Sie den-Parameter **allversions** .
+`Find-Module` Gibt die neueste Version eines Moduls zurück, wenn keine Parameter verwendet werden, um die Version einzuschränken. Um die Liste der Versionen eines-Repository zu erhalten, verwenden Sie den-Parameter **allversions**.
 
 Wenn der **MinimumVersion** -Parameter angegeben wird, `Find-Module` gibt die Version des Moduls zurück, das gleich oder größer als das Minimum ist. Wenn eine neuere Version im Repository verfügbar ist, wird die neuere Version zurückgegeben.
 
@@ -153,7 +153,7 @@ MySource      1.2.0.0   ContosoClient    Cmdlets and DSC resources for managing 
 
 Mit dem- `Register-PSRepository` Cmdlet wird ein neues Repository registriert. Mit dem **Name** -Parameter wird der Name **MySource** zugewiesen. Der **sourcelokation** -Parameter gibt die Adresse des Repository an.
 
-Das `Find-Module` Cmdlet verwendet den **Name** -Parameter mit dem Platzhalter Sternchen ( `*` ), **Contoso** um das Modul "Configuration Manager" anzugeben. Der **Repository** -Parameter gibt an, dass zwei Depots, **psgallery** und **MySource** , durchsucht werden sollen.
+Das `Find-Module` Cmdlet verwendet den **Name** -Parameter mit dem Platzhalter Sternchen ( `*` ),  um das Modul "Configuration Manager" anzugeben. Der **Repository** -Parameter gibt an, dass zwei Depots, **psgallery** und **MySource**, durchsucht werden sollen.
 
 ### Beispiel 7: Suchen eines Moduls, das eine DSC-Ressource enthält
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Allversions
 
-Gibt an, dass alle Versionen eines Moduls in die Ergebnisse eingeschlossen werden sollen. Der **allversions** -Parameter kann nicht mit den Parametern **MinimumVersion** , **MaximumVersion** oder Requirements **dversion** verwendet werden.
+Gibt an, dass alle Versionen eines Moduls in die Ergebnisse eingeschlossen werden sollen. Der **allversions** -Parameter kann nicht mit den Parametern **MinimumVersion**, **MaximumVersion** oder Requirements **dversion** verwendet werden.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -Requirements dversion
 
-Gibt die genaue Versionsnummer des Moduls an, das in die Ergebnisse aufgenommen werden soll. "Requirements **dversion** " kann nicht im gleichen Befehl wie " **MinimumVersion** " oder " **MaximumVersion** " verwendet werden.
+Gibt die genaue Versionsnummer des Moduls an, das in die Ergebnisse aufgenommen werden soll. "Requirements **dversion** " kann nicht im gleichen Befehl wie " **MinimumVersion** " oder " **MaximumVersion**" verwendet werden.
 
 ```yaml
 Type: System.String
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -Tag
 
-Gibt ein Array von-Tags an. Beispiele hierfür sind " **desiredStatus econfiguration** ", " **DSC** ", " **dscresourcekit** " oder " **psmodule** ".
+Gibt ein Array von-Tags an. Beispiele hierfür sind " **desiredStatus econfiguration**", " **DSC**", " **dscresourcekit**" oder " **psmodule**".
 
 ```yaml
 Type: System.String[]
@@ -499,7 +499,12 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ## HINWEISE
 
-Dieses Cmdlet wird in PowerShell 5,0 oder höheren Versionen von PowerShell unter Windows 7 oder Windows 2008 R2 und höheren Versionen von Windows ausgeführt.
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

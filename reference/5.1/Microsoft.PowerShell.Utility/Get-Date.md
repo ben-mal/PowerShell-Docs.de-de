@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: f550d352ca6e400307feba9ec16cea4632603b62
-ms.sourcegitcommit: ea9270bacee7dd1b9df2519384de277576357ce2
+ms.openlocfilehash: cbf87c2a2d6ab0f08e514ba971a622ea9f1904aa
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514934"
 ---
 # Get-Date
 
@@ -59,7 +59,7 @@ Tuesday, June 25, 2019 14:53:32
 
 ### Beispiel 2: erhalten von Elementen des aktuellen Datums und der aktuellen Uhrzeit
 
-In diesem Beispiel wird gezeigt, wie verwendet wird `Get-Date` , um das Date-oder Time-Element zu erhalten. Der-Parameter verwendet die Argumente **Date** , **time** oder **DateTime**.
+In diesem Beispiel wird gezeigt, wie verwendet wird `Get-Date` , um das Date-oder Time-Element zu erhalten. Der-Parameter verwendet die Argumente **Date**, **time** oder **DateTime**.
 
 ```powershell
 Get-Date -DisplayHint Date
@@ -140,7 +140,7 @@ Der gregorianische Kalender hat 365 Tage, mit Ausnahme von Schaltjahren, die 366
 366
 ```
 
-`Get-Date` verwendet drei Parameter, um das Datum anzugeben: **year** , **Month** und **Day**. Der Befehl wird in Klammern eingeschlossen, sodass das Ergebnis von der **dayof Year** -Eigenschaft ausgewertet wird.
+`Get-Date` verwendet drei Parameter, um das Datum anzugeben: **year**, **Month** und **Day**. Der Befehl wird in Klammern eingeschlossen, sodass das Ergebnis von der **dayof Year** -Eigenschaft ausgewertet wird.
 
 ### Beispiel 6: überprüfen, ob ein Datum für die Sommerzeit angepasst ist
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 Gibt den angezeigten Tag des Monats an. Geben Sie einen Wert zwischen 1 und 31 ein.
 
-Wenn der angegebene Wert größer als die Anzahl der Tage in einem Monat ist, fügt PowerShell die Anzahl der Tage zum Monat hinzu. Zeigt beispielsweise `Get-Date -Month 2 -Day 31` den **3. März** , nicht den **31. Februar** an.
+Wenn der angegebene Wert größer als die Anzahl der Tage in einem Monat ist, fügt PowerShell die Anzahl der Tage zum Monat hinzu. Zeigt beispielsweise `Get-Date -Month 2 -Day 31` den **3. März**, nicht den **31. Februar** an.
 
 ```yaml
 Type: System.Int32
@@ -246,9 +246,9 @@ Bestimmt, welche Elemente von Datum und Uhrzeit angezeigt werden.
 
 Die zulässigen Werte lauten wie folgt:
 
-- **Date** : zeigt nur das Datum an.
-- **Zeit** : zeigt nur die Uhrzeit an.
-- **DateTime** : zeigt das Datum und die Uhrzeit an.
+- **Date**: zeigt nur das Datum an.
+- **Zeit**: zeigt nur die Uhrzeit an.
+- **DateTime**: zeigt das Datum und die Uhrzeit an.
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.DisplayHintType
@@ -270,11 +270,11 @@ Der **Format** -Parameter gibt ein **String** -Objekt aus.
 
 Eine Liste der verfügbaren .net-Formatspezifizierer finden Sie unter benutzerdefinierte Format Zeichenfolgen für [Datum und Uhrzeit](/dotnet/standard/base-types/custom-date-and-time-format-strings?view=netframework-4.8).
 
-Wenn der **Format** -Parameter verwendet wird, ruft `Get-Date` nur die Eigenschaften des **DateTime** -Objekts ab, die zum Anzeigen des Datums erforderlich sind. Folglich stehen einige der Eigenschaften und Methoden der **DateTime** -Objekte möglicherweise nicht zur Verfügung.
+Wenn der **Format** -Parameter verwendet wird, ruft `Get-Date` nur die Eigenschaften des **DateTime** -Objekts ab, die zum Anzeigen des Datums erforderlich sind. Folglich stehen einige der Eigenschaften und Methoden der **DateTime**-Objekte möglicherweise nicht zur Verfügung.
 
 Ab PowerShell 5,0 können Sie die folgenden zusätzlichen Formate als Werte für den **Format** -Parameter verwenden.
 
-- **Filedate**. Eine Datei-oder Pfad freundliche Darstellung des aktuellen Datums in der lokalen Zeit. Das Format ist `yyyyMMdd` (Unterscheidung nach Groß-/Kleinschreibung unter Berücksichtigung von vierstelligen Jahreszahlen, zweistelligen Ziffern und zweistelligen Tags). Beispiel:
+- **Filedate**. Eine Datei-oder Pfad freundliche Darstellung des aktuellen Datums in der lokalen Zeit. Das Format ist `yyyyMMdd` (Unterscheidung nach Groß-/Kleinschreibung unter Berücksichtigung von vierstelligen Jahreszahlen, zweistelligen Ziffern und zweistelligen Tags). Zum Beispiel:
   20190627.
 
 - **Filedateuniversal**. Eine Datei-oder Pfad freundliche Darstellung des aktuellen Datums in Weltzeit (UTC). Das Format ist (Unterscheidung nach `yyyyMMddZ` Groß-/Kleinschreibung, mit einem vierstelligen Jahr, zweistelligen Ziffern und dem Buchstaben `Z` als UTC-Indikator). Beispiel: 20190627z.
@@ -383,7 +383,7 @@ Zeigt das Datum und die Uhrzeit im UNIX-Format an. Der **Uformat** -Parameter gi
 
 Den **Uformat** -Spezifizierer wird ein Prozentzeichen ( `%` ) vorangestellt, z `%m` . b., `%d` und `%Y` . Der Abschnitt [Notes](#notes) enthält eine Tabelle gültiger **Uformat-Spezifizierer**.
 
-Wenn der **Uformat** -Parameter verwendet wird, ruft `Get-Date` nur die Eigenschaften des **DateTime** -Objekts ab, die zum Anzeigen des Datums erforderlich sind. Folglich stehen einige der Eigenschaften und Methoden der **DateTime** -Objekte möglicherweise nicht zur Verfügung.
+Wenn der **Uformat** -Parameter verwendet wird, ruft `Get-Date` nur die Eigenschaften des **DateTime** -Objekts ab, die zum Anzeigen des Datums erforderlich sind. Folglich stehen einige der Eigenschaften und Methoden der **DateTime**-Objekte möglicherweise nicht zur Verfügung.
 
 ```yaml
 Type: System.String
@@ -421,7 +421,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ### Pipeline Eingabe
 
-`Get-Date` akzeptiert Pipeline Eingaben. Beispiel: `Get-ChildItem | Get-Date`.
+`Get-Date` akzeptiert Pipeline Eingaben. Beispielsweise `Get-ChildItem | Get-Date`.
 
 ## AUSGABEN
 
@@ -434,13 +434,16 @@ Wenn ein **DateTime** -Objekt über die Pipeline an ein Cmdlet gesendet wird, z 
 Die-Methode `(Get-Date).ToString()` konvertiert ein **DateTime** -Objekt in ein **String** -Objekt.
 
 Um die Eigenschaften und Methoden eines Objekts anzuzeigen, senden Sie das Objekt über die Pipeline an `Get-Member` .
-Beispiel: `Get-Date | Get-Member`.
+Beispielsweise `Get-Date | Get-Member`.
 
 ## HINWEISE
 
 **DateTime** -Objekte liegen in langen Datums-und lang Zeitformaten für das System Gebiets Schema vor.
 
 In der folgenden Tabelle werden die gültigen **Uformat-Spezifizierer** angezeigt:
+
+> [!IMPORTANT]
+> Zusätzliche **Uformat** -Spezifizierer werden in neueren Versionen von PowerShell hinzugefügt. Beispielsweise `%F` wurde in PowerShell 6,2 hinzugefügt und ist daher in Windows PowerShell 5,1 oder älter nicht verfügbar. Beachten Sie dies, wenn Sie in Skripts, die auf mehreren Versionen von PowerShell ausgeführt werden sollen, **Uformat** -Spezifizierer verwenden.
 
 | Formatbezeichner |                                 Bedeutung                     |         Beispiel          |
 | ---- | ----------------------------------------------------------------------- | ------------------------ |
@@ -452,7 +455,7 @@ In der folgenden Tabelle werden die gültigen **Uformat-Spezifizierer** angezeig
 | `%c` | Datum und Uhrzeit-gekürzt                                             | Do Jun 27 08:44:18 2019 |
 | `%D` | Datum im Format mm/dd/yy                                                 | 06/27/19                 |
 | `%d` | Tag des Monats-2 Ziffern                                             | 05                       |
-| `%e` | Tag des Monats, dem ein Leerzeichen vorangestellt ist                            | \<space\>5@@               |
+| `%e` | Tag des Monats, dem ein Leerzeichen vorangestellt ist, wenn nur eine einzelne Ziffer           | \<space\>5@@               |
 | `%G` | Identisch mit "Y"                                                             |                          |
 | `%g` | Identisch mit "y"                                                             |                          |
 | `%H` | Stunde im 24-Stunden-Format                                                  | 17                       |

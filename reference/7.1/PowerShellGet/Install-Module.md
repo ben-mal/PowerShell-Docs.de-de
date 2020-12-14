@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Module
-ms.openlocfilehash: e2e4dc34fb84a54fb92cc4c809c84d67beafe576
-ms.sourcegitcommit: 4fc8cf397cb725ae973751d1d5d542f34f0db2d7
+ms.openlocfilehash: 463853778b6f2892ae36d55dcd4d886727b1dd51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "93219092"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892486"
 ---
 # Install-Module
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -Requirements dversion
 
-Gibt die exakte Version eines einzelnen Moduls an, das installiert werden soll. Wenn keine Entsprechung im Repository für die angegebene Version vorhanden ist, wird ein Fehler angezeigt. Wenn Sie mehrere Module installieren möchten, können Sie "Requirements **dversion** " nicht verwenden. "Requirements **dversion** " kann nicht im gleichen `Install-Module` Befehl wie " **MinimumVersion** " oder " **MaximumVersion** " verwendet werden.
+Gibt die exakte Version eines einzelnen Moduls an, das installiert werden soll. Wenn keine Entsprechung im Repository für die angegebene Version vorhanden ist, wird ein Fehler angezeigt. Wenn Sie mehrere Module installieren möchten, können Sie "Requirements **dversion**" nicht verwenden. "Requirements **dversion** " kann nicht im gleichen `Install-Module` Befehl wie " **MinimumVersion** " oder " **MaximumVersion**" verwendet werden.
 
 ```yaml
 Type: System.String
@@ -352,14 +352,14 @@ Der Bereich " **ALLUSERS** " installiert Module an einem Speicherort, auf den al
 
 `$env:ProgramFiles\PowerShell\Modules`
 
-**CurrentUser** installiert Module an einem Speicherort, auf den nur der aktuelle Benutzer des Computers zugreifen kann. Beispiel:
+**CurrentUser** installiert Module an einem Speicherort, auf den nur der aktuelle Benutzer des Computers zugreifen kann. Zum Beispiel:
 
 `$home\Documents\PowerShell\Modules`
 
 Wenn kein **Bereich** definiert ist, wird der Standardwert basierend auf der PowerShellGet-Version festgelegt.
 
-- In PowerShellGet Version 2.0.0 und höher ist der Standardwert **CurrentUser** , der keine Erhöhung der Rechte für die Installation erfordert.
-- In PowerShellGet 1. x-Versionen ist der Standardwert " **ALLUSERS** ", für den eine Erhöhung der Installation erforderlich ist.
+- In PowerShellGet Version 2.0.0 und höher ist der Standardwert **CurrentUser**, der keine Erhöhung der Rechte für die Installation erfordert.
+- In PowerShellGet 1. x-Versionen ist der Standardwert " **ALLUSERS**", für den eine Erhöhung der Installation erforderlich ist.
 
 ```yaml
 Type: System.String
@@ -436,11 +436,18 @@ Wenn Sie den **passthru** -Parameter verwenden, gibt `Install-Module` ein **PSRe
 
 `Install-Module` wird in PowerShell 5,0 oder höheren Versionen unter Windows 7 oder Windows 2008 R2 und neueren Versionen von Windows ausgeführt.
 
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
+
 Als bewährte Sicherheitsmaßnahme sollten Sie den Code eines Moduls auswerten, bevor Sie zum ersten Mal Cmdlets oder Funktionen ausführen. Um das Ausführen von Modulen zu verhindern, die bösartigen Code enthalten, werden installierte Module nach der Installation nicht automatisch importiert.
 
 Wenn der durch den **Name** -Parameter angegebene Modulname im Repository nicht vorhanden ist, `Install-Module` gibt einen Fehler zurück.
 
-Verwenden Sie den **Name** -Parameter, und geben Sie ein durch Trennzeichen getrenntes Array von Modulnamen an, um mehrere Module zu installieren. Wenn Sie mehrere Modulnamen angeben, können Sie **MinimumVersion** , **MaximumVersion** oder Requirements **dversion** nicht verwenden. `Find-Module` erstellt **PSRepositoryItemInfo** -Objekte, die über die Pipeline an gesendet werden können `Install-Module` . Die Pipeline ist eine andere Möglichkeit, mehrere Module anzugeben, die mit einem einzigen Befehl installiert werden sollen.
+Verwenden Sie den **Name** -Parameter, und geben Sie ein durch Trennzeichen getrenntes Array von Modulnamen an, um mehrere Module zu installieren. Wenn Sie mehrere Modulnamen angeben, können Sie **MinimumVersion**, **MaximumVersion** oder Requirements **dversion** nicht verwenden. `Find-Module` erstellt **PSRepositoryItemInfo** -Objekte, die über die Pipeline an gesendet werden können `Install-Module` . Die Pipeline ist eine andere Möglichkeit, mehrere Module anzugeben, die mit einem einzigen Befehl installiert werden sollen.
 
 Standardmäßig werden Module für den Bereich von **ALLUSERS** in installiert `$env:ProgramFiles\PowerShell\Modules` . Der Standardwert verhindert Verwechslungen bei der Installation von PowerShell DSC-Ressourcen.
 
