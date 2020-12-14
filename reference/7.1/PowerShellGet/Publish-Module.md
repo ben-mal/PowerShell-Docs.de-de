@@ -7,21 +7,21 @@ ms.date: 10/03/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/publish-module?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-Module
-ms.openlocfilehash: d7b75b9aec6cba352d72176de59af82155d1fa17
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3ada5513343a5d6527cf1b091e1ee85e51f7f8de
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212860"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94892248"
 ---
-# <span data-ttu-id="8a9b8-103">Publish-Module</span><span class="sxs-lookup"><span data-stu-id="8a9b8-103">Publish-Module</span></span>
+# <span data-ttu-id="2bcae-103">Publish-Module</span><span class="sxs-lookup"><span data-stu-id="2bcae-103">Publish-Module</span></span>
 
-## <span data-ttu-id="8a9b8-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="8a9b8-104">SYNOPSIS</span></span>
-<span data-ttu-id="8a9b8-105">Veröffentlicht ein angegebenes Modul aus dem lokalen Computer in einem Onlinekatalog</span><span class="sxs-lookup"><span data-stu-id="8a9b8-105">Publishes a specified module from the local computer to an online gallery.</span></span>
+## <span data-ttu-id="2bcae-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="2bcae-104">SYNOPSIS</span></span>
+<span data-ttu-id="2bcae-105">Veröffentlicht ein angegebenes Modul aus dem lokalen Computer in einem Onlinekatalog</span><span class="sxs-lookup"><span data-stu-id="2bcae-105">Publishes a specified module from the local computer to an online gallery.</span></span>
 
-## <span data-ttu-id="8a9b8-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="8a9b8-106">SYNTAX</span></span>
+## <span data-ttu-id="2bcae-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2bcae-106">SYNTAX</span></span>
 
-### <span data-ttu-id="8a9b8-107">Modulenameparameterset (Standard)</span><span class="sxs-lookup"><span data-stu-id="8a9b8-107">ModuleNameParameterSet (Default)</span></span>
+### <span data-ttu-id="2bcae-107">Modulenameparameterset (Standard)</span><span class="sxs-lookup"><span data-stu-id="2bcae-107">ModuleNameParameterSet (Default)</span></span>
 
 ```
 Publish-Module -Name <String> [-RequiredVersion <String>] [-NuGetApiKey <String>]
@@ -31,7 +31,7 @@ Publish-Module -Name <String> [-RequiredVersion <String>] [-NuGetApiKey <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="8a9b8-108">Modulepathparameterset</span><span class="sxs-lookup"><span data-stu-id="8a9b8-108">ModulePathParameterSet</span></span>
+### <span data-ttu-id="2bcae-108">Modulepathparameterset</span><span class="sxs-lookup"><span data-stu-id="2bcae-108">ModulePathParameterSet</span></span>
 
 ```
 Publish-Module -Path <String> [-NuGetApiKey <String>] [-Repository <String>]
@@ -40,37 +40,37 @@ Publish-Module -Path <String> [-NuGetApiKey <String>] [-Repository <String>]
  [-SkipAutomaticTags] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="8a9b8-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="8a9b8-109">DESCRIPTION</span></span>
+## <span data-ttu-id="2bcae-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="2bcae-109">DESCRIPTION</span></span>
 
-<span data-ttu-id="8a9b8-110">Das `Publish-Module` -Cmdlet veröffentlicht ein Modul in einem nuget-basierten Onlinekatalog mithilfe eines API-Schlüssels, der als Teil des Benutzerprofils im Katalog gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-110">The `Publish-Module` cmdlet publishes a module to an online NuGet-based gallery by using an API key, stored as part of a user's profile in the gallery.</span></span> <span data-ttu-id="8a9b8-111">Sie können entweder den Namen des Moduls angeben, das veröffentlicht werden soll, oder Sie geben den Pfad zum Ordner an, der das Modul enthält.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-111">You can specify the module to publish either by the module's name, or by the path to the folder containing the module.</span></span>
+<span data-ttu-id="2bcae-110">Das `Publish-Module` -Cmdlet veröffentlicht ein Modul in einem nuget-basierten Onlinekatalog mithilfe eines API-Schlüssels, der als Teil des Benutzerprofils im Katalog gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="2bcae-110">The `Publish-Module` cmdlet publishes a module to an online NuGet-based gallery by using an API key, stored as part of a user's profile in the gallery.</span></span> <span data-ttu-id="2bcae-111">Sie können entweder den Namen des Moduls angeben, das veröffentlicht werden soll, oder Sie geben den Pfad zum Ordner an, der das Modul enthält.</span><span class="sxs-lookup"><span data-stu-id="2bcae-111">You can specify the module to publish either by the module's name, or by the path to the folder containing the module.</span></span>
 
-<span data-ttu-id="8a9b8-112">Wenn Sie ein Modul nach Name angeben, `Publish-Module` veröffentlicht das erste Modul, das durch Ausführen von gefunden wird `Get-Module -ListAvailable <Name>` .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-112">When you specify a module by name, `Publish-Module` publishes the first module that would be found by running `Get-Module -ListAvailable <Name>`.</span></span> <span data-ttu-id="8a9b8-113">Wenn Sie eine Mindestversion eines zu veröffentlichenden Moduls angeben, `Publish-Module` veröffentlicht das erste Modul mit einer Version, die größer oder gleich der von Ihnen angegebenen Mindestversion ist.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-113">If you specify a minimum version of a module to publish, `Publish-Module` publishes the first module with a version that is greater than or equal to the minimum version that you have specified.</span></span>
+<span data-ttu-id="2bcae-112">Wenn Sie ein Modul nach Name angeben, `Publish-Module` veröffentlicht das erste Modul, das durch Ausführen von gefunden wird `Get-Module -ListAvailable <Name>` .</span><span class="sxs-lookup"><span data-stu-id="2bcae-112">When you specify a module by name, `Publish-Module` publishes the first module that would be found by running `Get-Module -ListAvailable <Name>`.</span></span> <span data-ttu-id="2bcae-113">Wenn Sie eine Mindestversion eines zu veröffentlichenden Moduls angeben, `Publish-Module` veröffentlicht das erste Modul mit einer Version, die größer oder gleich der von Ihnen angegebenen Mindestversion ist.</span><span class="sxs-lookup"><span data-stu-id="2bcae-113">If you specify a minimum version of a module to publish, `Publish-Module` publishes the first module with a version that is greater than or equal to the minimum version that you have specified.</span></span>
 
-<span data-ttu-id="8a9b8-114">Die Veröffentlichung eines Moduls erfordert Metadaten, die auf der Seite „Katalog“ des Moduls angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-114">Publishing a module requires metadata that is displayed on the gallery page for the module.</span></span> <span data-ttu-id="8a9b8-115">Die erforderlichen Metadaten enthalten den Modulnamen, die Version, die Beschreibung und den Autor.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-115">Required metadata includes the module name, version, description, and author.</span></span> <span data-ttu-id="8a9b8-116">Obwohl die meisten Metadaten aus dem Modul Manifest entnommen werden, müssen einige Metadaten in `Publish-Module` Parametern angegeben werden, wie z. b. **Tag** , **Releasenote** , **iconuri** , **projecturi** und **licentaruri** , da diese Parameter den Feldern in einem nuget-basierten Katalog entsprechen.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-116">Although most metadata is taken from the module manifest, some metadata must be specified in `Publish-Module` parameters, such as **Tag** , **ReleaseNote** , **IconUri** , **ProjectUri** , and **LicenseUri** , because these parameters match fields in a NuGet-based gallery.</span></span>
+<span data-ttu-id="2bcae-114">Die Veröffentlichung eines Moduls erfordert Metadaten, die auf der Seite „Katalog“ des Moduls angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="2bcae-114">Publishing a module requires metadata that is displayed on the gallery page for the module.</span></span> <span data-ttu-id="2bcae-115">Die erforderlichen Metadaten enthalten den Modulnamen, die Version, die Beschreibung und den Autor.</span><span class="sxs-lookup"><span data-stu-id="2bcae-115">Required metadata includes the module name, version, description, and author.</span></span> <span data-ttu-id="2bcae-116">Obwohl die meisten Metadaten aus dem Modul Manifest entnommen werden, müssen einige Metadaten in `Publish-Module` Parametern angegeben werden, wie z. b. **Tag**, **Releasenote**, **iconuri**, **projecturi** und **licentaruri**, da diese Parameter den Feldern in einem nuget-basierten Katalog entsprechen.</span><span class="sxs-lookup"><span data-stu-id="2bcae-116">Although most metadata is taken from the module manifest, some metadata must be specified in `Publish-Module` parameters, such as **Tag**, **ReleaseNote**, **IconUri**, **ProjectUri**, and **LicenseUri**, because these parameters match fields in a NuGet-based gallery.</span></span>
 
-## <span data-ttu-id="8a9b8-117">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="8a9b8-117">EXAMPLES</span></span>
+## <span data-ttu-id="2bcae-117">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="2bcae-117">EXAMPLES</span></span>
 
-### <span data-ttu-id="8a9b8-118">Beispiel 1: Veröffentlichen eines Moduls</span><span class="sxs-lookup"><span data-stu-id="8a9b8-118">Example 1: Publish a module</span></span>
+### <span data-ttu-id="2bcae-118">Beispiel 1: Veröffentlichen eines Moduls</span><span class="sxs-lookup"><span data-stu-id="2bcae-118">Example 1: Publish a module</span></span>
 
-<span data-ttu-id="8a9b8-119">In diesem Beispiel wird mydscmodule mithilfe des API-Schlüssels im Onlinekatalog veröffentlicht, um das Onlinekatalog Konto des Modul Besitzers anzugeben.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-119">In this example, MyDscModule is published to the online gallery by using the API key to indicate the module owner's online gallery account.</span></span> <span data-ttu-id="8a9b8-120">Wenn mydscmodule kein gültiges Manifest-Modul ist, das einen Namen, eine Version, eine Beschreibung und einen Autor angibt, tritt ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-120">If MyDscModule is not a valid manifest module that specifies a name, version, description, and author, an error occurs.</span></span>
+<span data-ttu-id="2bcae-119">In diesem Beispiel wird mydscmodule mithilfe des API-Schlüssels im Onlinekatalog veröffentlicht, um das Onlinekatalog Konto des Modul Besitzers anzugeben.</span><span class="sxs-lookup"><span data-stu-id="2bcae-119">In this example, MyDscModule is published to the online gallery by using the API key to indicate the module owner's online gallery account.</span></span> <span data-ttu-id="2bcae-120">Wenn mydscmodule kein gültiges Manifest-Modul ist, das einen Namen, eine Version, eine Beschreibung und einen Autor angibt, tritt ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="2bcae-120">If MyDscModule is not a valid manifest module that specifies a name, version, description, and author, an error occurs.</span></span>
 
 ```powershell
 Publish-Module -Name "MyDscModule" -NuGetApiKey "11e4b435-6cb4-4bf7-8611-5162ed75eb73"
 ```
 
-### <span data-ttu-id="8a9b8-121">Beispiel 2: Veröffentlichen eines Moduls mit Katalog Metadaten</span><span class="sxs-lookup"><span data-stu-id="8a9b8-121">Example 2: Publish a module with gallery metadata</span></span>
+### <span data-ttu-id="2bcae-121">Beispiel 2: Veröffentlichen eines Moduls mit Katalog Metadaten</span><span class="sxs-lookup"><span data-stu-id="2bcae-121">Example 2: Publish a module with gallery metadata</span></span>
 
-<span data-ttu-id="8a9b8-122">In diesem Beispiel wird mydscmodule mithilfe des API-Schlüssels im Onlinekatalog veröffentlicht, um das Katalog Konto des Modul Besitzers anzugeben.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-122">In this example, MyDscModule is published to the online gallery by using the API key to indicate the module owner's gallery account.</span></span> <span data-ttu-id="8a9b8-123">Die zusätzlichen bereitgestellten Metadaten werden auf der Webseite für das Modul im Katalog angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-123">The additional metadata provided is displayed on the webpage for the module in the gallery.</span></span> <span data-ttu-id="8a9b8-124">Der Besitzer fügt zwei suchtags für das Modul hinzu und bezieht sich auf Active Directory. Es wird ein kurzer Versions Hinweis hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-124">The owner adds two search tags for the module, relating it to Active Directory; a brief release note is added.</span></span> <span data-ttu-id="8a9b8-125">Wenn mydscmodule kein gültiges Manifest-Modul ist, das einen Namen, eine Version, eine Beschreibung und einen Autor angibt, tritt ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-125">If MyDscModule is not a valid manifest module that specifies a name, version, description, and author, an error occurs.</span></span>
+<span data-ttu-id="2bcae-122">In diesem Beispiel wird mydscmodule mithilfe des API-Schlüssels im Onlinekatalog veröffentlicht, um das Katalog Konto des Modul Besitzers anzugeben.</span><span class="sxs-lookup"><span data-stu-id="2bcae-122">In this example, MyDscModule is published to the online gallery by using the API key to indicate the module owner's gallery account.</span></span> <span data-ttu-id="2bcae-123">Die zusätzlichen bereitgestellten Metadaten werden auf der Webseite für das Modul im Katalog angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-123">The additional metadata provided is displayed on the webpage for the module in the gallery.</span></span> <span data-ttu-id="2bcae-124">Der Besitzer fügt zwei suchtags für das Modul hinzu und bezieht sich auf Active Directory. Es wird ein kurzer Versions Hinweis hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-124">The owner adds two search tags for the module, relating it to Active Directory; a brief release note is added.</span></span> <span data-ttu-id="2bcae-125">Wenn mydscmodule kein gültiges Manifest-Modul ist, das einen Namen, eine Version, eine Beschreibung und einen Autor angibt, tritt ein Fehler auf.</span><span class="sxs-lookup"><span data-stu-id="2bcae-125">If MyDscModule is not a valid manifest module that specifies a name, version, description, and author, an error occurs.</span></span>
 
 ```powershell
 Publish-Module -Name "MyDscModule" -NuGetApiKey "11e4b435-6cb4-4bf7-8611-5162ed75eb73" -LicenseUri "http://contoso.com/license" -Tag "Active Directory","DSC" -ReleaseNote "Updated the ActiveDirectory DSC Resources to support adding users."
 ```
 
-## <span data-ttu-id="8a9b8-126">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="8a9b8-126">PARAMETERS</span></span>
+## <span data-ttu-id="2bcae-126">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2bcae-126">PARAMETERS</span></span>
 
-### <span data-ttu-id="8a9b8-127">-Allowprerelease</span><span class="sxs-lookup"><span data-stu-id="8a9b8-127">-AllowPrerelease</span></span>
+### <span data-ttu-id="2bcae-127">-Allowprerelease</span><span class="sxs-lookup"><span data-stu-id="2bcae-127">-AllowPrerelease</span></span>
 
-<span data-ttu-id="8a9b8-128">Ermöglicht das Veröffentlichen von Modulen, die als Vorabversion markiert sind.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-128">Allows modules marked as prerelease to be published.</span></span>
+<span data-ttu-id="2bcae-128">Ermöglicht das Veröffentlichen von Modulen, die als Vorabversion markiert sind.</span><span class="sxs-lookup"><span data-stu-id="2bcae-128">Allows modules marked as prerelease to be published.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -84,9 +84,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-129">-Confirm</span><span class="sxs-lookup"><span data-stu-id="8a9b8-129">-Confirm</span></span>
+### <span data-ttu-id="2bcae-129">-Confirm</span><span class="sxs-lookup"><span data-stu-id="2bcae-129">-Confirm</span></span>
 
-<span data-ttu-id="8a9b8-130">Fordert Sie zur Bestätigung auf, bevor Sie den ausführen `Publish-Module` .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-130">Prompts you for confirmation before running the `Publish-Module`.</span></span>
+<span data-ttu-id="2bcae-130">Fordert Sie zur Bestätigung auf, bevor Sie den ausführen `Publish-Module` .</span><span class="sxs-lookup"><span data-stu-id="2bcae-130">Prompts you for confirmation before running the `Publish-Module`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,9 +100,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-131">-Credential</span><span class="sxs-lookup"><span data-stu-id="8a9b8-131">-Credential</span></span>
+### <span data-ttu-id="2bcae-131">-Credential</span><span class="sxs-lookup"><span data-stu-id="2bcae-131">-Credential</span></span>
 
-<span data-ttu-id="8a9b8-132">Gibt ein Benutzerkonto an, das über Rechte zum Veröffentlichen eines Moduls für einen angegebenen Paketanbieter oder eine angegebene Quelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-132">Specifies a user account that has rights to publish a module for a specified package provider or source.</span></span>
+<span data-ttu-id="2bcae-132">Gibt ein Benutzerkonto an, das über Rechte zum Veröffentlichen eines Moduls für einen angegebenen Paketanbieter oder eine angegebene Quelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-132">Specifies a user account that has rights to publish a module for a specified package provider or source.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -116,9 +116,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-133">-Ausschließen</span><span class="sxs-lookup"><span data-stu-id="8a9b8-133">-Exclude</span></span>
+### <span data-ttu-id="2bcae-133">-Ausschließen</span><span class="sxs-lookup"><span data-stu-id="2bcae-133">-Exclude</span></span>
 
-<span data-ttu-id="8a9b8-134">Definiert Dateien, die aus dem veröffentlichten Modul ausgeschlossen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-134">Defines files to exclude from the published module.</span></span>
+<span data-ttu-id="2bcae-134">Definiert Dateien, die aus dem veröffentlichten Modul ausgeschlossen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="2bcae-134">Defines files to exclude from the published module.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -132,9 +132,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-135">-Force</span><span class="sxs-lookup"><span data-stu-id="8a9b8-135">-Force</span></span>
+### <span data-ttu-id="2bcae-135">-Force</span><span class="sxs-lookup"><span data-stu-id="2bcae-135">-Force</span></span>
 
-<span data-ttu-id="8a9b8-136">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-136">Forces the command to run without asking for user confirmation.</span></span>
+<span data-ttu-id="2bcae-136">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="2bcae-136">Forces the command to run without asking for user confirmation.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -148,11 +148,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-137">-Format Version</span><span class="sxs-lookup"><span data-stu-id="8a9b8-137">-FormatVersion</span></span>
+### <span data-ttu-id="2bcae-137">-Format Version</span><span class="sxs-lookup"><span data-stu-id="2bcae-137">-FormatVersion</span></span>
 
-<span data-ttu-id="8a9b8-138">Akzeptiert nur gültige Werte, die durch das **validateset** -Attribut angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-138">Accepts only valid values specified by the **ValidateSet** attribute.</span></span>
+<span data-ttu-id="2bcae-138">Akzeptiert nur gültige Werte, die durch das **validateset** -Attribut angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="2bcae-138">Accepts only valid values specified by the **ValidateSet** attribute.</span></span>
 
-<span data-ttu-id="8a9b8-139">Weitere Informationen finden Sie unter [validateset-Attribut Deklaration](/powershell/scripting/developer/cmdlet/validateset-attribute-declaration) und [validatesetattribute](/dotnet/api/system.management.automation.validatesetattribute).</span><span class="sxs-lookup"><span data-stu-id="8a9b8-139">For more information, see [ValidateSet Attribute Declaration](/powershell/scripting/developer/cmdlet/validateset-attribute-declaration) and [ValidateSetAttribute](/dotnet/api/system.management.automation.validatesetattribute).</span></span>
+<span data-ttu-id="2bcae-139">Weitere Informationen finden Sie unter [validateset-Attribut Deklaration](/powershell/scripting/developer/cmdlet/validateset-attribute-declaration) und [validatesetattribute](/dotnet/api/system.management.automation.validatesetattribute).</span><span class="sxs-lookup"><span data-stu-id="2bcae-139">For more information, see [ValidateSet Attribute Declaration](/powershell/scripting/developer/cmdlet/validateset-attribute-declaration) and [ValidateSetAttribute](/dotnet/api/system.management.automation.validatesetattribute).</span></span>
 
 ```yaml
 Type: System.Version
@@ -167,25 +167,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-140">-Iconuri</span><span class="sxs-lookup"><span data-stu-id="8a9b8-140">-IconUri</span></span>
+### <span data-ttu-id="2bcae-140">-Iconuri</span><span class="sxs-lookup"><span data-stu-id="2bcae-140">-IconUri</span></span>
 
-<span data-ttu-id="8a9b8-141">Gibt die URL eines Symbols für das Modul an.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-141">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="8a9b8-142">Das angegebene Symbol wird auf der Katalog Webseite für das Modul angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-142">The specified icon is displayed on the gallery webpage for the module.</span></span>
-
-```yaml
-Type: System.Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="8a9b8-143">-Licenaburi</span><span class="sxs-lookup"><span data-stu-id="8a9b8-143">-LicenseUri</span></span>
-
-<span data-ttu-id="8a9b8-144">Gibt die URL der Lizenzierungs Bedingungen für das Modul an, das Sie veröffentlichen möchten.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-144">Specifies the URL of licensing terms for the module you want to publish.</span></span>
+<span data-ttu-id="2bcae-141">Gibt die URL eines Symbols für das Modul an.</span><span class="sxs-lookup"><span data-stu-id="2bcae-141">Specifies the URL of an icon for the module.</span></span> <span data-ttu-id="2bcae-142">Das angegebene Symbol wird auf der Katalog Webseite für das Modul angezeigt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-142">The specified icon is displayed on the gallery webpage for the module.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -199,9 +183,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-145">-Name</span><span class="sxs-lookup"><span data-stu-id="8a9b8-145">-Name</span></span>
+### <span data-ttu-id="2bcae-143">-Licenaburi</span><span class="sxs-lookup"><span data-stu-id="2bcae-143">-LicenseUri</span></span>
 
-<span data-ttu-id="8a9b8-146">Gibt den Namen des Moduls an, das Sie veröffentlichen möchten.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-146">Specifies the name of the module that you want to publish.</span></span> <span data-ttu-id="8a9b8-147">`Publish-Module` sucht nach dem angegebenen Modulnamen in `$Env:PSModulePath` .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-147">`Publish-Module` searches for the specified module name in `$Env:PSModulePath`.</span></span>
+<span data-ttu-id="2bcae-144">Gibt die URL der Lizenzierungs Bedingungen für das Modul an, das Sie veröffentlichen möchten.</span><span class="sxs-lookup"><span data-stu-id="2bcae-144">Specifies the URL of licensing terms for the module you want to publish.</span></span>
+
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="2bcae-145">-Name</span><span class="sxs-lookup"><span data-stu-id="2bcae-145">-Name</span></span>
+
+<span data-ttu-id="2bcae-146">Gibt den Namen des Moduls an, das Sie veröffentlichen möchten.</span><span class="sxs-lookup"><span data-stu-id="2bcae-146">Specifies the name of the module that you want to publish.</span></span> <span data-ttu-id="2bcae-147">`Publish-Module` sucht nach dem angegebenen Modulnamen in `$Env:PSModulePath` .</span><span class="sxs-lookup"><span data-stu-id="2bcae-147">`Publish-Module` searches for the specified module name in `$Env:PSModulePath`.</span></span>
 
 ```yaml
 Type: System.String
@@ -215,9 +215,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-148">-Nugetapikey</span><span class="sxs-lookup"><span data-stu-id="8a9b8-148">-NuGetApiKey</span></span>
+### <span data-ttu-id="2bcae-148">-Nugetapikey</span><span class="sxs-lookup"><span data-stu-id="2bcae-148">-NuGetApiKey</span></span>
 
-<span data-ttu-id="8a9b8-149">Gibt den API-Schlüssel an, den Sie zum Veröffentlichen eines Moduls im Onlinekatalog verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-149">Specifies the API key that you want to use to publish a module to the online gallery.</span></span> <span data-ttu-id="8a9b8-150">Der API-Schlüssel ist Teil Ihres Profils im Onlinekatalog. Sie finden Sie auf der Seite Benutzerkonto im Katalog.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-150">The API key is part of your profile in the online gallery, and can be found on your user account page in the gallery.</span></span> <span data-ttu-id="8a9b8-151">Der API-Schlüssel ist eine nuget-spezifische Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-151">The API key is NuGet-specific functionality.</span></span>
+<span data-ttu-id="2bcae-149">Gibt den API-Schlüssel an, den Sie zum Veröffentlichen eines Moduls im Onlinekatalog verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="2bcae-149">Specifies the API key that you want to use to publish a module to the online gallery.</span></span> <span data-ttu-id="2bcae-150">Der API-Schlüssel ist Teil Ihres Profils im Onlinekatalog. Sie finden Sie auf der Seite Benutzerkonto im Katalog.</span><span class="sxs-lookup"><span data-stu-id="2bcae-150">The API key is part of your profile in the online gallery, and can be found on your user account page in the gallery.</span></span> <span data-ttu-id="2bcae-151">Der API-Schlüssel ist eine nuget-spezifische Funktionalität.</span><span class="sxs-lookup"><span data-stu-id="2bcae-151">The API key is NuGet-specific functionality.</span></span>
 
 ```yaml
 Type: System.String
@@ -231,9 +231,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-152">-Path</span><span class="sxs-lookup"><span data-stu-id="8a9b8-152">-Path</span></span>
+### <span data-ttu-id="2bcae-152">-Path</span><span class="sxs-lookup"><span data-stu-id="2bcae-152">-Path</span></span>
 
-<span data-ttu-id="8a9b8-153">Gibt den Pfad zu dem Modul an, das Sie veröffentlichen möchten.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-153">Specifies the path to the module that you want to publish.</span></span> <span data-ttu-id="8a9b8-154">Dieser Parameter akzeptiert den Pfad zu dem Ordner, der das Modul enthält.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-154">This parameter accepts the path to the folder that contains the module.</span></span>
+<span data-ttu-id="2bcae-153">Gibt den Pfad zu dem Modul an, das Sie veröffentlichen möchten.</span><span class="sxs-lookup"><span data-stu-id="2bcae-153">Specifies the path to the module that you want to publish.</span></span> <span data-ttu-id="2bcae-154">Dieser Parameter akzeptiert den Pfad zu dem Ordner, der das Modul enthält.</span><span class="sxs-lookup"><span data-stu-id="2bcae-154">This parameter accepts the path to the folder that contains the module.</span></span>
 
 ```yaml
 Type: System.String
@@ -247,9 +247,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-155">-Projecturi</span><span class="sxs-lookup"><span data-stu-id="8a9b8-155">-ProjectUri</span></span>
+### <span data-ttu-id="2bcae-155">-Projecturi</span><span class="sxs-lookup"><span data-stu-id="2bcae-155">-ProjectUri</span></span>
 
-<span data-ttu-id="8a9b8-156">Gibt die URL einer Webseite zu diesem Projekt an.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-156">Specifies the URL of a webpage about this project.</span></span>
+<span data-ttu-id="2bcae-156">Gibt die URL einer Webseite zu diesem Projekt an.</span><span class="sxs-lookup"><span data-stu-id="2bcae-156">Specifies the URL of a webpage about this project.</span></span>
 
 ```yaml
 Type: System.Uri
@@ -263,9 +263,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-157">-Releasenotes</span><span class="sxs-lookup"><span data-stu-id="8a9b8-157">-ReleaseNotes</span></span>
+### <span data-ttu-id="2bcae-157">-Releasenotes</span><span class="sxs-lookup"><span data-stu-id="2bcae-157">-ReleaseNotes</span></span>
 
-<span data-ttu-id="8a9b8-158">Gibt eine Zeichenfolge mit Anmerkungen zu dieser Version oder Kommentaren an, die für Benutzer dieser Version des Moduls verfügbar sein sollen.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-158">Specifies a string containing release notes or comments that you want to be available to users of this version of the module.</span></span>
+<span data-ttu-id="2bcae-158">Gibt eine Zeichenfolge mit Anmerkungen zu dieser Version oder Kommentaren an, die für Benutzer dieser Version des Moduls verfügbar sein sollen.</span><span class="sxs-lookup"><span data-stu-id="2bcae-158">Specifies a string containing release notes or comments that you want to be available to users of this version of the module.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -279,10 +279,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-159">-Repository</span><span class="sxs-lookup"><span data-stu-id="8a9b8-159">-Repository</span></span>
+### <span data-ttu-id="2bcae-159">-Repository</span><span class="sxs-lookup"><span data-stu-id="2bcae-159">-Repository</span></span>
 
-<span data-ttu-id="8a9b8-160">Gibt den anzeigen Amen eines Repository an, das durch Ausführen von registriert wurde `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-160">Specifies the friendly name of a repository that has been registered by running `Register-PSRepository`.</span></span> <span data-ttu-id="8a9b8-161">Das Repository muss über einen **publishlocation** verfügen, bei dem es sich um einen gültigen nuget-URI handelt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-161">The repository must have a **PublishLocation** , which is a valid NuGet URI.</span></span>
-<span data-ttu-id="8a9b8-162">**Publishlocation** kann durch Ausführen von festgelegt werden `Set-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-162">The **PublishLocation** can be set by running `Set-PSRepository`.</span></span>
+<span data-ttu-id="2bcae-160">Gibt den anzeigen Amen eines Repository an, das durch Ausführen von registriert wurde `Register-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="2bcae-160">Specifies the friendly name of a repository that has been registered by running `Register-PSRepository`.</span></span> <span data-ttu-id="2bcae-161">Das Repository muss über einen **publishlocation** verfügen, bei dem es sich um einen gültigen nuget-URI handelt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-161">The repository must have a **PublishLocation**, which is a valid NuGet URI.</span></span>
+<span data-ttu-id="2bcae-162">**Publishlocation** kann durch Ausführen von festgelegt werden `Set-PSRepository` .</span><span class="sxs-lookup"><span data-stu-id="2bcae-162">The **PublishLocation** can be set by running `Set-PSRepository`.</span></span>
 
 ```yaml
 Type: System.String
@@ -296,9 +296,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-163">-Requirements dversion</span><span class="sxs-lookup"><span data-stu-id="8a9b8-163">-RequiredVersion</span></span>
+### <span data-ttu-id="2bcae-163">-Requirements dversion</span><span class="sxs-lookup"><span data-stu-id="2bcae-163">-RequiredVersion</span></span>
 
-<span data-ttu-id="8a9b8-164">Gibt die exakte Version eines einzelnen zu veröffentlichenden Moduls an.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-164">Specifies the exact version of a single module to publish.</span></span>
+<span data-ttu-id="2bcae-164">Gibt die exakte Version eines einzelnen zu veröffentlichenden Moduls an.</span><span class="sxs-lookup"><span data-stu-id="2bcae-164">Specifies the exact version of a single module to publish.</span></span>
 
 ```yaml
 Type: System.String
@@ -312,9 +312,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-165">-Skipautomatictags</span><span class="sxs-lookup"><span data-stu-id="8a9b8-165">-SkipAutomaticTags</span></span>
+### <span data-ttu-id="2bcae-165">-Skipautomatictags</span><span class="sxs-lookup"><span data-stu-id="2bcae-165">-SkipAutomaticTags</span></span>
 
-<span data-ttu-id="8a9b8-166">Entfernt das Einschließen von Befehlen und Ressourcen als Tags.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-166">Removes commands and resources from being included as tags.</span></span> <span data-ttu-id="8a9b8-167">Überspringt das automatische Hinzufügen von Tags zu einem Modul.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-167">Skips automatically adding tags to a module.</span></span>
+<span data-ttu-id="2bcae-166">Entfernt das Einschließen von Befehlen und Ressourcen als Tags.</span><span class="sxs-lookup"><span data-stu-id="2bcae-166">Removes commands and resources from being included as tags.</span></span> <span data-ttu-id="2bcae-167">Überspringt das automatische Hinzufügen von Tags zu einem Modul.</span><span class="sxs-lookup"><span data-stu-id="2bcae-167">Skips automatically adding tags to a module.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -328,9 +328,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-168">-Tags</span><span class="sxs-lookup"><span data-stu-id="8a9b8-168">-Tags</span></span>
+### <span data-ttu-id="2bcae-168">-Tags</span><span class="sxs-lookup"><span data-stu-id="2bcae-168">-Tags</span></span>
 
-<span data-ttu-id="8a9b8-169">Fügt dem Modul, das Sie veröffentlichen, ein oder mehrere Tags hinzu.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-169">Adds one or more tags to the module that you are publishing.</span></span> <span data-ttu-id="8a9b8-170">Beispiele hierfür sind "desiredStatus econfiguration", "DSC", "dscresourcekit" oder "psmodule".</span><span class="sxs-lookup"><span data-stu-id="8a9b8-170">Example tags include DesiredStateConfiguration, DSC, DSCResourceKit, or PSModule.</span></span> <span data-ttu-id="8a9b8-171">Trennen Sie mehrere Tags durch Kommas.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-171">Separate multiple tags with commas.</span></span>
+<span data-ttu-id="2bcae-169">Fügt dem Modul, das Sie veröffentlichen, ein oder mehrere Tags hinzu.</span><span class="sxs-lookup"><span data-stu-id="2bcae-169">Adds one or more tags to the module that you are publishing.</span></span> <span data-ttu-id="2bcae-170">Beispiele hierfür sind "desiredStatus econfiguration", "DSC", "dscresourcekit" oder "psmodule".</span><span class="sxs-lookup"><span data-stu-id="2bcae-170">Example tags include DesiredStateConfiguration, DSC, DSCResourceKit, or PSModule.</span></span> <span data-ttu-id="2bcae-171">Trennen Sie mehrere Tags durch Kommas.</span><span class="sxs-lookup"><span data-stu-id="2bcae-171">Separate multiple tags with commas.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -344,9 +344,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-172">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="8a9b8-172">-WhatIf</span></span>
+### <span data-ttu-id="2bcae-172">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="2bcae-172">-WhatIf</span></span>
 
-<span data-ttu-id="8a9b8-173">Zeigt, was geschieht, wenn die ausgeführt wird `Publish-Module` .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-173">Shows what would happen if the `Publish-Module` runs.</span></span> <span data-ttu-id="8a9b8-174">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-174">The cmdlet is not run.</span></span>
+<span data-ttu-id="2bcae-173">Zeigt, was geschieht, wenn die ausgeführt wird `Publish-Module` .</span><span class="sxs-lookup"><span data-stu-id="2bcae-173">Shows what would happen if the `Publish-Module` runs.</span></span> <span data-ttu-id="2bcae-174">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-174">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -360,37 +360,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="8a9b8-175">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="8a9b8-175">CommonParameters</span></span>
+### <span data-ttu-id="2bcae-175">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2bcae-175">CommonParameters</span></span>
 
-<span data-ttu-id="8a9b8-176">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-176">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="8a9b8-177">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="8a9b8-177">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="2bcae-176">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2bcae-176">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2bcae-177">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="2bcae-177">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="8a9b8-178">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="8a9b8-178">INPUTS</span></span>
+## <span data-ttu-id="2bcae-178">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="2bcae-178">INPUTS</span></span>
 
-### <span data-ttu-id="8a9b8-179">System.String</span><span class="sxs-lookup"><span data-stu-id="8a9b8-179">System.String</span></span>
+### <span data-ttu-id="2bcae-179">System.String</span><span class="sxs-lookup"><span data-stu-id="2bcae-179">System.String</span></span>
 
-### <span data-ttu-id="8a9b8-180">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="8a9b8-180">System.Management.Automation.PSCredential</span></span>
+### <span data-ttu-id="2bcae-180">System. Management. Automation. PSCredential</span><span class="sxs-lookup"><span data-stu-id="2bcae-180">System.Management.Automation.PSCredential</span></span>
 
-## <span data-ttu-id="8a9b8-181">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="8a9b8-181">OUTPUTS</span></span>
+## <span data-ttu-id="2bcae-181">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="2bcae-181">OUTPUTS</span></span>
 
-### <span data-ttu-id="8a9b8-182">System.Object</span><span class="sxs-lookup"><span data-stu-id="8a9b8-182">System.Object</span></span>
+### <span data-ttu-id="2bcae-182">System.Object</span><span class="sxs-lookup"><span data-stu-id="2bcae-182">System.Object</span></span>
 
-## <span data-ttu-id="8a9b8-183">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="8a9b8-183">NOTES</span></span>
+## <span data-ttu-id="2bcae-183">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="2bcae-183">NOTES</span></span>
 
-<span data-ttu-id="8a9b8-184">`Publish-Module` wird in PowerShell 3,0 oder höheren Versionen von PowerShell unter Windows 7 oder Windows 2008 R2 und höheren Versionen von Windows ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-184">`Publish-Module` runs on PowerShell 3.0 or later releases of PowerShell, on Windows 7 or Windows 2008 R2 and later releases of Windows.</span></span>
+<span data-ttu-id="2bcae-184">`Publish-Module` wird in PowerShell 3,0 oder höheren Versionen von PowerShell unter Windows 7 oder Windows 2008 R2 und höheren Versionen von Windows ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="2bcae-184">`Publish-Module` runs on PowerShell 3.0 or later releases of PowerShell, on Windows 7 or Windows 2008 R2 and later releases of Windows.</span></span>
 
-<span data-ttu-id="8a9b8-185">Die Veröffentlichung eines Moduls erfordert Metadaten, die auf der Seite „Katalog“ des Moduls angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-185">Publishing a module requires metadata that is displayed on the gallery page for the module.</span></span> <span data-ttu-id="8a9b8-186">Die erforderlichen Metadaten enthalten den Modulnamen, die Version, die Beschreibung und den Autor.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-186">Required metadata includes the module name, version, description, and author.</span></span> <span data-ttu-id="8a9b8-187">Die meisten Metadaten werden aus dem Modul Manifest entnommen, aber einige Metadaten können in `Publish-Module` Parametern angegeben werden, wie z. b. **Tag** , **Releasenote** , **iconuri** , **projecturi** und **licentaruri** .</span><span class="sxs-lookup"><span data-stu-id="8a9b8-187">Most metadata is taken from the module manifest, but some metadata can be specified in `Publish-Module` parameters, such as **Tag** , **ReleaseNote** , **IconUri** , **ProjectUri** , and **LicenseUri** .</span></span> <span data-ttu-id="8a9b8-188">Weitere Informationen finden Sie unter [Paket Manifest-Werte, die Auswirkungen auf die PowerShell-Katalog-Benutzeroberfläche](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui)haben.</span><span class="sxs-lookup"><span data-stu-id="8a9b8-188">For more information, see [Package manifest values that impact the PowerShell Gallery UI](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui).</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="2bcae-185">Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1.</span><span class="sxs-lookup"><span data-stu-id="2bcae-185">As of April 2020, the PowerShell Gallery no longer supports Transport Layer Security (TLS) versions 1.0 and 1.1.</span></span> <span data-ttu-id="2bcae-186">Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="2bcae-186">If you are not using TLS 1.2 or higher, you will receive an error when trying to access the PowerShell Gallery.</span></span> <span data-ttu-id="2bcae-187">Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:</span><span class="sxs-lookup"><span data-stu-id="2bcae-187">Use the following command to ensure you are using TLS 1.2:</span></span>
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> <span data-ttu-id="2bcae-188">Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.</span><span class="sxs-lookup"><span data-stu-id="2bcae-188">For more information, see the [announcement](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) in the PowerShell blog.</span></span>
 
-## <span data-ttu-id="8a9b8-189">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="8a9b8-189">RELATED LINKS</span></span>
+<span data-ttu-id="2bcae-189">Die Veröffentlichung eines Moduls erfordert Metadaten, die auf der Seite „Katalog“ des Moduls angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="2bcae-189">Publishing a module requires metadata that is displayed on the gallery page for the module.</span></span> <span data-ttu-id="2bcae-190">Die erforderlichen Metadaten enthalten den Modulnamen, die Version, die Beschreibung und den Autor.</span><span class="sxs-lookup"><span data-stu-id="2bcae-190">Required metadata includes the module name, version, description, and author.</span></span> <span data-ttu-id="2bcae-191">Die meisten Metadaten werden aus dem Modul Manifest entnommen, aber einige Metadaten können in `Publish-Module` Parametern angegeben werden, wie z. b. **Tag**, **Releasenote**, **iconuri**, **projecturi** und **licentaruri**.</span><span class="sxs-lookup"><span data-stu-id="2bcae-191">Most metadata is taken from the module manifest, but some metadata can be specified in `Publish-Module` parameters, such as **Tag**, **ReleaseNote**, **IconUri**, **ProjectUri**, and **LicenseUri**.</span></span> <span data-ttu-id="2bcae-192">Weitere Informationen finden Sie unter [Paket Manifest-Werte, die Auswirkungen auf die PowerShell-Katalog-Benutzeroberfläche](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui)haben.</span><span class="sxs-lookup"><span data-stu-id="2bcae-192">For more information, see [Package manifest values that impact the PowerShell Gallery UI](/powershell/scripting/gallery/concepts/package-manifest-affecting-ui).</span></span>
 
-[<span data-ttu-id="8a9b8-190">Find-Module</span><span class="sxs-lookup"><span data-stu-id="8a9b8-190">Find-Module</span></span>](Find-Module.md)
+## <span data-ttu-id="2bcae-193">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="2bcae-193">RELATED LINKS</span></span>
 
-[<span data-ttu-id="8a9b8-191">Install-Module</span><span class="sxs-lookup"><span data-stu-id="8a9b8-191">Install-Module</span></span>](Install-Module.md)
+[<span data-ttu-id="2bcae-194">Find-Module</span><span class="sxs-lookup"><span data-stu-id="2bcae-194">Find-Module</span></span>](Find-Module.md)
 
-[<span data-ttu-id="8a9b8-192">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="8a9b8-192">Register-PSRepository</span></span>](Register-PSRepository.md)
+[<span data-ttu-id="2bcae-195">Install-Module</span><span class="sxs-lookup"><span data-stu-id="2bcae-195">Install-Module</span></span>](Install-Module.md)
 
-[<span data-ttu-id="8a9b8-193">Set-PSRepository</span><span class="sxs-lookup"><span data-stu-id="8a9b8-193">Set-PSRepository</span></span>](Set-PSRepository.md)
+[<span data-ttu-id="2bcae-196">Register-PSRepository</span><span class="sxs-lookup"><span data-stu-id="2bcae-196">Register-PSRepository</span></span>](Register-PSRepository.md)
 
-[<span data-ttu-id="8a9b8-194">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="8a9b8-194">Uninstall-Module</span></span>](Uninstall-Module.md)
+[<span data-ttu-id="2bcae-197">Set-PSRepository</span><span class="sxs-lookup"><span data-stu-id="2bcae-197">Set-PSRepository</span></span>](Set-PSRepository.md)
 
-[<span data-ttu-id="8a9b8-195">Update-Module</span><span class="sxs-lookup"><span data-stu-id="8a9b8-195">Update-Module</span></span>](Update-Module.md)
+[<span data-ttu-id="2bcae-198">Uninstall-Module</span><span class="sxs-lookup"><span data-stu-id="2bcae-198">Uninstall-Module</span></span>](Uninstall-Module.md)
 
+[<span data-ttu-id="2bcae-199">Update-Module</span><span class="sxs-lookup"><span data-stu-id="2bcae-199">Update-Module</span></span>](Update-Module.md)
