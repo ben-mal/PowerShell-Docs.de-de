@@ -2,26 +2,26 @@
 description: Psleline bietet eine verbesserte Befehlszeilen Bearbeitung in der PowerShell-Konsole.
 keywords: powershell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen über psread Line
-ms.openlocfilehash: ad6e85a30f866cb332c89a4c36f42231f511f5ae
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 25fc3a9a814728057b1ebc7e721d3fba84ae72c2
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224919"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692308"
 ---
 # <a name="psreadline"></a>PSReadLine
 
 ## <a name="about_psreadline"></a>about_PSReadLine
 
-## <a name="short-description"></a>KURZE BESCHREIBUNG
+## <a name="short-description"></a>Kurze Beschreibung
 
 Psleline bietet eine verbesserte Befehlszeilen Bearbeitung in der PowerShell-Konsole.
 
-## <a name="long-description"></a>LANGE BESCHREIBUNG
+## <a name="long-description"></a>Lange Beschreibung
 
 Psleline 2,0 bietet eine leistungsfähige Befehlszeilen Bearbeitungsfunktion für die PowerShell-Konsole. Sie bietet:
 
@@ -34,6 +34,8 @@ Psleline 2,0 bietet eine leistungsfähige Befehlszeilen Bearbeitungsfunktion fü
 - Bash-Stil Vervollständigung (optional im cmd-Modus, Standard im Emacs-Modus)
 - Emacs: Yank/Kill-Ring
 - PowerShell-tokenbasierte "Wort Bewegung" und "Kill"
+
+Für psread line sind PowerShell 3,0 oder höher sowie der Konsolen Host erforderlich. Es funktioniert nicht in PowerShell ISE. Dies funktioniert in der-Konsole Visual Studio Code.
 
 Die folgenden Funktionen sind in der-Klasse **[Microsoft. PowerShell. psconsolereadline]** verfügbar.
 
@@ -294,7 +296,7 @@ Tauschen Sie das aktuelle und das aktuelle Zeichen aus.
 - VI-Einfügemodus: `<Ctrl+t>`
 - VI-Befehlsmodus: `<Ctrl+t>`
 
-### <a name="undo"></a>Rückgängig
+### <a name="undo"></a>Rückgängig machen
 
 Rückgängigmachen einer vorherigen Bearbeitung.
 
@@ -1284,11 +1286,7 @@ Diese Hilfsmethode wird für benutzerdefinierte Bindungen verwendet, die digitar
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>HINWEIS
-
-### <a name="powershell-compatibility"></a>PowerShell-Kompatibilität
-
-Für psread line sind PowerShell 3,0 oder höher sowie der Konsolen Host erforderlich. Es funktioniert nicht in PowerShell ISE. Dies funktioniert in der-Konsole Visual Studio Code.
+## <a name="note"></a>Hinweis
 
 ### <a name="command-history"></a>Befehlsverlauf
 
@@ -1300,6 +1298,6 @@ Psleseline verwaltet eine Verlaufs Datei, die alle Befehle und Daten enthält, d
 
 Sie können auf der GitHub-Seite eine Pull Request einreichen oder Feedback einreichen.
 
-## <a name="see-also"></a>SIEHE AUCH
+## <a name="see-also"></a>Weitere Informationen
 
 "Psread Line" wird stark von der GNU-Bibliothek für die [Zeilen](https://tiswww.case.edu/php/chet/readline/rltop.html) Übereinstimmung beeinflusst

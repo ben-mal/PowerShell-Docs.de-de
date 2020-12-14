@@ -4,10 +4,10 @@ ms.topic: reference
 title: Installieren eines PowerShell-Moduls
 description: Installieren eines PowerShell-Moduls
 ms.openlocfilehash: 3c7a4413168934ca4de1912c9615a6ae0fc45788
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92645338"
 ---
 # <a name="installing-a-powershell-module"></a>Installieren eines PowerShell-Moduls
@@ -20,9 +20,9 @@ Die folgenden Informationen beziehen sich auf alle Module einschließlich derer,
 
 ### <a name="install-modules-in-psmodulepath"></a>Installieren von Modulen in PSModulePath
 
-Installieren Sie nach Möglichkeit alle Module in einem Pfad, der in der **PSModulePath** -Umgebungsvariablen aufgeführt ist, oder fügen Sie den Modulpfad dem Wert der **PSModulePath** -Umgebungsvariablen hinzu.
+Installieren Sie nach Möglichkeit alle Module in einem Pfad, der in der **PSModulePath**-Umgebungsvariablen aufgeführt ist, oder fügen Sie den Modulpfad dem Wert der **PSModulePath**-Umgebungsvariablen hinzu.
 
-Die **PSModulePath** -Umgebungsvariable ($Env:PSModulePath) enthält die Speicherorte von Windows PowerShell-Modulen. Cmdlets suchen Module auf Basis des Werts dieser Umgebungsvariablen.
+Die **PSModulePath**-Umgebungsvariable ($Env:PSModulePath) enthält die Speicherorte von Windows PowerShell-Modulen. Cmdlets suchen Module auf Basis des Werts dieser Umgebungsvariablen.
 
 Standardmäßig enthält der Wert der Umgebungsvariablen **PSModulePath** die folgenden System- und Benutzermodulverzeichnisse. Sie können den Wert jedoch ergänzen und bearbeiten.
 
@@ -35,14 +35,14 @@ Standardmäßig enthält der Wert der Umgebungsvariablen **PSModulePath** die fo
 
 - `$Env:ProgramFiles\WindowsPowerShell\Modules` (%ProgramFiles%\WindowsPowerShell\Modules)
 
-  Verwenden Sie einen der folgenden Befehle, um den Wert der **PSModulePath** -Umgebungsvariablen abzurufen.
+  Verwenden Sie einen der folgenden Befehle, um den Wert der **PSModulePath**-Umgebungsvariablen abzurufen.
 
   ```powershell
   $Env:PSModulePath
   [Environment]::GetEnvironmentVariable("PSModulePath")
   ```
 
-  Verwenden Sie das folgende Befehlsformat, um dem Wert der **PSModulePath** -Umgebungsvariablen einen Modulpfad hinzuzufügen. Dieses Format verwendet die **SetEnvironmentVariable** -Methode der **System.Environment** -Klasse, um der Umgebungsvariablen **PSModulePath** einen sitzungsunabhängigen Pfad hinzuzufügen.
+  Verwenden Sie das folgende Befehlsformat, um dem Wert der **PSModulePath**-Umgebungsvariablen einen Modulpfad hinzuzufügen. Dieses Format verwendet die **SetEnvironmentVariable**-Methode der **System.Environment**-Klasse, um der Umgebungsvariablen **PSModulePath** einen sitzungsunabhängigen Pfad hinzuzufügen.
 
   ```powershell
   #Save the current value in the $p variable.
@@ -57,7 +57,7 @@ Standardmäßig enthält der Wert der Umgebungsvariablen **PSModulePath** die fo
   ```
 
   > [!IMPORTANT]
-  > Nachdem Sie **PSModulePath** den Pfad hinzugefügt haben, sollten Sie eine Nachricht über die Änderung an die Umgebung übertragen. Das Übertragen der Änderung ermöglicht anderen Anwendungen wie der Shell, die Änderung zu übernehmen. Um die Änderung zu übertragen, lassen Sie Ihren Produktinstallationscode eine **WM_SETTINGCHANGE** -Nachricht senden, wobei `lParam` auf die Zeichenfolge „Environment“ festgelegt ist. Stellen Sie sicher, dass Sie die Nachricht übertragen, nachdem der Modulinstallationscode **PSModulePath** aktualisiert hat.
+  > Nachdem Sie **PSModulePath** den Pfad hinzugefügt haben, sollten Sie eine Nachricht über die Änderung an die Umgebung übertragen. Das Übertragen der Änderung ermöglicht anderen Anwendungen wie der Shell, die Änderung zu übernehmen. Um die Änderung zu übertragen, lassen Sie Ihren Produktinstallationscode eine **WM_SETTINGCHANGE**-Nachricht senden, wobei `lParam` auf die Zeichenfolge „Environment“ festgelegt ist. Stellen Sie sicher, dass Sie die Nachricht übertragen, nachdem der Modulinstallationscode **PSModulePath** aktualisiert hat.
 
 ### <a name="use-the-correct-module-directory-name"></a>Verwenden des richtigen Modulverzeichnisnamens
 
@@ -80,7 +80,7 @@ C:\Program Files
 
 ### <a name="effect-of-incorrect-installation"></a>Auswirkungen einer falschen Installation
 
-Wenn das Modul nicht wohlgeformt und sein Speicherort nicht im Wert der **PSModulePath** -Umgebungsvariablen enthalten ist, funktionieren grundlegende Ermittlungsfeatures von Windows PowerShell nicht, z. B. die folgenden.
+Wenn das Modul nicht wohlgeformt und sein Speicherort nicht im Wert der **PSModulePath**-Umgebungsvariablen enthalten ist, funktionieren grundlegende Ermittlungsfeatures von Windows PowerShell nicht, z. B. die folgenden.
 
 - Das Feature „Module Auto-Loading“ kann das Modul nicht automatisch importieren.
 
@@ -88,7 +88,7 @@ Wenn das Modul nicht wohlgeformt und sein Speicherort nicht im Wert der **PSModu
 
 - Das [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlet kann das Modul nicht finden. Zum Importieren des Moduls müssen Sie den vollständigen Pfad zur Stammmoduldatei oder zur Modulmanifestdatei angeben.
 
-  Weitere Features, wie z. B. die folgenden, funktionieren erst, wenn das Modul in die Sitzung importiert wird. In wohlgeformten Modulen in der **PSModulePath** -Umgebungsvariablen funktionieren diese Features auch dann, wenn das Modul nicht in die Sitzung importiert wird.
+  Weitere Features, wie z. B. die folgenden, funktionieren erst, wenn das Modul in die Sitzung importiert wird. In wohlgeformten Modulen in der **PSModulePath**-Umgebungsvariablen funktionieren diese Features auch dann, wenn das Modul nicht in die Sitzung importiert wird.
 
 - Das [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command)-Cmdlet kann keine Befehle im Modul finden.
 
@@ -108,7 +108,7 @@ Wenn Sie ein eigenes Modul erstellen oder ein Modul von einer anderen Partei (z.
 
 `$home\Documents\WindowsPowerShell\Modules\<Module Folder>\<Module Files>`
 
-Das benutzerspezifische Modules-Verzeichnis wird standardmäßig dem Wert der **PSModulePath** -Umgebungsvariablen hinzugefügt.
+Das benutzerspezifische Modules-Verzeichnis wird standardmäßig dem Wert der **PSModulePath**-Umgebungsvariablen hinzugefügt.
 
 ### <a name="installing-modules-for-all-users-in-program-files"></a>Installieren von Modulen für alle Benutzer in „Programme“
 
@@ -159,7 +159,7 @@ C:\Program Files
         Fabrikam.dll (module assembly)
 ```
 
-Das Installationsprogramm stellt dann sicher, dass der Wert der **PSModulePath** -Umgebungsvariablen den Pfad des Unterverzeichnisses von „\Gemeinsame Dateien\Modules“ enthält.
+Das Installationsprogramm stellt dann sicher, dass der Wert der **PSModulePath**-Umgebungsvariablen den Pfad des Unterverzeichnisses von „\Gemeinsame Dateien\Modules“ enthält.
 
 ```powershell
 $m = $env:ProgramFiles + '\Common Files\Modules'
@@ -178,7 +178,7 @@ Wenn Sie mehrere Versionen desselben Moduls installieren möchten, verwenden Sie
 
 1. Erstellen Sie ein Verzeichnis für jede Version des Moduls. Fügen Sie die Versionsnummer in den Verzeichnisnamen ein.
 2. Erstellen Sie für jede Version des Moduls ein Modulmanifest. Geben Sie in den Wert des Schlüssels **ModuleVersion** im Manifest die Modulversionsnummer ein. Speichern Sie die Manifestdatei (PSD1) im versionsspezifischen Verzeichnis für das Modul.
-3. Fügen Sie den Stammordnerpfad des Moduls dem Wert der **PSModulePath** -Umgebungsvariablen hinzu, wie in den folgenden Beispielen gezeigt.
+3. Fügen Sie den Stammordnerpfad des Moduls dem Wert der **PSModulePath**-Umgebungsvariablen hinzu, wie in den folgenden Beispielen gezeigt.
 
 Um eine bestimmte Version des Moduls zu importieren, kann der Endbenutzer die Parameter `MinimumVersion` oder `RequiredVersion` des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlets verwenden.
 
@@ -197,7 +197,7 @@ Fabrikam Manager
       Fabrikam.dll (module assembly)
 ```
 
-Das Installationsprogramm fügt dem Wert der **PSModulePath** -Umgebungsvariablen beide Modulpfade hinzu.
+Das Installationsprogramm fügt dem Wert der **PSModulePath**-Umgebungsvariablen beide Modulpfade hinzu.
 
 ```powershell
 $p = [Environment]::GetEnvironmentVariable("PSModulePath")
@@ -205,7 +205,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-Wenn diese Schritte abgeschlossen sind, ruft der **ListAvailable** -Parameter des [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module)-Cmdlets beide Fabrikam-Module ab. Wenn Sie ein bestimmtes Modul importieren möchten, verwenden Sie die Parameter `MinimumVersion` oder `RequiredVersion` des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlets.
+Wenn diese Schritte abgeschlossen sind, ruft der **ListAvailable**-Parameter des [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module)-Cmdlets beide Fabrikam-Module ab. Wenn Sie ein bestimmtes Modul importieren möchten, verwenden Sie die Parameter `MinimumVersion` oder `RequiredVersion` des [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module)-Cmdlets.
 
 Wenn beide Module in dieselbe Sitzung importiert werden und die Module Cmdlets mit identischen Namen enthalten, sind die zuletzt importierten Cmdlets in der Sitzung gültig.
 
@@ -221,9 +221,9 @@ Wenn die Sitzung z. B. eine `Get-Date`-Funktion und das `Get-Date`-Cmdlet enthä
 Microsoft.PowerShell.Utility\Get-Date
 ```
 
-Um Namenskonflikte zu verhindern, können Modulentwickler den **DefaultCommandPrefix** -Schlüssel im Modulmanifest verwenden, um ein Nounpräfix für alle Befehle anzugeben, die aus dem Modul exportiert werden.
+Um Namenskonflikte zu verhindern, können Modulentwickler den **DefaultCommandPrefix**-Schlüssel im Modulmanifest verwenden, um ein Nounpräfix für alle Befehle anzugeben, die aus dem Modul exportiert werden.
 
-Benutzer können den **Prefix** -Parameter des `Import-Module`-Cmdlets verwenden, um ein alternatives Präfix zu verwenden. Der Wert des **Prefix** -Parameters hat Vorrang vor dem Wert des **DefaultCommandPrefix** -Schlüssels.
+Benutzer können den **Prefix**-Parameter des `Import-Module`-Cmdlets verwenden, um ein alternatives Präfix zu verwenden. Der Wert des **Prefix**-Parameters hat Vorrang vor dem Wert des **DefaultCommandPrefix**-Schlüssels.
 
 ## <a name="see-also"></a>Weitere Informationen
 

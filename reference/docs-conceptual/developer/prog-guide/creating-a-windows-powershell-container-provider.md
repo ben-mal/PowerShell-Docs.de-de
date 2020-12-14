@@ -1,12 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Containeranbieters
 ms.date: 09/13/2016
-ms.openlocfilehash: a5bcba425909eb98c010a1ea010cb02b995771f3
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Containeranbieters
+description: Erstellen eines Windows PowerShell-Containeranbieters
+ms.openlocfilehash: 999bd69e3c16bfc0a74519986654ec15bbc0da6d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87787205"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645353"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Erstellen eines Windows PowerShell-Containeranbieters
 
@@ -229,7 +231,7 @@ Die folgenden Bedingungen können für Ihre Implementierung von [System. Managem
 
   Nachdem der System. [Management. Automation. Provider. cmdletprovider. schuldprocess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) -Befehl zurückgegeben `true` wurde, sollte die [System. Management. Automation. Provider. containercmdletprovider. RenameItem *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItem) -Methode die [System. Management. Automation. Provider. cmdletprovider. schuldcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) -Methode aufruft. Diese Methode sendet eine Meldung eine Bestätigungsmeldung an den Benutzer, um zusätzliche Feedback zu geben, um zu bestätigen, dass der Vorgang fortgesetzt werden soll. Ein Anbieter sollte [System. Management. Automation. Provider. cmdletprovider. undcontinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) als zusätzliche Überprüfung auf potenziell gefährliche System Änderungen abrufen.
 
-## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>Anfügen dynamischer Parameter an das Cmdlet Rename-Item
+## <a name="attaching-dynamic-parameters-to-the-rename-item-cmdlet"></a>Anfügen dynamischer Parameter an das Cmdlet "Rename-Item"
 
 Manchmal `Rename-Item` benötigt das Cmdlet zusätzliche Parameter, die zur Laufzeit dynamisch angegeben werden. Um diese dynamischen Parameter bereitzustellen, muss der Windows PowerShell-Container Anbieter die [System. Management. Automation. Provider. containercmdletprovider. renameitemdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RenameItemDynamicParameters) -Methode implementieren. Diese Methode ruft die Parameter für das Element im angezeigten Pfad ab und gibt ein Objekt zurück, das über Eigenschaften und Felder mit Attribut Attributen verfügt, die einer Cmdlet-Klasse oder einem [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt ähneln. Die Windows PowerShell-Laufzeit verwendet das zurückgegebene-Objekt, um die Parameter zum `Rename-Item` Cmdlet hinzuzufügen.
 

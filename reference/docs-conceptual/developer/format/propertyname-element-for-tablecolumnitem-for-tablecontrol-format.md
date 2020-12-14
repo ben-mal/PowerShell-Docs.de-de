@@ -1,12 +1,14 @@
 ---
-title: PropertyName-Element für tablecolumnitem für tablecontrol (Format) | Microsoft-Dokumentation
 ms.date: 09/13/2016
-ms.openlocfilehash: bf267eeb83aef59abea2d945af12e849252309c8
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Element „PropertyName“ für TableColumnItem für TableControl (Format)
+description: Element „PropertyName“ für TableColumnItem für TableControl (Format)
+ms.openlocfilehash: e83bbdb96d2755013cb9fe065cb98731ba44917f
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87772976"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92665582"
 ---
 # <a name="propertyname-element-for-tablecolumnitem-for-tablecontrol-format"></a>Element „PropertyName“ für TableColumnItem für TableControl (Format)
 

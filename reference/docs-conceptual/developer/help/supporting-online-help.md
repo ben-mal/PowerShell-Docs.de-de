@@ -1,12 +1,14 @@
 ---
-title: Unterstützung einer Onlinehilfe
 ms.date: 09/13/2016
-ms.openlocfilehash: b2d8eae2137e0e564a9baf271962b8669dd5eac5
-ms.sourcegitcommit: de59ff77c6535fc772c1e327b3c823295eaed6ea
+ms.topic: reference
+title: Unterstützung einer Onlinehilfe
+description: Unterstützung einer Onlinehilfe
+ms.openlocfilehash: 0164b5e6c6c8d66a6ab2467a8adfb7efffe0fe17
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86892862"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645419"
 ---
 # <a name="supporting-online-help"></a>Unterstützung einer Onlinehilfe
 
@@ -18,7 +20,7 @@ Die Online Hilfe war immer ein wesentlicher Bestandteil von PowerShell. Obwohl d
 
 Mit der Einführung der aktualisierbaren Hilfe in PowerShell 3,0 spielt die Online Hilfe immer noch eine wichtige Rolle. Zusätzlich zur flexiblen Benutzer Darstellung bietet die Online Hilfe Benutzern Hilfe, die keine aktualisierbare Hilfe zum Herunterladen von Hilfe Themen verwenden können.
 
-## <a name="how-get-help--online-works"></a>Funktionsweise von "Get-Help-Online"
+## <a name="how-get-help--online-works"></a>Funktionsweise von Get-Help-Online
 
 Um Benutzern die Suche nach den Online Hilfe Themen für Befehle zu erleichtern, `Get-Help` verfügt der Befehl über einen Online-Parameter, der die Online Version des Hilfe Themas für einen Befehl im Standard Internetbrowser des Benutzers öffnet.
 
@@ -34,7 +36,7 @@ Zum Implementieren von `Get-Help -Online` `Get-Help` sucht das Cmdlet in den fol
 
 - Die **HelpUri** -Eigenschaft eines beliebigen Befehls. Der Zugriff auf die **HelpUri** -Eigenschaft ist auch dann möglich, wenn das Hilfethema für den Befehl nicht auf dem Computer des Benutzers installiert ist. Diese Funktion wurde in PowerShell 3,0 eingeführt.
 
-  `Get-Help`sucht im ersten Eintrag im Abschnitt " **Verwandte Links** " nach einem URI, bevor der Wert der **HelpUri** -Eigenschaft erhalten wird. Wenn der Eigenschafts Wert falsch ist oder geändert wurde, können Sie ihn überschreiben, indem Sie im ersten verknüpften Link einen anderen Wert eingeben. Der erste Verwandte Link funktioniert jedoch nur, wenn die Hilfe Themen auf dem Computer des Benutzers installiert sind.
+  `Get-Help` sucht im ersten Eintrag im Abschnitt " **Verwandte Links** " nach einem URI, bevor der Wert der **HelpUri** -Eigenschaft erhalten wird. Wenn der Eigenschafts Wert falsch ist oder geändert wurde, können Sie ihn überschreiben, indem Sie im ersten verknüpften Link einen anderen Wert eingeben. Der erste Verwandte Link funktioniert jedoch nur, wenn die Hilfe Themen auf dem Computer des Benutzers installiert sind.
 
 ## <a name="adding-a-uri-to-the-first-related-link-of-a-command-help-topic"></a>Hinzufügen eines URIs zum ersten verknüpften Link eines Befehls Hilfe Themas
 

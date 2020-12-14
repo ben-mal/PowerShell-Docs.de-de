@@ -1,12 +1,14 @@
 ---
-title: Erstellen eines Windows PowerShell-Inhaltsanbieters
 ms.date: 09/13/2016
-ms.openlocfilehash: b4bc0c8d1f8ef9f85bd711fdc2770b54418bbf4a
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
+ms.topic: reference
+title: Erstellen eines Windows PowerShell-Inhaltsanbieters
+description: Erstellen eines Windows PowerShell-Inhaltsanbieters
+ms.openlocfilehash: 7890f0ab8d1cc7f29bdc077b342bae950cfa7827
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87779069"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "92645371"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Erstellen eines Windows PowerShell-Inhaltsanbieters
 
@@ -142,7 +144,7 @@ Die folgenden Bedingungen können für Ihre Implementierung von [System. Managem
 
 - Standardmäßig sollten über schreibungen dieser Methode keinen Writer für Objekte abrufen, die für den Benutzer ausgeblendet sind, es sei denn, die [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) -Eigenschaft ist auf festgelegt `true` . Ein Fehler sollte geschrieben werden, wenn der Pfad ein Element darstellt, das für den Benutzer ausgeblendet ist, und [System. Management. Automation. Provider. cmdletprovider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) `false` ist auf festgelegt.
 
-## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>Anfügen dynamischer Parameter an die Cmdlets "Add-Content" und "Set-Content"
+## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>Anfügen dynamischer Parameter an die Add-Content-und Set-Content-Cmdlets
 
 Die `Add-Content` `Set-Content` Cmdlets und erfordern möglicherweise zusätzliche dynamische Parameter, die zur Laufzeit hinzugefügt werden. Um diese dynamischen Parameter bereitzustellen, muss der Windows PowerShell-Inhaltsanbieter die [System. Management. Automation. Provider. icontentcmdletprovider. getcontentschreiterdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) -Methode implementieren, um diese Parameter zu verarbeiten. Diese Methode ruft dynamische Parameter für das Element an dem angezeigten Pfad ab und gibt ein Objekt zurück, das über Eigenschaften und Felder mit ähnlichen Attributen wie eine Cmdlet-Klasse oder ein [System. Management. Automation. runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) -Objekt verfügt. Die Windows PowerShell-Laufzeit verwendet das zurückgegebene-Objekt, um die Parameter den Cmdlets hinzuzufügen.
 

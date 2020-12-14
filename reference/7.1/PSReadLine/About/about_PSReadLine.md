@@ -2,28 +2,28 @@
 description: Psleline bietet eine verbesserte Befehlszeilen Bearbeitung in der PowerShell-Konsole.
 keywords: powershell
 Locale: en-US
-ms.date: 02/10/2020
+ms.date: 11/16/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen über psread Line
-ms.openlocfilehash: 1188b8dc0b4099a7c1dcc472e3b02c2d4fa908bc
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6d52bb04118914a9ccca5d3442a9d1915c1c2818
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220807"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94692274"
 ---
 # <a name="psreadline"></a>PSReadLine
 
 ## <a name="about_psreadline"></a>about_PSReadLine
 
-## <a name="short-description"></a>KURZE BESCHREIBUNG
+## <a name="short-description"></a>Kurze Beschreibung
 
 Psleline bietet eine verbesserte Befehlszeilen Bearbeitung in der PowerShell-Konsole.
 
-## <a name="long-description"></a>LANGE BESCHREIBUNG
+## <a name="long-description"></a>Lange Beschreibung
 
-Psleline 2,0 bietet eine leistungsfähige Befehlszeilen Bearbeitungsfunktion für die PowerShell-Konsole. Sie bietet:
+Psleline 2,1 bietet eine leistungsfähige Befehlszeilen Bearbeitungsfunktion für die PowerShell-Konsole. Sie bietet:
 
 - Syntax Farbgebung der Befehlszeile
 - Visuelle Hinweise auf Syntax Fehler
@@ -34,11 +34,41 @@ Psleline 2,0 bietet eine leistungsfähige Befehlszeilen Bearbeitungsfunktion fü
 - Bash-Stil Vervollständigung (optional im cmd-Modus, Standard im Emacs-Modus)
 - Emacs: Yank/Kill-Ring
 - PowerShell-tokenbasierte "Wort Bewegung" und "Kill"
+- Predictive IntelliSense
 
-Die folgenden Funktionen sind in der-Klasse **[Microsoft. PowerShell. psconsolereadline]** verfügbar.
+Für psread line sind PowerShell 3,0 oder höher sowie der Konsolen Host erforderlich. Es funktioniert nicht in PowerShell ISE. Dies funktioniert in der-Konsole Visual Studio Code.
+
+Psread Line 2.1.0 wird mit PowerShell 7,1 ausgeliefert und wird in allen unterstützten Versionen von PowerShell unterstützt. Es ist für die Installation über das PowerShell-Katalog verfügbar.
+Führen Sie den folgenden Befehl aus, um psread Line 2.1.0 in einer unterstützten Version von PowerShell zu installieren.
+
+```powershell
+Install-Module -Name PSReadLine -RequiredVersion 2.1.0
+```
 
 > [!NOTE]
 > Ab PowerShell 7,0 überspringt PowerShell das automatische Laden von psleseline unter Windows, wenn ein Bildschirm Leseprogramm erkannt wird. Derzeit funktioniert psread Line nicht gut mit den Bildschirmlesern. Das Standard Rendering und die Formatierung von PowerShell 7,0 unter Windows funktionieren ordnungsgemäß. Sie können das Modul ggf. manuell laden.
+
+## <a name="predictive-intellisense"></a>Predictive IntelliSense
+
+Predictive IntelliSense ist eine Ergänzung zum Konzept der Vervollständigung mit der Tab-Taste, die dem Benutzer hilft, Befehle erfolgreich abzuschließen. Sie ermöglicht Benutzern das ermitteln, bearbeiten und ausführen vollständiger Befehle basierend auf übereinstimmenden Vorhersagen aus dem Verlauf des Benutzers und zusätzlichen domänenspezifischen Plug-ins.
+
+### <a name="enable-predictive-intellisense"></a>Aktivieren von Predictive IntelliSense
+
+Predictive IntelliSense ist standardmäßig deaktiviert. Um Vorhersagen zu aktivieren, führen Sie einfach den folgenden Befehl aus:
+
+```powershell
+Set-PSReadLineOption -PredictionSource History
+```
+
+Der Parameter " **prätionsource** " kann auch Plug-Ins für domänenspezifische und benutzerdefinierte Anforderungen akzeptieren.
+
+Um Predictive IntelliSense zu deaktivieren, führen Sie einfach Folgendes aus:
+
+```powershell
+Set-PSReadLineOption -PredictionSource None
+```
+
+Die folgenden Funktionen sind in der-Klasse **[Microsoft. PowerShell. psconsolereadline]** verfügbar.
 
 ## <a name="basic-editing-functions"></a>Grundlegende Bearbeitungsfunktionen
 
@@ -326,7 +356,7 @@ Tauschen Sie das aktuelle und das aktuelle Zeichen aus.
 - VI-Einfügemodus: `<Ctrl+t>`
 - VI-Befehlsmodus: `<Ctrl+t>`
 
-### <a name="undo"></a>Rückgängig
+### <a name="undo"></a>Rückgängig machen
 
 Rückgängigmachen einer vorherigen Bearbeitung.
 
@@ -1104,6 +1134,24 @@ Markieren Sie die aktuelle Position des Cursors für die Verwendung in einem nac
 
 - Ansehen `<Ctrl+@>`
 
+## <a name="predictive-intellisense-functions"></a>Predictive IntelliSense-Funktionen
+
+> [!NOTE]
+> Predictive IntelliSense muss aktiviert werden, damit diese Funktionen verwendet werden können.
+
+### <a name="acceptnextwordsuggestion"></a>Accept-nextwordsuggestion
+
+Akzeptiert das nächste Wort des Inline Vorschlags aus Predictive IntelliSense.
+Diese Funktion kann mit <kbd>STRG</kbd> + <kbd>F</kbd> gebunden werden, indem der folgende Befehl ausgeführt wird.
+
+```powershell
+Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
+```
+
+### <a name="acceptsuggestion"></a>Accept-Vorschlag
+
+Akzeptiert den aktuellen Inline Vorschlag von Predictive IntelliSense durch Drücken von <kbd>RIGHTARROW</kbd> , wenn sich der Cursor am Ende der aktuellen Zeile befindet.
+
 ## <a name="search-functions"></a>Suchfunktionen
 
 ### <a name="charactersearch"></a>Merkmal Suche
@@ -1340,11 +1388,7 @@ Diese Hilfsmethode wird für benutzerdefinierte Bindungen verwendet, die digitar
   [ref]$numericArg, 1)
 ```
 
-## <a name="note"></a>HINWEIS
-
-### <a name="powershell-compatibility"></a>PowerShell-Kompatibilität
-
-Für psread line sind PowerShell 3,0 oder höher sowie der Konsolen Host erforderlich. Es funktioniert nicht in PowerShell ISE. Dies funktioniert in der-Konsole Visual Studio Code.
+## <a name="note"></a>Hinweis
 
 ### <a name="command-history"></a>Befehlsverlauf
 
@@ -1356,7 +1400,6 @@ Psleseline verwaltet eine Verlaufs Datei, die alle Befehle und Daten enthält, d
 
 Sie können auf der GitHub-Seite eine Pull Request einreichen oder Feedback einreichen.
 
-## <a name="see-also"></a>SIEHE AUCH
+## <a name="see-also"></a>Weitere Informationen
 
 "Psread Line" wird stark von der GNU-Bibliothek für die [Zeilen](https://tiswww.case.edu/php/chet/readline/rltop.html) Übereinstimmung beeinflusst
-
