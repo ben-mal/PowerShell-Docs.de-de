@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-packageprovider?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-PackageProvider
-ms.openlocfilehash: 664e6064580f9212c25632a1146d1ac67f2308bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1a31fa29d9baa17f5bc1c2f48b9179c2ce071310
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212919"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890180"
 ---
 # Find-PackageProvider
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -275,9 +275,16 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ### Microsoft. packagemanagement. Packaging. softwareidentity
 
 Dieses Cmdlet gibt ein **softwareidentity** -Objekt zurück.
-Ein **softwareidentity** -Objekt kann an " **install-packageprovider** " weitergeleitet werden, um die Ergebnisse von " **Find-packageprovider** " zu installieren.
+Ein **softwareidentity** -Objekt kann an " **install-packageprovider** " weitergeleitet werden, um die Ergebnisse von " **Find-packageprovider**" zu installieren.
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 
@@ -290,4 +297,3 @@ Ein **softwareidentity** -Objekt kann an " **install-packageprovider** " weiterg
 [Register-PackageSource](Register-PackageSource.md)
 
 [Install-PackageProvider](Install-PackageProvider.md)
-

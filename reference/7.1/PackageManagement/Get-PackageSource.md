@@ -7,12 +7,12 @@ ms.date: 03/29/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packagesource?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PackageSource
-ms.openlocfilehash: 81b6f94be6293733ec75d48b1f9dd7ac4f4f8d96
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 8428f51c27cf52a7e0910a7b6c759e1f75b89339
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212863"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890112"
 ---
 # Get-PackageSource
 
@@ -90,7 +90,7 @@ LocalPackages        NuGet            False      C:\LocalPkg\
 MyNuget              NuGet            False      https://www.nuget.org/api/v2
 ```
 
-`Get-PackageProvider` verwendet den **Name** -Parameter, um den Anbieter Namen ( **nuget** ) anzugeben. Das Objekt wird über die Pipeline an gesendet `Get-PackageSource` .
+`Get-PackageProvider` verwendet den **Name** -Parameter, um den Anbieter Namen ( **nuget**) anzugeben. Das Objekt wird über die Pipeline an gesendet `Get-PackageSource` .
 
 ## PARAMETERS
 
@@ -286,6 +286,13 @@ Gibt mindestens eine Paketquelle an.
 
 ## HINWEISE
 
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
+
 ## VERWANDTE LINKS
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -301,4 +308,3 @@ Gibt mindestens eine Paketquelle an.
 [Set-PackageSource](Set-PackageSource.md)
 
 [Unregister-PackageSource](Unregister-PackageSource.md)
-

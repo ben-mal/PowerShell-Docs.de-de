@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/import-packageprovider?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-PackageProvider
-ms.openlocfilehash: a4068cd7607868608bce8e334421523325abdfa1
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 570ed2a314c498fe59546d30cba17913bc91b70c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210439"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890473"
 ---
 # Import-PackageProvider
 
@@ -169,6 +169,13 @@ Sie können ein von zurück gegebenes **packageprovider** -Objekt über die Pipe
 ## AUSGABEN
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

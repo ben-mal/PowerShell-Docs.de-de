@@ -7,12 +7,12 @@ ms.date: 06/04/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/find-dscresource?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-DscResource
-ms.openlocfilehash: 9d62706d5788f1ae2c97da4bf1f6143eed2ad8f9
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 39896c4f48d6cd8809d4a680e776d36deb65b0d8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213215"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889860"
 ---
 # Find-DscResource
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Allversions
 
-Der **allversions** -Parameter zeigt jede verfügbare Version der DSC-Ressource an. Der **allversions** -Parameter kann nicht mit den Parametern **MinimumVersion** , **MaximumVersion** oder Requirements **dversion** verwendet werden.
+Der **allversions** -Parameter zeigt jede verfügbare Version der DSC-Ressource an. Der **allversions** -Parameter kann nicht mit den Parametern **MinimumVersion**, **MaximumVersion** oder Requirements **dversion** verwendet werden.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -358,6 +358,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 `Find-DscResource` Gibt ein **psgetdscresourceinfo** -Objekt zurück.
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

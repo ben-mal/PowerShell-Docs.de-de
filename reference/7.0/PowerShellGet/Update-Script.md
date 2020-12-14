@@ -7,12 +7,12 @@ ms.date: 07/09/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-script?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-Script
-ms.openlocfilehash: c6034e740f1b4af340f29ee61fdc9922d85b7f2e
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 7f0da0403b21b6b4980844f13c23b2659500dd7c
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211503"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891437"
 ---
 # Update-Script
 
@@ -264,6 +264,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ## HINWEISE
 
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
+
 ## VERWANDTE LINKS
 
 [Find-Script](Find-Script.md)
@@ -274,4 +281,4 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 [Save-Script](Save-Script.md)
 
-[Uninstall-Script](Uninstall-Script.md)
+[Deinstallieren: Skript](Uninstall-Script.md)

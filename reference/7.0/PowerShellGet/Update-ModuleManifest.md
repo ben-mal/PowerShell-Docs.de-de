@@ -7,12 +7,12 @@ ms.date: 07/08/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-modulemanifest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ModuleManifest
-ms.openlocfilehash: 81c58a09cb6c4e6cedcc7abfa832af7bb694b0e1
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 2ad1f5991920cecf0a5b494bde698510c1c55b94
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217855"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890803"
 ---
 # Update-ModuleManifest
 
@@ -61,7 +61,7 @@ $Parms = @{
 Update-ModuleManifest @Parms
 ```
 
-`$Parms` ist ein splat, das die Parameterwerte für " **path** ", " **Author** ", " **CompanyName** " und " **Copyright** " speichert. `Update-ModuleManifest` Ruft die Parameterwerte aus ab `@Parms` und aktualisiert das Modul Manifest, **TestManifest.psd1**.
+`$Parms` ist ein splat, das die Parameterwerte für " **path**", " **Author**", " **CompanyName**" und " **Copyright**" speichert. `Update-ModuleManifest` Ruft die Parameterwerte aus ab `@Parms` und aktualisiert das Modul Manifest, **TestManifest.psd1**.
 
 ## PARAMETERS
 
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 
 Gibt ein Array von Modulen an, die im Modul enthalten sind.
 
-Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID** -Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
+Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID**-Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
 
 Dieser Schlüssel ist als Modulinventar konzipiert. Die Module, die im Wert dieses Schlüssels aufgeführt sind, werden nicht automatisch verarbeitet.
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 Gibt Skript Module ( `.psm1` ) und binäre Module ( `.dll` ) an, die in den Sitzungs Status des Moduls importiert werden. Die Dateien im Schlüssel " **netstedmodules** " werden in der Reihenfolge ausgeführt, in der Sie im Wert aufgelistet sind.
 
-Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID** -Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
+Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID**-Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
 
 ```yaml
 Type: System.Object[]
@@ -494,7 +494,7 @@ Wenn Sie den Pfad zu einer vorhandenen Datei angeben, wird `Update-ModuleManifes
 
 Das Manifest sollte sich im Verzeichnis des Moduls befinden, und der Name der Manifest-Datei muss mit dem Namen des Modul Verzeichnisses übereinstimmen, aber mit einer `.psd1` Erweiterung.
 
-Sie können keine Variablen (z. b. oder) als `$PSHOME` `$HOME` Antwort auf eine Eingabeaufforderung für einen **path** -Parameter verwenden. Um eine Variable zu verwenden, schließen Sie den **Path** -Parameter in den Befehl ein.
+Sie können keine Variablen (z. b. oder) als `$PSHOME` `$HOME` Antwort auf eine Eingabeaufforderung für einen **path** -Parameter verwenden. Um eine Variable zu verwenden, schließen Sie den **Path**-Parameter in den Befehl ein.
 
 ```yaml
 Type: System.String
@@ -707,7 +707,7 @@ Wenn ein Modul über eine Manifest-Datei verfügt und im **rootmodule** -Schlüs
 
 Zum Exportieren von Membern aus- `.psm1` oder- `.dll` Dateien in einem Modul mit einem Manifest müssen die Namen dieser Dateien in den Werten der **rootmodule** -oder **netstedmodules** -Schlüssel im Manifest angegeben werden. Andernfalls werden die Member nicht exportiert.
 
-In PowerShell 2,0 hieß dieser Schlüssel " **moduletoprocess** ".
+In PowerShell 2,0 hieß dieser Schlüssel " **moduletoprocess**".
 
 ```yaml
 Type: System.String
@@ -726,7 +726,7 @@ Accept wildcard characters: False
 Gibt Skript `.ps1` Dateien () an, die im Sitzungszustand des Aufrufers ausgeführt werden, wenn das Modul importiert wird.
 Sie können diese Skripte zur Vorbereitung einer Umgebung verwenden, wie Sie ein Anmeldeskript verwenden würden.
 
-Um Skripte anzugeben, die im Sitzungsstatus des Moduls ausgeführt werden, verwenden Sie den **NestedModules** -Schlüssel.
+Um Skripte anzugeben, die im Sitzungsstatus des Moduls ausgeführt werden, verwenden Sie den **NestedModules**-Schlüssel.
 
 ```yaml
 Type: System.String[]
@@ -822,5 +822,12 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ### System.Object
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS

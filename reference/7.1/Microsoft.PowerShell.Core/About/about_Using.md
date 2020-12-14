@@ -1,17 +1,16 @@
 ---
 description: Ermöglicht Ihnen, anzugeben, welche Namespaces in der Sitzung verwendet werden.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 01/29/2020
+ms.date: 11/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: eaf983ad03676b4ac57a3b35bc44f72036da55b4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: bbea815f93ba503fcce550dec28736630fec5a51
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222327"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890762"
 ---
 # <a name="about-using"></a>Informationen zur Verwendung von
 
@@ -26,7 +25,7 @@ Die- `using` Anweisungen müssen vor allen anderen Anweisungen in einem Skript s
 
 Die- `using` Anweisung sollte nicht mit dem bereichsmodifizierer `using:` für Variablen verwechselt werden. Weitere Informationen finden Sie unter [about_Remote_Variables](about_Remote_Variables.md).
 
-## <a name="syntax"></a>Syntax
+## <a name="namespace-syntax"></a>Namespace Syntax
 
 So geben Sie .NET-Namespaces an, aus denen Typen aufgelöst werden sollen:
 
@@ -34,19 +33,38 @@ So geben Sie .NET-Namespaces an, aus denen Typen aufgelöst werden sollen:
 using namespace <.NET-namespace>
 ```
 
+Durch die Angabe eines Namespace wird es einfacher, auf Typen anhand ihrer Kurznamen zu verweisen.
+
+## <a name="module-syntax"></a>Modul Syntax
+
 So laden Sie Klassen aus einem PowerShell-Modul:
 
 ```
 using module <module-name>
 ```
 
+Der Wert von `<module-name>` kann ein Modulname, eine vollständige Modul Spezifikation oder ein Pfad zu einer Modul Datei sein.
+
+Wenn `<module-name>` ein Pfad ist, kann der Pfad voll qualifiziert oder relativ sein. Ein relativer Pfad wird relativ zum Skript aufgelöst, das die using-Anweisung enthält.
+
+Wenn `<module-name>` eine Name-oder Modul Spezifikation ist, durchsucht PowerShell den **psmodulepath** nach dem angegebenen Modul.
+
+Eine Modul Spezifikation ist eine Hash Tabelle mit den folgenden Schlüsseln.
+
+- `ModuleName` - **Erforderlich** Gibt den Namen des Moduls an.
+- `GUID` - **Optional** Gibt die GUID des Moduls an.
+- Es ist auch **erforderlich** , einen der drei folgenden Schlüssel anzugeben. Diese Schlüssel können nicht gleichzeitig verwendet werden.
+  - `ModuleVersion` : Gibt eine zulässige Mindestversion des Moduls an.
+  - `RequiredVersion` : Gibt eine exakte, erforderliche Version des Moduls an.
+  - `MaximumVersion` : Gibt die maximal zulässige Version des Moduls an.
+
+## <a name="assembly-syntax"></a>Assemblysyntax
+
 So laden Sie Typen aus einer .NET-Assembly vorab:
 
 ```
 using assembly <.NET-assembly-path>
 ```
-
-Durch die Angabe eines Namespace wird es einfacher, auf Typen anhand ihrer Kurznamen zu verweisen.
 
 Durch das Laden einer Assembly werden .NET-Typen aus dieser Assembly zur Analysezeit vorab in ein Skript geladen. Dies ermöglicht es Ihnen, neue PowerShell-Klassen zu erstellen, die Typen aus der vorgeladenen Assembly verwenden.
 
@@ -125,4 +143,3 @@ domain                                                    Name UserName ContextT
 ------                                                    ---- -------- -----------
 System.DirectoryServices.ActiveDirectory.DirectoryContext                    Domain
 ```
-

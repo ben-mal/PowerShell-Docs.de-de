@@ -7,12 +7,12 @@ ms.date: 04/03/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/find-package?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-Package
-ms.openlocfilehash: 99e065ccdc8b450fa770e4d5f35fb04c747da063
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: f7c963b59a31b1b5edbf227e30415d6865cc14d7
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214692"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891065"
 ---
 # Find-Package
 
@@ -69,7 +69,7 @@ bootstrap          4.3.1     MyNuGet    Bootstrap framework in CSS. Includes fon
 NuGet.Core         2.14.0    MyNuGet    NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` verwendet den **Provider** -Parameter, um den **nuget** -Anbieter anzugeben.
+`Find-Package` verwendet den **Provider** -Parameter, um den **nuget**-Anbieter anzugeben.
 
 ### Beispiel 2: Suchen eines Pakets aus einer Paketquelle
 
@@ -85,7 +85,7 @@ Name         Version   Source    Summary
 NuGet.Core   2.14.0    MyNuGet   NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core** " anzugeben. Der **Source** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll.
+`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core**" anzugeben. Der **Source** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll.
 
 ### Beispiel 3: Suchen aller Versionen eines Pakets
 
@@ -106,7 +106,7 @@ NuGet.Core    1.1.229.159      MyNuGet      NuGet.Core is the core framework ass
 Nuget.Core    1.0.1120.104     MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` verwendet den **Name** -Parameter, um das **nuget. Core** -Paket anzugeben. Der **providerName** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll. **Allversions** gibt an, dass alle verfügbaren Versionen zurückgegeben werden.
+`Find-Package` verwendet den **Name** -Parameter, um das **nuget. Core**-Paket anzugeben. Der **providerName** -Parameter gibt an, dass in **mynuget** nach dem Paket gesucht werden soll. **Allversions** gibt an, dass alle verfügbaren Versionen zurückgegeben werden.
 
 ### Beispiel 4: Suchen eines Pakets mit einem bestimmten Namen und einer bestimmten Version
 
@@ -122,7 +122,7 @@ Name          Version          Source       Summary
 NuGet.Core    2.9.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core** " anzugeben. Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll. Requirements **dversion** gibt an, dass nur Version **2.9.0** zurückgegeben wird.
+`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core**" anzugeben. Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll. Requirements **dversion** gibt an, dass nur Version **2.9.0** zurückgegeben wird.
 
 ### Beispiel 5: Suchen nach Paketen innerhalb eines Bereichs von Versionen
 
@@ -141,7 +141,7 @@ NuGet.Core    2.8.0            MyNuGet      NuGet.Core is the core framework ass
 NuGet.Core    2.7.0            MyNuGet      NuGet.Core is the core framework assembly for NuGet...
 ```
 
-`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core** " anzugeben. Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll. **MinimumVersion** gibt die niedrigste Version an **2.7.0** an. **MaximumVersion** gibt die höchste Version an **2.9.0** an.
+`Find-Package` verwendet den **Name** -Parameter, um den Paketnamen " **nuget. Core**" anzugeben. Der **providerName** -Parameter gibt an, dass in **nuget** nach dem Paket gesucht werden soll. **MinimumVersion** gibt die niedrigste Version an **2.7.0** an. **MaximumVersion** gibt die höchste Version an **2.9.0** an.
 **Allversions** gibt an, dass der Bereich gemäß dem minimal-und Maximalwert zurückgegeben wird.
 
 ### Beispiel 6: Suchen eines Pakets aus einem Dateisystem
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -688,6 +688,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ## HINWEISE
 
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
+
 ## VERWANDTE LINKS
 
 [about_PackageManagement](../Microsoft.PowerShell.Core/About/about_PackageManagement.md)
@@ -703,4 +710,3 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 [Save-Package](Save-Package.md)
 
 [Uninstall-Package](Uninstall-Package.md)
-

@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/powershellget/install-script?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-Script
-ms.openlocfilehash: dd4e8169310f23182697ba6bf4263d916f747b84
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: c8191f8b5bbf6337fdc11dc3d15774991029151b
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211100"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891191"
 ---
 # Install-Script
 
@@ -42,7 +42,7 @@ Install-Script [-InputObject] <PSObject[]> [-Scope <String>] [-NoPathUpdate] [-P
 
 Das- `Install-Script` Cmdlet ruft eine Skript Nutzlast aus einem Repository ab, überprüft, ob die Nutzlast ein gültiges PowerShell-Skript ist, und kopiert die Skriptdatei an einen angegebenen Installations Speicherort.
 
-Die standardrepositorys `Install-Script` können mit den `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` Cmdlets,, und konfiguriert werden `Get-PSRepository` . Wenn Sie mit mehreren Depots arbeiten, wird `Install-Script` das erste Skript, das den angegebenen Suchkriterien ( **Name** , **MinimumVersion** oder **MaximumVersion** ) entspricht, aus dem ersten Repository ohne Fehler installiert.
+Die standardrepositorys `Install-Script` können mit den `Register-PSRepository` `Set-PSRepository` `Unregister-PSRepository` Cmdlets,, und konfiguriert werden `Get-PSRepository` . Wenn Sie mit mehreren Depots arbeiten, wird `Install-Script` das erste Skript, das den angegebenen Suchkriterien (**Name**, **MinimumVersion** oder **MaximumVersion**) entspricht, aus dem ersten Repository ohne Fehler installiert.
 
 ## BEISPIELE
 
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -499,6 +499,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ### System.Object
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

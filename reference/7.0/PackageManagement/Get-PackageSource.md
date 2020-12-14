@@ -7,12 +7,12 @@ ms.date: 03/29/2019
 online version: https://docs.microsoft.com/powershell/module/packagemanagement/get-packagesource?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PackageSource
-ms.openlocfilehash: 6fb64b7e95f1f8ddfff6f1be9e880045271706fc
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: e1e4814d0128cc1f170bee26425c540c007dbdd4
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210452"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94890490"
 ---
 # Get-PackageSource
 
@@ -90,7 +90,7 @@ LocalPackages        NuGet            False      C:\LocalPkg\
 MyNuget              NuGet            False      https://www.nuget.org/api/v2
 ```
 
-`Get-PackageProvider` verwendet den **Name** -Parameter, um den Anbieter Namen ( **nuget** ) anzugeben. Das Objekt wird über die Pipeline an gesendet `Get-PackageSource` .
+`Get-PackageProvider` verwendet den **Name** -Parameter, um den Anbieter Namen ( **nuget**) anzugeben. Das Objekt wird über die Pipeline an gesendet `Get-PackageSource` .
 
 ## PARAMETERS
 
@@ -285,6 +285,13 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 Gibt mindestens eine Paketquelle an.
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
 

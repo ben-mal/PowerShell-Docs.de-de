@@ -7,12 +7,12 @@ ms.date: 07/16/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/update-module?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-Module
-ms.openlocfilehash: 29ba3907a349257f63e127739786ab6e210c0f82
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: dee60b0beae3f39642cbc1c388ffb79e687626b8
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210207"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94891123"
 ---
 # Update-Module
 
@@ -57,7 +57,7 @@ In diesem Beispiel wird ein bestimmtes Modul auf die neueste Version in einem On
 Update-Module -Name SpeculationControl
 ```
 
-`Update-Module` verwendet den **Name** -Parameter, um ein bestimmtes Modul, " **speculationcontrol** ", zu aktualisieren.
+`Update-Module` verwendet den **Name** -Parameter, um ein bestimmtes Modul, " **speculationcontrol**", zu aktualisieren.
 
 ### Beispiel 3: Anzeigen der was-wäre-wenn-Update-Module ausgeführt wird
 
@@ -84,7 +84,7 @@ In diesem Beispiel wird ein Modul auf eine bestimmte Version aktualisiert. Die V
 Update-Module -Name SpeculationControl -RequiredVersion 1.0.14
 ```
 
-`Update-Module` verwendet den **Name** -Parameter, um das Modul " **speculationcontrol** " anzugeben. Der Requirements **dversion** -Parameter gibt die Version an, **1.0.14** .
+`Update-Module` verwendet den **Name** -Parameter, um das Modul " **speculationcontrol**" anzugeben. Der Requirements **dversion** -Parameter gibt die Version an, **1.0.14**.
 
 ### Beispiel 5: Aktualisieren eines Moduls ohne Bestätigung
 
@@ -94,7 +94,7 @@ Dieses Beispiel fordert keine Bestätigung zum Aktualisieren des Moduls auf die 
 Update-Module -Name SpeculationControl -Force
 ```
 
-`Update-Module` verwendet den **Name** -Parameter, um das Modul " **speculationcontrol** " anzugeben. Der **Force** -Parameter aktualisiert das Modul, ohne die Benutzer Bestätigung anzufordern.
+`Update-Module` verwendet den **Name** -Parameter, um das Modul " **speculationcontrol**" anzugeben. Der **Force** -Parameter aktualisiert das Modul, ohne die Benutzer Bestätigung anzufordern.
 
 ## PARAMETERS
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -Requirements dversion
 
-Gibt die genaue Version an, auf die das vorhandene installierte Modul aktualisiert wird. Die Version, die von "Requirements **dversion** " angegeben wird, muss im Onlinekatalog vorhanden sein, oder es wird ein Fehler angezeigt. Wenn mehr als ein Modul in einem einzigen Befehl aktualisiert wird, können Sie "Requirements **dversion** " nicht verwenden.
+Gibt die genaue Version an, auf die das vorhandene installierte Modul aktualisiert wird. Die Version, die von "Requirements **dversion** " angegeben wird, muss im Onlinekatalog vorhanden sein, oder es wird ein Fehler angezeigt. Wenn mehr als ein Modul in einem einzigen Befehl aktualisiert wird, können Sie "Requirements **dversion**" nicht verwenden.
 
 ```yaml
 Type: System.String
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -Bereich
 
-Gibt den Bereich der Installation des Moduls an. Die zulässigen Werte für diesen Parameter sind **ALLUSERS** und **CurrentUser** . Wenn der **Bereich** nicht angegeben wird, wird das Update im Bereich **CurrentUser** installiert.
+Gibt den Bereich der Installation des Moduls an. Die zulässigen Werte für diesen Parameter sind **ALLUSERS** und **CurrentUser**. Wenn der **Bereich** nicht angegeben wird, wird das Update im Bereich **CurrentUser** installiert.
 
 Der Bereich " **ALLUSERS** " erfordert erhöhte Berechtigungen und installiert Module an einem Speicherort, auf den alle Benutzer des Computers zugreifen können:
 
@@ -290,8 +290,8 @@ Der Bereich " **ALLUSERS** " erfordert erhöhte Berechtigungen und installiert M
 
 Wenn kein **Bereich** definiert ist, wird der Standardwert basierend auf der PowerShellGet-Version festgelegt.
 
-- In PowerShellGet-Versionen 2.1.0 und höher ist der Standardwert **CurrentUser** , der keine Erhöhung der Rechte für die Installation erfordert.
-- In PowerShellGet 1. x-2.0. x-Versionen ist der **Scope** -Parameter nicht verfügbar, und der Standardwert ist " **ALLUSERS** ", für den eine Erhöhung der Installation erforderlich ist.
+- In PowerShellGet-Versionen 2.1.0 und höher ist der Standardwert **CurrentUser**, der keine Erhöhung der Rechte für die Installation erfordert.
+- In PowerShellGet 1. x-2.0. x-Versionen ist der **Scope** -Parameter nicht verfügbar, und der Standardwert ist " **ALLUSERS**", für den eine Erhöhung der Installation erforderlich ist.
 
 ```yaml
 Type: System.String
@@ -342,8 +342,15 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ## HINWEISE
 
-Für PowerShell, Version 6,0 und höher, ist der Standard Installationsbereich immer **CurrentUser** .
-Modulupdates für **CurrentUser** , `$home\Documents\PowerShell\Modules` , benötigen keine erhöhten Berechtigungen. Modulupdates für **ALLUSERS** , `$env:ProgramFiles\PowerShell\Modules` , benötigen erhöhte Berechtigungen.
+Für PowerShell, Version 6,0 und höher, ist der Standard Installationsbereich immer **CurrentUser**.
+Modulupdates für **CurrentUser**, `$home\Documents\PowerShell\Modules` , benötigen keine erhöhten Berechtigungen. Modulupdates für **ALLUSERS**, `$env:ProgramFiles\PowerShell\Modules` , benötigen erhöhte Berechtigungen.
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 `Update-Module` wird in PowerShell 3,0 oder höheren Versionen von PowerShell unter Windows 7 oder Windows 2008 R2 und höheren Versionen von Windows ausgeführt.
 

@@ -7,12 +7,12 @@ ms.date: 11/11/2019
 online version: https://docs.microsoft.com/powershell/module/powershellget/save-module?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-Module
-ms.openlocfilehash: 1b5bba73a55f92b515113c8b895dcb8af3c52eb6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e058bff552b4460d068909f8bf4ab31b976ef978
+ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215223"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94889724"
 ---
 # Save-Module
 
@@ -82,7 +82,7 @@ d-----         7/1/2019     13:31                PackageManagement
 d-----         7/1/2019     13:31                PowerShellGet
 ```
 
-`Save-Module` verwendet den **Name** -Parameter, um das Modul " **PowerShellGet** " anzugeben. Der **path** -Parameter gibt an, wo das heruntergeladene Modul gespeichert werden soll. Der **Repository** -Parameter gibt ein registriertes Repository, **psgallery** , an. Nachdem der Download abgeschlossen ist, `Get-ChildItem` zeigt den Inhalt des **Pfads** an, in dem die Dateien gespeichert werden.
+`Save-Module` verwendet den **Name** -Parameter, um das Modul " **PowerShellGet**" anzugeben. Der **path** -Parameter gibt an, wo das heruntergeladene Modul gespeichert werden soll. Der **Repository** -Parameter gibt ein registriertes Repository, **psgallery**, an. Nachdem der Download abgeschlossen ist, `Get-ChildItem` zeigt den Inhalt des **Pfads** an, in dem die Dateien gespeichert werden.
 
 ### Beispiel 2: Speichern einer bestimmten Version eines Moduls
 
@@ -101,7 +101,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     13:40                2.1.0
 ```
 
-`Save-Module` verwendet den **Name** -Parameter, um das Modul " **PowerShellGet** " anzugeben. Der **path** -Parameter gibt an, wo das heruntergeladene Modul gespeichert werden soll. Der **Repository** -Parameter gibt ein registriertes Repository, **psgallery** , an. **MaximumVersion** gibt an, dass Version **2.1.0** heruntergeladen und gespeichert wird. Nachdem der Download abgeschlossen ist, `Get-ChildItem` zeigt den Inhalt des **Pfads** an, in dem die Dateien gespeichert werden.
+`Save-Module` verwendet den **Name** -Parameter, um das Modul " **PowerShellGet**" anzugeben. Der **path** -Parameter gibt an, wo das heruntergeladene Modul gespeichert werden soll. Der **Repository** -Parameter gibt ein registriertes Repository, **psgallery**, an. **MaximumVersion** gibt an, dass Version **2.1.0** heruntergeladen und gespeichert wird. Nachdem der Download abgeschlossen ist, `Get-ChildItem` zeigt den Inhalt des **Pfads** an, in dem die Dateien gespeichert werden.
 
 ### Beispiel 3: Suchen und Speichern einer bestimmten Version eines Moduls
 
@@ -121,7 +121,7 @@ Mode                LastWriteTime         Length Name
 d-----         7/1/2019     14:04                1.6.5
 ```
 
-`Find-Module` verwendet den **Name** -Parameter, um das Modul " **PowerShellGet** " anzugeben. Der **Repository** -Parameter gibt ein registriertes Repository, **psgallery** , an. Requirements **dversion** gibt Version **1.6.5** an.
+`Find-Module` verwendet den **Name** -Parameter, um das Modul " **PowerShellGet**" anzugeben. Der **Repository** -Parameter gibt ein registriertes Repository, **psgallery**, an. Requirements **dversion** gibt Version **1.6.5** an.
 
 Das Objekt wird über die Pipeline an gesendet `Save-Module` . Der **path** -Parameter gibt an, wo das heruntergeladene Modul gespeichert werden soll. Nachdem der Download abgeschlossen ist, `Get-ChildItem` zeigt den Inhalt des **Pfads** an, in dem die Dateien gespeichert werden.
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -392,5 +392,12 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ## AUSGABEN
 
 ## HINWEISE
+
+> [!IMPORTANT]
+> Ab dem 2020 unterstützt die PowerShell-Katalog nicht mehr Transport Layer Security (TLS)-Versionen 1,0 und 1,1. Wenn Sie TLS 1,2 oder höher nicht verwenden, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, auf die PowerShell-Katalog zuzugreifen. Verwenden Sie den folgenden Befehl, um sicherzustellen, dass Sie TLS 1,2 verwenden:
+>
+> `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+>
+> Weitere Informationen finden Sie in der [Ankündigung](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/) im PowerShell-Blog.
 
 ## VERWANDTE LINKS
