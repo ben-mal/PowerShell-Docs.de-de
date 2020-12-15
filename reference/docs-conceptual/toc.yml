@@ -126,7 +126,7 @@
           href: whats-new/what-s-new-in-powershell-71.md
         - name: Neuigkeiten in PowerShell 7.0
           href: whats-new/what-s-new-in-powershell-70.md
-    - name: Neuigkeiten in PowerShell Core 6.x
+    - name: "Versionshinweise zu PowerShell Core\_6.x"
       items:
         - name: Neuigkeiten in PowerShell Core 6.2
           href: whats-new/what-s-new-in-powershell-core-62.md
@@ -590,8 +590,6 @@
           href: community/contributing/pull-requests.md
         - name: Styleguide für die PowerShell-Dokumentation
           href: community/contributing/powershell-style-guide.md
-        - name: Bearbeiten der Cmdlet-Referenz
-          href: community/contributing/editing-cmdlet-ref.md
         - name: Zusätzliche Ressourcen
           items:
             - name: Checkliste für Editoren
