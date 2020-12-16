@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/09/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Konfigurieren eines virtuellen Computers beim ersten Hochfahren mithilfe von DSC
 description: In diesem Artikel wird beschrieben, wie Sie einen virtuellen Computer beim ersten Hochfahren mithilfe von DSC konfigurieren.
-ms.openlocfilehash: 9fa8c4a21486aaef87e1c0a3097e5983a378d98d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: 09449053ff085209dec6ccbfa800e5d112d1c769
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92656204"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94389996"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Konfigurieren eines virtuellen Computers beim ersten Hochfahren mithilfe von DSC
 
@@ -18,11 +18,11 @@ ms.locfileid: "92656204"
 ## <a name="requirements"></a>Anforderungen
 
 > [!NOTE]
-> Der in diesem Thema beschriebene Registrierungsschlüssel **DSCAutomationHostEnabled** ist in PowerShell 4.0 nicht verfügbar. Informationen dazu, wie Sie neue virtuelle Computer beim ersten Hochfahren in PowerShell 4.0 konfigurieren, finden Sie unter [Sie möchten Ihre Computer mithilfe von DSC beim ersten Hochfahren automatisch konfigurieren?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
+> Der in diesem Thema beschriebene Registrierungsschlüssel **DSCAutomationHostEnabled** ist in PowerShell 4.0 nicht verfügbar. Informationen dazu, wie Sie neue virtuelle Computer beim ersten Hochfahren in PowerShell 4.0 konfigurieren, finden Sie unter [Sie möchten Ihre Computer mithilfe von DSC beim ersten Hochfahren automatisch konfigurieren?](https://devblogs.microsoft.com/powershell/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
 
 Um diese Beispiele auszuführen, benötigen Sie:
 
-- Eine startbare virtuelle Festplatte (VHD). Sie können ein ISO-Image mit einer Evaluierungsversion von Windows Server 2016 aus dem [TechNet-Evaluierungscenter](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016) herunterladen.
+- Eine startbare virtuelle Festplatte (VHD). Sie können ein ISO-Image mit einer Evaluierungsversion von Windows Server 2016 aus dem [Evaluierungscenter](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016) herunterladen.
   Anweisungen finden Sie zum Erstellen einer VHD aus einem ISO-Image finden Sie unter [Erstellen startbarer virtueller Festplatten](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)).
 - Ein Hostcomputer, auf dem Hyper-V aktiviert ist. Informationen hierzu finden Sie unter [Übersicht über Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
@@ -69,7 +69,7 @@ Configuration SampleIISInstall
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-1. Auf einem Computer mit PowerShell 5.0 oder höher speichern Sie die oben stehende Konfiguration ( **SampleIISInstall** ) als PowerShell-Skriptdatei (.ps1).
+1. Auf einem Computer mit PowerShell 5.0 oder höher speichern Sie die oben stehende Konfiguration (**SampleIISInstall**) als PowerShell-Skriptdatei (.ps1).
 
 1. Navigieren Sie in einer PowerShell-Konsole zu dem Ordner, in dem Sie die PS1-Datei gespeichert haben.
 
@@ -101,7 +101,7 @@ IIS wird nach dem ersten Hochfahren und der Installation des Betriebssystems ins
 
 Sie können einen Computer auch so konfigurieren, dass eine Konfiguration beim ersten Hochfahren abgerufen wird, indem Sie eine Metakonfiguration als `MetaConfig.mof`-Datei zur VHD hinzufügen (siehe [Configuring the Local Configuration Manager (LCM) (Konfigurieren des lokalen Konfigurations-Managers)](../managing-nodes/metaConfig.md)). Wenn der Registrierungsschlüssel **DSCAutomationHostEnabled** auf 2 (Standardwert) festgelegt ist, wird die in `MetaConfig.mof` definierte Metakonfiguration von DSC auf den LCM angewendet, sobald der Computer zum ersten Mal gestartet wird. Wenn in der Metakonfiguration festgelegt ist, dass Konfigurationen durch den lokalen Konfigurations-Manager von einem Pullserver abgerufen werden sollen, versucht der Computer beim ersten Hochfahren, die Konfiguration von diesem Pullserver abzurufen. Weitere Informationen zum Einrichten von DSC-Pullservern finden Sie unter [Einrichten eines DSC-Webpullservers](../pull-server/pullServer.md).
 
-In diesem Beispiel wird sowohl die im vorherigen Abschnitt beschriebene Konfiguration ( **SampleIISInstall** ) als auch die folgenden Metakonfiguration verwendet:
+In diesem Beispiel wird sowohl die im vorherigen Abschnitt beschriebene Konfiguration (**SampleIISInstall**) als auch die folgenden Metakonfiguration verwendet:
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -133,9 +133,9 @@ configuration PullClientBootstrap
    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
    ```
 
-1. [Richten Sie einen DSC-Webpullserver ein](../pull-server/pullServer.md), und speichern Sie die **SampleIISInstall** -Konfiguration im entsprechenden Ordner.
+1. [Richten Sie einen DSC-Webpullserver ein](../pull-server/pullServer.md), und speichern Sie die **SampleIISInstall**-Konfiguration im entsprechenden Ordner.
 
-1. Auf einem Computer mit PowerShell 5.0 oder höher speichern Sie die oben stehende Metakonfiguration ( **PullClientBootstrap** ) als PowerShell-Skriptdatei (.ps1).
+1. Auf einem Computer mit PowerShell 5.0 oder höher speichern Sie die oben stehende Metakonfiguration (**PullClientBootstrap**) als PowerShell-Skriptdatei (.ps1).
 
 1. Navigieren Sie in einer PowerShell-Konsole zu dem Ordner, in dem Sie die PS1-Datei gespeichert haben.
 
@@ -177,25 +177,18 @@ auf 2 festgelegt ist, wodurch eine DSC-Konfiguration ausgeführt werden kann, we
 1. Laden Sie den Registrierungsunterschlüssel `HKLM\Software` durch Aufrufen von `reg load` aus der VHD.
 
    ```powershell
-   reg load HKLM\Vhd E:\Windows\System32\Config\Software`
+   reg load HKLM\Vhd E:\Windows\System32\Config\Software
    ```
 
-1. Navigieren Sie mithilfe des PowerShell-Registrierungsanbieters zu `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`.
+1. Ändern Sie in der geladenen Struktur den Wert von `DSCAutomationHostEnabled` in 0.
 
    ```powershell
-   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System`
+   reg add "HKLM\Vhd\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DSCAutomationHostEnabled /t REG_DWORD /d 0 /f
    ```
 
-1. Ändern Sie den Wert von `DSCAutomationHostEnabled` in 0.
+1. Entladen Sie die Registrierung, indem Sie die folgenden Befehle ausführen:
 
    ```powershell
-   Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
-   ```
-
-5. Entladen Sie die Registrierung, indem Sie die folgenden Befehle ausführen:
-
-   ```powershell
-   [gc]::Collect()
    reg unload HKLM\Vhd
    ```
 

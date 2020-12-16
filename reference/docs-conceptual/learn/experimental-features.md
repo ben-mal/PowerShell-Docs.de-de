@@ -1,13 +1,13 @@
 ---
-ms.date: 10/15/2020
+ms.date: 11/11/2020
 title: Verwenden experimenteller Features in PowerShell
 description: In diesem Artikel wird beschrieben, welche experimentellen Features verfügbar sind und wie sie verwendet werden.
-ms.openlocfilehash: e98b1222755f3d4ffbd432af6b01d56f63307bb2
-ms.sourcegitcommit: 108686b166672cc08817c637dd93eb1ad830511d
+ms.openlocfilehash: 4df3601cd38120fedecbbad8a3c63a95240c5f15
+ms.sourcegitcommit: fb1a4bc4b249afd3513663de2e1ba3025d63467e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92156574"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94625702"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Verwenden experimenteller Features in PowerShell
 
@@ -28,12 +28,12 @@ Dieser Artikel beschreibt, welche experimentellen Features verfügbar sind und w
 | ---------------------------------------------------------- | :-----: | :-----: | :-----: |
 | PSTempDrive (allgemeine Unterstützung in PS 7.0 und höher)                        | &check; |         |         |
 | PSUseAbbreviationExpansion (allgemeine Unterstützung in PS 7.0 und höher)         | &check; |         |         |
+| PSNullConditionalOperators (Mainstream in PS 7.1+)         |         | &check; |         |
+| PSUnixFileStat (nur Nicht-Windows; üblich ab PowerShell 7.1)  |         | &check; |         |
 | PSCommandNotFoundSuggestion                                | &check; | &check; | &check; |
 | PSImplicitRemotingBatching                                 | &check; | &check; | &check; |
 | Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace |         | &check; | &check; |
 | PSDesiredStateConfiguration.InvokeDscResource              |         | &check; | &check; |
-| PSNullConditionalOperators (Mainstream in PS 7.1+)         |         | &check; |         |
-| PSUnixFileStat (nur Nicht-Windows)                          |         | &check; | &check; |
 | PSNativePSPathResolution                                   |         |         | &check; |
 | PSCultureInvariantReplaceOperator                          |         |         | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; |
@@ -212,6 +212,9 @@ drwxr-xr-x jimtru    staff         11/8/2019 10:37         896 tools
 -rw-r--r-- jimtru    staff         11/8/2019 10:37      112858 build.psm1
 -rw-r--r-- jimtru    staff         11/8/2019 10:37      201297 CHANGELOG.md
 ```
+
+> [!NOTE]
+> Dieses Feature befindet sich nicht mehr in der experimentellen Phase und wird in PowerShell 7.1 und höher jetzt allgemein unterstützt.
 
 ## <a name="psuseabbreviationexpansion"></a>PSUseAbbreviationExpansion
 

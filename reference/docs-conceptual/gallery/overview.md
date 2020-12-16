@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2017
+ms.date: 12/01/2020
 title: Der PowerShell-Katalog | MSDN
 description: Der PowerShell-Katalog ist das zentrale Repository für PowerShell-Module, Skripts und DSC-Ressourcen.
-ms.openlocfilehash: 1aa3d351e71211259cac4e6d6f0ebd68c0df6ff1
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: f1ce6a8e2d5d72ac14cf3e4854626ef612d27891
+ms.sourcegitcommit: 62282bb9c36fea3b4290b9263c1cd8e9ac216e29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92662117"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96470314"
 ---
 # <a name="the-powershell-gallery"></a>Der PowerShell-Katalog | MSDN
 
@@ -26,9 +26,9 @@ Sehen Sie sich die Seite [Erste Schritte](getting-started.md) an, um weitere Inf
 
 ## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
 
-Für das **PowerShellGet** -Modul ist **PowerShell 3.0 oder neuer** erforderlich.
+Für das **PowerShellGet**-Modul ist **PowerShell 3.0 oder neuer** erforderlich.
 
-Für **PowerShellGet** ist .NET Framework 4.5 oder höher erforderlich. Von [hier](https://msdn.microsoft.com/library/5a4x27ek.aspx) können Sie .NET Framework 4.5 oder höher installieren.
+Für **PowerShellGet** ist .NET Framework 4.5 oder höher erforderlich. Weitere Informationen finden Sie unter [Installieren von .NET Framework für Entwickler](/dotnet/framework/install/guide-for-developers).
 
 Da **PowerShell Core** plattformübergreifend ist – was bedeutet, dass es unter Windows, Linux und macOS funktioniert –, ist auch **PowerShellGet** auf diesen Systemen verfügbar. Eine vollständige Liste der von **PowerShell Core** unterstützten Systeme finden Sie unter [Installieren von PowerShell](/powershell/scripting/install/installing-powershell).
 
@@ -37,4 +37,8 @@ Weitere Informationen finden Sie in der Dokumentation der jeweiligen Module.
 
 ## <a name="got-a-question-have-feedback"></a>Sie haben eine Frage? Feedback?
 
-Weitere Informationen zum PowerShell-Katalog und zu PowerShellGet finden Sie auf der Seite [Erste Schritte](getting-started.md). Stellen Sie Feedback bereit, und melden Sie Probleme über [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
+Weitere Informationen zum PowerShell-Katalog und zu PowerShellGet finden Sie auf der Seite [Erste Schritte](getting-started.md).
+
+Informationen zum aktuellen Status der Dienste des PowerShell-Katalogs finden Sie auf der GitHub-Seite [PowerShell Gallery Status](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md).
+
+Geben Sie Feedback, und melden Sie Issues im [GitHub-Repository](https://github.com/PowerShell/PowerShellGallery/issues).

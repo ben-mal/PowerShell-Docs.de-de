@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über ShouldProcess wissen wollten
 description: ShouldProcess ist ein wichtiges Feature, das oft übersehen wird. Mit den WhatIf- und Confirm-Parametern können Sie Ihre Funktionen ganz einfach erweitern.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 6bd4dbd5255203f2daf804163aa2a84d992d6697
-ms.sourcegitcommit: 0afff6edbe560e88372dd5f1cdf51d77f9349972
+ms.openlocfilehash: 4f11ad84f5c89423fe56cfe438ed3cb1587ce59e
+ms.sourcegitcommit: be1df0bf757d734975a9aa021727608a396059ee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86469734"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96616045"
 ---
 # <a name="everything-you-wanted-to-know-about-shouldprocess"></a>Alles, was Sie schon immer über ShouldProcess wissen wollten
 
@@ -128,7 +128,7 @@ Hier lauert eine gewisse Gefahr, wenn Sie blind darauf vertrauen, dass jeder Bef
 function Test-ShouldProcess {
     [CmdletBinding(SupportsShouldProcess)]
     param()
-    Remove-Item .\myfile1.txt -WhatIf:$WhatIf
+    Remove-Item .\myfile1.txt -WhatIf:$WhatIfPreference
 }
 ```
 
@@ -228,7 +228,7 @@ Ich verwende in der Regel die Variante mit zwei Parametern.
 
 ### <a name="shouldprocessreason"></a>ShouldProcessReason
 
-Es gibt noch eine vierte Überladung, die ausgereifter ist als die anderen. Mit dieser können Sie den Grund für die Ausführung von `ShouldProcess` abrufen. Ich führe dies hier nur der Vollständigkeit halber an, weil wir einfach prüfen können, ob `$WhatIf` stattdessen `$true` ist.
+Es gibt noch eine vierte Überladung, die ausgereifter ist als die anderen. Mit dieser können Sie den Grund für die Ausführung von `ShouldProcess` abrufen. Ich führe dies hier nur der Vollständigkeit halber an, weil wir einfach prüfen können, ob `$WhatIfPreference` stattdessen `$true` ist.
 
 ```powershell
 $reason = ''
@@ -428,7 +428,7 @@ Wie Sie aus dem Abschnitt `ConfirmImpact` wissen, müssen Sie ihn wie folgt beze
 Test-ShouldProcess -Confirm:$false
 ```
 
-Nicht allen ist klar, dass das notwendig ist, und `-Confirm:$false` nicht `ShouldContinue` unterdrückt.
+Nicht allen ist klar, dass das notwendig ist, und `-Force` nicht `ShouldContinue` unterdrückt.
 Daher sollten wir `-Force` für die Benutzerfreundlichkeit implementieren. Schauen wir uns hier dieses vollständige Beispiel an:
 
 ```powershell
@@ -441,7 +441,7 @@ function Test-ShouldProcess {
         [Switch]$Force
     )
 
-    if ($Force -and -not $Confirm){
+    if ($Force){
         $ConfirmPreference = 'None'
     }
 
@@ -451,7 +451,7 @@ function Test-ShouldProcess {
 }
 ```
 
-Wir fügen unseren eigenen `-Force`-Switch als Parameter hinzu und verwenden den automatischen `$Confirm`-Parameter, der beim Hinzufügen von `SupportsShouldProcess` in `CmdletBinding` verfügbar ist.
+Wir fügen unseren Switch `-Force` als Parameter hinzu. Der Parameter `-Confirm` wird automatisch hinzugefügt, wenn `SupportsShouldProcess` in `CmdletBinding` verwendet wird.
 
 ```powershell
 [CmdletBinding(
@@ -466,15 +466,15 @@ param(
 Hier konzentrieren wir uns auf die `-Force`-Logik:
 
 ```powershell
-if ($Force -and -not $Confirm){
+if ($Force){
     $ConfirmPreference = 'None'
 }
 ```
 
-Wenn der Benutzer `-Force` angibt, möchten wir die Bestätigungsaufforderung unterdrücken, es sei denn, es wird auch `-Confirm` angegeben. Dadurch kann ein Benutzer eine Änderung erzwingen, diese aber dennoch bestätigen. Anschließend legen wir `$ConfirmPreference` im lokalen Gültigkeitsbereich fest, in dem der Wert durch den Aufruf von `ShouldProcess` ermittelt wird.
+Wenn der Benutzer `-Force` angibt, möchten wir die Bestätigungsaufforderung unterdrücken, es sei denn, es wird auch `-Confirm` angegeben. Dadurch kann ein Benutzer eine Änderung erzwingen, diese aber dennoch bestätigen. Dann legen wir `$ConfirmPreference` im lokalen Geltungsbereich fest. Durch Verwenden des Parameters `-Force` wird der Parameter `$ConfirmPreference` vorübergehend auf „none“ festgelegt, wodurch die Bestätigungsaufforderung deaktiviert wird.
 
 ```powershell
-if ($PSCmdlet.ShouldProcess('TARGET')){
+if ($Force -or $PSCmdlet.ShouldProcess('TARGET')){
         Write-Output "Some Action"
     }
 ```

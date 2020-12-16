@@ -1,14 +1,14 @@
 ---
-ms.date: 06/12/2017
+ms.date: 11/20/2020
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Erste Schritte mit DSC für Linux
 description: In diesem Thema werden die ersten Schritte mit PowerShell DSC für Linux erläutert.
-ms.openlocfilehash: 826707654a297306c39d4dfcfd3941f56b7cf91d
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92651114"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514999"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Erste Schritte mit DSC für Linux
 
@@ -24,7 +24,7 @@ Die folgenden Linux-Betriebssystemversionen werden von DSC für Linux unterstüt
 - Oracle Linux 5, 6 und 7 (x86/x64)
 - Red Hat Enterprise Linux Server 5, 6 und 7 (x86/x64)
 - SUSE Linux Enterprise Server 10, 11 und 12 (x86/x64)
-- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS (x86/x64)
+- Ubuntu Server 12.04 LTS, 14.04 LTS, 16.04 LTS, 18.04 (x86/x64)
 
 ## <a name="installing-dsc-for-linux"></a>Installieren von DSC für Linux
 
@@ -45,7 +45,7 @@ Führen Sie den folgenden Befehl aus, um OMI auf einem CentOS 7 x64-System zu in
 
 ### <a name="installing-dsc"></a>Installieren von DSC
 
-DSC für Linux kann aus dem Repository [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294) in das Repository heruntergeladen werden.
+DSC für Linux kann aus dem Repository [PowerShell-DSC-for-Linux](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-926) in das Repository heruntergeladen werden.
 
 Zum Installieren von DSC installieren Sie das Ihrem Linux-System entsprechende Paket (RPM oder DEB), die OpenSSL-Version (ssl_098 oder ssl_100) und die Architektur (x64/x86). RPM-Pakete eignen sich für CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Oracle Linux. DEB-Pakete sind für Debian GNU/Linux und Ubuntu Server geeignet. Die ssl_098-Pakete eignen sich für Computer mit installiertem OpenSSL 0.9.8, während die ssl_100 Pakete für Computer mit installiertem OpenSSL 1.0 geeignet sind.
 

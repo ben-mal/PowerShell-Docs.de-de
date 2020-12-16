@@ -3,19 +3,20 @@ ms.date: 07/29/2020
 keywords: powershell,cmdlet
 title: Verwenden der PowerShell-Dokumentation
 description: In diesem Artikel werden die Features dieser Website erläutert, einschließlich der Filterung zur Suche und der Versionsauswahl.
-ms.openlocfilehash: 32f0c613e10329cc4830386b744e766eeeab0187
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: b7e036fce0abb12f6c1ab4c0092784321a41a916
+ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501115"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810299"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Verwenden der PowerShell-Dokumentation
 
 Willkommen bei der PowerShell-Onlinedokumentation. Auf dieser Website finden Sie die Cmdlet-Referenz für die folgenden PowerShell-Versionen:
 
-- PowerShell 7
-- PowerShell 6
+- PowerShell 7.2 (Vorabversion)
+- PowerShell 7.1 (aktuell)
+- PowerShell 7.0 (LTS)
 - PowerShell 5.1
 
 ## <a name="finding-articles-and-selecting-a-version"></a>Suchen von Artikeln und Auswählen einer Version
@@ -51,5 +52,6 @@ Diese Website enthält die Dokumentation für die folgenden Themen:
 - PowerShell 3.0
 - PowerShell 4.0
 - PowerShell 5.0
+- PowerShell 6
 - PowerShell-Workflows
 - PowerShell Web Access

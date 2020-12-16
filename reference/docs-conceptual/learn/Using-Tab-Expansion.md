@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Verwenden von Erweiterung mit der TAB-TASTE
 description: Erläutert die Nutzung des Features zur Erweiterung mit der TAB-TASTE in PowerShell.
-ms.openlocfilehash: d3408aac8cc9325666082577a7b00bc3362bfca3
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 658cdf5ddf78bbd6dd431c2170cd5ff643e6bf95
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500044"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661340"
 ---
 # <a name="using-tab-expansion"></a>Verwenden von Erweiterung mit der TAB-TASTE
 
@@ -20,6 +20,9 @@ Befehlszeilenshells bieten häufig eine Möglichkeit, die Namen langer Dateien o
 Soll ein Dateiname oder Pfad automatisch aus den verfügbaren Optionen ausgefüllt werden, geben Sie einen Teil des Namens ein, und drücken Sie die <kbd>TAB-TASTE</kbd>. PowerShell erweitert den Namen automatisch entsprechend der ersten gefundenen Übereinstimmung. Durch wiederholtes Drücken der <kbd>TAB-TASTE</kbd> werden alle verfügbaren Optionen durchlaufen.
 
 Für Cmdletnamen funktioniert Erweiterung mit der TAB-TASTE etwas anders. Um Erweiterung mit der TAB-TASTE für einen Cmdletnamen zu verwenden, geben Sie den gesamten ersten Teil des Namens (das Verb) und den darauf folgenden Bindestrich ein. Sie können weitere Zeichen des Namens für eine Teilübereinstimmung eingeben. Wenn Sie beispielsweise `get-co` eingeben und dann die <kbd>TAB-TASTE</kbd> drücken, erweitert PowerShell diese Eingabe automatisch zu dem Cmdlet `Get-Command` (wie Sie sehen, wird auch die Groß-/Kleinschreibung der Buchstaben in die Standardform geändert). Wenn Sie die <kbd>TAB-TASTE</kbd> erneut drücken, ersetzt PowerShell diesen Cmdletnamen durch den einzigen anderen passenden Cmdletnamen, `Get-Content`.
+
+> [!NOTE]
+> Ab PowerShell 7.0 werden mit <kbd>Tab</kbd> auch abgekürzte Cmdlets und Funktionen erweitert. `i-psdf<tab>` gibt beispielsweise `Import-PowerShellDataFile` zurück.
 
 Sie können Erweiterung mit der TAB-TASTE wiederholt in derselben Zeile verwenden. Beispielsweise können Sie die Erweiterung mit der TAB-TASTE für den Namen des Cmdlets `Get-Content` verwenden, indem Sie Folgendes eingeben:
 

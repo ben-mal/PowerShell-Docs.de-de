@@ -2,12 +2,12 @@
 title: Kompatibilität von PowerShell 7-Modulen
 ms.date: 02/03/2020
 description: In diesem Artikel wird der Status von PowerShell 7 zusammen mit Powershell-Modulen aufgelistet, die für andere Microsoft-Produkte entwickelt wurden.
-ms.openlocfilehash: f845b33881c93fa076d97adf101f4f3e006df73b
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 718ba0f502a23bc2c2a9268d65d3b8129de0af49
+ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501625"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94661374"
 ---
 # <a name="powershell-7-module-compatibility"></a>Kompatibilität von PowerShell 7-Modulen
 
@@ -75,7 +75,7 @@ Unter Windows 10 werden die Windows-Verwaltungsmodule als **Optionale Windows-F
 | AppBackgroundTask                  | Nativ kompatibel                  | Windows 10 1903 und höher                   |
 | AppLocker                          | Nicht mit Kompatibilitätsebene getestet    |                                    |
 | AppvClient                         | Nicht mit Kompatibilitätsebene getestet    |                                    |
-| APPX-Datei                               | Nativ kompatibel                  | Windows Server 1809 und höher<br>Windows 10 1809 und höher |
+| APPX-Datei                               | Nativ kompatibel**                | Windows Server 1809 und höher<br>Windows 10 1809 und höher<br>**Muss eine Kompatibilitätsebene mit PowerShell 7.1 verwenden |
 | AssignedAccess                     | Nativ kompatibel                  | Windows 10 1809 und höher                   |
 | BestPractices                      | Wird von Kompatibilitätsebene nicht unterstützt |                                    |
 | BitLocker                          | Nativ kompatibel                  | Windows Server 1809 und höher mit BitLocker<br>Windows 10 1809 und höher |

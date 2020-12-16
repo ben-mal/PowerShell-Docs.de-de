@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 title: Tastenkombinationen für Windows PowerShell ISE
 description: Dieser Artikel enthält eine Liste der Tastenkombinationen, die in PowerShell ISE verwendet werden.
-ms.openlocfilehash: b7749f49d3ac2923b097e2ab94488263436980bd
-ms.sourcegitcommit: 488a940c7c828820b36a6ba56c119f64614afc29
+ms.openlocfilehash: d4e78c5e8e8e172ef3cdd30b0099d56ce6b6b01e
+ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92663463"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94391203"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tastenkombinationen für Windows PowerShell ISE
 
@@ -19,7 +19,7 @@ Sie können die folgenden Tastenkombinationen verwenden, wenn Sie Text bearbeite
 
 |              Aktion              |       Tastenkombinationen       |                                                                                                                                                 Verwenden in                                                                                                                                                 |
 | -------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Hilfe**                         | <kbd>F1</kbd>                  | Skriptbereich **Wichtig:** Sie können angeben, dass <kbd>F1</kbd>-Hilfe aus der TechNet-Bibliothek im Internet oder aus der heruntergeladenen Hilfe abgerufen wird (siehe `Update-Help`). Zur Auswahl klicken Sie auf **Tools** > **Optionen** und aktivieren oder deaktivieren dann auf der Registerkarte **Allgemeine Einstellungen** die Option **Lokale Hilfe anstelle von Onlineinhalt verwenden**. |
+| **Hilfe**                         | <kbd>F1</kbd>                  | Skriptbereich **Wichtig:** Sie können angeben, dass <kbd>F1</kbd>-Hilfe auf docs.microsoft.com oder in der heruntergeladenen Hilfe abgerufen wird (siehe `Update-Help`). Zur Auswahl klicken Sie auf **Tools** > **Optionen** und aktivieren oder deaktivieren dann auf der Registerkarte **Allgemeine Einstellungen** die Option **Lokale Hilfe anstelle von Onlineinhalt verwenden**. |
 | **Copy**                         | <kbd>STRG</kbd>+<kbd>C</kbd>   | Skriptbereich, Befehlsbereich, Ausgabebereich                                                                                                                                                                                                                                                                 |
 | **Ausschneiden**                          | <kbd>STRG</kbd>+<kbd>X</kbd>   | Skriptbereich, Befehlsbereich                                                                                                                                                                                                                                                                              |
 | **Gliederung erweitern oder reduzieren** | <kbd>STRG</kbd>+<kbd>M</kbd>   | Skriptbereich                                                                                                                                                                                                                                                                                            |

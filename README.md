@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d94024926a8ff8c33df08b4a8b58e9f8b0430f9b
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 61a70db9ae7a38d6731f1cefb011072c12d1e39a
+ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239881"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95514915"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open-Source-Verhaltenskodex
 
@@ -34,9 +34,9 @@ Nachfolgend werden die Hauptordner dieses Repositorys beschrieben.
 - `assets`: enthält in der Dokumentation verlinkte Dateien, die heruntergeladen werden können
 - `reference`: enthält die Dokumentation, die in [docs.microsoft.com]([https://docs.microsoft.com/powershell/scripting/) veröffentlicht wurde, einschließlich Referenzinhalten und konzeptionellen Inhalten
   - `5.1`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 5.1
-  - `6`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 6
   - `7.0`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 7.0
   - `7.1`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 7.1
+  - `7.2`: enthält die Cmdlet-Referenz und Hilfeartikel zu PowerShell 7.2 (Vorschauversion)
   - `bread`: enthält das Inhaltsverzeichnis, das für die Brotkrümelnavigation verwendet wird
   - `docs-conceptual`: enthält die konzeptionellen Artikel, die auf der Docs-Website veröffentlicht werden. In der Regel spiegelt die Ordnerstruktur das Inhaltsverzeichnis wider.
   - `mapping`: enthält die vom Buildsystem verwendete Konfiguration der Versionszuordnung
@@ -50,7 +50,7 @@ Nachfolgend werden die Hauptordner dieses Repositorys beschrieben.
 
 ## <a name="contributing"></a>Mitwirken
 
-Wir freuen uns über öffentliche Beiträge zu diesem Repository. Verwenden Sie hierfür [Pullanforderungen](https://help.github.com/articles/using-pull-requests/) im _Staging_ -Branch.
+Wir freuen uns über öffentliche Beiträge zu diesem Repository. Verwenden Sie hierfür [Pullanforderungen](https://help.github.com/articles/using-pull-requests/) im _Staging_-Branch.
 Hinweis: Sie müssen unsere [Lizenzvereinbarung für Mitwirkende](https://cla.microsoft.com/) unterschreiben, damit wir Ihre Pull Requests annehmen können. Dies ist eine einmalige Anforderung.
 
 Weitere Informationen zu Beiträgen finden Sie in unserem [Handbuch für Mitwirkende](https://aka.ms/PSDocsContributor). Das Handbuch für Mitwirkende enthält ausführliche Informationen zum Erstellen von Beiträgen zur Dokumentation, Stil- und Formatierungsvorgaben sowie Vorschlagen von Tools. Verwenden Sie die Vorlagen für Probleme und Pullanforderungen, um die Dokumentation über Versionen hinweg konsistent zu halten.
