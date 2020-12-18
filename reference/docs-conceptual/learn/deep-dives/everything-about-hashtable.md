@@ -4,10 +4,10 @@ description: Hashtabellen spielen eine wichtige Rolle in PowerShell, daher sollt
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
 ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 12/17/2020
 ms.locfileid: "93354421"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Alles, was Sie schon immer über Hashtabellen wissen wollten
@@ -684,7 +684,7 @@ Achten Sie auf Hashtabellen mit vielen Schachtelungsebenen. Wenn Sie diese in JS
 }
 ```
 
-Verwenden Sie den **Depth** -Parameter, um sicherzustellen, dass alle geschachtelten Hashtabellen erweitert wurden.
+Verwenden Sie den **Depth**-Parameter, um sicherzustellen, dass alle geschachtelten Hashtabellen erweitert wurden.
 
 ```powershell
 @{ a = @{ b = @{ c = @{ d = "e" }}}} | ConvertTo-Json -Depth 3
@@ -722,7 +722,7 @@ Name      Value
 a         b
 ```
 
-In PowerShell 6.2 wurde der **Depth** -Parameter zu `ConvertFrom-Json` hinzugefügt. Der Standardwert für **Depth** ist 1024.
+In PowerShell 6.2 wurde der **Depth**-Parameter zu `ConvertFrom-Json` hinzugefügt. Der Standardwert für **Depth** ist 1024.
 
 ### <a name="reading-directly-from-a-file"></a>Direktes Lesen aus einer Datei
 
