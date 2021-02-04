@@ -1,17 +1,16 @@
 ---
 description: Beschreibt Variablen, die Zustandsinformationen für PowerShell speichern. Diese Variablen werden von PowerShell erstellt und verwaltet.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 08/14/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: e7525ad8acd6dd5aa2dc65a8d49d03c1c6260bea
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: d99d800680c5cf5ae01ac0cbb16ccaf6a91aada5
+ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220764"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97577256"
 ---
 # <a name="about-automatic-variables"></a>Informationen zu automatischen Variablen
 
@@ -35,7 +34,7 @@ Enthält den Ausführungs Status des letzten Befehls. Sie enthält **true** , we
 
 Für Cmdlets und erweiterte Funktionen, die auf mehreren Stufen in einer Pipeline ausgeführt werden (z. b. sowohl in `process` -als auch in- `end` Blöcken), wird der Aufruf `this.WriteError()` von bzw `$PSCmdlet.WriteError()` . an einem beliebigen Punkt `$?` auf **false** festgelegt, wie `this.ThrowTerminatingError()` und `$PSCmdlet.ThrowTerminatingError()` .
 
-Das `Write-Error` Cmdlet legt `$?` nach der Ausführung immer **false** fest, wird jedoch nicht auf false festgelegt, `$?` Wenn eine Funktion aufgerufen wird: **False**
+Das `Write-Error` Cmdlet legt `$?` nach der Ausführung immer **false** fest, wird jedoch nicht auf false festgelegt, `$?` Wenn eine Funktion aufgerufen wird: 
 
 ```powershell
 function Test-WriteError
@@ -137,6 +136,12 @@ Enthält einen Enumerator, der alle Eingaben auflistet, die an eine Funktion wei
 Da `$input` ein Enumerator ist, bewirkt der Zugriff auf eine der Eigenschaften, dass `$input` nicht mehr verfügbar ist. Sie können `$input` in einer anderen Variablen speichern, um die Eigenschaften wiederzuverwenden `$input` .
 
 Enumeratoren enthalten Eigenschaften und Methoden, mit denen Sie Schleifen Werte abrufen und die aktuelle Schleifen Iterationen ändern können. Weitere Informationen finden Sie unter [Verwenden von Enumeratoren](#using-enumerators).
+
+Die- `$input` Variable ist auch für den Befehl verfügbar, der durch den-Parameter von angegeben wird, `-Command` Wenn Sie `pwsh` von der Befehlszeile aufgerufen wird. Das folgende Beispiel wird in der Windows-Befehlsshell ausgeführt.
+
+```CMD
+echo Hello | pwsh -Command """$input World!"""
+```
 
 ### <a name="iscoreclr"></a>$IsCoreCLR
 
@@ -353,7 +358,7 @@ Ab PowerShell 3,0 ist Sie in allen Skripts gültig.
 
 Enthält Informationen über den Benutzer, der die PSSession gestartet hat, einschließlich der Benutzeridentität und der Zeitzone des Ursprungs Computers. Diese Variable ist nur in pssessions verfügbar.
 
-Die `$PSSenderInfo` -Variable enthält eine vom benutzerkonfigurierbare Eigenschaft **applicationarguments** , die standardmäßig nur die `$PSVersionTable` aus der ursprünglichen Sitzung enthält. Um der **applicationarguments** -Eigenschaft Daten hinzuzufügen, verwenden Sie den **applicationarguments** -Parameter des `New-PSSessionOption` Cmdlets.
+Die `$PSSenderInfo` -Variable enthält eine vom benutzerkonfigurierbare Eigenschaft **applicationarguments**, die standardmäßig nur die `$PSVersionTable` aus der ursprünglichen Sitzung enthält. Um der **applicationarguments** -Eigenschaft Daten hinzuzufügen, verwenden Sie den **applicationarguments** -Parameter des `New-PSSessionOption` Cmdlets.
 
 ### <a name="psuiculture"></a>$PSUICulture
 
@@ -681,7 +686,7 @@ Die `$switch` Variable verfügt über die exakt gleichen Regeln wie die `$foreac
 Im folgenden Beispiel werden alle enumeratorkonzepte veranschaulicht.
 
 > [!NOTE]
-> Beachten Sie, dass der **notevaluated** -Fall nie ausgeführt wird, auch wenn es keine- `break` **MoveNext** Anweisung nach der-Methode von "-Methode" gibt.
+> Beachten Sie, dass der **notevaluated** -Fall nie ausgeführt wird, auch wenn es keine- `break`  Anweisung nach der-Methode von "-Methode" gibt.
 
 ```powershell
 $values = "Start", "MoveNext", "NotEvaluated", "Reset", "End"
@@ -724,7 +729,7 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 [about_Functions](about_Functions.md)
 

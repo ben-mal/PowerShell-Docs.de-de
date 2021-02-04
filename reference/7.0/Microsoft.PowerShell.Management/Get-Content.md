@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 5/14/2019
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Content
-ms.openlocfilehash: 1409522cffc2dde2cc5002049126bcfaa30ce846
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 48f15f9d7018c2e58584bff80f81132fe08fea1e
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93210367"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692733"
 ---
 # Get-Content
 
@@ -180,7 +179,7 @@ Added a stream named NewStream to Stream.txt
 ```
 
 Der **Stream** -Parameter ist ein dynamischer Parameter des [File System-Anbieters](../microsoft.powershell.core/about/about_filesystem_provider.md#stream-systemstring).
-Standardmäßig `Get-Content` werden nur Daten aus dem primären oder dem `$DATA` Stream abgerufen. **Streams** können zum Speichern ausgeblendeter Daten verwendet werden, wie z. b. Attribute, Sicherheitseinstellungen oder andere Daten.
+Standardmäßig `Get-Content` werden nur Daten aus dem Standard-oder `:$DATA` Stream abgerufen. **Streams** können zum Speichern ausgeblendeter Daten verwendet werden, wie z. b. Attribute, Sicherheitseinstellungen oder andere Daten. Sie können auch in Verzeichnissen gespeichert werden, ohne dass es sich um untergeordnete Elemente handelt.
 
 ### Beispiel 6: erhalten von Rohdaten
 
@@ -219,7 +218,7 @@ Get-Member -InputObject $bytearray
 ```
 
 ```Output
-TypeName: System.Byte[]
+   TypeName: System.Byte[]
 
 Name           MemberType            Definition
 ----           ----------            ----------
@@ -289,7 +288,7 @@ Accept wildcard characters: False
 
 Gibt die Anzahl der Zeilen vom Anfang einer Datei oder eines anderen Elements an. Der Standardwert ist %%amp;quot;-1%%amp;quot; (alle Zeilen).
 
-Sie können den **totalCount** -Parameternamen oder seine Aliase ( **First** oder **Head** ) verwenden.
+Sie können den **totalCount** -Parameternamen oder seine Aliase ( **First** oder **Head**) verwenden.
 
 ```yaml
 Type: System.Int64
@@ -338,7 +337,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
+Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
 
 ```yaml
 Type: System.String[]
@@ -355,7 +354,7 @@ Accept wildcard characters: True
 ### -Ausschließen
 
 Gibt als Zeichen folgen Array ein Element oder Elemente an, die von diesem Cmdlet im Vorgang ausgeschlossen werden.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
+Der Wert dieses Parameters qualifiziert den **Path**-Parameter.
 
 Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` . b..
 Platzhalterzeichen sind zulässig.
@@ -504,6 +503,9 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
+
+> [!NOTE]
+> Dieser Parameter ist nur unter Windows verfügbar.
 
 Ruft die Inhalte des angegebenen alternativen NTFS-Dateidatenstroms aus der Datei ab. Geben Sie den Namen des Stroms ein.
 Platzhalter werden nicht unterstützt.

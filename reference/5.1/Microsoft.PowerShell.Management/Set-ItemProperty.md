@@ -7,12 +7,12 @@ ms.date: 10/18/2018
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-itemproperty?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ItemProperty
-ms.openlocfilehash: 969cb181758dc1ac40b9d8fca2c22fa97f87c693
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cbd1229721650823d9780517934c40a2287f4227
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214455"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692668"
 ---
 # Set-ItemProperty
 
@@ -64,7 +64,7 @@ Sie haben z. B. die Möglichkeit, einen neuen Registrierungseintrag in einem Sc
 
 ### Beispiel 1: Festlegen einer Eigenschaft einer Datei
 
-Mit diesem Befehl wird der Wert der **isread only** -Eigenschaft der Datei "final.doc" auf "true" festgelegt. Dabei wird **path** verwendet, um die Datei anzugeben, den **Namen** , um den Namen der Eigenschaft anzugeben, und den **Wert** "pazrameter", um den neuen Wert anzugeben.
+Mit diesem Befehl wird der Wert der **isread only** -Eigenschaft der Datei "final.doc" auf "true" festgelegt. Dabei wird **path** verwendet, um die Datei anzugeben, den **Namen** , um den Namen der Eigenschaft anzugeben, und den **value** -Parameter, um den neuen Wert anzugeben.
 
 Bei der Datei handelt es sich um ein **System. IO. FileInfo** -Objekt, und **isread only** ist nur eine seiner Eigenschaften.
 Um alle Eigenschaften anzuzeigen, geben Sie ein `Get-Item C:\GroupFiles\final.doc | Get-Member -MemberType Property` .
@@ -147,7 +147,7 @@ Get-ChildItem weekly.txt | Set-ItemProperty -Name IsReadOnly -Value $True
 Gibt ein Benutzerkonto an, das über die Berechtigung zum Ausführen dieser Aktion verfügt.
 Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
+Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential**-Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
 Wenn Sie einen Benutzernamen eingeben, werden Sie zur Eingabe eines Kennworts aufgefordert.
 
 > [!NOTE]
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -Ausschließen
 
 Gibt die Elemente an, auf die das Cmdlet nicht angewendet wird, und schließt alle anderen ein.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
+Der Wert dieses Parameters qualifiziert den **Path**-Parameter.
 Geben Sie ein Pfadelement oder ein Muster wie %%amp;quot;*.txt%%amp;quot; ein.
 Platzhalterzeichen sind zulässig.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ### -Filter
 
 Gibt einen Filter im Format oder in der Sprache des Anbieters an.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
+Der Wert dieses Parameters qualifiziert den **Path**-Parameter.
 
 Die Syntax des Filters, einschließlich der Verwendung von Platzhalter Zeichen, hängt vom Anbieter ab.
 Filter sind effizienter als andere Parameter, da Sie vom Anbieter angewendet werden, wenn das Cmdlet die Objekte abruft, statt dass PowerShell die Objekte nach dem Abrufen filtert.
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ### -Include
 
 Gibt nur die Elemente an, auf die das Cmdlet angewendet wird, wobei alle anderen Elemente ausgeschlossen werden.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
+Der Wert dieses Parameters qualifiziert den **Path**-Parameter.
 Geben Sie ein Pfadelement oder ein Muster wie %%amp;quot;*.txt%%amp;quot; ein.
 Platzhalterzeichen sind zulässig.
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ### -Literalpath
 
 Gibt einen Pfad der Element Eigenschaft an.
-Im Gegensatz zum **Path** -Parameter wird der Wert des **LiteralPath** -Parameters genau so verwendet, wie er eingegeben wurde.
+Im Gegensatz zum **Path**-Parameter wird der Wert des **LiteralPath**-Parameters genau so verwendet, wie er eingegeben wurde.
 Es werden keine Zeichen als Platzhalter interpretiert.
 Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.
 Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapesequenzen zu interpretieren.
@@ -336,14 +336,14 @@ Dieser Parameter funktioniert nur in den Registrierungs Laufwerken.
 Gibt den Typ der Eigenschaft an, die von diesem Cmdlet hinzugefügt wird.
 Zulässige Werte für diesen Parameter:
 
-- **String** : gibt eine NULL-terminierte Zeichenfolge an. Entspricht **REG_SZ** .
-- **ExpandString** : gibt eine NULL-terminierte Zeichenfolge an, die nicht erweiterte Verweise auf Umgebungsvariablen enthält, die erweitert werden, wenn der Wert abgerufen wird. Entspricht **REG_EXPAND_SZ** .
-- **Binary** : gibt Binärdaten in beliebiger Form an. Entspricht **REG_BINARY** .
-- **DWORD** : gibt eine 32-Bit-Binärzahl an. Entspricht **REG_DWORD** .
-- **MultiString** : gibt ein Array von auf NULL endenden Zeichen folgen an, die mit zwei NULL-Zeichen beendet werden.
-  Entspricht **REG_MULTI_SZ** .
-- **QWORD** : gibt eine 64-Bit-Binärzahl an. Entspricht **REG_QWORD** .
-- **Unknown** : gibt einen nicht unterstützten Registrierungs Datentyp an, z. b. **REG_RESOURCE_LIST** .
+- **String**: gibt eine NULL-terminierte Zeichenfolge an. Entspricht **REG_SZ**.
+- **ExpandString**: gibt eine NULL-terminierte Zeichenfolge an, die nicht erweiterte Verweise auf Umgebungsvariablen enthält, die erweitert werden, wenn der Wert abgerufen wird. Entspricht **REG_EXPAND_SZ**.
+- **Binary**: gibt Binärdaten in beliebiger Form an. Entspricht **REG_BINARY**.
+- **DWORD**: gibt eine 32-Bit-Binärzahl an. Entspricht **REG_DWORD**.
+- **MultiString**: gibt ein Array von auf NULL endenden Zeichen folgen an, die mit zwei NULL-Zeichen beendet werden.
+  Entspricht **REG_MULTI_SZ**.
+- **QWORD**: gibt eine 64-Bit-Binärzahl an. Entspricht **REG_QWORD**.
+- **Unknown**: gibt einen nicht unterstützten Registrierungs Datentyp an, z. b. **REG_RESOURCE_LIST**.
 
 ```yaml
 Type: RegistryValueKind

@@ -1,14 +1,14 @@
 ---
-ms.date: 10/16/2019
+ms.date: 01/04/2021
 ms.topic: reference
 title: Schreiben eines PowerShell-Binärmoduls
 description: Schreiben eines PowerShell-Binärmoduls
-ms.openlocfilehash: 42db71968ccac1cc3c1c05c5be2e72327e5e28d9
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8c644391008cb97c1206f985f0f5eca9d7dfcc9e
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92647697"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879370"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Schreiben eines PowerShell-Modul Manifests
 
@@ -54,7 +54,7 @@ Für einfache Module, die nur eine einzelne `.psm1` oder binäre Assembly enthal
 
 In der folgenden Tabelle werden die Elemente beschrieben, die in einem Modul Manifest enthalten sein können.
 
-|Element|Standard|Beschreibung|
+|Element|Standard|BESCHREIBUNG|
 |-------------|-------------|-----------------|
 |**RootModule**<br /> Typ: `String`|`<empty string>`|Skript Modul oder binäre Modul Datei, die diesem Manifest zugeordnet ist. In früheren Versionen von PowerShell wurde dieses Element als " **moduletoprocess**" bezeichnet.<br /> Mögliche Typen für das Stamm Modul können leer sein, wodurch ein **Manifest** -Modul, der Name eines Skript Moduls ( `.psm1` ) oder der Name eines binären Moduls ( `.exe` oder) erstellt wird `.dll` . Wenn Sie den Namen eines Modul Manifests ( `.psd1` ) oder einer Skriptdatei ( `.ps1` ) in diesem Element platzieren, wird ein Fehler verursacht. <br /> Beispiel: `RootModule = 'ScriptModule.psm1'`|
 |**ModuleVersion**<br /> Typ: `Version`|`'0.0.1'`|Versionsnummer dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest`   verwendet den Standardwert. Die Zeichenfolge muss z. b. in den-Typ konvertiert werden können `Version` `#.#.#.#.#` . `Import-Module` lädt das erste gefundene Modul auf dem **$PSModulePath** , das mit dem Namen übereinstimmt, und verfügt mindestens über eine " **moduleversion**", wie der **MinimumVersion** -Parameter. Um eine bestimmte Version zu importieren, verwenden Sie den "Requirements `Import-Module` **dversion** "-Parameter des Cmdlets.<br /> Beispiel: `ModuleVersion = '1.0'`|
@@ -63,7 +63,7 @@ In der folgenden Tabelle werden die Elemente beschrieben, die in einem Modul Man
 |**CompanyName**<br /> Typ: `String`|`'Unknown'`|Unternehmen oder Hersteller dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den Standardwert.<br /> Beispiel: `CompanyName = 'Fabrikam'`|
 |**Copyright**<br /> Typ: `String`|`'(c) <Author>. All rights reserved.'`| Copyright-Anweisung für dieses Modul. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den Standardwert mit dem aktuellen Benutzer als `<Author>` . Um einen Autor anzugeben, verwenden Sie den **Author** -Parameter. <br /> Beispiel: `Copyright = '2019 AuthorName. All rights reserved.'`|
 |**Beschreibung**<br /> Typ: `String`|`<empty string>`|Beschreibung der von diesem Modul bereitgestellten Funktionalität.<br /> Beispiel: `Description = 'This is the module's description.'`|
-|**PowerShellVersion**<br /> Typ: `Version`|`<empty string>`|Mindestens erforderliche Version der PowerShell-Engine, die für dieses Modul erforderlich ist. Gültige Werte sind 1,0, 2,0, 3,0, 4,0, 5,0, 5,1, 6 und 7.<br /> Beispiel: `PowerShellVersion = '5.0'`|
+|**PowerShellVersion**<br /> Typ: `Version`|`<empty string>`|Mindestens erforderliche Version der PowerShell-Engine, die für dieses Modul erforderlich ist. Gültige Werte sind 1,0, 2,0, 3,0, 4,0, 5,0, 5,1, 6,0, 6,1, 6,2, 7,0 und 7,1.<br /> Beispiel: `PowerShellVersion = '5.0'`|
 |**Powershellhostname**<br /> Typ: `String`|`<empty string>`|Der Name des PowerShell-Hosts, der von diesem Modul benötigt wird. Dieser Name wird von PowerShell bereitgestellt. Um den Namen eines Host Programms zu suchen, geben Sie im Programm Folgendes ein: `$host.name` .<br /> Beispiel: `PowerShellHostName = 'ConsoleHost'`|
 |**Powershellhostversion**<br /> Typ: `Version`|`<empty string>`|Mindestens erforderliche Version des PowerShell-Hosts, die von diesem Modul benötigt wird.<br /> Beispiel: `PowerShellHostVersion = '2.0'`|
 |**Dotnetframeworkversion**<br /> Typ: `Version`|`<empty string>`|Mindestens erforderliche Version Microsoft .NET Frameworks, die von diesem Modul benötigt wird. Diese Voraussetzung gilt nur für die PowerShell-Desktop Edition, z. b. PowerShell 5,1.<br /> Beispiel: `DotNetFrameworkVersion = '3.5'`|

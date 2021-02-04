@@ -7,12 +7,12 @@ ms.date: 09/08/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: e05c9b5e44d26b1e16c82f734ec60ca4cc73ab4d
-ms.sourcegitcommit: e0f9fe6335be1e0f94bedaa0e8baec2acaeaa076
+ms.openlocfilehash: 1b1824db5c5c20698d551a6277890ce6c82c4e11
+ms.sourcegitcommit: fb9bafd041e3615b9dc9fb77c9245581b705cd02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "93219900"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725186"
 ---
 # ForEach-Object
 
@@ -42,15 +42,15 @@ ForEach-Object -Parallel <scriptblock> [-InputObject <PSObject>] [-ThrottleLimit
 [-UseNewRunspace] [-TimeoutSeconds <int>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## BESCHREIBUNG
+## Beschreibung
 
 Das- `ForEach-Object` Cmdlet führt einen Vorgang für jedes Element in einer Auflistung von Eingabe Objekten aus. Die Eingabe Objekte können an das Cmdlet weitergeleitet oder mithilfe des **Inputobject** -Parameters angegeben werden.
 
 Ab Windows PowerShell 3,0 gibt es zwei verschiedene Möglichkeiten, einen Befehl zu erstellen `ForEach-Object` .
 
-- **Skriptblock**. Sie können einen Skriptblock verwenden, um den Vorgang anzugeben. Verwenden Sie innerhalb des Skript Blocks die- `$_` Variable, um das aktuelle-Objekt darzustellen. Der Skriptblock ist der Wert des **Process** -Parameters. Der Skriptblock kann beliebige PowerShell-Skripts enthalten.
+- **Skriptblock**. Sie können einen Skriptblock verwenden, um den Vorgang anzugeben. Verwenden Sie innerhalb des Skript Blocks die- `$_` Variable, um das aktuelle-Objekt darzustellen. Der Skriptblock ist der Wert des **Process**-Parameters. Der Skriptblock kann beliebige PowerShell-Skripts enthalten.
 
-  Der folgende Befehl ruft beispielsweise den Wert der **ProcessName** -Eigenschaft der einzelnen Prozesse auf dem Computer ab.
+  Der folgende Befehl ruft beispielsweise den Wert der **ProcessName**-Eigenschaft der einzelnen Prozesse auf dem Computer ab.
 
   `Get-Process | ForEach-Object {$_.ProcessName}`
 
@@ -61,7 +61,7 @@ Ab Windows PowerShell 3,0 gibt es zwei verschiedene Möglichkeiten, einen Befehl
 
 - **Operation-Anweisung**. Sie können auch eine Vorgangs Anweisung schreiben, die in natürlicher Sprache sehr viel ähnlicher ist. Sie können die Vorgangsanweisung verwenden, um einen Eigenschaftenwert anzugeben oder eine Methode aufzurufen. Vorgangsanweisungen wurden in Windows PowerShell 3.0 eingeführt.
 
-  Der folgende Befehl ruft beispielsweise ebenfalls den Wert der **ProcessName** -Eigenschaft der einzelnen Prozesse auf dem Computer ab.
+  Der folgende Befehl ruft beispielsweise ebenfalls den Wert der **ProcessName**-Eigenschaft der einzelnen Prozesse auf dem Computer ab.
 
   `Get-Process | ForEach-Object ProcessName`
 
@@ -113,7 +113,7 @@ $Events = Get-EventLog -LogName System -Newest 1000
 $events | ForEach-Object -Begin {Get-Date} -Process {Out-File -FilePath Events.txt -Append -InputObject $_.Message} -End {Get-Date}
 ```
 
-`Get-EventLog` Ruft die 1000 aktuellsten Ereignisse aus dem System Ereignisprotokoll ab und speichert Sie in der `$Events` Variablen. `$Events` wird dann an das `ForEach-Object` Cmdlet weitergeleitet. Der **Begin** -Parameter zeigt das aktuelle Datum und die Uhrzeit. Als Nächstes verwendet der **Process** -Parameter das `Out-File` -Cmdlet, um eine Textdatei mit dem Namen events.txt zu erstellen, und speichert die Message-Eigenschaft der einzelnen Ereignisse in dieser Datei. Schließlich wird der **End** -Parameter verwendet, um das Datum und die Uhrzeit anzuzeigen, zu denen die gesamte Verarbeitung abgeschlossen wurde.
+`Get-EventLog` Ruft die 1000 aktuellsten Ereignisse aus dem System Ereignisprotokoll ab und speichert Sie in der `$Events` Variablen. `$Events` wird dann an das `ForEach-Object` Cmdlet weitergeleitet. Der **Begin**-Parameter zeigt das aktuelle Datum und die Uhrzeit. Als Nächstes verwendet der **Process** -Parameter das `Out-File` -Cmdlet, um eine Textdatei mit dem Namen events.txt zu erstellen, und speichert die Message-Eigenschaft der einzelnen Ereignisse in dieser Datei. Schließlich wird der **End**-Parameter verwendet, um das Datum und die Uhrzeit anzuzeigen, zu denen die gesamte Verarbeitung abgeschlossen wurde.
 
 ### Beispiel 4: Ändern des Werts eines Registrierungsschlüssels
 
@@ -126,7 +126,7 @@ Get-ItemProperty -Path HKCU:\Network\* |
 
 Sie können dieses Format verwenden,um die Form oder den Inhalt eines Registrierungseintragswerts zu ändern.
 
-Jeder Unterschlüssel im **Netzwerk** Schlüssel stellt ein zugeordnetes Netzwerklaufwerk dar, das bei der Anmeldung erneut eine Verbindung herstellt. Der **RemotePath** -Eintrag enthält den UNC-Pfad des verbundenen Laufwerks. Wenn Sie z. b. das Laufwerk e: zu zuordnen `\\Server\Share` , wird ein **e** -Unterschlüssel in erstellt, `HKCU:\Network` wobei der Registrierungs Wert **remotePath** auf festgelegt ist `\\Server\Share` .
+Jeder Unterschlüssel im **Netzwerk** Schlüssel stellt ein zugeordnetes Netzwerklaufwerk dar, das bei der Anmeldung erneut eine Verbindung herstellt. Der **RemotePath**-Eintrag enthält den UNC-Pfad des verbundenen Laufwerks. Wenn Sie z. b. das Laufwerk e: zu zuordnen `\\Server\Share` , wird ein **e** -Unterschlüssel in erstellt, `HKCU:\Network` wobei der Registrierungs Wert **remotePath** auf festgelegt ist `\\Server\Share` .
 
 Der Befehl verwendet das `Get-ItemProperty` Cmdlet, um alle untergeordneten Schlüssel des **Netzwerk** Schlüssels zu erhalten, und das `Set-ItemProperty` Cmdlet, um den Wert des **remotePath** -Registrierungs Eintrags in jedem Schlüssel zu ändern.
 Im- `Set-ItemProperty` Befehl ist der Pfad der Wert der **pspath** -Eigenschaft des Registrierungsschlüssels. Dies ist eine Eigenschaft des Microsoft .NET Framework-Objekts, das den Registrierungsschlüssel darstellt, nicht einen Registrierungs Eintrag. Der Befehl verwendet die **touppermethode ()** des **remotePath** -Werts, bei der es sich um eine Zeichenfolge (REG_SZ) handelt.
@@ -186,7 +186,7 @@ Die Befehle rufen die **Split** Methode von Zeichenfolgen auf. Die drei Befehle 
 
 Der erste Befehl verwendet die herkömmliche Syntax, die einen Skriptblock und den aktuellen Objekt Operator enthält `$_` . Es verwendet die Punktsyntax zum Angeben der Methode und die Klammern, um das Trennzeichenargument einzuschließen.
 
-Der zweite Befehl verwendet den **MemberName** -Parameter, um die **Split** -Methode anzugeben,und den **ArgumentName** -Parameter, um den Punkt („.“) als das Teilungstrennzeichen zu identifizieren.
+Der zweite Befehl verwendet den **MemberName**-Parameter, um die **Split**-Methode anzugeben,und den **ArgumentName**-Parameter, um den Punkt („.“) als das Teilungstrennzeichen zu identifizieren.
 
 Der dritte Befehl verwendet den **foreach** -Alias des `ForEach-Object` Cmdlets und lässt die Namen der Parameter " **Membership Name** " und "Argument **List** " aus, die optional sind.
 
@@ -206,7 +206,7 @@ process
 
 ### Beispiel 9: Verwenden von ForEach-Object mit mehr als zwei Skript Blöcken
 
-In diesem Beispiel übergeben wir zwei Skriptblöcke in der gleichen Weise. Alle Skriptblöcke werden an den **Prozess** Parameter gebunden. Sie werden jedoch so behandelt, als wären Sie an die **Begin** -, **Process** -und **End** -Parameter übergebenen.
+In diesem Beispiel übergeben wir zwei Skriptblöcke in der gleichen Weise. Alle Skriptblöcke werden an den **Prozess** Parameter gebunden. Sie werden jedoch so behandelt, als wären Sie an die **Begin**-, **Process**-und **End** -Parameter übergebenen.
 
 ```powershell
 1..2 | ForEach-Object { 'begin' } { 'process A' }  { 'process B' }  { 'end' }
@@ -337,7 +337,7 @@ $threadSafeDictionary["pwsh"]
      82    82.87     130.85      15.55    2808   2 pwsh
 ```
 
-Eine einzelne Instanz eines **ConcurrentDictionary** -Objekts wird an jeden Skriptblock zum Erfassen der Objekte übermittelt. Da das **ConcurrentDictionary** Thread sicher ist, kann es sicher von jedem parallelen Skript geändert werden. Ein nicht Thread sicheres Objekt, wie z. b **. System. Collections. Generic. Dictionary** , kann hier nicht sicher verwendet werden.
+Eine einzelne Instanz eines **ConcurrentDictionary** -Objekts wird an jeden Skriptblock zum Erfassen der Objekte übermittelt. Da das **ConcurrentDictionary** Thread sicher ist, kann es sicher von jedem parallelen Skript geändert werden. Ein nicht Thread sicheres Objekt, wie z. b **. System. Collections. Generic. Dictionary**, kann hier nicht sicher verwendet werden.
 
 > [!NOTE]
 > Dieses Beispiel ist eine sehr ineffiziente Verwendung des **parallelen** Parameters. Das Skript fügt das Eingabe Objekt einfach einem gleichzeitigen Wörterbuch Objekt hinzu. Der Aufwand für das Aufrufen der einzelnen Skripts in einem separaten Thread ist trivial. Die normale Ausführung `ForEach-Object` ohne den **parallelen** Switch ist viel effizienter und schneller. Dieses Beispiel soll lediglich veranschaulichen, wie Thread sichere Variablen verwendet werden.
@@ -542,14 +542,14 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 5
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -TimeoutSeconds
 
-Gibt die Anzahl der Sekunden an, die gewartet werden soll, bis alle Eingaben parallel verarbeitet werden. Nach der angegebenen Timeout Zeit werden alle laufenden Skripts angehalten. Und alle verbleibenden zu verarbeitenden Eingabe Objekte werden ignoriert. Der Standardwert `0` deaktiviert den Timeout und `ForEach-Object -Parallel` kann unbegrenzt ausgeführt werden. Wenn <kbd>Ctrl</kbd>Sie + in der Befehlszeile STRG<kbd>C</kbd> eingeben, wird ein laufender `ForEach-Object -Parallel` Befehl beendet. Dieser Parameter kann nicht zusammen mit dem **AsJob** -Parameter verwendet werden.
+Gibt die Anzahl der Sekunden an, die gewartet werden soll, bis alle Eingaben parallel verarbeitet werden. Nach der angegebenen Timeout Zeit werden alle laufenden Skripts angehalten. Und alle verbleibenden zu verarbeitenden Eingabe Objekte werden ignoriert. Der Standardwert `0` deaktiviert den Timeout und `ForEach-Object -Parallel` kann unbegrenzt ausgeführt werden. Wenn <kbd></kbd>Sie + in der Befehlszeile STRG<kbd>C</kbd> eingeben, wird ein laufender `ForEach-Object -Parallel` Befehl beendet. Dieser Parameter kann nicht zusammen mit dem **AsJob** -Parameter verwendet werden.
 
 Dieser Parameter wurde in PowerShell 7,0 eingeführt.
 
@@ -649,13 +649,13 @@ Sie können jedes beliebige Objekt über die Pipeline an dieses Cmdlet übergebe
 
 Dieses Cmdlet gibt Objekte zurück, die von der Eingabe bestimmt werden.
 
-## Notizen
+## Hinweise
 
 - Das- `ForEach-Object` Cmdlet funktioniert ähnlich wie die **foreach** -Anweisung, mit dem Unterschied, dass Sie Eingaben nicht an eine **foreach** -Anweisung übergeben können. Weitere Informationen zur **foreach** -Anweisung finden Sie unter [about_Foreach](./About/about_Foreach.md).
 
 - Ab PowerShell 4,0 `Where` wurden-und-Methoden für die Verwendung mit-Auflistungen `ForEach` hinzugefügt. Weitere Informationen zu diesen neuen Methoden finden Sie hier [about_arrays](./About/about_Arrays.md)
 
-- Der `ForEach-Object -Parallel` Parametersatz verwendet die interne PowerShell-API, um jeden Skriptblock auszuführen. Dies ist deutlich mehr Aufwand als `ForEach-Object` bei der sequenziellen Verarbeitung. Es ist wichtig, **parallel** zu verwenden, wenn der mehr Aufwand für die parallele Ausführung im Vergleich zu den vom Skriptblock ausgeführten Arbeiten gering ist. Beispiel:
+- Der `ForEach-Object -Parallel` Parametersatz verwendet die interne PowerShell-API, um jeden Skriptblock auszuführen. Dies ist deutlich mehr Aufwand als `ForEach-Object` bei der sequenziellen Verarbeitung. Es ist wichtig, **parallel** zu verwenden, wenn der mehr Aufwand für die parallele Ausführung im Vergleich zu den vom Skriptblock ausgeführten Arbeiten gering ist. Beispiele:
 
   - Rechenintensive Skripts auf mehr Kern Computern
   - Skripts, die Zeit für das warten auf Ergebnisse oder Datei Vorgänge aufwenden

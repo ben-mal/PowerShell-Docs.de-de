@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 10/18/2018
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-content?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Content
-ms.openlocfilehash: 5a38fd45ff1f645df7004452b5a3c16c6f5cb74a
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9ffe7510745e92c6863cf08d143f89e214ae9133
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93211151"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692974"
 ---
 # Clear-Content
 
@@ -58,16 +57,13 @@ Die Dateien werden nicht gelöscht, sie sind anschließend jedoch leer.
 Clear-Content -Path "*" -Filter "*.log" -Force
 ```
 
-Mit diesem Befehl wird der Inhalt aller Dateien mit der Dateinamenerweiterung %%amp;quot;.log%%amp;quot; im aktuellen Verzeichnis gelöscht, einschließlich der Dateien mit Schreibschutzattribut.
-Das Sternchen ( \* ) im Pfad stellt alle Elemente im aktuellen Verzeichnis dar.
-Der **Force** -Parameter bewirkt, dass der Befehl für schreibgeschützte Dateien wirksam wird.
-Wenn Sie einen Filter verwenden, um den Befehl auf Dateien mit der Dateinamenerweiterung ". log" zu beschränken, anstatt " \* . log" im Pfad anzugeben, wird der Vorgang beschleunigt.
+Mit diesem Befehl wird der Inhalt aller Dateien mit der Dateinamenerweiterung %%amp;quot;.log%%amp;quot; im aktuellen Verzeichnis gelöscht, einschließlich der Dateien mit Schreibschutzattribut. Das Sternchen ( \* ) im Pfad stellt alle Elemente im aktuellen Verzeichnis dar. Der **Force** -Parameter bewirkt, dass der Befehl für schreibgeschützte Dateien wirksam wird. Wenn Sie einen Filter verwenden, um den Befehl auf Dateien mit der Dateinamenerweiterung ". log" zu beschränken, anstatt " \* . log" im Pfad anzugeben, wird der Vorgang beschleunigt.
 
 ### Beispiel 3: Löschen aller Daten aus einem Stream
 
 Dieses Beispiel zeigt, wie das `Clear-Content` Cmdlet den Inhalt aus einem alternativen Datenstrom löscht, während der Stream unverändert bleibt.
 
-Der erste Befehl verwendet das `Get-Content` Cmdlet, um den Inhalt des "Zone. Identifier"-Streams in der Copy-Script.ps1-Datei, die aus dem Internet heruntergeladen wurde, zu erhalten.
+Der erste Befehl verwendet das `Get-Content` Cmdlet, um den Inhalt des `Zone.Identifier` Streams in der Copy-Script.ps1-Datei, die aus dem Internet heruntergeladen wurde, zu erhalten.
 
 Der zweite Befehl verwendet das `Clear-Content` Cmdlet, um den Inhalt zu löschen.
 
@@ -91,16 +87,15 @@ PS C:\>
 
 ### -Stream
 
-Gibt einen alternativen Datenstrom für den Inhalt an.
-Wenn der Datenstrom nicht vorhanden ist, wird er von diesem Cmdlet erstellt.
-Platzhalterzeichen werden nicht unterstützt.
+> [!NOTE]
+> Dieser Parameter ist nur unter Windows verfügbar.
+
+Gibt einen alternativen Datenstrom für den Inhalt an. Wenn der Datenstrom nicht vorhanden ist, wird er von diesem Cmdlet erstellt. Platzhalterzeichen werden nicht unterstützt.
 
 Stream ist ein dynamischer Parameter, den der File System-Anbieter hinzufügt `Clear-Content` .
 Dieser Parameter funktioniert nur in Dateisystemlaufwerken.
 
-Sie können das `Clear-Content` Cmdlet verwenden, um den Inhalt des alternativen Datenstroms "Zone. Identifier" zu ändern.
-Dies wird jedoch nicht empfohlen, um Sicherheitsüberprüfungen zu vermeiden, die Dateien blockieren, die aus dem Internet heruntergeladen werden.
-Wenn Sie überprüfen, ob eine heruntergeladene Datei sicher ist, verwenden Sie das- `Unblock-File` Cmdlet.
+Sie können das `Clear-Content` Cmdlet verwenden, um den Inhalt des beliebigen Alternativen Datenstroms zu ändern, z `Zone.Identifier` . b.. Dies wird jedoch nicht empfohlen, um Sicherheitsüberprüfungen zu vermeiden, die Dateien blockieren, die aus dem Internet heruntergeladen werden. Wenn Sie überprüfen, ob eine heruntergeladene Datei sicher ist, verwenden Sie das- `Unblock-File` Cmdlet.
 
 ```yaml
 Type: System.String
@@ -133,10 +128,7 @@ Accept wildcard characters: False
 
 ### -Ausschließen
 
-Gibt Zeichen folgen, die von diesem Cmdlet aus dem Pfad zum Inhalt ausgelassen werden, als Zeichen folgen Array an.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
-Geben Sie ein Pfadelement oder ein Muster wie %%amp;quot;*.txt%%amp;quot; ein.
-Platzhalter sind zulässig.
+Gibt Zeichen folgen, die von diesem Cmdlet aus dem Pfad zum Inhalt ausgelassen werden, als Zeichen folgen Array an. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfadelement oder ein Muster wie %%amp;quot;*.txt%%amp;quot; ein. Platzhalter sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -152,10 +144,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Gibt einen Filter im Format oder in der Sprache des Anbieters an.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
-Die Syntax des Filters einschließlich der Verwendung von Platzhaltern ist vom Anbieter abhängig.
-Filter sind effizienter als andere Parameter, da Sie vom Anbieter beim Abrufen der Objekte angewendet werden, anstatt dass PowerShell die Objekte nach dem Abrufen filtert.
+Gibt einen Filter im Format oder in der Sprache des Anbieters an. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Die Syntax des Filters einschließlich der Verwendung von Platzhaltern ist vom Anbieter abhängig. Filter sind effizienter als andere Parameter, da Sie vom Anbieter beim Abrufen der Objekte angewendet werden, anstatt dass PowerShell die Objekte nach dem Abrufen filtert.
 
 ```yaml
 Type: System.String
@@ -187,10 +176,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-Gibt den Inhalt, den dieses Cmdlet löscht, als Zeichen folgen Array an.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
-Geben Sie ein Pfadelement oder ein Muster wie %%amp;quot;*.txt%%amp;quot; ein.
-Platzhalter sind zulässig.
+Gibt den Inhalt, den dieses Cmdlet löscht, als Zeichen folgen Array an. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfadelement oder ein Muster wie %%amp;quot;*.txt%%amp;quot; ein. Platzhalter sind zulässig.
 
 ```yaml
 Type: System.String[]
@@ -206,11 +192,8 @@ Accept wildcard characters: True
 
 ### -Literalpath
 
-Gibt die Pfade zu den Elementen an, aus denen der Inhalt gelöscht wird.
-Im Gegensatz zum **Path** -Parameter wird der Wert des **LiteralPath** -Parameters genau so verwendet, wie er eingegeben wurde.
-Es werden keine Zeichen als Platzhalter interpretiert.
-Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen.
-Einfache Anführungszeichen geben an, dass PowerShell Zeichen nicht als Escapesequenzen interpretieren soll.
+Gibt die Pfade zu den Elementen an, aus denen der Inhalt gelöscht wird. Im Gegensatz zum **Path**-Parameter wird der Wert des **LiteralPath**-Parameters genau so verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert.
+Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen. Einfache Anführungszeichen geben an, dass PowerShell Zeichen nicht als Escapesequenzen interpretieren soll.
 
 ```yaml
 Type: System.String[]
@@ -226,12 +209,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-Gibt die Pfade zu den Elementen an, aus denen der Inhalt gelöscht wird.
-Platzhalter sind zulässig.
-Die Pfade müssen auf Elemente und nicht auf Container zeigen.
-Sie müssen beispielsweise einen Pfad zu Dateien angeben, ein Pfad zu einem Verzeichnis ist nicht zulässig.
-Platzhalter sind zulässig.
-Dieser Parameter ist erforderlich, der Parametername (Path) ist jedoch optional.
+Gibt die Pfade zu den Elementen an, aus denen der Inhalt gelöscht wird. Platzhalter sind zulässig. Die Pfade müssen auf Elemente und nicht auf Container zeigen. Sie müssen beispielsweise einen Pfad zu Dateien angeben, ein Pfad zu einem Verzeichnis ist nicht zulässig. Platzhalter sind zulässig. Dieser Parameter ist erforderlich, der Parametername (Path) ist jedoch optional.
 
 ```yaml
 Type: System.String[]
@@ -263,8 +241,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.
-Das Cmdlet wird nicht ausgeführt.
+Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird. Das Cmdlet wird nicht ausgeführt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -280,7 +257,8 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` . Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## EINGABEN
 
@@ -296,8 +274,7 @@ Dieses Cmdlet gibt keine Objekte zurück.
 
 ## HINWEISE
 
-Sie können `Clear-Content` mit dem PowerShell-File System-Anbieter und mit anderen Anbietern verwenden, die den Inhalt bearbeiten.
-Verwenden Sie, um Elemente zu löschen, die nicht als Inhalt angesehen werden, z. b. Elemente, die vom PowerShell-Zertifikat oder von Registrierungs Anbietern verwaltet werden `Clear-Item` .
+Sie können `Clear-Content` mit dem PowerShell-File System-Anbieter und mit anderen Anbietern verwenden, die den Inhalt bearbeiten. Verwenden Sie, um Elemente zu löschen, die nicht als Inhalt angesehen werden, z. b. Elemente, die vom PowerShell-Zertifikat oder von Registrierungs Anbietern verwaltet werden `Clear-Item` .
 
 Das- `Clear-Content` Cmdlet ist für die Arbeit mit den Daten konzipiert, die von beliebigen Anbietern verfügbar gemacht werden.
 Um die in Ihrer Sitzung verfügbaren Anbieter aufzulisten, geben Sie ein `Get-PsProvider` .

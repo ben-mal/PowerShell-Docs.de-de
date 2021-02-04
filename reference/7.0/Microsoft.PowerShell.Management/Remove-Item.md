@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 04/07/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Item
-ms.openlocfilehash: ddb3f8d1889887e01db8663e21cdb0323e6d4084
-ms.sourcegitcommit: de63e9481cf8024883060aae61fb02c59c2de662
+ms.openlocfilehash: 9b8d81c84a5dab8fa5f5e216c8c4eb5b5f6022b7
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "93209804"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692841"
 ---
 # Remove-Item
 
@@ -69,7 +68,7 @@ Mit diesem Befehl wird eine Datei gelöscht, die sowohl *ausgeblendet* als auch 
 Remove-Item -Path C:\Test\hidden-RO-file.txt -Force
 ```
 
-Er verwendet den **path** -Parameter, um die Datei anzugeben. Er verwendet den **Force** -Parameter, um ihn zu löschen. Ohne " **Force** " können Sie keine Schreib _geschützten oder_ _ausgeblendeten_ Dateien löschen.
+Er verwendet den **path** -Parameter, um die Datei anzugeben. Er verwendet den **Force** -Parameter, um ihn zu löschen. Ohne " **Force**" können Sie keine Schreib _geschützten oder_ _ausgeblendeten_ Dateien löschen.
 
 ### Beispiel 4: rekursiver Löschen von Dateien in Unterordnern
 
@@ -85,7 +84,7 @@ Im `Get-ChildItem` Befehl hat **path** den Wert ( `*` ), der den Inhalt des aktu
 
 ### Beispiel 5: rekursiver Löschen von unter Schlüsseln
 
-Mit diesem Befehl werden der Registrierungsschlüssel "oldapp" und alle zugehörigen Unterschlüssel und Werte gelöscht. Verwendet `Remove-Item` , um den Schlüssel zu entfernen. Der Pfad ist angegeben, der optionale Parameter Name ( **path** ) wird jedoch ausgelassen.
+Mit diesem Befehl werden der Registrierungsschlüssel "oldapp" und alle zugehörigen Unterschlüssel und Werte gelöscht. Verwendet `Remove-Item` , um den Schlüssel zu entfernen. Der Pfad ist angegeben, der optionale Parameter Name (**path**) wird jedoch ausgelassen.
 
 Der **recurse** -Parameter löscht den gesamten Inhalt des "oldapp"-Schlüssels rekursiv. Wenn der Schlüssel Unterschlüssel enthält und Sie den **recurse** -Parameter weglassen, werden Sie aufgefordert, zu bestätigen, dass Sie den Inhalt des Schlüssels löschen möchten.
 
@@ -174,7 +173,7 @@ At line:1 char:1
 
 ```
 
-Der **Stream** -Parameter ruft `Get-Item` den " **Zone. Identifier** "-Stream der `Copy-Script.ps1` Datei ab. `Remove-Item` verwendet den **Stream** -Parameter, um den " **Zone. Identifier** "-Stream der Datei zu entfernen. Zum Schluss `Get-Item` zeigt das Cmdlet, dass der Datenstrom " **Zone. Identifier** " gelöscht wurde.
+Der **Stream** -Parameter ruft `Get-Item` den `Zone.Identifier` Datenstrom der `Copy-Script.ps1` Datei ab. `Remove-Item` verwendet den **Stream** -Parameter, um den `Zone.Identifier` Datenstrom der Datei zu entfernen. Zum Schluss `Get-Item` zeigt das Cmdlet, dass der `Zone.Identifier` Stream gelöscht wurde.
 
 ## PARAMETERS
 
@@ -198,7 +197,7 @@ Accept wildcard characters: False
 
 ### -Ausschließen
 
-Gibt als Zeichen folgen Array ein Element oder Elemente an, die von diesem Cmdlet im Vorgang ausgeschlossen werden. Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` . b.. Platzhalterzeichen sind zulässig. Der **Exclude** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
+Gibt als Zeichen folgen Array ein Element oder Elemente an, die von diesem Cmdlet im Vorgang ausgeschlossen werden. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` . b.. Platzhalterzeichen sind zulässig. Der **Exclude** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
 
 ```yaml
 Type: System.String[]
@@ -214,8 +213,7 @@ Accept wildcard characters: True
 
 ### -Filter
 
-Gibt einen Filter zum Qualifizieren des **path** -Parameters an. Der [File System](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) -Anbieter ist der einzige installierte PowerShell-Anbieter, der die Verwendung von Filtern unterstützt. Die Syntax für die Filter Sprache des **Dateisystems** finden Sie in [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md).
-Filter sind effizienter als andere Parameter, da Sie vom Anbieter angewendet werden, wenn das Cmdlet die Objekte abruft, statt dass PowerShell die Objekte nach dem Abrufen filtert.
+Gibt einen Filter zum Qualifizieren des **path** -Parameters an. Der [File System](../Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md) -Anbieter ist der einzige installierte PowerShell-Anbieter, der die Verwendung von Filtern unterstützt. Die Syntax für die Filter Sprache des **Dateisystems** finden Sie in [about_Wildcards](../Microsoft.PowerShell.Core/About/about_Wildcards.md). Filter sind effizienter als andere Parameter, da Sie vom Anbieter angewendet werden, wenn das Cmdlet die Objekte abruft, statt dass PowerShell die Objekte nach dem Abrufen filtert.
 
 ```yaml
 Type: System.String
@@ -248,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Include
 
-Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
+Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
 
 ```yaml
 Type: System.String[]
@@ -317,10 +315,14 @@ Accept wildcard characters: False
 
 ### -Stream
 
+> [!NOTE]
+> Dieser Parameter ist nur unter Windows verfügbar.
+
 Der **Stream** -Parameter ist ein dynamischer Parameter, den der File System-Anbieter hinzufügt `Remove-Item` .
 Dieser Parameter funktioniert nur in Dateisystemlaufwerken.
 
-Sie können verwenden `Remove-Item` , um einen alternativen Datenstrom zu löschen. Es ist jedoch nicht die empfohlene Methode, Sicherheitsüberprüfungen zu deaktivieren, die Dateien blockieren, die aus dem Internet heruntergeladen werden. Wenn Sie überprüfen, ob eine heruntergeladene Datei sicher ist, verwenden Sie das- `Unblock-File` Cmdlet.
+Sie können verwenden, `Remove-Item` um einen alternativen Datenstrom zu löschen, z `Zone.Identifier` . b..
+Es ist jedoch nicht die empfohlene Methode, Sicherheitsüberprüfungen zu deaktivieren, die Dateien blockieren, die aus dem Internet heruntergeladen werden. Wenn Sie überprüfen, ob eine heruntergeladene Datei sicher ist, verwenden Sie das- `Unblock-File` Cmdlet.
 
 Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
@@ -373,7 +375,8 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` . Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## EINGABEN
 

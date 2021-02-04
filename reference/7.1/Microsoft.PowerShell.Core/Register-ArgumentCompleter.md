@@ -7,12 +7,12 @@ ms.date: 5/20/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/register-argumentcompleter?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-ArgumentCompleter
-ms.openlocfilehash: 6ada7bd821632054649c3ccf377fea844d2ae0c8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5dc681e39a6d4991c4137d106879df8778d3c1fe
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217031"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490634"
 ---
 # Register-ArgumentCompleter
 
@@ -61,7 +61,7 @@ Register-ArgumentCompleter -CommandName Set-TimeZone -ParameterName Id -ScriptBl
 
 Mit dem ersten Befehl wird ein Skriptblock erstellt, der die erforderlichen Parameter annimmt, die beim Drücken der <kbd>Tab</kbd>-Taste durch den Benutzer übermittelt werden. Weitere Informationen finden Sie in der Beschreibung des **ScriptBlock** -Parameters.
 
-Innerhalb des Skript Blocks werden die verfügbaren Werte für die **ID** mithilfe des- `Get-TimeZone` Cmdlets abgerufen. Die **ID** -Eigenschaft für jede Zeitzone wird an das `Where-Object` Cmdlet weitergeleitet. Mit dem- `Where-Object` Cmdlet werden alle IDs herausgefiltert, die nicht mit dem von bereitgestellten Wert beginnen `$wordToComplete` . dieser stellt den Text dar, den der Benutzer vor dem Drücken der <kbd>Registerkarte</kbd>eingegeben hat. Die gefilterten IDs werden an das `For-EachObject` Cmdlet weitergeleitet, das die einzelnen Werte in Anführungszeichen einschließt, wenn der Wert Leerzeichen enthält.
+Innerhalb des Skript Blocks werden die verfügbaren Werte für die **ID** mithilfe des- `Get-TimeZone` Cmdlets abgerufen. Die **ID** -Eigenschaft für jede Zeitzone wird an das `Where-Object` Cmdlet weitergeleitet. Mit dem- `Where-Object` Cmdlet werden alle IDs herausgefiltert, die nicht mit dem von bereitgestellten Wert beginnen `$wordToComplete` . dieser stellt den Text dar, den der Benutzer vor dem Drücken der <kbd>Registerkarte</kbd>eingegeben hat. Die gefilterten IDs werden an das `ForEach-Object` Cmdlet weitergeleitet, das die einzelnen Werte in Anführungszeichen einschließt, wenn der Wert Leerzeichen enthält.
 
 Mit dem zweiten Befehl wird das Argument Vervollständigung registriert, indem der ScriptBlock, die **Parameter Name** - **ID** und der **CommandName** übergeben werden `Set-TimeZone` .
 
@@ -91,7 +91,7 @@ Mit dem **completionresult** -Objekt können Sie für jeden zurückgegebenen Wer
 
 - **completiontext** (Zeichenfolge): der Text, der als Ergebnis der automatischen Vervollständigung verwendet werden soll. Dies ist der Wert, der an den Befehl gesendet wird.
 - **listitemtext** (Zeichenfolge): der Text, der in einer Liste angezeigt werden soll, z. b. wenn der Benutzer <kbd>STRG</kbd>- + <kbd>Taste</kbd>drückt. Diese Option wird nur zur Anzeige verwendet und nicht an den Befehl übermittelt, wenn Sie ausgewählt ist.
-- **ResultType** ( [completionresulttype](/dotnet/api/system.management.automation.completionresulttype)): der Typ des Vervollständigungs Ergebnisses.
+- **ResultType** ([completionresulttype](/dotnet/api/system.management.automation.completionresulttype)): der Typ des Vervollständigungs Ergebnisses.
 - **ToolTip** (Zeichenfolge): der Text für die QuickInfo mit Details, die für das Objekt angezeigt werden sollen.
   Dies ist sichtbar, wenn der Benutzer nach Drücken von <kbd>STRG</kbd> + <kbd>LEERTASTE</kbd>ein Element auswählt.
 

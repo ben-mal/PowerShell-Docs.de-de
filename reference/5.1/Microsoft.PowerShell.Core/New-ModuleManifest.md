@@ -7,12 +7,12 @@ ms.date: 04/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-modulemanifest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ModuleManifest
-ms.openlocfilehash: 50a3d85b3d598653a03bc6bf8e82c249bba42759
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: ea0ebc0f742a9d815fbd76ea62e97fd92c4f9da8
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211972"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879285"
 ---
 # New-ModuleManifest
 
@@ -46,8 +46,8 @@ Modulautoren können dieses Cmdlet verwenden, um ein Manifest für ihr Modul zu 
 
 `New-ModuleManifest` erstellt ein Manifest, das alle häufig verwendeten Manifestressourcen enthält, sodass Sie die Standardausgabe als Manifest-Vorlage verwenden können. Um Werte hinzuzufügen oder zu ändern oder Modulschlüssel hinzuzufügen, die von diesem Cmdlet nicht hinzugefügt werden, öffnen Sie die resultierende Datei in einem Text-Editor.
 
-Jeder Parameter, mit Ausnahme von **path** und **passthru** , erstellt einen Modul Manifest-Schlüssel und seinen Wert.
-In einem Modulmanifest ist nur der **ModuleVersion** -Schlüssel erforderlich. Wenn Sie nicht in der Parameter Beschreibung angegeben sind, erstellt, wenn Sie einen Parameter aus dem Befehl weglassen, `New-ModuleManifest` eine Kommentar Zeichenfolge für den zugeordneten Wert, der keine Auswirkung hat.
+Jeder Parameter, mit Ausnahme von **path** und **passthru**, erstellt einen Modul Manifest-Schlüssel und seinen Wert.
+In einem Modulmanifest ist nur der **ModuleVersion**-Schlüssel erforderlich. Wenn Sie nicht in der Parameter Beschreibung angegeben sind, erstellt, wenn Sie einen Parameter aus dem Befehl weglassen, `New-ModuleManifest` eine Kommentar Zeichenfolge für den zugeordneten Wert, der keine Auswirkung hat.
 
 In PowerShell 2,0 werden `New-ModuleManifest` Sie zusätzlich zu den erforderlichen Parameterwerten aufgefordert, die Werte der häufig verwendeten Parameter anzugeben, die nicht im Befehl angegeben sind. Ab PowerShell 3,0 werden `New-ModuleManifest` nur dann aufgefordert, wenn erforderliche Parameterwerte angegeben werden.
 
@@ -193,7 +193,7 @@ PrivateData = @{
 
 ### Beispiel 2: Erstellen eines neuen Manifests mit einigen vorab aufgefüllten Einstellungen
 
-Dieses Beispiel erstellt ein neues Modul Manifest. Er verwendet die Parameter **PowerShellVersion** und **AliasesToExport** , um Werte zu den entsprechenden Manifest-Schlüsseln hinzuzufügen.
+Dieses Beispiel erstellt ein neues Modul Manifest. Er verwendet die Parameter **PowerShellVersion** und **AliasesToExport**, um Werte zu den entsprechenden Manifest-Schlüsseln hinzuzufügen.
 
 ```powershell
 New-ModuleManifest -PowerShellVersion 1.0 -AliasesToExport JKBC, DRC, TAC -Path C:\ps-test\ManifestTest.psd1
@@ -215,11 +215,11 @@ $moduleSettings = @{
 New-ModuleManifest @moduleSettings
 ```
 
-In diesem Beispiel wird gezeigt, wie die Zeichen folgen-und Hash Tabellen Formate des **modulelist** -, Requirements **dmodules** -und **netstedmodules** -Parameters verwendet werden. Sie können Zeichenfolgen und Hashtabellen in demselben Parameterwert kombinieren.
+In diesem Beispiel wird gezeigt, wie die Zeichen folgen-und Hash Tabellen Formate des **modulelist**-, Requirements **dmodules**-und **netstedmodules** -Parameters verwendet werden. Sie können Zeichenfolgen und Hashtabellen in demselben Parameterwert kombinieren.
 
 ### Beispiel 4: Erstellen eines Manifests, das aktualisierbare Hilfe unterstützt
 
-In diesem Beispiel wird der **helpinfouri** -Parameter verwendet, um im Modul Manifest einen **helpinfouri** -Schlüssel zu erstellen. Der Wert des-Parameters und der Schlüssel müssen mit " **http** " oder " **https** " beginnen. Dieser Wert zeigt dem „Aktualisierbare Hilfe“-System, wo die HelpInfo-XML-Informationsdatei für das Modul zu finden ist.
+In diesem Beispiel wird der **helpinfouri** -Parameter verwendet, um im Modul Manifest einen **helpinfouri** -Schlüssel zu erstellen. Der Wert des-Parameters und der Schlüssel müssen mit " **http** " oder " **https**" beginnen. Dieser Wert zeigt dem „Aktualisierbare Hilfe“-System, wo die HelpInfo-XML-Informationsdatei für das Modul zu finden ist.
 
 ```powershell
 $moduleSettings = @{
@@ -616,7 +616,7 @@ Accept wildcard characters: False
 
 Listet alle Module auf, die in diesem Modul enthalten sind.
 
-Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID** -Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
+Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID**-Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
 
 Dieser Schlüssel ist als Modulinventar konzipiert. Die Module, die im Wert dieses Schlüssels aufgeführt sind, werden nicht automatisch verarbeitet.
 
@@ -654,14 +654,14 @@ Accept wildcard characters: False
 
 Gibt Skript Module ( `.psm1` ) und binäre Module ( `.dll` ) an, die in den Sitzungs Status des Moduls importiert werden. Die Dateien im Schlüssel " **netstedmodules** " werden in der Reihenfolge ausgeführt, in der Sie im Wert aufgelistet sind.
 
-Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID** -Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
+Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID**-Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
 
 Geschachtelte Module enthalten i. d. R. Befehle, die das Stammmodul für die interne Verarbeitung benötigt.
 Standardmäßig werden die Befehle in den in der Liste eingefügten Modulen aus dem Sitzungs Status des Moduls in den Sitzungs Status des Aufrufers exportiert, das Stamm Modul kann jedoch die Befehle einschränken, die exportiert werden. Beispielsweise mithilfe eines- `Export-ModuleMember` Befehls.
 
 Im Modul Sitzungszustand sind die in der Modul Sitzung vorhandenen Module verfügbar, werden aber nicht von einem `Get-Module` Befehl im Sitzungszustand des Aufrufers zurückgegeben.
 
-Skripts ( `.ps1` ), die im Schlüssel " **netstedmodules** " aufgeführt sind, werden im Sitzungs Status des Moduls ausgeführt, nicht im Sitzungszustand des Aufrufers. Zum Ausführen eines Skripts im Sitzungsstatus des Aufrufers führen Sie den Namen der Skriptdatei im Wert des **ScriptsToProcess** -Schlüssels im Manifest auf.
+Skripts ( `.ps1` ), die im Schlüssel " **netstedmodules** " aufgeführt sind, werden im Sitzungs Status des Moduls ausgeführt, nicht im Sitzungszustand des Aufrufers. Zum Ausführen eines Skripts im Sitzungsstatus des Aufrufers führen Sie den Namen der Skriptdatei im Wert des **ScriptsToProcess**-Schlüssels im Manifest auf.
 
 ```yaml
 Type: System.Object[]
@@ -700,7 +700,7 @@ Wenn Sie den Pfad zu einer vorhandenen Datei angeben, wird `New-ModuleManifest` 
 Das Manifest sollte sich im Verzeichnis des Moduls befinden, und der Name der Manifest-Datei muss mit dem Namen des Modul Verzeichnisses übereinstimmen, aber mit einer `.psd1` Dateinamenerweiterung.
 
 > [!NOTE]
-> Sie können keine Variablen (z. b. oder) als `$PSHOME` `$HOME` Antwort auf eine Eingabeaufforderung für einen **path** -Parameter verwenden. Um eine Variable zu verwenden, schließen Sie den **Path** -Parameter in den Befehl ein.
+> Sie können keine Variablen (z. b. oder) als `$PSHOME` `$HOME` Antwort auf eine Eingabeaufforderung für einen **path** -Parameter verwenden. Um eine Variable zu verwenden, schließen Sie den **Path**-Parameter in den Befehl ein.
 
 ```yaml
 Type: System.String
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 
 ### -Powershellhostname
 
-Gibt den Namen des PowerShell-Host Programms an, das für das Modul erforderlich ist. Geben Sie den Namen des Host Programms ein, z. b. **Windows PowerShell ISE Host** oder **ConsoleHost** . Platzhalter sind nicht zulässig.
+Gibt den Namen des PowerShell-Host Programms an, das für das Modul erforderlich ist. Geben Sie den Namen des Host Programms ein, z. b. **Windows PowerShell ISE Host** oder **ConsoleHost**. Platzhalter sind nicht zulässig.
 
 Um den Namen eines Host Programms zu suchen, geben Sie im Programm ein `$Host.Name` .
 
@@ -750,7 +750,7 @@ Accept wildcard characters: False
 
 ### -PowerShellVersion
 
-Gibt die Mindestversion von PowerShell an, die mit diesem Modul funktioniert. Sie können z. b. 1,0, 2,0 oder 3,0 als Wert des Parameters eingeben.
+Gibt die Mindestversion von PowerShell an, die mit diesem Modul funktioniert. Sie können z. b. 1,0, 2,0 oder 3,0 als Wert des Parameters eingeben. Er muss ein x. x-Format aufweisen. Wenn Sie z. b. übermitteln `5` , löst PowerShell einen Fehler aus.
 
 ```yaml
 Type: System.Version
@@ -834,7 +834,7 @@ Accept wildcard characters: False
 Gibt die Assemblydateien ( `.dll` ) an, die das Modul erfordert. Geben Sie die Namen der Assemblydateien ein.
 PowerShell lädt die angegebenen Assemblys vor dem Aktualisieren von Typen oder Formaten, dem Importieren von geschbten Modulen oder dem Importieren der Modul Datei, die im Wert des **rootmodule** -Schlüssels angegeben ist.
 
-Verwenden Sie diesen Parameter, um alle Assemblys aufzulisten, die das Modul erfordert. Dazu gehören auch Assemblys, die geladen werden müssen, um alle Formatierungs- oder Typdateien zu aktualisieren, die in den **FormatsToProcess** - oder **TypesToProcess** -Schlüsseln aufgeführt sind, auch wenn diese Assemblys auch als binäre Module in den **NestedModules** -Schlüsseln aufgeführt sind.
+Verwenden Sie diesen Parameter, um alle Assemblys aufzulisten, die das Modul erfordert. Dazu gehören auch Assemblys, die geladen werden müssen, um alle Formatierungs- oder Typdateien zu aktualisieren, die in den **FormatsToProcess**- oder **TypesToProcess**-Schlüsseln aufgeführt sind, auch wenn diese Assemblys auch als binäre Module in den **NestedModules**-Schlüsseln aufgeführt sind.
 
 ```yaml
 Type: System.String[]
@@ -852,7 +852,7 @@ Accept wildcard characters: False
 
 Gibt die Module an, die im globalen Sitzungsstatus enthalten sein müssen. Wenn sich die erforderlichen Module nicht im globalen Sitzungs Status befinden, importiert PowerShell Sie. Wenn die erforderlichen Module nicht verfügbar sind, `Import-Module` schlägt der Befehl fehl.
 
-Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID** -Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
+Geben Sie jeden Modulnamen als Zeichenfolge oder Hashtabelle mit den Schlüsseln **ModuleName** und **ModuleVersion** ein. Die Hashtabelle kann auch einen optionalen **GUID**-Schlüssel haben. Sie können Zeichenfolgen und Hashtabellen im Parameterwert kombinieren.
 
 In PowerShell 2,0 `Import-Module` importiert erforderliche Module nicht automatisch. Es überprüft nur, ob sich die erforderlichen Module im globalen Sitzungsstatus befinden.
 
@@ -873,7 +873,7 @@ Accept wildcard characters: False
 Gibt Skript `.ps1` Dateien () an, die im Sitzungszustand des Aufrufers ausgeführt werden, wenn das Modul importiert wird.
 Sie können diese Skripte zur Vorbereitung einer Umgebung verwenden, wie Sie ein Anmeldeskript verwenden würden.
 
-Um Skripte anzugeben, die im Sitzungsstatus des Moduls ausgeführt werden, verwenden Sie den **NestedModules** -Schlüssel.
+Um Skripte anzugeben, die im Sitzungsstatus des Moduls ausgeführt werden, verwenden Sie den **NestedModules**-Schlüssel.
 
 ```yaml
 Type: System.String[]
@@ -971,7 +971,7 @@ Wenn ein Modul über eine Manifest-Datei verfügt und im **rootmodule** -Schlüs
 Zum Exportieren von Membern aus- `.psm1` oder- `.dll` Dateien in einem Modul mit einem Manifest müssen die Namen dieser Dateien in den Werten der **rootmodule** -oder **netstedmodules** -Schlüssel im Manifest angegeben werden. Andernfalls werden die Member nicht exportiert.
 
 > [!NOTE]
-> In PowerShell 2,0 hieß dieser Schlüssel " **moduletoprocess** ". Sie können den Parameternamen " **rootmodule** " oder den Alias " **moduletoprocess** " verwenden.
+> In PowerShell 2,0 hieß dieser Schlüssel " **moduletoprocess**". Sie können den Parameternamen " **rootmodule** " oder den Alias " **moduletoprocess** " verwenden.
 
 ```yaml
 Type: System.String

@@ -1,17 +1,16 @@
 ---
 description: Verhindert, dass ein Skript ohne die erforderlichen Elemente ausgeführt wird.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 07/01/2019
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_requires?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Requires
-ms.openlocfilehash: d499499c58f22bff10d712d33fc3a021e4fa6bbb
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: f8ff922fcf8deb710008bbd9bab619f137d6c831
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222580"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490702"
 ---
 # <a name="about-requires"></a>Informationen zu voraus
 
@@ -25,7 +24,6 @@ Mit der `#Requires` -Anweisung wird verhindert, dass ein Skript ausgeführt wird
 ### <a name="syntax"></a>Syntax
 
 ```
-#Requires -Assembly { <Path to .dll> | <.NET assembly specification> }
 #Requires -Version <N>[.<n>]
 #Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
 #Requires -Modules { <Module-Name> | <Hashtable> }
@@ -58,9 +56,12 @@ Möglicherweise denken Sie daran, dass der obige Code nicht ausgeführt werden s
 
 #### <a name="-assembly-assembly-path--net-assembly-specification"></a>-Assembly \<Assembly path> |\<.NET assembly specification>
 
-Gibt den Pfad zur DLL-Datei der Assembly oder einen .NET-Assemblynamen an. Der **Assembly** -Parameter wurde in PowerShell 5,0 eingeführt. Weitere Informationen zu .NET-Assemblys [Assembly names](/dotnet/standard/assembly/names)finden Sie unter Assemblynamen.
+> [!IMPORTANT]
+> Die `-Assembly` Syntax ist veraltet. Sie dient nicht zur Funktion. Die Syntax wurde in PowerShell 5,1 hinzugefügt, aber der unterstützende Code wurde nie implementiert. Die Syntax wird aus Gründen der Abwärtskompatibilität weiterhin akzeptiert.
 
-Beispiel:
+Gibt den Pfad zur DLL-Datei der Assembly oder einen .NET-Assemblynamen an. Der **Assembly** -Parameter wurde in PowerShell 5,0 eingeführt. Weitere Informationen zu .NET-Assemblys [](/dotnet/standard/assembly/names)finden Sie unter Assemblynamen.
+
+Beispiele:
 
 ```
 #Requires -Assembly path\to\foo.dll
@@ -75,7 +76,7 @@ Beispiel:
 
 Gibt die mindestens erforderliche Version von PowerShell an, die für das Skript erforderlich ist. Geben Sie eine Hauptversionsnummer und optional eine neben Versionsnummer ein.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 #Requires -Version 5.1
@@ -85,7 +86,7 @@ Beispiel:
 
 Gibt ein PowerShell-Snap-in an, das für das Skript erforderlich ist. Geben Sie den Snap-in-Namen und eine optionale Versionsnummer ein.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 #Requires -PSSnapin DiskSnapin -Version 1.2
@@ -111,7 +112,7 @@ Geben Sie für jedes Modul den Modulnamen ( \<String\> ) oder eine Hash Tabelle 
 > `RequiredVersion` wurde in Windows PowerShell 5,0 hinzugefügt.
 > `MaximumVersion` wurde in Windows PowerShell 5,1 hinzugefügt.
 
-Beispiel:
+Beispiele:
 
 Erfordert, dass `Hyper-V` (Version `1.1` oder höher) installiert ist.
 
@@ -119,7 +120,7 @@ Erfordert, dass `Hyper-V` (Version `1.1` oder höher) installiert ist.
 #Requires -Modules @{ ModuleName="Hyper-V"; ModuleVersion="1.1" }
 ```
 
-Erfordert, dass `Hyper-V` ( **nur** Version `1.1` ) installiert ist.
+Erfordert, dass `Hyper-V` (**nur** Version `1.1` ) installiert ist.
 
 ```powershell
 #Requires -Modules @{ ModuleName="Hyper-V"; RequiredVersion="1.1" }
@@ -159,7 +160,7 @@ Das folgende Beispiel schlägt fehl, da **2.0.0** nicht exakt mit **2.0.0.0** ü
 
 Gibt eine PowerShell-Edition an, die für das Skript erforderlich ist. Gültige Werte sind **Core** für PowerShell Core und **Desktop** für Windows PowerShell.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 #Requires -PSEdition Core
@@ -170,7 +171,7 @@ Beispiel:
 Gibt die Shell an, die für das Skript erforderlich ist. Geben Sie die Shell-ID ein. Wenn Sie den **shellid-** Parameter verwenden, müssen Sie auch den **PSSnapIn** -Parameter einschließen.
 Sie können die aktuelle **shellid** ermitteln, indem Sie die `$ShellId` Automatische Variable Abfragen.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 #Requires -ShellId MyLocalShell -PSSnapin Microsoft.PowerShell.Core
@@ -205,7 +206,7 @@ Param
 ...
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 

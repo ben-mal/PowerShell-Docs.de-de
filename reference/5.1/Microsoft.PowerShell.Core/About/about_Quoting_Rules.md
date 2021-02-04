@@ -1,36 +1,35 @@
 ---
 description: Beschreibt Regeln für die Verwendung von einfachen und doppelten Anführungszeichen in PowerShell.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 10/05/2020
+ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Quoting_Rules
-ms.openlocfilehash: 3a858039a9128235d1b920223ca0fcc3d0b0f6c0
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: b100ff8ab4be84b7117efc5724119221351ba4bf
+ms.sourcegitcommit: 9a86cac80402d8193147058d4ba50e07b26059dd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222620"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490668"
 ---
 # <a name="about-quoting-rules"></a>Informationen zu Anführungs Regeln
 
-## <a name="short-description"></a>KURZE BESCHREIBUNG
+## <a name="short-description"></a>Kurze Beschreibung
 Beschreibt Regeln für die Verwendung von einfachen und doppelten Anführungszeichen in PowerShell.
 
-## <a name="long-description"></a>LANGE BESCHREIBUNG
+## <a name="long-description"></a>Lange Beschreibung
 
 Anführungszeichen werden verwendet, um eine Literalzeichenfolge anzugeben. Sie können eine Zeichenfolge in einfache Anführungszeichen ( `'` ) oder in doppelte Anführungszeichen ( `"` ) einschließen.
 
-Anführungszeichen werden auch verwendet, um eine here-Zeichenfolge zu erstellen. Eine here-Zeichenfolge ist eine Zeichenfolge in einfachen Anführungszeichen oder in doppelten Anführungszeichen, in der Anführungszeichen buchstäblich interpretiert werden. Eine here-Zeichenfolge kann sich über mehrere Zeilen erstrecken. Alle Zeilen in einer here-Zeichenfolge werden als Zeichen folgen interpretiert, auch wenn Sie nicht in Anführungszeichen eingeschlossen sind.
+Anführungszeichen werden auch verwendet, um eine _here-Zeichenfolge_ zu erstellen. Eine here-Zeichenfolge ist eine Zeichenfolge in einfachen Anführungszeichen oder in doppelten Anführungszeichen, in der Anführungszeichen buchstäblich interpretiert werden. Eine here-Zeichenfolge kann sich über mehrere Zeilen erstrecken. Alle Zeilen in einer here-Zeichenfolge werden als Zeichen folgen interpretiert, auch wenn Sie nicht in Anführungszeichen eingeschlossen sind.
 
 In Befehlen auf Remote Computern definieren Anführungszeichen die Teile des Befehls, die auf dem Remote Computer ausgeführt werden. In einer Remote Sitzung bestimmen Anführungszeichen auch, ob die Variablen in einem Befehl zuerst auf dem lokalen Computer oder auf dem Remote Computer interpretiert werden.
 
-### <a name="single-and-double-quoted-strings"></a>Zeichen folgen mit einzelfacher und doppelter Anführungszeichen
+## <a name="single-and-double-quoted-strings"></a>Zeichen folgen mit einzelfacher und doppelter Anführungszeichen
 
-Wenn Sie eine Zeichenfolge in doppelte Anführungszeichen (eine Zeichenfolge mit doppelten Anführungszeichen) einschließen, werden Variablennamen, denen ein Dollarzeichen () vorangestellt ist, durch `$` den Wert der Variablen ersetzt, bevor die Zeichenfolge zur Verarbeitung an den Befehl übermittelt wird.
+Eine Zeichenfolge, die in doppelte Anführungszeichen eingeschlossen ist, ist eine _erweiterbare_ Zeichenfolge. Variablennamen, denen ein Dollarzeichen ( `$` ) vorangestellt ist, werden durch den Wert der Variablen ersetzt, bevor die Zeichenfolge zur Verarbeitung an den Befehl übermittelt wird.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 $i = 5
@@ -43,7 +42,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 The value of 5 is 5.
 ```
 
-Außerdem werden Ausdrücke in einer Zeichenfolge mit doppelten Anführungszeichen ausgewertet, und das Ergebnis wird in die Zeichenfolge eingefügt. Beispiel:
+Außerdem werden Ausdrücke in einer Zeichenfolge mit doppelten Anführungszeichen ausgewertet, und das Ergebnis wird in die Zeichenfolge eingefügt. Beispiele:
 
 ```powershell
 "The value of $(2+3) is 5."
@@ -55,7 +54,8 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 The value of 5 is 5.
 ```
 
-Wenn Sie eine Zeichenfolge in einfache Anführungszeichen einschließen (in einer Zeichenfolge mit nur einem Anführungszeichen), wird die Zeichenfolge genau wie bei der Eingabe an den Befehl übermittelt. Es wird keine Ersetzung durchgeführt. Beispiel:
+Eine Zeichenfolge, die in einfache Anführungszeichen eingeschlossen ist, ist eine _wörtliche_ Zeichenfolge. Die Zeichenfolge wird genau wie bei der Eingabe an den Befehl übermittelt. Es wird keine Ersetzung durchgeführt.
+Beispiele:
 
 ```powershell
 $i = 5
@@ -68,7 +68,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 The value $i is $i.
 ```
 
-Ebenso werden Ausdrücke in Zeichen folgen in einfachen Anführungszeichen nicht ausgewertet. Sie werden als Literale interpretiert. Beispiel:
+Ebenso werden Ausdrücke in Zeichen folgen in einfachen Anführungszeichen nicht ausgewertet. Sie werden als Literale interpretiert. Beispiele:
 
 ```powershell
 'The value of $(2+3) is 5.'
@@ -82,8 +82,8 @@ The value of $(2+3) is 5.
 
 Um die Ersetzung eines Variablen Werts in einer Zeichenfolge mit doppelten Anführungszeichen zu verhindern, verwenden Sie das Graviszeichen-Zeichen ( `` ` `` ) (ASCII 96), das das PowerShell-Escapezeichen ist.
 
-Im folgenden Beispiel verhindert das Graviszeichen-Zeichen, das der ersten $i Variablen vorangestellt ist, dass PowerShell den Variablennamen durch den Wert ersetzt.
-Beispiel:
+Im folgenden Beispiel verhindert das Graviszeichen-Zeichen, das der ersten Variablen vorangestellt ist, dass `$i` PowerShell den Variablennamen durch den Wert ersetzt.
+Beispiele:
 
 ```powershell
 $i = 5
@@ -96,7 +96,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 The value $i is 5.
 ```
 
-Damit doppelte Anführungszeichen in einer Zeichenfolge angezeigt werden, müssen Sie die gesamte Zeichenfolge in einfache Anführungszeichen einschließen. Beispiel:
+Damit doppelte Anführungszeichen in einer Zeichenfolge angezeigt werden, müssen Sie die gesamte Zeichenfolge in einfache Anführungszeichen einschließen. Beispiele:
 
 ```powershell
 'As they say, "live and learn."'
@@ -108,7 +108,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 As they say, "live and learn."
 ```
 
-Sie können auch eine Zeichenfolge in einer Zeichenfolge mit doppelten Anführungszeichen in eine Zeichenfolge mit doppelten Anführungszeichen einschließen. Beispiel:
+Sie können auch eine Zeichenfolge in einer Zeichenfolge mit doppelten Anführungszeichen in eine Zeichenfolge mit doppelten Anführungszeichen einschließen. Beispiele:
 
 ```powershell
 "As they say, 'live and learn.'"
@@ -120,7 +120,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 As they say, 'live and learn.'
 ```
 
-Oder doppelte Anführungszeichen um einen Ausdruck mit doppelten Anführungszeichen. Beispiel:
+Oder doppelte Anführungszeichen um einen Ausdruck mit doppelten Anführungszeichen. Beispiele:
 
 ```powershell
 "As they say, ""live and learn."""
@@ -132,7 +132,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 As they say, "live and learn."
 ```
 
-Wenn Sie ein einzelnes Anführungszeichen in eine Zeichenfolge mit nur einem Anführungszeichen einschließen möchten, verwenden Sie ein zweites aufeinander folgende einfache Anführungszeichen. Beispiel:
+Wenn Sie ein einzelnes Anführungszeichen in eine Zeichenfolge mit nur einem Anführungszeichen einschließen möchten, verwenden Sie ein zweites aufeinander folgende einfache Anführungszeichen. Beispiele:
 
 ```powershell
 'don''t'
@@ -144,7 +144,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 don't
 ```
 
-Um zu erzwingen, dass PowerShell ein doppeltes Anführungszeichen wörtlich interpretiert, verwenden Sie ein Graviszeichen-Zeichen. Dadurch wird verhindert, dass PowerShell das Anführungszeichen als Zeichen folgen Trennzeichen interpretiert. Beispiel:
+Um zu erzwingen, dass PowerShell ein doppeltes Anführungszeichen wörtlich interpretiert, verwenden Sie ein Graviszeichen-Zeichen. Dadurch wird verhindert, dass PowerShell das Anführungszeichen als Zeichen folgen Trennzeichen interpretiert. Beispiele:
 
 ```powershell
 PS> "Use a quotation mark (`") to begin a string."
@@ -155,7 +155,7 @@ Use a quotation mark (`") to begin a string.
 
 Da der Inhalt von Zeichen folgen in einfachen Anführungszeichen wörtlich interpretiert wird, wird das Graviszeichen-Zeichen als Literalzeichen behandelt und in der Ausgabe angezeigt.
 
-### <a name="here-strings"></a>Here-Zeichen folgen
+## <a name="here-strings"></a>Here-Zeichen folgen
 
 Die Anführungszeichen Regeln für here-Zeichen folgen unterscheiden sich geringfügig.
 
@@ -189,7 +189,7 @@ Einfache Anführungszeichen:
 
 In beiden Formaten muss das schließende Anführungszeichen das erste Zeichen in der Zeile sein.
 
-Eine here-Zeichenfolge enthält den gesamten Text zwischen den beiden ausgeblendeten Zeichen. In der here-Zeichenfolge werden alle Anführungszeichen buchstäblich interpretiert. Beispiel:
+Eine here-Zeichenfolge enthält den gesamten Text zwischen den beiden ausgeblendeten Zeichen. In der here-Zeichenfolge werden alle Anführungszeichen buchstäblich interpretiert. Beispiele:
 
 ```powershell
 @"
@@ -203,7 +203,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 For help, type "get-help"
 ```
 
-Die Verwendung einer here-Zeichenfolge kann die Verwendung einer Zeichenfolge in einem Befehl vereinfachen. Beispiel:
+Die Verwendung einer here-Zeichenfolge kann die Verwendung einer Zeichenfolge in einem Befehl vereinfachen. Beispiele:
 
 ```powershell
 @"
@@ -217,7 +217,7 @@ Die Ausgabe dieses Befehls lautet wie folgt:
 Use a quotation mark (') to begin a string.
 ```
 
-In in einfachen Anführungszeichen eingeschlossenen Zeichen folgen werden Variablen buchstäblich interpretiert und exakt reproduziert. Beispiel:
+In in einfachen Anführungszeichen eingeschlossenen Zeichen folgen werden Variablen buchstäblich interpretiert und exakt reproduziert. Beispiele:
 
 ```powershell
 @'
@@ -233,7 +233,7 @@ The $profile variable contains the path
 of your PowerShell profile.
 ```
 
-In doppelten Anführungszeichen werden Zeichen folgen, Variablen durch ihre Werte ersetzt. Beispiel:
+In doppelten Anführungszeichen werden Zeichen folgen, Variablen durch ihre Werte ersetzt. Beispiele:
 
 ```powershell
 @"
@@ -277,7 +277,7 @@ xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
 Here-Zeichen folgen sind auch ein nützliches Format für Eingaben in das `ConvertFrom-StringData` Cmdlet, das hier Zeichen folgen in Hash Tabellen konvertiert.
 Weitere Informationen finden Sie unter `ConvertFrom-StringData`.
 
-## <a name="see-also"></a>SIEHE AUCH
+## <a name="see-also"></a>Siehe auch
 
 [about_Special_Characters](about_Special_Characters.md)
 

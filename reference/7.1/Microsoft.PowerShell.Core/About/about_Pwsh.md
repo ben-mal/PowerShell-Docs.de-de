@@ -1,16 +1,15 @@
 ---
 description: Erläutert, wie die `pwsh` Befehlszeilenschnittstelle verwendet wird. Zeigt die Befehlszeilenparameter an und beschreibt die Syntax.
-keywords: powershell,cmdlet
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: c71848e327822f7cbc659310d3fa47a5a46a37a2
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 6f6e7ea66aa04eaeea2b9da7c07864180210131c
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222924"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692993"
 ---
 # <a name="about-pwsh"></a>Informationen zu pwsh
 
@@ -73,7 +72,7 @@ Wenn Sie denselben Befehl aus einem _Batch Skript_ ausführen möchten, verwende
 
 Wenn die Skriptdatei mit einem Befehl beendet wird `exit` , wird der Prozessexitcode auf das numerische Argument festgelegt, das mit dem Befehl verwendet wird `exit` . Beim normalen beenden ist der Exitcode immer `0` .
 
-Ähnlich wie `-Command` beim Auftreten eines Fehlers mit Skript Abbruch wird der Exitcode auf festgelegt `1` . Anders als bei wird `-Command` die Ausführung mit <kbd>STRG</kbd>C unterbrochen, wenn der Exitcode - <kbd>C</kbd> ist `0` .
+Ähnlich wie `-Command` beim Auftreten eines Fehlers mit Skript Abbruch wird der Exitcode auf festgelegt `1` . Anders als bei wird `-Command` die Ausführung mit <kbd>STRG</kbd>C unterbrochen, wenn der Exitcode - <kbd></kbd> ist `0` .
 
 ### <a name="-command---c"></a>-Befehl | -c
 
@@ -99,7 +98,7 @@ Wenn der Wert von " **Command** " eine Zeichenfolge ist, muss **Command** der le
 
 Wenn Sie innerhalb einer vorhandenen PowerShell-Sitzung aufgerufen werden, werden die Ergebnisse als deserialisierte XML-Objekte und nicht als Live-Objekte an die übergeordnete Shell zurückgegeben. Bei anderen Shells werden die Ergebnisse als Zeichen folgen zurückgegeben.
 
-Wenn der Wert von **Command** ist `-` , wird der Befehls Text aus der Standardeingabe gelesen. Sie müssen die Standardeingabe umleiten, wenn Sie den **Command** -Parameter mit der Standardeingabe verwenden. Beispiel:
+Wenn der Wert von **Command** ist `-` , wird der Befehls Text aus der Standardeingabe gelesen. Sie müssen die Standardeingabe umleiten, wenn Sie den **Command** -Parameter mit der Standardeingabe verwenden. Beispiele:
 
 ```powershell
 @'
@@ -136,7 +135,7 @@ Gibt den Namen an, der für einen zusätzlichen IPC-Server (Named Pipe) verwende
 
 Dieser Parameter wurde in PowerShell 6,2 eingeführt.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 # PowerShell instance 1
@@ -147,9 +146,9 @@ Enter-PSHostProcess -CustomPipeName mydebugpipe
 
 ### <a name="-encodedcommand---e---ec"></a>-Encodecodcommand | -e | -EC
 
-Akzeptiert eine Base64-codierte Zeichen folgen Version eines Befehls. Verwenden Sie diesen Parameter, um Befehle an PowerShell zu übermitteln, die komplexe, in Anführungszeichen eingefügte Zitate Die Base64-Darstellung muss eine UTF-16-codierte Zeichenfolge sein.
+Akzeptiert eine Base64-codierte Zeichen folgen Version eines Befehls. Verwenden Sie diesen Parameter, um Befehle an PowerShell zu übermitteln, die komplexe, in Anführungszeichen eingefügte Zitate Die Base64-Darstellung muss eine UTF-16LE-codierte Zeichenfolge sein.
 
-Beispiel:
+Beispiele:
 
 ```powershell
 $command = 'dir "c:\program files" '

@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Management.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Management
-ms.date: 08/19/2020
+ms.date: 12/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Content
-ms.openlocfilehash: 0140691bc0b01fff803f0efdf81980c621e1150d
-ms.sourcegitcommit: 9a8bb1b459b5939c95e1f6d9499fcb13d01a58c4
+ms.openlocfilehash: b6a8d0f68717849711a794c9482e03d4ea081e1d
+ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "93219663"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97692653"
 ---
 # Get-Content
 
@@ -180,7 +179,7 @@ Added a stream named NewStream to Stream.txt
 ```
 
 Der **Stream** -Parameter ist ein dynamischer Parameter des [File System-Anbieters](../microsoft.powershell.core/about/about_filesystem_provider.md#stream-systemstring).
-Standardmäßig `Get-Content` werden nur Daten aus dem primären oder dem `$DATA` Stream abgerufen. **Streams** können zum Speichern ausgeblendeter Daten verwendet werden, wie z. b. Attribute, Sicherheitseinstellungen oder andere Daten.
+Standardmäßig `Get-Content` werden nur Daten aus dem Standard-oder `:$DATA` Stream abgerufen. **Streams** können zum Speichern ausgeblendeter Daten verwendet werden, wie z. b. Attribute, Sicherheitseinstellungen oder andere Daten. Sie können auch in Verzeichnissen gespeichert werden, ohne dass es sich um untergeordnete Elemente handelt.
 
 ### Beispiel 6: erhalten von Rohdaten
 
@@ -289,7 +288,7 @@ Accept wildcard characters: False
 
 Gibt die Anzahl der Zeilen vom Anfang einer Datei oder eines anderen Elements an. Der Standardwert ist %%amp;quot;-1%%amp;quot; (alle Zeilen).
 
-Sie können den **totalCount** -Parameternamen oder seine Aliase ( **First** oder **Head** ) verwenden.
+Sie können den **totalCount** -Parameternamen oder seine Aliase ( **First** oder **Head**) verwenden.
 
 ```yaml
 Type: System.Int64
@@ -338,7 +337,7 @@ Accept wildcard characters: True
 
 ### -Include
 
-Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
+Gibt als Zeichen folgen Array ein Element oder Elemente an, die dieses Cmdlet in den Vorgang einschließt. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `"*.txt"` . b.. Platzhalterzeichen sind zulässig. Der **include** -Parameter ist nur wirksam, wenn der-Befehl den Inhalt eines Elements enthält, z `C:\Windows\*` . b., wobei das Platzhalter Zeichen den Inhalt des `C:\Windows` Verzeichnisses angibt.
 
 ```yaml
 Type: System.String[]
@@ -355,7 +354,7 @@ Accept wildcard characters: True
 ### -Ausschließen
 
 Gibt als Zeichen folgen Array ein Element oder Elemente an, die von diesem Cmdlet im Vorgang ausgeschlossen werden.
-Der Wert dieses Parameters qualifiziert den **Path** -Parameter.
+Der Wert dieses Parameters qualifiziert den **Path**-Parameter.
 
 Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` . b..
 Platzhalterzeichen sind zulässig.
@@ -492,7 +491,7 @@ Verwenden Sie beim Lesen aus und Schreiben in Binärdateien den **asbytestream**
 Ab PowerShell 6,2 ermöglicht der **Encoding** -Parameter auch numerische IDs registrierter Codepages (z `-Encoding 1251` . b.) oder Zeichen folgen Namen registrierter Codepages (z `-Encoding "windows-1251"` . b.). Weitere Informationen finden Sie in der .NET-Dokumentation für [Encoding. Codepage](/dotnet/api/system.text.encoding.codepage?view=netcore-2.2).
 
 > [!NOTE]
-> **UTF-7** * wird nicht mehr zur Verwendung von empfohlen. In PowerShell 7,1 wird eine Warnung geschrieben, wenn Sie `utf7` für den **Encoding** -Parameter angeben.
+> **UTF-7** _ wird nicht mehr für die Verwendung von empfohlen. In PowerShell 7,1 wird eine Warnung geschrieben, wenn Sie `utf7` für den Parameter "_ *Encoding**" angeben.
 
 ```yaml
 Type: System.Text.Encoding
@@ -508,6 +507,9 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
+
+> [!NOTE]
+> Dieser Parameter ist nur unter Windows verfügbar.
 
 Ruft die Inhalte des angegebenen alternativen NTFS-Dateidatenstroms aus der Datei ab. Geben Sie den Namen des Stroms ein.
 Platzhalter werden nicht unterstützt.
@@ -547,7 +549,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` . Weitere Informationen findest du unter [about_CommonParameters](../Microsoft.PowerShell.Core/About/about_CommonParameters.md).
+Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## EINGABEN
 
@@ -580,4 +582,3 @@ Das- `Get-Content` Cmdlet ist für die Arbeit mit den Daten konzipiert, die von 
 [Get-PSProvider](Get-PSProvider.md)
 
 [Set-Content](Set-Content.md)
-

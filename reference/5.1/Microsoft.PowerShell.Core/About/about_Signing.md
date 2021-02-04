@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 6e4c8c3783af1fda68c6a0c067b79e8d22943c1a
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 8eada7e85b6f970a5ba4c6e1714ee598cf768706
+ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222524"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804145"
 ---
 # <a name="about-signing"></a>Informationen zum Signieren
 
@@ -104,7 +104,7 @@ Wenn Sie ein selbst signiertes Zertifikat erstellen, achten Sie darauf, dass Sie
 
 ## <a name="create-a-self-signed-certificate"></a>Erstellen eines selbstsignierten Zertifikats
 
-Verwenden Sie zum Erstellen eines selbst signierten Zertifikats in das- `New-SelfSignedCertificate` Cmdlet im PKI-Modul. Dieses Modul wird in PowerShell 3,0 eingeführt und ist in Windows 8 und Windows Server 2012 enthalten. Weitere Informationen finden Sie im Hilfethema für das `New-SelfSignedCertificate` Cmdlet.
+Um ein selbst signiertes Zertifikat zu erstellen, verwenden Sie das- `New-SelfSignedCertificate` Cmdlet im PKI-Modul. Dieses Modul wird in PowerShell 3,0 eingeführt und ist in Windows 8 und Windows Server 2012 enthalten. Weitere Informationen finden Sie im Hilfethema für das `New-SelfSignedCertificate` Cmdlet.
 
 Verwenden Sie zum Erstellen eines selbst signierten Zertifikats in früheren Versionen von Windows das Tool zur Erstellung von Zertifikaten `MakeCert.exe` . Dieses Tool ist im Microsoft .NET SDK (Version 1,1 und höher) und im Microsoft Windows SDK enthalten.
 
@@ -216,7 +216,7 @@ Die digitale Signatur in einem Skript ist gültig, bis das Signaturzertifikat ab
 
 Da die meisten Signatur Zertifikate nur ein Jahr lang gültig sind, stellt die Verwendung eines Zeitstempel Servers sicher, dass Benutzer Ihr Skript für viele Jahre verwenden können.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Execution_Policies](about_Execution_Policies.md)
 

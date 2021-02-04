@@ -6,12 +6,12 @@ ms.date: 04/23/2019
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_data_sections?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Data_Sections
-ms.openlocfilehash: d45339bae42b1131e1dfb9618413a34e250a578e
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 5f70f2cdcc96090317a604f82788d1095e0b3c4d
+ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223567"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97879302"
 ---
 # <a name="about-data-sections"></a>Informationen zu Daten Abschnitten
 
@@ -72,7 +72,7 @@ Mit dem- `-SupportedCommand` Parameter können Sie angeben, dass ein Cmdlet oder
 
 Der Wert von `-SupportedCommand` ist eine durch Trennzeichen getrennte Liste mit einem oder mehreren Cmdlet-oder Funktionsnamen.
 
-Der folgende Daten Abschnitt enthält z. b. ein vom Benutzer geschriebenes Cmdlet, `Format-XML` , das Daten in einer XML-Datei formatiert:
+Der folgende Daten Abschnitt enthält z. b. ein vom Benutzer geschriebenes Cmdlet, `Format-Xml` , das Daten in einer XML-Datei formatiert:
 
 ```powershell
 DATA -supportedCommand Format-Xml
@@ -105,7 +105,7 @@ $TextMsgs.Text001
 $TextMsgs.Text002
 ```
 
-Alternativ können Sie den Variablennamen in der Definition des Daten Abschnitts ablegen. Beispiel:
+Alternativ können Sie den Variablennamen in der Definition des Daten Abschnitts ablegen. Beispiele:
 
 ```powershell
 DATA TextMsgs {
