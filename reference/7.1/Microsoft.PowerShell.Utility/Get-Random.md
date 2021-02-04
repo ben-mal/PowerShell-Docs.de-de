@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 05/20/2020
+ms.date: 02/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-random?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Random
-ms.openlocfilehash: 644663c8871233bae84288f83492b518405d14ff
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 842d4ea92f60a92fddcddea11bb8155c708ac192
+ms.sourcegitcommit: fa1a84c81e15f1ffac962110b0b4c850c1b173a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213036"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495957"
 ---
 # Get-Random
 
@@ -45,7 +44,14 @@ Mit dem- `Get-Random` Cmdlet wird eine zufällig ausgewählte Zahl abgerufen. We
 
 Ohne Parameter oder Eingaben gibt ein `Get-Random` Befehl eine zufällig ausgewählte 32-Bit-Ganzzahl ohne Vorzeichen zwischen 0 (null) und **Int32. MaxValue** ( `0x7FFFFFFF` , `2,147,483,647` ) zurück.
 
-Mit den Parametern von können Sie `Get-Random` eine Seed-Nummer, Mindest-und Höchstwerte, die Anzahl der von einer übermittelten Auflistung zurückgegebenen Objekte und die gesamte Auflistung in zufälliger Reihenfolge angeben.
+Standardmäßig `Get-Random` generiert kryptografisch sichere Zufälligkeit mithilfe der [randomnumgenerator](/dotnet/api/system.security.cryptography.randomnumbergenerator) -Klasse.
+
+Sie können die Parameter von verwenden, `Get-Random` um die Mindest-und Höchstwerte, die Anzahl der von einer Auflistung zurückgegebenen Objekte oder eine Seed-Nummer anzugeben.
+
+> [!CAUTION]
+> Das Festlegen des Seed führt absichtlich zu einem nicht zufälligen, wiederholbaren Verhalten. Es sollte nur verwendet werden, wenn versucht wird, das Verhalten zu reproduzieren, z. b. beim Debuggen oder Analysieren eines Skripts, das `Get-Random` Befehle enthält
+>
+> Dieser Ausgangswert wird für den aktuellen Befehl und für alle nachfolgenden `Get-Random` Befehle in der aktuellen Sitzung verwendet, bis Sie **setseed** erneut verwenden oder die Sitzung schließen. Der Ausgangswert kann nicht auf seinen Standardwert zurückgesetzt werden.
 
 ## BEISPIELE
 
@@ -150,7 +156,7 @@ yellow
 
 ### Beispiel 9: Verwenden des setseed-Parameters
 
-Dieses Beispiel zeigt die Auswirkungen der Verwendung des **SetSeed** -Parameters.
+Dieses Beispiel zeigt die Auswirkungen der Verwendung des **SetSeed**-Parameters.
 
 Da **setseed** nicht zufälliges Verhalten erzeugt, wird es normalerweise nur zum Reproduzieren von Ergebnissen verwendet, z. b. beim Debuggen oder Analysieren eines Skripts.
 
@@ -208,7 +214,7 @@ $Sample = $Files | Get-Random -Count 50
 
 ### Beispiel 11: rollengerechte Würfel
 
-In diesem Beispiel wird eine faire 1200-fache-Zeit ausgegeben, und die Ergebnisse werden gezählt. Der erste Befehl `For-EachObject` wiederholt den Aufrufen `Get-Random` von aus den weitergeleiteten Zahlen (1-6). Die Ergebnisse werden nach ihrem Wert gruppiert `Group-Object` und als Tabelle mit formatiert `Select-Object` .
+In diesem Beispiel wird eine faire 1200-fache-Zeit ausgegeben, und die Ergebnisse werden gezählt. Der erste Befehl `ForEach-Object` wiederholt den Aufrufen `Get-Random` von aus den weitergeleiteten Zahlen (1-6). Die Ergebnisse werden nach ihrem Wert gruppiert `Group-Object` und als Tabelle mit formatiert `Select-Object` .
 
 ```powershell
 1..1200 | ForEach-Object {
@@ -256,9 +262,9 @@ Get-Random -InputObject @('a','',$null)
 
 ### -Anzahl
 
-Gibt die Anzahl von zufälligen Objekten oder Ziffern an, die zurückgegeben werden sollen. Der Standard ist 1.
+Gibt die Anzahl von zufälligen Objekten oder Ziffern an, die zurückgegeben werden sollen. Der Standardwert ist 1.
 
-Bei Verwendung mit werden `InputObject` **Count** `Get-Random` alle Objekte in zufälliger Reihenfolge zurückgegeben, wenn der Wert von count die Anzahl der Objekte in der Auflistung überschreitet.
+Bei Verwendung mit werden `InputObject`  `Get-Random` alle Objekte in zufälliger Reihenfolge zurückgegeben, wenn der Wert von count die Anzahl der Objekte in der Auflistung überschreitet.
 
 ```yaml
 Type: System.Int32
@@ -294,11 +300,11 @@ Accept wildcard characters: False
 
 Gibt einen maximalen Wert für die Zufallszahl an. `Get-Random` Gibt einen Wert zurück, der kleiner als der maximale Wert (nicht gleich) ist. Geben Sie eine ganze Zahl, eine Gleit Komma Zahl mit doppelter Genauigkeit oder ein Objekt ein, das in eine ganze Zahl oder einen Double-Wert konvertiert werden kann, z. b. eine numerische Zeichenfolge ("100").
 
-Der Wert von **Maximum** muss größer sein als der Wert von **Minimum** (ungleich). Wenn der Wert von **Maximum** oder **Minimum** Maximum eine Gleit Komma Zahl ist, wird `Get-Random` eine nach dem Zufallsprinzip ausgewählte Gleit Komma Zahl zurückgegeben.
+Der Wert von **Maximum** muss größer sein als der Wert von **Minimum** (ungleich). Wenn der Wert von **Maximum** oder  Maximum eine Gleit Komma Zahl ist, wird `Get-Random` eine nach dem Zufallsprinzip ausgewählte Gleit Komma Zahl zurückgegeben.
 
-Auf einem 64-Bit-Computer ist der Standardwert von **Maximum** **Int32. MaxValue** , wenn der Wert von "Minimal" eine 32-Bit- **Ganzzahl** ist.
+Auf einem 64-Bit-Computer ist der Standardwert von **Maximum** **Int32. MaxValue**, wenn der Wert von "Minimal" eine 32-Bit- **Ganzzahl** ist.
 
-Wenn der Wert von " **Minimal** " ein Double-Wert (eine Gleit Komma Zahl) ist, ist der Standardwert von " **Maximum** " **Double. MaxValue** . Andernfalls ist der Standardwert **Int32. MaxValue** .
+Wenn der Wert von " **Minimal** " ein Double-Wert (eine Gleit Komma Zahl) ist, ist der Standardwert von " **Maximum** " **Double. MaxValue**. Andernfalls ist der Standardwert **Int32. MaxValue**.
 
 ```yaml
 Type: System.Object
@@ -316,7 +322,7 @@ Accept wildcard characters: False
 
 Gibt einen minimalen Wert für die Zufallszahl an. Geben Sie eine ganze Zahl, eine Gleit Komma Zahl mit doppelter Genauigkeit oder ein Objekt ein, das in eine ganze Zahl oder einen Double-Wert konvertiert werden kann, z. b. eine numerische Zeichenfolge ("100"). Der Standardwert ist 0 (null).
 
-Der Wert von **Minimum** muss kleiner sein als der Wert von **Maximum** (ungleich). Wenn der Wert von **Maximum** oder **Minimum** Maximum eine Gleit Komma Zahl ist, wird `Get-Random` eine nach dem Zufallsprinzip ausgewählte Gleit Komma Zahl zurückgegeben.
+Der Wert von **Minimum** muss kleiner sein als der Wert von **Maximum** (ungleich). Wenn der Wert von **Maximum** oder  Maximum eine Gleit Komma Zahl ist, wird `Get-Random` eine nach dem Zufallsprinzip ausgewählte Gleit Komma Zahl zurückgegeben.
 
 ```yaml
 Type: System.Object
@@ -332,9 +338,12 @@ Accept wildcard characters: False
 
 ### -Setseed
 
-Gibt einen Ausgangswert für den Zufallszahlengenerator an. Dieser Ausgangswert wird für den aktuellen Befehl und für alle nachfolgenden `Get-Random` Befehle in der aktuellen Sitzung verwendet, bis Sie **setseed** erneut verwenden oder die Sitzung schließen. Der Ausgangswert kann nicht auf seinen Standardwert zurückgesetzt werden.
+Gibt einen Ausgangswert für den Zufallszahlengenerator an. Wenn Sie **setseed** verwenden, verwendet das Cmdlet die [System. Random](/dotnet/api/system.random) -Methode, um Pseudo Zufalls-Nummern zu generieren, die nicht kryptografisch sicher sind.
 
-Der **setseed** -Parameter ist nicht erforderlich. `Get-Random`In der Standardeinstellung verwendet die [randomnumgenerator ()](/dotnet/api/system.security.cryptography.randomnumbergenerator) -Methode, um einen Ausgangswert zu generieren. Da **setseed** nicht zufälliges Verhalten zur Folge hat, wird es normalerweise nur verwendet, wenn versucht wird, das Verhalten zu reproduzieren, beispielsweise beim Debuggen oder Analysieren eines Skripts, das- `Get-Random` Befehle enthält.
+> [!CAUTION]
+> Das Festlegen des Seed führt zu einem nicht zufälligen Verhalten. Es sollte nur verwendet werden, wenn versucht wird, das Verhalten zu reproduzieren, z. b. beim Debuggen oder Analysieren eines Skripts, das `Get-Random` Befehle enthält
+>
+> Dieser Ausgangswert wird für den aktuellen Befehl und für alle nachfolgenden `Get-Random` Befehle in der aktuellen Sitzung verwendet, bis Sie **setseed** erneut verwenden oder die Sitzung schließen. Der Ausgangswert kann nicht auf seinen Standardwert zurückgesetzt werden.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -382,7 +391,7 @@ Sie können ein oder mehrere-Objekte über die Pipeline übergeben. `Get-Random`
 
 ## HINWEISE
 
-`Get-Random` legt einen standardseed für jede Sitzung auf der Grundlage der Systemzeit fest, wenn die Sitzung gestartet wird.
+Standardmäßig `Get-Random` generiert kryptografisch sichere Zufälligkeit mithilfe der [randomnumgenerator](/dotnet/api/system.security.cryptography.randomnumbergenerator) -Klasse.
 
 `Get-Random` gibt nicht immer denselben Datentyp wie der Eingabe Wert zurück. In der folgenden Tabelle wird der Ausgabetyp für jeden der numerischen Eingabetypen angezeigt.
 
@@ -405,3 +414,6 @@ Ab PowerShell 7 akzeptiert der **Inputobject** -Parameter im **randomlistitempar
 
 ## VERWANDTE LINKS
 
+[System. Security. Cryptography. randomnumgenerator ()](/dotnet/api/system.security.cryptography.randomnumbergenerator)
+
+["Sytem. Random"](/dotnet/api/system.random)

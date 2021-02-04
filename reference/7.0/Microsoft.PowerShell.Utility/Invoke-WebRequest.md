@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/10/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: b81074e14461b0bf481232553b614e06c23b90b6
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: 07c10f33b0cffd56d84ddf6aab3553a0b71e4017
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93219420"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860710"
 ---
 # Invoke-WebRequest
 
@@ -227,7 +226,7 @@ Wenn `Invoke-WebRequest` eine nicht Erfolgs-HTTP-Nachricht (404, 500 usw.) finde
 ```powershell
 try
 {
-    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost" -ErrorAction Stop
+    $Response = Invoke-WebRequest -Uri "www.microsoft.com/unkownhost"
     # This will only execute if the Invoke-WebRequest is successful.
     $StatusCode = $Response.StatusCode
 }
@@ -242,7 +241,7 @@ $StatusCode
 404
 ```
 
-Der Befehl ruft `Invoke-WebRequest` mit der **ErrorAction-Aktion** " **Beenden** " auf, die erzwingt, `Invoke-WebRequest` bei allen fehlgeschlagenen Anforderungen einen Beendigungs Fehler auszulösen. Der abschließende Fehler wird durch den- `catch` Block abgefangen, der den **Statuscode** aus dem **Ausnahme** Objekt abruft.
+Der abschließende Fehler wird durch den- `catch` Block abgefangen, der den **Statuscode** aus dem **Ausnahme** Objekt abruft.
 
 ## PARAMETERS
 
@@ -274,10 +273,10 @@ Die **Authentifizierung** kann nicht mit **usedefault-Anmelde** Informationen ve
 
 Verfügbare Authentifizierungs Optionen:
 
-- **None** : Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
-- **Basic** : erfordert **Credential**. Die Anmelde Informationen werden in einem RFC 7617-Standard Authentifizierungs Header im Format von gesendet `base64(user:password)` .
+- **None**: Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
+- **Basic**: erfordert **Credential**. Die Anmelde Informationen werden in einem RFC 7617-Standard Authentifizierungs Header im Format von gesendet `base64(user:password)` .
 - Bearername **: erfordert** **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
-- **OAuth** : erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
+- **OAuth**: erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
 
 Durch die Bereitstellung der **Authentifizierung** werden alle Header überschrieben `Authorization` , die für **Header** bereitgestellt oder in **websession** eingeschlossen
 
@@ -301,11 +300,11 @@ Accept wildcard characters: False
 Gibt den Anforderungstext an. Der Text entspricht dem Inhalt der Anforderung, der auf die Header folgt.
 Sie können einen Textwert auch über die Pipeline an senden `Invoke-WebRequest` .
 
-Der **Body** -Parameter kann verwendet werden, um eine Liste von Abfrageparametern oder den Inhalt der Antwort anzugeben.
+Der **Body**-Parameter kann verwendet werden, um eine Liste von Abfrageparametern oder den Inhalt der Antwort anzugeben.
 
 Wenn die Eingabe eine GET-Anforderung und der Text `IDictionary` (in der Regel eine Hash Tabelle) ist, wird der Text dem URI als Abfrage Parameter hinzugefügt. Für andere Anforderungs Typen (z. b. Post) wird der Text als Wert des Anforderungs Texts im Standardformat festgelegt `name=value` .
 
-Der **Body** -Parameter kann auch ein- `System.Net.Http.MultipartFormDataContent` Objekt akzeptieren. Dies erleichtert `multipart/form-data` Anforderungen. Wenn für **Body** ein **multipartformdatacontent** -Objekt bereitgestellt wird, werden alle Inhalts bezogenen Header, die für den **ContentType** -, **Header** -oder **websession** -Parameter bereitgestellt werden, von den Inhalts Headern des **multipartformdatacontent** -Objekts überschrieben. Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
+Der **Body** -Parameter kann auch ein- `System.Net.Http.MultipartFormDataContent` Objekt akzeptieren. Dies erleichtert `multipart/form-data` Anforderungen. Wenn für **Body** ein **multipartformdatacontent** -Objekt bereitgestellt wird, werden alle Inhalts bezogenen Header, die für den **ContentType**-, **Header**-oder **websession** -Parameter bereitgestellt werden, von den Inhalts Headern des **multipartformdatacontent** -Objekts überschrieben. Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
 
 ```yaml
 Type: System.Object
@@ -384,7 +383,7 @@ Accept wildcard characters: False
 
 Gibt ein Benutzerkonto an, das über die Berechtigung zum Senden der Anforderung verfügt. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01** , oder geben Sie ein **PSCredential** -Objekt ein, das vom `Get-Credential` Cmdlet generiert wurde.
+Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01**, oder geben Sie ein **PSCredential** -Objekt ein, das vom `Get-Credential` Cmdlet generiert wurde.
 
 Anmelde **Informationen können allein** oder in Verbindung mit bestimmten **Authentifizierungs** Parameter Optionen verwendet werden. Bei Verwendung allein werden Anmelde Informationen nur für den Remote Server bereitgestellt, wenn vom Remote Server eine Anforderung zur Authentifizierungs Aufforderung gesendet wird. Bei Verwendung mit **Authentifizierungs** Optionen werden die Anmelde Informationen explizit gesendet.
 
@@ -488,7 +487,7 @@ Accept wildcard characters: False
 
 Gibt die Header der Webanforderung an. Geben Sie eine Hashtabelle oder ein Wörterbuch ein.
 
-Verwenden Sie zum Festlegen der UserAgent-Header den **UserAgent** -Parameter. Sie können diesen Parameter nicht verwenden, um **Benutzer-Agent-** oder Cookie-Header anzugeben.
+Verwenden Sie zum Festlegen der UserAgent-Header den **UserAgent**-Parameter. Sie können diesen Parameter nicht verwenden, um **Benutzer-Agent-** oder Cookie-Header anzugeben.
 
 Inhalts bezogene Header, z. b., werden `Content-Type` überschrieben, wenn ein **multipartformdatacontent** -Objekt für den **Text** angegeben wird.
 
@@ -560,7 +559,7 @@ Gibt die für die Webanforderung verwendete Methode an. Zulässige Werte für di
 - Löschen
 - Herunterladen
 - Head
-- Merge
+- Zusammenführen
 - Optionen
 - Patch
 - Posten
@@ -603,7 +602,7 @@ Accept wildcard characters: False
 Gibt die Ausgabedatei an, für die dieses Cmdlet den Antworttext speichert. Geben Sie einen Pfad- und Dateinamen ein.
 Wenn Sie den Pfad weglassen, wird der aktuelle Speicherort als Standard verwendet.
 
-Standardmäßig `Invoke-WebRequest` gibt die Ergebnisse an die Pipeline zurück. Verwenden Sie den **Passthru** -Parameter, um Ergebnisse an eine Datei und an die Pipeline zu senden.
+Standardmäßig `Invoke-WebRequest` gibt die Ergebnisse an die Pipeline zurück. Verwenden Sie den **Passthru**-Parameter, um Ergebnisse an eine Datei und an die Pipeline zu senden.
 
 ```yaml
 Type: System.String
@@ -619,7 +618,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt an, dass das Cmdlet zusätzlich zum Schreiben in eine Datei die Ergebnisse zurückgibt. Dieser Parameter ist nur gültig, wenn der **OutFile** -Parameter ebenfalls im Befehl verwendet wird.
+Gibt an, dass das Cmdlet zusätzlich zum Schreiben in eine Datei die Ergebnisse zurückgibt. Dieser Parameter ist nur gültig, wenn der **OutFile**-Parameter ebenfalls im Befehl verwendet wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -672,9 +671,9 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird. Der Standardwert ist der aktuelle Benutzer.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01** , **User@Domain.Com** , oder geben Sie ein- `PSCredential` Objekt ein, z. b. das vom `Get-Credential` Cmdlet generierte.
+Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01**, **User@Domain.Com** , oder geben Sie ein- `PSCredential` Objekt ein, z. b. das vom `Get-Credential` Cmdlet generierte.
 
 Dieser Parameter ist nur gültig, wenn der **Proxy** Parameter auch im Befehl verwendet wird. Die Parameter " **proxycredential** " und " **proxyusedefaultcredential** " können nicht im selben Befehl verwendet werden.
 
@@ -763,7 +762,7 @@ Wenn Sie eine Sitzungs Variable angeben, `Invoke-WebRequest` erstellt ein Webanf
 
 Im Gegensatz zu einer Remotesitzung besteht bei der Webanforderungssitzung keine persistente Verbindung. Dabei handelt es sich um ein Objekt, das Informationen über die Verbindung und die Anforderung enthält, einschließlich Cookies, Anmelde Informationen, des maximalen Umleitungs Werts und der Zeichenfolge des Benutzer-Agents. Sie können das Objekt verwenden, um den Zustand und die Daten übergreifend für Webanforderungen zu nutzen.
 
-Um die Webanforderungssitzung in nachfolgenden Webanforderungen zu verwenden, geben Sie die Sitzungsvariable im Wert des **WebSession** -Parameters an. PowerShell verwendet die Daten im Sitzungs Objekt der Webanforderung, wenn die neue Verbindung hergestellt wird. Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential**. Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
+Um die Webanforderungssitzung in nachfolgenden Webanforderungen zu verwenden, geben Sie die Sitzungsvariable im Wert des **WebSession**-Parameters an. PowerShell verwendet die Daten im Sitzungs Objekt der Webanforderung, wenn die neue Verbindung hergestellt wird. Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential**. Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
 
 Der **sessionvariable** -Parameter und der **websession** -Parameter können nicht im selben Befehl verwendet werden.
 
@@ -807,7 +806,7 @@ Gibt an, dass das Cmdlet der Anforderung Header ohne Validierung hinzufügen sol
 Dieser Switch sollte für Standorte verwendet werden, für die Header Werte erforderlich sind, die nicht den Standards entsprechen.
 Wenn Sie diesen Schalter angeben, wird die Validierung deaktiviert, damit der Wert nicht aktiviert werden kann. Wenn angegeben, werden alle Header ohne Validierung hinzugefügt.
 
-Dieser Schalter deaktiviert die Überprüfung von Werten, die an die Parameter **ContentType** , **Headers** und **userAgent** übermittelt werden.
+Dieser Schalter deaktiviert die Überprüfung von Werten, die an die Parameter **ContentType**, **Headers** und **userAgent** übermittelt werden.
 
 Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
 
@@ -849,7 +848,7 @@ Legt die SSL/TLS-Protokolle fest, die für die Webanforderung zulässig sind. St
 **SslProtocol** verwendet die **websslprotocol** -Flag-Aufzählung. Es ist möglich, mehr als ein Protokoll mithilfe der Flag-Notation oder mit der Kombination mehrerer **websslprotocol** -Optionen mit **Bor** bereitzustellen. die Bereitstellung mehrerer Protokolle wird jedoch nicht auf allen Plattformen unterstützt.
 
 > [!NOTE]
-> Auf nicht-Windows-Plattformen ist es möglicherweise nicht möglich, `'Tls, Tls12'` als Option anzugeben.
+> Auf nicht-Windows-Plattformen ist es möglicherweise nicht möglich, `Tls` oder `Tls12` als Option anzugeben.
 
 Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
 
@@ -1013,7 +1012,7 @@ Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie ein
 
 Im Gegensatz zu einer Remote Sitzung ist die Webanforderungs Sitzung keine persistente Verbindung. Dabei handelt es sich um ein Objekt, das Informationen über die Verbindung und die Anforderung enthält, einschließlich Cookies, Anmelde Informationen, des maximalen Umleitungs Werts und der Zeichenfolge des Benutzer-Agents. Sie können das Objekt verwenden, um den Zustand und die Daten übergreifend für Webanforderungen zu nutzen.
 
-Um eine Webanforderungs Sitzung zu erstellen, geben Sie einen Variablennamen ohne Dollarzeichen in den Wert des **sessionvariable** -Parameters eines `Invoke-WebRequest` Befehls ein. `Invoke-WebRequest` erstellt die Sitzung und speichert Sie in der Variablen. In allen nachfolgenden Befehlen verwenden Sie die Variable als Wert für den **WebSession** -Parameter.
+Um eine Webanforderungs Sitzung zu erstellen, geben Sie einen Variablennamen ohne Dollarzeichen in den Wert des **sessionvariable** -Parameters eines `Invoke-WebRequest` Befehls ein. `Invoke-WebRequest` erstellt die Sitzung und speichert Sie in der Variablen. In allen nachfolgenden Befehlen verwenden Sie die Variable als Wert für den **WebSession**-Parameter.
 
 Der **sessionvariable** -Parameter und der **websession** -Parameter können nicht im selben Befehl verwendet werden.
 
@@ -1053,9 +1052,9 @@ Aufgrund von Änderungen in .net Core 3,1 verwenden PowerShell 7,0 und höher di
 
 Der Wert dieser Eigenschaft wird von Ihrer Plattform bestimmt:
 
-- **Für Windows** : liest die Proxykonfiguration aus Umgebungsvariablen. Wenn diese Variablen nicht definiert sind, wird die Eigenschaft von den Proxy Einstellungen des Benutzers abgeleitet.
-- **Für macOS** : liest die Proxykonfiguration aus Umgebungsvariablen. Wenn diese Variablen nicht definiert sind, wird die Eigenschaft von den Proxy Einstellungen des Systems abgeleitet.
-- **Für Linux** : liest die Proxykonfiguration aus Umgebungsvariablen. Wenn diese Variablen nicht definiert sind, initialisiert die-Eigenschaft eine nicht konfigurierte-Instanz, die alle Adressen umgeht.
+- **Für Windows**: liest die Proxykonfiguration aus Umgebungsvariablen. Wenn diese Variablen nicht definiert sind, wird die Eigenschaft von den Proxy Einstellungen des Benutzers abgeleitet.
+- **Für macOS**: liest die Proxykonfiguration aus Umgebungsvariablen. Wenn diese Variablen nicht definiert sind, wird die Eigenschaft von den Proxy Einstellungen des Systems abgeleitet.
+- **Für Linux**: liest die Proxykonfiguration aus Umgebungsvariablen. Wenn diese Variablen nicht definiert sind, initialisiert die-Eigenschaft eine nicht konfigurierte-Instanz, die alle Adressen umgeht.
 
 Die Umgebungsvariablen, die für die `DefaultProxy` Initialisierung auf Windows-und UNIX-basierten Plattformen verwendet werden, sind:
 

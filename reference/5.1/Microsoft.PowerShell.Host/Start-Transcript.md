@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.ConsoleHost.dll-help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Host
-ms.date: 04/22/2020
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.host/start-transcript?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Transcript
-ms.openlocfilehash: c7e95988c385a32802c93f92216710746d268e5e
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 4f90dd8e3080d393e50fb8f48133c74909ec2b80
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93211940"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860744"
 ---
 # Start-Transcript
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Erstellt einen Datensatz einer gesamten oder eines Teils einer PowerShell-Sitzung in einer Textdatei.
 
-## SYNTAX
+## Syntax
 
 ### Bypath (Standard)
 
@@ -42,7 +42,7 @@ Start-Transcript [[-OutputDirectory] <String>] [-Append] [-Force] [-NoClobber] [
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Beschreibung
 
 Das- `Start-Transcript` Cmdlet erstellt einen Datensatz einer gesamten oder eines Teils einer PowerShell-Sitzung in einer Textdatei. Die Aufzeichnung enthält alle Befehle, die der Benutzer eingibt, und alle Ausgaben, die auf der Konsole angezeigt werden.
 
@@ -50,7 +50,9 @@ Ab Windows PowerShell 5,0 `Start-Transcript` schließt den Hostnamen in den gene
 Dateien, die vom `Start-Transcript` Cmdlet erstellt werden, enthalten zufällige Zeichen in Namen, um potenzielle über schreibungen oder Duplizierungen zu vermeiden, wenn zwei oder mehr Transkriptionen gleichzeitig gestartet werden.
 Dies verhindert auch eine nicht autorisierte Ermittlung von Transkriptionen, die in einer zentralisierten Dateifreigabe gespeichert sind.
 
-## BEISPIELE
+Wenn Sie den **Append** -Parameter verwenden und die Zieldatei nicht über eine Byte Reihenfolge Markierung (BOM) verfügt, wird standardmäßig die `Start-Transcript` `ASCII` Codierung in der Zieldatei verwendet. Dieses Verhalten kann dazu führen, dass mulitbyte-Zeichen nicht ordnungsgemäß codiert werden.
+
+## Beispiele
 
 ### Beispiel 1: Starten einer Transkriptions Datei mit Standardeinstellungen
 
@@ -68,7 +70,7 @@ Start-Transcript -Path "C:\transcripts\transcript0.txt" -NoClobber
 
 Dieser Befehl startet eine Aufzeichnung in der `Transcript0.txt` Datei in `C:\transcripts` . Da der **noClobber** -Parameter verwendet wird, verhindert der Befehl, dass vorhandene Dateien überschrieben werden. Wenn die `Transcript0.txt` Datei bereits vorhanden ist, schlägt der Befehl fehl.
 
-## PARAMETERS
+## Parameter
 
 ### -Anfügen
 
@@ -120,7 +122,7 @@ Accept wildcard characters: False
 
 ### -Literalpath
 
-Gibt einen Speicherort für die Transkriptions Datei an. Im Gegensatz zum **Path** -Parameter wird der Wert des **LiteralPath** -Parameters genau so verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen. Einfache Anführungszeichen informieren PowerShell darüber, dass keine Zeichen als Escapesequenzen interpretiert werden können.
+Gibt einen Speicherort für die Transkriptions Datei an. Im Gegensatz zum **Path**-Parameter wird der Wert des **LiteralPath**-Parameters genau so verwendet, wie er eingegeben wurde. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen. Einfache Anführungszeichen informieren PowerShell darüber, dass keine Zeichen als Escapesequenzen interpretiert werden können.
 
 ```yaml
 Type: System.String
@@ -223,24 +225,24 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### Keine
 
 Objekte können nicht an dieses Cmdlet weitergereicht werden.
 
-## AUSGABEN
+## Ausgaben
 
 ### System.String
 
 Dieses Cmdlet gibt eine Zeichenfolge zurück, die eine Bestätigungsmeldung und den Pfad zur Ausgabedatei enthält.
 
-## HINWEISE
+## Hinweise
 
 Verwenden Sie das-Cmdlet, um eine Aufzeichnung zu verhindern `Stop-Transcript` .
 
 Fügen Sie dem Profil den Befehl hinzu, um eine ganze Sitzung aufzuzeichnen `Start-Transcript` . Weitere Informationen finden Sie unter [about_Profiles](../Microsoft.PowerShell.Core/About/about_Profiles.md).
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Stop-Transcript](Stop-Transcript.md)

@@ -3,21 +3,21 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 01/28/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/wait-job?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Job
-ms.openlocfilehash: 0e2888ca7d0b601b1d67fb0a8dd756b653ad8dbc
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 1f6df33e995ad717e1451c047fec072a280b4a54
+ms.sourcegitcommit: 81558c2adb9d109946a027e5b96e4d24b3b13747
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388381"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99098679"
 ---
 # Wait-Job
 
 ## ZUSAMMENFASSUNG
-Unterdrückt die Eingabeaufforderung, bis ein oder alle PowerShell-Hintergrund Aufträge, die in der Sitzung ausgeführt werden, abgeschlossen sind.
+Wartet, bis ein oder alle PowerShell-Aufträge, die in der Sitzung ausgeführt werden, beendet werden.
 
 ## SYNTAX
 
@@ -59,11 +59,20 @@ Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Filter] <Hashtable> [<CommonParame
 
 ## DESCRIPTION
 
-Das- `Wait-Job` Cmdlet wartet, bis Windows PowerShell-Hintergrund Aufträge abgeschlossen sind, bevor die Eingabeaufforderung angezeigt wird. Sie können warten, bis ein Hintergrundauftrag abgeschlossen ist, oder bis alle Hintergrundaufträge abgeschlossen sind, und Sie können eine maximale Wartezeit für den Auftrag festlegen.
+Das `Wait-Job` Cmdlet wartet, bis ein Auftrag in einem Beendigungs Zustand ist, bevor die Ausführung fortgesetzt wird.
+Die abschließenden Zustände lauten:
 
-Wenn die Befehle im Auftrag fertig sind, `Wait-Job` zeigt die Eingabeaufforderung an und gibt ein Auftrags Objekt zurück, damit Sie es an einen anderen Befehl übergeben können.
+- Abgeschlossen
+- Fehler
+- Beendet
+- Ausgesetzt
+- Getrennt
 
-Sie können das `Wait-Job` Cmdlet verwenden, um auf Hintergrund Aufträge zu warten, z. b. solche, die mit dem `Start-Job` Cmdlet oder dem **AsJob** -Parameter des `Invoke-Command` Cmdlets gestartet wurden. Weitere Informationen zu Windows PowerShell-Hintergrundaufträgen finden Sie unter [about_Jobs](./about/about_Jobs.md).
+Sie können bis zu einem bestimmten Auftrag warten, oder alle Aufträge befinden sich im Zustand "wird beendet". Sie können auch eine maximale Wartezeit für den Auftrag mithilfe des **Timeout** -Parameters festlegen oder den **Force** -Parameter verwenden, um auf einen Auftrag in den `Suspended` Zuständen oder zu warten `Disconnected` .
+
+Wenn die Befehle im Auftrag vollständig sind, wird `Wait-Job` ein Auftrags Objekt zurückgegeben, und die Ausführung wird fortgesetzt.
+
+Sie können das `Wait-Job` Cmdlet verwenden, um auf Aufträge zu warten, die mit dem `Start-Job` Cmdlet oder dem **AsJob** -Parameter des `Invoke-Command` Cmdlets gestartet wurden. Weitere Informationen zu Aufträgen finden Sie unter [Informationen zu Aufträgen](./about/about_Jobs.md).
 
 Ab Windows PowerShell 3,0 `Wait-Job` wartet das Cmdlet auch auf benutzerdefinierte Auftrags Typen, z. b. Workflow Aufträge und Instanzen geplanter Aufträge. Damit `Wait-Job` auf Aufträge eines bestimmten Typs gewartet werden kann, müssen Sie das Modul, das den benutzerdefinierten Auftragstyp unterstützt, in die Sitzung importieren, bevor Sie das `Get-Job` Cmdlet entweder mithilfe des-Cmdlets oder mithilfe des-Cmdlets oder mithilfe des-Cmdlets `Import-Module` im Modul ausführen. Informationen zu einem bestimmten benutzerdefinierten Auftragstyp finden Sie in der Dokumentation der Funktion „Benutzerdefinierte Auftragstypen“.
 
@@ -75,7 +84,7 @@ Ab Windows PowerShell 3,0 `Wait-Job` wartet das Cmdlet auch auf benutzerdefinier
 Get-Job | Wait-Job
 ```
 
-Dieser Befehl wartet, bis alle Hintergrund Aufträge, die in der Sitzung ausgeführt werden, beendet werden.
+Dieser Befehl wartet, bis alle Aufträge, die in der Sitzung ausgeführt werden, beendet werden.
 
 ### Beispiel 2: warten auf Aufträge, die auf Remote Computern gestartet werden, mithilfe von Start-Job
 
@@ -92,18 +101,18 @@ $done.Count
 
 In diesem Beispiel wird gezeigt, wie das `Wait-Job` Cmdlet mit Aufträgen verwendet wird, die auf Remote Computern mithilfe des `Start-Job` Cmdlets gestartet wurden. `Start-Job`Der- `Wait-Job` Befehl und der-Befehl werden mithilfe des-Cmdlets an den Remote Computer übermittelt `Invoke-Command` .
 
-In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Date` Befehl, der als Hintergrund Auftrag auf drei verschiedenen Computern ausgeführt wird, abgeschlossen ist.
+In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Date` Befehl, der als Auftrag auf drei verschiedenen Computern ausgeführt wird, abgeschlossen ist.
 
-Mit dem ersten Befehl wird eine Windows PowerShell-Sitzung ( **PSSession** ) auf jedem der drei Remote Computer erstellt und in der `$s` Variablen gespeichert.
+Mit dem ersten Befehl wird eine Windows PowerShell-Sitzung (**PSSession**) auf jedem der drei Remote Computer erstellt und in der `$s` Variablen gespeichert.
 
 Der zweite Befehl verwendet `Invoke-Command` , um `Start-Job` in jeder der drei Sitzungen in auszuführen `$s` .
 Alle Aufträge werden als date1 bezeichnet.
 
-Der dritte Befehl verwendet `Invoke-Command` , um auszuführen `Wait-Job` . Dieser Befehl wartet, bis die date1-Aufträge auf den einzelnen Computern abgeschlossen sind. Die resultierende Auflistung (Array) der Auftrags Objekte wird in der `$done` Variablen gespeichert.
+Der dritte Befehl verwendet `Invoke-Command` , um auszuführen `Wait-Job` . Dieser Befehl wartet `Date1` , bis die Aufträge auf den einzelnen Computern abgeschlossen sind. Die resultierende Auflistung (**Array**) der **Auftrags** Objekte wird in der `$done` Variablen gespeichert.
 
 Der vierte Befehl verwendet die **count** -Eigenschaft des Arrays von Auftrags Objekten in der `$done` Variablen, um zu bestimmen, wie viele der Aufträge abgeschlossen sind.
 
-### Beispiel 3: bestimmen, wann der erste Hintergrund Auftrag abgeschlossen ist
+### Beispiel 3: bestimmen, wann der erste Auftrag abgeschlossen ist
 
 ```powershell
 $s = New-PSSession (Get-Content Machines.txt)
@@ -112,25 +121,26 @@ Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$Using:c}
 Invoke-Command -Session $s -ScriptBlock {Wait-Job -Any}
 ```
 
-In diesem Beispiel wird der **any** -Parameter verwendet `Wait-Job` , um zu bestimmen, wann die erste der vielen Hintergrund Aufträge, die in der aktuellen Sitzung ausgeführt werden, abgeschlossen sind. Außerdem wird gezeigt, wie das `Wait-Job` Cmdlet verwendet wird, um zu warten, bis die Remote Aufträge abgeschlossen sind.
+In diesem Beispiel wird der **any** -Parameter verwendet `Wait-Job` , um zu bestimmen, wann der erste von vielen Aufträgen, die in der aktuellen Sitzung ausgeführt werden, beendet wird. Außerdem wird gezeigt, wie das `Wait-Job` Cmdlet verwendet wird, um zu warten, bis die Remote Aufträge abgeschlossen sind.
 
 Der erste Befehl erstellt eine **PSSession** auf allen Computern, die in der Machines.txt-Datei aufgelistet sind, und speichert die **PSSession** -Objekte in der `$s` Variablen. Der Befehl verwendet das `Get-Content` Cmdlet, um den Inhalt der Datei zu erhalten. Der `Get-Content` Befehl wird in Klammern eingeschlossen, um sicherzustellen, dass er vor dem Befehl ausgeführt wird `New-PSSession` .
 
 Mit dem zweiten Befehl `Get-EventLog` wird eine Befehls Zeichenfolge in Anführungszeichen in der `$c` Variablen gespeichert.
 
 Der dritte Befehl verwendet das `Invoke-Command` Cmdlet, um `Start-Job` in jeder der Sitzungen in auszuführen `$s` .
-Der `Start-Job` Befehl startet einen Hintergrund Auftrag, der den `Get-EventLog` Befehl in der `$c` Variablen ausführt.
+Der `Start-Job` Befehl startet einen Auftrag, der den `Get-EventLog` Befehl in der `$c` Variablen ausführt.
 
-Der Befehl verwendet den **using** -bereichsmodifizierer, um anzugeben, dass die `$c` Variable auf dem lokalen Computer definiert wurde. Der **Using** -Bereichsbezeichner wurde in Windows PowerShell 3.0 eingeführt. Weitere Informationen zum using-bereichsmodifizierer finden **Sie** unter [about_Remote_Variables](./about/about_Remote_Variables.md).
+Der Befehl verwendet den **using** -bereichsmodifizierer, um anzugeben, dass die `$c` Variable auf dem lokalen Computer definiert wurde. Der **Using**-Bereichsbezeichner wurde in Windows PowerShell 3.0 eingeführt. Weitere Informationen zum using-bereichsmodifizierer finden **Sie** unter [about_Remote_Variables](./about/about_Remote_Variables.md).
 
-Der vierte Befehl verwendet `Invoke-Command` , um einen `Wait-Job` Befehl in den Sitzungen auszuführen. Er verwendet den **any** -Parameter, um zu warten, bis der erste Auftrag auf den Remote Computern abgeschlossen ist.
+Der vierte Befehl verwendet `Invoke-Command` , um einen `Wait-Job` Befehl in den Sitzungen auszuführen. Er verwendet den **any** -Parameter, um zu warten, bis der erste Auftrag auf den Remote Computern den Status beendet.
 
 ### Beispiel 4: Festlegen einer Wartezeit für Aufträge auf Remote Computern
 
 ```powershell
-$s = New-PSSession Server01, Server02, Server03
-$jobs = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-Date}}
-$done = Invoke-Command -Session $s -ScriptBlock {Wait-Job -Timeout 30}
+PS> $s = New-PSSession Server01, Server02, Server03
+PS> $jobs = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-Date}}
+PS> $done = Invoke-Command -Session $s -ScriptBlock {Wait-Job -Timeout 30}
+PS>
 ```
 
 In diesem Beispiel wird gezeigt, wie der **Timeout** -Parameter von verwendet wird `Wait-Job` , um eine maximale Wartezeit für die Aufträge festzulegen, die auf Remote Computern ausgeführt werden.
@@ -141,7 +151,7 @@ Der zweite Befehl verwendet `Invoke-Command` , um `Start-Job` in jedem der **PSS
 
 Der dritte Befehl verwendet `Invoke-Command` , um `Wait-Job` in jeder der Sitzungen in auszuführen `$s` . Der `Wait-Job` Befehl bestimmt, ob alle Befehle innerhalb von 30 Sekunden abgeschlossen wurden. Er verwendet den **Timeout** -Parameter mit einem Wert von 30, um die maximale Wartezeit festzulegen, und speichert dann die Ergebnisse des Befehls in der `$done` Variablen.
 
-In diesem Fall wurde nur der Befehl auf dem Computer Server02 nach 30 Sekunden abgeschlossen. `Wait-Job` beendet den warte Vorgang, zeigt die Eingabeaufforderung an und gibt das Objekt zurück, das den abgeschlossenen Auftrag darstellt.
+In diesem Fall wurde nur der Befehl auf dem Computer Server02 nach 30 Sekunden abgeschlossen. `Wait-Job` beendet den warte Vorgang, gibt das Objekt zurück, das den abgeschlossenen Auftrag darstellt, und zeigt die Eingabeaufforderung an.
 
 Die- `$done` Variable enthält ein Auftrags Objekt, das den Auftrag darstellt, der auf Server02 ausgeführt wird.
 
@@ -151,8 +161,7 @@ Die- `$done` Variable enthält ein Auftrags Objekt, das den Auftrag darstellt, d
 Wait-Job -id 1,2,5 -Any
 ```
 
-Dieser Befehl identifiziert drei Aufträge anhand ihrer IDs und wartet, bis eine davon abgeschlossen ist.
-Die Eingabeaufforderung wird zurückgegeben, wenn der erste Auftrag abgeschlossen ist.
+Mit diesem Befehl werden drei Aufträge anhand ihrer IDs identifiziert, und es wird gewartet, bis einer der beiden Aufträge beendet ist. Die Ausführung wird ausgeführt, wenn der erste Auftrag abgeschlossen ist.
 
 ### Beispiel 6: warten auf einen Zeitraum und anschließendes fortsetzen des Auftrags im Hintergrund
 
@@ -160,7 +169,7 @@ Die Eingabeaufforderung wird zurückgegeben, wenn der erste Auftrag abgeschlosse
 Wait-Job -Name "DailyLog" -Timeout 120
 ```
 
-Dieser Befehl wartet 120 Sekunden (zwei Minuten), bis der dailylog-Auftrag abgeschlossen ist. Wenn der Auftrag nicht innerhalb der nächsten zwei Minuten abgeschlossen wird, wird die Eingabeaufforderung trotzdem zurückgegeben, und der Auftrag wird weiterhin im Hintergrund ausgeführt.
+Dieser Befehl wartet 120 Sekunden (zwei Minuten), bis der dailylog-Auftrag abgeschlossen ist. Wenn der Auftrag nicht innerhalb der nächsten zwei Minuten abgeschlossen wird, wird die Ausführung fortgesetzt, und der Auftrag wird weiter im Hintergrund ausgeführt.
 
 ### Beispiel 7: warten auf einen Auftrag nach Name
 
@@ -173,7 +182,7 @@ Dieser Befehl verwendet den Auftrags Namen, um den Auftrag zu identifizieren, f�
 ### Beispiel 8: warten auf Aufträge auf dem lokalen Computer, die mit Start-Job gestartet wurden
 
 ```powershell
-$j = Start-Job -ScriptBlock {Get-ChildItem *.ps1| where {$_lastwritetime -gt ((Get-Date) - (New-TimeSpan -Days 7))}}
+$j = Start-Job -ScriptBlock {Get-ChildItem *.ps1| where {$_.lastwritetime -gt ((Get-Date) - (New-TimeSpan -Days 7))}}
 $j | Wait-Job
 ```
 
@@ -181,9 +190,9 @@ In diesem Beispiel wird gezeigt, wie das `Wait-Job` Cmdlet mit Aufträgen verwen
 
 Diese Befehle starten einen Auftrag, der die Windows PowerShell-Skriptdateien abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.
 
-Der erste Befehl verwendet `Start-Job` , um einen Hintergrund Auftrag auf dem lokalen Computer zu starten. Der Auftrag führt einen `Get-ChildItem` Befehl aus, der alle Dateien mit der Dateinamenerweiterung ". ps1" abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.
+Der erste Befehl verwendet `Start-Job` , um einen Auftrag auf dem lokalen Computer zu starten. Der Auftrag führt einen `Get-ChildItem` Befehl aus, der alle Dateien mit der Dateinamenerweiterung ". ps1" abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.
 
-Der dritte Befehl verwendet `Wait-Job` , um zu warten, bis der Auftrag abgeschlossen ist. Wenn der Auftrag abgeschlossen ist, zeigt der Befehl das Auftrags Objekt an, das Informationen über den Auftrag enthält.
+Der dritte Befehl verwendet `Wait-Job` , um zu warten, bis der Auftrag beendet ist. Wenn der Auftrag abgeschlossen ist, zeigt der Befehl das Auftrags Objekt an, das Informationen über den Auftrag enthält.
 
 ### Beispiel 9: warten auf Aufträge, die auf Remote Computern gestartet werden, mithilfe von Invoke-Command
 
@@ -195,12 +204,12 @@ $j | Wait-Job
 
 Dieses Beispiel zeigt `Wait-Job` die Verwendung von mit Aufträgen, die auf Remote Computern mithilfe des **AsJob** -Parameters von gestartet wurden `Invoke-Command` . Wenn Sie **AsJob** verwenden, wird der Auftrag auf dem lokalen Computer erstellt, und die Ergebnisse werden automatisch an den lokalen Computer zurückgegeben, obwohl der Auftrag auf den Remote Computern ausgeführt wird.
 
-In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Process` Befehl, der in Sitzungen auf drei Remote Computern ausgeführt wird, abgeschlossen ist.
+In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Process` Befehl, der in den Sitzungen auf drei Remote Computern ausgeführt wird, beendet wird.
 
 Der erste Befehl erstellt **PSSession** -Objekte auf drei Computern und speichert Sie in der `$s` Variablen.
 
 Der zweite Befehl verwendet `Invoke-Command` , um `Get-Process` in jeder der drei Sitzungen in auszuführen `$s` .
-Der Befehl verwendet den **AsJob** -Parameter, um den Befehl asynchron als Hintergrund Auftrag auszuführen. Der Befehl gibt ein Auftrags Objekt zurück, genau wie die Aufträge, die mithilfe von gestartet `Start-Job` wurden, und das Auftrags Objekt wird in der `$j` Variablen gespeichert.
+Der Befehl verwendet den **AsJob** -Parameter, um den Befehl asynchron als Auftrag auszuführen. Der Befehl gibt ein Auftrags Objekt zurück, genau wie die Aufträge, die mithilfe von gestartet `Start-Job` wurden, und das Auftrags Objekt wird in der `$j` Variablen gespeichert.
 
 Der dritte Befehl verwendet einen Pipeline Operator ( `|` ), um das Auftrags Objekt an `$j` das `Wait-Job` Cmdlet zu senden. Ein `Invoke-Command` Befehl ist in diesem Fall nicht erforderlich, da sich der Auftrag auf dem lokalen Computer befindet.
 
@@ -227,7 +236,7 @@ Dieser Befehl wartet auf den Auftrag mit dem ID-Wert 1.
 
 ### -Beliebig
 
-Gibt an, dass dieses Cmdlet die Eingabeaufforderung anzeigt und das Auftrags Objekt zurückgibt, wenn ein Auftrag abgeschlossen ist. Standardmäßig `Wait-Job` wartet, bis alle angegebenen Aufträge vollständig sind, bevor die Eingabeaufforderung angezeigt wird.
+Gibt an, dass dieses Cmdlet das Auftrags Objekt zurückgibt und die Ausführung fortsetzt, wenn ein Auftrag abgeschlossen ist. Standardmäßig `Wait-Job` wartet, bis alle angegebenen Aufträge vollständig sind, bevor die Eingabeaufforderung angezeigt wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -245,7 +254,7 @@ Accept wildcard characters: False
 
 Gibt eine Hash Tabelle mit Bedingungen an. Dieses Cmdlet wartet auf Aufträge, die alle Bedingungen in der Hash Tabelle erfüllen. Geben Sie eine Hashtabelle ein, in der die Schlüssel Auftragseigenschaften und die Werte Werte der Auftragseigenschaften sind.
 
-Dieser Parameter funktioniert nur mit benutzerdefinierten Auftragstypen, z. B. Workflowaufträgen und geplanten Aufträgen. Sie funktioniert nicht bei standardmäßigen Hintergrund Aufträgen, wie z. b. bei der Verwendung des `Start-Job` Cmdlets. Weitere Informationen zur Unterstützung für diesen Parameter finden Sie unter dem Hilfethema für den Auftragstyp.
+Dieser Parameter funktioniert nur mit benutzerdefinierten Auftragstypen, z. B. Workflowaufträgen und geplanten Aufträgen. Es funktioniert nicht für Standardaufträge, wie z. b. solche, die mithilfe des `Start-Job` Cmdlets erstellt wurden. Weitere Informationen zur Unterstützung für diesen Parameter finden Sie unter dem Hilfethema für den Auftragstyp.
 
 Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
@@ -362,7 +371,7 @@ Gibt einen Auftragsstatus an. Dieses Cmdlet wartet nur auf Aufträge im angegebe
 - Abgeschlossen
 - Fehler
 - Beendet
-- Blockiert
+- Gesperrt
 - Ausgesetzt
 - Getrennt
 - Wird angehalten
@@ -385,9 +394,10 @@ Accept wildcard characters: False
 
 ### -Timeout
 
-Gibt die maximale Wartezeit für jeden Hintergrund Auftrag in Sekunden an. Der Standardwert-1 gibt an, dass das Cmdlet wartet, bis der Auftrag abgeschlossen ist. Die zeitliche Steuerung beginnt, wenn Sie den Befehl übermitteln `Wait-Job` , nicht den `Start-Job` Befehl.
+Gibt die maximale Wartezeit für jeden Auftrag in Sekunden an. Der Standardwert-1 gibt an, dass das Cmdlet wartet, bis der Auftrag abgeschlossen ist. Die zeitliche Steuerung beginnt, wenn Sie den Befehl übermitteln `Wait-Job` , nicht den `Start-Job` Befehl.
 
-Wenn diese Zeit abgelaufen ist, endet der Wartevorgang, und die Befehlseingabeaufforderung wird wieder angezeigt, auch wenn der Auftrag noch läuft. Der Befehl zeigt keine Fehlermeldung an.
+Wenn diese Zeit überschritten wird, wird der Warte Vorgang beendet und die Ausführung fortgesetzt, auch wenn der Auftrag noch ausgeführt wird.
+Der Befehl zeigt keine Fehlermeldung an.
 
 ```yaml
 Type: System.Int32
@@ -415,7 +425,7 @@ Sie können ein Auftrags Objekt an dieses Cmdlet weiterreichen.
 
 ### System. Management. Automation. psremotingjob
 
-Dieses Cmdlet gibt Auftrags Objekte zurück, die die abgeschlossenen Aufträge darstellen. Wenn der Warte Vorgang beendet wird, weil der Wert des **Timeout** -Parameters überschritten wird, gibt keine- `Wait-Job` Objekte zurück.
+Dieses Cmdlet gibt Auftrags Objekte zurück, die die Aufträge im Zustand "wird beendet" darstellen. Wenn der Warte Vorgang beendet wird, weil der Wert des **Timeout** -Parameters überschritten wird, gibt keine- `Wait-Job` Objekte zurück.
 
 ## HINWEISE
 

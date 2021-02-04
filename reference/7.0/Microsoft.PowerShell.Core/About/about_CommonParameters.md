@@ -2,16 +2,16 @@
 description: Beschreibt die Parameter, die mit jedem Cmdlet verwendet werden können.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 11/26/2019
+ms.date: 01/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_CommonParameters
-ms.openlocfilehash: 949fabca6052a75d2cc4f8cf71e0a88b170a3b36
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 0b303590aab756aaa7dd55683e114a20c2b2a12c
+ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222319"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860809"
 ---
 # <a name="about-commonparameters"></a>Informationen zu CommonParameters
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 Standardmäßig werden keine Debugmeldungen angezeigt, da der Wert der `$DebugPreference` Variablen **SilentlyContinue** lautet.
 
-Im interaktiven Modus überschreibt der **Debug** -Parameter den Wert der `$DebugPreference` Variablen für den aktuellen Befehl, wobei der Wert von auf "wird nach" festgelegt wird `$DebugPreference` . **Inquire**
+Im interaktiven Modus überschreibt der **Debug** -Parameter den Wert der `$DebugPreference` Variablen für den aktuellen Befehl, wobei der Wert von auf "wird nach" festgelegt wird `$DebugPreference` . 
 
 Im nicht interaktiven Modus überschreibt der **Debug** -Parameter den Wert der `$DebugPreference` Variablen für den aktuellen Befehl, wobei der Wert von `$DebugPreference` auf **Continue** festgelegt wird.
 
@@ -112,7 +112,7 @@ Der **ErrorAction** -Parameter überschreibt den Wert der `$ErrorActionPreferenc
 
 Der **ErrorAction** -Parameter hat keine Auswirkung auf das Beenden von Fehlern (z. b. fehlende Daten, ungültige Parameter oder unzureichende Berechtigungen), die eine erfolgreiche Ausführung eines Befehls verhindern.
 
-`-ErrorAction:Continue` zeigen Sie die Fehlermeldung an, und führen Sie den Befehl weiter aus. `Continue` ist die Standardoption.
+`-ErrorAction:Continue` zeigen Sie die Fehlermeldung an, und führen Sie den Befehl weiter aus. `Continue` ist die Standardeinstellung.
 
 `-ErrorAction:Ignore` unterdrückt die Fehlermeldung und setzt die Ausführung des Befehls fort. Anders als **SilentlyContinue** fügt **Ignore** die Fehlermeldung nicht zur `$Error` automatischen Variablen hinzu. Der Wert **Ignore** wird in PowerShell 3,0 eingeführt.
 
@@ -295,6 +295,10 @@ $out
 
 **Pipelinevariable** speichert den Wert des aktuellen Pipeline Elements als Variable für jeden benannten Befehl, während er durch die Pipeline fließt.
 
+>[!NOTE]
+> Erweiterte Funktionen können bis zu drei Skriptblöcke aufweisen: `begin` , `process` und `end` . Wenn Sie den **pipelinevariable** -Parameter mit erweiterten Funktionen verwenden, werden der Variablen nur Werte aus dem ersten definierten Skriptblock zugewiesen, wenn die Funktion ausgeführt wird. Weitere Informationen finden Sie unter [Advanced functions](./about_functions_advanced.md).
+> PowerShell 7,2 korrigiert dieses Verhalten.
+
 ```yaml
 Type: String
 Aliases: pv
@@ -368,7 +372,7 @@ Accept wildcard characters: False
 
 Der **WarningAction** -Parameter überschreibt den Wert der `$WarningPreference` Variablen für den aktuellen Befehl. Da der Standardwert der `$WarningPreference` Variablen **Continue** lautet, werden Warnungen angezeigt, und die Ausführung wird fortgesetzt, es sei denn, Sie verwenden den **WarningAction** -Parameter.
 
-`-WarningAction:Continue` zeigt die Warnmeldungen an und setzt die Ausführung des Befehls fort. `Continue` ist die Standardoption.
+`-WarningAction:Continue` zeigt die Warnmeldungen an und setzt die Ausführung des Befehls fort. `Continue` ist die Standardeinstellung.
 
 `-WarningAction:Inquire` zeigt die Warnmeldung an und fordert Sie zur Bestätigung auf, bevor die Ausführung fortgesetzt wird. Dieser Wert wird nur selten verwendet.
 
@@ -557,6 +561,6 @@ about_Common_Parameters
 
 [Write-Warning](xref:Microsoft.PowerShell.Utility.Write-Warning)
 
-[Schreibfehler](xref:Microsoft.PowerShell.Utility.Write-Error)
+[Write-Error](xref:Microsoft.PowerShell.Utility.Write-Error)
 
 [Write-Verbose](xref:Microsoft.PowerShell.Utility.Write-Verbose)

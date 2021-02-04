@@ -3,12 +3,12 @@ title: Was Sie schon immer über PSCustomObject wissen wollten
 description: PSCustomObject ist eine einfache Möglichkeit zum Erstellen strukturierter Daten.
 ms.date: 10/05/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: ccbdcdae5ad38f555233dffbed7e8a6ec2b0726b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 8086541bf93b4d3f878c9a3f7ca4300dc452a80b
+ms.sourcegitcommit: 08c63095f54916013634d6703f2523779815f4b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "91772319"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99424470"
 ---
 # <a name="everything-you-wanted-to-know-about-pscustomobject"></a>Was Sie schon immer über PSCustomObject wissen wollten
 
@@ -74,7 +74,7 @@ Diese Methode ist zwar etwas langsamer, könnte aber bei älteren Versionen von 
 Ich finde, die beste Möglichkeit, eine Hashtabelle in einer Datei zu speichern, ist die Speicherung als JSON. Sie können sie zurück in ein `[PSCustomObject]` importieren.
 
 ```powershell
-$myObject | ConvertTo-Json -depth 1- | Set-Content -Path $Path
+$myObject | ConvertTo-Json -depth 1 | Set-Content -Path $Path
 $myObject = Get-Content -Path $Path | ConvertFrom-Json
 ```
 
@@ -87,7 +87,7 @@ Weitere Möglichkeiten, Objekte in einer Datei zu speichern, beschreibe ich in m
 Sie können Ihrem `PSCustomObject` weiterhin mit `Add-Member` neue Eigenschaften hinzufügen.
 
 ```powershell
-$myObject | Add-Member -MemberType NoteProperty -Name `ID` -Value 'KevinMarquette'
+$myObject | Add-Member -MemberType NoteProperty -Name 'ID' -Value 'KevinMarquette'
 
 $myObject.ID
 ```
