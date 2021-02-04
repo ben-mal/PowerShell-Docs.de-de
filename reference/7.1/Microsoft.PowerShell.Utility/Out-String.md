@@ -3,45 +3,45 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/29/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-string?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-String
-ms.openlocfilehash: 16dc25e3468eaf3126b3286cfd71bfea9627c015
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: 09995397e33bf3fa1facc4137f4517390d69b78e
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "93220127"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620172"
 ---
-# <span data-ttu-id="4f132-103">Out-String</span><span class="sxs-lookup"><span data-stu-id="4f132-103">Out-String</span></span>
+# <span data-ttu-id="81d9f-103">Out-String</span><span class="sxs-lookup"><span data-stu-id="81d9f-103">Out-String</span></span>
 
-## <span data-ttu-id="4f132-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="4f132-104">SYNOPSIS</span></span>
-<span data-ttu-id="4f132-105">Gibt Eingabe Objekte als Zeichen folgen aus.</span><span class="sxs-lookup"><span data-stu-id="4f132-105">Outputs input objects as a strings.</span></span>
+## <span data-ttu-id="81d9f-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="81d9f-104">Synopsis</span></span>
+<span data-ttu-id="81d9f-105">Gibt Eingabe Objekte als Zeichen folgen aus.</span><span class="sxs-lookup"><span data-stu-id="81d9f-105">Outputs input objects as a strings.</span></span>
 
-## <span data-ttu-id="4f132-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="4f132-106">SYNTAX</span></span>
+## <span data-ttu-id="81d9f-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="81d9f-106">Syntax</span></span>
 
-### <span data-ttu-id="4f132-107">Nonewlineformatierung (Standard)</span><span class="sxs-lookup"><span data-stu-id="4f132-107">NoNewLineFormatting (Default)</span></span>
+### <span data-ttu-id="81d9f-107">Nonewlineformatierung (Standard)</span><span class="sxs-lookup"><span data-stu-id="81d9f-107">NoNewLineFormatting (Default)</span></span>
 
 ```
 Out-String [-Width <Int32>] [-NoNewline] [-InputObject <PSObject>] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="4f132-108">Streamformatierung</span><span class="sxs-lookup"><span data-stu-id="4f132-108">StreamFormatting</span></span>
+### <span data-ttu-id="81d9f-108">Streamformatierung</span><span class="sxs-lookup"><span data-stu-id="81d9f-108">StreamFormatting</span></span>
 
 ```
 Out-String [-Stream] [-Width <Int32>] [-InputObject <PSObject>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="4f132-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="4f132-109">DESCRIPTION</span></span>
+## <span data-ttu-id="81d9f-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="81d9f-109">Description</span></span>
 
-<span data-ttu-id="4f132-110">Mit dem- `Out-String` Cmdlet werden Eingabe Objekte in Zeichen folgen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="4f132-110">The `Out-String` cmdlet converts input objects into strings.</span></span> <span data-ttu-id="4f132-111">Standardmäßig `Out-String` sammelt die Zeichen folgen und gibt Sie als eine einzelne Zeichenfolge zurück. Sie können jedoch den **Stream** -Parameter verwenden, um `Out-String` eine Zeile gleichzeitig zurückzugeben oder ein Array von Zeichen folgen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="4f132-111">By default, `Out-String` accumulates the strings and returns them as a single string, but you can use the **Stream** parameter to direct `Out-String` to return one line at a time or create and array of strings.</span></span> <span data-ttu-id="4f132-112">Mit diesem Cmdlet können Sie die Zeichenfolgenausgabe so wie in herkömmlichen Shells durchsuchen und bearbeiten, wenn die Objektbearbeitung ungeeignet ist.</span><span class="sxs-lookup"><span data-stu-id="4f132-112">This cmdlet lets you search and manipulate string output as you would in traditional shells when object manipulation is less convenient.</span></span>
+<span data-ttu-id="81d9f-110">Mit dem- `Out-String` Cmdlet werden Eingabe Objekte in Zeichen folgen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="81d9f-110">The `Out-String` cmdlet converts input objects into strings.</span></span> <span data-ttu-id="81d9f-111">Standardmäßig `Out-String` sammelt die Zeichen folgen und gibt Sie als eine einzelne Zeichenfolge zurück. Sie können jedoch den **Stream** -Parameter verwenden, um `Out-String` eine Zeile gleichzeitig zurückzugeben oder ein Array von Zeichen folgen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="81d9f-111">By default, `Out-String` accumulates the strings and returns them as a single string, but you can use the **Stream** parameter to direct `Out-String` to return one line at a time or create and array of strings.</span></span> <span data-ttu-id="81d9f-112">Mit diesem Cmdlet können Sie die Zeichenfolgenausgabe so wie in herkömmlichen Shells durchsuchen und bearbeiten, wenn die Objektbearbeitung ungeeignet ist.</span><span class="sxs-lookup"><span data-stu-id="81d9f-112">This cmdlet lets you search and manipulate string output as you would in traditional shells when object manipulation is less convenient.</span></span>
 
-## <span data-ttu-id="4f132-113">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="4f132-113">EXAMPLES</span></span>
+## <span data-ttu-id="81d9f-113">Beispiele</span><span class="sxs-lookup"><span data-stu-id="81d9f-113">Examples</span></span>
 
-### <span data-ttu-id="4f132-114">Beispiel 1: erhalten der aktuellen Kultur und Konvertieren der Daten in Zeichen folgen</span><span class="sxs-lookup"><span data-stu-id="4f132-114">Example 1: Get the current culture and convert the data to strings</span></span>
+### <span data-ttu-id="81d9f-114">Beispiel 1: erhalten der aktuellen Kultur und Konvertieren der Daten in Zeichen folgen</span><span class="sxs-lookup"><span data-stu-id="81d9f-114">Example 1: Get the current culture and convert the data to strings</span></span>
 
-<span data-ttu-id="4f132-115">In diesem Beispiel werden die regionalen Einstellungen für den aktuellen Benutzer abgerufen und die Objektdaten in Zeichen folgen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="4f132-115">This example gets the regional settings for the current user and converts the object data to strings.</span></span>
+<span data-ttu-id="81d9f-115">In diesem Beispiel werden die regionalen Einstellungen für den aktuellen Benutzer abgerufen und die Objektdaten in Zeichen folgen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="81d9f-115">This example gets the regional settings for the current user and converts the object data to strings.</span></span>
 
 ```powershell
 $C = Get-Culture | Select-Object -Property *
@@ -73,18 +73,18 @@ UseUserOverride                : True
 IsReadOnly                     : False
 ```
 
-<span data-ttu-id="4f132-116">Die `$C` Variable speichert ein **Selected.System. Globalization. CultureInfo** -Objekt.</span><span class="sxs-lookup"><span data-stu-id="4f132-116">The `$C` variable stores a **Selected.System.Globalization.CultureInfo** object.</span></span> <span data-ttu-id="4f132-117">Das-Objekt ist das Ergebnis des `Get-Culture` Sendens der Ausgabe in der Pipeline an `Select-Object` .</span><span class="sxs-lookup"><span data-stu-id="4f132-117">The object is the result of `Get-Culture` sending output down the pipeline to `Select-Object`.</span></span> <span data-ttu-id="4f132-118">Der **Property** -Parameter verwendet ein Sternchen-Platzhalter Zeichen ( `*` ), um alle Eigenschaften anzugeben, die im-Objekt enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="4f132-118">The **Property** parameter uses an asterisk (`*`) wildcard to specify all properties are contained in the object.</span></span>
+<span data-ttu-id="81d9f-116">Die `$C` Variable speichert ein **Selected.System. Globalization. CultureInfo** -Objekt.</span><span class="sxs-lookup"><span data-stu-id="81d9f-116">The `$C` variable stores a **Selected.System.Globalization.CultureInfo** object.</span></span> <span data-ttu-id="81d9f-117">Das-Objekt ist das Ergebnis des `Get-Culture` Sendens der Ausgabe in der Pipeline an `Select-Object` .</span><span class="sxs-lookup"><span data-stu-id="81d9f-117">The object is the result of `Get-Culture` sending output down the pipeline to `Select-Object`.</span></span> <span data-ttu-id="81d9f-118">Der **Property** -Parameter verwendet ein Sternchen-Platzhalter Zeichen ( `*` ), um alle Eigenschaften anzugeben, die im-Objekt enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="81d9f-118">The **Property** parameter uses an asterisk (`*`) wildcard to specify all properties are contained in the object.</span></span>
 
-<span data-ttu-id="4f132-119">`Out-String` verwendet den **Inputobject** -Parameter, um das **CultureInfo** -Objekt anzugeben, das in der Variablen gespeichert ist `$C` .</span><span class="sxs-lookup"><span data-stu-id="4f132-119">`Out-String` uses the **InputObject** parameter to specify the **CultureInfo** object stored in the `$C` variable.</span></span> <span data-ttu-id="4f132-120">Die Objekte in `$C` werden in eine Zeichenfolge konvertiert.</span><span class="sxs-lookup"><span data-stu-id="4f132-120">The objects in `$C` are converted to a string.</span></span>
+<span data-ttu-id="81d9f-119">`Out-String` verwendet den **Inputobject** -Parameter, um das **CultureInfo** -Objekt anzugeben, das in der Variablen gespeichert ist `$C` .</span><span class="sxs-lookup"><span data-stu-id="81d9f-119">`Out-String` uses the **InputObject** parameter to specify the **CultureInfo** object stored in the `$C` variable.</span></span> <span data-ttu-id="81d9f-120">Die Objekte in `$C` werden in eine Zeichenfolge konvertiert.</span><span class="sxs-lookup"><span data-stu-id="81d9f-120">The objects in `$C` are converted to a string.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4f132-121">Um das `Out-String` Array anzuzeigen, speichern Sie die Ausgabe in einer Variablen, und verwenden Sie einen Array Index, um die Elemente anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="4f132-121">To view the `Out-String` array, store the output to a variable and use an array index to view the elements.</span></span> <span data-ttu-id="4f132-122">Weitere Informationen zum Array Index finden Sie unter [about_Arrays](../microsoft.powershell.core/about/about_arrays.md).</span><span class="sxs-lookup"><span data-stu-id="4f132-122">For more information about the array index, see [about_Arrays](../microsoft.powershell.core/about/about_arrays.md).</span></span>
+> <span data-ttu-id="81d9f-121">Um das `Out-String` Array anzuzeigen, speichern Sie die Ausgabe in einer Variablen, und verwenden Sie einen Array Index, um die Elemente anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="81d9f-121">To view the `Out-String` array, store the output to a variable and use an array index to view the elements.</span></span> <span data-ttu-id="81d9f-122">Weitere Informationen zum Array Index finden Sie unter [about_Arrays](../microsoft.powershell.core/about/about_arrays.md).</span><span class="sxs-lookup"><span data-stu-id="81d9f-122">For more information about the array index, see [about_Arrays](../microsoft.powershell.core/about/about_arrays.md).</span></span>
 >
 > `$str = Out-String -InputObject $C -Width 100`
 
-### <span data-ttu-id="4f132-123">Beispiel 2: Arbeiten mit Objekten</span><span class="sxs-lookup"><span data-stu-id="4f132-123">Example 2: Working with objects</span></span>
+### <span data-ttu-id="81d9f-123">Beispiel 2: Arbeiten mit Objekten</span><span class="sxs-lookup"><span data-stu-id="81d9f-123">Example 2: Working with objects</span></span>
 
-<span data-ttu-id="4f132-124">Dieses Beispiel veranschaulicht den Unterschied zwischen dem Arbeiten mit Objekten und dem Arbeiten mit Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="4f132-124">This example demonstrates the difference between working with objects and working with strings.</span></span> <span data-ttu-id="4f132-125">Der Befehl zeigt einen Alias an, der den Text **GCM** enthält, den Alias für `Get-Command` .</span><span class="sxs-lookup"><span data-stu-id="4f132-125">The command displays an alias that includes the text **gcm** , the alias for `Get-Command`.</span></span>
+<span data-ttu-id="81d9f-124">Dieses Beispiel veranschaulicht den Unterschied zwischen dem Arbeiten mit Objekten und dem Arbeiten mit Zeichenfolgen.</span><span class="sxs-lookup"><span data-stu-id="81d9f-124">This example demonstrates the difference between working with objects and working with strings.</span></span> <span data-ttu-id="81d9f-125">Der Befehl zeigt einen Alias an, der den Text **GCM** enthält, den Alias für `Get-Command` .</span><span class="sxs-lookup"><span data-stu-id="81d9f-125">The command displays an alias that includes the text **gcm**, the alias for `Get-Command`.</span></span>
 
 ```powershell
 Get-Alias | Out-String -Stream | Select-String -Pattern "gcm"
@@ -94,14 +94,14 @@ Get-Alias | Out-String -Stream | Select-String -Pattern "gcm"
 Alias           gcm -> Get-Command
 ```
 
-<span data-ttu-id="4f132-126">`Get-Alias` Ruft die **System. Management. Automation. AliasInfo** -Objekte ab, eine für jeden Alias und sendet die Objekte in der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="4f132-126">`Get-Alias` gets the **System.Management.Automation.AliasInfo** objects, one for each alias, and sends the objects down the pipeline.</span></span> <span data-ttu-id="4f132-127">`Out-String` verwendet den **Stream** -Parameter, um jedes-Objekt in eine Zeichenfolge zu konvertieren, indem alle-Objekte in einer einzelnen Zeichenfolge verkettet werden.</span><span class="sxs-lookup"><span data-stu-id="4f132-127">`Out-String` uses the **Stream** parameter to convert each object to a string rather concatenating all the objects into a single string.</span></span> <span data-ttu-id="4f132-128">Die **System. String** -Objekte werden über die Pipeline gesendet und `Select-String` verwenden den **Pattern** -Parameter, um Übereinstimmungen für den Text- **GCM** zu suchen.</span><span class="sxs-lookup"><span data-stu-id="4f132-128">The **System.String** objects are sent down the pipeline and `Select-String` uses the **Pattern** parameter to find matches for the text **gcm**.</span></span>
+<span data-ttu-id="81d9f-126">`Get-Alias` Ruft die **System. Management. Automation. AliasInfo** -Objekte ab, eine für jeden Alias und sendet die Objekte in der Pipeline.</span><span class="sxs-lookup"><span data-stu-id="81d9f-126">`Get-Alias` gets the **System.Management.Automation.AliasInfo** objects, one for each alias, and sends the objects down the pipeline.</span></span> <span data-ttu-id="81d9f-127">`Out-String` verwendet den **Stream** -Parameter, um jedes-Objekt in eine Zeichenfolge zu konvertieren, indem alle-Objekte in einer einzelnen Zeichenfolge verkettet werden.</span><span class="sxs-lookup"><span data-stu-id="81d9f-127">`Out-String` uses the **Stream** parameter to convert each object to a string rather concatenating all the objects into a single string.</span></span> <span data-ttu-id="81d9f-128">Die **System. String** -Objekte werden über die Pipeline gesendet und `Select-String` verwenden den **Pattern** -Parameter, um Übereinstimmungen für den Text- **GCM** zu suchen.</span><span class="sxs-lookup"><span data-stu-id="81d9f-128">The **System.String** objects are sent down the pipeline and `Select-String` uses the **Pattern** parameter to find matches for the text **gcm**.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4f132-129">Wenn Sie den **Stream** -Parameter weglassen, zeigt der Befehl alle Aliase an, da `Select-String` den Text- **GCM** in der einzelnen Zeichenfolge findet, die `Out-String` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="4f132-129">If you omit the **Stream** parameter, the command displays all the aliases because `Select-String` finds the text **gcm** in the single string that `Out-String` returns.</span></span>
+> <span data-ttu-id="81d9f-129">Wenn Sie den **Stream** -Parameter weglassen, zeigt der Befehl alle Aliase an, da `Select-String` den Text- **GCM** in der einzelnen Zeichenfolge findet, die `Out-String` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="81d9f-129">If you omit the **Stream** parameter, the command displays all the aliases because `Select-String` finds the text **gcm** in the single string that `Out-String` returns.</span></span>
 
-### <span data-ttu-id="4f132-130">Beispiel 3: Verwenden Sie den width-Parameter, um das Abschneiden zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="4f132-130">Example 3: Use the Width parameter to prevent truncation.</span></span>
+### <span data-ttu-id="81d9f-130">Beispiel 3: Verwenden Sie den width-Parameter, um das Abschneiden zu verhindern.</span><span class="sxs-lookup"><span data-stu-id="81d9f-130">Example 3: Use the Width parameter to prevent truncation.</span></span>
 
-<span data-ttu-id="4f132-131">Obwohl die meisten Ausgaben von `Out-String` in die nächste Zeile umschließt werden, gibt es Szenarien, in denen die Ausgabe vom Formatierungs System abgeschnitten wird, bevor Sie an weitergeleitet wird `Out-String` .</span><span class="sxs-lookup"><span data-stu-id="4f132-131">While most output from `Out-String` is wrapped to the next line, there are scenarios where the output is truncated by the formatting system before being passed to `Out-String`.</span></span> <span data-ttu-id="4f132-132">Sie können das Abschneiden mithilfe des **Width** -Parameters vermeiden.</span><span class="sxs-lookup"><span data-stu-id="4f132-132">You can avoid truncation using the **Width** parameter.</span></span>
+<span data-ttu-id="81d9f-131">Obwohl die meisten Ausgaben von `Out-String` in die nächste Zeile umschließt werden, gibt es Szenarien, in denen die Ausgabe vom Formatierungs System abgeschnitten wird, bevor Sie an weitergeleitet wird `Out-String` .</span><span class="sxs-lookup"><span data-stu-id="81d9f-131">While most output from `Out-String` is wrapped to the next line, there are scenarios where the output is truncated by the formatting system before being passed to `Out-String`.</span></span> <span data-ttu-id="81d9f-132">Sie können das Abschneiden mithilfe des **Width** -Parameters vermeiden.</span><span class="sxs-lookup"><span data-stu-id="81d9f-132">You can avoid truncation using the **Width** parameter.</span></span>
 
 ```powershell
 PS> @{TestKey = ('x' * 200)} | Out-String
@@ -118,11 +118,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-## <span data-ttu-id="4f132-133">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="4f132-133">PARAMETERS</span></span>
+## <span data-ttu-id="81d9f-133">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="81d9f-133">PARAMETERS</span></span>
 
-### <span data-ttu-id="4f132-134">-InputObject</span><span class="sxs-lookup"><span data-stu-id="4f132-134">-InputObject</span></span>
+### <span data-ttu-id="81d9f-134">-InputObject</span><span class="sxs-lookup"><span data-stu-id="81d9f-134">-InputObject</span></span>
 
-<span data-ttu-id="4f132-135">Gibt die Objekte an, die in eine Zeichenfolge geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="4f132-135">Specifies the objects to be written to a string.</span></span> <span data-ttu-id="4f132-136">Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="4f132-136">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span>
+<span data-ttu-id="81d9f-135">Gibt die Objekte an, die in eine Zeichenfolge geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="81d9f-135">Specifies the objects to be written to a string.</span></span> <span data-ttu-id="81d9f-136">Geben Sie eine Variable ein, die die Objekte enthält, oder geben Sie einen Befehl oder einen Ausdruck ein, mit dem die Objekte abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="81d9f-136">Enter a variable that contains the objects, or type a command or expression that gets the objects.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -136,11 +136,11 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4f132-137">-Nonewline</span><span class="sxs-lookup"><span data-stu-id="4f132-137">-NoNewline</span></span>
+### <span data-ttu-id="81d9f-137">-Nonewline</span><span class="sxs-lookup"><span data-stu-id="81d9f-137">-NoNewline</span></span>
 
-<span data-ttu-id="4f132-138">Entfernt alle Zeilenumbrüche aus der Ausgabe, die vom PowerShell-Formatierer generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="4f132-138">Removes all newlines from output generated by the PowerShell formatter.</span></span> <span data-ttu-id="4f132-139">Zeilenumbrüche, die Teil der Zeichen folgen Objekte sind, werden beibehalten.</span><span class="sxs-lookup"><span data-stu-id="4f132-139">Newlines that are part of the string objects are preserved.</span></span>
+<span data-ttu-id="81d9f-138">Entfernt alle Zeilenumbrüche aus der Ausgabe, die vom PowerShell-Formatierer generiert wurden.</span><span class="sxs-lookup"><span data-stu-id="81d9f-138">Removes all newlines from output generated by the PowerShell formatter.</span></span> <span data-ttu-id="81d9f-139">Zeilenumbrüche, die Teil der Zeichen folgen Objekte sind, werden beibehalten.</span><span class="sxs-lookup"><span data-stu-id="81d9f-139">Newlines that are part of the string objects are preserved.</span></span>
 
-<span data-ttu-id="4f132-140">Dieser Parameter wurde in PowerShell 6,0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="4f132-140">This parameter was introduced in PowerShell 6.0.</span></span>
+<span data-ttu-id="81d9f-140">Dieser Parameter wurde in PowerShell 6,0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="81d9f-140">This parameter was introduced in PowerShell 6.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -154,9 +154,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4f132-141">-Stream</span><span class="sxs-lookup"><span data-stu-id="4f132-141">-Stream</span></span>
+### <span data-ttu-id="81d9f-141">-Stream</span><span class="sxs-lookup"><span data-stu-id="81d9f-141">-Stream</span></span>
 
-<span data-ttu-id="4f132-142">Gibt an, dass das Cmdlet für jede Zeile eines Eingabe Objekts eine separate Zeichenfolge sendet.</span><span class="sxs-lookup"><span data-stu-id="4f132-142">Indicates that the cmdlet sends a separate string for each line of an input object.</span></span> <span data-ttu-id="4f132-143">Standardmäßig werden die Zeichenfolgen für die einzelnen Objekte gesammelt und als eine Zeichenfolge gesendet.</span><span class="sxs-lookup"><span data-stu-id="4f132-143">By default, the strings for each object are accumulated and sent as a single string.</span></span>
+<span data-ttu-id="81d9f-142">Standardmäßig `Out-String` gibt eine einzelne Zeichenfolge aus, die so formatiert ist, wie Sie in der-Konsole angezeigt wird, einschließlich leerer Header oder nachfolgender Zeilenumbruch.</span><span class="sxs-lookup"><span data-stu-id="81d9f-142">By default, `Out-String` outputs a single string formatted as you would see it in the console including any blank headers or trailing newlines.</span></span> <span data-ttu-id="81d9f-143">Der **Stream** -Parameter ermöglicht `Out-String` , jede Zeile nacheinander auszugeben.</span><span class="sxs-lookup"><span data-stu-id="81d9f-143">The **Stream** parameter enables `Out-String` to output each line one by one.</span></span> <span data-ttu-id="81d9f-144">Die einzige Ausnahme hierbei sind mehrzeilige Zeichen folgen.</span><span class="sxs-lookup"><span data-stu-id="81d9f-144">The only exception to this are multiline strings.</span></span> <span data-ttu-id="81d9f-145">In diesem Fall gibt `Out-String` die Zeichenfolge weiterhin als eine einzelne, mehrzeilige Zeichenfolge aus.</span><span class="sxs-lookup"><span data-stu-id="81d9f-145">In that case, `Out-String` will still output the string as a single, multiline string.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -170,9 +170,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4f132-144">-Breite</span><span class="sxs-lookup"><span data-stu-id="4f132-144">-Width</span></span>
+### <span data-ttu-id="81d9f-146">-Breite</span><span class="sxs-lookup"><span data-stu-id="81d9f-146">-Width</span></span>
 
-<span data-ttu-id="4f132-145">Gibt die Anzahl der Zeichen in jeder Zeile der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="4f132-145">Specifies the number of characters in each line of output.</span></span> <span data-ttu-id="4f132-146">Alle zusätzlichen Zeichen werden je nach verwendetem Formatierer-Cmdlet in die nächste Zeile umschließt oder abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="4f132-146">Any additional characters are wrapped to the next line or truncated depending on the formatter cmdlet used.</span></span> <span data-ttu-id="4f132-147">Der **Width** -Parameter gilt nur für Objekte, die formatiert werden.</span><span class="sxs-lookup"><span data-stu-id="4f132-147">The **Width** parameter applies only to objects that are being formatted.</span></span> <span data-ttu-id="4f132-148">Wenn Sie diesen Parameter weglassen, wird die Breite durch die Merkmale des Hostprogramms bestimmt.</span><span class="sxs-lookup"><span data-stu-id="4f132-148">If you omit this parameter, the width is determined by the characteristics of the host program.</span></span> <span data-ttu-id="4f132-149">Im Terminalfenster (Konsolenfenster) wird die aktuelle Fensterbreite als Standardwert verwendet.</span><span class="sxs-lookup"><span data-stu-id="4f132-149">In terminal (console) windows, the current window width is used as the default value.</span></span> <span data-ttu-id="4f132-150">Bei der Installation von PowerShell-Konsolen Fenstern wird standardmäßig eine Breite von 80 Zeichen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4f132-150">PowerShell console windows default to a width of 80 characters on installation.</span></span>
+<span data-ttu-id="81d9f-147">Gibt die Anzahl der Zeichen in jeder Zeile der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="81d9f-147">Specifies the number of characters in each line of output.</span></span> <span data-ttu-id="81d9f-148">Alle zusätzlichen Zeichen werden je nach verwendetem Formatierer-Cmdlet in die nächste Zeile umschließt oder abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="81d9f-148">Any additional characters are wrapped to the next line or truncated depending on the formatter cmdlet used.</span></span> <span data-ttu-id="81d9f-149">Der **Width** -Parameter gilt nur für Objekte, die formatiert werden.</span><span class="sxs-lookup"><span data-stu-id="81d9f-149">The **Width** parameter applies only to objects that are being formatted.</span></span> <span data-ttu-id="81d9f-150">Wenn Sie diesen Parameter weglassen, wird die Breite durch die Merkmale des Hostprogramms bestimmt.</span><span class="sxs-lookup"><span data-stu-id="81d9f-150">If you omit this parameter, the width is determined by the characteristics of the host program.</span></span> <span data-ttu-id="81d9f-151">Im Terminalfenster (Konsolenfenster) wird die aktuelle Fensterbreite als Standardwert verwendet.</span><span class="sxs-lookup"><span data-stu-id="81d9f-151">In terminal (console) windows, the current window width is used as the default value.</span></span> <span data-ttu-id="81d9f-152">Bei der Installation von PowerShell-Konsolen Fenstern wird standardmäßig eine Breite von 80 Zeichen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="81d9f-152">PowerShell console windows default to a width of 80 characters on installation.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -186,39 +186,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="4f132-151">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="4f132-151">CommonParameters</span></span>
+### <span data-ttu-id="81d9f-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="81d9f-153">CommonParameters</span></span>
 
-<span data-ttu-id="4f132-152">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="4f132-152">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="4f132-153">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="4f132-153">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="81d9f-154">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="81d9f-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="81d9f-155">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="81d9f-155">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="4f132-154">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="4f132-154">INPUTS</span></span>
+## <span data-ttu-id="81d9f-156">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="81d9f-156">INPUTS</span></span>
 
-### <span data-ttu-id="4f132-155">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="4f132-155">System.Management.Automation.PSObject</span></span>
+### <span data-ttu-id="81d9f-157">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="81d9f-157">System.Management.Automation.PSObject</span></span>
 
-<span data-ttu-id="4f132-156">Sie können Objekte über die Pipeline an senden `Out-String` .</span><span class="sxs-lookup"><span data-stu-id="4f132-156">You can send objects down the pipeline to `Out-String`.</span></span>
+<span data-ttu-id="81d9f-158">Sie können Objekte über die Pipeline an senden `Out-String` .</span><span class="sxs-lookup"><span data-stu-id="81d9f-158">You can send objects down the pipeline to `Out-String`.</span></span>
 
-## <span data-ttu-id="4f132-157">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="4f132-157">OUTPUTS</span></span>
+## <span data-ttu-id="81d9f-159">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="81d9f-159">OUTPUTS</span></span>
 
-### <span data-ttu-id="4f132-158">System.String</span><span class="sxs-lookup"><span data-stu-id="4f132-158">System.String</span></span>
+### <span data-ttu-id="81d9f-160">System.String</span><span class="sxs-lookup"><span data-stu-id="81d9f-160">System.String</span></span>
 
-<span data-ttu-id="4f132-159">`Out-String` Gibt die Zeichenfolge zurück, die aus dem Eingabe Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="4f132-159">`Out-String` returns the string that it creates from the input object.</span></span>
+<span data-ttu-id="81d9f-161">`Out-String` Gibt die Zeichenfolge zurück, die aus dem Eingabe Objekt erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="81d9f-161">`Out-String` returns the string that it creates from the input object.</span></span>
 
-## <span data-ttu-id="4f132-160">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="4f132-160">NOTES</span></span>
+## <span data-ttu-id="81d9f-162">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="81d9f-162">NOTES</span></span>
 
-<span data-ttu-id="4f132-161">Die Cmdlets, die das `Out` Verb enthalten, formatieren Objekte nicht.</span><span class="sxs-lookup"><span data-stu-id="4f132-161">The cmdlets that contain the `Out` verb don't format objects.</span></span> <span data-ttu-id="4f132-162">Die- `Out` Cmdlets senden-Objekte an das Formatierer für das angegebene Anzeige Ziel.</span><span class="sxs-lookup"><span data-stu-id="4f132-162">The `Out` cmdlets send objects to the formatter for the specified display destination.</span></span>
+<span data-ttu-id="81d9f-163">Die Cmdlets, die das `Out` Verb enthalten, formatieren Objekte nicht.</span><span class="sxs-lookup"><span data-stu-id="81d9f-163">The cmdlets that contain the `Out` verb don't format objects.</span></span> <span data-ttu-id="81d9f-164">Die- `Out` Cmdlets senden-Objekte an das Formatierer für das angegebene Anzeige Ziel.</span><span class="sxs-lookup"><span data-stu-id="81d9f-164">The `Out` cmdlets send objects to the formatter for the specified display destination.</span></span>
 
-## <span data-ttu-id="4f132-163">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="4f132-163">RELATED LINKS</span></span>
+## <span data-ttu-id="81d9f-165">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="81d9f-165">RELATED LINKS</span></span>
 
-[<span data-ttu-id="4f132-164">about_Formatting</span><span class="sxs-lookup"><span data-stu-id="4f132-164">about_Formatting</span></span>](../Microsoft.PowerShell.Core/About/about_Format.ps1xml.md)
+[<span data-ttu-id="81d9f-166">about_Formatting</span><span class="sxs-lookup"><span data-stu-id="81d9f-166">about_Formatting</span></span>](../Microsoft.PowerShell.Core/About/about_Format.ps1xml.md)
 
-[<span data-ttu-id="4f132-165">Out-Default</span><span class="sxs-lookup"><span data-stu-id="4f132-165">Out-Default</span></span>](../Microsoft.PowerShell.Core/Out-Default.md)
+[<span data-ttu-id="81d9f-167">Out-Default</span><span class="sxs-lookup"><span data-stu-id="81d9f-167">Out-Default</span></span>](../Microsoft.PowerShell.Core/Out-Default.md)
 
-[<span data-ttu-id="4f132-166">Out-File</span><span class="sxs-lookup"><span data-stu-id="4f132-166">Out-File</span></span>](Out-File.md)
+[<span data-ttu-id="81d9f-168">Out-File</span><span class="sxs-lookup"><span data-stu-id="81d9f-168">Out-File</span></span>](Out-File.md)
 
-[<span data-ttu-id="4f132-167">Out-Host</span><span class="sxs-lookup"><span data-stu-id="4f132-167">Out-Host</span></span>](../Microsoft.PowerShell.Core/Out-Host.md)
+[<span data-ttu-id="81d9f-169">Out-Host</span><span class="sxs-lookup"><span data-stu-id="81d9f-169">Out-Host</span></span>](../Microsoft.PowerShell.Core/Out-Host.md)
 
-[<span data-ttu-id="4f132-168">Out-Null</span><span class="sxs-lookup"><span data-stu-id="4f132-168">Out-Null</span></span>](../Microsoft.PowerShell.Core/Out-Null.md)
+[<span data-ttu-id="81d9f-170">Out-Null</span><span class="sxs-lookup"><span data-stu-id="81d9f-170">Out-Null</span></span>](../Microsoft.PowerShell.Core/Out-Null.md)
 
-[<span data-ttu-id="4f132-169">Out-GridView</span><span class="sxs-lookup"><span data-stu-id="4f132-169">Out-GridView</span></span>](Out-GridView.md)
+[<span data-ttu-id="81d9f-171">Out-GridView</span><span class="sxs-lookup"><span data-stu-id="81d9f-171">Out-GridView</span></span>](Out-GridView.md)
 
-[<span data-ttu-id="4f132-170">Out-Printer</span><span class="sxs-lookup"><span data-stu-id="4f132-170">Out-Printer</span></span>](Out-Printer.md)
-
+[<span data-ttu-id="81d9f-172">Out-Printer</span><span class="sxs-lookup"><span data-stu-id="81d9f-172">Out-Printer</span></span>](Out-Printer.md)
