@@ -5,12 +5,12 @@ ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: 51dfd85044d240f1d1429580d6eeb98c662d62c4
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: fc0b84829a96fc6ba2cafa0c24a7585cc9944fe8
+ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223580"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97614049"
 ---
 # <a name="about-continue"></a>Informationen zum Fortfahren
 
@@ -105,11 +105,11 @@ Wenn die letzte im Text einer-Anweisung ausgeführte Anweisung `trap` ist `conti
 
 Wenn `continue` außerhalb eines Konstrukts verwendet wird, das es direkt unterstützt (Schleifen, `switch` , `trap` ), sucht PowerShell _die-aufrufsstapel_ nach einem einschließenden Konstrukt. Wenn kein einschließendes Konstrukt gefunden werden kann, wird der aktuelle Runspace ruhig beendet.
 
-Dies bedeutet, dass Funktionen und Skripts, die versehentlich einen `continue` außerhalb eines einschließenden Konstrukts verwenden, das es unter _callers_ stützt, ihre Aufrufer versehentlich beenden können.
+Dies bedeutet, dass Funktionen und Skripts, die versehentlich einen `continue` außerhalb eines einschließenden Konstrukts verwenden, das es unter stützt, ihre Aufrufer versehentlich beenden können.
 
-Durch `continue` die Verwendung von in einer Pipeline, wie z. b. einem `ForEach-Object` Skriptblock, wird die Pipeline nicht nur beendet, sondern der gesamte Runspace wird möglicherweise beendet.
+Durch die Verwendung von `continue` in einer Pipeline, wie z. b. einem `ForEach-Object` Skriptblock, wird die Pipeline nicht nur beendet, sondern der gesamte Runspace wird möglicherweise beendet.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 [about_Break](about_Break.md)
 
