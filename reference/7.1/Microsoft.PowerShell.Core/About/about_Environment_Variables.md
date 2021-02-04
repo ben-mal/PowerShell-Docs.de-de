@@ -6,12 +6,12 @@ ms.date: 09/22/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Environment_Variables
-ms.openlocfilehash: c954ee6e783b7926dbcd05a3e08b6b9b5cf9bc25
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 4b5894822f4436f127ed4789fd8008a0e7f2f2df
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222071"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584647"
 ---
 # <a name="about-environment-variables"></a>Informationen zu Umgebungsvariablen
 
@@ -68,7 +68,7 @@ Um z. b. `;c:\temp` an den Wert der `Path` Umgebungsvariablen anzufügen, verwen
 $Env:Path += ";c:\temp"
 ```
 
-Unter Linux oder MacOS trennt der Doppelpunkt ( `:` ) im Befehl den neuen Pfad von dem Pfad, der in der Liste vorangestellt ist.
+Unter Linux oder macOS trennt der Doppelpunkt ( `:` ) im Befehl den neuen Pfad von dem Pfad, der in der Liste vorangestellt ist.
 
 ```powershell
 $Env:PATH += ":/usr/local/temp"
@@ -240,7 +240,7 @@ Alternativ können Sie Umgebungsvariablen in Ihrem PowerShell-Profil hinzufügen
 
 Die **System. Environment** -Klasse stellt die Methoden **GetEnvironmentVariable** und **ltenvironmentvariable** bereit, die es Ihnen ermöglichen, den Gültigkeitsbereich der Variablen anzugeben.
 
-Im folgenden Beispiel wird die **GetEnvironmentVariable** -Methode verwendet, um die Computer Einstellung von `PSModulePath` und die Methode "-Methode" zu erhalten, um den **SetEnvironmentVariable** `C:\Program Files\Fabrikam\Modules` Pfad zum Wert hinzuzufügen.
+Im folgenden Beispiel wird die **GetEnvironmentVariable** -Methode verwendet, um die Computer Einstellung von `PSModulePath` und die Methode "-Methode" zu erhalten, um den  `C:\Program Files\Fabrikam\Modules` Pfad zum Wert hinzuzufügen.
 
 ```powershell
 $path = [Environment]::GetEnvironmentVariable('PSModulePath', 'Machine')

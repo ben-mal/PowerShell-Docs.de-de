@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/write-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Write-EventLog
-ms.openlocfilehash: 4044453cb46b407344619f1edd3227213bf67250
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 051f02b00144805569d5130686a51a0f42b64b00
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388245"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584629"
 ---
 # Write-EventLog
 
@@ -27,6 +27,7 @@ Write-EventLog [-LogName] <String> [-Source] <String> [[-EntryType] <EventLogEnt
 ```
 
 ## DESCRIPTION
+
 Mit dem- `Write-EventLog` Cmdlet wird ein Ereignis in ein Ereignisprotokoll geschrieben.
 
 Damit ein Ereignis in ein Ereignisprotokoll geschrieben werden kann, muss das Ereignisprotokoll auf dem Computer vorhanden sein, und die Quelle muss für das Ereignisprotokoll registriert sein.
@@ -196,16 +197,18 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 ## EINGABEN
 
 ### Keine
+
 Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 
 ## AUSGABEN
 
 ### System. Diagnostics. EventLogEntry
+
 Dieses Cmdlet gibt Objekte zurück, die die Ereignisse in den Protokollen darstellen.
 
 ## HINWEISE
 
-Starten Sie `Write-EventLog` Windows PowerShell mit der Option als Administrator ausführen, um zu verwenden.
+Für einige Windows-Ereignisprotokolle sind für das Schreiben von Ereignissen Administratorrechte erforderlich. Sie müssen PowerShell mit der Option **als Administrator ausführen** starten.
 
 ## VERWANDTE LINKS
 

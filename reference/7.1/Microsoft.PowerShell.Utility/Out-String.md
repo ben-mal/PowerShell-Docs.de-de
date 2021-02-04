@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/29/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-string?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Out-String
-ms.openlocfilehash: 16dc25e3468eaf3126b3286cfd71bfea9627c015
-ms.sourcegitcommit: c8d1ffeab215e74e87ea1b0af8cd606c1a6a80ab
+ms.openlocfilehash: 09995397e33bf3fa1facc4137f4517390d69b78e
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "93220127"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620172"
 ---
 # Out-String
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Gibt Eingabe Objekte als Zeichen folgen aus.
 
-## SYNTAX
+## Syntax
 
 ### Nonewlineformatierung (Standard)
 
@@ -33,11 +33,11 @@ Out-String [-Width <Int32>] [-NoNewline] [-InputObject <PSObject>] [<CommonParam
 Out-String [-Stream] [-Width <Int32>] [-InputObject <PSObject>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Mit dem- `Out-String` Cmdlet werden Eingabe Objekte in Zeichen folgen konvertiert. Standardmäßig `Out-String` sammelt die Zeichen folgen und gibt Sie als eine einzelne Zeichenfolge zurück. Sie können jedoch den **Stream** -Parameter verwenden, um `Out-String` eine Zeile gleichzeitig zurückzugeben oder ein Array von Zeichen folgen zu erstellen. Mit diesem Cmdlet können Sie die Zeichenfolgenausgabe so wie in herkömmlichen Shells durchsuchen und bearbeiten, wenn die Objektbearbeitung ungeeignet ist.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: erhalten der aktuellen Kultur und Konvertieren der Daten in Zeichen folgen
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -Stream
 
-Gibt an, dass das Cmdlet für jede Zeile eines Eingabe Objekts eine separate Zeichenfolge sendet. Standardmäßig werden die Zeichenfolgen für die einzelnen Objekte gesammelt und als eine Zeichenfolge gesendet.
+Standardmäßig `Out-String` gibt eine einzelne Zeichenfolge aus, die so formatiert ist, wie Sie in der-Konsole angezeigt wird, einschließlich leerer Header oder nachfolgender Zeilenumbruch. Der **Stream** -Parameter ermöglicht `Out-String` , jede Zeile nacheinander auszugeben. Die einzige Ausnahme hierbei sind mehrzeilige Zeichen folgen. In diesem Fall gibt `Out-String` die Zeichenfolge weiterhin als eine einzelne, mehrzeilige Zeichenfolge aus.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -221,4 +221,3 @@ Die Cmdlets, die das `Out` Verb enthalten, formatieren Objekte nicht. Die- `Out`
 [Out-GridView](Out-GridView.md)
 
 [Out-Printer](Out-Printer.md)
-

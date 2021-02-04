@@ -1,17 +1,16 @@
 ---
 description: Beschreibt, wie Sie Klassen verwenden können, um eigene benutzerdefinierte Typen zu erstellen.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 09/16/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_classes?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Classes
-ms.openlocfilehash: 3b4222752492d13d07aba14b2b4f157edc319353
-ms.sourcegitcommit: 16d62a98449e3ddaf8d7c65bc1848ede1fd8a3e7
+ms.openlocfilehash: 6459ee4e80515360dcd1c16ac027ead8fa17bacc
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "93219967"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620080"
 ---
 # <a name="about-classes"></a>Informationen zu Klassen
 
@@ -22,9 +21,9 @@ Beschreibt, wie Sie Klassen verwenden können, um eigene benutzerdefinierte Type
 
 PowerShell 5,0 fügt eine formale Syntax zum Definieren von Klassen und anderen benutzerdefinierten Typen hinzu. Das Hinzufügen von Klassen ermöglicht Entwicklern und IT-Experten die Übernahme von PowerShell für eine größere Anzahl von Anwendungsfällen. Es vereinfacht die Entwicklung von PowerShell-Artefakten und beschleunigt die Abdeckung von Verwaltungs Oberflächen.
 
-Eine Klassen Deklaration ist eine Blaupause, mit der Instanzen von Objekten zur Laufzeit erstellt werden. Wenn Sie eine Klasse definieren, ist der Klassenname der Name des Typs. Wenn Sie z. b. eine Klasse mit dem Namen " **Device** " deklarieren und eine Variable `$dev` für eine neue Instanz des **Geräts** initialisieren, `$dev` ist ein Objekt oder eine Instanz vom Typ " **Device** ". Jede Instanz des **Geräts** kann unterschiedliche Werte in den zugehörigen Eigenschaften aufweisen.
+Eine Klassen Deklaration ist eine Blaupause, mit der Instanzen von Objekten zur Laufzeit erstellt werden. Wenn Sie eine Klasse definieren, ist der Klassenname der Name des Typs. Wenn Sie z. b. eine Klasse mit dem Namen " **Device** " deklarieren und eine Variable `$dev` für eine neue Instanz des **Geräts** initialisieren, `$dev` ist ein Objekt oder eine Instanz vom Typ " **Device**". Jede Instanz des **Geräts** kann unterschiedliche Werte in den zugehörigen Eigenschaften aufweisen.
 
-## <a name="supported-scenarios"></a>Unterstützte Szenarien
+## <a name="supported-scenarios"></a>Unterstützte Szenarios
 
 - Definieren Sie benutzerdefinierte Typen in PowerShell mithilfe der vertrauten objektorientierten Programmier Semantik wie Klassen, Eigenschaften, Methoden, Vererbung usw.
 - Debuggen Sie Typen mithilfe der PowerShell-Sprache.
@@ -316,7 +315,7 @@ Microsoft Surface Pro 4 5072641000
 
 In diesem Beispiel wird die **Geräte** Klasse mit Eigenschaften, einem Standardkonstruktor und einem Konstruktor zum Initialisieren der Instanz definiert.
 
-Der Standardkonstruktor legt die **Marke** auf "nicht **definiert** " fest und verlässt die **Modell** **-und Hersteller-SKU** mit NULL-Werten.
+Der Standardkonstruktor legt die **Marke** auf "nicht **definiert**" fest und verlässt die **Modell** **-und Hersteller-SKU** mit NULL-Werten.
 
 ```powershell
 class Device {
@@ -768,13 +767,23 @@ class MyComparableBar : bar, System.IComparable
 
 `Import-Module` und die- `#requires` Anweisung importiert nur die Modulfunktionen, Aliase und Variablen, wie vom Modul definiert. Klassen werden nicht importiert. Die- `using module` Anweisung importiert die im Modul definierten Klassen. Wenn das Modul nicht in die aktuelle Sitzung geladen wird, `using` schlägt die Anweisung fehl. Weitere Informationen zur- `using` Anweisung finden Sie unter [about_Using](about_Using.md).
 
+Die- `using module` Anweisung importiert Klassen aus dem Stamm Modul ( `ModuleToProcess` ) eines Skript Moduls oder eines binären Moduls. Klassen, die in geschposteten Modulen oder Klassen definiert sind, die in Skripts definiert sind, die in das Modul eingefügt werden, werden nicht konsistent importiert. Klassen, die für Benutzer außerhalb des Moduls verfügbar sein sollen, sollten im Stamm Modul definiert werden.
+
+## <a name="loading-newly-changed-code-during-development"></a>Laden von neu geändertem Code während der Entwicklung
+
+Während der Entwicklung eines Skript Moduls ist es üblich, Änderungen am Code vorzunehmen und dann die neue Version des Moduls `Import-Module` mit dem **Force** -Parameter zu laden. Dies funktioniert nur bei Änderungen an Funktionen im Stamm Modul. `Import-Module` führt keine erneuten Laden von Netz Modulen aus. Außerdem gibt es keine Möglichkeit, aktualisierte Klassen zu laden.
+
+Um sicherzustellen, dass Sie die neueste Version ausführen, müssen Sie das Modul mit dem `Remove-Module` Cmdlet entladen. `Remove-Module` entfernt das Stamm Modul, alle in den Modulen definierten Klassen und Klassen. Anschließend können Sie das Modul und die Klassen mithilfe von `Import-Module` und der-Anweisung erneut laden `using module` .
+
+Eine weitere gängige Entwicklungs Übung besteht darin, den Code in verschiedene Dateien zu unterteilen. Wenn Sie über eine Funktion in einer Datei verfügen, die in einem anderen Modul definierte Klassen verwendet, sollten Sie die-Anweisung verwenden, `using module` um sicherzustellen, dass die-Funktionen über die erforderlichen Klassendefinitionen verfügen.
+
 ## <a name="the-psreference-type-is-not-supported-with-class-members"></a>Der psreference-Typ wird für Klassenmember nicht unterstützt.
 
-Wenn Sie die `[ref]` Typumwandlung mit einem Klassenmember verwenden, tritt ein Fehler auf. APIs, die `[ref]` Parameter verwenden, können nicht mit Klassenmembern verwendet werden. Der **psreference** wurde zur Unterstützung von COM-Objekten entwickelt. COM-Objekte verfügen über Fälle, in denen Sie einen Wert als Verweis übergeben müssen.
+Wenn Sie die `[ref]` Typumwandlung mit einem Klassenmember verwenden, tritt ein Fehler auf. APIs, die `[ref]` Parameter verwenden, können nicht mit Klassenmembern verwendet werden. Die **psreference** -Klasse wurde zur Unterstützung von COM-Objekten entwickelt. COM-Objekte verfügen über Fälle, in denen Sie einen Wert als Verweis übergeben müssen.
 
 Weitere Informationen zum- `[ref]` Typ finden Sie unter [psreference-Klasse](/dotnet/api/system.management.automation.psreference).
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [About_hidden](About_hidden.md)
 - [about_Enum](about_Enum.md)

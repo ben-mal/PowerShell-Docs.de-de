@@ -1,17 +1,16 @@
 ---
 description: Erläutert, wie die Ausgabe von PowerShell an Textdateien umgeleitet wird.
-keywords: PowerShell, Cmdlet
 Locale: en-US
 ms.date: 10/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Redirection
-ms.openlocfilehash: 59151c31857f12e3a78fd6d292a6a952c312c850
-ms.sourcegitcommit: 16883bb67e34b3915798070f60f974bf85160bd3
+ms.openlocfilehash: 2f2081bbfcc2cfc97eaa5a3c2c527cdd9cd61d2c
+ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "93224316"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040879"
 ---
 # <a name="about-redirection"></a>Informationen über die Umleitung
 
@@ -37,12 +36,12 @@ Weitere Informationen zu Streams finden Sie unter [about_Output_Streams](about_O
 
 PowerShell unterstützt die Umleitung der folgenden Ausgabedaten Ströme.
 
-| Streich # |      BESCHREIBUNG       | Eingeführt in  |    Cmdlet schreiben     |
+| Streich # |      Beschreibung       | Eingeführt in  |    Cmdlet schreiben     |
 | -------- | ---------------------- | -------------- | ------------------- |
 | 1        | **Erfolg** Streich     | PowerShell 2.0 | `Write-Output`      |
 | 2        | **Fehler** Streich       | PowerShell 2.0 | `Write-Error`       |
 | 3        | **Warnung** Streich     | PowerShell 3.0 | `Write-Warning`     |
-| 4        | **Verbose** Ausführlich Streich     | PowerShell 3.0 | `Write-Verbose`     |
+| 4        |  Ausführlich Streich     | PowerShell 3.0 | `Write-Verbose`     |
 | 5        | **Debuggen** Streich       | PowerShell 3.0 | `Write-Debug`       |
 | 6        | **Informationen** Streich | PowerShell 5.0 | `Write-Information` |
 | *        | Alle Streams            | PowerShell 3.0 |                     |
@@ -92,7 +91,7 @@ Dieses Beispiel zeigt, wie Sie Umleitungs Operatoren kombinieren können, um ein
    Write-Warning "hello"
    Write-Error "hello"
    Write-Output "hi"
-} 3>&1 2>&1 > P:\Temp\redirection.log
+} 3>&1 2>&1 > C:\Temp\redirection.log
 ```
 
 - `3>&1` leitet den **Warnungs** Datenstrom an den **Erfolgs** Datenstrom um.
@@ -184,7 +183,7 @@ Ignore
 Inquire
 ```
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
 Die Umleitungs Operatoren, die keine Daten anfügen ( `>` und `n>` ), überschreiben den aktuellen Inhalt der angegebenen Datei ohne Warnung.
 
@@ -196,7 +195,7 @@ Beim Schreiben in Dateien verwenden die Umleitungs Operatoren die `UTF8NoBOM` Co
 
 ### <a name="potential-confusion-with-comparison-operators"></a>Mögliche Verwirrung mit Vergleichs Operatoren
 
-Der `>` Operator muss nicht mit dem Operator " [größer als](about_Comparison_Operators.md#-gt) Vergleichs Operator" verwechselt werden (oftmals als `>` in anderen Programmiersprachen bezeichnet).
+Der `>` Operator muss nicht mit dem Operator " [größer als](about_Comparison_Operators.md#-gt--ge--lt-and--le) Vergleichs Operator" verwechselt werden (oftmals als `>` in anderen Programmiersprachen bezeichnet).
 
 Abhängig von den verglichenen Objekten kann die Ausgabe mit `>` korrekt erscheinen (da 36 nicht größer als 42 ist).
 
@@ -226,18 +225,18 @@ At line:1 char:8
 + if (36 < 42) { "true" } else { "false" }
 +        ~
 The '<' operator is reserved for future use.
-+ CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-+ FullyQualifiedErrorId : RedirectionNotSupported
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
 ```
 
-Wenn der numerische Vergleich der erforderliche Vorgang ist `-lt` , `-gt` sollte verwendet werden. Siehe: [ `-gt` Vergleichs Operator](about_Comparison_Operators.md#-gt)
+Wenn der numerische Vergleich der erforderliche Vorgang ist `-lt` , `-gt` sollte verwendet werden. Weitere Informationen finden Sie unter dem- `-gt` Operator in [about_Comparison_Operators](about_Comparison_Operators.md#-gt--ge--lt-and--le).
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Out-File](xref:Microsoft.PowerShell.Utility.Out-File)
 - [Tee-Object](xref:Microsoft.PowerShell.Utility.Tee-Object)
 - [Write-Debug](xref:Microsoft.PowerShell.Utility.Write-Debug)
-- [Schreibfehler](xref:Microsoft.PowerShell.Utility.Write-Error)
+- [Write-Error](xref:Microsoft.PowerShell.Utility.Write-Error)
 - [Write-Host](xref:Microsoft.PowerShell.Utility.Write-Host)
 - [Write-Information](xref:Microsoft.PowerShell.Utility.Write-Information)
 - [Write-Output](xref:Microsoft.PowerShell.Utility.Write-Output)

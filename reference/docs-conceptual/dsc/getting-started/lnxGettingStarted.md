@@ -1,14 +1,14 @@
 ---
-ms.date: 11/20/2020
+ms.date: 01/07/2021
 keywords: DSC,PowerShell,Konfiguration,Setup,Einrichtung
 title: Erste Schritte mit DSC für Linux
 description: In diesem Thema werden die ersten Schritte mit PowerShell DSC für Linux erläutert.
-ms.openlocfilehash: df9cab07284a7d6fa199f5524a8719ea490192d0
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: 6f0dea956b16c0828964a10b43abbbc65879ea33
+ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95514999"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98040921"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Erste Schritte mit DSC für Linux
 
@@ -109,15 +109,25 @@ $Node = "ostc-dsc-01"
 $Credential = Get-Credential -UserName "root" -Message "Enter Password:"
 
 #Ignore SSL certificate validation
-#$opt = New-CimSessionOption -UseSsl $true -SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true
+# $opt = New-CimSessionOption -UseSsl -SkipCACheck -SkipCNCheck -SkipRevocationCheck
 
 #Options for a trusted SSL certificate
-$opt = New-CimSessionOption -UseSsl $true
-$Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Authentication basic -SessionOption $opt -OperationTimeoutSec 90
+$opt = New-CimSessionOption -UseSsl
+
+$sessParams = @{
+    Credential = $credential
+    ComputerName = $Node
+    Port = 5986
+    Authentication = 'basic'
+    SessionOption = $opt
+    OperationTimeoutSec = 90
+}
+
+$Sess = New-CimSession @sessParams
 ```
 
 > [!NOTE]
-> Im Pushmodus müssen die Anmeldeinformationen des Benutzers denen des Root-Benutzers auf dem Linux-Computer entsprechen. Für DSC für Linux werden nur SSL/TLS-Verbindungen unterstützt. Der Befehl `New-CimSession` muss mit auf „$true“ festgelegtem „–UseSSL“-Parameter aufgerufen werden. Das von OMI (für DSC) verwendete SSL-Zertifikat wird in der Datei `/etc/opt/omi/conf/omiserver.conf` mit den Eigenschaften „pemfile“ und „keyfile“ angegeben. Wenn diesem Zertifikat vom Windows-Computer nicht vertraut wird, auf dem Sie das Cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) ausführen, können Sie in den Optionen für „CIMSession“ die Überprüfung des Zertifikats ignorieren: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
+> Im Pushmodus müssen die Anmeldeinformationen des Benutzers denen des Root-Benutzers auf dem Linux-Computer entsprechen. Für DSC für Linux werden nur SSL/TLS-Verbindungen unterstützt. Der Befehl `New-CimSession` muss mit auf „$true“ festgelegtem „–UseSSL“-Parameter aufgerufen werden. Das von OMI (für DSC) verwendete SSL-Zertifikat wird in der Datei `/etc/opt/omi/conf/omiserver.conf` mit den Eigenschaften „pemfile“ und „keyfile“ angegeben. Wenn diesem Zertifikat vom Windows-Computer nicht vertraut wird, auf dem Sie das Cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession) ausführen, können Sie in den Optionen für „CIMSession“ die Überprüfung des Zertifikats ignorieren: `-SkipCACheck -SkipCNCheck -SkipRevocationCheck`
 
 Führen Sie den folgenden Befehl aus, um die DSC-Konfiguration per Push auf den Linux-Knoten zu übertragen.
 
@@ -147,7 +157,7 @@ DSC für Linux bietet Skripts für das Ausführen von Konfigurationsaufgaben auf
 
   Installiert ein benutzerdefiniertes DSC-Ressourcenmodul. Erfordert den Pfad zu einer ZIP-Datei, die die freigegebene Objektbibliothek des Moduls und die MOF-Dateien mit dem Schema enthält.
 
- `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
+  `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
 
 - RemoveModule.py
 

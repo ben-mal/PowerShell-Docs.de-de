@@ -1,508 +1,391 @@
 ---
 description: Beschreibt die Operatoren, die Werte in PowerShell vergleichen.
 Locale: en-US
-ms.date: 12/10/2020
+ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: ea48d5928f71983f6d035f0e5e6074ce36754d80
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 0ef3c68d73ae3e1d2040b3654e4f8ba45565717a
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97090510"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98619906"
 ---
 # <a name="about-comparison-operators"></a>Informationen zu Vergleichs Operatoren
 
 ## <a name="short-description"></a>Kurze Beschreibung
-Beschreibt die Operatoren, die Werte in PowerShell vergleichen.
+
+Die Vergleichs Operatoren in PowerShell können entweder zwei Werte vergleichen oder Elemente einer Auflistung mit einem Eingabe Wert filtern.
 
 ## <a name="long-description"></a>Lange Beschreibung
 
-Mit Vergleichs Operatoren können Sie Bedingungen zum Vergleichen von Werten und suchen von Werten angeben, die den angegebenen Mustern entsprechen. Wenn Sie einen Vergleichs Operator verwenden möchten, geben Sie die Werte, die Sie miteinander vergleichen möchten, mit einem Operator an, der diese Werte trennt.
+Mit Vergleichs Operatoren können Sie Werte vergleichen oder Werte suchen, die den angegebenen Mustern entsprechen. PowerShell umfasst die folgenden Vergleichs Operatoren:
 
-PowerShell umfasst die folgenden Vergleichs Operatoren:
+|    Typ     |   Operator   |              Vergleichstest              |
+| ----------- | ------------ | ----------------------------------------- |
+| Gleichheit    | -eq          | equals                                    |
+|             | -ne          | ungleich                                |
+|             | -gt          | Größer als                              |
+|             | -ge          | Größer als oder gleich                     |
+|             | -lt          | Kleiner als                                 |
+|             | -le          | Kleiner als oder gleich                        |
+| Matching    | -like        | Zeichenfolge entspricht Platzhalter Muster           |
+|             | -notlike     | Zeichenfolge entspricht nicht dem Platzhalter Muster    |
+|             | -match       | Zeichenfolge entspricht dem Regex-Muster              |
+|             | -notmatch    | die Zeichenfolge entspricht nicht dem Regex-Muster.       |
+| Ersetzung | -Replace     | ersetzt Zeichen folgen, die einem Regex-Muster entsprechen |
+| Containment | -contains    | die Sammlung enthält einen Wert.               |
+|             | -notcontains | die Sammlung enthält keinen Wert.       |
+|             | -in          | Wert ist in einer Sammlung                  |
+|             | -NOTIN       | der Wert ist nicht in einer Sammlung.              |
+| type        | -ist          | beide Objekte weisen denselben Typ auf.            |
+|             | -IsNot       | die Objekte weisen nicht denselben Typ auf.         |
 
-| type        | Operatoren    | Beschreibung                                 |
-| ----------- | ------------ | --------------------------------------------|
-| Gleichheit    | -eq          | equals                                      |
-|             | -ne          | ungleich                                  |
-|             | -gt          | Größer als                                |
-|             | -ge          | Größer als oder gleich                       |
-|             | -lt          | Kleiner als                                   |
-|             | -le          | Kleiner als oder gleich                          |
-|             |              |                                             |
-| Matching    | -like        | Gibt "true" zurück, wenn die Zeichenfolge   |
-|             |              | pattern                                     |
-|             | -notlike     | Gibt true zurück, wenn die Zeichenfolge nicht entspricht.     |
-|             |              | Platzhalter Muster                            |
-|             | -match       | Gibt true zurück, wenn die Zeichenfolge dem regulären Ausdruck entspricht      |
-|             |              | Bau $Matches enthält übereinstimmende Zeichen folgen |
-|             | -notmatch    | Gibt true zurück, wenn die Zeichenfolge nicht entspricht.     |
-|             |              | Regex-Muster; $Matches enthält Übereinstimmungen.   |
-|             |              | Zeichenfolgen                                     |
-|             |              |                                             |
-| Containment | -contains    | Gibt true zurück, wenn der Verweis Wert enthalten ist |
-|             |              | in einer Sammlung                             |
-|             | -notcontains | Gibt true zurück, wenn der Verweis Wert nicht       |
-|             |              | in einer Auflistung enthalten                   |
-|             | -in          | Gibt true zurück, wenn der Testwert in einer |
-|             |              | collection                                  |
-|             | -NOTIN       | Gibt true zurück, wenn der Testwert nicht enthalten ist.  |
-|             |              | in einer Sammlung                             |
-|             |              |                                             |
-| Ersetzung | -Replace     | Ersetzt ein Zeichen folgen Muster                   |
-|             |              |                                             |
-| type        | -ist          | Gibt "true" zurück, wenn beide Objekte gleich sind.    |
-|             |              | type                                        |
-|             | -IsNot       | Gibt "true" zurück, wenn die Objekte nicht gleich sind.|
-|             |              | type                                        |
+## <a name="common-features"></a>Allgemeine Funktionen
 
-Standardmäßig wird bei allen Vergleichs Operatoren die Groß-/Kleinschreibung beachtet. Um bei einem Vergleichs Operator die Groß-/Kleinschreibung zu beachten, stellen Sie dem Operator Namen eine vor `c` . Beispielsweise ist die Version von mit Beachtung der Groß-/Kleinschreibung `-eq` `-ceq` . Um die Groß-/Kleinschreibung explizit explizit zu machen, stellen Sie dem-Operator eine vor `i` . Beispielsweise ist die Version von, bei der die Groß-/Kleinschreibung nicht beachtet `-eq` wird `-ieq`
+Standardmäßig wird bei allen Vergleichs Operatoren die Groß-/Kleinschreibung beachtet. Um die Groß-/Kleinschreibung für Vergleichs Operatoren zu erstellen, fügen Sie `c` nach dem ein `-` . Beispielsweise `-ceq` ist die Version von mit Beachtung der Groß-/Kleinschreibung `-eq` . Um die Groß-/Kleinschreibung nicht explizit explizit zu gestalten, fügen Sie eine `i` vor hinzu `-` . Beispielsweise `-ieq` ist die explizite Version von ohne Beachtung der Groß-/Kleinschreibung `-eq` .
 
-Wenn die Eingabe für einen Operator ein skalarer Wert ist, geben Vergleichs Operatoren einen booleschen Wert zurück. Wenn die Eingabe eine Auflistung von Werten ist, geben die Vergleichs Operatoren alle übereinstimmenden Werte zurück. Wenn keine Übereinstimmungen in einer Auflistung vorhanden sind, geben Vergleichs Operatoren ein leeres Array zurück.
+Wenn die Eingabe eines Operators ein skalarer Wert ist, gibt der Operator einen **booleschen** Wert zurück. Wenn die Eingabe eine Auflistung ist, gibt der Operator die Elemente der Auflistung zurück, die dem rechten Wert des Ausdrucks entsprechen.
+Wenn in der Auflistung keine Übereinstimmungen vorhanden sind, geben Vergleichs Operatoren ein leeres Array zurück. Beispiele:
 
 ```powershell
-PS> (1, 2 -eq 3).GetType().FullName
-System.Object[]
+$a = (1, 2 -eq 3)
+$a.GetType().Name
+$a.Count
 ```
 
-Die Ausnahmen sind die Containment-Operatoren, die in-Operatoren und die Typoperatoren, die immer einen **booleschen** Wert zurückgeben.
+```output
+Object[]
+0
+```
 
-> [!NOTE]
-> Wenn Sie einen Wert mit vergleichen müssen, `$null` sollten Sie `$null` auf der linken Seite des Vergleichs platzieren. Wenn Sie `$null` mit einem **Objekt []** vergleichen, ist das Ergebnis " **false** ", da das Vergleichs Objekt ein Array ist. Wenn Sie ein Array mit vergleichen `$null` , filtert der Vergleich alle `$null` im Array gespeicherten Werte heraus. Zum Beispiel:
->
-> ```powershell
-> PS> $null -ne $null, "hello"
-> True
-> PS> $null, "hello" -ne $null
-> hello
-> ```
+Es gibt ein paar Ausnahmen:
+
+- Der Containment-und der Type-Operator geben immer einen **booleschen** Wert zurück.
+- Der `-replace` Operator gibt das Ersetzungs Ergebnis zurück.
+- Die `-match` `-notmatch` Operatoren und füllen auch die `$Matches` Automatische Variable auf.
 
 ## <a name="equality-operators"></a>Gleichheitsoperatoren
 
-Die Gleichheits Operatoren ( `-eq` , `-ne` ) geben den Wert true oder die Übereinstimmungen zurück, wenn mindestens ein Eingabe Wert mit dem angegebenen Muster identisch ist. Das gesamte Muster muss mit einem ganzen Wert identisch sein.
+### <a name="-eq-and--ne"></a>-eq und -ne
 
-Beispiel:
-
-### <a name="-eq"></a>-eq
-
-Description: entspricht. Schließt einen identischen Wert ein.
+Wenn die linke Seite Skalar ist, wird `-eq` **true** zurückgegeben, wenn die Rechte Seite eine genaue Entsprechung ist; andernfalls wird `-eq` **false** zurückgegeben. `-ne` hat das Gegenteil. gibt **false** zurück, wenn beide Seiten einander entsprechen. Andernfalls wird `-ne` true zurückgegeben.
 
 Beispiel:
 
 ```powershell
-PS> 2 -eq 2
-True
+2 -eq 2                 # Output: True
+2 -eq 3                 # Output: False
+"abc" -eq "abc"         # Output: True
+"abc" -eq "abc", "def"  # Output: False
+"abc" -ne "def"         # Output: True
+"abc" -ne "abc"         # Output: False
+"abc" -ne "abc", "def"  # Output: True
+```
 
-PS> 2 -eq 3
+Wenn die linke Seite eine Auflistung ist, gibt die Elemente zurück, die `-eq` der rechten Seite entsprechen, während `-ne` Sie von herausgefiltert werden.
+
+Beispiel:
+
+```powershell
+1,2,3 -eq 2             # Output: 2
+"abc", "def" -eq "abc"  # Output: abc
+"abc", "def" -ne "abc"  # Output: def
+```
+
+Diese Operatoren verarbeiten alle Elemente der Auflistung. Beispiel:
+
+```powershell
+"zzz", "def", "zzz" -eq "zzz"
+```
+
+```output
+zzz
+zzz
+```
+
+Die Gleichheits Operatoren akzeptieren zwei Objekte, nicht nur einen skalaren oder eine Auflistung.
+Das Vergleichs Ergebnis ist jedoch für den Endbenutzer nicht unbedingt sinnvoll.
+Im folgenden Beispiel wird das Problem veranschaulicht.
+
+```powershell
+class MyFileInfoSet {
+    [String]$File
+    [Int64]$Size
+}
+$a = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$b = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$a -eq $b
+```
+
+```Output
 False
+```
 
-PS> 1,2,3 -eq 2
+In diesem Beispiel haben wir zwei Objekte mit identischen Eigenschaften erstellt. Das Ergebnis der Gleichheits Überprüfung ist jedoch **falsch** , da es sich um unterschiedliche Objekte handelt. Um vergleichbare Klassen zu erstellen, müssen Sie [System. IEquatable \<T> ][2] in ihrer Klasse implementieren. Im folgenden Beispiel wird die partielle Implementierung einer **myfileinfoset** -Klasse veranschaulicht, die " [System. \<T> IEquatable][2] " implementiert und zwei Eigenschaften hat: " **File** " und " **size**". Die `Equals()` -Methode gibt true zurück, wenn die Datei-und Größen Eigenschaften von zwei **myfileinfoset** -Objekten identisch sind.
+
+```powershell
+class MyFileInfoSet : System.IEquatable[Object] {
+    [String]$File
+    [Int64]$Size
+
+    [bool] Equals([Object] $obj) {
+        return ($this.File -eq $obj.File) -and ($this.Size -eq $obj.Size)
+    }
+}
+$a = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$b = [MyFileInfoSet]@{File = "C:\Windows\explorer.exe"; Size = 4651032}
+$a -eq $b
+```
+
+```Output
+True
+```
+
+Ein hervorragendes Beispiel für den Vergleich beliebiger Objekte besteht darin, herauszufinden, ob Sie NULL sind. Wenn Sie jedoch bestimmen müssen, ob eine Variable ist `$null` , müssen Sie `$null` auf der linken Seite des Gleichheits Operators ablegen. Wenn Sie es auf der rechten Seite platzieren, ist das nicht das, was Sie erwarten.
+
+Beispielsweise `$a` ein Array, das NULL-Elemente enthält:
+
+```powershell
+$a = 1, 2, $null, 4, $null, 6
+```
+
+Die folgenden Tests, die `$a` nicht NULL sind.
+
+```powershell
+$null -ne $a
+```
+
+```output
+False
+```
+
+Der folgende Filter filtert jedoch alle NULL-Elemente aus `$a` :
+
+```powershell
+$a -ne $null # Output: 1, 2, 4, 6
+```
+
+```output
+1
 2
-PS> "abc" -eq "abc"
-True
-
-PS> "abc" -eq "abc", "def"
-False
-
-PS> "abc", "def" -eq "abc"
-abc
+4
+6
 ```
 
-### <a name="-ne"></a>-ne
+### <a name="-gt--ge--lt-and--le"></a>-gt,-ge,-lt und-Le
 
-Description: nicht gleich. Enthält einen anderen Wert.
+`-gt`, `-ge` , `-lt` und `-le` Verhalten sich ähnlich. Wenn beide Seiten Skalar sind, geben Sie " **true** " oder " **false** " zurück, je nachdem, wie die beiden Seiten verglichen werden
 
-Beispiel:
+| Betreiber | Gibt "true" zurück, wenn...                   |
+| -------- | -------------------------------------- |
+| -gt      | Die linke Seite ist größer.          |
+| -ge      | Die linke Seite ist größer als oder gleich. |
+| -lt      | Die linke Seite ist kleiner.          |
+| -le      | Die linke Seite ist kleiner oder gleich. |
 
-```powershell
-PS> "abc" -ne "def"
-True
-
-PS> "abc" -ne "abc"
-False
-
-PS> "abc" -ne "abc", "def"
-True
-
-PS> "abc", "def" -ne "abc"
-def
-```
-
-### <a name="-gt"></a>-gt
-
-Beschreibung: größer als.
-
-Beispiel:
+In den folgenden Beispielen geben alle-Anweisungen true zurück.
 
 ```powershell
-PS> 8 -gt 6
-True
-
-PS> 7, 8, 9 -gt 8
-9
+8 -gt 6  # Output: True
+8 -ge 8  # Output: True
+6 -lt 8  # Output: True
+8 -le 8  # Output: True
 ```
 
 > [!NOTE]
-> Dies sollte nicht mit `>` dem Operator "größer als" in vielen anderen Programmiersprachen verwechselt werden. In PowerShell `>` wird für die Umleitung verwendet. Weitere Informationen finden Sie unter [About_redirection](about_Redirection.md#potential-confusion-with-comparison-operators).
+> In den meisten Programmiersprachen ist der größer-als-Operator `>` . In PowerShell wird dieses Zeichen für die Umleitung verwendet. Weitere Informationen finden Sie unter [about_Redirection][3].
 
-### <a name="-ge"></a>-ge
-
-Description: größer als oder gleich.
+Wenn die linke Seite eine Auflistung ist, vergleichen diese Operatoren jeden Member der Auflistung mit der rechten Seite. Abhängig von ihrer Logik behalten Sie den Member bei oder verwerfen ihn.
 
 Beispiel:
 
 ```powershell
-PS> 8 -ge 8
-True
+$a=5, 6, 7, 8, 9
 
-PS> 7, 8, 9 -ge 8
+Write-Output "Test collection:"
+$a
+
+Write-Output "`nMembers greater than 7"
+$a -gt 7
+
+Write-Output "`nMembers greater than or equal to 7"
+$a -ge 7
+
+Write-Output "`nMembers smaller than 7"
+$a -lt 7
+
+Write-Output "`nMembers smaller than or equal to 7"
+$a -le 7
+```
+
+```output
+Test collection:
+5
+6
+7
 8
 9
-```
 
-### <a name="-lt"></a>-lt
+Members greater than 7
+8
+9
 
-Beschreibung: kleiner als.
-
-Beispiel:
-
-```powershell
-
-PS> 8 -lt 6
-False
-
-PS> 7, 8, 9 -lt 8
-7
-```
-
-### <a name="-le"></a>-le
-
-Description: kleiner als oder gleich.
-
-Beispiel:
-
-```powershell
-PS> 6 -le 8
-True
-
-PS> 7, 8, 9 -le 8
+Members greater than or equal to 7
 7
 8
+9
+
+Members smaller than 7
+5
+6
+
+Members smaller than or equal to 7
+5
+6
+7
 ```
+
+Diese Operatoren arbeiten mit jeder Klasse, die [System. ivergleichbare][1]implementiert.
+
+Beispiele:
+
+```powershell
+# Date comparison
+[DateTime]'2001-11-12' -lt [DateTime]'2020-08-01' # True
+
+# Sorting order comparison
+'a' -lt 'z'           # True; 'a' comes before 'z'
+'macOS' -ilt 'MacOS'  # False
+'MacOS' -ilt 'macOS'  # False
+'macOS' -clt 'MacOS'  # True; 'm' comes before 'M'
+```
+
+Im folgenden Beispiel wird veranschaulicht, dass kein Symbol auf einer American QWERTY-Tastatur vorhanden ist, die nach "a" sortiert wird. Er fügt eine Menge, die alle Symbole enthält, an den `-gt` Operator an, um Sie mit "a" zu vergleichen. Die Ausgabe ist ein leeres Array.
+
+```powershell
+$a=' ','`','~','!','@','#','$','%','^','&','*','(',')','_','+','-','=',
+   '{','}','[',']',':',';','"','''','\','|','/','?','.','>',',','<'
+$a -gt 'a'
+# Output: Nothing
+```
+
+Wenn die beiden Seiten der Operatoren nicht angemessen vergleichbar sind, wird ein Fehler ohne Abbruch ausgegeben.
 
 ## <a name="matching-operators"></a>Vergleichs Operatoren
 
-Die LIKE-Operatoren ( `-like` und `-notlike` ) suchen nach Elementen, die einem angegebenen Muster unter Verwendung von Platzhalter Ausdrücken entsprechen oder nicht.
+Die übereinstimmenden Operatoren ( `-like` , `-notlike` , `-match` und `-notmatch` ) suchen Elemente, die mit einem angegebenen Muster übereinstimmen oder nicht übereinstimmen. Das Muster für `-like` und `-notlike` ist ein Platzhalter Ausdruck (mit `*` , `?` und `[ ]` ), während `-match` und `-notmatch` einen regulären Ausdruck (Regex) akzeptieren.
 
 Die Syntax ist:
 
-```powershell
-<string[]> -like <wildcard-expression>
-<string[]> -notlike <wildcard-expression>
 ```
-
-Die Vergleichs Operatoren ( `-match` und `-notmatch` ) suchen nach Elementen, die einem angegebenen Muster entsprechen oder nicht mit regulären Ausdrücken identisch sind.
-
-Die Match-Operatoren füllen die `$Matches` Automatische Variable auf, wenn die Eingabe (das linke Argument) für den Operator ein einzelnes skalares Objekt ist. Wenn die Eingabe Skalar ist, `-match` geben die `-notmatch` Operatoren und einen booleschen Wert zurück und legen den Wert der `$Matches` automatischen Variablen auf die übereinstimmenden Komponenten des Arguments fest.
-
-Die Syntax ist:
-
-```powershell
-<string[]> -match <regular-expression>
+<string[]> -like    <wildcard-expression>
+<string[]> -notlike <wildcard-expression>
+<string[]> -match    <regular-expression>
 <string[]> -notmatch <regular-expression>
 ```
 
-### <a name="-like"></a>-like
+Wenn die Eingabe dieser Operatoren ein skalarer Wert ist, wird ein **boolescher** Wert zurückgegeben. Wenn die Eingabe eine Auflistung von Werten ist, geben die Operatoren alle übereinstimmenden Member zurück. Wenn keine Übereinstimmungen in einer Auflistung vorhanden sind, geben die Operatoren ein leeres Array zurück.
 
-Description: Match mit dem Platzhalter Zeichen ( \* ).
+### <a name="-like-and--notlike"></a>-like und-notlike
 
-Beispiel:
-
-```powershell
-PS> "PowerShell" -like "*shell"
-True
-
-PS> "PowerShell", "Server" -like "*shell"
-PowerShell
-```
-
-### <a name="-notlike"></a>-notlike
-
-Beschreibung: entspricht nicht der Verwendung des Platzhalter Zeichens ( \* ).
+`-like`und `-notlike` Verhalten sich ähnlich wie `-eq` und `-ne` , aber die Rechte Seite könnte eine Zeichenfolge sein, [](about_Wildcards.md)die Platzhalter enthält.
 
 Beispiel:
 
 ```powershell
-PS> "PowerShell" -notlike "*shell"
-False
+"PowerShell" -like    "*shell"           # Output: True
+"PowerShell" -notlike "*shell"           # Output: False
+"PowerShell" -like    "Power?hell"       # Output: True
+"PowerShell" -notlike "Power?hell"       # Output: False
+"PowerShell" -like    "Power[p-w]hell"   # Output: True
+"PowerShell" -notlike "Power[p-w]hell"   # Output: False
 
-PS> "PowerShell", "Server" -notlike "*shell"
-Server
+"PowerShell", "Server" -like "*shell"    # Output: PowerShell
+"PowerShell", "Server" -notlike "*shell" # Output: Server
 ```
 
-### <a name="-match"></a>-match
+### <a name="-match-and--notmatch"></a>-Match und-notmatch
 
-Description: entspricht einer Zeichenfolge unter Verwendung regulärer Ausdrücke. Wenn die Eingabe Skalar ist, füllt Sie die `$Matches` Automatische Variable auf.
+`-match` und `-notmatch` verwenden reguläre Ausdrücke, um in den linksseitigen Werten nach Mustern zu suchen. Reguläre Ausdrücke können komplexe Muster wie e-Mail-Adressen, UNC-Pfade oder formatierte Telefonnummern erfüllen. Die Zeichenfolge auf der rechten Seite muss den Regeln für [reguläre Ausdrücke](about_Regular_Expressions.md) entsprechen.
 
-Wenn es sich bei der Eingabe um eine Auflistung handelt, `-match` `-notmatch` geben die Operatoren und die übereinstimmenden Member dieser Auflistung zurück, aber der Operator füllt nicht die `$Matches` Variable auf.
-
-Der folgende Befehl übermittelt z. b. eine Auflistung von Zeichen folgen an den- `-match` Operator. Der- `-match` Operator gibt die Elemente in der Auflistung zurück, die mit identisch sind. Die automatische Variable wird nicht aufgefüllt `$Matches` .
+Skalare Beispiele:
 
 ```powershell
-PS> "Sunday", "Monday", "Tuesday" -match "sun"
-Sunday
+# Partial match test, showing how differently -match and -like behave
+"PowerShell" -match 'shell'        # Output: True
+"PowerShell" -like  'shell'        # Output: False
 
-PS> $Matches
-PS>
+# Regex syntax test
+"PowerShell" -match    '^Power\w+' # Output: True
+'bag'        -notmatch 'b[iou]g'   # Output: True
 ```
 
-Im Gegensatz dazu übermittelt der folgende Befehl eine einzelne Zeichenfolge an den- `-match` Operator. Der `-match` -Operator gibt einen booleschen Wert zurück und füllt die `$Matches` Automatische Variable auf. Die `$Matches` Automatische Variable ist eine **Hash Tabelle**. Wenn keine Gruppierung oder Erfassung verwendet wird, wird nur ein Schlüssel aufgefüllt.
-Der `0` Schlüssel stellt den gesamten Text dar, der abgeglichen wurde. Weitere Informationen zum Gruppieren und erfassen mithilfe regulärer Ausdrücke finden Sie unter [about_Regular_Expressions](about_Regular_Expressions.md).
+Wenn es sich bei der Eingabe um eine Auflistung handelt, geben die Operatoren die übereinstimmenden Member der Auflistung zurück.
+
+Beispiele für Sammlungen:
 
 ```powershell
-PS> "Sunday" -match "sun"
-True
+"PowerShell", "Super PowerShell", "Power's hell" -match '^Power\w+'
+# Output: PowerShell
 
-PS> $Matches
+"Rhell", "Chell", "Mel", "Smell", "Shell" -match "hell"
+# Output: Rhell, Chell, Shell
 
-Name                           Value
-----                           -----
-0                              Sun
+"Bag", "Beg", "Big", "Bog", "Bug"  -match 'b[iou]g'
+#Output: Big, Bog, Bug
+
+"Bag", "Beg", "Big", "Bog", "Bug"  -notmatch 'b[iou]g'
+#Output: Bag, Beg
 ```
 
-Beachten Sie unbedingt, dass die `$Matches` Hash Tabelle nur das erste Vorkommen eines übereinstimmenden Musters enthält.
-
-```powershell
-PS> "Banana" -match "na"
-True
-
-PS> $Matches
-
-Name                           Value
-----                           -----
-0                              na
-```
-
-> [!IMPORTANT]
-> Der `0` Schlüssel ist eine **ganze** Zahl. Sie können eine beliebige **Hash Tabellen** Methode verwenden, um auf den gespeicherten Wert zuzugreifen.
->
-> ```powershell
-> PS> "Good Dog" -match "Dog"
-> True
->
-> PS> $Matches[0]
-> Dog
->
-> PS> $Matches.Item(0)
-> Dog
->
-> PS> $Matches.0
-> Dog
-> ```
-
-Der `-notmatch` Operator füllt die `$Matches` Automatische Variable auf, wenn die Eingabe Skalar ist, und das Ergebnis ist false, d. h., wenn eine Entsprechung erkannt wird.
-
-```powershell
-PS> "Sunday" -notmatch "rain"
-True
-
-PS> $matches
-PS>
-
-PS> "Sunday" -notmatch "day"
-False
-
-PS> $matches
-
-Name                           Value
-----                           -----
-0                              day
-```
-
-### <a name="-notmatch"></a>-notmatch
-
-Beschreibung: stimmt nicht mit einer Zeichenfolge. Verwendet reguläre Ausdrücke. Wenn die Eingabe Skalar ist, füllt Sie die `$Matches` Automatische Variable auf.
+`-match` und `-notmatch` unterstützen Regex-Erfassungs Gruppen. Jedes Mal, wenn Sie ausgeführt werden, überschreiben Sie die `$Matches` Automatische Variable. Wenn `<input>` eine Auflistung ist, `$Matches` ist die Variable `$null` . `$Matches` ist eine **Hash Tabelle** , die immer über einen Schlüssel mit dem Namen ' 0 ' verfügt, der die gesamte Entsprechung speichert. Wenn der reguläre Ausdruck Erfassungs Gruppen enthält, `$Matches` enthält die zusätzliche Schlüssel für jede Gruppe.
 
 Beispiel:
 
 ```powershell
-PS> "Sunday" -notmatch "sun"
-False
+$string = 'The last logged on user was CONTOSO\jsmith'
+$string -match 'was (?<domain>.+)\\(?<user>.+)'
 
-PS> $matches
-Name Value
----- -----
-0    sun
+$Matches
 
-PS> "Sunday", "Monday" -notmatch "sun"
-Monday
+Write-Output "`nDomain name:"
+$Matches.domain
+
+Write-Output "`nUser name:"
+$Matches.user
 ```
 
-## <a name="containment-operators"></a>Containment-Operatoren
-
-Die Containment-Operatoren ( `-contains` und `-notcontains` ) ähneln den Gleichheits Operatoren. Der Containment-Operator gibt jedoch immer einen booleschen Wert zurück, auch wenn die Eingabe eine Auflistung ist.
-
-Außerdem geben die Einschluss Operatoren im Gegensatz zu den Gleichheits Operatoren einen Wert zurück, sobald Sie die erste Übereinstimmung erkennen. Die Gleichheits Operatoren Werten alle Eingaben aus und geben dann alle Übereinstimmungen in der Auflistung zurück.
-
-### <a name="-contains"></a>-contains
-
-Description: Containment-Operator. Gibt an, ob eine Auflistung von Verweis Werten einen einzelnen Testwert enthält. Gibt immer einen booleschen Wert zurück. Gibt nur dann true zurück, wenn der Testwert genau mit mindestens einem der Verweis Werte übereinstimmt.
-
-Wenn der Testwert eine Auflistung ist, verwendet der enthält-Operator Verweis Gleichheit. Sie gibt nur dann true zurück, wenn einer der Verweis Werte dieselbe Instanz des Test Wert Objekts ist.
-
-In einer sehr großen Auflistung gibt der `-contains` Operator Ergebnisse schneller zurück, als der Operator gleich ist.
-
-Syntax:
-
-`<Reference-values> -contains <Test-value>`
-
-Beispiele:
-
-```powershell
-PS> "abc", "def" -contains "def"
+```output
 True
 
-PS> "Windows", "PowerShell" -contains "Shell"
-False  #Not an exact match
+Name                           Value
+----                           -----
+domain                         CONTOSO
+user                           jsmith
+0                              was CONTOSO\jsmith
 
-# Does the list of computers in $DomainServers include $ThisComputer?
-PS> $DomainServers -contains $thisComputer
-True
+Domain name:
+CONTOSO
 
-PS> "abc", "def", "ghi" -contains "abc", "def"
-False
-
-PS> $a = "abc", "def"
-PS> "abc", "def", "ghi" -contains $a
-False
-PS> $a, "ghi" -contains $a
-True
+User name:
+jsmith
 ```
 
-### <a name="-notcontains"></a>-notcontains
-
-Description: Containment-Operator. Gibt an, ob eine Auflistung von Verweis Werten einen einzelnen Testwert enthält. Gibt immer einen booleschen Wert zurück. Gibt true zurück, wenn der Testwert keine exakten Übereinstimmungen für mindestens einen der Verweis Werte ist.
-
-Wenn der Testwert eine Auflistung ist, verwendet der Notare-Operator Verweis Gleichheit.
-
-Syntax:
-
-`<Reference-values> -notcontains <Test-value>`
-
-Beispiele:
-
-```powershell
-PS> "Windows", "PowerShell" -notcontains "Shell"
-True  #Not an exact match
-
-# Get cmdlet parameters, but exclude common parameters
-function get-parms ($cmdlet)
-{
-    $Common = "Verbose", "Debug", "WarningAction", "WarningVariable",
-      "ErrorAction", "ErrorVariable", "OutVariable", "OutBuffer"
-
-    $allparms = (Get-Command $Cmdlet).parametersets |
-      foreach {$_.Parameters} |
-        foreach {$_.Name} | Sort-Object | Get-Unique
-
-    $allparms | where {$Common -notcontains $_ }
-}
-
-# Find unapproved verbs in the functions in my module
-PS> $ApprovedVerbs = Get-Verb | foreach {$_.verb}
-PS> $myVerbs = Get-Command -Module MyModule | foreach {$_.verb}
-PS> $myVerbs | where {$ApprovedVerbs -notcontains $_}
-ForEach
-Sort
-Tee
-Where
-```
-
-### <a name="-in"></a>-in
-
-Description: in-Operator. Gibt an, ob ein Testwert in einer Auflistung von Verweis Werten angezeigt wird. Gibt immer als booleschen Wert zurück. Gibt nur dann true zurück, wenn der Testwert genau mit mindestens einem der Verweis Werte übereinstimmt.
-
-Wenn der Testwert eine Auflistung ist, verwendet der in-Operator Verweis Gleichheit.
-Sie gibt nur dann true zurück, wenn einer der Verweis Werte dieselbe Instanz des Test Wert Objekts ist.
-
-Der `-in` Operator wurde in PowerShell 3,0 eingeführt.
-
-Syntax:
-
-`<Test-value> -in <Reference-values>`
-
-Beispiele:
-
-```powershell
-PS> "def" -in "abc", "def"
-True
-
-PS> "Shell" -in "Windows", "PowerShell"
-False  #Not an exact match
-
-PS> "Windows" -in "Windows", "PowerShell"
-True  #An exact match
-
-PS> "Windows", "PowerShell" -in "Windows", "PowerShell", "ServerManager"
-False  #Using reference equality
-
-PS> $a = "Windows", "PowerShell"
-PS> $a -in $a, "ServerManager"
-True  #Using reference equality
-
-# Does the list of computers in $DomainServers include $ThisComputer?
-PS> $thisComputer -in  $domainServers
-True
-```
-
-### <a name="-notin"></a>-NOTIN
-
-Description: gibt an, ob ein Testwert in einer Auflistung von Verweis Werten angezeigt wird. Gibt immer einen booleschen Wert zurück. Gibt true zurück, wenn der Testwert keine genaue Entsprechung für mindestens einen der Verweis Werte ist.
-
-Wenn der Testwert eine Auflistung ist, verwendet der in-Operator Verweis Gleichheit.
-Sie gibt nur dann true zurück, wenn einer der Verweis Werte dieselbe Instanz des Test Wert Objekts ist.
-
-Der `-notin` Operator wurde in PowerShell 3,0 eingeführt.
-
-Syntax:
-
-`<Test-value> -notin <Reference-values>`
-
-Beispiele:
-
-```powershell
-PS> "def" -notin "abc", "def"
-False
-
-PS> "ghi" -notin "abc", "def"
-True
-
-PS> "Shell" -notin "Windows", "PowerShell"
-True  #Not an exact match
-
-PS> "Windows" -notin "Windows", "PowerShell"
-False  #An exact match
-
-# Find unapproved verbs in the functions in my module
-PS> $ApprovedVerbs = Get-Verb | foreach {$_.verb}
-PS> $MyVerbs = Get-Command -Module MyModule | foreach {$_.verb}
-
-PS> $MyVerbs | where {$_ -notin $ApprovedVerbs}
-ForEach
-Sort
-Tee
-Where
-```
+Weitere Informationen finden Sie unter [about_Regular_Expressions](about_Regular_Expressions.md).
 
 ## <a name="replacement-operator"></a>Ersatz Operator
 
-Der- `-replace` Operator weist die folgende Syntax auf:
+### <a name="replacement-with-regular-expressions"></a>Ersetzung durch reguläre Ausdrücke
 
-`<input> -replace <original>, <substitute>`
+Ebenso `-match` verwendet der- `-replace` Operator reguläre Ausdrücke, um nach dem angegebenen Muster zu suchen. Im Gegensatz `-match` dazu werden die Übereinstimmungen durch einen anderen angegebenen Wert ersetzt.
 
-Der `<original>` Platzhalter ist ein regulärer Ausdruck, der mit den zu ersetzenden Zeichen übereinstimmt. Der `<substitute>` Platzhalter ist eine Literalzeichenfolge, die Sie ersetzt.
+Syntax:
+
+```
+<input> -replace <regular-expression>, <substitute>
+```
 
 Der-Operator ersetzt den gesamten oder einen Teil eines Werts durch den angegebenen Wert mithilfe regulärer Ausdrücke. Sie können den-Operator für viele Verwaltungsaufgaben verwenden, z. b. das Umbenennen von Dateien. Der folgende Befehl ändert z. b. die Dateinamen Erweiterungen aller `.txt` Dateien in `.log` :
 
@@ -510,67 +393,69 @@ Der-Operator ersetzt den gesamten oder einen Teil eines Werts durch den angegebe
 Get-ChildItem *.txt | Rename-Item -NewName { $_.name -replace '\.txt$','.log' }
 ```
 
-### <a name="case-sensitive-matches"></a>Übereinstimmungen mit Beachtung der groß-
-
 Standardmäßig `-replace` wird bei dem Operator die Groß-/Kleinschreibung nicht beachtet. Verwenden Sie, um die Groß-/Kleinschreibung zu beachten `-creplace` Verwenden Sie, um die Groß-/Kleinschreibung explizit zu Unternehmen `-ireplace` .
 
-Betrachten Sie die folgenden Beispiele:
+Beispiele:
 
 ```powershell
-PS> "book" -replace "B", "C"
-Cook
+"book" -ireplace "B", "C" # Case insensitive
+"book" -creplace "B", "C" # Case-sensitive; hence, nothing to replace
 ```
 
-```powershell
-PS> "book" -ireplace "B", "C"
+```Output
 Cook
-```
-
-```powershell
-PS> "book" -creplace "B", "C"
 book
 ```
 
-### <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
+### <a name="regular-expressions-substitutions"></a>Reguläre Ausdrucks Ersetzungen
 
 Es ist auch möglich, reguläre Ausdrücke zum dynamischen Ersetzen von Text mithilfe von Erfassungs Gruppen und Ersetzungen zu verwenden. Auf Erfassungs Gruppen kann in der `<substitute>` Zeichenfolge mit dem Dollarzeichen ( `$` ) vor der Gruppen Kennung verwiesen werden.
 
-Auf Erfassungs Gruppen kann nach **Nummer** oder **Name** verwiesen werden.
+Im folgenden Beispiel `-replace` akzeptiert der-Operator einen Benutzernamen in der Form `DomainName\Username` und konvertiert in das- `Username@DomainName` Format:
 
-- Nach **Zahlen** Erfassungs Gruppen werden von links nach rechts nummeriert.
+```powershell
+$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$ReplaceExp = '${Username}@${DomainName}'
 
-  ```powershell
-  PS> "John D. Smith" -replace "(\w+) (\w+)\. (\w+)", '$1.$2.$3@contoso.com'
-  John.D.Smith@contoso.com
-  ```
+'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
+```
 
-- Nach **Namen** können auch nach Namen Erfassungs Gruppen verwiesen werden.
-
-  ```powershell
-  PS> "CONTOSO\Administrator" -replace '\w+\\(?<user>\w+)', 'FABRIKAM\${user}'
-  FABRIKAM\Administrator
-  ```
+```output
+John.Doe@Contoso.local
+```
 
 > [!WARNING]
-> Da das `$` Zeichen bei der Zeichen folgen Erweiterung verwendet wird, müssen Sie Literalzeichenfolgen verwenden oder das `$` Zeichen mit Escapezeichen versehen.
+> Das `$` Zeichen verfügt über syntatic-Rollen in PowerShell und regulären Ausdrücken:
 >
-> ```powershell
-> PS> 'Hello World' -replace '(\w+) \w+', "`$1 Universe"
-> Hello Universe
-> ```
->
-> Da das `$` Zeichen in der Ersetzung verwendet wird, müssen Sie außerdem alle Instanzen in der Zeichenfolge mit Escapezeichen versehen.
->
-> ```powershell
-> PS> '5.72' -replace '(.+)', '$$$1'
-> $5.72
-> ```
+> - In PowerShell werden zwischen doppelten Anführungszeichen Variablen festgelegt und als Teil Ausdruck bezeichnet.
+> - In Regex-Such Zeichenfolgen gibt es das Ende der Zeile an.
+> - In Regex-Ersetzungs Zeichenfolgen gibt es erfasste Gruppen als solche an. Stellen Sie sicher, dass Sie entweder die regulären Ausdrücke zwischen einfachen Anführungszeichen platzieren oder ein Graviszeichen- `` ` `` Zeichen () einfügen.
 
-Weitere Informationen finden Sie unter [about_Regular_Expressions](about_Regular_Expressions.md) und Ersetzungen [in regulären Ausdrücken](/dotnet/standard/base-types/substitutions-in-regular-expressions) .
+Beispiele:
+
+```powershell
+$1 = 'Goodbye'
+
+'Hello World' -replace '(\w+) \w+', "$1 Universe"
+# Output: Goodbye Universe
+
+'Hello World' -replace '(\w+) \w+', '$1 Universe'
+# Output: Hello Universe
+```
+
+`$$` in Regex steht für einen Literalwert `$` . Dies `$$` in der Ersetzungs Zeichenfolge zum Einschließen eines Literals `$` in den resultierenden Austausch. Beispiele:
+
+```powershell
+'5.72' -replace '(.+)', '$ $1' # Output: $ 5.72
+'5.72' -replace '(.+)', '$$$1' # Output: $5.72
+'5.72' -replace '(.+)', '$$1'  # Output: $1
+```
+
+Weitere Informationen finden Sie unter [about_Regular_Expressions](about_Regular_Expressions.md) und Ersetzungen [in regulären Ausdrücken][4].
 
 ### <a name="substituting-in-a-collection"></a>Ersetzen in einer Auflistung
 
-Wenn der `<input>` für den `-replace` Operator eine Auflistung ist, wendet PowerShell die Ersetzung auf jeden Wert in der Auflistung an. Zum Beispiel:
+Wenn der `<input>` für den `-replace` Operator eine Auflistung ist, wendet PowerShell die Ersetzung auf jeden Wert in der Auflistung an. Beispiele:
 
 ```powershell
 "B1","B2","B3","B4","B5" -replace "B", 'a'
@@ -581,58 +466,124 @@ a4
 a5
 ```
 
-### <a name="scriptblock-substitutions"></a>ScriptBlock-Ersetzungen
+### <a name="replacement-with-a-script-block"></a>Ersetzung durch einen Skriptblock
 
-Ab PowerShell 6 können Sie ein **ScriptBlock** -Argument _für den_ Ersetzungstext verwenden. Der **ScriptBlock** wird für jede in der _Eingabe_ Zeichenfolge gefundene Entsprechung ausgeführt.
+In PowerShell 6 und höher akzeptiert der `-replace` Operator auch einen Skriptblock, der die Ersetzung durchführt. Der Skriptblock wird bei jeder Übereinstimmung einmal ausgeführt.
 
-Verwenden Sie innerhalb von **ScriptBlock** die `$_` Automatische Variable, um auf das aktuelle **System. Text. RegularExpressions. Match** -Objekt zu verweisen. Das **Match** -Objekt ermöglicht Ihnen den Zugriff auf den aktuellen Eingabetext, der ersetzt wird, sowie auf weitere nützliche Informationen.
-
-In diesem Beispiel wird jede Sequenz von drei Dezimalstellen durch das entsprechende Zeichen ersetzt. Der **ScriptBlock** wird für jeden Satz von drei dezimalen ausgeführt, die ersetzt werden müssen.
+Syntax:
 
 ```powershell
-PS> "072101108108111" -replace "\d{3}", {[char][int]$_.Value}
+<String> -replace <regular-expression>, {<Script-block>}
+```
+
+Verwenden Sie im Skriptblock die `$_` Automatische Variable, um auf den zu ersetzenden Eingabetext und andere nützliche Informationen zuzugreifen. Der Klassentyp dieser Variablen ist [System. Text. RegularExpressions. Match][2].
+
+Im folgenden Beispiel wird jede Sequenz von drei Ziffern durch die Zeichen Entsprechungen ersetzt. Der Skriptblock wird für jeden Satz von drei Ziffern ausgeführt, die ersetzt werden müssen.
+
+```powershell
+"072101108108111" -replace "\d{3}", {return [char][int]$_.Value}
+```
+
+```output
 Hello
+```
+
+## <a name="containment-operators"></a>Containment-Operatoren
+
+Die Containment-Operatoren ( `-contains` , `-notcontains` , `-in` und `-notin` ) ähneln den Gleichheits Operatoren, mit dem Unterschied, dass Sie immer einen **booleschen** Wert zurückgeben, auch wenn die Eingabe eine Auflistung ist. Diese Operatoren enden den Vergleich ab, sobald die erste Übereinstimmung erkannt wird, während die Gleichheits Operatoren alle Eingabeelemente auswerten. In einer sehr großen Auflistung geben diese Operatoren schneller zurück als die Gleichheits Operatoren.
+
+Syntax:
+
+```
+<Collection> -contains <Test-object>
+<Collection> -notcontains <Test-object>
+<Test-object> -in <Collection>
+<Test-object> -notin <Collection>
+```
+
+### <a name="-contains-and--notcontains"></a>-enthält und-notenthält
+
+Diese Operatoren erkennen, ob ein Satz ein bestimmtes Element enthält. `-contains` gibt true zurück, wenn die Rechte Seite (Testobjekt) mit einem der Elemente in der Menge übereinstimmt. `-notcontains` gibt stattdessen false zurück. Wenn das Testobjekt eine Auflistung ist, verwenden diese Operatoren Verweis Gleichheit, d. h. Sie überprüfen, ob eines der Elemente des Satzes dieselbe Instanz des Testobjekts ist.
+
+Beispiele:
+
+```powershell
+"abc", "def" -contains "def"                  # Output: True
+"abc", "def" -notcontains "def"               # Output: False
+"Windows", "PowerShell" -contains "Shell"     # Output: False
+"Windows", "PowerShell" -notcontains "Shell"  # Output: True
+"abc", "def", "ghi" -contains "abc", "def"    # Output: False
+"abc", "def", "ghi" -notcontains "abc", "def" # Output: True
+```
+
+Komplexere Beispiele:
+
+```powershell
+$DomainServers = "ContosoDC1","ContosoDC2","ContosoFileServer","ContosoDNS",
+                 "ContosoDHCP","ContosoWSUS"
+$thisComputer  = "ContosoDC2"
+
+$DomainServers -contains $thisComputer
+# Output: True
+
+$a = "abc", "def"
+"abc", "def", "ghi" -contains $a # Output: False
+$a, "ghi" -contains $a           # Output: True
+```
+
+### <a name="-in-and--notin"></a>-in und-NOTIN
+
+Die `-in` `notin` Operatoren und wurden in PowerShell 3 als syntaktische Umkehrung der der `contains` Operatoren und eingeführt `-notcontain` . `-in` gibt **true** zurück, wenn die linke Seite `<test-object>` mit einem der Elemente in der Menge übereinstimmt. `-notin` gibt stattdessen **false** zurück. Wenn das Testobjekt eine Menge ist, verwenden diese Operatoren Verweis Gleichheit, um zu überprüfen, ob eines der Elemente der Gruppe dieselbe Instanz des Testobjekts ist.
+
+In den folgenden Beispielen werden dieselben Schritte wie in den Beispielen für `-contain` und `-notcontain` durchzuführen, aber Sie werden `-in` stattdessen mit und geschrieben `-notin` .
+
+```powershell
+"def" -in "abc", "def"                  # Output: True
+"def" -notin "abc", "def"               # Output: False
+"Shell" -in "Windows", "PowerShell"     # Output: False
+"Shell" -notin "Windows", "PowerShell"  # Output: True
+"abc", "def" -in "abc", "def", "ghi"    # Output: False
+"abc", "def" -notin "abc", "def", "ghi" # Output: True
+```
+
+Komplexere Beispiele:
+
+```powershell
+$DomainServers = "ContosoDC1","ContosoDC2","ContosoFileServer","ContosoDNS",
+                 "ContosoDHCP","ContosoWSUS"
+$thisComputer  = "ContosoDC2"
+
+$thisComputer -in $DomainServers
+# Output: True
+
+$a = "abc", "def"
+$a -in "abc", "def", "ghi" # Output: False
+$a -in $a, "ghi"           # Output: True
 ```
 
 ## <a name="type-comparison"></a>Typvergleich
 
 Die typvergleichs Operatoren ( `-is` und `-isnot` ) werden verwendet, um zu bestimmen, ob es sich bei einem Objekt um einen bestimmten Typ handelt.
 
-### <a name="-is"></a>-ist
-
 Syntax:
 
-`<object> -is <type reference>`
+```powershell
+<object> -is <type-reference>
+<object> -isnot <type-reference>
+```
 
 Beispiel:
 
 ```powershell
-PS> $a = 1
-PS> $b = "1"
-PS> $a -is [int]
-True
-PS> $a -is $b.GetType()
-False
+$a = 1
+$b = "1"
+$a -is [int]           # Output: True
+$a -is $b.GetType()    # Output: False
+$b -isnot [int]        # Output: True
+$a -isnot $b.GetType() # Output: True
 ```
 
-### <a name="-isnot"></a>-IsNot
-
-Syntax:
-
-`<object> -isnot <type reference>`
-
-Beispiel:
-
-```powershell
-PS> $a = 1
-PS> $b = "1"
-PS> $a -isnot $b.GetType()
-True
-PS> $b -isnot [int]
-True
-```
-
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>SIEHE AUCH
 
 - [about_Operators](about_Operators.md)
 - [about_Regular_Expressions](about_Regular_Expressions.md)
@@ -640,3 +591,9 @@ True
 - [Compare-Object](xref:Microsoft.PowerShell.Utility.Compare-Object)
 - [ForEach-Objekt](xref:Microsoft.PowerShell.Core.ForEach-Object)
 - [Where-Object](xref:Microsoft.PowerShell.Core.Where-Object)
+
+[1]: /dotnet/api/system.icomparable
+[2]: /dotnet/api/system.iequatable-1
+[3]: /dotnet/api/system.text.regularexpressions.match
+[4]: about_Redirection.md#potential-confusion-with-comparison-operators
+[5]: /dotnet/standard/base-types/substitutions-in-regular-expressions

@@ -7,12 +7,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: cbf87c2a2d6ab0f08e514ba971a622ea9f1904aa
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: bb7f169e0c01c73bb4e834375f341bf795e37ce7
+ms.sourcegitcommit: f5986121386c81acddcf324eb0526d7d092bcc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95514934"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98584657"
 ---
 # Get-Date
 
@@ -274,7 +274,7 @@ Wenn der **Format** -Parameter verwendet wird, ruft `Get-Date` nur die Eigenscha
 
 Ab PowerShell 5,0 können Sie die folgenden zusätzlichen Formate als Werte für den **Format** -Parameter verwenden.
 
-- **Filedate**. Eine Datei-oder Pfad freundliche Darstellung des aktuellen Datums in der lokalen Zeit. Das Format ist `yyyyMMdd` (Unterscheidung nach Groß-/Kleinschreibung unter Berücksichtigung von vierstelligen Jahreszahlen, zweistelligen Ziffern und zweistelligen Tags). Zum Beispiel:
+- **Filedate**. Eine Datei-oder Pfad freundliche Darstellung des aktuellen Datums in der lokalen Zeit. Das Format ist `yyyyMMdd` (Unterscheidung nach Groß-/Kleinschreibung unter Berücksichtigung von vierstelligen Jahreszahlen, zweistelligen Ziffern und zweistelligen Tags). Beispiele:
   20190627.
 
 - **Filedateuniversal**. Eine Datei-oder Pfad freundliche Darstellung des aktuellen Datums in Weltzeit (UTC). Das Format ist (Unterscheidung nach `yyyyMMddZ` Groß-/Kleinschreibung, mit einem vierstelligen Jahr, zweistelligen Ziffern und dem Buchstaben `Z` als UTC-Indikator). Beispiel: 20190627z.
@@ -461,7 +461,7 @@ In der folgenden Tabelle werden die gültigen **Uformat-Spezifizierer** angezeig
 | `%H` | Stunde im 24-Stunden-Format                                                  | 17                       |
 | `%h` | Identisch mit "b"                                                             |                          |
 | `%I` | Stunde im 12-Stunden-Format                                                  | 05                       |
-| `%j` | Tag des Jahres                                                         | 1-366                    |
+| `%j` | Tag des Jahres (enthält keine führenden `0` -Fixed in PowerShell 6 +) | 1-366                    |
 | `%k` | Identisch mit "H"                                                             |                          |
 | `%l` | Identisch mit "i" (i-Großbuchstaben)                                              | 05                       |
 | `%M` | Minuten                                                                 | 35                       |

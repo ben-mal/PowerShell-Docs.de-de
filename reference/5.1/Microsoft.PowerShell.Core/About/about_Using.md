@@ -1,16 +1,16 @@
 ---
 description: Ermöglicht Ihnen, anzugeben, welche Namespaces in der Sitzung verwendet werden.
 Locale: en-US
-ms.date: 11/18/2020
+ms.date: 01/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_using?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Using
-ms.openlocfilehash: b48cd85e200f44cdf9fdf278de78e07a918386c8
-ms.sourcegitcommit: 22c93550c87af30c4895fcb9e9dd65e30d60ada0
+ms.openlocfilehash: 2a02ff32b110d369c080dde695a8fc2369b1a5e2
+ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94891345"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98619889"
 ---
 # <a name="about-using"></a>Informationen zur Verwendung von
 
@@ -21,7 +21,9 @@ Ermöglicht Ihnen, anzugeben, welche Namespaces in der Sitzung verwendet werden.
 
 Mit der- `using` Anweisung können Sie angeben, welche Namespaces in der Sitzung verwendet werden. Das Hinzufügen von Namespaces vereinfacht die Verwendung von .NET-Klassen und-Membern und ermöglicht das Importieren von Klassen aus Skript Modulen und Assemblys.
 
-Die- `using` Anweisungen müssen vor allen anderen Anweisungen in einem Skript stehen.
+Die- `using` Anweisungen müssen vor allen anderen Anweisungen in einem Skript oder Modul stehen. Es kann keine nicht kommentierten Anweisung vorangestellt werden, einschließlich der Parameter.
+
+Die `using` Anweisung darf keine Variablen enthalten.
 
 Die- `using` Anweisung sollte nicht mit dem bereichsmodifizierer `using:` für Variablen verwechselt werden. Weitere Informationen finden Sie unter [about_Remote_Variables](about_Remote_Variables.md).
 
@@ -57,6 +59,12 @@ Eine Modul Spezifikation ist eine Hash Tabelle mit den folgenden Schlüsseln.
   - `ModuleVersion` : Gibt eine zulässige Mindestversion des Moduls an.
   - `RequiredVersion` : Gibt eine exakte, erforderliche Version des Moduls an.
   - `MaximumVersion` : Gibt die maximal zulässige Version des Moduls an.
+
+Die- `using module` Anweisung importiert Klassen aus dem Stamm Modul ( `ModuleToProcess` ) eines Skript Moduls oder eines binären Moduls. Klassen, die in geschposteten Modulen oder Klassen definiert sind, die in Skripts definiert sind, die in das Modul eingefügt werden, werden nicht konsistent importiert. Klassen, die für Benutzer außerhalb des Moduls verfügbar sein sollen, sollten im Stamm Modul definiert werden.
+
+Während der Entwicklung eines Skript Moduls ist es üblich, Änderungen am Code vorzunehmen und dann die neue Version des Moduls `Import-Module` mit dem **Force** -Parameter zu laden. Dies funktioniert nur bei Änderungen an Funktionen im Stamm Modul. `Import-Module` führt keine erneuten Laden von Netz Modulen aus. Außerdem gibt es keine Möglichkeit, aktualisierte Klassen zu laden.
+
+Um sicherzustellen, dass Sie die neueste Version ausführen, müssen Sie das Modul mit dem `Remove-Module` Cmdlet entladen. `Remove-Module` entfernt das Stamm Modul, alle in den Modulen definierten Klassen und Klassen. Anschließend können Sie das Modul und die Klassen mithilfe von `Import-Module` und der-Anweisung erneut laden `using module` .
 
 ## <a name="assembly-syntax"></a>Assemblysyntax
 
