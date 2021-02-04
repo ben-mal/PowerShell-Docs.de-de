@@ -3,81 +3,90 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 01/28/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/wait-job?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Wait-Job
-ms.openlocfilehash: 0e2888ca7d0b601b1d67fb0a8dd756b653ad8dbc
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 1f6df33e995ad717e1451c047fec072a280b4a54
+ms.sourcegitcommit: 81558c2adb9d109946a027e5b96e4d24b3b13747
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388381"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99098679"
 ---
-# <span data-ttu-id="b800b-103">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-103">Wait-Job</span></span>
+# <span data-ttu-id="9a064-103">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-103">Wait-Job</span></span>
 
-## <span data-ttu-id="b800b-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="b800b-104">SYNOPSIS</span></span>
-<span data-ttu-id="b800b-105">Unterdrückt die Eingabeaufforderung, bis ein oder alle PowerShell-Hintergrund Aufträge, die in der Sitzung ausgeführt werden, abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="b800b-105">Suppresses the command prompt until one or all of the PowerShell background jobs running in the session are completed.</span></span>
+## <span data-ttu-id="9a064-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="9a064-104">SYNOPSIS</span></span>
+<span data-ttu-id="9a064-105">Wartet, bis ein oder alle PowerShell-Aufträge, die in der Sitzung ausgeführt werden, beendet werden.</span><span class="sxs-lookup"><span data-stu-id="9a064-105">Waits until one or all of the PowerShell jobs running in the session are in a terminating state.</span></span>
 
-## <span data-ttu-id="b800b-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="b800b-106">SYNTAX</span></span>
+## <span data-ttu-id="9a064-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="9a064-106">SYNTAX</span></span>
 
-### <span data-ttu-id="b800b-107">Sessionidparameterset (Standard)</span><span class="sxs-lookup"><span data-stu-id="b800b-107">SessionIdParameterSet (Default)</span></span>
+### <span data-ttu-id="9a064-107">Sessionidparameterset (Standard)</span><span class="sxs-lookup"><span data-stu-id="9a064-107">SessionIdParameterSet (Default)</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Id] <Int32[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b800b-108">Jobparameterset</span><span class="sxs-lookup"><span data-stu-id="b800b-108">JobParameterSet</span></span>
+### <span data-ttu-id="9a064-108">Jobparameterset</span><span class="sxs-lookup"><span data-stu-id="9a064-108">JobParameterSet</span></span>
 
 ```
 Wait-Job [-Job] <Job[]> [-Any] [-Timeout <Int32>] [-Force] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b800b-109">Nameparameterset</span><span class="sxs-lookup"><span data-stu-id="b800b-109">NameParameterSet</span></span>
+### <span data-ttu-id="9a064-109">Nameparameterset</span><span class="sxs-lookup"><span data-stu-id="9a064-109">NameParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Name] <String[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b800b-110">Instanceidparameterset</span><span class="sxs-lookup"><span data-stu-id="b800b-110">InstanceIdParameterSet</span></span>
+### <span data-ttu-id="9a064-110">Instanceidparameterset</span><span class="sxs-lookup"><span data-stu-id="9a064-110">InstanceIdParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-InstanceId] <Guid[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b800b-111">Stateparameterset</span><span class="sxs-lookup"><span data-stu-id="b800b-111">StateParameterSet</span></span>
+### <span data-ttu-id="9a064-111">Stateparameterset</span><span class="sxs-lookup"><span data-stu-id="9a064-111">StateParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-State] <JobState> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="b800b-112">Filterparameterset</span><span class="sxs-lookup"><span data-stu-id="b800b-112">FilterParameterSet</span></span>
+### <span data-ttu-id="9a064-112">Filterparameterset</span><span class="sxs-lookup"><span data-stu-id="9a064-112">FilterParameterSet</span></span>
 
 ```
 Wait-Job [-Any] [-Timeout <Int32>] [-Force] [-Filter] <Hashtable> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="b800b-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="b800b-113">DESCRIPTION</span></span>
+## <span data-ttu-id="9a064-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="9a064-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="b800b-114">Das- `Wait-Job` Cmdlet wartet, bis Windows PowerShell-Hintergrund Aufträge abgeschlossen sind, bevor die Eingabeaufforderung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="b800b-114">The `Wait-Job` cmdlet waits for Windows PowerShell background jobs to finish before it displays the command prompt.</span></span> <span data-ttu-id="b800b-115">Sie können warten, bis ein Hintergrundauftrag abgeschlossen ist, oder bis alle Hintergrundaufträge abgeschlossen sind, und Sie können eine maximale Wartezeit für den Auftrag festlegen.</span><span class="sxs-lookup"><span data-stu-id="b800b-115">You can wait until any background job is complete, or until all background jobs are complete, and you can set a maximum wait time for the job.</span></span>
+<span data-ttu-id="9a064-114">Das `Wait-Job` Cmdlet wartet, bis ein Auftrag in einem Beendigungs Zustand ist, bevor die Ausführung fortgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-114">The `Wait-Job` cmdlet waits for a job to be in a terminating state before continuing execution.</span></span>
+<span data-ttu-id="9a064-115">Die abschließenden Zustände lauten:</span><span class="sxs-lookup"><span data-stu-id="9a064-115">The terminating states are:</span></span>
 
-<span data-ttu-id="b800b-116">Wenn die Befehle im Auftrag fertig sind, `Wait-Job` zeigt die Eingabeaufforderung an und gibt ein Auftrags Objekt zurück, damit Sie es an einen anderen Befehl übergeben können.</span><span class="sxs-lookup"><span data-stu-id="b800b-116">When the commands in the job are complete, `Wait-Job` displays the command prompt and returns a job object so that you can pipe it to another command.</span></span>
+- <span data-ttu-id="9a064-116">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="9a064-116">Completed</span></span>
+- <span data-ttu-id="9a064-117">Fehler</span><span class="sxs-lookup"><span data-stu-id="9a064-117">Failed</span></span>
+- <span data-ttu-id="9a064-118">Beendet</span><span class="sxs-lookup"><span data-stu-id="9a064-118">Stopped</span></span>
+- <span data-ttu-id="9a064-119">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="9a064-119">Suspended</span></span>
+- <span data-ttu-id="9a064-120">Getrennt</span><span class="sxs-lookup"><span data-stu-id="9a064-120">Disconnected</span></span>
 
-<span data-ttu-id="b800b-117">Sie können das `Wait-Job` Cmdlet verwenden, um auf Hintergrund Aufträge zu warten, z. b. solche, die mit dem `Start-Job` Cmdlet oder dem **AsJob** -Parameter des `Invoke-Command` Cmdlets gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="b800b-117">You can use `Wait-Job` cmdlet to wait for background jobs, such as those that were started by using the `Start-Job` cmdlet or the **AsJob** parameter of the `Invoke-Command` cmdlet.</span></span> <span data-ttu-id="b800b-118">Weitere Informationen zu Windows PowerShell-Hintergrundaufträgen finden Sie unter [about_Jobs](./about/about_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="b800b-118">For more information about Windows PowerShell background jobs, see [about_Jobs](./about/about_Jobs.md).</span></span>
+<span data-ttu-id="9a064-121">Sie können bis zu einem bestimmten Auftrag warten, oder alle Aufträge befinden sich im Zustand "wird beendet".</span><span class="sxs-lookup"><span data-stu-id="9a064-121">You can wait until a specified job, or all jobs are in a terminating state.</span></span> <span data-ttu-id="9a064-122">Sie können auch eine maximale Wartezeit für den Auftrag mithilfe des **Timeout** -Parameters festlegen oder den **Force** -Parameter verwenden, um auf einen Auftrag in den `Suspended` Zuständen oder zu warten `Disconnected` .</span><span class="sxs-lookup"><span data-stu-id="9a064-122">You can also set a maximum wait time for the job using the **Timeout** parameter, or use the **Force** parameter to wait for a job in the `Suspended` or `Disconnected` states.</span></span>
 
-<span data-ttu-id="b800b-119">Ab Windows PowerShell 3,0 `Wait-Job` wartet das Cmdlet auch auf benutzerdefinierte Auftrags Typen, z. b. Workflow Aufträge und Instanzen geplanter Aufträge.</span><span class="sxs-lookup"><span data-stu-id="b800b-119">Starting in Windows PowerShell 3.0, the `Wait-Job` cmdlet also waits for custom job types, such as workflow jobs and instances of scheduled jobs.</span></span> <span data-ttu-id="b800b-120">Damit `Wait-Job` auf Aufträge eines bestimmten Typs gewartet werden kann, müssen Sie das Modul, das den benutzerdefinierten Auftragstyp unterstützt, in die Sitzung importieren, bevor Sie das `Get-Job` Cmdlet entweder mithilfe des-Cmdlets oder mithilfe des-Cmdlets oder mithilfe des-Cmdlets `Import-Module` im Modul ausführen.</span><span class="sxs-lookup"><span data-stu-id="b800b-120">To enable `Wait-Job` to wait for jobs of a particular type, import the module that supports the custom job type into the session before you run the `Get-Job` cmdlet, either by using the `Import-Module` cmdlet or by using or getting a cmdlet in the module.</span></span> <span data-ttu-id="b800b-121">Informationen zu einem bestimmten benutzerdefinierten Auftragstyp finden Sie in der Dokumentation der Funktion „Benutzerdefinierte Auftragstypen“.</span><span class="sxs-lookup"><span data-stu-id="b800b-121">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
+<span data-ttu-id="9a064-123">Wenn die Befehle im Auftrag vollständig sind, wird `Wait-Job` ein Auftrags Objekt zurückgegeben, und die Ausführung wird fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="9a064-123">When the commands in the job are complete, `Wait-Job` returns a job object and continues execution.</span></span>
 
-## <span data-ttu-id="b800b-122">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="b800b-122">EXAMPLES</span></span>
+<span data-ttu-id="9a064-124">Sie können das `Wait-Job` Cmdlet verwenden, um auf Aufträge zu warten, die mit dem `Start-Job` Cmdlet oder dem **AsJob** -Parameter des `Invoke-Command` Cmdlets gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-124">You can use the `Wait-Job` cmdlet to wait for jobs started by using the `Start-Job` cmdlet or the **AsJob** parameter of the `Invoke-Command` cmdlet.</span></span> <span data-ttu-id="9a064-125">Weitere Informationen zu Aufträgen finden Sie unter [Informationen zu Aufträgen](./about/about_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="9a064-125">For more information about jobs, see [about_Jobs](./about/about_Jobs.md).</span></span>
 
-### <span data-ttu-id="b800b-123">Beispiel 1: warten auf alle Aufträge</span><span class="sxs-lookup"><span data-stu-id="b800b-123">Example 1: Wait for all jobs</span></span>
+<span data-ttu-id="9a064-126">Ab Windows PowerShell 3,0 `Wait-Job` wartet das Cmdlet auch auf benutzerdefinierte Auftrags Typen, z. b. Workflow Aufträge und Instanzen geplanter Aufträge.</span><span class="sxs-lookup"><span data-stu-id="9a064-126">Starting in Windows PowerShell 3.0, the `Wait-Job` cmdlet also waits for custom job types, such as workflow jobs and instances of scheduled jobs.</span></span> <span data-ttu-id="9a064-127">Damit `Wait-Job` auf Aufträge eines bestimmten Typs gewartet werden kann, müssen Sie das Modul, das den benutzerdefinierten Auftragstyp unterstützt, in die Sitzung importieren, bevor Sie das `Get-Job` Cmdlet entweder mithilfe des-Cmdlets oder mithilfe des-Cmdlets oder mithilfe des-Cmdlets `Import-Module` im Modul ausführen.</span><span class="sxs-lookup"><span data-stu-id="9a064-127">To enable `Wait-Job` to wait for jobs of a particular type, import the module that supports the custom job type into the session before you run the `Get-Job` cmdlet, either by using the `Import-Module` cmdlet or by using or getting a cmdlet in the module.</span></span> <span data-ttu-id="9a064-128">Informationen zu einem bestimmten benutzerdefinierten Auftragstyp finden Sie in der Dokumentation der Funktion „Benutzerdefinierte Auftragstypen“.</span><span class="sxs-lookup"><span data-stu-id="9a064-128">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
+
+## <span data-ttu-id="9a064-129">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="9a064-129">EXAMPLES</span></span>
+
+### <span data-ttu-id="9a064-130">Beispiel 1: warten auf alle Aufträge</span><span class="sxs-lookup"><span data-stu-id="9a064-130">Example 1: Wait for all jobs</span></span>
 
 ```powershell
 Get-Job | Wait-Job
 ```
 
-<span data-ttu-id="b800b-124">Dieser Befehl wartet, bis alle Hintergrund Aufträge, die in der Sitzung ausgeführt werden, beendet werden.</span><span class="sxs-lookup"><span data-stu-id="b800b-124">This command waits for all of the background jobs running in the session to finish.</span></span>
+<span data-ttu-id="9a064-131">Dieser Befehl wartet, bis alle Aufträge, die in der Sitzung ausgeführt werden, beendet werden.</span><span class="sxs-lookup"><span data-stu-id="9a064-131">This command waits for all of the jobs running in the session to finish.</span></span>
 
-### <span data-ttu-id="b800b-125">Beispiel 2: warten auf Aufträge, die auf Remote Computern gestartet werden, mithilfe von Start-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-125">Example 2: Wait for jobs started on remote computers by using Start-Job</span></span>
+### <span data-ttu-id="9a064-132">Beispiel 2: warten auf Aufträge, die auf Remote Computern gestartet werden, mithilfe von Start-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-132">Example 2: Wait for jobs started on remote computers by using Start-Job</span></span>
 
 ```powershell
 $s = New-PSSession Server01, Server02, Server03
@@ -90,20 +99,20 @@ $done.Count
 3
 ```
 
-<span data-ttu-id="b800b-126">In diesem Beispiel wird gezeigt, wie das `Wait-Job` Cmdlet mit Aufträgen verwendet wird, die auf Remote Computern mithilfe des `Start-Job` Cmdlets gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="b800b-126">This example shows how to use the `Wait-Job` cmdlet with jobs started on remote computers by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="b800b-127">`Start-Job`Der- `Wait-Job` Befehl und der-Befehl werden mithilfe des-Cmdlets an den Remote Computer übermittelt `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="b800b-127">Both `Start-Job` and `Wait-Job` commands are submitted to the remote computer by using the `Invoke-Command` cmdlet.</span></span>
+<span data-ttu-id="9a064-133">In diesem Beispiel wird gezeigt, wie das `Wait-Job` Cmdlet mit Aufträgen verwendet wird, die auf Remote Computern mithilfe des `Start-Job` Cmdlets gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-133">This example shows how to use the `Wait-Job` cmdlet with jobs started on remote computers by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="9a064-134">`Start-Job`Der- `Wait-Job` Befehl und der-Befehl werden mithilfe des-Cmdlets an den Remote Computer übermittelt `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="9a064-134">Both `Start-Job` and `Wait-Job` commands are submitted to the remote computer by using the `Invoke-Command` cmdlet.</span></span>
 
-<span data-ttu-id="b800b-128">In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Date` Befehl, der als Hintergrund Auftrag auf drei verschiedenen Computern ausgeführt wird, abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-128">This example uses `Wait-Job` to determine whether a `Get-Date` command running as a background job on three different computers is finished.</span></span>
+<span data-ttu-id="9a064-135">In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Date` Befehl, der als Auftrag auf drei verschiedenen Computern ausgeführt wird, abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-135">This example uses `Wait-Job` to determine whether a `Get-Date` command running as a job on three different computers is finished.</span></span>
 
-<span data-ttu-id="b800b-129">Mit dem ersten Befehl wird eine Windows PowerShell-Sitzung ( **PSSession** ) auf jedem der drei Remote Computer erstellt und in der `$s` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b800b-129">The first command creates a Windows PowerShell session ( **PSSession** ) on each of the three remote computers and stores them in the `$s` variable.</span></span>
+<span data-ttu-id="9a064-136">Mit dem ersten Befehl wird eine Windows PowerShell-Sitzung (**PSSession**) auf jedem der drei Remote Computer erstellt und in der `$s` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="9a064-136">The first command creates a Windows PowerShell session (**PSSession**) on each of the three remote computers and stores them in the `$s` variable.</span></span>
 
-<span data-ttu-id="b800b-130">Der zweite Befehl verwendet `Invoke-Command` , um `Start-Job` in jeder der drei Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="b800b-130">The second command uses `Invoke-Command` to run `Start-Job` in each of the three sessions in `$s`.</span></span>
-<span data-ttu-id="b800b-131">Alle Aufträge werden als date1 bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="b800b-131">All of the jobs are named Date1.</span></span>
+<span data-ttu-id="9a064-137">Der zweite Befehl verwendet `Invoke-Command` , um `Start-Job` in jeder der drei Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="9a064-137">The second command uses `Invoke-Command` to run `Start-Job` in each of the three sessions in `$s`.</span></span>
+<span data-ttu-id="9a064-138">Alle Aufträge werden als date1 bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="9a064-138">All of the jobs are named Date1.</span></span>
 
-<span data-ttu-id="b800b-132">Der dritte Befehl verwendet `Invoke-Command` , um auszuführen `Wait-Job` .</span><span class="sxs-lookup"><span data-stu-id="b800b-132">The third command uses `Invoke-Command` to run `Wait-Job`.</span></span> <span data-ttu-id="b800b-133">Dieser Befehl wartet, bis die date1-Aufträge auf den einzelnen Computern abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="b800b-133">This command waits for the Date1 jobs on each computer to finish.</span></span> <span data-ttu-id="b800b-134">Die resultierende Auflistung (Array) der Auftrags Objekte wird in der `$done` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b800b-134">It stores the resulting collection (array) of job objects in the `$done` variable.</span></span>
+<span data-ttu-id="9a064-139">Der dritte Befehl verwendet `Invoke-Command` , um auszuführen `Wait-Job` .</span><span class="sxs-lookup"><span data-stu-id="9a064-139">The third command uses `Invoke-Command` to run `Wait-Job`.</span></span> <span data-ttu-id="9a064-140">Dieser Befehl wartet `Date1` , bis die Aufträge auf den einzelnen Computern abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="9a064-140">This command waits for the `Date1` jobs on each computer to finish.</span></span> <span data-ttu-id="9a064-141">Die resultierende Auflistung (**Array**) der **Auftrags** Objekte wird in der `$done` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="9a064-141">It stores the resulting collection (**array**) of **job** objects in the `$done` variable.</span></span>
 
-<span data-ttu-id="b800b-135">Der vierte Befehl verwendet die **count** -Eigenschaft des Arrays von Auftrags Objekten in der `$done` Variablen, um zu bestimmen, wie viele der Aufträge abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="b800b-135">The fourth command uses the **Count** property of the array of job objects in the `$done` variable to determine how many of the jobs are finished.</span></span>
+<span data-ttu-id="9a064-142">Der vierte Befehl verwendet die **count** -Eigenschaft des Arrays von Auftrags Objekten in der `$done` Variablen, um zu bestimmen, wie viele der Aufträge abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="9a064-142">The fourth command uses the **Count** property of the array of job objects in the `$done` variable to determine how many of the jobs are finished.</span></span>
 
-### <span data-ttu-id="b800b-136">Beispiel 3: bestimmen, wann der erste Hintergrund Auftrag abgeschlossen ist</span><span class="sxs-lookup"><span data-stu-id="b800b-136">Example 3: Determine when the first background job finishes</span></span>
+### <span data-ttu-id="9a064-143">Beispiel 3: bestimmen, wann der erste Auftrag abgeschlossen ist</span><span class="sxs-lookup"><span data-stu-id="9a064-143">Example 3: Determine when the first job finishes</span></span>
 
 ```powershell
 $s = New-PSSession (Get-Content Machines.txt)
@@ -112,80 +121,80 @@ Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$Using:c}
 Invoke-Command -Session $s -ScriptBlock {Wait-Job -Any}
 ```
 
-<span data-ttu-id="b800b-137">In diesem Beispiel wird der **any** -Parameter verwendet `Wait-Job` , um zu bestimmen, wann die erste der vielen Hintergrund Aufträge, die in der aktuellen Sitzung ausgeführt werden, abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="b800b-137">This example uses the **Any** parameter of `Wait-Job` to determine when the first of many background jobs running in the current session are completed.</span></span> <span data-ttu-id="b800b-138">Außerdem wird gezeigt, wie das `Wait-Job` Cmdlet verwendet wird, um zu warten, bis die Remote Aufträge abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="b800b-138">It also shows how to use the `Wait-Job` cmdlet to wait for remote jobs to finish.</span></span>
+<span data-ttu-id="9a064-144">In diesem Beispiel wird der **any** -Parameter verwendet `Wait-Job` , um zu bestimmen, wann der erste von vielen Aufträgen, die in der aktuellen Sitzung ausgeführt werden, beendet wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-144">This example uses the **Any** parameter of `Wait-Job` to determine when the first of many jobs running in the current session are in a terminating state.</span></span> <span data-ttu-id="9a064-145">Außerdem wird gezeigt, wie das `Wait-Job` Cmdlet verwendet wird, um zu warten, bis die Remote Aufträge abgeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="9a064-145">It also shows how to use the `Wait-Job` cmdlet to wait for remote jobs to finish.</span></span>
 
-<span data-ttu-id="b800b-139">Der erste Befehl erstellt eine **PSSession** auf allen Computern, die in der Machines.txt-Datei aufgelistet sind, und speichert die **PSSession** -Objekte in der `$s` Variablen.</span><span class="sxs-lookup"><span data-stu-id="b800b-139">The first command creates a **PSSession** on each of the computers listed in the Machines.txt file and stores the **PSSession** objects in the `$s` variable.</span></span> <span data-ttu-id="b800b-140">Der Befehl verwendet das `Get-Content` Cmdlet, um den Inhalt der Datei zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="b800b-140">The command uses the `Get-Content` cmdlet to get the contents of the file.</span></span> <span data-ttu-id="b800b-141">Der `Get-Content` Befehl wird in Klammern eingeschlossen, um sicherzustellen, dass er vor dem Befehl ausgeführt wird `New-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="b800b-141">The `Get-Content` command is enclosed in parentheses to make sure that it runs before the `New-PSSession` command.</span></span>
+<span data-ttu-id="9a064-146">Der erste Befehl erstellt eine **PSSession** auf allen Computern, die in der Machines.txt-Datei aufgelistet sind, und speichert die **PSSession** -Objekte in der `$s` Variablen.</span><span class="sxs-lookup"><span data-stu-id="9a064-146">The first command creates a **PSSession** on each of the computers listed in the Machines.txt file and stores the **PSSession** objects in the `$s` variable.</span></span> <span data-ttu-id="9a064-147">Der Befehl verwendet das `Get-Content` Cmdlet, um den Inhalt der Datei zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="9a064-147">The command uses the `Get-Content` cmdlet to get the contents of the file.</span></span> <span data-ttu-id="9a064-148">Der `Get-Content` Befehl wird in Klammern eingeschlossen, um sicherzustellen, dass er vor dem Befehl ausgeführt wird `New-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="9a064-148">The `Get-Content` command is enclosed in parentheses to make sure that it runs before the `New-PSSession` command.</span></span>
 
-<span data-ttu-id="b800b-142">Mit dem zweiten Befehl `Get-EventLog` wird eine Befehls Zeichenfolge in Anführungszeichen in der `$c` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b800b-142">The second command stores a `Get-EventLog` command string, in quotation marks, in the `$c` variable.</span></span>
+<span data-ttu-id="9a064-149">Mit dem zweiten Befehl `Get-EventLog` wird eine Befehls Zeichenfolge in Anführungszeichen in der `$c` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="9a064-149">The second command stores a `Get-EventLog` command string, in quotation marks, in the `$c` variable.</span></span>
 
-<span data-ttu-id="b800b-143">Der dritte Befehl verwendet das `Invoke-Command` Cmdlet, um `Start-Job` in jeder der Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="b800b-143">The third command uses `Invoke-Command` cmdlet to run `Start-Job` in each of the sessions in `$s`.</span></span>
-<span data-ttu-id="b800b-144">Der `Start-Job` Befehl startet einen Hintergrund Auftrag, der den `Get-EventLog` Befehl in der `$c` Variablen ausführt.</span><span class="sxs-lookup"><span data-stu-id="b800b-144">The `Start-Job` command starts a background job that runs the `Get-EventLog` command in the `$c` variable.</span></span>
+<span data-ttu-id="9a064-150">Der dritte Befehl verwendet das `Invoke-Command` Cmdlet, um `Start-Job` in jeder der Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="9a064-150">The third command uses `Invoke-Command` cmdlet to run `Start-Job` in each of the sessions in `$s`.</span></span>
+<span data-ttu-id="9a064-151">Der `Start-Job` Befehl startet einen Auftrag, der den `Get-EventLog` Befehl in der `$c` Variablen ausführt.</span><span class="sxs-lookup"><span data-stu-id="9a064-151">The `Start-Job` command starts a job that runs the `Get-EventLog` command in the `$c` variable.</span></span>
 
-<span data-ttu-id="b800b-145">Der Befehl verwendet den **using** -bereichsmodifizierer, um anzugeben, dass die `$c` Variable auf dem lokalen Computer definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="b800b-145">The command uses the **Using** scope modifier to indicate that the `$c` variable was defined on the local computer.</span></span> <span data-ttu-id="b800b-146">Der **Using** -Bereichsbezeichner wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="b800b-146">The **Using** scope modifier is introduced in Windows PowerShell 3.0.</span></span> <span data-ttu-id="b800b-147">Weitere Informationen zum using-bereichsmodifizierer finden **Sie** unter [about_Remote_Variables](./about/about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="b800b-147">For more information about the **Using** scope modifier, see [about_Remote_Variables](./about/about_Remote_Variables.md).</span></span>
+<span data-ttu-id="9a064-152">Der Befehl verwendet den **using** -bereichsmodifizierer, um anzugeben, dass die `$c` Variable auf dem lokalen Computer definiert wurde.</span><span class="sxs-lookup"><span data-stu-id="9a064-152">The command uses the **Using** scope modifier to indicate that the `$c` variable was defined on the local computer.</span></span> <span data-ttu-id="9a064-153">Der **Using**-Bereichsbezeichner wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="9a064-153">The **Using** scope modifier is introduced in Windows PowerShell 3.0.</span></span> <span data-ttu-id="9a064-154">Weitere Informationen zum using-bereichsmodifizierer finden **Sie** unter [about_Remote_Variables](./about/about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="9a064-154">For more information about the **Using** scope modifier, see [about_Remote_Variables](./about/about_Remote_Variables.md).</span></span>
 
-<span data-ttu-id="b800b-148">Der vierte Befehl verwendet `Invoke-Command` , um einen `Wait-Job` Befehl in den Sitzungen auszuführen.</span><span class="sxs-lookup"><span data-stu-id="b800b-148">The fourth command uses `Invoke-Command` to run a `Wait-Job` command in the sessions.</span></span> <span data-ttu-id="b800b-149">Er verwendet den **any** -Parameter, um zu warten, bis der erste Auftrag auf den Remote Computern abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-149">It uses the **Any** parameter to wait until the first job on the remote computers is completed.</span></span>
+<span data-ttu-id="9a064-155">Der vierte Befehl verwendet `Invoke-Command` , um einen `Wait-Job` Befehl in den Sitzungen auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9a064-155">The fourth command uses `Invoke-Command` to run a `Wait-Job` command in the sessions.</span></span> <span data-ttu-id="9a064-156">Er verwendet den **any** -Parameter, um zu warten, bis der erste Auftrag auf den Remote Computern den Status beendet.</span><span class="sxs-lookup"><span data-stu-id="9a064-156">It uses the **Any** parameter to wait until the first job on the remote computers is terminating state.</span></span>
 
-### <span data-ttu-id="b800b-150">Beispiel 4: Festlegen einer Wartezeit für Aufträge auf Remote Computern</span><span class="sxs-lookup"><span data-stu-id="b800b-150">Example 4: Set a wait time for jobs on remote computers</span></span>
+### <span data-ttu-id="9a064-157">Beispiel 4: Festlegen einer Wartezeit für Aufträge auf Remote Computern</span><span class="sxs-lookup"><span data-stu-id="9a064-157">Example 4: Set a wait time for jobs on remote computers</span></span>
 
 ```powershell
-$s = New-PSSession Server01, Server02, Server03
-$jobs = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-Date}}
-$done = Invoke-Command -Session $s -ScriptBlock {Wait-Job -Timeout 30}
+PS> $s = New-PSSession Server01, Server02, Server03
+PS> $jobs = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {Get-Date}}
+PS> $done = Invoke-Command -Session $s -ScriptBlock {Wait-Job -Timeout 30}
+PS>
 ```
 
-<span data-ttu-id="b800b-151">In diesem Beispiel wird gezeigt, wie der **Timeout** -Parameter von verwendet wird `Wait-Job` , um eine maximale Wartezeit für die Aufträge festzulegen, die auf Remote Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="b800b-151">This example shows how to use the **Timeout** parameter of `Wait-Job` to set a maximum wait time for the jobs running on remote computers.</span></span>
+<span data-ttu-id="9a064-158">In diesem Beispiel wird gezeigt, wie der **Timeout** -Parameter von verwendet wird `Wait-Job` , um eine maximale Wartezeit für die Aufträge festzulegen, die auf Remote Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="9a064-158">This example shows how to use the **Timeout** parameter of `Wait-Job` to set a maximum wait time for the jobs running on remote computers.</span></span>
 
-<span data-ttu-id="b800b-152">Der erste Befehl erstellt eine **PSSession** auf jedem der drei Remote Computer (Server01, Server02 und Server03) und speichert die **PSSession** -Objekte in der `$s` Variablen.</span><span class="sxs-lookup"><span data-stu-id="b800b-152">The first command creates a **PSSession** on each of three remote computers (Server01, Server02, and Server03), and then stores the **PSSession** objects in the `$s` variable.</span></span>
+<span data-ttu-id="9a064-159">Der erste Befehl erstellt eine **PSSession** auf jedem der drei Remote Computer (Server01, Server02 und Server03) und speichert die **PSSession** -Objekte in der `$s` Variablen.</span><span class="sxs-lookup"><span data-stu-id="9a064-159">The first command creates a **PSSession** on each of three remote computers (Server01, Server02, and Server03), and then stores the **PSSession** objects in the `$s` variable.</span></span>
 
-<span data-ttu-id="b800b-153">Der zweite Befehl verwendet `Invoke-Command` , um `Start-Job` in jedem der **PSSession** -Objekte in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="b800b-153">The second command uses `Invoke-Command` to run `Start-Job` in each of the **PSSession** objects in `$s`.</span></span> <span data-ttu-id="b800b-154">Die resultierenden Auftrags Objekte werden in der `$jobs` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b800b-154">It stores the resulting job objects in the `$jobs` variable.</span></span>
+<span data-ttu-id="9a064-160">Der zweite Befehl verwendet `Invoke-Command` , um `Start-Job` in jedem der **PSSession** -Objekte in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="9a064-160">The second command uses `Invoke-Command` to run `Start-Job` in each of the **PSSession** objects in `$s`.</span></span> <span data-ttu-id="9a064-161">Die resultierenden Auftrags Objekte werden in der `$jobs` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="9a064-161">It stores the resulting job objects in the `$jobs` variable.</span></span>
 
-<span data-ttu-id="b800b-155">Der dritte Befehl verwendet `Invoke-Command` , um `Wait-Job` in jeder der Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="b800b-155">The third command uses `Invoke-Command` to run `Wait-Job` in each of the sessions in `$s`.</span></span> <span data-ttu-id="b800b-156">Der `Wait-Job` Befehl bestimmt, ob alle Befehle innerhalb von 30 Sekunden abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="b800b-156">The `Wait-Job` command determines whether all of the commands have completed within 30 seconds.</span></span> <span data-ttu-id="b800b-157">Er verwendet den **Timeout** -Parameter mit einem Wert von 30, um die maximale Wartezeit festzulegen, und speichert dann die Ergebnisse des Befehls in der `$done` Variablen.</span><span class="sxs-lookup"><span data-stu-id="b800b-157">It uses the **Timeout** parameter with a value of 30 to establish the maximum wait time, and then stores the results of the command in the `$done` variable.</span></span>
+<span data-ttu-id="9a064-162">Der dritte Befehl verwendet `Invoke-Command` , um `Wait-Job` in jeder der Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="9a064-162">The third command uses `Invoke-Command` to run `Wait-Job` in each of the sessions in `$s`.</span></span> <span data-ttu-id="9a064-163">Der `Wait-Job` Befehl bestimmt, ob alle Befehle innerhalb von 30 Sekunden abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-163">The `Wait-Job` command determines whether all of the commands have completed within 30 seconds.</span></span> <span data-ttu-id="9a064-164">Er verwendet den **Timeout** -Parameter mit einem Wert von 30, um die maximale Wartezeit festzulegen, und speichert dann die Ergebnisse des Befehls in der `$done` Variablen.</span><span class="sxs-lookup"><span data-stu-id="9a064-164">It uses the **Timeout** parameter with a value of 30 to establish the maximum wait time, and then stores the results of the command in the `$done` variable.</span></span>
 
-<span data-ttu-id="b800b-158">In diesem Fall wurde nur der Befehl auf dem Computer Server02 nach 30 Sekunden abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="b800b-158">In this case, after 30 seconds, only the command on the Server02 computer has completed.</span></span> <span data-ttu-id="b800b-159">`Wait-Job` beendet den warte Vorgang, zeigt die Eingabeaufforderung an und gibt das Objekt zurück, das den abgeschlossenen Auftrag darstellt.</span><span class="sxs-lookup"><span data-stu-id="b800b-159">`Wait-Job` ends the wait, displays the command prompt, and returns the object that represents the job that was completed.</span></span>
+<span data-ttu-id="9a064-165">In diesem Fall wurde nur der Befehl auf dem Computer Server02 nach 30 Sekunden abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="9a064-165">In this case, after 30 seconds, only the command on the Server02 computer has completed.</span></span> <span data-ttu-id="9a064-166">`Wait-Job` beendet den warte Vorgang, gibt das Objekt zurück, das den abgeschlossenen Auftrag darstellt, und zeigt die Eingabeaufforderung an.</span><span class="sxs-lookup"><span data-stu-id="9a064-166">`Wait-Job` ends the wait, returns the object that represents the job that was completed, and displays the command prompt.</span></span>
 
-<span data-ttu-id="b800b-160">Die- `$done` Variable enthält ein Auftrags Objekt, das den Auftrag darstellt, der auf Server02 ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b800b-160">The `$done` variable contains a job object that represents the job that ran on Server02.</span></span>
+<span data-ttu-id="9a064-167">Die- `$done` Variable enthält ein Auftrags Objekt, das den Auftrag darstellt, der auf Server02 ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-167">The `$done` variable contains a job object that represents the job that ran on Server02.</span></span>
 
-### <span data-ttu-id="b800b-161">Beispiel 5: warten, bis einer von mehreren Aufträgen abgeschlossen ist</span><span class="sxs-lookup"><span data-stu-id="b800b-161">Example 5: Wait until one of several jobs finishes</span></span>
+### <span data-ttu-id="9a064-168">Beispiel 5: warten, bis einer von mehreren Aufträgen abgeschlossen ist</span><span class="sxs-lookup"><span data-stu-id="9a064-168">Example 5: Wait until one of several jobs finishes</span></span>
 
 ```powershell
 Wait-Job -id 1,2,5 -Any
 ```
 
-<span data-ttu-id="b800b-162">Dieser Befehl identifiziert drei Aufträge anhand ihrer IDs und wartet, bis eine davon abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-162">This command identifies three jobs by their IDs and waits until any one of them are completed.</span></span>
-<span data-ttu-id="b800b-163">Die Eingabeaufforderung wird zurückgegeben, wenn der erste Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-163">The command prompt returns when the first job finishes.</span></span>
+<span data-ttu-id="9a064-169">Mit diesem Befehl werden drei Aufträge anhand ihrer IDs identifiziert, und es wird gewartet, bis einer der beiden Aufträge beendet ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-169">This command identifies three jobs by their IDs and waits until any one of them are in a terminating state.</span></span> <span data-ttu-id="9a064-170">Die Ausführung wird ausgeführt, wenn der erste Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-170">Execution continues when the first job finishes.</span></span>
 
-### <span data-ttu-id="b800b-164">Beispiel 6: warten auf einen Zeitraum und anschließendes fortsetzen des Auftrags im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="b800b-164">Example 6: Wait for a period, then allow job to continue in background</span></span>
+### <span data-ttu-id="9a064-171">Beispiel 6: warten auf einen Zeitraum und anschließendes fortsetzen des Auftrags im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="9a064-171">Example 6: Wait for a period, then allow job to continue in background</span></span>
 
 ```powershell
 Wait-Job -Name "DailyLog" -Timeout 120
 ```
 
-<span data-ttu-id="b800b-165">Dieser Befehl wartet 120 Sekunden (zwei Minuten), bis der dailylog-Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-165">This command waits 120 seconds (two minutes) for the DailyLog job to finish.</span></span> <span data-ttu-id="b800b-166">Wenn der Auftrag nicht innerhalb der nächsten zwei Minuten abgeschlossen wird, wird die Eingabeaufforderung trotzdem zurückgegeben, und der Auftrag wird weiterhin im Hintergrund ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b800b-166">If the job does not finish in the next two minutes, the command prompt returns anyway, and the job continues to run in the background.</span></span>
+<span data-ttu-id="9a064-172">Dieser Befehl wartet 120 Sekunden (zwei Minuten), bis der dailylog-Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-172">This command waits 120 seconds (two minutes) for the DailyLog job to finish.</span></span> <span data-ttu-id="9a064-173">Wenn der Auftrag nicht innerhalb der nächsten zwei Minuten abgeschlossen wird, wird die Ausführung fortgesetzt, und der Auftrag wird weiter im Hintergrund ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="9a064-173">If the job does not finish in the next two minutes, execution continues, and the job continues to run in the background.</span></span>
 
-### <span data-ttu-id="b800b-167">Beispiel 7: warten auf einen Auftrag nach Name</span><span class="sxs-lookup"><span data-stu-id="b800b-167">Example 7: Wait for a job by name</span></span>
+### <span data-ttu-id="9a064-174">Beispiel 7: warten auf einen Auftrag nach Name</span><span class="sxs-lookup"><span data-stu-id="9a064-174">Example 7: Wait for a job by name</span></span>
 
 ```powershell
 Wait-Job -Name "Job3"
 ```
 
-<span data-ttu-id="b800b-168">Dieser Befehl verwendet den Auftrags Namen, um den Auftrag zu identifizieren, für den gewartet werden soll.</span><span class="sxs-lookup"><span data-stu-id="b800b-168">This command uses the job name to identify the job for which to wait.</span></span>
+<span data-ttu-id="9a064-175">Dieser Befehl verwendet den Auftrags Namen, um den Auftrag zu identifizieren, für den gewartet werden soll.</span><span class="sxs-lookup"><span data-stu-id="9a064-175">This command uses the job name to identify the job for which to wait.</span></span>
 
-### <span data-ttu-id="b800b-169">Beispiel 8: warten auf Aufträge auf dem lokalen Computer, die mit Start-Job gestartet wurden</span><span class="sxs-lookup"><span data-stu-id="b800b-169">Example 8: Wait for jobs on local computer started with Start-Job</span></span>
+### <span data-ttu-id="9a064-176">Beispiel 8: warten auf Aufträge auf dem lokalen Computer, die mit Start-Job gestartet wurden</span><span class="sxs-lookup"><span data-stu-id="9a064-176">Example 8: Wait for jobs on local computer started with Start-Job</span></span>
 
 ```powershell
-$j = Start-Job -ScriptBlock {Get-ChildItem *.ps1| where {$_lastwritetime -gt ((Get-Date) - (New-TimeSpan -Days 7))}}
+$j = Start-Job -ScriptBlock {Get-ChildItem *.ps1| where {$_.lastwritetime -gt ((Get-Date) - (New-TimeSpan -Days 7))}}
 $j | Wait-Job
 ```
 
-<span data-ttu-id="b800b-170">In diesem Beispiel wird gezeigt, wie das `Wait-Job` Cmdlet mit Aufträgen verwendet wird, die auf dem lokalen Computer mithilfe von gestartet werden `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="b800b-170">This example shows how to use the `Wait-Job` cmdlet with jobs started on the local computer by using `Start-Job`.</span></span>
+<span data-ttu-id="9a064-177">In diesem Beispiel wird gezeigt, wie das `Wait-Job` Cmdlet mit Aufträgen verwendet wird, die auf dem lokalen Computer mithilfe von gestartet werden `Start-Job` .</span><span class="sxs-lookup"><span data-stu-id="9a064-177">This example shows how to use the `Wait-Job` cmdlet with jobs started on the local computer by using `Start-Job`.</span></span>
 
-<span data-ttu-id="b800b-171">Diese Befehle starten einen Auftrag, der die Windows PowerShell-Skriptdateien abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.</span><span class="sxs-lookup"><span data-stu-id="b800b-171">These commands start a job that gets the Windows PowerShell script files that were added or updated in the last week.</span></span>
+<span data-ttu-id="9a064-178">Diese Befehle starten einen Auftrag, der die Windows PowerShell-Skriptdateien abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-178">These commands start a job that gets the Windows PowerShell script files that were added or updated in the last week.</span></span>
 
-<span data-ttu-id="b800b-172">Der erste Befehl verwendet `Start-Job` , um einen Hintergrund Auftrag auf dem lokalen Computer zu starten.</span><span class="sxs-lookup"><span data-stu-id="b800b-172">The first command uses `Start-Job` to start a background job on the local computer.</span></span> <span data-ttu-id="b800b-173">Der Auftrag führt einen `Get-ChildItem` Befehl aus, der alle Dateien mit der Dateinamenerweiterung ". ps1" abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.</span><span class="sxs-lookup"><span data-stu-id="b800b-173">The job runs a `Get-ChildItem` command that gets all of the files that have a .ps1 file name extension that were added or updated in the last week.</span></span>
+<span data-ttu-id="9a064-179">Der erste Befehl verwendet `Start-Job` , um einen Auftrag auf dem lokalen Computer zu starten.</span><span class="sxs-lookup"><span data-stu-id="9a064-179">The first command uses `Start-Job` to start a job on the local computer.</span></span> <span data-ttu-id="9a064-180">Der Auftrag führt einen `Get-ChildItem` Befehl aus, der alle Dateien mit der Dateinamenerweiterung ". ps1" abruft, die in der letzten Woche hinzugefügt oder aktualisiert wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-180">The job runs a `Get-ChildItem` command that gets all of the files that have a .ps1 file name extension that were added or updated in the last week.</span></span>
 
-<span data-ttu-id="b800b-174">Der dritte Befehl verwendet `Wait-Job` , um zu warten, bis der Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-174">The third command uses `Wait-Job` to wait until the job is completed.</span></span> <span data-ttu-id="b800b-175">Wenn der Auftrag abgeschlossen ist, zeigt der Befehl das Auftrags Objekt an, das Informationen über den Auftrag enthält.</span><span class="sxs-lookup"><span data-stu-id="b800b-175">When the job finishes, the command displays the job object, which contains information about the job.</span></span>
+<span data-ttu-id="9a064-181">Der dritte Befehl verwendet `Wait-Job` , um zu warten, bis der Auftrag beendet ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-181">The third command uses `Wait-Job` to wait until the job is in a terminating state.</span></span> <span data-ttu-id="9a064-182">Wenn der Auftrag abgeschlossen ist, zeigt der Befehl das Auftrags Objekt an, das Informationen über den Auftrag enthält.</span><span class="sxs-lookup"><span data-stu-id="9a064-182">When the job finishes, the command displays the job object, which contains information about the job.</span></span>
 
-### <span data-ttu-id="b800b-176">Beispiel 9: warten auf Aufträge, die auf Remote Computern gestartet werden, mithilfe von Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="b800b-176">Example 9: Wait for jobs started on remote computers by using Invoke-Command</span></span>
+### <span data-ttu-id="9a064-183">Beispiel 9: warten auf Aufträge, die auf Remote Computern gestartet werden, mithilfe von Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="9a064-183">Example 9: Wait for jobs started on remote computers by using Invoke-Command</span></span>
 
 ```powershell
 $s = New-PSSession Server01, Server02, Server03
@@ -193,18 +202,18 @@ $j = Invoke-Command -Session $s -ScriptBlock {Get-Process} -AsJob
 $j | Wait-Job
 ```
 
-<span data-ttu-id="b800b-177">Dieses Beispiel zeigt `Wait-Job` die Verwendung von mit Aufträgen, die auf Remote Computern mithilfe des **AsJob** -Parameters von gestartet wurden `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="b800b-177">This example shows how to use `Wait-Job` with jobs started on remote computers by using the **AsJob** parameter of `Invoke-Command`.</span></span> <span data-ttu-id="b800b-178">Wenn Sie **AsJob** verwenden, wird der Auftrag auf dem lokalen Computer erstellt, und die Ergebnisse werden automatisch an den lokalen Computer zurückgegeben, obwohl der Auftrag auf den Remote Computern ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="b800b-178">When using **AsJob** , the job is created on the local computer and the results are automatically returned to the local computer, even though the job runs on the remote computers.</span></span>
+<span data-ttu-id="9a064-184">Dieses Beispiel zeigt `Wait-Job` die Verwendung von mit Aufträgen, die auf Remote Computern mithilfe des **AsJob** -Parameters von gestartet wurden `Invoke-Command` .</span><span class="sxs-lookup"><span data-stu-id="9a064-184">This example shows how to use `Wait-Job` with jobs started on remote computers by using the **AsJob** parameter of `Invoke-Command`.</span></span> <span data-ttu-id="9a064-185">Wenn Sie **AsJob** verwenden, wird der Auftrag auf dem lokalen Computer erstellt, und die Ergebnisse werden automatisch an den lokalen Computer zurückgegeben, obwohl der Auftrag auf den Remote Computern ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-185">When using **AsJob**, the job is created on the local computer and the results are automatically returned to the local computer, even though the job runs on the remote computers.</span></span>
 
-<span data-ttu-id="b800b-179">In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Process` Befehl, der in Sitzungen auf drei Remote Computern ausgeführt wird, abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-179">This example uses `Wait-Job` to determine whether a `Get-Process` command running in the sessions on three remote computers is completed.</span></span>
+<span data-ttu-id="9a064-186">In diesem Beispiel `Wait-Job` wird verwendet, um zu bestimmen, ob ein `Get-Process` Befehl, der in den Sitzungen auf drei Remote Computern ausgeführt wird, beendet wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-186">This example uses `Wait-Job` to determine whether a `Get-Process` command running in the sessions on three remote computers is in a terminating state.</span></span>
 
-<span data-ttu-id="b800b-180">Der erste Befehl erstellt **PSSession** -Objekte auf drei Computern und speichert Sie in der `$s` Variablen.</span><span class="sxs-lookup"><span data-stu-id="b800b-180">The first command creates **PSSession** objects on three computers and stores them in the `$s` variable.</span></span>
+<span data-ttu-id="9a064-187">Der erste Befehl erstellt **PSSession** -Objekte auf drei Computern und speichert Sie in der `$s` Variablen.</span><span class="sxs-lookup"><span data-stu-id="9a064-187">The first command creates **PSSession** objects on three computers and stores them in the `$s` variable.</span></span>
 
-<span data-ttu-id="b800b-181">Der zweite Befehl verwendet `Invoke-Command` , um `Get-Process` in jeder der drei Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="b800b-181">The second command uses `Invoke-Command` to run `Get-Process` in each of the three sessions in `$s`.</span></span>
-<span data-ttu-id="b800b-182">Der Befehl verwendet den **AsJob** -Parameter, um den Befehl asynchron als Hintergrund Auftrag auszuführen.</span><span class="sxs-lookup"><span data-stu-id="b800b-182">The command uses the **AsJob** parameter to run the command asynchronously as a background job.</span></span> <span data-ttu-id="b800b-183">Der Befehl gibt ein Auftrags Objekt zurück, genau wie die Aufträge, die mithilfe von gestartet `Start-Job` wurden, und das Auftrags Objekt wird in der `$j` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b800b-183">The command returns a job object, just like the jobs started by using `Start-Job`, and the job object is stored in the `$j` variable.</span></span>
+<span data-ttu-id="9a064-188">Der zweite Befehl verwendet `Invoke-Command` , um `Get-Process` in jeder der drei Sitzungen in auszuführen `$s` .</span><span class="sxs-lookup"><span data-stu-id="9a064-188">The second command uses `Invoke-Command` to run `Get-Process` in each of the three sessions in `$s`.</span></span>
+<span data-ttu-id="9a064-189">Der Befehl verwendet den **AsJob** -Parameter, um den Befehl asynchron als Auftrag auszuführen.</span><span class="sxs-lookup"><span data-stu-id="9a064-189">The command uses the **AsJob** parameter to run the command asynchronously as a job.</span></span> <span data-ttu-id="9a064-190">Der Befehl gibt ein Auftrags Objekt zurück, genau wie die Aufträge, die mithilfe von gestartet `Start-Job` wurden, und das Auftrags Objekt wird in der `$j` Variablen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="9a064-190">The command returns a job object, just like the jobs started by using `Start-Job`, and the job object is stored in the `$j` variable.</span></span>
 
-<span data-ttu-id="b800b-184">Der dritte Befehl verwendet einen Pipeline Operator ( `|` ), um das Auftrags Objekt an `$j` das `Wait-Job` Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="b800b-184">The third command uses a pipeline operator (`|`) to send the job object in `$j` to the `Wait-Job` cmdlet.</span></span> <span data-ttu-id="b800b-185">Ein `Invoke-Command` Befehl ist in diesem Fall nicht erforderlich, da sich der Auftrag auf dem lokalen Computer befindet.</span><span class="sxs-lookup"><span data-stu-id="b800b-185">An `Invoke-Command` command is not required in this case, because the job resides on the local computer.</span></span>
+<span data-ttu-id="9a064-191">Der dritte Befehl verwendet einen Pipeline Operator ( `|` ), um das Auftrags Objekt an `$j` das `Wait-Job` Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="9a064-191">The third command uses a pipeline operator (`|`) to send the job object in `$j` to the `Wait-Job` cmdlet.</span></span> <span data-ttu-id="9a064-192">Ein `Invoke-Command` Befehl ist in diesem Fall nicht erforderlich, da sich der Auftrag auf dem lokalen Computer befindet.</span><span class="sxs-lookup"><span data-stu-id="9a064-192">An `Invoke-Command` command is not required in this case, because the job resides on the local computer.</span></span>
 
-### <span data-ttu-id="b800b-186">Beispiel 10: warten auf einen Auftrag mit einer ID</span><span class="sxs-lookup"><span data-stu-id="b800b-186">Example 10: Wait for a job that has an ID</span></span>
+### <span data-ttu-id="9a064-193">Beispiel 10: warten auf einen Auftrag mit einer ID</span><span class="sxs-lookup"><span data-stu-id="9a064-193">Example 10: Wait for a job that has an ID</span></span>
 
 ```powershell
 Get-Job
@@ -221,13 +230,13 @@ Id   Name     State      HasMoreData     Location             Command
 Wait-Job -Id 1
 ```
 
-<span data-ttu-id="b800b-187">Dieser Befehl wartet auf den Auftrag mit dem ID-Wert 1.</span><span class="sxs-lookup"><span data-stu-id="b800b-187">This command waits for the job with an ID value of 1.</span></span>
+<span data-ttu-id="9a064-194">Dieser Befehl wartet auf den Auftrag mit dem ID-Wert 1.</span><span class="sxs-lookup"><span data-stu-id="9a064-194">This command waits for the job with an ID value of 1.</span></span>
 
-## <span data-ttu-id="b800b-188">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="b800b-188">PARAMETERS</span></span>
+## <span data-ttu-id="9a064-195">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="9a064-195">PARAMETERS</span></span>
 
-### <span data-ttu-id="b800b-189">-Beliebig</span><span class="sxs-lookup"><span data-stu-id="b800b-189">-Any</span></span>
+### <span data-ttu-id="9a064-196">-Beliebig</span><span class="sxs-lookup"><span data-stu-id="9a064-196">-Any</span></span>
 
-<span data-ttu-id="b800b-190">Gibt an, dass dieses Cmdlet die Eingabeaufforderung anzeigt und das Auftrags Objekt zurückgibt, wenn ein Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-190">Indicates that this cmdlet displays the command prompt, and returns the job object, when any job finishes.</span></span> <span data-ttu-id="b800b-191">Standardmäßig `Wait-Job` wartet, bis alle angegebenen Aufträge vollständig sind, bevor die Eingabeaufforderung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="b800b-191">By default, `Wait-Job` waits until all of the specified jobs are complete before it displays the prompt.</span></span>
+<span data-ttu-id="9a064-197">Gibt an, dass dieses Cmdlet das Auftrags Objekt zurückgibt und die Ausführung fortsetzt, wenn ein Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-197">Indicates that this cmdlet returns the job object and continues execution when any job finishes.</span></span> <span data-ttu-id="9a064-198">Standardmäßig `Wait-Job` wartet, bis alle angegebenen Aufträge vollständig sind, bevor die Eingabeaufforderung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-198">By default, `Wait-Job` waits until all of the specified jobs are complete before it displays the prompt.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -241,13 +250,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-192">-Filter</span><span class="sxs-lookup"><span data-stu-id="b800b-192">-Filter</span></span>
+### <span data-ttu-id="9a064-199">-Filter</span><span class="sxs-lookup"><span data-stu-id="9a064-199">-Filter</span></span>
 
-<span data-ttu-id="b800b-193">Gibt eine Hash Tabelle mit Bedingungen an.</span><span class="sxs-lookup"><span data-stu-id="b800b-193">Specifies a hash table of conditions.</span></span> <span data-ttu-id="b800b-194">Dieses Cmdlet wartet auf Aufträge, die alle Bedingungen in der Hash Tabelle erfüllen.</span><span class="sxs-lookup"><span data-stu-id="b800b-194">This cmdlet waits for jobs that satisfy all of the conditions in the hash table.</span></span> <span data-ttu-id="b800b-195">Geben Sie eine Hashtabelle ein, in der die Schlüssel Auftragseigenschaften und die Werte Werte der Auftragseigenschaften sind.</span><span class="sxs-lookup"><span data-stu-id="b800b-195">Enter a hash table where the keys are job properties and the values are job property values.</span></span>
+<span data-ttu-id="9a064-200">Gibt eine Hash Tabelle mit Bedingungen an.</span><span class="sxs-lookup"><span data-stu-id="9a064-200">Specifies a hash table of conditions.</span></span> <span data-ttu-id="9a064-201">Dieses Cmdlet wartet auf Aufträge, die alle Bedingungen in der Hash Tabelle erfüllen.</span><span class="sxs-lookup"><span data-stu-id="9a064-201">This cmdlet waits for jobs that satisfy all of the conditions in the hash table.</span></span> <span data-ttu-id="9a064-202">Geben Sie eine Hashtabelle ein, in der die Schlüssel Auftragseigenschaften und die Werte Werte der Auftragseigenschaften sind.</span><span class="sxs-lookup"><span data-stu-id="9a064-202">Enter a hash table where the keys are job properties and the values are job property values.</span></span>
 
-<span data-ttu-id="b800b-196">Dieser Parameter funktioniert nur mit benutzerdefinierten Auftragstypen, z. B. Workflowaufträgen und geplanten Aufträgen.</span><span class="sxs-lookup"><span data-stu-id="b800b-196">This parameter works only on custom job types, such as workflow jobs and scheduled jobs.</span></span> <span data-ttu-id="b800b-197">Sie funktioniert nicht bei standardmäßigen Hintergrund Aufträgen, wie z. b. bei der Verwendung des `Start-Job` Cmdlets.</span><span class="sxs-lookup"><span data-stu-id="b800b-197">It does not work on standard background jobs, such as those created by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="b800b-198">Weitere Informationen zur Unterstützung für diesen Parameter finden Sie unter dem Hilfethema für den Auftragstyp.</span><span class="sxs-lookup"><span data-stu-id="b800b-198">For information about support for this parameter, see the help topic for the job type.</span></span>
+<span data-ttu-id="9a064-203">Dieser Parameter funktioniert nur mit benutzerdefinierten Auftragstypen, z. B. Workflowaufträgen und geplanten Aufträgen.</span><span class="sxs-lookup"><span data-stu-id="9a064-203">This parameter works only on custom job types, such as workflow jobs and scheduled jobs.</span></span> <span data-ttu-id="9a064-204">Es funktioniert nicht für Standardaufträge, wie z. b. solche, die mithilfe des `Start-Job` Cmdlets erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-204">It does not work on standard jobs, such as those created by using the `Start-Job` cmdlet.</span></span> <span data-ttu-id="9a064-205">Weitere Informationen zur Unterstützung für diesen Parameter finden Sie unter dem Hilfethema für den Auftragstyp.</span><span class="sxs-lookup"><span data-stu-id="9a064-205">For information about support for this parameter, see the help topic for the job type.</span></span>
 
-<span data-ttu-id="b800b-199">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="b800b-199">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="9a064-206">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="9a064-206">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -261,17 +270,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-200">-Force</span><span class="sxs-lookup"><span data-stu-id="b800b-200">-Force</span></span>
+### <span data-ttu-id="9a064-207">-Force</span><span class="sxs-lookup"><span data-stu-id="9a064-207">-Force</span></span>
 
-<span data-ttu-id="b800b-201">Gibt an, dass dieses Cmdlet weiterhin auf Aufträge im Zustand "angehalten" oder "getrennt" wartet.</span><span class="sxs-lookup"><span data-stu-id="b800b-201">Indicates that this cmdlet continues to wait for jobs in the Suspended or Disconnected state.</span></span> <span data-ttu-id="b800b-202">In der Standardeinstellung `Wait-Job` gibt zurück oder beendet den warte Vorgang, wenn Aufträge einen der folgenden Zustände aufweisen:</span><span class="sxs-lookup"><span data-stu-id="b800b-202">By default, `Wait-Job` returns, or ends the wait, when jobs are in one of the following states:</span></span>
+<span data-ttu-id="9a064-208">Gibt an, dass dieses Cmdlet weiterhin auf Aufträge im Zustand "angehalten" oder "getrennt" wartet.</span><span class="sxs-lookup"><span data-stu-id="9a064-208">Indicates that this cmdlet continues to wait for jobs in the Suspended or Disconnected state.</span></span> <span data-ttu-id="9a064-209">In der Standardeinstellung `Wait-Job` gibt zurück oder beendet den warte Vorgang, wenn Aufträge einen der folgenden Zustände aufweisen:</span><span class="sxs-lookup"><span data-stu-id="9a064-209">By default, `Wait-Job` returns, or ends the wait, when jobs are in one of the following states:</span></span>
 
-- <span data-ttu-id="b800b-203">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="b800b-203">Completed</span></span>
-- <span data-ttu-id="b800b-204">Fehler</span><span class="sxs-lookup"><span data-stu-id="b800b-204">Failed</span></span>
-- <span data-ttu-id="b800b-205">Beendet</span><span class="sxs-lookup"><span data-stu-id="b800b-205">Stopped</span></span>
-- <span data-ttu-id="b800b-206">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="b800b-206">Suspended</span></span>
-- <span data-ttu-id="b800b-207">Getrennt</span><span class="sxs-lookup"><span data-stu-id="b800b-207">Disconnected</span></span>
+- <span data-ttu-id="9a064-210">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="9a064-210">Completed</span></span>
+- <span data-ttu-id="9a064-211">Fehler</span><span class="sxs-lookup"><span data-stu-id="9a064-211">Failed</span></span>
+- <span data-ttu-id="9a064-212">Beendet</span><span class="sxs-lookup"><span data-stu-id="9a064-212">Stopped</span></span>
+- <span data-ttu-id="9a064-213">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="9a064-213">Suspended</span></span>
+- <span data-ttu-id="9a064-214">Getrennt</span><span class="sxs-lookup"><span data-stu-id="9a064-214">Disconnected</span></span>
 
-<span data-ttu-id="b800b-208">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="b800b-208">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="9a064-215">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="9a064-215">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -285,11 +294,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-209">-Id</span><span class="sxs-lookup"><span data-stu-id="b800b-209">-Id</span></span>
+### <span data-ttu-id="9a064-216">-Id</span><span class="sxs-lookup"><span data-stu-id="9a064-216">-Id</span></span>
 
-<span data-ttu-id="b800b-210">Gibt ein Array von IDs von Aufträgen an, die von diesem Cmdlet gewartet werden.</span><span class="sxs-lookup"><span data-stu-id="b800b-210">Specifies an array of IDs of jobs for which this cmdlet waits.</span></span>
+<span data-ttu-id="9a064-217">Gibt ein Array von IDs von Aufträgen an, die von diesem Cmdlet gewartet werden.</span><span class="sxs-lookup"><span data-stu-id="9a064-217">Specifies an array of IDs of jobs for which this cmdlet waits.</span></span>
 
-<span data-ttu-id="b800b-211">Die ID ist eine Ganzzahl, die den Auftrag in der aktuellen Sitzung eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="b800b-211">The ID is an integer that uniquely identifies the job in the current session.</span></span> <span data-ttu-id="b800b-212">Es ist leichter zu merken und einzugeben als die Instanz-ID, Sie ist jedoch nur in der aktuellen Sitzung eindeutig.</span><span class="sxs-lookup"><span data-stu-id="b800b-212">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span> <span data-ttu-id="b800b-213">Sie können eine oder mehrere IDs (durch Kommas getrennt) eingeben.</span><span class="sxs-lookup"><span data-stu-id="b800b-213">You can type one or more IDs, separated by commas.</span></span> <span data-ttu-id="b800b-214">Um die ID eines Auftrags zu ermitteln, geben Sie ein `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="b800b-214">To find the ID of a job, type `Get-Job`.</span></span>
+<span data-ttu-id="9a064-218">Die ID ist eine Ganzzahl, die den Auftrag in der aktuellen Sitzung eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="9a064-218">The ID is an integer that uniquely identifies the job in the current session.</span></span> <span data-ttu-id="9a064-219">Es ist leichter zu merken und einzugeben als die Instanz-ID, Sie ist jedoch nur in der aktuellen Sitzung eindeutig.</span><span class="sxs-lookup"><span data-stu-id="9a064-219">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span> <span data-ttu-id="9a064-220">Sie können eine oder mehrere IDs (durch Kommas getrennt) eingeben.</span><span class="sxs-lookup"><span data-stu-id="9a064-220">You can type one or more IDs, separated by commas.</span></span> <span data-ttu-id="9a064-221">Um die ID eines Auftrags zu ermitteln, geben Sie ein `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="9a064-221">To find the ID of a job, type `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Int32[]
@@ -303,11 +312,11 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-215">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="b800b-215">-InstanceId</span></span>
+### <span data-ttu-id="9a064-222">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="9a064-222">-InstanceId</span></span>
 
-<span data-ttu-id="b800b-216">Gibt ein Array von Instanz-IDs von Aufträgen an, für die dieses Cmdlet wartet.</span><span class="sxs-lookup"><span data-stu-id="b800b-216">Specifies an array of instance IDs of jobs for which this cmdlet waits.</span></span> <span data-ttu-id="b800b-217">Standardmäßig werden alle Aufträge fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="b800b-217">The default is all jobs.</span></span>
+<span data-ttu-id="9a064-223">Gibt ein Array von Instanz-IDs von Aufträgen an, für die dieses Cmdlet wartet.</span><span class="sxs-lookup"><span data-stu-id="9a064-223">Specifies an array of instance IDs of jobs for which this cmdlet waits.</span></span> <span data-ttu-id="9a064-224">Standardmäßig werden alle Aufträge fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="9a064-224">The default is all jobs.</span></span>
 
-<span data-ttu-id="b800b-218">Eine Instanz-ID ist eine GUID, die den Auftrag auf dem Computer eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="b800b-218">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span> <span data-ttu-id="b800b-219">Um die Instanz-ID eines Auftrags zu ermitteln, verwenden Sie `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="b800b-219">To find the instance ID of a job, use `Get-Job`.</span></span>
+<span data-ttu-id="9a064-225">Eine Instanz-ID ist eine GUID, die den Auftrag auf dem Computer eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="9a064-225">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span> <span data-ttu-id="9a064-226">Um die Instanz-ID eines Auftrags zu ermitteln, verwenden Sie `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="9a064-226">To find the instance ID of a job, use `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Guid[]
@@ -321,9 +330,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-220">-Auftrag</span><span class="sxs-lookup"><span data-stu-id="b800b-220">-Job</span></span>
+### <span data-ttu-id="9a064-227">-Auftrag</span><span class="sxs-lookup"><span data-stu-id="9a064-227">-Job</span></span>
 
-<span data-ttu-id="b800b-221">Gibt die Aufträge an, die dieses Cmdlet wartet.</span><span class="sxs-lookup"><span data-stu-id="b800b-221">Specifies the jobs for which this cmdlet waits.</span></span> <span data-ttu-id="b800b-222">Geben Sie eine Variable ein, die Auftragsobjekte bzw. einen Befehl enthält, der die Auftragsobjekte abruft.</span><span class="sxs-lookup"><span data-stu-id="b800b-222">Enter a variable that contains the job objects or a command that gets the job objects.</span></span> <span data-ttu-id="b800b-223">Sie können auch einen Pipeline Operator verwenden, um Auftrags Objekte an das `Wait-Job` Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="b800b-223">You can also use a pipeline operator to send job objects to the `Wait-Job` cmdlet.</span></span> <span data-ttu-id="b800b-224">Standardmäßig `Wait-Job` wartet auf alle Aufträge, die in der aktuellen Sitzung erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="b800b-224">By default, `Wait-Job` waits for all jobs created in the current session.</span></span>
+<span data-ttu-id="9a064-228">Gibt die Aufträge an, die dieses Cmdlet wartet.</span><span class="sxs-lookup"><span data-stu-id="9a064-228">Specifies the jobs for which this cmdlet waits.</span></span> <span data-ttu-id="9a064-229">Geben Sie eine Variable ein, die Auftragsobjekte bzw. einen Befehl enthält, der die Auftragsobjekte abruft.</span><span class="sxs-lookup"><span data-stu-id="9a064-229">Enter a variable that contains the job objects or a command that gets the job objects.</span></span> <span data-ttu-id="9a064-230">Sie können auch einen Pipeline Operator verwenden, um Auftrags Objekte an das `Wait-Job` Cmdlet zu senden.</span><span class="sxs-lookup"><span data-stu-id="9a064-230">You can also use a pipeline operator to send job objects to the `Wait-Job` cmdlet.</span></span> <span data-ttu-id="9a064-231">Standardmäßig `Wait-Job` wartet auf alle Aufträge, die in der aktuellen Sitzung erstellt wurden.</span><span class="sxs-lookup"><span data-stu-id="9a064-231">By default, `Wait-Job` waits for all jobs created in the current session.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -337,9 +346,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-225">-Name</span><span class="sxs-lookup"><span data-stu-id="b800b-225">-Name</span></span>
+### <span data-ttu-id="9a064-232">-Name</span><span class="sxs-lookup"><span data-stu-id="9a064-232">-Name</span></span>
 
-<span data-ttu-id="b800b-226">Gibt die anzeigen Amen von Aufträgen an, die von diesem Cmdlet gewartet werden.</span><span class="sxs-lookup"><span data-stu-id="b800b-226">Specifies friendly names of jobs for which this cmdlet waits.</span></span>
+<span data-ttu-id="9a064-233">Gibt die anzeigen Amen von Aufträgen an, die von diesem Cmdlet gewartet werden.</span><span class="sxs-lookup"><span data-stu-id="9a064-233">Specifies friendly names of jobs for which this cmdlet waits.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -353,22 +362,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-227">-State</span><span class="sxs-lookup"><span data-stu-id="b800b-227">-State</span></span>
+### <span data-ttu-id="9a064-234">-State</span><span class="sxs-lookup"><span data-stu-id="9a064-234">-State</span></span>
 
-<span data-ttu-id="b800b-228">Gibt einen Auftragsstatus an.</span><span class="sxs-lookup"><span data-stu-id="b800b-228">Specifies a job state.</span></span> <span data-ttu-id="b800b-229">Dieses Cmdlet wartet nur auf Aufträge im angegebenen Zustand.</span><span class="sxs-lookup"><span data-stu-id="b800b-229">This cmdlet waits only for jobs in the specified state.</span></span> <span data-ttu-id="b800b-230">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="b800b-230">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="9a064-235">Gibt einen Auftragsstatus an.</span><span class="sxs-lookup"><span data-stu-id="9a064-235">Specifies a job state.</span></span> <span data-ttu-id="9a064-236">Dieses Cmdlet wartet nur auf Aufträge im angegebenen Zustand.</span><span class="sxs-lookup"><span data-stu-id="9a064-236">This cmdlet waits only for jobs in the specified state.</span></span> <span data-ttu-id="9a064-237">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="9a064-237">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="b800b-231">NotStarted</span><span class="sxs-lookup"><span data-stu-id="b800b-231">NotStarted</span></span>
-- <span data-ttu-id="b800b-232">Wird ausgeführt</span><span class="sxs-lookup"><span data-stu-id="b800b-232">Running</span></span>
-- <span data-ttu-id="b800b-233">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="b800b-233">Completed</span></span>
-- <span data-ttu-id="b800b-234">Fehler</span><span class="sxs-lookup"><span data-stu-id="b800b-234">Failed</span></span>
-- <span data-ttu-id="b800b-235">Beendet</span><span class="sxs-lookup"><span data-stu-id="b800b-235">Stopped</span></span>
-- <span data-ttu-id="b800b-236">Blockiert</span><span class="sxs-lookup"><span data-stu-id="b800b-236">Blocked</span></span>
-- <span data-ttu-id="b800b-237">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="b800b-237">Suspended</span></span>
-- <span data-ttu-id="b800b-238">Getrennt</span><span class="sxs-lookup"><span data-stu-id="b800b-238">Disconnected</span></span>
-- <span data-ttu-id="b800b-239">Wird angehalten</span><span class="sxs-lookup"><span data-stu-id="b800b-239">Suspending</span></span>
-- <span data-ttu-id="b800b-240">Wird beendet</span><span class="sxs-lookup"><span data-stu-id="b800b-240">Stopping</span></span>
+- <span data-ttu-id="9a064-238">NotStarted</span><span class="sxs-lookup"><span data-stu-id="9a064-238">NotStarted</span></span>
+- <span data-ttu-id="9a064-239">Wird ausgeführt</span><span class="sxs-lookup"><span data-stu-id="9a064-239">Running</span></span>
+- <span data-ttu-id="9a064-240">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="9a064-240">Completed</span></span>
+- <span data-ttu-id="9a064-241">Fehler</span><span class="sxs-lookup"><span data-stu-id="9a064-241">Failed</span></span>
+- <span data-ttu-id="9a064-242">Beendet</span><span class="sxs-lookup"><span data-stu-id="9a064-242">Stopped</span></span>
+- <span data-ttu-id="9a064-243">Gesperrt</span><span class="sxs-lookup"><span data-stu-id="9a064-243">Blocked</span></span>
+- <span data-ttu-id="9a064-244">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="9a064-244">Suspended</span></span>
+- <span data-ttu-id="9a064-245">Getrennt</span><span class="sxs-lookup"><span data-stu-id="9a064-245">Disconnected</span></span>
+- <span data-ttu-id="9a064-246">Wird angehalten</span><span class="sxs-lookup"><span data-stu-id="9a064-246">Suspending</span></span>
+- <span data-ttu-id="9a064-247">Wird beendet</span><span class="sxs-lookup"><span data-stu-id="9a064-247">Stopping</span></span>
 
-<span data-ttu-id="b800b-241">Weitere Informationen zu Auftrags Zuständen finden Sie unter [jobstate-Enumeration](/dotnet/api/system.management.automation.jobstate).</span><span class="sxs-lookup"><span data-stu-id="b800b-241">For more information about job states, see [JobState Enumeration](/dotnet/api/system.management.automation.jobstate).</span></span>
+<span data-ttu-id="9a064-248">Weitere Informationen zu Auftrags Zuständen finden Sie unter [jobstate-Enumeration](/dotnet/api/system.management.automation.jobstate).</span><span class="sxs-lookup"><span data-stu-id="9a064-248">For more information about job states, see [JobState Enumeration](/dotnet/api/system.management.automation.jobstate).</span></span>
 
 ```yaml
 Type: System.Management.Automation.JobState
@@ -383,11 +392,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-242">-Timeout</span><span class="sxs-lookup"><span data-stu-id="b800b-242">-Timeout</span></span>
+### <span data-ttu-id="9a064-249">-Timeout</span><span class="sxs-lookup"><span data-stu-id="9a064-249">-Timeout</span></span>
 
-<span data-ttu-id="b800b-243">Gibt die maximale Wartezeit für jeden Hintergrund Auftrag in Sekunden an.</span><span class="sxs-lookup"><span data-stu-id="b800b-243">Specifies the maximum wait time for each background job, in seconds.</span></span> <span data-ttu-id="b800b-244">Der Standardwert-1 gibt an, dass das Cmdlet wartet, bis der Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b800b-244">The default value, -1, indicates that the cmdlet waits until the job finishes.</span></span> <span data-ttu-id="b800b-245">Die zeitliche Steuerung beginnt, wenn Sie den Befehl übermitteln `Wait-Job` , nicht den `Start-Job` Befehl.</span><span class="sxs-lookup"><span data-stu-id="b800b-245">The timing starts when you submit the `Wait-Job` command, not the `Start-Job` command.</span></span>
+<span data-ttu-id="9a064-250">Gibt die maximale Wartezeit für jeden Auftrag in Sekunden an.</span><span class="sxs-lookup"><span data-stu-id="9a064-250">Specifies the maximum wait time for each job, in seconds.</span></span> <span data-ttu-id="9a064-251">Der Standardwert-1 gibt an, dass das Cmdlet wartet, bis der Auftrag abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="9a064-251">The default value, -1, indicates that the cmdlet waits until the job finishes.</span></span> <span data-ttu-id="9a064-252">Die zeitliche Steuerung beginnt, wenn Sie den Befehl übermitteln `Wait-Job` , nicht den `Start-Job` Befehl.</span><span class="sxs-lookup"><span data-stu-id="9a064-252">The timing starts when you submit the `Wait-Job` command, not the `Start-Job` command.</span></span>
 
-<span data-ttu-id="b800b-246">Wenn diese Zeit abgelaufen ist, endet der Wartevorgang, und die Befehlseingabeaufforderung wird wieder angezeigt, auch wenn der Auftrag noch läuft.</span><span class="sxs-lookup"><span data-stu-id="b800b-246">If this time is exceeded, the wait ends and the command prompt returns, even if the job is still running.</span></span> <span data-ttu-id="b800b-247">Der Befehl zeigt keine Fehlermeldung an.</span><span class="sxs-lookup"><span data-stu-id="b800b-247">The command does not display any error message.</span></span>
+<span data-ttu-id="9a064-253">Wenn diese Zeit überschritten wird, wird der Warte Vorgang beendet und die Ausführung fortgesetzt, auch wenn der Auftrag noch ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="9a064-253">If this time is exceeded, the wait ends and execution continues, even if the job is still running.</span></span>
+<span data-ttu-id="9a064-254">Der Befehl zeigt keine Fehlermeldung an.</span><span class="sxs-lookup"><span data-stu-id="9a064-254">The command does not display any error message.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -401,46 +411,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="b800b-248">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b800b-248">CommonParameters</span></span>
+### <span data-ttu-id="9a064-255">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="9a064-255">CommonParameters</span></span>
 
-<span data-ttu-id="b800b-249">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b800b-249">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b800b-250">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="b800b-250">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="9a064-256">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="9a064-256">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="9a064-257">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="9a064-257">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="b800b-251">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="b800b-251">INPUTS</span></span>
+## <span data-ttu-id="9a064-258">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="9a064-258">INPUTS</span></span>
 
-### <span data-ttu-id="b800b-252">System. Management. Automation. remotingjob</span><span class="sxs-lookup"><span data-stu-id="b800b-252">System.Management.Automation.RemotingJob</span></span>
+### <span data-ttu-id="9a064-259">System. Management. Automation. remotingjob</span><span class="sxs-lookup"><span data-stu-id="9a064-259">System.Management.Automation.RemotingJob</span></span>
 
-<span data-ttu-id="b800b-253">Sie können ein Auftrags Objekt an dieses Cmdlet weiterreichen.</span><span class="sxs-lookup"><span data-stu-id="b800b-253">You can pipe a job object to this cmdlet.</span></span>
+<span data-ttu-id="9a064-260">Sie können ein Auftrags Objekt an dieses Cmdlet weiterreichen.</span><span class="sxs-lookup"><span data-stu-id="9a064-260">You can pipe a job object to this cmdlet.</span></span>
 
-## <span data-ttu-id="b800b-254">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="b800b-254">OUTPUTS</span></span>
+## <span data-ttu-id="9a064-261">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="9a064-261">OUTPUTS</span></span>
 
-### <span data-ttu-id="b800b-255">System. Management. Automation. psremotingjob</span><span class="sxs-lookup"><span data-stu-id="b800b-255">System.Management.Automation.PSRemotingJob</span></span>
+### <span data-ttu-id="9a064-262">System. Management. Automation. psremotingjob</span><span class="sxs-lookup"><span data-stu-id="9a064-262">System.Management.Automation.PSRemotingJob</span></span>
 
-<span data-ttu-id="b800b-256">Dieses Cmdlet gibt Auftrags Objekte zurück, die die abgeschlossenen Aufträge darstellen.</span><span class="sxs-lookup"><span data-stu-id="b800b-256">This cmdlet returns job objects that represent the completed jobs.</span></span> <span data-ttu-id="b800b-257">Wenn der Warte Vorgang beendet wird, weil der Wert des **Timeout** -Parameters überschritten wird, gibt keine- `Wait-Job` Objekte zurück.</span><span class="sxs-lookup"><span data-stu-id="b800b-257">If the wait ends because the value of the **Timeout** parameter is exceeded, `Wait-Job` does not return any objects.</span></span>
+<span data-ttu-id="9a064-263">Dieses Cmdlet gibt Auftrags Objekte zurück, die die Aufträge im Zustand "wird beendet" darstellen.</span><span class="sxs-lookup"><span data-stu-id="9a064-263">This cmdlet returns job objects that represent the jobs in a terminating state.</span></span> <span data-ttu-id="9a064-264">Wenn der Warte Vorgang beendet wird, weil der Wert des **Timeout** -Parameters überschritten wird, gibt keine- `Wait-Job` Objekte zurück.</span><span class="sxs-lookup"><span data-stu-id="9a064-264">If the wait ends because the value of the **Timeout** parameter is exceeded, `Wait-Job` does not return any objects.</span></span>
 
-## <span data-ttu-id="b800b-258">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="b800b-258">NOTES</span></span>
+## <span data-ttu-id="9a064-265">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="9a064-265">NOTES</span></span>
 
-<span data-ttu-id="b800b-259">In der Standardeinstellung `Wait-Job` gibt zurück oder beendet den warte Vorgang, wenn Aufträge einen der folgenden Zustände aufweisen:</span><span class="sxs-lookup"><span data-stu-id="b800b-259">By default, `Wait-Job` returns, or ends the wait, when jobs are in one of the following states:</span></span>
+<span data-ttu-id="9a064-266">In der Standardeinstellung `Wait-Job` gibt zurück oder beendet den warte Vorgang, wenn Aufträge einen der folgenden Zustände aufweisen:</span><span class="sxs-lookup"><span data-stu-id="9a064-266">By default, `Wait-Job` returns, or ends the wait, when jobs are in one of the following states:</span></span>
 
-- <span data-ttu-id="b800b-260">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="b800b-260">Completed</span></span>
-- <span data-ttu-id="b800b-261">Fehler</span><span class="sxs-lookup"><span data-stu-id="b800b-261">Failed</span></span>
-- <span data-ttu-id="b800b-262">Beendet</span><span class="sxs-lookup"><span data-stu-id="b800b-262">Stopped</span></span>
-- <span data-ttu-id="b800b-263">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="b800b-263">Suspended</span></span>
-- <span data-ttu-id="b800b-264">Getrennt an Direct, `Wait-Job` um weiterhin auf angehaltene und getrennte Aufträge zu warten, verwenden Sie den **Force** -Parameter.</span><span class="sxs-lookup"><span data-stu-id="b800b-264">Disconnected To direct `Wait-Job` to continue to wait for Suspended and Disconnected jobs, use the **Force** parameter.</span></span>
+- <span data-ttu-id="9a064-267">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="9a064-267">Completed</span></span>
+- <span data-ttu-id="9a064-268">Fehler</span><span class="sxs-lookup"><span data-stu-id="9a064-268">Failed</span></span>
+- <span data-ttu-id="9a064-269">Beendet</span><span class="sxs-lookup"><span data-stu-id="9a064-269">Stopped</span></span>
+- <span data-ttu-id="9a064-270">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="9a064-270">Suspended</span></span>
+- <span data-ttu-id="9a064-271">Getrennt an Direct, `Wait-Job` um weiterhin auf angehaltene und getrennte Aufträge zu warten, verwenden Sie den **Force** -Parameter.</span><span class="sxs-lookup"><span data-stu-id="9a064-271">Disconnected To direct `Wait-Job` to continue to wait for Suspended and Disconnected jobs, use the **Force** parameter.</span></span>
 
-## <span data-ttu-id="b800b-265">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="b800b-265">RELATED LINKS</span></span>
+## <span data-ttu-id="9a064-272">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="9a064-272">RELATED LINKS</span></span>
 
-[<span data-ttu-id="b800b-266">Get-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-266">Get-Job</span></span>](Get-Job.md)
+[<span data-ttu-id="9a064-273">Get-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-273">Get-Job</span></span>](Get-Job.md)
 
-[<span data-ttu-id="b800b-267">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="b800b-267">Invoke-Command</span></span>](Invoke-Command.md)
+[<span data-ttu-id="9a064-274">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="9a064-274">Invoke-Command</span></span>](Invoke-Command.md)
 
-[<span data-ttu-id="b800b-268">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-268">Receive-Job</span></span>](Receive-Job.md)
+[<span data-ttu-id="9a064-275">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-275">Receive-Job</span></span>](Receive-Job.md)
 
-[<span data-ttu-id="b800b-269">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-269">Remove-Job</span></span>](Remove-Job.md)
+[<span data-ttu-id="9a064-276">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-276">Remove-Job</span></span>](Remove-Job.md)
 
-[<span data-ttu-id="b800b-270">Resume-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-270">Resume-Job</span></span>](Resume-Job.md)
+[<span data-ttu-id="9a064-277">Resume-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-277">Resume-Job</span></span>](Resume-Job.md)
 
-[<span data-ttu-id="b800b-271">Start-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-271">Start-Job</span></span>](Start-Job.md)
+[<span data-ttu-id="9a064-278">Start-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-278">Start-Job</span></span>](Start-Job.md)
 
-[<span data-ttu-id="b800b-272">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-272">Stop-Job</span></span>](Stop-Job.md)
+[<span data-ttu-id="9a064-279">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-279">Stop-Job</span></span>](Stop-Job.md)
 
-[<span data-ttu-id="b800b-273">Suspend-Job</span><span class="sxs-lookup"><span data-stu-id="b800b-273">Suspend-Job</span></span>](Suspend-Job.md)
+[<span data-ttu-id="9a064-280">Suspend-Job</span><span class="sxs-lookup"><span data-stu-id="9a064-280">Suspend-Job</span></span>](Suspend-Job.md)
