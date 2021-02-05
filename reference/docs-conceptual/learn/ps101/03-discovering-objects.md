@@ -2,15 +2,14 @@
 title: Entdecken von Objekten, Eigenschaften und Methoden
 description: Sie müssen kein Entwickler sein, um Objekte, Eigenschaften und Methoden zu verstehen und zu verwenden.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 5ab972755afeba0d94bf6c2debaf84ec84cd9244
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: f226221da7dd3b663f54cf23439dd7f945ed3a2a
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84438071"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99598596"
 ---
 # <a name="chapter-3---discovering-objects-properties-and-methods"></a>Kapitel 3: Entdecken von Objekten, Eigenschaften und Methoden
 
@@ -47,7 +46,7 @@ Status   Name               DisplayName
 Running  w32time            Windows Time
 ```
 
-**Status**, **Name**und **DisplayName** (Anzeigename) sind Beispiele für Eigenschaften, wie im vorherigen Resultset gezeigt. Der Wert der Eigenschaft **Status** ist `Running`, der Wert der Eigenschaft **Name** ist `w32time`, und der Wert von **DisplayName** ist `Windows Time`.
+**Status**, **Name** und **DisplayName** (Anzeigename) sind Beispiele für Eigenschaften, wie im vorherigen Resultset gezeigt. Der Wert der Eigenschaft **Status** ist `Running`, der Wert der Eigenschaft **Name** ist `w32time`, und der Wert von **DisplayName** ist `Windows Time`.
 
 Nun leite ich denselben Befehl per Pipeline an `Get-Member` weiter:
 
@@ -698,7 +697,7 @@ In diesem Kapitel haben Sie erfahren, wie Sie bestimmen, welchen Objekttyp ein B
 - [about_Objects][]
 - [about_Properties][]
 - [about_Methods][]
-- [Kein PowerShell-Cmdlet zum Starten oder Beenden einer Aktion? Vergessen Sie nicht, auf Methoden des „Get-Cmdlets“ zu überprüfen][use-methods].
+- [Kein PowerShell-Cmdlet zum Starten oder Abbrechen von etwas? Vergessen Sie nicht, die Methoden für Get-Cmdlets zu überprüfen.][use-methods]
 
 <!-- link references -->
 [RSAT für Windows]: https://support.microsoft.com/help/2693643

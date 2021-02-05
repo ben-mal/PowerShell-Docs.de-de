@@ -2,15 +2,14 @@
 title: Das Hilfesystem
 description: Das Beherrschen des Hilfesystems ist der Schlüssel zum Erfolg mit der PowerShell.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 98876cf324b367fd5bb3c3462cb90ea6d7c7d5b9
-ms.sourcegitcommit: 0942a6de384f4a1c624e89b1889434a30d22f4d6
-ms.translationtype: HT
+ms.openlocfilehash: cfb12f57b7bb6c514f4e19a93dfe9c77245bd977
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "93143313"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99596754"
 ---
 # <a name="chapter-2---the-help-system"></a>Kapitel 2: Das Hilfesystem
 
@@ -194,7 +193,7 @@ Get-Help -Name Get-Command -Parameter Noun
 Get-Help -Name Get-Command -ShowWindow
 ```
 
-In der Regel verwende ich `help <command name>` mit dem Parameter **Full** oder **Online**. Wenn ich nur an den Beispielen interessiert bin, verwende ich den Parameter **Examples** , und wenn ich nur an einem bestimmten Parameter interessiert bin, verwende ich den Parameter **Parameter**. Der Parameter **ShowWindow** öffnet das Hilfethema in einem separaten, durchsuchbaren Fenster, das auf einem anderen Monitor angezeigt werden kann, wenn Sie über mehrere Monitore verfügen. Ich habe den Parameter **ShowWindow** vermieden, weil es einen bekannten Fehler gibt, durch den nicht das gesamte Hilfethema angezeigt wird.
+In der Regel verwende ich `help <command name>` mit dem Parameter **Full** oder **Online**. Wenn ich nur an den Beispielen interessiert bin, verwende ich den Parameter **Examples**, und wenn ich nur an einem bestimmten Parameter interessiert bin, verwende ich den Parameter **Parameter**. Der Parameter **ShowWindow** öffnet das Hilfethema in einem separaten, durchsuchbaren Fenster, das auf einem anderen Monitor angezeigt werden kann, wenn Sie über mehrere Monitore verfügen. Ich habe den Parameter **ShowWindow** vermieden, weil es einen bekannten Fehler gibt, durch den nicht das gesamte Hilfethema angezeigt wird.
 
 Wenn Sie Hilfe in einem separaten Fenster anzeigen möchten, empfehle ich Ihnen, entweder den Parameter **Online** oder den Parameter **Full** zu verwenden und die Ergebnisse per Pipeline an `Out-GridView` weiterzuleiten, wie im folgenden Beispiel gezeigt.
 
@@ -400,7 +399,7 @@ REMARKS
 
 Beachten Sie im vorherigen Beispiel, dass `more` kein Hilfethema besitzt, und dass das `Help`-System in PowerShell dennoch in der Lage war, es zu finden. Es hat nur eine Übereinstimmung gefunden und die grundlegenden Syntaxinformationen zurückgegeben, die Ihnen angezeigt werden, wenn ein Befehl kein Hilfethema besitzt.
 
-PowerShell enthält zahlreiche konzeptionelle („About“) Hilfethemen. Der folgende Befehl kann verwendet werden, um eine Liste aller **About** -Hilfethemen in Ihrem System zurückzugeben.
+PowerShell enthält zahlreiche konzeptionelle („About“) Hilfethemen. Der folgende Befehl kann verwendet werden, um eine Liste aller **About**-Hilfethemen in Ihrem System zurückzugeben.
 
 ```powershell
 help About_*
@@ -412,7 +411,7 @@ Wenn Sie die Ergebnisse auf ein einzelnes „About“-Hilfethema beschränken, w
 help about_Updatable_Help
 ```
 
-Das Hilfesystem in PowerShell muss aktualisiert werden, damit die **About** -Hilfethemen vorhanden sind. Wenn die anfängliche Aktualisierung des Hilfesystems auf dem Computer aus irgendeinem Grund fehlgeschlagen ist, sind die Dateien erst verfügbar, wenn das Cmdlet `Update-Help` erfolgreich ausgeführt wurde.
+Das Hilfesystem in PowerShell muss aktualisiert werden, damit die **About**-Hilfethemen vorhanden sind. Wenn die anfängliche Aktualisierung des Hilfesystems auf dem Computer aus irgendeinem Grund fehlgeschlagen ist, sind die Dateien erst verfügbar, wenn das Cmdlet `Update-Help` erfolgreich ausgeführt wurde.
 
 ## <a name="get-command"></a>Get-Command
 
@@ -434,7 +433,7 @@ Cmdlet          Wait-Process                                       3.1.0.0    Mi
 
 Beachten Sie, dass im vorherigen Beispiel, in dem `Get-Command` ausgeführt wurde, der Parameter **Noun** verwendet und `Process` als Wert für den Parameter **Noun** angegeben wird. Was ist, wenn Sie nicht wüssten, wie das Cmdlet `Get-Command` verwendet wird? Sie könnten `Get-Help` verwenden, um das Hilfethema für `Get-Command` anzuzeigen.
 
-Die Parameter **Name** , **Noun** und **Verb** akzeptieren Platzhalter. Das folgende Beispiel illustriert die Verwendung von Platzhaltern mit dem Parameter **Name** :
+Die Parameter **Name**, **Noun** und **Verb** akzeptieren Platzhalter. Das folgende Beispiel illustriert die Verwendung von Platzhaltern mit dem Parameter **Name**:
 
 ```Output
 Get-Command -Name *service*
@@ -485,10 +484,8 @@ Update-Help
 
 ```Output
 Update-Help : Failed to update Help for the module(s) 'BitsTransfer' with UI culture(s)
-{en-US} : The value of the HelpInfoUri key in the module manifest must resolve to a
-container or root URL on a website where the help files are stored. The HelpInfoUri
-'https://technet.microsoft.com/en-us/library/dd819413.aspx' does not resolve to a
-container.
+{en-US} : Unable to retrieve the HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri
+property in the module manifest is valid or check your network connection and then try the command again.
 At line:1 char:1
 + Update-Help
 +

@@ -2,15 +2,14 @@
 title: Functions
 description: Mit PowerShell-Funktionen können Sie Tools erstellen, die in Skripts wiederverwendet werden können.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 9554c0b4d3932b7371201f7b08c8b9d26a567f5e
-ms.sourcegitcommit: e85e56d6614cbd30e01965a5cf03fb3f5ca78103
-ms.translationtype: HT
+ms.openlocfilehash: e4734b556a78f67c54152dad93eada536dd1c928
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94589129"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99595945"
 ---
 # <a name="chapter-9---functions"></a>Kapitel 9: Funktionen
 
@@ -285,6 +284,8 @@ Machine                     0
 ```
 
 Ich empfehle außerdem, dieselbe Groß-/Kleinschreibung für Ihre Parameternamen wie bei den Standard-Cmdlets zu verwenden. Verwenden Sie `ComputerName`, nicht `computername`. Dadurch sehen ihre Funktionen wie die Standard-Cmdlets aus und verhalten sich auch so. Personen, die bereits mit PowerShell vertraut sind, werden sich sofort wohlfühlen.
+
+Mit der- `param` Anweisung können Sie einen oder mehrere Parameter definieren. Die Parameter Definitionen werden durch ein Komma ( `,` ) getrennt. Weitere Informationen finden Sie unter [about_Functions_Advanced_Parameters][].
 
 ## <a name="advanced-functions"></a>Erweiterte Funktionen
 

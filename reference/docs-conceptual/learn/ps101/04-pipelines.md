@@ -2,15 +2,14 @@
 title: Einzeiler und die Pipeline
 description: Ein PowerShell-Einzeiler ist eine kontinuierliche Pipeline, die mehrere Befehle enthält, um eine einzelne Aufgabe zu erledigen.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: b8fd45e5e5dc408754ebac015757ef4241428978
-ms.sourcegitcommit: 109f132360e8adbbdaf5dbc42a270be73d9dfa9b
-ms.translationtype: HT
+ms.openlocfilehash: 1483ec6b76d17c3dd081356ecff85a929fc43e2c
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84633344"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99595944"
 ---
 # <a name="chapter-4---one-liners-and-the-pipeline"></a>Kapitel 4: Einzeiler und die Pipeline
 
@@ -23,7 +22,7 @@ Stellen Sie wie in vorherigen Kapiteln sicher, dass Sie die Abläufe auf Ihrem W
 
 ## <a name="one-liners"></a>Einzeiler
 
-Ein PowerShell-Einzeiler ist eine kontinuierliche Pipeline, nicht notwendigerweise ein Befehl, der in einer physischen Zeile steht. Nicht alle Befehle, die in einer physischen Zeile stehen, sind Einzeiler.
+Ein PowerShell-One-Liner ist eine fortlaufende Pipeline, nicht notwendigerweise ein Befehl, der sich auf einer physischen Zeile befindet. Nicht alle Befehle, die in einer physischen Zeile stehen, sind Einzeiler.
 
 Obwohl sich der folgende Befehl auf mehrere physische Zeilen verteilt, handelt es sich um einen PowerShell-Einzeiler, weil er eine kontinuierliche Pipeline ist. Er könnte in einer physischen Zeile geschrieben werden, aber ich habe mich entschieden, die Zeilen am Pipe-Symbol zu umbrechen. Das Pipe-Symbol ist eins der Zeichen, bei denen ein natürlicher Zeilenumbruch in PowerShell zulässig ist.
 

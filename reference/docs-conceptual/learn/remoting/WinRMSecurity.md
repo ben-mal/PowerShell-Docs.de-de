@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: Sicherheitsaspekte von PowerShell Remoting bei Verwendung von WinRM
 description: Dieses Dokument behandelt Sicherheitsaspekte, Empfehlungen und bewährte Methoden bei der Verwendung von PowerShell-Remoting.
 ms.openlocfilehash: 48167bd297905883b3d75caf9a07d06e6a9fc467
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501472"
 ---
 # <a name="security-considerations-for-powershell-remoting-using-winrm"></a>Sicherheitsaspekte von PowerShell Remoting bei Verwendung von WinRM
@@ -18,7 +18,7 @@ PowerShell-Remoting ist die empfohlene Methode zum Verwalten von Windows-Systeme
 
 PowerShell-Remoting verwendet [Windows-Remoteverwaltung (WinRM)](/windows/win32/winrm/portal), wobei es sich um die Microsoft-Implementierung des Protokolls von [Web Services for Management (WS-Management)](https://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf) handelt, um Benutzern die Ausführung von PowerShell-Befehlen auf Remotecomputern zu ermöglichen. Weitere Informationen zur Verwendung von PowerShell-Remoting finden Sie unter [Ausführen von Remotebefehlen](running-remote-commands.md).
 
-PowerShell-Remoting unterscheidet sich von Ausführung eines Cmdlets auf einem Remotecomputer unter Verwendung des Parameters **ComputerName** , wobei ein Remoteprozeduraufruf (RPC) als zugrunde liegendes Protokoll verwendet wird.
+PowerShell-Remoting unterscheidet sich von Ausführung eines Cmdlets auf einem Remotecomputer unter Verwendung des Parameters **ComputerName**, wobei ein Remoteprozeduraufruf (RPC) als zugrunde liegendes Protokoll verwendet wird.
 
 ## <a name="powershell-remoting-default-settings"></a>Standardeinstellungen für PowerShell-Remoting
 

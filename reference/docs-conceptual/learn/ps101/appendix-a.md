@@ -2,15 +2,14 @@
 title: 'Anhang A: Hilfesyntax'
 description: In diesem Artikel wird erläutert, wie Sie die Syntax eines Cmdlets lesen und verstehen, wenn es mit „Get-Help“ dargestellt wird.
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: e8e28f66c02370b098f63a0396ef8a724cf3a1bd
-ms.sourcegitcommit: 0d958eac5bde5ccf5ee2c1bac4f009a63bf71368
-ms.translationtype: HT
+ms.openlocfilehash: b8fe218f2a9af1ad1ee6b88740414ecede0194bd
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437981"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99596348"
 ---
 # <a name="appendix-a---help-syntax"></a>Anhang A: Hilfesyntax
 
@@ -43,7 +42,7 @@ In diesem Beispiel wird nur der relevante Teil der Hilfe angezeigt.
 
 Die Syntax besteht hauptsächlich aus mehreren Sätzen von öffnenden und schließenden Klammern (`[]`). Diese haben zwei unterschiedliche Bedeutungen, je nachdem, wie sie verwendet werden. Alles, was in eckigen Klammern enthalten ist, ist optional, es sei denn, es handelt sich um einen Satz leerer eckiger Klammern (`[]`). Leere eckige Klammern kommen nur nach einem Datentyp vor, z. B. `<string[]>`. Dies bedeutet, dass für einen bestimmten Parameter mehr als ein Wert dieses Typs akzeptiert werden kann.
 
-Der erste Parameter im ersten Parametersatz von `Get-EventLog` ist **LogName**. LogName steht in eckigen Klammern, was bedeutet, dass es sich um einen Positionsparameter handelt. Anders ausgedrückt: Die Angabe des Namens des Parameters selbst ist optional, solange er an der richtigen Position angegeben wird. Die Informationen in den spitzen Klammern (`<>`) hinter dem Parameternamen zeigen an, dass er einen einzelnen **Zeichen folgen**wert benötigt. Der gesamte Parametername und Datentyp stehen nicht in eckigen Klammern, sodass der Parameter **LogName** erforderlich ist, wenn dieser Parametersatz verwendet wird.
+Der erste Parameter im ersten Parametersatz von `Get-EventLog` ist **LogName**. LogName steht in eckigen Klammern, was bedeutet, dass es sich um einen Positionsparameter handelt. Anders ausgedrückt: Die Angabe des Namens des Parameters selbst ist optional, solange er an der richtigen Position angegeben wird. Die Informationen in den spitzen Klammern (`<>`) hinter dem Parameternamen zeigen an, dass er einen einzelnen **Zeichen folgen** wert benötigt. Der gesamte Parametername und Datentyp stehen nicht in eckigen Klammern, sodass der Parameter **LogName** erforderlich ist, wenn dieser Parametersatz verwendet wird.
 
 ```powershell
 Get-EventLog [-LogName] <String>

@@ -4,10 +4,10 @@ description: Dies ist eine zusammengefasste Liste mit Regeln für die Bearbeitun
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.openlocfilehash: b5baf7366239084779d34e23f218e5e6222ed1a3
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "81624736"
 ---
 # <a name="editors-checklist"></a>Checkliste für die Bearbeitung

@@ -4,10 +4,10 @@ keywords: jea,powershell,security
 title: Überwachung und Berichterstellung zu JEA
 description: Dadurch können Sie leichter beurteilen, ob die Benutzer, die auf den JEA-Endpunkt zugreifen, dazu berechtigt sind und ob die ihnen zugewiesenen Rollen noch geeignet sind.
 ms.openlocfilehash: 2140d6b756ae38d82e4943c373e8a75beea30e28
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92500010"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Überwachung und Berichterstellung zu JEA
@@ -32,7 +32,7 @@ Permission    : CONTOSO\JEA_DNS_ADMINS AccessAllowed, CONTOSO\JEA_DNS_OPERATORS 
                 CONTOSO\JEA_DNS_AUDITORS AccessAllowed
 ```
 
-Die jeweils gültigen Rechte für den Endpunkt werden in der Eigenschaft **Berechtigung** aufgeführt. Diese Benutzer sind berechtigt, mit dem JEA-Endpunkt eine Verbindung herzustellen. Auf welche Rollen und Befehle sie jedoch Zugriff haben, richtet sich nach der Eigenschaft **RoleDefinitions** in der [Sitzungskonfigurationsdatei](session-configurations.md), die beim Registrieren des Endpunkts verwendet wurde. Erweitern Sie die Eigenschaft **RoleDefinitions** , um die Rollenzuordnungen in einem registrierten JEA-Endpunkt zu bewerten.
+Die jeweils gültigen Rechte für den Endpunkt werden in der Eigenschaft **Berechtigung** aufgeführt. Diese Benutzer sind berechtigt, mit dem JEA-Endpunkt eine Verbindung herzustellen. Auf welche Rollen und Befehle sie jedoch Zugriff haben, richtet sich nach der Eigenschaft **RoleDefinitions** in der [Sitzungskonfigurationsdatei](session-configurations.md), die beim Registrieren des Endpunkts verwendet wurde. Erweitern Sie die Eigenschaft **RoleDefinitions**, um die Rollenzuordnungen in einem registrierten JEA-Endpunkt zu bewerten.
 
 ```powershell
 # Get the desired session configuration
@@ -84,9 +84,9 @@ Wenn Ihre Benutzer keine ständigen Mitglieder von Gruppen sind, die ihnen zusä
 
 ## <a name="powershell-event-logs"></a>PowerShell-Ereignisprotokolle
 
-Wenn Sie die Protokollierung von Modul- oder Skriptblöcken für das System aktivieren, enthalten die Windows-Ereignisprotokolle Ereignisse für jeden Befehl, den ein Benutzer in einer JEA-Sitzung ausführt. Öffnen Sie für die Suche nach diesen Ereignissen das Ereignisprotokoll **Microsoft-Windows-PowerShell/Operational** , und suchen Sie nach Ereignissen mit der Ereignis-ID **4104** .
+Wenn Sie die Protokollierung von Modul- oder Skriptblöcken für das System aktivieren, enthalten die Windows-Ereignisprotokolle Ereignisse für jeden Befehl, den ein Benutzer in einer JEA-Sitzung ausführt. Öffnen Sie für die Suche nach diesen Ereignissen das Ereignisprotokoll **Microsoft-Windows-PowerShell/Operational**, und suchen Sie nach Ereignissen mit der Ereignis-ID **4104**.
 
-Jeder Eintrag im Ereignisprotokoll enthält Informationen über die Sitzung, in der der Befehl ausgeführt wurde. Bei JEA-Sitzungen enthält das Ereignis Informationen zu **ConnectedUser** und **RunAsUser** . **ConnectedUser** ist der Benutzer, der die JEA-Sitzung tatsächlich erstellt hat. **RunAsUser** ist das Konto, mit dem JEA den Befehl ausgeführt hat.
+Jeder Eintrag im Ereignisprotokoll enthält Informationen über die Sitzung, in der der Befehl ausgeführt wurde. Bei JEA-Sitzungen enthält das Ereignis Informationen zu **ConnectedUser** und **RunAsUser**. **ConnectedUser** ist der Benutzer, der die JEA-Sitzung tatsächlich erstellt hat. **RunAsUser** ist das Konto, mit dem JEA den Befehl ausgeführt hat.
 
 Die Anwendungsereignisprotokolle enthalten Änderungen, die von **RunAsUser** vorgenommen wurden. Die Modul- und Skriptprotokollierung muss also aktiviert sein, um einen bestimmten Befehlsaufruf zu **ConnectedUser** zurückzuverfolgen.
 
@@ -132,7 +132,7 @@ PS>CommandInvocation(Get-Service): "Get-Service"
 Running  Dns                DNS Server
 ```
 
-Für jeden von einem Benutzer ausgeführten Befehl wird eine **CommandInvocation** -Zeile geschrieben. Mit **ParameterBindings** werden alle Parameter und Werte erfasst, die für den Befehl angegeben wurden. Im vorherigen Beispiel wird für das Cmdlet `Get-Service` der Parameter **Name** mit dem Wert **Dns** angegeben.
+Für jeden von einem Benutzer ausgeführten Befehl wird eine **CommandInvocation**-Zeile geschrieben. Mit **ParameterBindings** werden alle Parameter und Werte erfasst, die für den Befehl angegeben wurden. Im vorherigen Beispiel wird für das Cmdlet `Get-Service` der Parameter **Name** mit dem Wert **Dns** angegeben.
 
 Die Ausgabe jedes Befehls löst außerdem **CommandInvocation** aus, in der Regel zu `Out-Default`. **InputObject** von `Out-Default` stellt das vom Befehl zurückgegebene PowerShell-Objekt dar. Die Details des Objekts einige Zeilen darunter bilden täuschend ähnlich das nach, was der Benutzer gesehen hätte.
 

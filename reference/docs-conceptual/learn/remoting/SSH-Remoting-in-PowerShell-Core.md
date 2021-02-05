@@ -3,10 +3,10 @@ title: PowerShell-Remoting über SSH
 ms.date: 10/19/2020
 description: Erläutert das Einrichten des SSH-Protokolls für PowerShell-Remoting.
 ms.openlocfilehash: c3373ac30fd915d42e8c9fb7f1eae348a2aee7f1
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501336"
 ---
 # <a name="powershell-remoting-over-ssh"></a>PowerShell-Remoting über SSH
@@ -35,7 +35,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
 1. Installieren Sie die neueste Version von PowerShell. Weitere Informationen finden Sie unter [Installieren von PowerShell Core unter Windows](../../install/installing-powershell-core-on-windows.md#msi).
 
-   Sie können bestätigen, dass PowerShell SSH-Remoting unterstützt, indem Sie die `New-PSSession`-Parametersätze auflisten. Sie werden sehen, dass die Namen einiger Parametersätze mit **SSH** beginnen. Diese Parametersätze enthalten **SSH** -Parameter.
+   Sie können bestätigen, dass PowerShell SSH-Remoting unterstützt, indem Sie die `New-PSSession`-Parametersätze auflisten. Sie werden sehen, dass die Namen einiger Parametersätze mit **SSH** beginnen. Diese Parametersätze enthalten **SSH**-Parameter.
 
    ```powershell
    (Get-Command New-PSSession).ParameterSets.Name
@@ -93,7 +93,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
    Weitere Informationen finden Sie unter [OpenSSH-Schlüsselverwaltung](/windows-server/administration/openssh/openssh_keymanagement).
 
-1. Starten Sie den **sshd** -Dienst neu.
+1. Starten Sie den **sshd**-Dienst neu.
 
    ```powershell
    Restart-Service sshd
@@ -142,7 +142,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    PubkeyAuthentication yes
    ```
 
-1. Führen Sie einen Neustart des **SSH** -Diensts aus.
+1. Führen Sie einen Neustart des **SSH**-Diensts aus.
 
    ```bash
    sudo service ssh restart
@@ -161,7 +161,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
 
 1. Bearbeiten Sie die Datei `sshd_config` unter `/private/etc/ssh/sshd_config`.
 
-   Verwenden Sie einen Text-Editor, z.B. **nano** :
+   Verwenden Sie einen Text-Editor, z.B. **nano**:
 
    ```bash
    sudo nano /private/etc/ssh/sshd_config
@@ -188,7 +188,7 @@ PowerShell 6 oder höher und SSH müssen auf allen Computern installiert sein. I
    PubkeyAuthentication yes
    ```
 
-1. Starten Sie den **sshd** -Dienst neu.
+1. Starten Sie den **sshd**-Dienst neu.
 
    ```bash
    sudo launchctl stop com.openssh.sshd
