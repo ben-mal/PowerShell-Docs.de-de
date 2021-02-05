@@ -1,13 +1,13 @@
 ---
-ms.date: 12/01/2020
+ms.date: 01/25/2021
 title: Problembehandlung für Cmdlets
 description: Dieser Artikel bietet Informationen und Anweisungen zum Beheben von Fehlern mithilfe des PowerShell-Katalogs.
-ms.openlocfilehash: 980da8ea7b8a09513f33a9939d512c437b755d8d
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: 8139147683b655b5f8532c3068387db6df12a98f
+ms.sourcegitcommit: 0f003644684422e425a59b7361121e05ac772e15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96913317"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98771815"
 ---
 # <a name="troubleshooting-cmdlets"></a>Problembehandlung für Cmdlets
 
@@ -30,6 +30,7 @@ Die Install- und Update-Cmdlets erfordern einen Internetzugang, um eine Verbindu
 - `devopsgallerystorage.blob.core.windows.net`: Hostname des Speicherkontos
 - `*.powershellgallery.com`: Website
 - `go.microsoft.com`: Umleitungsdienst
+- `onegetcdn.azureedge.net`: führt einen Bootstrapvorgang für den NuGet-Anbieter in `PowerShellGet/PackageManagement` durch
 
 > [!NOTE]
 > Cmdlets, die mit dem PowerShell-Katalog interagieren, können unerwartet fehlschlagen, wenn es zu einem Ausfall der Dienste des PowerShell-Katalogs kommt. Informationen zum aktuellen Status des PowerShell-Katalogs finden Sie auf der GitHub-Seite [PowerShell Gallery Status](https://github.com/PowerShell/PowerShellGallery/blob/master/psgallery_status.md).
