@@ -4,10 +4,10 @@ keywords: jea,powershell,security
 title: JEA-Sitzungskonfigurationen
 description: Sitzungskonfigurationen definieren, welche Benutzer den JEA-Endpunkt verwenden können und auf welche Rollen sie Zugriff haben.
 ms.openlocfilehash: b616d5bf260bbdfe89b6422fd4a8b4866f7fdc67
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
+ms.lasthandoff: 12/10/2020
 ms.locfileid: "92501557"
 ---
 # <a name="jea-session-configurations"></a>JEA-Sitzungskonfigurationen
@@ -112,7 +112,7 @@ Aufzeichnungen werden durch das **lokale Systemkonto** in den Ordner geschrieben
 
 ### <a name="user-drive"></a>Benutzerlaufwerk
 
-Wenn Benutzer, die eine Verbindung herstellen, Dateien von einem oder auf einen JEA-Endpunkt kopieren müssen, können Sie das Benutzerlaufwerk in der Sitzungskonfigurationsdatei aktivieren. Das Benutzerlaufwerk ist ein **PSDrive** , das einem eindeutigen Ordner für jeden Benutzer zugeordnet ist, der eine Verbindung herstellt. Benutzer können über diesen Ordner Dateien vom System oder auf das System kopieren, ohne dass sie Zugriff auf das gesamte Dateisystem benötigen bzw. ohne dass der FileSystem-Anbieter verfügbar gemacht wird. Der Inhalt der Benutzerlaufwerke steht durchgehend und sitzungsübergreifend zur Verfügung, um in Situationen Abhilfe zu schaffen, in denen die Netzwerkkonnektivität unterbrochen ist.
+Wenn Benutzer, die eine Verbindung herstellen, Dateien von einem oder auf einen JEA-Endpunkt kopieren müssen, können Sie das Benutzerlaufwerk in der Sitzungskonfigurationsdatei aktivieren. Das Benutzerlaufwerk ist ein **PSDrive**, das einem eindeutigen Ordner für jeden Benutzer zugeordnet ist, der eine Verbindung herstellt. Benutzer können über diesen Ordner Dateien vom System oder auf das System kopieren, ohne dass sie Zugriff auf das gesamte Dateisystem benötigen bzw. ohne dass der FileSystem-Anbieter verfügbar gemacht wird. Der Inhalt der Benutzerlaufwerke steht durchgehend und sitzungsübergreifend zur Verfügung, um in Situationen Abhilfe zu schaffen, in denen die Netzwerkkonnektivität unterbrochen ist.
 
 ```powershell
 MountUserDrive = $true
@@ -162,7 +162,7 @@ Auf die Rollenfunktionen wird, wie im vorherigen Beispiel gezeigt, durch den Bas
 
 JEA verwendet die Umgebungsvariable `$env:PSModulePath`, um zu bestimmen, welche Pfaden nach Rollenfunktionsdateien gescannt werden sollen. JEA sucht innerhalb dieser Pfade nach gültigen PowerShell-Modulen, die einen Unterordner namens „RoleCapabilities“ enthalten. Wie beim Importieren von Modulen zieht JEA Rollenfunktionen, die mit Windows ausgeliefert wurden, benutzerdefinierten Rollenfunktionen gleichen Namens vor.
 
-Bei allen anderen Namenskonflikten wird die Rangfolge durch die Reihenfolge bestimmt, in der Windows die Dateien im Verzeichnis aufzählt. Diese Reihenfolge muss nicht unbedingt alphabetisch sein. Die erste gefundene Rollenfunktionsdatei, die mit dem angegebenen Namen übereinstimmt, wird für den Benutzer verwendet, der eine Verbindung herstellt. Da die Suchreihenfolge für die Rollenfunktionen nicht deterministisch ist, wird **dringend empfohlen** , Rollenfunktionen eindeutige Dateinamen zu geben.
+Bei allen anderen Namenskonflikten wird die Rangfolge durch die Reihenfolge bestimmt, in der Windows die Dateien im Verzeichnis aufzählt. Diese Reihenfolge muss nicht unbedingt alphabetisch sein. Die erste gefundene Rollenfunktionsdatei, die mit dem angegebenen Namen übereinstimmt, wird für den Benutzer verwendet, der eine Verbindung herstellt. Da die Suchreihenfolge für die Rollenfunktionen nicht deterministisch ist, wird **dringend empfohlen**, Rollenfunktionen eindeutige Dateinamen zu geben.
 
 ### <a name="conditional-access-rules"></a>Regeln für bedingten Zugriff
 
