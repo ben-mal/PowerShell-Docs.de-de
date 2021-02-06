@@ -1,0 +1,489 @@
+---
+external help file: System.Management.Automation.dll-Help.xml
+Locale: en-US
+Module Name: Microsoft.PowerShell.Core
+ms.date: 06/09/2017
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/disconnect-pssession?view=powershell-7.2&WT.mc_id=ps-gethelp
+schema: 2.0.0
+title: Disconnect-PSSession
+ms.openlocfilehash: b87db1af49ae293225f417fd4bec85e346c79f28
+ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "99603927"
+---
+# <span data-ttu-id="feb2e-102">Disconnect-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-102">Disconnect-PSSession</span></span>
+
+## <span data-ttu-id="feb2e-103">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="feb2e-103">SYNOPSIS</span></span>
+<span data-ttu-id="feb2e-104">Trennt eine Verbindung.</span><span class="sxs-lookup"><span data-stu-id="feb2e-104">Disconnects from a session.</span></span>
+
+## <span data-ttu-id="feb2e-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="feb2e-105">SYNTAX</span></span>
+
+### <span data-ttu-id="feb2e-106">Sitzung (Standard)</span><span class="sxs-lookup"><span data-stu-id="feb2e-106">Session (Default)</span></span>
+
+```
+Disconnect-PSSession [-Session] <PSSession[]> [-IdleTimeoutSec <Int32>]
+ [-OutputBufferingMode <OutputBufferingMode>] [-ThrottleLimit <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### <span data-ttu-id="feb2e-107">Name</span><span class="sxs-lookup"><span data-stu-id="feb2e-107">Name</span></span>
+
+```
+Disconnect-PSSession [-IdleTimeoutSec <Int32>] [-OutputBufferingMode <OutputBufferingMode>]
+ [-ThrottleLimit <Int32>] -Name <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="feb2e-108">InstanceId</span><span class="sxs-lookup"><span data-stu-id="feb2e-108">InstanceId</span></span>
+
+```
+Disconnect-PSSession [-IdleTimeoutSec <Int32>] [-OutputBufferingMode <OutputBufferingMode>]
+ [-ThrottleLimit <Int32>] -InstanceId <Guid[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### <span data-ttu-id="feb2e-109">Id</span><span class="sxs-lookup"><span data-stu-id="feb2e-109">Id</span></span>
+
+```
+Disconnect-PSSession [-IdleTimeoutSec <Int32>] [-OutputBufferingMode <OutputBufferingMode>]
+ [-ThrottleLimit <Int32>] [-Id] <Int32[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="feb2e-110">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="feb2e-110">DESCRIPTION</span></span>
+
+<span data-ttu-id="feb2e-111">Das `Disconnect-PSSession` Cmdlet trennt eine PowerShell-Sitzung ("PSSession"), wie z. b. eine mit dem `New-PSSession` Cmdlet gestartete, aus der aktuellen Sitzung.</span><span class="sxs-lookup"><span data-stu-id="feb2e-111">The `Disconnect-PSSession` cmdlet disconnects a PowerShell session ("PSSession"), such as one started by using the `New-PSSession` cmdlet, from the current session.</span></span> <span data-ttu-id="feb2e-112">Dadurch befindet sich die PSSession in einem getrennten Zustand.</span><span class="sxs-lookup"><span data-stu-id="feb2e-112">As a result, the PSSession is in a disconnected state.</span></span> <span data-ttu-id="feb2e-113">Sie können von der aktuellen Sitzung oder einer anderen Sitzung auf dem lokalen bzw. einem anderen Computer eine Verbindung mit der getrennten PSSession herstellen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-113">You can connect to the disconnected PSSession from the current session or from another session on the local computer or a different computer.</span></span>
+
+<span data-ttu-id="feb2e-114">Das `Disconnect-PSSession` Cmdlet trennt nur geöffnete pssessions, die mit der aktuellen Sitzung verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="feb2e-114">The `Disconnect-PSSession` cmdlet disconnects only open PSSessions that are connected to the current session.</span></span> <span data-ttu-id="feb2e-115">`Disconnect-PSSession` die Verbindung mit unterbrochenen oder geschlossenen pssessions oder interaktiven pssessions, die mithilfe des `Enter-PSSession` Cmdlets gestartet wurden, kann nicht getrennt werden, und es können keine pssessions getrennt werden, die mit anderen Sitzungen verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="feb2e-115">`Disconnect-PSSession` cannot disconnect broken or closed PSSessions, or interactive PSSessions started by using the `Enter-PSSession` cmdlet, and it cannot disconnect PSSessions that are connected to other sessions.</span></span>
+
+<span data-ttu-id="feb2e-116">Um erneut eine Verbindung mit einer getrennten PSSession herzustellen, verwenden Sie die `Connect-PSSession` `Receive-PSSession` Cmdlets oder.</span><span class="sxs-lookup"><span data-stu-id="feb2e-116">To reconnect to a disconnected PSSession, use the `Connect-PSSession` or `Receive-PSSession` cmdlets.</span></span>
+
+<span data-ttu-id="feb2e-117">Wenn eine PSSession getrennt ist, werden die Befehle in der PSSession bis zum Ende ausgeführt, sofern keine Zeitüberschreitung für die PSSession eintritt oder die Befehle in der PSSession nicht durch einen vollen Ausgabepuffer blockiert werden.</span><span class="sxs-lookup"><span data-stu-id="feb2e-117">When a PSSession is disconnected, the commands in the PSSession continue to run until they complete, unless the PSSession times out or the commands in the PSSession are blocked by a full output buffer.</span></span> <span data-ttu-id="feb2e-118">Um die Leerlaufzeitüberschreitung zu ändern, verwenden Sie den **IdleTimeoutSec**-Parameter.</span><span class="sxs-lookup"><span data-stu-id="feb2e-118">To change the idle timeout, use the **IdleTimeoutSec** parameter.</span></span> <span data-ttu-id="feb2e-119">Verwenden Sie zum Ändern des Ausgabepuffer Modus den **outputbufferingmode** -Parameter. Sie können auch den **indisconnectedsession** -Parameter des `Invoke-Command` Cmdlets verwenden, um einen Befehl in einer getrennten Sitzung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-119">To change the output buffering mode, use the **OutputBufferingMode** parameter You can also use the **InDisconnectedSession** parameter of the `Invoke-Command` cmdlet to run a command in a disconnected session.</span></span>
+
+<span data-ttu-id="feb2e-120">Weitere Informationen zum Feature „Getrennte Sitzungen“ finden Sie unter [about_Remote_Disconnected_Sessions](./About/about_Remote_Disconnected_Sessions.md).</span><span class="sxs-lookup"><span data-stu-id="feb2e-120">For more information about the Disconnected Sessions feature, see [about_Remote_Disconnected_Sessions](./About/about_Remote_Disconnected_Sessions.md).</span></span>
+
+<span data-ttu-id="feb2e-121">Dieses Cmdlet wird in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-121">This cmdlet is introduced in Windows PowerShell 3.0.</span></span>
+
+## <span data-ttu-id="feb2e-122">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="feb2e-122">EXAMPLES</span></span>
+
+### <span data-ttu-id="feb2e-123">Beispiel 1: Trennen einer Sitzung nach Name</span><span class="sxs-lookup"><span data-stu-id="feb2e-123">Example 1 - Disconnect a session by name</span></span>
+
+<span data-ttu-id="feb2e-124">Mit diesem Befehl wird die Verbindung der PSSession UpdateSession auf dem Computer Server01 von der aktuellen Sitzung getrennt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-124">This command disconnects the UpdateSession PSSession on the Server01 computer from the current session.</span></span> <span data-ttu-id="feb2e-125">Der Befehl verwendet den **Name** -Parameter, um die PSSession zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="feb2e-125">The command uses the **Name** parameter to identify the PSSession.</span></span>
+
+```
+PS> Disconnect-PSSession -Name UpdateSession
+Id Name            ComputerName    State         ConfigurationName     Availability
+-- ----            ------------    -----         -----------------     ------------
+1  UpdateSession   Server01        Disconnected  Microsoft.PowerShell          None
+```
+
+<span data-ttu-id="feb2e-126">Die Ausgabe zeigt, dass der Trennungsversuch erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="feb2e-126">The output shows that the attempt to disconnect was successful.</span></span> <span data-ttu-id="feb2e-127">Der Sitzungszustand ist Disconnected und die Verfügbarkeit ist None. Das weist darauf hin, dass die Sitzung nicht anderweitig verwendet wird und die Verbindung wiederhergestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="feb2e-127">The session state is Disconnected and the Availability is None, which indicates that the session is not busy and can be reconnected.</span></span>
+
+### <span data-ttu-id="feb2e-128">Beispiel 2: Trennen einer Sitzung von einem bestimmten Computer</span><span class="sxs-lookup"><span data-stu-id="feb2e-128">Example 2 - Disconnect a session from a specific computer</span></span>
+
+<span data-ttu-id="feb2e-129">Mit diesem Befehl wird die Verbindung der PSSession ITTask auf dem Computer Server12 von der aktuellen Sitzung getrennt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-129">This command disconnects the ITTask PSSession on the Server12 computer from the current session.</span></span>
+<span data-ttu-id="feb2e-130">Die ITTask-Sitzung wurde in der aktuellen Sitzung erstellt und stellt eine Verbindung mit dem Computer Server12 her.</span><span class="sxs-lookup"><span data-stu-id="feb2e-130">The ITTask session was created in the current session and connects to the Server12 computer.</span></span> <span data-ttu-id="feb2e-131">Der Befehl verwendet das `Get-PSSession` Cmdlet, um die Sitzung zu erhalten `Disconnect-PSSession` , und das Cmdlet, um die Verbindung zu trennen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-131">The command uses the `Get-PSSession` cmdlet to get the session and the `Disconnect-PSSession` cmdlet to disconnect it.</span></span>
+
+```
+PS> Get-PSSession -ComputerName Server12 -Name ITTask |
+  Disconnect-PSSession -OutputBufferingMode Drop -IdleTimeoutSec 86400
+Id Name            ComputerName    State         ConfigurationName     Availability
+-- ----            ------------    -----         -----------------     ------------
+1  ITTask          Server12        Disconnected  ITTasks               None
+```
+
+<span data-ttu-id="feb2e-132">Der `Disconnect-PSSession` Befehl verwendet den **outputbufferingmode** -Parameter, um den Ausgabemodus auf " **Drop**" festzulegen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-132">The `Disconnect-PSSession` command uses the **OutputBufferingMode** parameter to set the output mode to **Drop**.</span></span> <span data-ttu-id="feb2e-133">Durch diese Einstellung wird sichergestellt, dass das in der Sitzung ausgeführte Skript auch bei vollem Ausgabepuffer weiter ausgeführt werden kann.</span><span class="sxs-lookup"><span data-stu-id="feb2e-133">This setting ensures that the script that is running in the session can continue to run even if the session output buffer is full.</span></span> <span data-ttu-id="feb2e-134">Da das Skript seine Ausgabedaten in einen Bericht auf einer Dateifreigabe schreibt, können andere Ausgabedaten verloren gehen, ohne dass dies Konsequenzen hätte.</span><span class="sxs-lookup"><span data-stu-id="feb2e-134">Because the script writes its output to a report on a file share, other output can be lost without consequence.</span></span>
+
+<span data-ttu-id="feb2e-135">Außerdem verwendet der Befehl den **IdleTimeoutSec**-Parameter, um die Leerlaufzeitüberschreitung der Sitzung auf 24 Stunden zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="feb2e-135">The command also uses the **IdleTimeoutSec** parameter to extend the idle timeout of the session to 24 hours.</span></span> <span data-ttu-id="feb2e-136">Diese Einstellung gibt diesem Administrator oder anderen Administratoren Zeit, die Sitzungsverbindung wiederherzustellen, damit das Skript ausgeführt und Fehler ggf. behoben werden können.</span><span class="sxs-lookup"><span data-stu-id="feb2e-136">This setting allows time for this administrator or other administrators to reconnect to the session to verify that the script ran and troubleshoot if needed.</span></span>
+
+### <span data-ttu-id="feb2e-137">Beispiel 3: Verwenden mehrerer pssessions auf mehreren Computern</span><span class="sxs-lookup"><span data-stu-id="feb2e-137">Example 3 - Using multiple PSSessions on multiple computers</span></span>
+
+<span data-ttu-id="feb2e-138">Diese Reihe von Befehlen zeigt, wie das `Disconnect-PSSession` Cmdlet in einem Unternehmens Szenario verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="feb2e-138">This series of commands shows how the `Disconnect-PSSession` cmdlet might be used in an enterprise scenario.</span></span> <span data-ttu-id="feb2e-139">In diesem Fall startet ein neuer Techniker ein Skript in einer Sitzung auf einem Remotecomputer und stößt auf ein Problem.</span><span class="sxs-lookup"><span data-stu-id="feb2e-139">In this case, a new technician starts a script in a session on a remote computer and runs into a problem.</span></span> <span data-ttu-id="feb2e-140">Der Techniker trennt die Verbindung mit der Sitzung, damit ein erfahrener Kollege eine Verbindung mit der Sitzung herstellen und das Problem beheben kann.</span><span class="sxs-lookup"><span data-stu-id="feb2e-140">The technician disconnects from the session so that a more experienced manager can connect to the session and resolve the problem.</span></span>
+
+```
+PS> $s = New-PSSession -ComputerName Srv1, Srv2, Srv30 -Name ITTask
+PS> Invoke-Command $s -FilePath \\Server01\Scripts\Get-PatchStatus.ps1
+PS> Get-PSSession -Name ITTask -ComputerName Srv1 | Disconnect-PSSession
+Id Name            ComputerName    State         ConfigurationName     Availability
+-- ----            ------------    -----         -----------------     ------------
+1 ITTask           Srv1            Disconnected  Microsoft.PowerShell          None
+
+PS> Get-PSSession -ComputerName Srv1, Srv2, Srv30 -Name ITTask
+Id Name            ComputerName    State         ConfigurationName     Availability
+-- ----            ------------    -----         -----------------     ------------
+ 1 ITTask          Srv1            Disconnected  Microsoft.PowerShell          None
+ 2 ITTask          Srv2            Opened        Microsoft.PowerShell     Available
+ 3 ITTask          Srv30           Opened        Microsoft.PowerShell     Available
+
+PS> Get-PSSession -ComputerName Srv1 -Name ITTask -Credential Domain01\User01
+Id Name            ComputerName    State         ConfigurationName     Availability
+-- ----            ------------    -----         -----------------     ------------
+ 1 ITTask          Srv1            Disconnected  Microsoft.PowerShell          None
+
+PS> $s = Connect-PSSession -ComputerName Srv1 -Name ITTask -Credential Domain01\User01
+PS> Invoke-Command -Session $s {dir $home\Scripts\PatchStatusOutput.ps1}
+PS> Invoke-Command -Session $s {mkdir $home\Scripts\PatchStatusOutput}
+PS> Invoke-Command -Session $s -FilePath \\Server01\Scripts\Get-PatchStatus.ps1
+PS> Disconnect-PSSession -Session $s
+```
+
+<span data-ttu-id="feb2e-141">Der Techniker beginnt, Sitzungen auf mehreren Remotecomputern zu erstellen und in jeder Sitzung ein Skript auszuführen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-141">The technician begins by creating sessions on several remote computers and running a script in each session.</span></span> <span data-ttu-id="feb2e-142">Der erste Befehl verwendet das `New-PSSession` Cmdlet, um die ittask-Sitzung auf drei Remote Computern zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-142">The first command uses the `New-PSSession` cmdlet to create the ITTask session on three remote computers.</span></span> <span data-ttu-id="feb2e-143">Der Befehl speichert die Sitzungen in der $s-Variablen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-143">The command saves the sessions in the $s variable.</span></span> <span data-ttu-id="feb2e-144">Der zweite Befehl verwendet den **FilePath** -Parameter des `Invoke-Command` Cmdlets, um ein Skript in den Sitzungen in der $s Variablen auszuführen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-144">The second command uses the **FilePath** parameter of the `Invoke-Command` cmdlet to run a script in the sessions in the $s variable.</span></span>
+
+<span data-ttu-id="feb2e-145">Das Skript, das auf dem Computer Srv1 ausgeführt wird, generiert unerwartete Fehler.</span><span class="sxs-lookup"><span data-stu-id="feb2e-145">The script running on the Srv1 computer generates unexpected errors.</span></span> <span data-ttu-id="feb2e-146">Der Techniker wendet sich an seinen Vorgesetzten und bittet ihn um Hilfe.</span><span class="sxs-lookup"><span data-stu-id="feb2e-146">The technician contacts his manager and asks for assistance.</span></span> <span data-ttu-id="feb2e-147">Der Manager weist den Techniker an, die Verbindung mit der Sitzung zu trennen, damit er untersuchen kann. Der zweite Befehl verwendet das `Get-PSSession` Cmdlet, um die ittask-Sitzung auf dem Srv1-Computer `Disconnect-PSSession` zu erhalten, und das Cmdlet, um die Verbindung zu trennen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-147">The manager directs the technician to disconnect from the session so he can investigate.The second command uses the `Get-PSSession` cmdlet to get the ITTask session on the Srv1 computer and the `Disconnect-PSSession` cmdlet to disconnect it.</span></span> <span data-ttu-id="feb2e-148">Dieser Befehl hat keine Auswirkung auf die ittask-Sitzungen auf den anderen Computern.</span><span class="sxs-lookup"><span data-stu-id="feb2e-148">This command does not affect the ITTask sessions on the other computers.</span></span>
+
+<span data-ttu-id="feb2e-149">Der dritte Befehl verwendet das `Get-PSSession` Cmdlet, um die ittask-Sitzungen zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="feb2e-149">The third command uses the `Get-PSSession` cmdlet to get the ITTask sessions.</span></span> <span data-ttu-id="feb2e-150">Die Ausgabe zeigt, dass die ITTask-Sitzungen auf den Computern Srv2 und Srv30 nicht vom Trennungsbefehl betroffen waren.</span><span class="sxs-lookup"><span data-stu-id="feb2e-150">The output shows that the ITTask sessions on the Srv2 and Srv30 computers were not affected by the command to disconnect.</span></span>
+
+<span data-ttu-id="feb2e-151">Der Manager meldet sich bei seinem Heimcomputer an, stellt eine Verbindung mit dem Unternehmensnetzwerk her, startet PowerShell und verwendet das `Get-PSSession` Cmdlet, um die ittask-Sitzung auf dem Srv1-Computer zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="feb2e-151">The manager logs on to his home computer, connects to his corporate network, starts PowerShell, and uses the `Get-PSSession` cmdlet to get the ITTask session on the Srv1 computer.</span></span> <span data-ttu-id="feb2e-152">Er verwendet die Anmeldeinformationen des Technikers, um auf die Sitzung zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-152">He uses the credentials of the technician to access the session.</span></span>
+
+<span data-ttu-id="feb2e-153">Als Nächstes verwendet der Manager das- `Connect-PSSession` Cmdlet, um eine Verbindung mit der ittask-Sitzung auf dem Srv1-Computer herzustellen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-153">Next, the manager uses the `Connect-PSSession` cmdlet to connect to the ITTask session on the Srv1 computer.</span></span> <span data-ttu-id="feb2e-154">Der Befehl speichert die Sitzung in der $s-Variablen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-154">The command saves the session in the $s variable.</span></span>
+
+<span data-ttu-id="feb2e-155">Der Manager verwendet das `Invoke-Command` Cmdlet, um einige Diagnose Befehle in der Sitzung in der `$s` Variablen auszuführen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-155">The manager uses the `Invoke-Command` cmdlet to run some diagnostic commands in the session in the `$s` variable.</span></span> <span data-ttu-id="feb2e-156">Er erkennt, dass der Skriptfehler durch ein nicht gefundenes, erforderliches Verzeichnis verursacht wurde.</span><span class="sxs-lookup"><span data-stu-id="feb2e-156">He recognizes that the script failed because it did not find a required directory.</span></span>
+<span data-ttu-id="feb2e-157">Der Manager verwendet die `MkDir` -Funktion, um das Verzeichnis zu erstellen, und dann startet er das `Get-PatchStatus.ps1` Skript neu und trennt die Verbindung mit der Sitzung. Der Manager meldet seine Ergebnisse an den Techniker, schlägt vor, dass er erneut eine Verbindung mit der Sitzung herstellt, um die Aufgaben abzuschließen, und fordert ihn auf, dem Skript einen Befehl hinzuzufügen, `Get-PatchStatus.ps1` der das erforderliche Verzeichnis erstellt, wenn es nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="feb2e-157">The manager uses the `MkDir` function to create the directory, and then he restarts the `Get-PatchStatus.ps1` script and disconnects from the session.The manager reports his findings to the technician, suggests that he reconnect to the session to complete the tasks, and asks him to add a command to the `Get-PatchStatus.ps1` script that creates the required directory if it does not exist.</span></span>
+
+### <span data-ttu-id="feb2e-158">Beispiel 4: Ändern des Timeout Werts für eine PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-158">Example 4 - Change the timeout value for a PSSession</span></span>
+
+<span data-ttu-id="feb2e-159">In diesem Beispiel wird gezeigt, wie der Wert der **IdleTimeout**-Eigenschaft einer Sitzung korrigiert wird, damit die Verbindung getrennt werden kann.</span><span class="sxs-lookup"><span data-stu-id="feb2e-159">This example shows how to correct the value of the **IdleTimeout** property of a session so that it can be disconnected.</span></span>
+
+<span data-ttu-id="feb2e-160">Die Eigenschaft für die Leerlaufzeitüberschreitung einer Sitzung ist wichtig für getrennte Sitzungen, weil von ihr abhängt, wie lange eine getrennte Sitzung vor dem Löschen beibehalten wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-160">The idle timeout property of a session is critical to disconnected sessions, because it determines how long a disconnected session is maintained before it is deleted.</span></span> <span data-ttu-id="feb2e-161">Sie können die Option für die Leerlaufzeitüberschreitung festlegen, wenn Sie eine Sitzung erstellen und wenn Sie die Verbindung trennen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-161">You can set the idle timeout option when you create a session and when you disconnect it.</span></span> <span data-ttu-id="feb2e-162">Die Standardwerte für das Leerlauf Timeout einer Sitzung werden in der `$PSSessionOption` Einstellungs Variablen auf dem lokalen Computer und in der Sitzungs Konfiguration auf dem Remote Computer festgelegt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-162">The default values for the idle timeout of a session are set in the `$PSSessionOption` preference variable on the local computer and in the session configuration on the remote computer.</span></span> <span data-ttu-id="feb2e-163">Die für die Sitzung festgelegten Werte haben Vorrang vor den in der Sitzungskonfiguration festgelegten Werten. Die Sitzungswerte dürfen jedoch die in der Sitzungskonfiguration festgelegten Kontingente, z. B. den **MaxIdleTimeoutMs**-Wert, nicht überschreiten.</span><span class="sxs-lookup"><span data-stu-id="feb2e-163">Values set for the session take precedence over values set in the session configuration, but session values cannot exceed quotas set in the session configuration, such as the **MaxIdleTimeoutMs** value.</span></span>
+
+```
+PS> $Timeout = New-PSSessionOption -IdleTimeout 172800000
+PS> $s = New-PSSession -Computer Server01 -Name ITTask -SessionOption $Timeout
+PS> Disconnect-PSSession -Session $s
+Disconnect-PSSession : The session ITTask cannot be disconnected because the specified
+idle timeout value 172800(seconds) is either greater than the server maximum allowed
+43200 (seconds) or less that the minimum allowed60(seconds).  Choose an idle time out
+value that is within the allowed range and try again.
+
+PS> Invoke-Command -ComputerName Server01 {Get-PSSessionConfiguration Microsoft.PowerShell} |
+ Format-List -Property *
+
+Architecture                  : 64
+Filename                      : %windir%\system32\pwrshplugin.dll
+ResourceUri                   : http://schemas.microsoft.com/powershell/microsoft.powershell
+MaxConcurrentCommandsPerShell : 1000
+UseSharedProcess              : false
+ProcessIdleTimeoutSec         : 0
+xmlns                         : http://schemas.microsoft.com/wbem/wsman/1/config/PluginConfiguration
+MaxConcurrentUsers            : 5
+lang                          : en-US
+SupportsOptions               : true
+ExactMatch                    : true
+RunAsUser                     :
+IdleTimeoutms                 : 7200000
+PSVersion                     : 3.0
+OutputBufferingMode           : Block
+AutoRestart                   : false
+SecurityDescriptorSddl        : O:NSG:BAD:P(A;;GA;;;BA)S:P(AU;FA;GA;;;WD)(AU;SA;GXGW;;;WD)
+MaxMemoryPerShellMB           : 1024
+MaxIdleTimeoutms              : 2147483647
+Uri                           : http://schemas.microsoft.com/powershell/microsoft.powershell
+SDKVersion                    : 2
+Name                          : microsoft.powershell
+XmlRenderingType              : text
+Capability                    : {Shell}
+RunAsPassword                 :
+MaxProcessesPerShell          : 15
+ParentResourceUri             : http://schemas.microsoft.com/powershell/microsoft.powershell
+Enabled                       : true
+MaxShells                     : 25
+MaxShellsPerUser              : 25
+Permission                    : BUILTIN\Administrators AccessAllowed
+PSComputerName                : localhost
+RunspaceId                    : aea84310-6dbf-4c21-90ac-13980039925a
+PSShowComputerName            : True
+
+
+PS> $s.Runspace.ConnectionInfo
+ConnectionUri                     : http://Server01/wsman
+ComputerName                      : Server01
+Scheme                            : http
+Port                              : 80
+AppName                           : /wsman
+Credential                        :
+ShellUri                          : http://schemas.microsoft.com/powershell/Microsoft.PowerShell
+AuthenticationMechanism           : Default
+CertificateThumbprint             :
+MaximumConnectionRedirectionCount : 5
+MaximumReceivedDataSizePerCommand :
+MaximumReceivedObjectSize         : 209715200
+UseCompression                    : True
+NoMachineProfile                  : False
+ProxyAccessType                   : None
+ProxyAuthentication               : Negotiate
+ProxyCredential                   :
+SkipCACheck                       : False
+SkipCNCheck                       : False
+SkipRevocationCheck               : False
+NoEncryption                      : False
+UseUTF16                          : False
+OutputBufferingMode               : Drop
+IncludePortInSPN                  : False
+Culture                           : en-US
+UICulture                         : en-US
+OpenTimeout                       : 180000
+CancelTimeout                     : 60000
+OperationTimeout                  : 180000
+IdleTimeout                       : 172800000
+
+PS> Disconnect-PSSession $s -IdleTimeoutSec 43200
+Id Name            ComputerName    State         ConfigurationName     Availability
+-- ----            ------------    -----         -----------------     ------------
+ 4 ITTask          Server01        Disconnected  Microsoft.PowerShell          None
+
+PS> $s.Runspace.ConnectionInfo.IdleTimeout
+43200000
+```
+
+<span data-ttu-id="feb2e-164">Der erste Befehl verwendet das `New-PSSessionOption` Cmdlet, um ein Sitzungs Options Objekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-164">The first command uses the `New-PSSessionOption` cmdlet to create a session option object.</span></span> <span data-ttu-id="feb2e-165">Er verwendet den **IdleTimeout**-Parameter, um eine Leerlaufzeitüberschreitung von 48 Stunden (172.800.000 Millisekunden) festzulegen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-165">It uses the **IdleTimeout** parameter to set an idle timeout of 48 hours (172800000 milliseconds).</span></span> <span data-ttu-id="feb2e-166">Der Befehl speichert das Sitzungsoptionsobjekt in der $Timeout-Variablen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-166">The command saves the session option object in the $Timeout variable.</span></span>
+
+<span data-ttu-id="feb2e-167">Der zweite Befehl verwendet das `New-PSSession` Cmdlet, um die ittask-Sitzung auf dem Server01-Computer zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-167">The second command uses the `New-PSSession` cmdlet to create the ITTask session on the Server01 computer.</span></span> <span data-ttu-id="feb2e-168">Der Befehl speichert die Sitzung in der $s-Variablen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-168">The command save the session in the $s variable.</span></span> <span data-ttu-id="feb2e-169">Der Wert des **SessionOption**-Parameters entspricht der Leerlaufzeitüberschreitung von 48 Stunden in der $Timeout-Variablen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-169">The value of the **SessionOption** parameter is the 48-hour idle timeout in the $Timeout variable.</span></span>
+
+<span data-ttu-id="feb2e-170">Der dritte Befehl trennt die Verbindung der in der $s-Variablen enthaltenen ITTask-Sitzung.</span><span class="sxs-lookup"><span data-stu-id="feb2e-170">The third command disconnects the ITTask session in the $s variable.</span></span> <span data-ttu-id="feb2e-171">Der Befehl verursacht einen Fehler, weil der Wert für die Leerlaufzeitüberschreitung der Sitzung das **MaxIdleTimeoutMs**-Kontingent in der Sitzungskonfiguration überschreitet.</span><span class="sxs-lookup"><span data-stu-id="feb2e-171">The command fails because the idle timeout value of the session exceeds the **MaxIdleTimeoutMs** quota in the session configuration.</span></span> <span data-ttu-id="feb2e-172">Da die Leerlaufzeitüberschreitung erst verwendet wird, wenn die Sitzung getrennt ist, bleibt dieser Verstoß während der laufenden Sitzung unentdeckt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-172">Because the idle timeout is not used until the session is disconnected, this violation can go undetected while the session is in use.</span></span>
+
+<span data-ttu-id="feb2e-173">Der vierte Befehl verwendet das `Invoke-Command` Cmdlet, um einen `Get-PSSessionConfiguration` Befehl für die Microsoft. PowerShell-Sitzungs Konfiguration auf dem Server01-Computer auszuführen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-173">The fourth command uses the `Invoke-Command` cmdlet to run a `Get-PSSessionConfiguration` command for the Microsoft.PowerShell session configuration on the Server01 computer.</span></span> <span data-ttu-id="feb2e-174">Der Befehl verwendet das `Format-List` Cmdlet, um alle Eigenschaften der Sitzungs Konfiguration in einer Liste anzuzeigen. Die Ausgabe zeigt, dass die **maxidletimeoutms** -Eigenschaft, die den maximal zulässigen **IdleTimeout** -Wert für Sitzungen festlegt, die die Sitzungs Konfiguration verwenden, 43,2 Millionen Millisekunden (12 Stunden) beträgt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-174">The command uses the `Format-List` cmdlet to display all properties of the session configuration in a list.The output shows that the **MaxIdleTimeoutMS** property, which establishes the maximum permitted **IdleTimeout** value for sessions that use the session configuration, is 43200000 milliseconds (12 hours).</span></span>
+
+<span data-ttu-id="feb2e-175">Der fünfte Befehl ruft die Sitzungsoptionswerte der Sitzung in der $s-Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="feb2e-175">The fifth command gets the session option values of the session in the $s variable.</span></span> <span data-ttu-id="feb2e-176">Die Werte vieler Sitzungs Optionen sind Eigenschaften der **ConnectionInfo** -Eigenschaft der **Runspace** -Eigenschaft der Sitzung. Die Ausgabe zeigt, dass der Wert der **IdleTimeout** -Eigenschaft der Sitzung 172,8 Millionen Millisekunden (48 Stunden) beträgt, wodurch das **maxidletimeoutms** -Kontingent von 12 Stunden in der Sitzungs Konfiguration verletzt wird. Um diesen Konflikt zu lösen, können Sie mit dem **ConfigurationName** -Parameter eine andere Sitzungs Konfiguration auswählen oder den **IdleTimeout** -Parameter verwenden, um das Leerlauf Timeout der Sitzung zu verringern.</span><span class="sxs-lookup"><span data-stu-id="feb2e-176">The values of many session options are properties of the **ConnectionInfo** property of the **Runspace** property of the session.The output shows that the value of the **IdleTimeout** property of the session is 172800000 milliseconds (48 hours), which violates the **MaxIdleTimeoutMs** quota of 12 hours in the session configuration.To resolve this conflict, you can use the **ConfigurationName** parameter to select a different session configuration or use the **IdleTimeout** parameter to reduce the idle timeout of the session.</span></span>
+
+<span data-ttu-id="feb2e-177">Der sechste Befehl trennt die Sitzungsverbindung.</span><span class="sxs-lookup"><span data-stu-id="feb2e-177">The sixth command disconnects the session.</span></span> <span data-ttu-id="feb2e-178">Er verwendet den **IdleTimeoutSec**-Parameter, um die Leerlaufzeitüberschreitung auf den Maximalwert von 12 Stunden festzulegen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-178">It uses the **IdleTimeoutSec** parameter to set the idle timeout to the 12-hour maximum.</span></span>
+
+<span data-ttu-id="feb2e-179">Der siebte Befehl ruft den Wert der **IdleTimeout**-Eigenschaft der getrennten Sitzung ab, der in Millisekunden gemessen wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-179">The seventh command gets the value of the **IdleTimeout** property of the disconnected session, which is measured in milliseconds.</span></span> <span data-ttu-id="feb2e-180">Die Ausgabe bestätigt, dass der Befehl erfolgreich ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="feb2e-180">The output confirms that the command was successful.</span></span>
+
+## <span data-ttu-id="feb2e-181">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="feb2e-181">PARAMETERS</span></span>
+
+### <span data-ttu-id="feb2e-182">-Id</span><span class="sxs-lookup"><span data-stu-id="feb2e-182">-Id</span></span>
+
+<span data-ttu-id="feb2e-183">Trennt die Verbindung von Sitzungen mit der angegebenen Sitzungs-ID.</span><span class="sxs-lookup"><span data-stu-id="feb2e-183">Disconnects from sessions with the specified session ID.</span></span> <span data-ttu-id="feb2e-184">Geben Sie eine oder mehrere IDs (durch Kommas getrennt) ein, oder verwenden Sie den Bereichsoperator (..), um einen Bereich von IDs anzugeben.</span><span class="sxs-lookup"><span data-stu-id="feb2e-184">Type one or more IDs (separated by commas), or use the range operator (..) to specify a range of IDs.</span></span>
+
+<span data-ttu-id="feb2e-185">Verwenden Sie das-Cmdlet, um die ID einer Sitzung zu erhalten `Get-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="feb2e-185">To get the ID of a session, use the `Get-PSSession` cmdlet.</span></span> <span data-ttu-id="feb2e-186">Die Instanz-ID wird in der **ID**-Eigenschaft der Sitzung gespeichert.</span><span class="sxs-lookup"><span data-stu-id="feb2e-186">The instance ID is stored in the **ID** property of the session.</span></span>
+
+```yaml
+Type: System.Int32[]
+Parameter Sets: Id
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-187">-Idletimeoutsec</span><span class="sxs-lookup"><span data-stu-id="feb2e-187">-IdleTimeoutSec</span></span>
+
+<span data-ttu-id="feb2e-188">Ändert den Wert für die Leerlaufzeitüberschreitung der getrennten PSSession.</span><span class="sxs-lookup"><span data-stu-id="feb2e-188">Changes the idle timeout value of the disconnected PSSession.</span></span> <span data-ttu-id="feb2e-189">Geben Sie einen Wert in Sekunden ein.</span><span class="sxs-lookup"><span data-stu-id="feb2e-189">Enter a value in seconds.</span></span> <span data-ttu-id="feb2e-190">Der minimale Wert beträgt 60 Sekunden (1 Minute).</span><span class="sxs-lookup"><span data-stu-id="feb2e-190">The minimum value is 60 (1 minute).</span></span>
+
+<span data-ttu-id="feb2e-191">Die Leerlaufzeitüberschreitung bestimmt, wie lange die getrennte PSSession auf dem Remotecomputer beibehalten wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-191">The idle timeout determines how long the disconnected PSSession is maintained on the remote computer.</span></span> <span data-ttu-id="feb2e-192">Wenn der Wert abläuft, wird die PSSession gelöscht.</span><span class="sxs-lookup"><span data-stu-id="feb2e-192">When the timeout expires, the PSSession is deleted.</span></span>
+
+<span data-ttu-id="feb2e-193">Ab dem Zeitpunkt der Trennung befinden sich getrennte PSSessions im Leerlauf, selbst wenn die Befehle in der getrennten Sitzung ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="feb2e-193">Disconnected PSSessions are considered to be idle from the moment that they are disconnected, even if commands are running in the disconnected session.</span></span>
+
+<span data-ttu-id="feb2e-194">Der Standardwert für die Leerlaufzeitüberschreitung einer Sitzung wird durch den Wert der **IdleTimeoutMs**-Eigenschaft der Sitzungskonfiguration festgelegt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-194">The default value for the idle timeout of a session is set by the value of the **IdleTimeoutMs** property of the session configuration.</span></span> <span data-ttu-id="feb2e-195">Der Standardwert beträgt 7.200.000 Millisekunden (2 Stunden).</span><span class="sxs-lookup"><span data-stu-id="feb2e-195">The default value is 7200000 milliseconds (2 hours).</span></span>
+
+<span data-ttu-id="feb2e-196">Der Wert dieses Parameters hat Vorrang vor dem Wert der **IdleTimeout**-Eigenschaft der $PSSessionOption-Einstellungsvariablen und dem Standardwert für die Leerlaufzeitüberschreitung in der Sitzungskonfiguration.</span><span class="sxs-lookup"><span data-stu-id="feb2e-196">The value of this parameter takes precedence over the value of the **IdleTimeout** property of the $PSSessionOption preference variable and the default idle timeout value in the session configuration.</span></span> <span data-ttu-id="feb2e-197">Allerdings darf dieser Wert nicht den Wert der **MaxIdleTimeoutMs**-Eigenschaft der Sitzungskonfiguration überschreiten.</span><span class="sxs-lookup"><span data-stu-id="feb2e-197">However, this value cannot exceed the value of the **MaxIdleTimeoutMs** property of the session configuration.</span></span> <span data-ttu-id="feb2e-198">Der Standardwert von **MaxIdleTimeoutMs** beträgt 12 Stunden (43.200.000 Millisekunden).</span><span class="sxs-lookup"><span data-stu-id="feb2e-198">The default value of **MaxIdleTimeoutMs** is 12 hours (43200000 milliseconds).</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 60
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-199">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="feb2e-199">-InstanceId</span></span>
+
+<span data-ttu-id="feb2e-200">Trennt die Verbindung von Sitzungen mit den angegebenen Instanz-IDs.</span><span class="sxs-lookup"><span data-stu-id="feb2e-200">Disconnects from sessions with the specified instance IDs.</span></span>
+
+<span data-ttu-id="feb2e-201">Die Instanz-ID ist eine GUID, die eine Sitzung auf einem lokalen oder Remotecomputer eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="feb2e-201">The instance ID is a GUID that uniquely identifies a session on a local or remote computer.</span></span> <span data-ttu-id="feb2e-202">Die Instanz-ID ist eindeutig, sogar über mehrere Sitzungen auf mehreren Computern.</span><span class="sxs-lookup"><span data-stu-id="feb2e-202">The instance ID is unique, even across multiple sessions on multiple computers.</span></span>
+
+<span data-ttu-id="feb2e-203">Verwenden Sie das-Cmdlet, um die Instanz-ID einer Sitzung zu erhalten `Get-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="feb2e-203">To get the instance ID of a session, use the `Get-PSSession` cmdlet.</span></span> <span data-ttu-id="feb2e-204">Die Instanz-ID wird in der **InstanceId-** Eigenschaft der Sitzung gespeichert.</span><span class="sxs-lookup"><span data-stu-id="feb2e-204">The instance ID is stored in the **InstanceID** property of the session.</span></span>
+
+```yaml
+Type: System.Guid[]
+Parameter Sets: InstanceId
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-205">-Name</span><span class="sxs-lookup"><span data-stu-id="feb2e-205">-Name</span></span>
+
+<span data-ttu-id="feb2e-206">Trennt die Verbindung von Sitzungen mit den angegebenen Anzeigenamen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-206">Disconnects from sessions with the specified friendly names.</span></span> <span data-ttu-id="feb2e-207">Platzhalter sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="feb2e-207">Wildcards are permitted.</span></span>
+
+<span data-ttu-id="feb2e-208">Verwenden Sie das-Cmdlet, um den anzeigen Amen einer Sitzung zu erhalten `Get-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="feb2e-208">To get the friendly name of a session, use the `Get-PSSession` cmdlet.</span></span> <span data-ttu-id="feb2e-209">Der Anzeigename wird in der **Name**-Eigenschaft der Sitzung gespeichert.</span><span class="sxs-lookup"><span data-stu-id="feb2e-209">The friendly name is stored in the **Name** property of the session.</span></span>
+
+```yaml
+Type: System.String[]
+Parameter Sets: Name
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: True
+```
+
+### <span data-ttu-id="feb2e-210">-Sitzung</span><span class="sxs-lookup"><span data-stu-id="feb2e-210">-Session</span></span>
+
+<span data-ttu-id="feb2e-211">Trennt die Verbindung der angegebenen PSSessions.</span><span class="sxs-lookup"><span data-stu-id="feb2e-211">Disconnects from the specified PSSessions.</span></span> <span data-ttu-id="feb2e-212">Geben Sie PSSession-Objekte ein, z. b. die vom `New-PSSession` Cmdlet zurückgegebenen Objekte.</span><span class="sxs-lookup"><span data-stu-id="feb2e-212">Enter PSSession objects, such as those that the `New-PSSession` cmdlet returns.</span></span> <span data-ttu-id="feb2e-213">Sie können ein PSSession-Objekt auch über die Pipeline an weiterleiten `Disconnect-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="feb2e-213">You can also pipe a PSSession object to `Disconnect-PSSession`.</span></span>
+
+<span data-ttu-id="feb2e-214">Mit dem `Get-PSSession` -Cmdlet können alle pssessions, die auf einem Remote Computer beendet werden, einschließlich pssessions, die getrennt sind, und pssessions, die mit anderen Sitzungen auf anderen Computern verbunden sind, erhalten.</span><span class="sxs-lookup"><span data-stu-id="feb2e-214">The `Get-PSSession` cmdlet can get all PSSessions that terminate at a remote computer, including PSSessions that are disconnected and PSSessions that are connected to other sessions on other computers.</span></span> <span data-ttu-id="feb2e-215">`Disconnect-PSSession` trennt nur die PSSession, die mit der aktuellen Sitzung verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="feb2e-215">`Disconnect-PSSession` disconnects only PSSession that are connected to the current session.</span></span> <span data-ttu-id="feb2e-216">Wenn Sie andere pssessions an weiterleiten `Disconnect-PSSession` , `Disconnect-PSSession` schlägt der Befehl fehl.</span><span class="sxs-lookup"><span data-stu-id="feb2e-216">If you pipe other PSSessions to `Disconnect-PSSession`, the `Disconnect-PSSession` command fails.</span></span>
+
+```yaml
+Type: System.Management.Automation.Runspaces.PSSession[]
+Parameter Sets: Session
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-217">-ThrottleLimit</span><span class="sxs-lookup"><span data-stu-id="feb2e-217">-ThrottleLimit</span></span>
+
+<span data-ttu-id="feb2e-218">Legt die Drosselungs Grenze für den `Disconnect-PSSession` Befehl fest.</span><span class="sxs-lookup"><span data-stu-id="feb2e-218">Sets the throttle limit for the `Disconnect-PSSession` command.</span></span>
+
+<span data-ttu-id="feb2e-219">Die Drosselungsgrenze ist die maximale Anzahl gleichzeitiger Verbindungen, die zum Ausführen dieses Befehls hergestellt werden können.</span><span class="sxs-lookup"><span data-stu-id="feb2e-219">The throttle limit is the maximum number of concurrent connections that can be established to run this command.</span></span> <span data-ttu-id="feb2e-220">Wenn Sie diesen Parameter weglassen oder den Wert %%amp;quot;0%%amp;quot; eingeben, wird der Standardwert %%amp;quot;32%%amp;quot; verwendet.</span><span class="sxs-lookup"><span data-stu-id="feb2e-220">If you omit this parameter or enter a value of 0, the default value, 32, is used.</span></span>
+
+<span data-ttu-id="feb2e-221">Die Drosselungsgrenze gilt nur für den aktuellen Befehl und nicht für die Sitzung oder den Computer.</span><span class="sxs-lookup"><span data-stu-id="feb2e-221">The throttle limit applies only to the current command, not to the session or to the computer.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 32
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-222">-Outputbufferingmode</span><span class="sxs-lookup"><span data-stu-id="feb2e-222">-OutputBufferingMode</span></span>
+
+<span data-ttu-id="feb2e-223">Bestimmt, wie die Befehlsausgabe in der getrennten Sitzung verwaltet wird, wenn der Ausgabepuffer voll ist.</span><span class="sxs-lookup"><span data-stu-id="feb2e-223">Determines how command output is managed in the disconnected session when the output buffer is full.</span></span> <span data-ttu-id="feb2e-224">Der Standardwert ist **Block**.</span><span class="sxs-lookup"><span data-stu-id="feb2e-224">The default value is **Block**.</span></span>
+
+<span data-ttu-id="feb2e-225">Wenn der Befehl in der getrennten Sitzung Ausgabedaten zurückgibt und sich der Ausgabepuffer füllt, legt der Wert dieses Parameters tatsächlich fest, ob der Befehl weiter ausgeführt wird, während die Sitzung getrennt ist.</span><span class="sxs-lookup"><span data-stu-id="feb2e-225">If the command in the disconnected session is returning output and the output buffer fills, the value of this parameter effectively determines whether the command continues to run while the session is disconnected.</span></span> <span data-ttu-id="feb2e-226">Durch den Wert **Block** wird der Befehl angehalten, bis die Sitzungsverbindung wiederhergestellt wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-226">A value of **Block** suspends the command until the session is reconnected.</span></span> <span data-ttu-id="feb2e-227">Beim Wert **Drop** kann der Befehl abgeschlossen werden, obwohl Daten verloren gehen können.</span><span class="sxs-lookup"><span data-stu-id="feb2e-227">A value of **Drop** allows the command to complete, although data might be lost.</span></span> <span data-ttu-id="feb2e-228">Bei Verwendung des **Drop**-Werts wird die Befehlsausgabe an eine Datei auf dem Datenträger umgeleitet.</span><span class="sxs-lookup"><span data-stu-id="feb2e-228">When using the **Drop** value, redirect the command output to a file on disk.</span></span>
+
+<span data-ttu-id="feb2e-229">Gültige Werte sind:</span><span class="sxs-lookup"><span data-stu-id="feb2e-229">Valid values are:</span></span>
+
+- <span data-ttu-id="feb2e-230">**Block**: Wenn der Ausgabepuffer voll ist, wird die Ausführung angehalten, bis der Puffer gelöscht wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-230">**Block**: When the output buffer is full, execution is suspended until the buffer is clear.</span></span>
+- <span data-ttu-id="feb2e-231">**Drop**: Wenn der Ausgabepuffer voll ist, wird die Ausführung fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-231">**Drop**: When the output buffer is full, execution continues.</span></span> <span data-ttu-id="feb2e-232">Sobald neue Ausgabedaten gespeichert werden, wird die älteste Ausgabe verworfen.</span><span class="sxs-lookup"><span data-stu-id="feb2e-232">As new output is saved, the oldest output is discarded.</span></span>
+- <span data-ttu-id="feb2e-233">**None**: Es wurde kein Ausgabepuffer Modus angegeben.</span><span class="sxs-lookup"><span data-stu-id="feb2e-233">**None**: No output buffering mode is specified.</span></span> <span data-ttu-id="feb2e-234">Der Wert der **OutputBufferingMode**-Eigenschaft der Sitzungskonfiguration wird für die getrennte Sitzung verwendet.</span><span class="sxs-lookup"><span data-stu-id="feb2e-234">The value of the **OutputBufferingMode** property of the session configuration is used for the disconnected session.</span></span>
+
+```yaml
+Type: System.Management.Automation.Runspaces.OutputBufferingMode
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Block
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-235">-Confirm</span><span class="sxs-lookup"><span data-stu-id="feb2e-235">-Confirm</span></span>
+
+<span data-ttu-id="feb2e-236">Hiermit werden Sie vor der Ausführung des Cmdlets zur Bestätigung aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="feb2e-236">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-237">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="feb2e-237">-WhatIf</span></span>
+
+<span data-ttu-id="feb2e-238">Zeigt, was geschieht, wenn das Cmdlet ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-238">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="feb2e-239">Das Cmdlet wird nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-239">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="feb2e-240">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="feb2e-240">CommonParameters</span></span>
+
+<span data-ttu-id="feb2e-241">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="feb2e-241">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="feb2e-242">Weitere Informationen findest du unter [about_CommonParameters](./About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="feb2e-242">For more information, see [about_CommonParameters](./About/about_CommonParameters.md).</span></span>
+
+## <span data-ttu-id="feb2e-243">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="feb2e-243">INPUTS</span></span>
+
+### <span data-ttu-id="feb2e-244">System. Management. Automation. Runspaces. PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-244">System.Management.Automation.Runspaces.PSSession</span></span>
+
+<span data-ttu-id="feb2e-245">Sie können eine Sitzung an die Pipeline übergeben `Disconnect-PSSession` .</span><span class="sxs-lookup"><span data-stu-id="feb2e-245">You can pipe a session to `Disconnect-PSSession`.</span></span>
+
+## <span data-ttu-id="feb2e-246">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="feb2e-246">OUTPUTS</span></span>
+
+### <span data-ttu-id="feb2e-247">System. Management. Automation. Runspaces. PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-247">System.Management.Automation.Runspaces.PSSession</span></span>
+
+<span data-ttu-id="feb2e-248">`Disconnect-PSSession` Gibt ein-Objekt zurück, das die getrennte Sitzung darstellt.</span><span class="sxs-lookup"><span data-stu-id="feb2e-248">`Disconnect-PSSession` returns an object that represents the session that it disconnected.</span></span>
+
+## <span data-ttu-id="feb2e-249">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="feb2e-249">NOTES</span></span>
+
+<span data-ttu-id="feb2e-250">Dieses Cmdlet ist nur auf Windows-Plattformen verfügbar.</span><span class="sxs-lookup"><span data-stu-id="feb2e-250">This cmdlet is only available on Windows platforms.</span></span>
+
+- <span data-ttu-id="feb2e-251">Das- `Disconnect-PSSession` Cmdlet funktioniert nur, wenn auf dem lokalen Computer und dem Remote Computer PowerShell 3,0 oder höher ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="feb2e-251">The `Disconnect-PSSession` cmdlet works only when the local and remote computers are running PowerShell 3.0 or later.</span></span>
+- <span data-ttu-id="feb2e-252">Wenn Sie das `Disconnect-PSSession` Cmdlet in einer getrennten Sitzung verwenden, hat der Befehl keine Auswirkungen auf die Sitzung und generiert keine Fehler.</span><span class="sxs-lookup"><span data-stu-id="feb2e-252">If you use the `Disconnect-PSSession` cmdlet on a disconnected session, the command has no effect on the session and it does not generate errors.</span></span>
+- <span data-ttu-id="feb2e-253">Die Verbindung getrennter Loopbacksitzungen mit interaktiven Sicherheitstoken (die mit dem **EnableNetworkAccess**-Parameter erstellt werden) kann nur von dem Computer wiederhergestellt werden, auf dem die Sitzung erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="feb2e-253">Disconnected loopback sessions with interactive security tokens (those created with the **EnableNetworkAccess** parameter) can be reconnected only from the computer on which the session was created.</span></span> <span data-ttu-id="feb2e-254">Diese Einschränkung schützt den Computer vor böswilligem Zugriff.</span><span class="sxs-lookup"><span data-stu-id="feb2e-254">This restriction protects the computer from malicious access.</span></span>
+- <span data-ttu-id="feb2e-255">Wenn Sie eine PSSession trennen, nimmt sie den Sitzungszustand **Disconnected** und die Verfügbarkeit **None** an.</span><span class="sxs-lookup"><span data-stu-id="feb2e-255">When you disconnect a PSSession, the session state is **Disconnected** and the availability is **None**.</span></span>
+
+  <span data-ttu-id="feb2e-256">Der Wert der **State** Eigenschaft bezieht sich auf die aktuelle Sitzung.</span><span class="sxs-lookup"><span data-stu-id="feb2e-256">The value of the **State** property is relative to the current session.</span></span> <span data-ttu-id="feb2e-257">Folglich bedeutet der Wert **Disconnected**, dass die PSSession nicht mit der aktuellen Sitzung verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="feb2e-257">Therefore, a value of **Disconnected** means that the PSSession is not connected to the current session.</span></span> <span data-ttu-id="feb2e-258">Er bedeutet jedoch nicht, dass die PSSession von allen Sitzungen getrennt ist.</span><span class="sxs-lookup"><span data-stu-id="feb2e-258">However, it does not mean that the PSSession is disconnected from all sessions.</span></span> <span data-ttu-id="feb2e-259">Sie kann mit einer anderen Sitzung verbunden sein.</span><span class="sxs-lookup"><span data-stu-id="feb2e-259">It might be connected to a different session.</span></span> <span data-ttu-id="feb2e-260">Um festzustellen, ob Sie eine Sitzungsverbindung herstellen bzw. wiederherstellen können, verwenden Sie die **Availability**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="feb2e-260">To determine whether you can connect or reconnect to the session, use the **Availability** property.</span></span>
+
+  <span data-ttu-id="feb2e-261">Ein **Availability**-Wert von **None** gibt an, dass eine Verbindung mit der Sitzung hergestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="feb2e-261">An **Availability** value of **None** indicates that you can connect to the session.</span></span> <span data-ttu-id="feb2e-262">Der Wert **Busy** gibt an, dass Sie keine Verbindung mit der PSSession herstellen können, weil sie mit einer anderen Sitzung verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="feb2e-262">A value of **Busy** indicates that you cannot connect to the PSSession because it is connected to another session.</span></span>
+
+  <span data-ttu-id="feb2e-263">Weitere Informationen zu den Werten der **State** -Eigenschaft von Sitzungen finden Sie unter [runspacestate-Enumeration](/dotnet/api/system.management.automation.runspaces.runspacestate).</span><span class="sxs-lookup"><span data-stu-id="feb2e-263">For more information about the values of the **State** property of sessions, see [RunspaceState Enumeration](/dotnet/api/system.management.automation.runspaces.runspacestate).</span></span>
+
+  <span data-ttu-id="feb2e-264">Weitere Informationen zu den Werten der **Availability** -Eigenschaft von Sitzungen finden Sie unter [runspaceavailability-Enumeration](/dotnet/api/system.management.automation.runspaces.runspaceavailability).</span><span class="sxs-lookup"><span data-stu-id="feb2e-264">For more information about the values of the **Availability** property of sessions, see [RunspaceAvailability Enumeration](/dotnet/api/system.management.automation.runspaces.runspaceavailability).</span></span>
+
+## <span data-ttu-id="feb2e-265">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="feb2e-265">RELATED LINKS</span></span>
+
+[<span data-ttu-id="feb2e-266">Connect-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-266">Connect-PSSession</span></span>](Connect-PSSession.md)
+
+[<span data-ttu-id="feb2e-267">Enter-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-267">Enter-PSSession</span></span>](Enter-PSSession.md)
+
+[<span data-ttu-id="feb2e-268">Exit-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-268">Exit-PSSession</span></span>](Exit-PSSession.md)
+
+[<span data-ttu-id="feb2e-269">Get-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-269">Get-PSSession</span></span>](Get-PSSession.md)
+
+[<span data-ttu-id="feb2e-270">Get-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="feb2e-270">Get-PSSessionConfiguration</span></span>](Get-PSSessionConfiguration.md)
+
+[<span data-ttu-id="feb2e-271">New-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-271">New-PSSession</span></span>](New-PSSession.md)
+
+[<span data-ttu-id="feb2e-272">New-PSSessionOption</span><span class="sxs-lookup"><span data-stu-id="feb2e-272">New-PSSessionOption</span></span>](New-PSSessionOption.md)
+
+[<span data-ttu-id="feb2e-273">New-PSTransportOption</span><span class="sxs-lookup"><span data-stu-id="feb2e-273">New-PSTransportOption</span></span>](New-PSTransportOption.md)
+
+[<span data-ttu-id="feb2e-274">Receive-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-274">Receive-PSSession</span></span>](Receive-PSSession.md)
+
+[<span data-ttu-id="feb2e-275">Register-PSSessionConfiguration</span><span class="sxs-lookup"><span data-stu-id="feb2e-275">Register-PSSessionConfiguration</span></span>](Register-PSSessionConfiguration.md)
+
+[<span data-ttu-id="feb2e-276">Remove-PSSession</span><span class="sxs-lookup"><span data-stu-id="feb2e-276">Remove-PSSession</span></span>](Remove-PSSession.md)
+
+[<span data-ttu-id="feb2e-277">about_PSSessions</span><span class="sxs-lookup"><span data-stu-id="feb2e-277">about_PSSessions</span></span>](About/about_PSSessions.md)
+
+[<span data-ttu-id="feb2e-278">about_Remote</span><span class="sxs-lookup"><span data-stu-id="feb2e-278">about_Remote</span></span>](About/about_Remote.md)
+
+[<span data-ttu-id="feb2e-279">about_Remote_Disconnected_Sessions</span><span class="sxs-lookup"><span data-stu-id="feb2e-279">about_Remote_Disconnected_Sessions</span></span>](About/about_Remote_Disconnected_Sessions.md)
