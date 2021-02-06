@@ -1,30 +1,33 @@
 ---
 title: Übermitteln von Pull Requests
 description: In diesem Artikel wird erläutert, wie Pull Requests an das PowerShell-Docs-Team übermittelt werden.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8b392a36c9469b83cf4f088c1799720a091434b4
-ms.sourcegitcommit: 0907b8c6322d2c7c61b17f8168d53452c8964b41
-ms.translationtype: HT
+ms.openlocfilehash: 1a21c25e19189aec4f48ad034147b02f4f804f9d
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87782649"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99603911"
 ---
 # <a name="how-to-submit-pull-requests"></a>Übermitteln von Pull Requests
 
-Wenn Sie inhaltliche Änderungen vornehmen möchten, übermitteln Sie einen Pull Request (PR) aus Ihrer Fork. Eine Pull Request muss überprüft werden, bevor er gemergt werden kann. Um optimale Ergebnisse zu erzielen, überprüfen Sie die [Checkliste für die Bearbeitung](editorial-checklist.md), bevor Sie Ihren Pull Request einreichen.
+Wenn Sie inhaltliche Änderungen vornehmen möchten, übermitteln Sie einen Pull Request (PR) aus Ihrer Fork. Eine Pull Request muss überprüft werden, bevor Sie zusammengeführt werden kann. Um optimale Ergebnisse zu erzielen, überprüfen Sie die [Checkliste für die Bearbeitung](editorial-checklist.md), bevor Sie Ihren Pull Request einreichen.
 
-## <a name="target-the-correct-branch"></a>Abzielen auf die richtige Branch
+## <a name="using-git-branches"></a>Verwenden von git-branches
 
-Alle Pull Requests müssen den Branch `staging` als Ziel haben. Änderungen dürfen auf keinen Fall an den Branch `live` übermittelt werden. Änderungen, die im Branch `staging` vorgenommen werden, werden in den Branch `live` gemergt, wobei alle Änderungen an `live` überschrieben werden.
+Der standardbranch für PowerShell-Docs ist die `staging` Verzweigung. Änderungen, die an arbeitsbranches vorgenommen werden, werden in der `staging` Verzweigung zusammengeführt, bevor Sie veröffentlicht werden. Die `staging` Verzweigung wird `live` alle Wochentage um 3:00 Uhr (Pacific Time) in der Verzweigung zusammengeführt. Der `live` Branch enthält den Inhalt, der in docs.Microsoft.com veröffentlicht wird.
 
-Wenn Sie eine Änderung einreichen, die nur für eine unveröffentlichte Version von PowerShell gilt, suchen Sie nach einem Releasebranch für diese Version. Ihr PR muss auf den Releasebranch abzielen. Releasebranches weisen das folgende Namensmuster auf: `release-<version>`.
+Erstellen Sie vor dem Starten von Änderungen einen arbeitbranch in Ihrer lokalen Kopie des PowerShell-Docs Repository. Wenn Sie lokal arbeiten, achten Sie darauf, das lokale Repository zu synchronisieren, bevor Sie den arbeitsbranch erstellen. Der arbeitbranch sollte aus einer Update-to-date-Kopie der `staging` Verzweigung erstellt werden.
+
+Alle Pull Requests müssen den Branch `staging` als Ziel haben. Senden Sie keine Änderungen an die `live` Verzweigung.
+Änderungen, die im Branch `staging` vorgenommen werden, werden in den Branch `live` gemergt, wobei alle Änderungen an `live` überschrieben werden.
 
 ## <a name="make-the-pull-request-process-work-better-for-everyone"></a>Verbessern des Pull Request-Prozesses für alle Beteiligten
 
 Je einfacher und zielgerichteter Sie Ihren PR gestalten, desto schneller kann er überprüft und gemergt werden.
 
-### <a name="avoid-branches-that-update-large-numbers-of-files-or-contain-unrelated-changes"></a>Vermeiden von Branches, die eine große Anzahl von Dateien aktualisieren oder unzusammenhängende Änderungen enthalten
+### <a name="avoid-pull-requests-that-update-large-numbers-of-files-or-contain-unrelated-changes"></a>Vermeiden von Pull Requests, die eine große Anzahl von Dateien aktualisieren oder nicht verknüpfte Änderungen enthalten
 
 Vermeiden Sie das Erstellen von PRs mit unzusammenhängenden Änderungen. Trennen Sie kleinere Updates bestehender Artikel von neuen Artikeln oder größeren Neufassungen. Arbeiten Sie an diesen Änderungen in separaten Bearbeitungsbranches.
 
@@ -32,31 +35,18 @@ Bei Massenänderungen werden PRs mit einer großen Anzahl geänderter Dateien er
 
 ### <a name="renaming-or-deleting-files"></a>Umbenennen oder Löschen von Dateien
 
-Wenn Sie Dateien umbenennen oder löschen, muss dem PR ein Issue zugeordnet sein. In diesem Issue muss die Notwendigkeit des Umbenennens oder Löschens der Dateien diskutiert werden.
+Beim Umbenennen oder Löschen von Dateien muss ein Problem mit dem PR bestehen. In diesem Issue muss die Notwendigkeit des Umbenennens oder Löschens der Dateien diskutiert werden.
 
-Vermeiden Sie die Vermischung von Inhaltsergänzungen oder -änderungen mit Dateiumbenennungen und -löschungen. Dateien, die umbenannt oder gelöscht werden, müssen der Masterumleitungsdatei hinzugefügt werden. Nach Möglichkeit sollten Sie auch alle Dateien aktualisieren, die mit dem umbenannten oder gelöschten Inhalt verknüpft sind. Dazu zählen auch Inhaltsverzeichnisdateien.
+Vermeiden Sie die Vermischung von Inhaltsergänzungen oder -änderungen mit Dateiumbenennungen und -löschungen. Alle Dateien, die umbenannt oder gelöscht werden, müssen der globalen Umleitungs Datei hinzugefügt werden. Aktualisieren Sie nach Möglichkeit alle Dateien, die mit dem umbenannten oder gelöschten Inhalt verknüpft sind, einschließlich aller Inhaltsverzeichnis Dateien.
 
 ## <a name="docs-pr-validation-service"></a>Validierungsdienst für auf die Dokumentation bezogene PRs
 
-Dieser Dienst ist eine GitHub-App, die Validierungsregeln auf die Dateien in einem PR anwendet. Sie müssen alle vom Validierungsdienst gemeldeten Fehler oder Warnungen (siehe Ausnahmen) beseitigen.
-
-Die folgenden Warnungen können ignoriert werden:
-
-```
-Can't find service name for `<version>/<modulepath>/About/About.md`
-```
-
-```
-Metadata with following name(s) are not allowed to be set in Yaml header, or as file level
-metadata in docfx.json, or as global metadata in docfx.json: `locale`. They are generated by
-Docs platform, so the values set in these 3 places will be ignored. Please remove them from all
-3 places to resolve the warning.
-```
+Der Validierungs Dienst von docs PR ist eine GitHub-APP, die Validierungsregeln für Ihre Änderungen ausführt. Sie müssen alle Fehler oder Warnungen beheben, die vom Validierungs Dienst gemeldet werden.
 
 Sie erkennen das folgende Verhalten:
 
 1. Sie übermitteln einen PR.
-1. Im GitHub-Kommentar, der den Status Ihres Pull Requests anzeigt, sehen Sie den für das Repository aktivierten Zustand „Überprüfungen“. Beachten Sie, dass in diesem Beispiel zwei Überprüfungen aktiviert sind: „Commit Validation“ und „OpenPublishing.Build“:
+1. Im GitHub-Kommentar, der den Status Ihres Pull Requests anzeigt, sehen Sie den für das Repository aktivierten Zustand „Überprüfungen“. In diesem Beispiel sind zwei Überprüfungen aktiviert: "Commit Validation" und "openpublishing. Build":
 
    ![Überprüfungszustand: einige Überprüfungen sind fehlgeschlagen](media/pull-requests/validation-failed.png)
 
@@ -71,7 +61,7 @@ Sie erkennen das folgende Verhalten:
 > [!NOTE]
 > Wenn Sie ein externer Mitwirkender (kein Mitarbeiter von Microsoft) sind, haben Sie keinen Zugriff auf die detaillierten Buildberichte oder Vorschaulinks.
 
-Wenn der PR von einem Mitglied des PowerShell-Docs-Teams überprüft wird, werden Sie möglicherweise aufgefordert, Änderungen vorzunehmen oder Probleme zu beheben, die im Validierungsbericht markiert sind. Das PowerShell-Docs-Team kann Ihnen helfen zu verstehen, wie diese Probleme für künftige Einreichungen behoben und vermieden werden können.
+Wenn der PR überprüft wird, werden Sie möglicherweise aufgefordert, Änderungen vorzunehmen oder Validierungs Warnmeldungen zu beheben. Das PowerShell-Docs Team kann Ihnen helfen, Validierungs Fehler und redaktionelle Anforderungen zu verstehen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -80,3 +70,6 @@ Wenn der PR von einem Mitglied des PowerShell-Docs-Teams überprüft wird, werde
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 [Verwalten von Pull Requests](managing-pull-requests.md)
+
+<!--link refs-->
+[fork]: /contribute/get-started-setup-local#fork-the-repository
