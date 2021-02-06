@@ -1,16 +1,15 @@
 ---
 title: Formatierung, Aliase, Anbieter, Vergleich
 ms.date: 06/02/2020
-ms.topic: guide
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
 description: In diesem Kapitel werden die Konzepte von Ausgabeformatierung, Befehlsaliasen, Anbietern und Vergleichsvorgängen vorgestellt.
-ms.openlocfilehash: efe70d2d220f8451e781603b6000c3553dda910c
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
-ms.translationtype: HT
+ms.openlocfilehash: 5573ca58601af0c6af15736b772a9792d8d77a79
+ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92501608"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "99603689"
 ---
 # <a name="chapter-5---formatting-aliases-providers-comparison"></a>Kapitel 5: Formatierung, Aliase, Anbieter, Vergleich
 
@@ -575,7 +574,7 @@ Beachten Sie, dass das Wort „Saturday“ im vorherigen Beispiel nicht ersetzt 
 SQL Sat - Baton Rouge
 ```
 
-Gehen Sie bei der Verwendung von Methoden zum Transformieren von Daten vorsichtig vor, da Sie auf unvorhergesehene Probleme stoßen können, z. B. das Nichtbestehen des _Turkey-Tests_ . Ein Beispiel finden Sie in dem Blogartikel [Verwenden von Pester zum Testen von PowerShell-Code mit anderen Kulturen][]. Meine Empfehlung ist es, einen Operator anstelle einer Methode zu verwenden, wenn dies möglich ist, um diese Art von Problemen zu vermeiden.
+Gehen Sie bei der Verwendung von Methoden zum Transformieren von Daten vorsichtig vor, da Sie auf unvorhergesehene Probleme stoßen können, z. B. das Nichtbestehen des _Turkey-Tests_. Ein Beispiel finden Sie in dem Blogartikel [Verwenden von Pester zum Testen von PowerShell-Code mit anderen Kulturen][]. Meine Empfehlung ist es, einen Operator anstelle einer Methode zu verwenden, wenn dies möglich ist, um diese Art von Problemen zu vermeiden.
 
 Obwohl die Vergleichsoperatoren wie in den vorherigen Beispielen gezeigt verwendet werden können, verwende ich sie doch in der Regel mit dem Cmdlet `Where-Object`, um eine Art von Filterung durchzuführen.
 
