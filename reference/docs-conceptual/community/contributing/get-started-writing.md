@@ -1,14 +1,14 @@
 ---
 title: Einstieg in die Mitwirkung an PowerShell-Dokumentation
 description: Dieser Artikel bietet einen Überblick über die ersten Schritte als Mitwirkender an der PowerShell-Dokumentation.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 989605f21685decda5f916298a05ec7f5600e575
-ms.sourcegitcommit: 173556307d45d88de31086ce776770547eece64c
-ms.translationtype: HT
+ms.openlocfilehash: ddcbf79de1ab05b901ce1abd67f65b2524ed164d
+ms.sourcegitcommit: 61765d08321623743dc5db5367160f6982fe7857
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83560677"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "99599175"
 ---
 # <a name="get-started-contributing-to-powershell-documentation"></a>Einstieg in die Mitwirkung an PowerShell-Dokumentation
 
@@ -16,54 +16,66 @@ Dieser Artikel bietet einen Überblick über die ersten Schritte als Mitwirkende
 
 ## <a name="powershell-docs-structure"></a>Struktur von „PowerShell-Docs“
 
-Das [Repository „PowerShell-Docs“][psdocs] ist in zwei Inhaltsgruppen unterteilt. Git-Branches werden verwendet, um zu steuern, wie und wann Dokumentation veröffentlicht wird.
+Das [PowerShell-docs-Repository][psdocs] ist in zwei Inhalts Gruppen unterteilt: Referenz und konzeptionell.
 
 ### <a name="reference-content"></a>Referenzinhalt
 
-Der Referenzinhalt ist die PowerShell-Cmdlet-Referenz für die Cmdlets von PowerShell.
-Die [Referenz][ref] wird in Versionsordnern (5.1, 6, 7.0 und 7.1) erfasst. Dieser Inhalt enthält nur die Cmdlet-Referenz für die von PowerShell gebotenen Module. Dieser Inhalt dient auch zum Erstellen der vom Cmdlet `Get-Help` angezeigten Hilfeinformationen.
-
-> [!NOTE]
-> Das Inhaltsverzeichnis für Referenzinhalte wird vom Veröffentlichungssystem automatisch generiert. Sie müssen das Inhaltsverzeichnis nicht aktualisieren.
+Der Referenz Inhalt ist die PowerShell-Cmdlet-Referenz für die Cmdlets, die in PowerShell ausgeliefert werden.
+Der [Verweis][ref] wird in den Ordner Versionen (5,1, 7,0, 7,1 und 7,2) gesammelt. Dieser Inhalt enthält nur die Cmdlet-Referenz für die Module, die mit PowerShell ausgeliefert werden. Dieser Inhalt wird auch zum Erstellen von Hilfe Informationen verwendet, die vom `Get-Help` Cmdlet angezeigt werden.
 
 ### <a name="conceptual-content"></a>Konzeptionelle Inhalte
 
-Die konzeptionelle Dokumentation umfasst folgenden Inhalt:
+Die konzeptionelle Dokumentation enthält den folgenden Inhalt:
 
 - Versionshinweise
-- Einrichtungsanweisungen
-- Beispielskripts und Anleitungen
+- Setupanweisungen
+- Beispiel Skripts und Anleitungen
 - DSC-Dokumentation
 - SDK-Dokumentation
 
-Die [konzeptionelle Dokumentation][conceptual] ist nicht versionsbezogen organisiert. Alle Artikel werden für jede Version von PowerShell angezeigt. Wir arbeiten an der Erstellung versionsspezifischer Artikel. Sobald dieses Feature in unserer Dokumentation verfügbar ist, wird dieser Leitfaden mit den entsprechenden Informationen aktualisiert.
+Die [konzeptionelle Dokumentation][conceptual] ist nicht nach Version organisiert. Alle Artikel werden für jede Version von PowerShell angezeigt. Wir arbeiten daran, versionsspezifische Artikel zu erstellen. Wenn dieses Feature in unserer Dokumentation verfügbar ist, wird dieses Handbuch mit den entsprechenden Informationen aktualisiert.
 
 > [!NOTE]
-> Jedes Mal, wenn ein konzeptioneller Artikel hinzugefügt, entfernt oder umbenannt wird, muss das Inhaltsverzeichnis aktualisiert und in den Pull Request aufgenommen werden.
+> Jedes Mal, wenn ein konzeptioneller Artikel hinzugefügt, entfernt oder umbenannt wird, muss das Inhaltsverzeichnis aktualisiert und in das Pull Request eingeschlossen werden.
 
-## <a name="using-git-branches"></a>Verwenden von Git-Branches
+## <a name="creating-new-articles"></a>Erstellen neuer Artikel
 
-Der Standardbranch für PowerShell-Docs ist `staging`. Änderungen, die in Bearbeitungsbranches vorgenommen werden, werden vor der Veröffentlichung im Branch `staging` zusammengeführt. Ca. einmal pro Woche wird der Branch `staging` in den Branch `live` gemergt. Der Branch `live` enthält den Inhalt, der auf docs.microsoft.com veröffentlicht wird. Änderungen dürfen auf keinen Fall im Branch `live` erfolgen.
+Für jedes neue Dokument, das Sie mitwirken möchten, muss ein GitHub-Problem erstellt werden. Überprüfen Sie, ob vorhandene Probleme vorhanden sind. Zugewiesene Probleme gelten als `in progress` . Wenn Sie an einem Problem zusammenarbeiten möchten, wenden Sie sich an die Person, die dem Problem zugewiesen ist.
 
-Wenn Sie eine Dokumentationsänderung einreichen, die nur für eine unveröffentlichte Version von PowerShell gilt, prüfen Sie, ob es einen Releasebranch für diese Version gibt. Alle Änderungen, die sich auf eine bestimmte, künftige Version beziehen, sollten auf den Releasebranch abzielen. Releasebranches weisen das folgende Namensmuster auf: `release-<version>`.
+Erstellen Sie, ähnlich wie beim PowerShell- [RFC-Prozess][rfc], ein Problem, bevor Sie den Inhalt schreiben. Das Problem stellt sicher, dass Sie keine Zeit und keinen Aufwand für die Arbeit verschwenden, die vom PowerShell-Docs Team abgelehnt wird. Das Problem ermöglicht es uns, sich über den Umfang des Inhalts und den Speicherort der PowerShell-Dokumentation zu informieren. Alle Artikel müssen im Inhaltsverzeichnis (Inhaltsverzeichnis) enthalten sein. Der vorgeschlagene Speicherort sollte in der Problem Diskussion enthalten sein.
 
-Erstellen Sie vor dem Einleiten von Änderungen einen Bearbeitungsbranch in Ihrer lokalen Kopie des Repositorys „PowerShell-Docs“. Dies muss ein [Klon Ihrer Fork][fork] sein. Stellen Sie sicher, dass Sie Ihr lokales Repository synchronisieren, bevor Sie Ihren Bearbeitungsbranch erstellen. Der Bearbeitungsbranch muss aus einer aktualisierten Kopie des Branches `staging` oder `release` erstellt werden.
+> [!NOTE]
+> Das Inhaltsverzeichnis für Referenz Inhalte wird vom Veröffentlichungs System automatisch generiert. Sie müssen das Inhaltsverzeichnis nicht aktualisieren.
 
-Nehmen Sie die einzureichenden Änderungen im Anschluss an den Prozess im Abschnitt [Durchführen von Änderungen][making-changes] im zentralen Leitfaden für Mitwirkende vor.
+## <a name="updating-existing-articles"></a>Aktualisieren vorhandener Artikel
 
-### <a name="creating-new-articles"></a>Erstellen neuer Artikel
+Cmdlet-Referenz Artikel werden ggf. in allen Versionen von PowerShell dupliziert, die in diesem Repository verwaltet werden. Wenn Sie ein Problem über eine Cmdlet-Referenz oder einen `About_` Artikel melden, müssen Sie angeben, welche Versionen von dem Problem betroffen sind. Die Issue-Vorlage in GitHub enthält eine Checkliste der Versionen. Verwenden Sie die Kontrollkästchen, um anzugeben, welche Versionen des Inhalts betroffen sind.
 
-Für jedes neue Dokument, an dem Sie mitwirken möchten, muss ein GitHub-Issue erstellt werden. Prüfen Sie auf bestehende Issues, um sicherzustellen, dass es nicht zu Überschneidungen kommt. Issues, die jemandem zugewiesen werden, gelten als „in Bearbeitung“. Wenn Sie an einem Issue mitarbeiten möchten, wenden Sie sich an die für das Issue zuständige Person.
+Überprüfen Sie die gesamte Version des Artikels, um festzustellen, ob die gleiche Änderung in den anderen Versionen erforderlich ist. Wenden Sie die entsprechenden Änderungen auf jede Version der Datei an.
 
-Ähnlich wie beim [RFC-Prozess][rfc] für PowerShell stellt das Erstellen eines Issues vor dem Schreiben des Inhalts sicher, dass Sie nicht viel Zeit und Mühe für etwas aufwenden, das vom PowerShell-Docs-Team abgelehnt wird. Dies ermöglicht es uns auch, uns mit Ihnen über den Umfang des Inhalts zu beraten und darüber, wo er am besten in die PowerShell-Dokumentation passt.
+## <a name="localized-content"></a>Lokalisierter Inhalt
 
-### <a name="updating-existing-articles"></a>Aktualisieren vorhandener Artikel
+Die PowerShell-Dokumentation ist auf Englisch geschrieben und in 17 andere Sprachen übersetzt. Der englische Inhalt wird im GitHub-Repository mit dem Namen gespeichert `MicrosoftDocs/PowerShell-Docs` . Der lokalisierte Inhalt wird in einem separaten Repository für jede Sprache gespeichert. Die Repository verwenden denselben basename, aber fügen den Namen des Gebiets Schemas am Ende hinzu. Beispielsweise `MicrosoftDocs/PowerShell-Docs.de-de` enthält den Inhalt, der in Deutsch übersetzt wurde.
 
-Sofern zutreffend, werden Cmdlet-Referenzartikel in allen Versionen von PowerShell dupliziert. Wenn Sie ein Issue mit einer Cmdlet-Referenz oder einem `About_`-Artikel melden, müssen Sie angeben, welche Versionen vom Issue betroffen sind. Die Issuevorlage in GitHub enthält eine Checkliste mit den Versionen. Aktivieren Sie die Kontrollkästchen, um anzugeben, welche Versionen des Inhalts betroffen sind. Wenn Sie eine Änderung an einem Artikel zu einem Issue einreichen, das mehrere Versionen des Inhalts betrifft, müssen Sie die entsprechende Änderung auf jede Version der Datei anwenden.
+Im Allgemeinen sollten Probleme und Änderungen an das englische Repository übermittelt werden. Alle Übersetzungen beginnen zuerst mit dem englischen Inhalt. Wir verwenden sowohl die Übersetzung von Menschen als auch Maschinelles
+
+| Übersetzungsmethode  |                              Sprachen                               |
+| ------------------- | -------------------------------------------------------------------- |
+| Menschliche Übersetzung   | de-de, es-es, fr-FR, IT-IT, ja-JP, ko-kr, pt-br, ru-ru, zh-cn, zh-tw |
+| Maschinelle Übersetzung | CS-CZ, HU-HU, nl-nl, PL-PL, pt-pt, SV-SE, TR-TR                      |
+
+Der von der maschinellen Übersetzung übersetzte Inhalt führt möglicherweise nicht immer zu richtigen Wort Auswahl und Grammatik. Wenn Sie einen Fehler in der Übersetzung für eine beliebige Sprache und nicht in den technischen Details des Artikels finden, öffnen Sie ein Problem im lokalisierten Repository. Erläutern Sie, warum die Übersetzung falsch ist. Unser Lokalisierungsteam prüft diese Probleme und reagiert darauf.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Siehe [Übermitteln eines Pull Requests](pull-requests.md).
+Es gibt zwei gängige Methoden zum Übermitteln von Änderungen in GitHub. Beide Methoden werden im Leitfaden für den zentralen Mitwirkenden beschrieben:
+
+1. Sie können in der GitHub-Webschnittstelle [schnelle Änderungen an vorhandenen Dokumenten](/contribute/#quick-edits-to-existing-documents) vornehmen.
+1. Verwenden Sie den [vollständigen GitHub-Workflow][making-changes] zum Hinzufügen neuer Artikel, zum Aktualisieren mehrerer Dateien oder zu anderen großen Änderungen.
+
+Vor dem Starten von Änderungen sollten Sie eine Verzweigung des PowerShell-Docs-Repository erstellen. Die Änderungen sollten in einer funktionierenden Verzweigung in Ihrer Kopie der PowerShell-Dokumente vorgenommen werden. Wenn Sie die Methode für die **schnelle Bearbeitung** in GitHub verwenden, werden diese Schritte für Sie erledigt. Wenn Sie den **vollständigen GitHub-Workflow** verwenden, müssen Sie für die [lokale][fork]Ausführung eingerichtet sein.
+
+Beide Methoden enden mit der Erstellung eines Pull Requests (PR). Weitere Informationen und bewährte Methoden finden Sie unter [Senden einer Pull Request](pull-requests.md) .
 
 <!--link refs-->
 [conceptual]: https://github.com/MicrosoftDocs/PowerShell-Docs/tree/staging/reference/docs-conceptual
