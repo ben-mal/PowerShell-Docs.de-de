@@ -1,22 +1,22 @@
 ---
 title: Verwalten von Pull Requests
 description: In diesem Artikel wird erläutert, wie das PowerShell-Docs-Team Pull Requests verwaltet.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: af5280e91aa3744b6172dc3555df6989cb0ce1a2
-ms.sourcegitcommit: b0488ca6557501184f20c8343b0ed5147b09e3fe
-ms.translationtype: HT
+ms.openlocfilehash: 7050db6ad30963d0a75b2a083daace494d703027
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158172"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99601894"
 ---
 # <a name="managing-pull-requests"></a>Verwalten von Pull Requests
 
-In diesem Artikel wird beschrieben, wie Pull Requests im Repository „PowerShell-Docs“ verwaltet werden. Dieser Artikel ist als Arbeitshilfe für Mitglieder des PowerShell-Docs-Teams gedacht. Er wird hier veröffentlicht, um den Prozess für unsere externen Mitwirkenden transparent zu gestalten.
+In diesem Artikel wird beschrieben, wie Pull Requests im Repository „PowerShell-Docs“ verwaltet werden. Dieser Artikel ist als Arbeitshilfe für Mitglieder des PowerShell-Docs-Teams gedacht. Es wird hier veröffentlicht, um Prozesstransparenz für unsere öffentlichen Mitwirkenden bereitzustellen.
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
-- Die Person, die den PR einreicht, darf den PR nicht ohne Peer Review mergen.
+- Die Person, die den PR absendet, sollte den PR nicht ohne Peer Review zusammenführen.
 - Weisen Sie den Peer Reviewer beim Einreichen des PR zu. Eine frühzeitige Zuweisung ermöglicht es dem Reviewer, früher mit Anmerkungen zur Bearbeitung zu antworten.
 - Verwenden Sie Kommentare, um die Art der Änderung oder des beantragten Reviews zu beschreiben. Vergessen Sie nicht, den Reviewer zu @mention. Wenn die Änderung z. B. geringfügig ist und Sie kein vollständiges technisches Review benötigen, erklären Sie dies in einem Kommentar.
 
@@ -43,7 +43,7 @@ Eine umfassendere Liste finden Sie in der [Checkliste für die Bearbeitung](edit
 - Rendern der Vorschau prüfen
 - Metadaten prüfen: ms.date, ms.assetid entfernen, Pflichtfelder sicherstellen
 - Richtigkeit des Markdowns überprüfen
-  - Informationen zum Formatieren bestimmter Inhalte finden Sie im Styleguide.
+  - Weitere Informationen finden Sie im Styleguide für inhaltsspezifische Formatierungs Regeln.
 - Organisieren Sie Beispiele wie folgt neu:
   - Einleitungssätze
   - Code und Ausgabe
@@ -60,7 +60,7 @@ Eine umfassendere Liste finden Sie in der [Checkliste für die Bearbeitung](edit
 
 ## <a name="branch-merge-process"></a>Mergeprozess von Branches
 
-Der Stagingbranch ist der einzige Branch, in den live gemergt werden darf. Für Merges aus kurzlebigen (funktionierenden) Branches muss ein Squash ausgeführt werden.
+Der `staging` Branch ist der einzige Branch, der in zusammengeführt wird `live` . Für Merges aus kurzlebigen (funktionierenden) Branches muss ein Squash ausgeführt werden.
 
 | *Mergen aus/in*  | *release-branch* | *staging*        | *live*      |
 | ---------------- |:----------------:|:----------------:|:-----------:|
@@ -97,9 +97,9 @@ Wenn ein PR gemergt wird, wird der HEAD des Zielbranches geändert. Alle offenen
 
 ## <a name="publishing-to-live"></a>Veröffentlichen auf der aktiven Website
 
-In regelmäßigen Abständen müssen die im Branch `staging` gesammelten Änderungen auf der aktiven Website veröffentlicht werden. Dies erfordert das Mergen von Branch `staging` in Branch `live`.
+In regelmäßigen Abständen müssen die im Branch `staging` gesammelten Änderungen auf der aktiven Website veröffentlicht werden.
 
-- Der Branch `staging` sollte mindestens einmal pro Woche in `live` gemergt werden.
+- Die `staging` Verzweigung wird an `live` jedem Wochentag um 3 Uhr PST zusammengeführt.
 - Der Branch `staging` sollte nach jeder signifikanten Änderung in `live` gemergt werden.
   - Änderungen an 50 oder mehr Dateien
   - Nach Mergen eines Releasebranches

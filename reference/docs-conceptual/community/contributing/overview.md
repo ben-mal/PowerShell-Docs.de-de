@@ -1,20 +1,20 @@
 ---
 title: Mitwirkung an der PowerShell-Dokumentation
 description: In diesem Artikel werden die Schritte beschrieben, die erforderlich sind, um zur PowerShell-Dokumentation beizutragen.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 255b74a75b8412ed509f6da930eb722d54233711
-ms.sourcegitcommit: 39c2a697228276d5dae39e540995fa479c2b5f39
-ms.translationtype: HT
+ms.openlocfilehash: 9fbdafa023eac80340437f30d2d6925a1a4ed3cb
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93354402"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99601688"
 ---
 # <a name="contributing-to-powershell-documentation"></a>Mitwirkung an der PowerShell-Dokumentation
 
 Vielen Dank für Ihre Unterstützung von PowerShell!
 
-Der Leitfaden für Mitwirkende ist eine Sammlung von Artikeln, in denen die Tools und Prozesse erläutert werden, die wir bei Microsoft zum Erstellen der Dokumentation verwenden. Einige dieser Leitfäden enthalten Informationen, die für alle Dokumentationssätze gelten, die auf [docs.microsoft.com][docs] veröffentlicht werden. Einige der Leitfäden sind spezifisch für die Erstellung von Dokumentation für PowerShell.
+Der Leitfaden für Mitwirkende ist eine Auflistung von Artikeln, in denen die Tools und Prozesse beschrieben werden, die zum Erstellen der Dokumentation bei Microsoft verwendet werden. Einige dieser Leitfäden enthalten Informationen, die für alle Dokumentationssätze gelten, die auf [docs.microsoft.com][docs] veröffentlicht werden. Einige der Leitfäden sind spezifisch für die Erstellung von Dokumentation für PowerShell.
 
 Die allgemeinen Artikel finden Sie in unserer zentralen [Handbuch für Mitwirkende][contribute]. Die PowerShell-spezifischen Anleitungen sind hier verfügbar.
 
@@ -24,11 +24,12 @@ Es gibt zwei Möglichkeiten zur Mitwirkung. Beide Formen sind für uns hilfreich
 
 - Das [Einreichen von Problemen][file-an-issue] hilft uns, Probleme und Lücken in unserer Dokumentation zu erkennen. Manchmal sind die Probleme schwierig zu beheben und erfordern weitere Untersuchungen und Recherchen. Der Issueprozess ermöglicht es uns, eine Unterhaltung über das Problem zu führen und eine befriedigende Lösung zu entwickeln.
 
-- Das Einreichen neuer Inhalte oder Änderungen an vorhandenen Artikeln ist ein Prozess, der eine stärkere Einbindung mit sich bringt. Die folgenden Informationen beschreiben die Tools, Prozesse und Standards für das Einreichen von Inhalten für die Dokumentation.
+- Das [Senden eines Pull Request](pull-requests.md) zum Hinzufügen oder Ändern von Inhalten ist ein ausführlichere Prozess.
+  Die folgenden Informationen beschreiben die Tools, Prozesse und Standards für das Einreichen von Inhalten für die Dokumentation.
 
 ## <a name="prepare-to-make-a-contribution"></a>Vorbereiten der Mitwirkung
 
-Für die Mitwirkung an der Dokumentation ist ein GitHub-Konto erforderlich. Verwenden Sie die folgende Checkliste, um die Tools abzurufen und ein Verständnis der Prozesse zu erwerben, die wir für Beiträge verwenden.
+Für die Mitwirkung an der Dokumentation ist ein GitHub-Konto erforderlich. Verwenden Sie die folgende Checkliste, um die Tools zu installieren und zu konfigurieren, die Sie zum Erstellen von Beiträgen benötigen
 
 1. [Registrieren Sie sich für GitHub](/contribute/get-started-setup-github)
 1. [Installieren Sie die Git- und Markdown-Tools](/contribute/get-started-setup-tools)
@@ -66,7 +67,6 @@ Lesen Sie die folgenden Dokumente:
 - [Erste Schritte mit dem Schreiben von Dokumentation](get-started-writing.md)
 - [Übermitteln eines Pull Requests](pull-requests.md)
 - [Styleguide für die PowerShell-Dokumentation](powershell-style-guide.md)
-- [Bearbeiten der Cmdlet-Referenz](editing-cmdlet-ref.md)
 
 Zusätzliche Ressourcen
 
