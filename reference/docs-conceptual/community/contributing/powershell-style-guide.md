@@ -1,33 +1,33 @@
 ---
 title: Styleguide für die PowerShell-Dokumentation
 description: Dieser Artikel enthält die Stilregeln für das Schreiben von PowerShell-Dokumentation.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 32df641f7cafa2a5bfcf1bcbf94be594aa77c7d0
-ms.sourcegitcommit: 105c69ecedfe5180d8c12e8015d667c5f1a71579
-ms.translationtype: HT
+ms.openlocfilehash: 6f23f63cffc9fed9cbbcf84539875bfaf4247732
+ms.sourcegitcommit: 61765d08321623743dc5db5367160f6982fe7857
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837442"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "99596530"
 ---
 # <a name="powershell-docs-style-guide"></a>Styleguide für die PowerShell-Dokumentation
 
-Dieser Artikel enthält die spezifischen Stilanweisungen für Inhalte der PowerShell-Dokumentation. Dies geschieht ausgehend von den in der [Übersicht](overview.md#get-started-writing-docs) beschriebenen Informationen.
+Dieser Artikel enthält die spezifischen Stilanweisungen für Inhalte der PowerShell-Dokumentation. Es basiert auf den Informationen, die in der [Übersicht](overview.md#get-started-writing-docs)beschrieben werden.
 
 ## <a name="product-terminology"></a>Produktterminologie
 
 Es gibt mehrere Varianten von PowerShell.
 
-- **PowerShell**: Dies ist die Standardvariante. Wir sehen im weiteren Verlauf PowerShell 7 und höhere Versionen als das eine echte PowerShell an.
-- **PowerShell Core-** : PowerShell basierend auf .NET Core. Die Verwendung des Begriffs **Core** sollte auf Fälle beschränkt sein, in denen die Unterscheidung von Windows PowerShell erforderlich ist.
+- **PowerShell**: Dies ist die Standardvariante. Wir sehen uns an, dass PowerShell 7 und darüber hinaus die richtige PowerShell ist.
+- **PowerShell Core-** : PowerShell basierend auf .NET Core. Die Verwendung des Begriffs " **Core** " sollte auf Fälle beschränkt werden, in denen er von Windows PowerShell unterschieden werden muss.
 - **Windows PowerShell**:- PowerShell basierend auf .NET Framework. Windows PowerShell wird nur für Windows ausgeliefert und erfordert das gesamte Framework.
 
-  Im Allgemeinen können Verweise auf „Windows PowerShell“ in der Dokumentation zu „PowerShell“ geändert werden.
-  „Windows PowerShell“ sollte verwendet werden, wenn Windows PowerShell-spezifisches Verhalten beschrieben wird.
+  Im Allgemeinen können Verweise auf "Windows PowerShell" in der-Dokumentation in _PowerShell_ geändert werden.
+  "Windows PowerShell" sollte bei der Erörterung von _Windows PowerShell_-spezifischem Verhalten verwendet werden.
 
 Verwandte Produkte
 
-- **Visual Studio Code (VS Code)** : Dies ist der kostenlose Open Source-Editor von Microsoft. Bei der ersten Erwähnung sollte der vollständige Name verwendet werden. Anschließend können Sie **VS Code** verwenden. Verwenden Sie nicht „VSCode“.
+- **Visual Studio Code (vs Code)** : Dies ist der kostenlose Open Source-Editor von Microsoft. Bei der ersten Erwähnung sollte der vollständige Name verwendet werden. Anschließend können Sie **VS Code** verwenden. Verwenden Sie "vscode" nicht.
 - **PowerShell-Erweiterung für Visual Studio Code**: Mit dieser Erweiterung wird VS Code in die bevorzugte IDE für PowerShell umgewandelt. Bei der ersten Erwähnung sollte der vollständige Name verwendet werden. Anschließend können Sie **PowerShell-Erweiterung** verwenden.
 - **Azure PowerShell**: Dies ist die Sammlung von PowerShell-Modulen, mit denen Azure-Dienste verwaltet werden.
 - **Azure PowerShell**: Dies ist die Sammlung von PowerShell-Modulen, mit denen die Hybrid Cloud-Lösung von Microsoft verwaltet wird.
@@ -42,7 +42,8 @@ Die neue CommonMark-Spezifikation ist weitaus strenger im Hinblick auf den Aufba
 
 Leerzeilen signalisieren darüber hinaus in Markdown das Ende eines Blocks. Zwischen Markdown-Blöcken unterschiedlicher Typen (z. B. zwischen einem Absatz und einer Liste oder einem Header) sollte eine einzelne Leerzeile stehen.
 
-Entfernen Sie doppelte Leerzeilen. Mehrere Leerzeilen werden in HTML als eine einzelne Leerzeile dargestellt, das Einfügen oder Vorhandensein mehrerer Leerzeilen dient also keinem Zweck. Mehrere Leerzeilen innerhalb eines Codeblocks haben zur Folge, dass der Code nicht funktioniert.
+Mehrere aufeinander folgende leere Zeilen werden als einzelne leere Zeile in HTML dargestellt. Sie dienen keinem Zweck.
+In einem Codeblock brechen aufeinander folgende leere Zeilen den Codeblock aus.
 
 Entfernen Sie zusätzliche Leerzeichen am Zeilenende.
 
@@ -57,8 +58,8 @@ Verwenden Sie nur [ATX-Überschriften][atx] (#-Formatvorlage, im Gegensatz zu Ü
 - Zwischen dem `#` und dem ersten Buchstaben des Titels muss ein einfaches Leerzeichen stehen
 - Überschriften sollten von einer einzelnen Leerzeile umgeben sein
 - Nur eine Überschrift der Ebene H1 pro Dokument
-- Überschriftebenen sollten um 1 erhöht werden. Überspringen Sie keine Ebenen
-- Verwenden Sie keine fette oder sonstige Auszeichnung in Überschriften
+- Überschriftebenen sollten um 1 erhöht werden. Ebenen nicht überspringen
+- Verwenden Sie kein Fett oder anderes Markup in Headern.
 
 ### <a name="limit-line-length-to-100-characters"></a>Begrenzen Sie die Zeilenlänge auf 100 Zeichen
 
@@ -66,44 +67,44 @@ Dies gilt für konzeptionelle Artikel und die Cmdlet-Referenz. Das Beschränken 
 
 Verwenden Sie die Erweiterung [Reflow Markdown][reflow] in Visual Studio Code, um Absätze komfortabel umzubrechen, sodass sie in die erforderliche Zeilenlänge passen.
 
-Klassische Hilfethemen (About_topics) sind auf 80 Zeichen beschränkt. Einzelheiten finden Sie unter [Bearbeiten von Referenzartikeln](./editing-cmdlet-ref.md#formatting-about_-files).
+Klassische Hilfethemen (About_topics) sind auf 80 Zeichen beschränkt. Genauere Informationen finden Sie unter [Formatieren von About_ Dateien](#formatting-about_-files).
 
 ### <a name="lists"></a>Listen
 
-Wenn Ihre Liste mehrere Sätze oder Absätze enthält, erwägen Sie eine Unterüberschrift anstelle einer Liste.
+Wenn die Liste mehrere Sätze oder Absätze enthält, sollten Sie eine untergeordnete Kopfzeile anstelle einer Liste verwenden.
 
 Eine Liste sollte von einer einzelnen Leerzeile umgeben sein.
 
 #### <a name="unordered-lists"></a>Unsortierte Listen
 
-Beenden Sie Listenelemente nicht mit einem Punkt, es sei denn, sie enthalten mehrere Sätze. Verwenden Sie das Bindestrich Zeichen (`-`) für Listenelement Aufzählungen. Dadurch wird die Verwechselung mit fettem oder kursivem Markup vermieden, für das das Sternchen [`*`] verwendet wird. Um einen Absatz oder andere Elemente unter einem Aufzählungselement einzuschließen, fügen Sie einen Zeilenumbruch ein, und richten Sie den Einzug am ersten Zeichen nach dem Aufzählungszeichen aus.
+Beenden Sie Listenelemente nicht mit einem Zeitraum, es sei denn, Sie enthalten mehrere Sätze. Verwenden Sie das Bindestrich Zeichen (`-`) für Listenelement Aufzählungen. Dadurch wird die Verwechselung mit fettem oder kursivem Markup vermieden, für das das Sternchen [`*`] verwendet wird. Um einen Absatz oder andere Elemente unter einem Aufzählungselement einzuschließen, fügen Sie einen Zeilenumbruch ein, und richten Sie den Einzug am ersten Zeichen nach dem Aufzählungszeichen aus.
 
 Beispiel:
 
 ```markdown
-This is a list that contain sub-elements under a bullet item.
+This is a list that contain child elements under a bullet item.
 
 - First bullet item
 
   Sentence explaining the first bullet.
 
-  - Sub-bullet item
+  - Child bullet item
 
-    Sentence explaining the sub-bullet.
+    Sentence explaining the child bullet.
 
 - Second bullet item
 - Third bullet item
 ```
 
-Dies ist eine Liste, die Unterelemente unter einem Aufzählungselement enthält.
+Dies ist eine Liste, die untergeordnete Elemente unter einem Aufzählungs Element enthält.
 
 - Erstes Aufzählungselement
 
   Satz zur Erläuterung des ersten Aufzählungszeichens.
 
-  - Untergeordnetes Aufzählungszeichen
+  - Aufzählungs Element
 
-    Satz zur Erläuterung des Unteraufzählungszeichens.
+    Satz, der die untergeordnete Aufzählung erläutert.
 
 - Zweites Aufzählungszeichen
 - Drittes Aufzählungszeichen
@@ -147,16 +148,16 @@ Example:
 ![Introduction](./media/overview/Introduction.png)
 ```
 
-Dabei stellt `alt text` eine kurze Beschreibung des Bilds und `<folder path>` einen relativen Pfad zum Bild dar. Alternativtext ist für Bildschirmsprachausgaben für Personen mit eingeschränktem Sehvermögen erforderlich. Er ist außerdem nützlich, falls das Bild aufgrund eines Bugs auf der Website nicht gerendert werden kann.
+Dabei stellt `alt text` eine kurze Beschreibung des Bilds und `<folder path>` einen relativen Pfad zum Bild dar. Alternativtext ist für Bildschirmsprachausgaben für Personen mit eingeschränktem Sehvermögen erforderlich.
 
-Bilder sollten in einem `media/<article-name>`-Ordner innerhalb des Ordners gespeichert werden, der den Artikel enthält.
-Bilder sollten nicht von mehreren Artikeln gemeinsam genutzt werden. Erstellen Sie einen Ordner, der mit dem Dateinamen Ihres Artikels übereinstimmt, im `media`-Ordner. Kopieren Sie die Bilder für den Artikel in diesen neuen Ordner. Wenn ein Bild von mehreren Artikeln verwendet wird, muss jeder Bildordner eine Kopie der betreffenden Bilddatei aufweisen. Diese Vorgehensweise verhindert, dass eine Änderung am Bild in einem Artikel sich auf andere Artikel auswirkt.
+Bilder sollten in einem `media/<article-name>` Ordner innerhalb des Ordners gespeichert werden, der den Artikel enthält.
+Geben Sie Bilder nicht zwischen Artikeln frei. Erstellen Sie einen Ordner, der mit dem Dateinamen Ihres Artikels im `media`-Ordner übereinstimmt. Kopieren Sie die Bilder für diesen Artikel in diesen neuen Ordner. Wenn ein Bild in mehreren Artikeln verwendet wird, muss jeder Bildordner eine Kopie dieser Bilddatei enthalten. Durch diese Vorgehensweise wird verhindert, dass eine Änderung an einem Bild in einem Artikel sich auf einen anderen Artikel auswirkt.
 
-Die folgenden Bilddateitypen werden unterstützt: `*.png`, `*.gif`, `*.jpeg`, `*.jpg`, `*.svg`
+Die folgenden Bild Dateitypen werden unterstützt: `*.png` , `*.gif` , `*.jpeg` , `*.jpg` , `*.svg`
 
-### <a name="markdown-extensions-supported-by-open-publishing"></a>Von Open Publishing unterstützte Markdown-Erweiterungen
+### <a name="markdown-extensions-supported-by-open-publishing"></a>Von Open Publishing unterstützte Markdownerweiterungen
 
-Das [Microsoft Docs Authoring Pack](/contribute/how-to-write-docs-auth-pack) (Erstellungspaket für Microsoft-Dokumentation) enthält Tools, die für unser Veröffentlichungssystem spezifische Features unterstützen. Alerts (Warnungen) sind eine Markdown-Erweiterung zum Erstellen von Blockquotes, die auf docs.microsoft.com mit Farben und Symbolen gerendert werden, die die Bedeutung des Inhalts hervorheben. Die folgenden Warnungstypen werden unterstützt:
+Das [Microsoft-Dokumentation Authoring Pack](/contribute/how-to-write-docs-auth-pack) enthält Tools, die Features unterstützen, die für unser Veröffentlichungs System eindeutig sind. Warnungen sind eine markdown-Erweiterung zum Erstellen von blockanführungs Zeichen, die auf docs.Microsoft.com mit Farben und Symbolen gerengt werden, die die Bedeutung der Inhalte hervorheben. Die folgenden Warnungstypen werden unterstützt:
 
 ```markdown
 > [!NOTE]
@@ -175,66 +176,75 @@ Das [Microsoft Docs Authoring Pack](/contribute/how-to-write-docs-auth-pack) (Er
 > Dangerous certain consequences of an action.
 ```
 
-Diese Warnungen sehen auf docs.microsoft.com wie folgt aus:
+Diese Warnungen sehen auf docs.microsoft.com folgendermaßen aus:
 
-Hinweis
+Notizblock
 
 > [!NOTE]
-> Informationen, die der Benutzer selbst beim Durchblättern bemerken sollte.
+> Information the user should notice even if skimming.
 
-Tipp
+Tip-Block
 
 > [!TIP]
-> Optionale Informationen, die einem Benutzer helfen sollen, erfolgreicher zu arbeiten.
+> Optional information to help a user be more successful.
 
-Wichtig
+Wichtiger Block
 
 > [!IMPORTANT]
-> Wichtige Informationen, die für den Erfolg des Benutzers unabdingbar sind.
+> Essential information required for user success.
 
-Achtung
+Warn Block
 
 > [!CAUTION]
-> Negative potenzielle Folgen einer Aktion.
+> Negative potential consequences of an action.
 
-Warnung
+Warnungs Block
 
 > [!WARNING]
-> Bestimmte gefährliche Folgen einer Aktion.
+> Gefährliche Folgen einer Aktion.
 
 ### <a name="hyperlinks"></a>Links
 
-- Für Links muss die Markdown-Syntax `[friendlyname](url-or-path)` verwendet werden
-- Links sollten nach Möglichkeit als HTTPS angegeben werden.
-- Links müssen über einen Anzeigenamen verfügen, normalerweise den Titel des verknüpften Themas
-- Alle Elemente im Abschnitt „Verwandte Links“ im unteren Bereich sollten mit einem Link versehen sein
-- Verwenden Sie innerhalb der Klammern eines Links keine Graviszeichen und fette oder sonstige Auszeichnung.
-- Reine URLs können verwendet werden, wenn Sie über einen bestimmten URI sprechen. Der URI muss in Graviszeichen eingeschlossen werden. Beispiel:
+- Hyperlinks müssen die markdown-Syntax verwenden `[friendlyname](url-or-path)` . [Link Verweise][linkref] werden unterstützt.
+- Das Veröffentlichungs System unterstützt drei Arten von Verknüpfungen:
+  - URL-Links
+  - Datei Verknüpfungen
+  - Querverweis Verknüpfungen
+- Links zu anderen Artikeln auf docs.Microsoft.com müssen Site relative Pfade sein.
+- Alle URLs für externe Websites sollten HTTPS verwenden, es sei denn, der Ziel Standort ist ungültig.
+- Links müssen einen anzeigen Amen haben, in der Regel den Titel des verknüpften Artikels.
+- Alle Elemente im Abschnitt _verknüpfte Verknüpfungen_ im unteren Bereich sollten hyperverknüpft werden.
+- Verwenden Sie keine Backticks, Fett oder andere Markup innerhalb der Klammern eines Links.
+- Bare-URLs können verwendet werden, wenn Sie einen bestimmten URI dokumentieren. Der URI muss in Backticks eingeschlossen werden. Beispiel:
 
   ```markdown
-  By default, if you do not specify this parameter, the DMTF standard resource URI
+  By default, if you don't specify this parameter, the DMTF standard resource URI
   `http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/` is used and the class name is appended to it.
   ```
 
-#### <a name="linking-to-other-content"></a>Verknüpfen mit anderen Inhalten
+#### <a name="linking-to-other-content-on-docsmicrosoftcom"></a>Verknüpfen mit anderem Inhalt auf docs.Microsoft.com
 
-Das Veröffentlichungssystem unterstützt zwei Arten von Links:
+- **URL-Links** zu anderen Artikeln auf docs.Microsoft.com müssen Site relative Pfade sein. Die einfachste Möglichkeit, eine relative Verknüpfung zu erstellen, besteht darin, die URL aus dem Browser zu kopieren und dann aus dem Wert zu entfernen, den `https://docs.microsoft.com/en-us` Sie in markdown eingefügt haben. Gebiets Schemas nicht in URLs in Microsoft-Eigenschaften einschließen (Remove `/en-us` from URL). Entfernen Sie alle unnötigen Abfrage Parameter aus der URL. Zu entfernende Beispiele:
 
-Bei einem **URL-Link** kann es sich um einen URL-Pfad handeln, der relativ zum Stamm von docs.microsoft.com ist. Oder eine absolute URL, die die vollständige URL-Syntax enthält. Beispiel: `https:/github.com/MicrosoftDocs/PowerShell-Docs`
+  - `?view=powershell-5.1` : wird zum Verknüpfen mit einer bestimmten Version von PowerShell verwendet.
+  - `?redirectedfrom=MSDN` -wird der URL hinzugefügt, wenn Sie von einem alten Artikel an den neuen Speicherort umgeleitet werden
 
-- Verwenden Sie URL-Links für die Verknüpfung mit Inhalten außerhalb der PowerShell-Dokumentation oder zwischen der Cmdlet-Referenz und konzeptionellen Artikeln innerhalb der PowerShell-Dokumentation. Die einfachste Möglichkeit zum Erstellen eines relativen Links besteht darin, die URL aus Ihrem Browser zu kopieren und dann `https://docs.microsoft.com/en-us` aus dem Wert zu entfernen, den Sie in Markdown einfügen.
-- Schließen Sie keine Gebietsschemas in URLs in Microsoft-Eigenschaften ein (entfernen Sie beispielsweise `/en-us` aus dem URL).
-- Entfernen Sie alle nicht benötigten Abfrageparameter aus dem URL, sofern Sie nicht eine Verknüpfung mit einer bestimmten Artikelversion herstellen müssen. Beispiele:
-  - `?view=powershell-5.1`: dieser Parameter wird verwendet, um eine Verknüpfung mit einer bestimmten PowerShell-Version herzustellen
-  - `?redirectedfrom=MSDN`: dieser Parameter wird zum URL hinzugefügt, wenn Sie von einem älteren Artikel zur neuen Version umgeleitet werden
-- Alle URLs zu externen Websites sollten HTTPS verwenden, es sei denn, dies ist für die Zielwebsite ungültig.
+  Wenn Sie eine Verknüpfung mit einer bestimmten Version eines Dokuments herstellen müssen, müssen Sie den `&preserve_view=true` Parameter der Abfrage Zeichenfolge hinzufügen. Beispiel: `?view=powershell-5.1&preserve_view=true`
 
-Eine **Dateiverknüpfung** wird verwendet, um von einem Referenzartikel auf einen anderen oder von einem konzeptionellen Artikel auf einen anderen zu verweisen. Wenn Sie auf einen Referenzartikel für eine bestimmte PowerShell-Version verweisen müssen, müssen Sie einen URL-Link verwenden.
+- Ein **Dateilink** wird verwendet, um eine Verknüpfung zwischen Verweis Artikeln oder einem konzeptionellen Artikel zu einem anderen zu erhalten. Wenn Sie eine Verknüpfung mit einem Referenz Artikel für eine bestimmte Version von PowerShell herstellen müssen, müssen Sie einen URL-Link verwenden.
 
-- Dateiverknüpfungen enthalten einen relativen Dateipfad (Beispiel: `../folder/file.md`)
-- Alle Dateipfade enthalten Schrägstriche (`/`).
+  - Datei Verknüpfungen enthalten einen relativen Dateipfad (Beispiel: `../folder/file.md` ).
+  - Alle Dateipfade verwenden Schrägstriche ( `/` ).
 
-Deep Linking ist sowohl für URL-Links als auch für Dateiverknüpfungen zulässig. Fügen Sie den Anker am Ende des Zielpfads hinzu.
+- **Querverweis Verknüpfungen** sind eine spezielle Funktion, die vom Veröffentlichungs System unterstützt wird. Sie können Verweis übergreifende Links in konzeptionellen Artikeln verwenden, um eine Verknüpfung mit der .NET-API oder der Cmdlet-Referenz zu erhalten.
+
+  Links zur .NET-API-Referenz finden Sie unter [Verwenden von Links in der Dokumentation](/contribute/how-to-write-links#xref-cross-reference-links) im Leitfaden "zentrale Mitwirkende".
+
+  Links zur Cmdlet-Referenz haben das folgende Format: `xref:<module-name>.<cmdlet-name>` . Beispielsweise, um eine Verknüpfung mit dem- `Get-Content` Cmdlet im **Microsoft. PowerShell. Management** -Modul zu erhalten.
+
+  `[Get-Content](xref:Microsoft.PowerShell.Management.Get-Content)`
+
+Deep Linking ist sowohl für URL-als auch für Datei Verknüpfungen zulässig. Fügen Sie den Anker am Ende des Zielpfads hinzu.
 Beispiel:
 
 - `[about_Splatting](about_Splatting.md#splatting-with-arrays)`
@@ -244,13 +254,13 @@ Weitere Informationen finden Sie unter [Verwenden von Links in der Dokumentation
 
 ## <a name="formatting-command-syntax-elements"></a>Formatieren von Befehlssyntaxelementen
 
-- Verwenden Sie immer den vollständigen Namen für Cmdlets und Parameter. Vermeiden Sie die Verwendung von Aliasen, es sei denn, Sie möchten den Alias beispielhaft hervorheben.
+- Verwenden Sie immer den vollständigen Namen für Cmdlets und Parameter. Vermeiden Sie die Verwendung von Aliasen, es sei denn, Sie demonstrieren den Alias.
 
-- Eigenschaften, Parameter, Objekte, Typnamen, Klassennamen und Klassenmethoden sollten **fett** formatiert werden.
-  - Eigenschafts- und Parameterwerte sollten in Graviszeichen (`` ` ``) eingeschlossen werden.
-  - Verwenden Sie Graviszeichen, wenn Sie auf Typen verweisen, die in Klammern stehen. Beispiel: `[System.Io.FileInfo]`
+- Eigenschaft, Parameter, Objekt, Typnamen, Klassennamen und Klassen Methoden sollten **Fett** formatiert sein.
+  - Eigenschafts-und Parameterwerte sollten in Graviszeichen ( `` ` `` ) verpackt werden.
+  - Verwenden Sie Backticks, wenn Sie auf Typen verweisen, die in Klammern stehen. Beispiel: `[System.Io.FileInfo]`
 
-- Schlüsselwörter, Cmdlet-Namen, Funktionen, Variablen, native EXE-Dateinamen, Dateipfade und Inlinesyntaxbeispiele sollten in Graviszeichen (`` ` ``) eingeschlossen werden.
+- Sprach Schlüsselwörter, Namen von Cmdlets, Funktionen, Variablen, systemeigene EXE-Dateien, Dateipfade und Inline Syntax Beispiele sollten in Graviszeichen ()-Zeichen umschließt werden `` ` `` .
 
   Beispiel:
 
@@ -263,23 +273,23 @@ Weitere Informationen finden Sie unter [Verwenden von Links in der Dokumentation
   ```
   ~~~
 
-  - Wenn Sie anhand des Namens auf einen Parameter verweisen, sollte der Name **fett** formatiert sein. Wenn Sie die Verwendung eines Parameters mit dem Bindestrichpräfix veranschaulichen, sollte der Parameter in Graviszeichen eingeschlossen sein. Beispiel:
+  - Wenn Sie einen Parameter bei Namen nennen, sollte der Name **fett** geschrieben werden. Wenn Sie die Verwendung eines Parameters mithilfe eines Bindestrichs als Präfix darstellen, sollte der Parameter von Backticks umschlossen werden. Beispiel:
 
     ```markdown
-    The parameter's name is **Name**, but it is typed as `-Name` when used on the command
+    The parameter's name is **Name**, but it's typed as `-Name` when used on the command
     line as a parameter.
     ```
 
-  - Bei der beispielhaften Verwendung eines externen Befehls sollte das Beispiel in Graviszeichen eingeschlossen werden.
+  - Wenn Sie die Verwendung eines externen Befehls veranschaulichen, sollte das Beispiel von Backticks umschlossen werden.
     Fügen Sie die Dateierweiterung immer in den nativen Befehl ein. Beispiel:
 
     ```markdown
     To start the spooler service on a remote computer named DC01, you type `sc.exe \\DC01 start spooler`.
     ```
 
-    Durch das Einfügen der Dateierweiterung wird sichergestellt, dass der richtige Befehl gemäß der PowerShell-Rangfolge ausgeführt wird.
+    Durch einschließen der Dateierweiterung wird sichergestellt, dass der richtige Befehl entsprechend der Befehls Rangfolge von PowerShell ausgeführt wird.
 
-- Beim Schreiben eines konzeptionellen Artikels (im Gegensatz zu Referenzinhalt) sollte die erste Instanz eines Cmdlet-Namens per Link zur Dokumentation des Cmdlets verweisen. Verwenden Sie innerhalb der Klammern eines Links keine Graviszeichen und fette oder sonstige Auszeichnung.
+- Wenn Sie einen Konzeptartikel schreiben (im Gegensatz zu Referenzinhalten), sollte das erste Vorkommnis eines Cmdlet-Namens ein Link zur Dokumentation des Cmdlets sein. Verwenden Sie keine Backticks, Fett oder andere Markup innerhalb der Klammern eines Links.
 
   Beispiel:
 
@@ -288,33 +298,33 @@ Weitere Informationen finden Sie unter [Verwenden von Links in der Dokumentation
   uses the **Object** parameter to ...
   ```
 
-  Weitere Informationen finden Sie im Abschnitt [Links](#hyperlinks) in diesem Artikel.
+  Weitere Informationen finden Sie in diesem Artikel im Abschnitt [Hyperlinks](#hyperlinks) .
 
 ## <a name="markdown-for-code-samples"></a>Markdown für Codebeispiele
 
-Markdown unterstützt zwei verschiedene Codeformatvorlagen:
+Markdown unterstützt zwei verschiedene Codestile:
 
-- **„span“-Elemente (inline)** : durch ein einzelnes Graviszeichen (`` ` ``) gekennzeichnet. Wird innerhalb eines Absatzes anstelle eines eigenständigen Blocks verwendet.
-- **Codeblöcke**: ein mehrzeiliger Block, der in dreifache Graviszeichen-Zeichenfolgen (`` ``` ``) eingeschlossen ist. Codeblöcke können außerdem über eine Sprachbezeichnung im Anschluss an die Graviszeichen verfügen. Die Sprachbezeichnung ermöglicht Syntaxhervorhebung für die Inhalte des Codeblocks.
+- **Code spannen (Inline)** : gekennzeichnet durch ein einzelnes Graviszeichen ( `` ` `` ). Wird in einem Absatz anstelle als eigenständiger Block verwendet.
+- **Code Blöcke** : ein mehrzeiligen Block, der von Triple-Backtick ()-Zeichen folgen umgeben ist `` ``` `` . Code Blöcke können auch über eine sprach Bezeichnung verfügen, die den Backticks folgt. Die sprach Bezeichnung ermöglicht die Syntax Hervorhebung für den Inhalt des Code Blocks.
 
-Alle Codeblöcke sollten in einem abgesetzten Codebereich (Code Fence) enthalten sein. Verwenden Sie bei Codeblöcken niemals einen Einzug. Markdown lässt dieses Muster zu, dies kann jedoch zu Problemen führen und sollte vermieden werden.
+Alle Codeblöcke sollten in einem Codefence enthalten sein. Verwenden Sie niemals den Einzug für Code Blöcke. Markdown lässt dieses Muster zu, kann jedoch problematisch sein und sollte vermieden werden.
 
-Bei einem Codeblock handelt es sich um eine oder mehrere Codezeilen, die in dreifache Graviszeichen (`` ``` ``) eingeschlossen sind.
-Die Codebereichsmarkierungen müssen in einer eigenen Zeile vor und nach dem Codebeispiel stehen. Der Marker am Beginn des Codeblocks darf eine optionale Sprachbezeichnung aufweisen. Das Open Publishing System (OPS) von Microsoft verwendet die Sprachbezeichnung zur Unterstützung der Syntaxhervorhebungsfunktion.
+Ein Codeblock ist eine oder mehrere Codezeilen, die von einem Code-Fence mit dreifacher Backtick () umgeben sind `` ``` `` .
+Die Codefencemarker müssen vor und nach dem Codebeispiel in einer eigenen Zeile stehen. Der Marker am Anfang des Codeblocks kann eine optionale Sprachbezeichnung aufweisen. Das Open Publishing System (OPS) von Microsoft verwendet die Sprachbezeichnung, um die Funktion der Syntaxhervorhebung zu unterstützen.
 
-Eine vollständige Liste der unterstützten Sprachtags finden Sie unter [Umgrenzte Codeblöcke](/contribute/code-in-docs#fenced-code-blocks) im zentralen Leitfaden für Mitwirkende.
+Eine vollständige Liste der unterstützten Sprachen [Tags finden Sie im Leitfaden zu den](/contribute/code-in-docs#fenced-code-blocks) zentralisierten Mitwirkenden.
 
-OPS fügt außerdem eine Schaltfläche **Kopieren** hinzu, die die Inhalte des Codeblocks in die Zwischenablage kopiert. Dies ermöglicht es Ihnen, den Code schnell in ein Skript einzufügen, um das Codebeispiel zu testen. Allerdings sind nicht alle Beispiele in unserer Dokumentation für die Ausführung bestimmt. Einige Codeblöcke sind einfache Abbildungen eines PowerShell-Konzepts.
+OPS fügt auch eine **Kopieren**-Schaltfläche hinzu, mit der der Inhalt des Codeblocks in die Zwischenablage kopiert wird. Dies ermöglicht es Ihnen, den Code schnell in ein Skript einzufügen, um das Codebeispiel zu testen. Allerdings sind nicht alle Beispiele in unserer Dokumentation unverändert auszuführen. Einige Code Blöcke sind einfache Abbildungen eines PowerShell-Konzepts.
 
-In unserer Dokumentation werden drei Arten von Codeblöcken verwendet:
+Es gibt drei Typen von Code Blöcken, die in unserer Dokumentation verwendet werden:
 
-1. Syntaxblöcke
+1. Syntax Blöcke
 1. Anschauliche Beispiele
 1. Ausführbare Beispiele
 
-### <a name="syntax-code-blocks"></a>Syntaxcodeblöcke
+### <a name="syntax-code-blocks"></a>Syntax Code Blöcke
 
-Mithilfe von Syntaxcodeblöcken wird die syntaktische Struktur eines Befehls beschrieben. Verwenden Sie keine Sprachtags für die Umgrenzung von Code. Dieses Beispiel veranschaulicht alle möglichen Parameter des `Get-Command`-Cmdlets.
+Syntax Code Blöcke werden verwendet, um die syntaktische Struktur eines Befehls zu beschreiben. Verwenden Sie für den codefence kein Sprachtag. In diesem Beispiel werden alle möglichen Parameter des `Get-Command`-Cmdlets veranschaulicht.
 
 ~~~markdown
 ```
@@ -325,7 +335,7 @@ Get-Command [-Verb <String[]>] [-Noun <String[]>] [-Module <String[]>]
 ```
 ~~~
 
-Dieses Beispiel beschreibt die `for`-Anweisungen allgemein:
+In diesem Beispiel wird die `for`-Anweisung in allgemeinen Begriffen beschrieben:
 
 ~~~markdown
 ```
@@ -336,9 +346,9 @@ for (<init>; <condition>; <repeat>)
 
 ### <a name="illustrative-examples"></a>Anschauliche Beispiele
 
-Anschauliche Beispiele werden verwendet, um ein PowerShell-Konzept zu erläutern. Sie sind nicht dazu bestimmt, zur Ausführung in die Zwischenablage kopiert zu werden. Diese werden am häufigsten für einfache Beispiele verwendet, die sich leicht eingeben lassen und die leicht verständlich sind. Der Codeblock kann die PowerShell-Eingabeaufforderung und die Beispielausgabe umfassen.
+Anschauliche Beispiele werden zur Erklärung eines PowerShell-Konzepts verwendet. Sie sollen nicht zur Ausführung in die Zwischenablage kopiert werden. Diese werden am häufigsten für einfache Beispiele verwendet, die einfach zu finden und leicht verständlich sind. Der Codeblock kann die PowerShell-Eingabeaufforderung und Beispielausgabe enthalten.
 
-Nachfolgend ist ein einfaches Beispiel gezeigt, das die PowerShell-Vergleichsoperatoren veranschaulicht. In diesem Fall wollen wir nicht, dass der Leser das Beispiel kopiert und ausführt.
+Im folgenden finden Sie ein einfaches Beispiel zur Veranschaulichung der PowerShell-Vergleichs Operatoren. In diesem Fall ist es nicht beabsichtigt, dieses Beispiel zu kopieren und auszuführen.
 
 ~~~markdown
 ```powershell
@@ -348,7 +358,7 @@ True
 PS> 2 -eq 3
 False
 
-PS>  1,2,3 -eq 2
+PS> 1,2,3 -eq 2
 2
 
 PS> "abc" -eq "abc"
@@ -364,7 +374,7 @@ abc
 
 ### <a name="executable-examples"></a>Ausführbare Beispiele
 
-Komplexe Beispiele oder Beispiele, die zum Kopieren und Ausführen erstellt werden, sollten das folgende Markup als Blockformatvorlage verwenden:
+Komplexe Beispiele oder Beispiele, die kopiert und ausgeführt werden sollen, sollten das folgende Markup im Block Format verwenden:
 
 ~~~markdown
 ```powershell
@@ -372,7 +382,7 @@ Komplexe Beispiele oder Beispiele, die zum Kopieren und Ausführen erstellt werd
 ```
 ~~~
 
-Die von PowerShell-Befehlen angezeigte Ausgabe sollte in einen **Output**-Codeblock eingeschlossen werden, um Syntaxhervorhebung zu vermeiden. Beispiel:
+Die von PowerShell-Befehlen angezeigte Ausgabe sollte in einen **Ausgabe**-Codeblock eingeschlossen werden, um die Syntaxhervorhebung zu verhindern. Beispiel:
 
 ~~~markdown
 ```powershell
@@ -400,23 +410,23 @@ Cmdlet       Unprotect-CmsMessage        3.0.0.0    Microsoft.PowerShell.Securit
 ```
 ~~~
 
-Die **Output**-Codebezeichnung ist keine offizielle „Sprache“, die vom Syntaxhervorhebungs-System unterstützt wird.
-Diese Bezeichnung ist jedoch nützlich, da OPS dem Rahmen des Codefelds auf der Website die Bezeichnung „Output“ hinzufügt. Das „Output“-Codefeld hat keine Syntaxhervorhebung.
+Die **Ausgabe** Code Bezeichnung ist keine offizielle "Sprache", die vom System für die Syntax Hervorhebung unterstützt wird.
+Diese Bezeichnung ist jedoch nützlich, da OPS dem Code Feld Rahmen auf der Webseite die Bezeichnung "Output" hinzufügt. Das Codefeld "Output" hat keine Syntax Hervorhebung.
 
-## <a name="coding-style-rules"></a>Regeln für Codeformatvorlagen
+## <a name="coding-style-rules"></a>Codierungsstilregeln
 
-### <a name="avoid-line-continuation-in-code-samples"></a>Vermeiden Sie Zeilenfortsetzung in Codebeispielen
+### <a name="avoid-line-continuation-in-code-samples"></a>Vermeiden von Zeilenfortsetzungen in Codebeispielen
 
-Vermeiden Sie die Verwendung von Zeilenfortsetzungszeichen (`` ` ``) in PowerShell-Codebeispielen. Sie sind schlecht zu sehen und können zu Problemen führen, wenn am Zeilenende zusätzliche Leerzeichen vorhanden sind.
+Vermeiden Sie Zeilenfortsetzungszeichen (`` ` ``) in PowerShell-Codebeispielen. Diese sind schwer zu erkennen und können Probleme verursachen, wenn am Ende der Zeile zusätzliche Leerzeichen vorhanden sind.
 
-- Verwenden Sie PowerShell-Aufteilung, um die Zeilenlänge für Cmdlets zu reduzieren, die viele Parameter aufweisen.
-- Nutzen Sie die natürlichen Gelegenheiten für Zeilenumbrüche in PowerShell, etwa nach Pipesymbolen (`|`), öffnenden geschweiften Klammern, Klammern und eckigen Klammern.
+- Verwenden Sie PowerShell-Verteilung, um die Zeilenlänge für Cmdlets mit mehreren Parametern zu verringern.
+- Profitieren Sie von den Vorteilen der natürlichen Zeilen Umbruchs von PowerShell, wie z. b. nach senkrechter Zeichen (), `|` öffnenden geschweiften Klammern ( `{` ), Klammern ( `(` ) und eckigen Klammern ( `[` ).
 
 ### <a name="avoid-using-powershell-prompts-in-examples"></a>Vermeiden Sie die Verwendung von PowerShell-Eingabeaufforderungen in Beispielen
 
-Von der Verwendung der Eingabeaufforderungs-Zeichenfolge wird abgeraten. Sie sollte auf Fälle beschränkt werden, deren Zweck die Veranschaulichung der Befehlszeilensyntax ist. Für die meisten dieser Beispiele sollte die Eingabeaufforderungs-Zeichenfolge `PS>` lauten. Diese Eingabeaufforderung ist unabhängig von betriebssystemspezifischen Indikatoren.
+Die Verwendung der Eingabe Aufforderungs Zeichenfolge wird davon abgeraten und sollte auf Szenarien beschränkt sein, die zur Veranschaulichung der Befehlszeilen Verwendung dienen. Für die meisten dieser Beispiele sollte die Eingabe Aufforderungs Zeichenfolge lauten `PS>` . Diese Eingabeaufforderung ist unabhängig von betriebssystemspezifischen Indikatoren.
 
-Eingabeaufforderungen sind für Beispiele erforderlich, die Befehle veranschaulichen, mit denen die Eingabeaufforderung geändert wird, oder wenn der angezeigte Pfad für das dargestellte Szenario relevant ist. Das folgende Beispiel zeigt, wie sich die Eingabeaufforderung ändert, wenn der Registrierungsanbieter verwendet wird.
+In Beispielen sind Aufforderungen erforderlich, um Befehle zu veranschaulichen, mit denen die Eingabeaufforderung geändert wird, oder wenn der angezeigte Pfad für das Szenario wichtig ist. Im folgenden Beispiel wird veranschaulicht, wie die Eingabeaufforderung geändert wird, wenn der Registrierungsanbieter verwendet wird.
 
 ```powershell
 PS C:\> cd HKCU:\System\
@@ -435,22 +445,111 @@ GameConfigStore        GameDVR_Enabled                       : 1
                        GameDVR_DXGIHonorFSEWindowsCompatible : 0
 ```
 
-### <a name="do-not-use-aliases-in-examples"></a>Verwenden Sie keine Aliase in Beispielen
+### <a name="dont-use-aliases-in-examples"></a>Verwenden Sie in Beispielen keine Aliase.
 
-Sie sollten für alle Cmdlets und Parameter immer den vollständigen Namen verwenden, es sei denn, Sie behandeln speziell den Alias. Namen von Cmdlets und Parametern müssen die richtige Pascal-Schreibweise verwenden.
+Verwenden Sie den vollständigen Namen aller Cmdlets und Parameter, es sei denn, Sie dokumentieren den Alias.
+Cmdlet-und Parameternamen müssen die richtigen [Pascal-][] Schreib Namen verwenden.
 
-### <a name="using-parameters-in-examples"></a>Verwenden von Parametern in Beispielen
+### <a name="using-parameters-in-examples"></a>Verwenden der Parameter in Beispielen
 
-Vermeiden Sie die Verwendung von Positionsparametern. Im Allgemeinen sollten Sie immer den Parameternamen in ein Beispiel aufnehmen, selbst wenn es sich um einen Positionsparameter handelt. Dies verringert die Gefahr von Missverständnissen in Ihren Beispielen.
+Vermeiden Sie Positionsparameter. Im Allgemeinen sollten Sie immer den Parameternamen in ein Beispiel einschließen, auch wenn der Parameter eine positionelle ist. Dadurch kommt es zu weniger Verwirrung in Ihren Beispielen.
+
+## <a name="formatting-cmdlet-reference-articles"></a>Cmdlet-Referenz Artikel zum Formatieren
+
+Cmdlet-Referenzartikel weisen eine bestimmte Struktur auf. Diese Struktur wird von [PlatyPS][] definiert.
+Platyps generiert die Cmdlet-Hilfe für PowerShell-Module in markdown. Nachdem die Markdowndateien bearbeitet wurden, wird PlatyPS zum Erstellen der MAML-Hilfsdateien für das Cmdlet `Get-Help` verwendet.
+
+PlatyPS verfügt über ein hartcodiertes Schema für Cmdlet-Referenzen, das im Code enthalten ist. Im Dokument [platyPS.schema.md][] wird diese Struktur beschrieben. Verstöße gegen das Schema führen zu Buildfehlern, die behoben werden müssen, bevor Ihr Beitrag akzeptiert werden kann.
+
+- Entfernen Sie keine der ATX-Header Strukturen. PlatyPS erwartet spezifische Überschriften.
+- Die Header **Input type** (Eingabetyp) und **Output type** (Ausgabetyp) müssen einen Typ aufweisen. Wenn das Cmdlet keine Eingaben annimmt oder einen Wert zurückgibt, verwenden Sie den Wert `None` .
+- Inlinecodespannen können in allen Absätzen verwendet werden.
+- Umgrenzte Code Blöcke sind nur im Abschnitt " **Beispiele** " zulässig.
+
+Im platyps-Schema handelt es sich bei **Beispielen** um einen H2-Header. Jedes Beispiel ist ein H3-Header. In einem Beispiel lässt das Schema nicht zu, dass Code Blöcke durch Absätze getrennt werden. Das Schema ermöglicht die folgende Struktur:
+
+```
+### Example X - Title sentence
+
+0 or more paragraphs
+1 or more code blocks
+0 or more paragraphs.
+```
+
+Geben Sie für alle Beispiele eine Zahl und einen kurzen Titel an.
+
+Beispiel:
+
+~~~markdown
+### Example 1: Get cmdlets, functions, and aliases
+
+This command gets the PowerShell cmdlets, functions, and aliases that are installed on the
+computer.
+
+```powershell
+Get-Command
+```
+
+### Example 2: Get commands in the current session
+
+```powershell
+Get-Command -ListImported
+```
+~~~
+
+## <a name="formatting-about_-files"></a>Formatieren von „About_“-Dateien
+
+`About_*` Dateien werden in markdown geschrieben, aber als nur-Text-Dateien ausgeliefert. Sie verwenden [pandoc][] , um markdown in nur-Text zu konvertieren. `About_*` Dateien werden für die beste Kompatibilität in allen Versionen von PowerShell und mit den Veröffentlichungs Tools formatiert.
+
+Grundlegende Formatierungsrichtlinien:
+
+- Normale Zeilen auf 80 Zeichen begrenzen
+- Code Blöcke sind auf 76 Zeichen beschränkt.
+- Bei blockanführungs Zeichen (und Warnungen) handelt es sich um 78 Zeichen.
+- Bei Verwendung dieser speziellen Meta-Zeichen `\` , `$` und `<` :
+  - Innerhalb eines Headers müssen diese Zeichen mit Escapezeichen versehen werden, indem ein führendes `\` Zeichen verwendet oder in Code spannen mithilfe von Graviszeichen () eingeschlossen wird. `` ` ``
+  - Innerhalb eines Absatzes sollten diese Zeichen in Code spannen eingefügt werden. Beispiel:
+
+    ~~~markdown
+    ### The purpose of the \$foo variable
+
+    The `$foo` variable is used to store ...
+    ~~~
+
+- Tabellen müssen in 76 Zeichen passen
+  - Umschließen Sie Inhalte von Zellen in mehreren Zeilen manuell.
+  - Verwenden Sie öffnende und schließende `|`-Zeichen in jeder Zeile.
+  - Im folgenden Beispiel wird veranschaulicht, wie eine Tabelle, die Informationen enthält, die in mehreren Zeilen innerhalb einer Zelle umschlossen werden, ordnungsgemäß erstellt wird.
+
+    ~~~markdown
+    ```
+    |Operator|Description                |Example                          |
+    |--------|---------------------------|---------------------------------|
+    |`-is`   |Returns TRUE when the input|`(get-date) -is [DateTime]`      |
+    |        |is an instance of the      |`True`                           |
+    |        |specified .NET type.       |                                 |
+    |`-isNot`|Returns TRUE when the input|`(get-date) -isNot [DateTime]`   |
+    |        |not an instance of the     |`False`                          |
+    |        |specified.NET type.        |                                 |
+    |`-as`   |Converts the input to the  |`"5/7/07" -as [DateTime]`        |
+    |        |specified .NET type.       |`Monday, May 7, 2007 12:00:00 AM`|
+    ```
+    ~~~
+
+    > [!NOTE]
+    > Die Einschränkung der 76-Spalte gilt nur für `About_*` Themen. Sie können Breite Spalten in konzeptionellen oder Cmdlet-referenzartikeln verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Bearbeiten der Cmdlet-Referenz](editing-cmdlet-ref.md)
+[Checkliste für Redakteure](editorial-checklist.md)
 
-<!-- External URLs -->
-[platyPS]: https://github.com/PowerShell/platyPS
-[markdig]: https://github.com/lunet-io/markdig
-[CommonMark]: https://spec.commonmark.org/
+<!-- link references -->
 [atx]: https://github.github.com/gfm/#atx-headings
-[pascal-case]: https://en.wikipedia.org/wiki/PascalCase
+[CommonMark]: https://spec.commonmark.org/
+[markdig]: https://github.com/lunet-io/markdig
+[Pandoc]: https://pandoc.org
+[Pascal-schreibgeschützte]: https://en.wikipedia.org/wiki/PascalCase
+[platyPS.schema.md]: https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md
+[PlatyPS]: https://github.com/powershell/platyps
 [reflow]: https://marketplace.visualstudio.com/items?itemName=marvhen.reflow-markdown
+[linkref]: https://spec.commonmark.org/0.29/#link-reference-definitions

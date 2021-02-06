@@ -1,14 +1,14 @@
 ---
 title: Melden eines Issues in der PowerShell-Dokumentation
 description: In diesem Artikel wird erläutert, wie Sie Feedback zur PowerShell-Dokumentation geben.
-ms.date: 03/05/2020
+ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: fa2c74d55cdcd779646c50d58f7705f7a4c33542
-ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
-ms.translationtype: HT
+ms.openlocfilehash: a044f77d3529817ec063d4a26fc9d10cdfe873aa
+ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "79060295"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "99595517"
 ---
 # <a name="how-to-file-a-powershell-docs-issue"></a>Melden eines Issues in der PowerShell-Dokumentation
 
@@ -21,10 +21,11 @@ Es gibt zwei Möglichkeiten, ein Issue zu erstellen:
 
 Eine vollständige Beschreibung der Steuerelemente für Feedback finden Sie im Blog des Docs-Teams, in dem dieses [Feature][feedback] angekündigt wird.
 
-Am unteren Rand der meisten Seiten auf `docs.microsoft.com` sind zwei Feedbackschaltflächen zu sehen. Eine ist eine Verknüpfung für Produktfeedback, die andere eine Verknüpfung für Feedback zur Dokumentation. Für Feedback zur Dokumentation ist ein GitHub-Konto erforderlich. Wenn Sie auf die Schaltfläche klicken, werden Sie in GitHub authentifiziert. Anschließend wird ein einfaches Formular zur Eingabe Ihres Feedbacks angezeigt. Wenn Sie das Formular senden, erstellt das Feedbacksteuerelement ein neues GitHub-Issue und verknüpft es mit dem aktuellen Artikel.
+Am unteren Rand der meisten Seiten auf `docs.microsoft.com` sind zwei Feedbackschaltflächen zu sehen. Eine ist eine Verknüpfung für Produktfeedback, die andere eine Verknüpfung für Feedback zur Dokumentation. Für Feedback zur Dokumentation ist ein GitHub-Konto erforderlich. Wenn Sie auf die Schaltfläche klicken, gelangen Sie zu GitHub
+Geben Sie Ihr Feedback ein, und senden Sie das Formular.
 
 > [!NOTE]
-> Dies ist kein Supportkanal. Es handelt sich um eine Möglichkeit, klärende Fragen zur Dokumentation zu stellen oder Fehler und Lücken zu melden. Wenn Sie technischen Support benötigen, finden Sie unter [Communityressourcen](../community-support.md) weitere Informationen.
+> Dies ist kein Supportkanal. Dies ist eine Möglichkeit, Fragen zur Dokumentation zu stellen oder Fehler und Ausfälle zu melden. Wenn Sie technischen Support benötigen, finden Sie unter [Communityressourcen](../community-support.md) weitere Informationen.
 
 ## <a name="filing-issues-on-github"></a>Melden von Issues auf GitHub
 
