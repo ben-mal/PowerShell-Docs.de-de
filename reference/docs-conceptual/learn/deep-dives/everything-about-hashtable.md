@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über Hashtabellen wissen wollten
 description: Hashtabellen spielen eine wichtige Rolle in PowerShell, daher sollten Sie mit dem Konzept vertraut sein.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: 1539cf6444cab718c1108384c640193d66c85daf
-ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
+ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
+ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "93354421"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "97980500"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Alles, was Sie schon immer über Hashtabellen wissen wollten
 
@@ -925,8 +925,7 @@ Sie sehen also: Obwohl ich die Hashtabelle geklont habe, wurde der Verweis auf `
 
 ### <a name="deep-copies"></a>Tiefe Kopien
 
-Während ich diesen Artikel schreibe, ist mir keine clevere Möglichkeit bekannt, einfach eine tiefe Kopie einer Hashtabelle zu erstellen (und diese als Hashtabelle beizubehalten). Wahrscheinlich muss so etwas noch geschrieben werden.
-Hier sehen Sie eine schnelle Methode.
+Es gibt mehrere Möglichkeiten, eine tiefe Kopie einer Hashtabelle zu erstellen (und diese als Hashtabelle beizubehalten). Im Folgenden finden Sie eine Funktion, die mithilfe von PowerShell rekursiv eine tiefe Kopie erstellt:
 
 ```powershell
 function Get-DeepClone
@@ -952,6 +951,21 @@ function Get-DeepClone
 ```
 
 Dieses Beispiel verarbeitet keine anderen Verweistypen oder Arrays, aber es ist schon mal ein guter Anfang.
+
+Eine weitere Möglichkeit ist, die Tabelle mithilfe von .NET und **CliXml** zu deserialisieren, so wie in der folgenden Funktion:
+
+```powershell
+function Get-DeepClone
+{
+    param(
+        $InputObject
+    )
+    $TempCliXmlString = [System.Management.Automation.PSSerializer]::Serialize($obj, [int32]::MaxValue)
+    return [System.Management.Automation.PSSerializer]::Deserialize($TempCliXmlString)
+}
+```
+
+Bei extrem großen Hashtabellen ist die Deserialisierungsfunktion schneller, da sie aufskaliert. Bei dieser Methode sind jedoch einige Punkte zu beachten. Da sie **CliXml** verwendet, ist sie arbeitsspeicherintensiv, was beim Klonen großer Hashtabellen ein Problem darstellen kann. Eine weitere Einschränkung von **CliXml** ist eine Tiefenbeschränkung von 48. Wenn Sie also eine Hashtabelle mit 48 Ebenen von geschachtelten Hashtabellen haben, schlägt das Klonen fehl, und es wird keine Hashtabelle ausgegeben.
 
 ## <a name="anything-else"></a>Noch etwas?
 

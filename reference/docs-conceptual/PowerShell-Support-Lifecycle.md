@@ -2,12 +2,12 @@
 title: Supportlebenszyklus von PowerShell Core
 description: Führt die Richtlinien für die Unterstützung von PowerShell im Details aus.
 ms.date: 11/11/2020
-ms.openlocfilehash: f2a1df0fabdfb624db666d240172930dc60f1bfe
-ms.sourcegitcommit: 2fc6ee49a70bda4c59135136bd5cc7782836a124
+ms.openlocfilehash: 0803dda070c66b4c1d803171ecdb7029a096517b
+ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810384"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98105178"
 ---
 # <a name="powershell-support-lifecycle"></a>Supportlebenszyklus von PowerShell
 
@@ -143,11 +143,13 @@ Die folgende Tabelle enthält die Hauptversionen von PowerShell im Zeitverlauf. 
 
 |         Version          | Veröffentlichungsdatum |                                                                     Hinweis                                                                      |
 | ------------------------ | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| PowerShell 7.1 (aktuell) |   Nov. 2020   | Basiert auf .NET Core 5.0 (aktuell)                                                                                                              |
-| PowerShell 7.0 (LTS)     |   März 2020   | Basiert auf .NET Core 3.1 (LTS).                                                                                                                  |
-| PowerShell 6.0           |   Januar 2018   | Erstes Release, basiert auf .NET Core 2.1. Installierbar unter Windows, Linux und macOS.                                                              |
-| PowerShell 5.1           |   August 2016   | Veröffentlicht in Windows 10 Anniversary Update und Windows Server 2016.                                                                             |
-| PowerShell 5.0           |   Februar 2016   | Veröffentlicht in Windows Management Framework (WMF) 5.0.                                                                                            |
+| PowerShell 7.1 (aktuell) |   Nov. 2020   | Basiert auf .NET Core 5.0 (aktuell)                                                                                                             |
+| PowerShell 7.0 (LTS)     |   März 2020   | Basiert auf .NET Core 3.1 (LTS).                                                                                                                 |
+| PowerShell 6.2           |   Mär. 2019   |                                                                                                                                               |
+| PowerShell 6.1           |   Sep. 2018   | Basiert auf .NET Core 2.1                                                                                                                       |
+| PowerShell 6.0           |   Januar 2018   | Erstes Release, basiert auf .NET Core 2.0 Installierbar unter Windows, Linux und macOS.                                                              |
+| PowerShell 5.1           |   August 2016   | Veröffentlicht in Windows 10 Anniversary Update und Windows Server 2016                                                                            |
+| PowerShell 5.0           |   Februar 2016   | Veröffentlicht in Windows Management Framework 5.0 (WMF)                                                                                           |
 | PowerShell 4.0           |   Oktober 2013   | Integriert in Windows 8.1 und Windows Server 2012 R2. Installierbar unter Windows 7 SP1, Windows Server 2008 R2 SP1 und Windows Server 2012. |
 | PowerShell 3.0           |   Oktober 2012   | Integriert in Windows 8 und Windows Server 2012. Installierbar unter Windows 7 SP1, Windows Server 2008 SP1 und Windows Server 2008 R2 SP1.  |
 | PowerShell 2.0           |   Juli 2009   | Integriert in Windows 7 und Windows Server 2008 R2. Installierbar unter Windows XP SP3, Windows Server 2003 SP2 und Windows Vista SP1.            |
