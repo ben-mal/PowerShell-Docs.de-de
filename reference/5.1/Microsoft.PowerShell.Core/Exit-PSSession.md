@@ -3,20 +3,20 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 02/08/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/exit-pssession?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Exit-PSSession
-ms.openlocfilehash: efe0e6c9287b3595988aa3ffc520ce46699cafda
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 1e0c8413a37a9b8877b6af9089ac311459ada20d
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212068"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975106"
 ---
 # Exit-PSSession
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Beendet eine interaktive Sitzung mit einem Remotecomputer.
 
 ## SYNTAX
@@ -25,18 +25,18 @@ Beendet eine interaktive Sitzung mit einem Remotecomputer.
 Exit-PSSession [<CommonParameters>]
 ```
 
-## DESCRIPTION
-Das **Exit-PSSession** -Cmdlet beendet interaktive Sitzungen, die Sie mit dem Cmdlet "Enter-PSSession" gestartet haben.
+## BESCHREIBUNG
 
-Sie können auch das **Exit** -Schlüsselwort verwenden, um eine interaktive Sitzung zu beenden.
-Der Effekt ist mit der Verwendung von **Exit-PSSession** identisch.
+Das `Exit-PSSession` Cmdlet beendet interaktive Sitzungen, die Sie mithilfe des `Enter-PSSession` Cmdlets gestartet haben.
 
-## BEISPIELE
+Sie können auch das- `exit` Schlüsselwort verwenden, um eine interaktive Sitzung zu beenden. Der Effekt ist identisch mit der Verwendung von `Exit-PSSession` .
+
+## Beispiele
 
 ### Beispiel 1: starten und Beenden einer interaktiven Sitzung
 
-```
-PS C:\> Enter-PSSession -computername Server01
+```powershell
+PS C:\> Enter-PSSession -ComputerName Server01
 Server01\PS> Exit-PSSession
 PS C:\>
 ```
@@ -45,7 +45,7 @@ Mit diesen Befehlen starten und beenden Sie eine interaktive Sitzung mit dem Rem
 
 ### Beispiel 2: starten und Beenden einer interaktiven Sitzung mit einem PSSession-Objekt
 
-```
+```powershell
 PS C:\> $s = New-PSSession -ComputerName Server01
 PS C:\> Enter-PSSession -Session $s
 Server01\PS> Exit-PSSession
@@ -55,51 +55,49 @@ Id Name            ComputerName    State    ConfigurationName
 1  Session1        Server01        Opened   Microsoft.PowerShell
 ```
 
-Mit diesen Befehlen starten und beenden Sie eine interaktive Sitzung mit dem Server01-Computer, auf dem eine Windows PowerShell-Sitzung ( **PSSession** ) verwendet wird.
+Mit diesen Befehlen starten und beenden Sie eine interaktive Sitzung mit dem Server01-Computer, auf dem eine Windows PowerShell-Sitzung (**PSSession**) verwendet wird.
 
-Da die interaktive Sitzung mithilfe einer Windows PowerShell-Sitzung gestartet wurde, ist die **PSSession** weiterhin verfügbar, wenn die interaktive Sitzung beendet wird.
-Wenn Sie den *Computername* -Parameter verwenden, erstellt **Enter-PSSession** eine temporäre Sitzung, die beim Ende der interaktiven Sitzung geschlossen wird.
+Da die interaktive Sitzung mithilfe einer Windows PowerShell-Sitzung gestartet wurde, ist die **PSSession** weiterhin verfügbar, wenn die interaktive Sitzung beendet wird. Wenn Sie den _Computername_ -Parameter verwenden, wird von `Enter-PSSession` eine temporäre Sitzung erstellt, die beim Ende der interaktiven Sitzung geschlossen wird.
 
-Der erste Befehl verwendet das Cmdlet "New-PSSession", um eine **PSSession** auf dem Server01-Computer zu erstellen.
-Der Befehl speichert die **PSSession** in der $s Variable.
+Der erste Befehl verwendet das `New-PSSession` Cmdlet, um eine **PSSession** auf dem Server01-Computer zu erstellen. Der Befehl speichert die **PSSession** in der `$s` Variablen.
 
-Der zweite Befehl verwendet **Enter-PSSession** , um eine interaktive Sitzung mithilfe der **PSSession** in $s zu starten.
+Der zweite Befehl verwendet `Enter-PSSession` , um mithilfe der **PSSession** in eine interaktive Sitzung zu starten `$s` .
 
-Der dritte Befehl verwendet **Exit-PSSession** , um die interaktive Sitzung zu beenden.
+Der dritte Befehl verwendet `Exit-PSSession` , um die interaktive Sitzung zu unterbinden.
 
-Der letzte Befehl zeigt die **PSSession** in der $s Variable an.
-Die **State** -Eigenschaft zeigt, dass die **PSSession** weiterhin geöffnet ist und zur Verwendung verfügbar ist.
+Der letzte Befehl zeigt die **PSSession** in der `$s` Variablen an. Die **State** -Eigenschaft zeigt, dass die **PSSession** weiterhin geöffnet ist und zur Verwendung verfügbar ist.
 
 ### Beispiel 3: Verwenden des Exit-Schlüssel Worts zum Beenden einer Sitzung
 
-```
-PS C:\> Enter-PSSession -computername Server01
+```powershell
+PS C:\> Enter-PSSession -ComputerName Server01
 Server01\PS> exit
 PS C:\>
 ```
 
-Dieses Beispiel verwendet das **Exit** -Schlüsselwort, um eine interaktive Sitzung zu beenden, die mit **Enter-PSSession** gestartet wurde.
-Das **Exit** -Schlüsselwort hat dieselbe Auswirkung wie die Verwendung von **Exit-PSSession** .
+Dieses Beispiel verwendet das- `exit` Schlüsselwort, um eine interaktive Sitzung zu beenden, die mit gestartet wurde `Enter-PSSession` . Das- `exit` Schlüsselwort hat dieselbe Auswirkung wie die Verwendung von `Exit-PSSession` .
 
-## PARAMETERS
+## Parameter
 
 ### CommonParameters
+
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### Keine
+
 Objekte können nicht an dieses Cmdlet weitergereicht werden.
 
-## AUSGABEN
+## Ausgaben
 
 ### Keine
+
 Dieses Cmdlet gibt keine Ausgabe zurück.
 
-## HINWEISE
+## Notizen
 
-* Von diesem Cmdlet werden nur allgemeine Parameter verwendet.
-
+Von diesem Cmdlet werden nur allgemeine Parameter verwendet.
 
 ## VERWANDTE LINKS
 
