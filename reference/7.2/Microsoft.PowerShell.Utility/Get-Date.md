@@ -6,12 +6,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: 8c0a1b7a14f5dfa071a85808f5d7dfba4d06048e
-ms.sourcegitcommit: 077488408c820c860131382324bdd576d0edf52a
+ms.openlocfilehash: 6f5c76faafa2c68a6d9dfc604238c514489aa717
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "99599837"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975055"
 ---
 # Get-Date
 
@@ -215,7 +215,7 @@ Die- `$timestamp` Variable speichert die Ergebnisse eines- `Get-Date` Befehls. `
 
 ### Beispiel 9: Konvertieren eines UNIX-Zeitstempels
 
-In diesem Beispiel wird eine Unix-Zeit (dargestellt durch die Anzahl von Sekunden seit 1970-01-01 0:00:00) in DateTime konvertiert.
+In diesem Beispiel wird eine Unix-Zeitangabe (dargestellt durch die Anzahl von Sekunden seit dem 1970-01-01 0:00:00) in DateTime konvertiert.
 
 ```powershell
 Get-Date -UnixTimeSeconds 1577836800
@@ -565,9 +565,9 @@ In der folgenden Tabelle werden die gültigen **Uformat-Spezifizierer** angezeig
 | `%t` | Horizontales Tabstopp Zeichen                                                |                          |
 | `%T` | Uhrzeit im 24-Stunden-Format                                                  | 17:45:52                 |
 | `%U` | Identisch mit "W"                                                             |                          |
-| `%u` | Wochentag-Nummer                                                | Sonntag = 0               |
+| `%u` | Numerischer Tag der Woche (1-7)                                           | Montag = 1, Sonntag = 7   |
 | `%V` | Woche des Jahres                                                        | 01-53                    |
-| `%w` | Identisch mit "u"                                                             |                          |
+| `%w` | Numerischer Tag der Woche (0-6)                                           | Sonntag = 0, Samstag = 6 |
 | `%W` | Woche des Jahres                                                        | 00-52                    |
 | `%X` | Identisch mit "'t"                                                             |                          |
 | `%x` | Datum im Standardformat für das Gebiets Schema                                      | 06/27/19 für Englisch-US  |

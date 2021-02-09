@@ -5,12 +5,12 @@ ms.date: 12/14/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 60ad0e40f7e392bf240ee76a5902123c45a282fd
-ms.sourcegitcommit: 1628fd2a1f50aec2f31ffb1c451a3ce77c08983c
+ms.openlocfilehash: 8a2410dd2adcc1679ab203293b4c4e712b960278
+ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577240"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99975140"
 ---
 # <a name="about-automatic-variables"></a>Informationen zu automatischen Variablen
 
@@ -67,7 +67,7 @@ Wie in `$PSItem`. Enthält das aktuelle-Objekt im Pipeline Objekt. Sie können d
 
 Enthält ein Array von Werten für nicht deklarierte Parameter, die an eine Funktion, ein Skript oder einen Skriptblock übermittelt werden. Wenn Sie eine Funktion erstellen, können Sie die Parameter mit dem- `param` Schlüsselwort deklarieren oder indem Sie eine durch Trennzeichen getrennte Liste von Parametern nach dem Funktionsnamen in Klammern einfügen.
 
-In einer Ereignis Aktion enthält die- `$Args` Variable-Objekte, die die Ereignis Argumente des zu verarbeitenden Ereignisses darstellen. Diese Variable wird nur innerhalb des `Action` Blocks eines Ereignis Registrierungs Befehls aufgefüllt.
+In einer Ereignis Aktion enthält die- `$args` Variable-Objekte, die die Ereignis Argumente des zu verarbeitenden Ereignisses darstellen. Diese Variable wird nur innerhalb des `Action` Blocks eines Ereignis Registrierungs Befehls aufgefüllt.
 Der Wert dieser Variablen befindet sich auch in der **sourceargs** -Eigenschaft des **psiebargs** -Objekts, das `Get-Event` zurückgibt.
 
 ### <a name="consolefilename"></a>$ConsoleFileName
@@ -180,7 +180,7 @@ Enthält Informationen über den aktuellen Befehl, z. b. den Namen, die Paramete
 
 Ab PowerShell 3,0 `MyInvocation` verfügt über die folgenden neuen Eigenschaften.
 
-| Eigenschaft      | Beschreibung                                         |
+| Eigenschaft      | BESCHREIBUNG                                         |
 | ------------- | --------------------------------------------------- |
 | **PSScriptRoot**  | Enthält den vollständigen Pfad des aufgerufenen Skripts.   |
 |               | der aktuelle Befehl. Der Wert dieser Eigenschaft ist  |
@@ -368,7 +368,7 @@ Enthält den Namen der Kultur der Benutzeroberfläche (UI), die derzeit im Betri
 
 Enthält eine schreibgeschützte Hash Tabelle, in der Details zur PowerShell-Version angezeigt werden, die in der aktuellen Sitzung ausgeführt wird. Die Tabelle enthält die folgenden Elemente:
 
-| Eigenschaft                  | Beschreibung                                   |
+| Eigenschaft                  | BESCHREIBUNG                                   |
 | ------------------------- | --------------------------------------------- |
 | **PSVersion**             | Die PowerShell-Versionsnummer                 |
 | **PSEdition**             | Diese Eigenschaft hat den Wert "Desktop" für  |
