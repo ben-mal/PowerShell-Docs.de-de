@@ -1,16 +1,16 @@
 ---
 description: Beschreibt die Sonderzeichenfolgen, mit denen gesteuert wird, wie die nächsten Zeichen in der Sequenz von PowerShell interpretiert werden.
 Locale: en-US
-ms.date: 04/04/2020
+ms.date: 02/08/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_special_characters?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Special_Characters
-ms.openlocfilehash: c642bc69d9e67bd945e5687d7f7c35e039062194
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: b21ec1eb5ed0da52cf5eff01eaf3c220d117cf55
+ms.sourcegitcommit: 364c3fe46b2069b810107d840be59fe519ea7b4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99599631"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100100715"
 ---
 # <a name="about-special-characters"></a>Informationen zu Sonderzeichen
 
@@ -157,13 +157,28 @@ In diesem Beispiel wird das **nach-unten-Pfeil** Symbol (&#x2195;) ausgegeben.
 
 ## <a name="vertical-tab-v"></a>Senkrechter Tabulator (' v)
 
-Das horizontale `` `v `` Tabstopp Zeichen () wechselt zum nächsten vertikalen Tabstopp und schreibt die verbleibende Ausgabe an diesem Punkt. Dies hat keine Auswirkungen auf die standardmäßige Windows-Konsole.
+Der senkrechte `` `v `` Tabstopp Zeichen () wechselt zum nächsten vertikalen Tabstopp und schreibt die verbleibende Ausgabe an diesem Punkt. Das Rendering der vertikalen Registerkarte ist Gerät und Terminal abhängig.
 
 ```powershell
 Write-Host "There is a vertical tab`vbetween the words."
 ```
 
-Das folgende Beispiel zeigt die Ausgabe, die Sie auf einem Drucker oder einem anderen Konsolen Host erhalten.
+In den folgenden Beispielen wird die gerenderte Ausgabe der vertikalen Registerkarte in einigen gängigen Umgebungen veranschaulicht.
+
+In der Windows-Konsolen Host Anwendung wird ( `` `v `` ) als Sonderzeichen interpretiert, und es wird kein zusätzlicher Abstand hinzugefügt.
+
+```Output
+There is a vertical tab♂between the words.
+```
+
+Das [Windows-Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) rendert das vertikale Tabstopp Zeichen als Wagen Rücklauf-und Zeilenvorschub. Der Rest der Ausgabe wird am Anfang der nächsten Zeile ausgegeben.
+
+```Output
+There is a vertical tab
+between the words.
+```
+
+Auf Druckern oder UNIX-basierten Konsolen wechselt das vertikale Tabstopp Zeichen zur nächsten Zeile und schreibt die verbleibende Ausgabe an diesem Punkt.
 
 ```Output
 There is a vertical tab
