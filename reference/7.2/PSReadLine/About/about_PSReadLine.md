@@ -5,12 +5,12 @@ ms.date: 11/23/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen über psread Line
-ms.openlocfilehash: 4836abfec465ba7cdfb6800c1e60104fba19ce08
-ms.sourcegitcommit: 560a9f3c3148acab4655e91e8b07745ab74d5d26
+ms.openlocfilehash: b0c5950b2af6a866d0ffcfdd6ce7ad92a1763778
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "99601099"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500211"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -918,19 +918,39 @@ Beendet die aktuelle Bearbeitungs Gruppe, falls erforderlich, und ruft tabcomple
 
 - VI-Einfügemodus: `<Shift+Tab>`
 
-## <a name="miscellaneous-functions"></a>Sonstige Funktionen
+## <a name="prediction-functions"></a>Vorhersagefunktionen
 
 ### <a name="acceptnextsuggestionword"></a>Akzeptnextsuggestionword
 
-Akzeptieren Sie das nächste Wort des Inline-oder ausgewählten Vorschlags.
+Wenn Sie `InlineView` als Ansichts Stil für die Vorhersage verwenden, akzeptieren Sie das nächste Wort des Inline Vorschlags.
 
 - Die Bindung der Funktion ist aufgehoben.
 
 ### <a name="acceptsuggestion"></a>Accept-Vorschlag
 
-Akzeptieren Sie den aktuellen Inline-oder ausgewählten Vorschlag.
+Wenn Sie `InlineView` als Ansichts Stil für Vorhersagen verwenden, müssen Sie den aktuellen Inline Vorschlag akzeptieren.
 
 - Die Bindung der Funktion ist aufgehoben.
+
+### <a name="nextsuggestion"></a>Nextvorschlag
+
+Wenn Sie `ListView` als Ansichts Stil für die Vorhersage verwenden, navigieren Sie zum nächsten Vorschlag in der Liste.
+
+- Die Bindung der Funktion ist aufgehoben.
+
+### <a name="previoussuggestion"></a>Previousvorschlag
+
+Wenn Sie `ListView` als Ansichts Stil für die Vorhersage verwenden, navigieren Sie zu dem vorherigen Vorschlag in der Liste.
+
+- Die Bindung der Funktion ist aufgehoben.
+
+### <a name="switchpredictionview"></a>Switchvorhertionview
+
+Ändern Sie den Ansichts Stil für die Vorhersage zwischen `InlineView` und `ListView` .
+
+- Befehl: `<F2>`
+
+## <a name="miscellaneous-functions"></a>Sonstige Funktionen
 
 ### <a name="capturescreen"></a>CaptureScreen
 
@@ -1007,6 +1027,15 @@ Fügen Sie den Schlüssel ein.
 
 - Die Bindung der Funktion ist aufgehoben.
 
+### <a name="showcommandhelp"></a>Showcommandhelp
+
+Bietet eine Ansicht der vollständigen Cmdlet-Hilfe auf dem alternativen Bildschirm Puffer unter Verwendung eines Pager von **Microsoft. PowerShell. Pager**.
+
+- Befehl: `<F1>`
+- Ansehen `<F1>`
+- VI-Einfügemodus: `<F1>`
+- VI-Befehlsmodus: `<F1>`
+
 ### <a name="showkeybindings"></a>Showkeybindungen
 
 Alle gebundenen Schlüssel anzeigen.
@@ -1014,6 +1043,15 @@ Alle gebundenen Schlüssel anzeigen.
 - Befehl: `<Ctrl+Alt+?>`
 - Ansehen `<Ctrl+Alt+?>`
 - VI-Einfügemodus: `<Ctrl+Alt+?>`
+
+### <a name="showparameterhelp"></a>Showparameterhelp
+
+Bietet dynamische Hilfe für Parameter, indem Sie unter der aktuellen Befehlszeile wie angezeigt wird `MenuComplete` .
+
+- Befehl: `<Alt+h>`
+- Ansehen `<Alt+h>`
+- VI-Einfügemodus: `<Alt+h>`
+- VI-Befehlsmodus: `<Alt+h>`
 
 ### <a name="vicommandmode"></a>Vicommandmode
 
@@ -1392,7 +1430,7 @@ Diese Hilfsmethode wird für benutzerdefinierte Bindungen verwendet, die digitar
   [ref]$numericArg, 1)
 ```
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
 ### <a name="command-history"></a>Befehlsverlauf
 

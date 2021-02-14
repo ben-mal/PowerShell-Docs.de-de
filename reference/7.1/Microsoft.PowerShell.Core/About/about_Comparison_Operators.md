@@ -5,12 +5,12 @@ ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: 0ef3c68d73ae3e1d2040b3654e4f8ba45565717a
-ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
+ms.openlocfilehash: aa2d2d09fe0eb35c42c5ee84083c8ee29354cf8f
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98619906"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500175"
 ---
 # <a name="about-comparison-operators"></a>Informationen zu Vergleichs Operatoren
 
@@ -34,7 +34,7 @@ Mit Vergleichs Operatoren können Sie Werte vergleichen oder Werte suchen, die d
 |             | -notlike     | Zeichenfolge entspricht nicht dem Platzhalter Muster    |
 |             | -match       | Zeichenfolge entspricht dem Regex-Muster              |
 |             | -notmatch    | die Zeichenfolge entspricht nicht dem Regex-Muster.       |
-| Ersetzung | -Replace     | ersetzt Zeichen folgen, die einem Regex-Muster entsprechen |
+| Ersatz | -Replace     | ersetzt Zeichen folgen, die einem Regex-Muster entsprechen |
 | Containment | -contains    | die Sammlung enthält einen Wert.               |
 |             | -notcontains | die Sammlung enthält keinen Wert.       |
 |             | -in          | Wert ist in einer Sammlung                  |
@@ -47,7 +47,7 @@ Mit Vergleichs Operatoren können Sie Werte vergleichen oder Werte suchen, die d
 Standardmäßig wird bei allen Vergleichs Operatoren die Groß-/Kleinschreibung beachtet. Um die Groß-/Kleinschreibung für Vergleichs Operatoren zu erstellen, fügen Sie `c` nach dem ein `-` . Beispielsweise `-ceq` ist die Version von mit Beachtung der Groß-/Kleinschreibung `-eq` . Um die Groß-/Kleinschreibung nicht explizit explizit zu gestalten, fügen Sie eine `i` vor hinzu `-` . Beispielsweise `-ieq` ist die explizite Version von ohne Beachtung der Groß-/Kleinschreibung `-eq` .
 
 Wenn die Eingabe eines Operators ein skalarer Wert ist, gibt der Operator einen **booleschen** Wert zurück. Wenn die Eingabe eine Auflistung ist, gibt der Operator die Elemente der Auflistung zurück, die dem rechten Wert des Ausdrucks entsprechen.
-Wenn in der Auflistung keine Übereinstimmungen vorhanden sind, geben Vergleichs Operatoren ein leeres Array zurück. Beispiele:
+Wenn in der Auflistung keine Übereinstimmungen vorhanden sind, geben Vergleichs Operatoren ein leeres Array zurück. Beispiel:
 
 ```powershell
 $a = (1, 2 -eq 3)
@@ -414,7 +414,7 @@ Es ist auch möglich, reguläre Ausdrücke zum dynamischen Ersetzen von Text mit
 Im folgenden Beispiel `-replace` akzeptiert der-Operator einen Benutzernamen in der Form `DomainName\Username` und konvertiert in das- `Username@DomainName` Format:
 
 ```powershell
-$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$SearchExp = '^(?<DomainName>[\w-.]+)\\(?<Username>[\w-.]+)$'
 $ReplaceExp = '${Username}@${DomainName}'
 
 'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
@@ -429,9 +429,9 @@ John.Doe@Contoso.local
 >
 > - In PowerShell werden zwischen doppelten Anführungszeichen Variablen festgelegt und als Teil Ausdruck bezeichnet.
 > - In Regex-Such Zeichenfolgen gibt es das Ende der Zeile an.
-> - In Regex-Ersetzungs Zeichenfolgen gibt es erfasste Gruppen als solche an. Stellen Sie sicher, dass Sie entweder die regulären Ausdrücke zwischen einfachen Anführungszeichen platzieren oder ein Graviszeichen- `` ` `` Zeichen () einfügen.
+> - In Regex-Ersetzungs Zeichenfolgen bezeichnet sie erfasste Gruppen. Stellen Sie sicher, dass Sie die regulären Ausdrücke zwischen einfachen Anführungszeichen platzieren, oder fügen Sie vor Ihnen ein Graviszeichen- `` ` `` Zeichen () ein.
 
-Beispiele:
+Beispiel:
 
 ```powershell
 $1 = 'Goodbye'
@@ -443,7 +443,7 @@ $1 = 'Goodbye'
 # Output: Hello Universe
 ```
 
-`$$` in Regex steht für einen Literalwert `$` . Dies `$$` in der Ersetzungs Zeichenfolge zum Einschließen eines Literals `$` in den resultierenden Austausch. Beispiele:
+`$$` in Regex steht für einen Literalwert `$` . Dies `$$` in der Ersetzungs Zeichenfolge zum Einschließen eines Literals `$` in den resultierenden Austausch. Beispiel:
 
 ```powershell
 '5.72' -replace '(.+)', '$ $1' # Output: $ 5.72
@@ -455,7 +455,7 @@ Weitere Informationen finden Sie unter [about_Regular_Expressions](about_Regular
 
 ### <a name="substituting-in-a-collection"></a>Ersetzen in einer Auflistung
 
-Wenn der `<input>` für den `-replace` Operator eine Auflistung ist, wendet PowerShell die Ersetzung auf jeden Wert in der Auflistung an. Beispiele:
+Wenn der `<input>` für den `-replace` Operator eine Auflistung ist, wendet PowerShell die Ersetzung auf jeden Wert in der Auflistung an. Beispiel:
 
 ```powershell
 "B1","B2","B3","B4","B5" -replace "B", 'a'

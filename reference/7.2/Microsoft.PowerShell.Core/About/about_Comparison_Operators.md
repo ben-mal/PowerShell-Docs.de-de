@@ -5,12 +5,12 @@ ms.date: 01/20/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: 2bd2aa825d09078f37dba1f99fa64584dacd324d
-ms.sourcegitcommit: 94d597c4fb38793bc49ca7610e2c9973b1e577c2
+ms.openlocfilehash: 2ccd631083ddc06d25f2c3b4733223cca2e89d44
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "99604856"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500245"
 ---
 # <a name="about-comparison-operators"></a>Informationen zu Vergleichs Operatoren
 
@@ -34,7 +34,7 @@ Mit Vergleichs Operatoren können Sie Werte vergleichen oder Werte suchen, die d
 |             | -notlike     | Zeichenfolge entspricht nicht dem Platzhalter Muster    |
 |             | -match       | Zeichenfolge entspricht dem Regex-Muster              |
 |             | -notmatch    | die Zeichenfolge entspricht nicht dem Regex-Muster.       |
-| Ersetzung | -Replace     | ersetzt Zeichen folgen, die einem Regex-Muster entsprechen |
+| Ersatz | -Replace     | ersetzt Zeichen folgen, die einem Regex-Muster entsprechen |
 | Containment | -contains    | die Sammlung enthält einen Wert.               |
 |             | -notcontains | die Sammlung enthält keinen Wert.       |
 |             | -in          | Wert ist in einer Sammlung                  |
@@ -414,7 +414,7 @@ Es ist auch möglich, reguläre Ausdrücke zum dynamischen Ersetzen von Text mit
 Im folgenden Beispiel `-replace` akzeptiert der-Operator einen Benutzernamen in der Form `DomainName\Username` und konvertiert in das- `Username@DomainName` Format:
 
 ```powershell
-$SearchExp = '^(?<Username>[\w-.]+)\\(?<DomainName>[\w-.]+)$'
+$SearchExp = '^(?<DomainName>[\w-.]+)\\(?<Username>[\w-.]+)$'
 $ReplaceExp = '${Username}@${DomainName}'
 
 'Contoso.local\John.Doe' -replace $SearchExp,$ReplaceExp
@@ -429,7 +429,7 @@ John.Doe@Contoso.local
 >
 > - In PowerShell werden zwischen doppelten Anführungszeichen Variablen festgelegt und als Teil Ausdruck bezeichnet.
 > - In Regex-Such Zeichenfolgen gibt es das Ende der Zeile an.
-> - In Regex-Ersetzungs Zeichenfolgen gibt es erfasste Gruppen als solche an. Stellen Sie sicher, dass Sie entweder die regulären Ausdrücke zwischen einfachen Anführungszeichen platzieren oder ein Graviszeichen- `` ` `` Zeichen () einfügen.
+> - In Regex-Ersetzungs Zeichenfolgen bezeichnet sie erfasste Gruppen. Stellen Sie sicher, dass Sie die regulären Ausdrücke zwischen einfachen Anführungszeichen platzieren, oder fügen Sie vor Ihnen ein Graviszeichen- `` ` `` Zeichen () ein.
 
 Beispiel:
 
