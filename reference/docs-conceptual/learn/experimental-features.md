@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: Verwenden experimenteller Features in PowerShell
 description: In diesem Artikel wird beschrieben, welche experimentellen Features verfügbar sind und wie sie verwendet werden.
-ms.openlocfilehash: be02829c27ff5d8babaf173d2ee7ebbfc7614773
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 556ae8d877b670b119b7b5b958a52488aad16241
+ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879353"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100500122"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Verwenden experimenteller Features in PowerShell
 
@@ -38,6 +38,7 @@ Dieser Artikel beschreibt, welche experimentellen Features verfügbar sind und w
 | PSCultureInvariantReplaceOperator                          |         |         | &check; | &check; |
 | PSNotApplyErrorActionToStderr                              |         |         | &check; | &check; |
 | PSSubsystemPluginModel                                     |         |         | &check; | &check; |
+| PSAnsiProgress                                             |         |         |         | &check; |
 | PSAnsiRendering                                            |         |         |         | &check; |
 
 ## <a name="microsoftpowershellutilitypsmanagebreakpointsinrunspace"></a>Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace
@@ -116,6 +117,24 @@ Zusammen mit dem Zugriff auf `$PSStyle` werden dadurch Änderungen an der PowerS
 - Die Methode `StringDecorated Substring(int contentLength)` gibt eine Teilzeichenfolge zurück, die beim Index 0 beginnt und bis zur Inhaltslänge reicht, die nicht Teil der ANSI-Escapesequenzen ist. Dies ist notwendig, damit Zeichenfolgen durch Tabellenformatierungen abgeschnitten und ANSI-Escapesequenzen beibehalten werden können, die keinen druckbaren Zeichenbereich belegen.
 - Die Methode `string ToString()` bleibt unverändert und gibt die Klartextversion der Zeichenfolge zurück.
 - Die Methode `string ToString(bool Ansi)` gibt die unformatierte ANSI Embedded-Zeichenfolge zurück, wenn der Parameter `Ansi` „true“ ist. Andernfalls wird eine Klartextversion zurückgegeben, aus der die ANSI-Escapesequenzen entfernt wurden.
+
+## <a name="psansiprogress"></a>PSAnsiProgress
+
+Dieses Experiment wurde in PowerShell 7.2 hinzugefügt. Mit der Funktion wird das `$PSStyle.Progress`-Mitglied hinzugefügt, und Sie können das Rendern von Statusansichtsleisten steuern.
+
+- `$PSStyle.Progress.Style`: Eine ANSI-Zeichenfolge, die den Renderingstil festlegt.
+- `$PSStyle.Progress.MaxWidth`: Legt die maximale Breite der Ansicht fest. Für die Konsolenbreite auf `0` festlegen.
+  Der Standardwert lautet `120`.
+- `$PSStyle.Progress.View`: Eine Enumeration mit den Werten `Minimal` und `Classic`. `Classic` ist das vorhandene Rendering ohne Änderungen. `Minimal` ist ein einzeiliges minimales Rendering. `Minimal` ist die Standardeinstellung.
+
+Im folgenden Beispiel wird der Renderingstil auf eine minimale Statusanzeige aktualisiert.
+
+```powershell
+$PSStyle.Progress.View.Minimal
+```
+
+> [!NOTE]
+> Um dieses Feature verwenden zu können, muss das experimentelle Feature **PSAnsiRendering** aktiviert sein.
 
 ## <a name="pscommandnotfoundsuggestion"></a>PSCommandNotFoundSuggestion
 
