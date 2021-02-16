@@ -7,12 +7,12 @@ ms.date: 08/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ConvertTo-Html
-ms.openlocfilehash: 27a1d2994dee46b9e5bfd54132ff4a665330c2b4
-ms.sourcegitcommit: 9a6b6714ded4edb5119f1b82a253608018ea6b98
+ms.openlocfilehash: 1eade078765f93713da1f665e3ad6f062a1826d9
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "93219415"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529939"
 ---
 # ConvertTo-Html
 
@@ -69,7 +69,7 @@ Der Befehl verwendet das `Get-Alias` Cmdlet, um die Aliase zu erhalten. Der Pipe
 ### Beispiel 3: Erstellen einer Webseite zum Anzeigen von PowerShell-Ereignissen
 
 ```powershell
-`Get-EventLog` -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
+Get-EventLog -LogName "Windows PowerShell" | ConvertTo-Html | Out-File pslog.htm
 ```
 
 Dieser Befehl erstellt eine HTML-Seite mit `pslog.htm` dem Namen, auf der die Ereignisse im Windows PowerShell-Ereignisprotokoll auf dem lokalen Computer angezeigt werden.
@@ -153,7 +153,7 @@ Dieser Befehl verwendet das `Get-EventLog` Cmdlet, um Ereignisse aus dem Windows
 
 Er verwendet einen Pipeline Operator ( `|` ), um die Ereignisse an das `ConvertTo-Html` Cmdlet zu senden, das die Ereignisse in das HTML-Format konvertiert.
 
-Der `ConvertTo-Html` Befehl verwendet den **Property** -Parameter, um nur die Eigenschaften " **ID** ", " **Level** " und " **Task** " des Ereignisses auszuwählen.
+Der `ConvertTo-Html` Befehl verwendet den **Property** -Parameter, um nur die Eigenschaften " **ID**", " **Level**" und " **Task** " des Ereignisses auszuwählen.
 
 ### Beispiel 9: Erstellen einer Webseite zum Anzeigen der angegebenen Dienste
 
@@ -170,7 +170,7 @@ Get-Service A* |
 Invoke-Item Services.htm
 ```
 
-Mit diesem Befehl wird eine Webseite erstellt und geöffnet, auf der die Dienste auf dem Computer angezeigt werden, die mit beginnen. Sie verwendet die Parameter **Title** , **Body** , **precontent** und **postcontent** von, `ConvertTo-Html` um die Ausgabe anzupassen.
+Mit diesem Befehl wird eine Webseite erstellt und geöffnet, auf der die Dienste auf dem Computer angezeigt werden, die mit beginnen. Sie verwendet die Parameter **Title**, **Body**, **precontent** und **postcontent** von, `ConvertTo-Html` um die Ausgabe anzupassen.
 
 Der erste Teil des Befehls verwendet das- `Get-Service` Cmdlet, um die Dienste auf dem Computer zu erhalten, die mit beginnen. Der Befehl verwendet einen Pipeline Operator ( `|` ), um die Ergebnisse an das `ConvertTo-Html` Cmdlet zu senden. Der Befehl verwendet auch das `Out-File` Cmdlet, um die Ausgabe an die Services.htm Datei zu senden.
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 
 ### -Transitional
 
-Ändert den **DOCTYPE** in **XHTML Transitional DTD** , der Standard **DOCTYPE** ist **XHTML strict DTD**.
+Ändert den **DOCTYPE** in **XHTML Transitional DTD**, der Standard **DOCTYPE** ist **XHTML strict DTD**.
 
 Dieser Parameter wurde in PowerShell 6,0 eingeführt.
 

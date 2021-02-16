@@ -1,16 +1,16 @@
 ---
 description: Beschreibt die Verwendung von Platzhalter Zeichen in PowerShell.
 Locale: en-US
-ms.date: 03/28/2019
+ms.date: 02/13/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_wildcards?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Wildcards
-ms.openlocfilehash: b5f13fdbfbc24e19e5ad0b1cd6ecc1b99f68914f
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 40620e54bb889d683192b346f3ba1c139895e4d0
+ms.sourcegitcommit: 9777152e026c47ba8d319593051416054cb62246
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99596548"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100529973"
 ---
 # <a name="about-wildcards"></a>Informationen zu Platzhaltern
 
@@ -20,7 +20,9 @@ Beschreibt die Verwendung von Platzhalter Zeichen in PowerShell.
 
 ## <a name="long-description"></a>LANGE BESCHREIBUNG
 
-Platzhalter Zeichen stellen ein oder mehrere Zeichen dar. Sie können Sie zum Erstellen von Wort Mustern in Befehlen verwenden. Wenn Sie z. b. alle Dateien im `C:\Techdocs` Verzeichnis mit der `.ppt` Dateinamenerweiterung erhalten möchten, geben Sie Folgendes ein:
+Platzhalter Zeichen stellen ein oder mehrere Zeichen dar. Sie können Sie zum Erstellen von Wort Mustern in Befehlen verwenden. Platzhalter Ausdrücke werden mit dem- `-like` Operator oder mit einem beliebigen Parameter verwendet, der Platzhalter akzeptiert.
+
+Geben Sie z. b. Folgendes ein, um alle Dateien im `C:\Techdocs` Verzeichnis mit einer `.ppt` Dateinamenerweiterung abzugleichen:
 
 ```powershell
 Get-ChildItem C:\Techdocs\*.ppt
@@ -28,9 +30,11 @@ Get-ChildItem C:\Techdocs\*.ppt
 
 In diesem Fall stellt das Platzhalter `*` Zeichen Sternchen () alle Zeichen dar, die vor der `.ppt` Dateinamenerweiterung angezeigt werden.
 
+Platzhalter Ausdrücke sind einfacher als reguläre Ausdrücke. Weitere Informationen finden Sie unter [about_Regular_Expressions](./about_Regular_Expressions.md).
+
 PowerShell unterstützt die folgenden Platzhalter Zeichen:
 
-|Platzhalter|BESCHREIBUNG               |Beispiel |Match        |Keine Entsprechung|
+|Platzhalter|Beschreibung               |Beispiel |Match        |Keine Entsprechung|
 |--------|--------------------------|--------|-------------|--------|
 |\*      |Entsprechung für NULL oder mehr Zeichen | ein\*  | AA, AG, Apple | Bananen |
 |?       |Mit einem Zeichen an dieser Position vergleichen | ? n | ein, in, ein | an |
