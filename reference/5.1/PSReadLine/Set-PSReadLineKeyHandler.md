@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.PSReadLine2.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: PSReadline
-ms.date: 12/07/2018
+ms.date: 02/16/2021
 online version: https://docs.microsoft.com/powershell/module/psreadline/set-psreadlinekeyhandler?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PSReadLineKeyHandler
-ms.openlocfilehash: 8eefd819b59cf8d0050484c6aad3058bc6e7753a
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 220b38f51afab619a57473be27b1139b878eb7e9
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224900"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563226"
 ---
 # Set-PSReadLineKeyHandler
 
@@ -84,6 +84,9 @@ Accept wildcard characters: False
 Der Schlüssel oder die Sequenz von Schlüsseln, die an eine Funktion oder einen Skriptblock gebunden werden sollen. Verwenden Sie eine einzelne Zeichenfolge, um eine einzelne Bindung anzugeben. Wenn die Bindung eine Sequenz von Schlüsseln ist, trennen Sie die Schlüssel durch ein Komma, wie im folgenden Beispiel gezeigt:
 
 `Ctrl+X,Ctrl+L`
+
+> [!NOTE]
+> Ab psread Line 2.0.0 **wird die** **Groß-/Kleinschreibung** berücksichtigt. Dies bedeutet, dass `Ctrl+X` `Ctrl+x` unterschiedliche Bindungen erstellt werden.
 
 Dieser Parameter akzeptiert ein Array von Zeichen folgen. Jede Zeichenfolge ist eine separate Bindung und keine Sequenz von Schlüsseln für eine einzelne Bindung.
 

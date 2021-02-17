@@ -3,12 +3,12 @@ ms.date: 01/04/2021
 ms.topic: reference
 title: Schreiben eines PowerShell-Binärmoduls
 description: Schreiben eines PowerShell-Binärmoduls
-ms.openlocfilehash: 8c644391008cb97c1206f985f0f5eca9d7dfcc9e
-ms.sourcegitcommit: 04faa7dc1122bce839295d4891bd8b2f0ecb06ef
+ms.openlocfilehash: 0270b9b3745b7ffd187f2089414ea7759515d96b
+ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97879370"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100563325"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Schreiben eines PowerShell-Modul Manifests
 
@@ -57,7 +57,7 @@ In der folgenden Tabelle werden die Elemente beschrieben, die in einem Modul Man
 |Element|Standard|BESCHREIBUNG|
 |-------------|-------------|-----------------|
 |**RootModule**<br /> Typ: `String`|`<empty string>`|Skript Modul oder binäre Modul Datei, die diesem Manifest zugeordnet ist. In früheren Versionen von PowerShell wurde dieses Element als " **moduletoprocess**" bezeichnet.<br /> Mögliche Typen für das Stamm Modul können leer sein, wodurch ein **Manifest** -Modul, der Name eines Skript Moduls ( `.psm1` ) oder der Name eines binären Moduls ( `.exe` oder) erstellt wird `.dll` . Wenn Sie den Namen eines Modul Manifests ( `.psd1` ) oder einer Skriptdatei ( `.ps1` ) in diesem Element platzieren, wird ein Fehler verursacht. <br /> Beispiel: `RootModule = 'ScriptModule.psm1'`|
-|**ModuleVersion**<br /> Typ: `Version`|`'0.0.1'`|Versionsnummer dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest`   verwendet den Standardwert. Die Zeichenfolge muss z. b. in den-Typ konvertiert werden können `Version` `#.#.#.#.#` . `Import-Module` lädt das erste gefundene Modul auf dem **$PSModulePath** , das mit dem Namen übereinstimmt, und verfügt mindestens über eine " **moduleversion**", wie der **MinimumVersion** -Parameter. Um eine bestimmte Version zu importieren, verwenden Sie den "Requirements `Import-Module` **dversion** "-Parameter des Cmdlets.<br /> Beispiel: `ModuleVersion = '1.0'`|
+|**ModuleVersion**<br /> Typ: `Version`|`'0.0.1'`|Versionsnummer dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest`   verwendet den Standardwert. Die Zeichenfolge muss z. b. in den-Typ konvertiert werden können `Version` `#.#.#.#` . `Import-Module` lädt das erste gefundene Modul auf dem **$PSModulePath** , das mit dem Namen übereinstimmt, und verfügt mindestens über eine " **moduleversion**", wie der **MinimumVersion** -Parameter. Um eine bestimmte Version zu importieren, verwenden Sie den "Requirements `Import-Module` **dversion** "-Parameter des Cmdlets.<br /> Beispiel: `ModuleVersion = '1.0'`|
 |**GUID**<br /> Typ: `GUID`|`'<GUID>'`|ID, die zur eindeutigen Identifizierung dieses Moduls verwendet wird. Wenn kein Wert angegeben wird, wird `New-ModuleManifest` der Wert von automatisch generiert. Ein Modul kann zurzeit nicht nach **GUID** importiert werden. <br /> Beispiel: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
 |**Autor**<br /> Typ: `String`|`'<Current user>'`|Autor dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den aktuellen Benutzer. <br /> Beispiel: `Author = 'AuthorNameHere'`|
 |**CompanyName**<br /> Typ: `String`|`'Unknown'`|Unternehmen oder Hersteller dieses Moduls. Wenn kein Wert angegeben ist, `New-ModuleManifest` verwendet den Standardwert.<br /> Beispiel: `CompanyName = 'Fabrikam'`|
@@ -232,7 +232,7 @@ PrivateData = @{
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 
