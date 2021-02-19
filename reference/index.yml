@@ -9,12 +9,12 @@ metadata:
   author: sdwheeler
   ms.author: sewhee
   ms.date: 09/04/2019
-  ms.openlocfilehash: 14d9c28093ec91351048819e719ab80d5dd9c501
-  ms.sourcegitcommit: a073c7db07d765ab45f52345ab98c7660582bc98
+  ms.openlocfilehash: f469ddb8179b1b2c937478e776fb0383c22357e1
+  ms.sourcegitcommit: 14f45157bb60db7ef4c321c1a525c836698cafa9
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/29/2020
-  ms.locfileid: "87377502"
+  ms.lasthandoff: 02/18/2021
+  ms.locfileid: "101101286"
 highlightedContent:
   items:
   - title: Überblick
@@ -139,18 +139,18 @@ additionalContent:
   - title: PowerShell-Team
     summary: Kommunikation mit dem PowerShell-Team
     items:
-    - title: Offizieller PowerShell-Blog
+    - title: PowerShell-Teamblog
       summary: Offizielle Nachrichten und Ankündigungen
       url: https://devblogs.microsoft.com/powershell/
+    - title: PowerShell-Communityblog
+      summary: Ein Ort, wo die Community PowerShell erlernen und Erkenntnisse austauschen kann.
+      url: https://devblogs.microsoft.com/powershell-community/
     - title: PowerShell-Team auf Twitter
       summary: PowerShell-Nachrichten –280-Zeichen zugleich
       url: https://twitter.com/PowerShell_Team
-    - title: PowerShell UserVoice
-      summary: Der Ort für Bugs in Windows PowerShell
-      url: https://windowsserver.uservoice.com/forums/301869-powershell
     - title: GitHub Issues
       summary: Der Ort für Bugs im aktuellen Release
       url: https://github.com/powershell/powershell/issues
-    - title: Hi Skripter! Blog
-      summary: Ein Ort für Informationen über PowerShell und Geschichten zur Automation
-      url: https://devblogs.microsoft.com/scripting/
+    - title: PowerShell UserVoice
+      summary: Der Ort für Bugs in Windows PowerShell
+      url: https://windowsserver.uservoice.com/forums/301869-powershell
