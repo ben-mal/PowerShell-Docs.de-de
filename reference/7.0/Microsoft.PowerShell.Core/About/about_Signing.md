@@ -6,12 +6,12 @@ ms.date: 07/31/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Signing
-ms.openlocfilehash: 202af7ea491b8fa020ab2ff7ae6b1cc697829b6b
-ms.sourcegitcommit: 021ea294327dec542ec040619dac0d2171397a90
+ms.openlocfilehash: e6b9ac8b096ff2607dc6b68512a998ac00bd1796
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97804128"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685701"
 ---
 # <a name="about-signing"></a>Informationen zum Signieren
 
@@ -216,7 +216,7 @@ Die digitale Signatur in einem Skript ist gültig, bis das Signaturzertifikat ab
 
 Da die meisten Signatur Zertifikate nur ein Jahr lang gültig sind, stellt die Verwendung eines Zeitstempel Servers sicher, dass Benutzer Ihr Skript für viele Jahre verwenden können.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Execution_Policies](about_Execution_Policies.md)
 

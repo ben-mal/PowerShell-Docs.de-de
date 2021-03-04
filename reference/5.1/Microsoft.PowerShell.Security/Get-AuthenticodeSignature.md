@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AuthenticodeSignature
-ms.openlocfilehash: 910897ae1e41b2e4bd082977ac2904388f924769
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: cf19973acf799b25b8b598fad70f84943f958e1d
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214276"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685895"
 ---
 # Get-AuthenticodeSignature
 
@@ -41,7 +41,9 @@ Get-AuthenticodeSignature -SourcePathOrExtension <String[]> -Content <Byte[]> [<
 
 ## DESCRIPTION
 
-Das- `Get-AuthenticodeSignature` Cmdlet ruft Informationen über die Authenticode-Signatur für einen Datei-oder Dateiinhalt als Bytearray ab. Wenn die Datei nicht signiert ist, werden die Informationen abgerufen, aber die Felder sind leer.
+Das- `Get-AuthenticodeSignature` Cmdlet ruft Informationen über die Authenticode-Signatur für einen Datei-oder Dateiinhalt als Bytearray ab.
+Wenn die Datei sowohl als eingebettete als auch als Windows-Katalog signierte Datei verwendet wird, wird die Windows-Katalog Signatur verwendet.
+Wenn die Datei nicht signiert ist, werden die Informationen abgerufen, aber die Felder sind leer.
 
 ## BEISPIELE
 
@@ -119,7 +121,7 @@ Accept wildcard characters: True
 
 ### -Literalpath
 
-Gibt den Pfad zur Datei an, die überprüft wird. Im Gegensatz zu **FilePath** wird der Wert des **LiteralPath** -Parameters genau wie eingegeben verwendet. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad ein Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapezeichen zu interpretieren.
+Gibt den Pfad zur Datei an, die überprüft wird. Im Gegensatz zu **FilePath** wird der Wert des **LiteralPath**-Parameters genau wie eingegeben verwendet. Es werden keine Zeichen als Platzhalter interpretiert. Wenn der Pfad ein Escapezeichen enthält, müssen Sie ihn in einfache Anführungszeichen einschließen. Einfache Anführungszeichen veranlassen PowerShell, Zeichen nicht als Escapezeichen zu interpretieren.
 
 ```yaml
 Type: System.String[]

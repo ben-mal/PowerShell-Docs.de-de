@@ -1,14 +1,14 @@
 ---
-ms.date: 09/07/2018
+ms.date: 03/01/2021
 ms.topic: reference
 title: Genehmigte Verben für PowerShell-Befehle
 description: Genehmigte Verben für PowerShell-Befehle
-ms.openlocfilehash: fc1ff989ae86862e0f9cc24d8bcba2ff02ef68cc
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 277472f141eb1ef2b7b0f19801c622a899e93665
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "93355101"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686081"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Genehmigte Verben für PowerShell-Befehle
 
@@ -57,7 +57,7 @@ Verwenden Sie das Verb `Get`, um Informationen über eine Ressource (z. B. eine
 
 ### <a name="invoke-vs-start"></a>Invoke vs. Start
 
-Verwenden Sie das Verb `Invoke`, um synchrone Vorgänge auszuführen, z. B. das Ausführen eines Befehls und das Warten, bis dieser Vorgang abgeschlossen ist. Verwenden Sie das Verb `Start`, um asynchrone Vorgänge zu starten (z. B. einen autonomen Prozess).
+Verwenden Sie das Verb `Invoke`, um synchrone Vorgänge auszuführen, z. B. das Ausführen eines Befehls und das Warten, bis dieser Vorgang abgeschlossen ist. Verwenden `Start` Sie das Verb, um asynchrone Vorgänge (z. b. das Starten eines autonomen Prozesses) zu starten.
 
 ### <a name="ping-vs-test"></a>Ping vs. Test
 

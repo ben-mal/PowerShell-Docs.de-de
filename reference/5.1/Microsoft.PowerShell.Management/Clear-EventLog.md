@@ -7,12 +7,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-eventlog?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-EventLog
-ms.openlocfilehash: 695a13d4fbbf60caadeed994c1aa9c36432be917
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: af1c808b22a812700857e756136fd570fa0acc35
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93215564"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685909"
 ---
 # Clear-EventLog
 
@@ -27,11 +27,9 @@ Clear-EventLog [-LogName] <String[]> [[-ComputerName] <String[]>] [-WhatIf] [-Co
 
 ## DESCRIPTION
 
-Mit dem- `Clear-EventLog` Cmdlet werden alle Einträge aus den angegebenen Ereignisprotokollen auf dem lokalen Computer oder auf Remote Computern gelöscht.
-Zum verwenden `Clear-EventLog` von müssen Sie Mitglied der Gruppe "Administratoren" auf dem betroffenen Computer sein.
+Mit dem- `Clear-EventLog` Cmdlet werden alle Einträge aus den angegebenen Ereignisprotokollen auf dem lokalen Computer oder auf Remote Computern gelöscht. Zum verwenden `Clear-EventLog` von müssen Sie Mitglied der Gruppe "Administratoren" auf dem betroffenen Computer sein.
 
-Die Cmdlets, die das **EventLog** -Substantiv (die EventLog-Cmdlets) enthalten, funktionieren nur in klassischen Ereignisprotokollen.
-Verwenden Sie das Cmdlet "Get-WinEvent", um Ereignisse aus Protokollen zu erhalten, die die Windows-Ereignisprotokoll Technologie in Windows Vista und höheren Versionen von Windows verwenden.
+Die Cmdlets, die das **EventLog** -Substantiv (die EventLog-Cmdlets) enthalten, funktionieren nur in klassischen Ereignisprotokollen. Verwenden Sie das Cmdlet "Get-WinEvent", um Ereignisse aus Protokollen zu erhalten, die die Windows-Ereignisprotokoll Technologie in Windows Vista und höheren Versionen von Windows verwenden.
 
 ## BEISPIELE
 
@@ -96,14 +94,11 @@ Beachten Sie, dass den System- und Sicherheitsprotokollen einige Einträge nach 
 
 ### -ComputerName
 
-Gibt einen Remotecomputer an.
-Die Standardeinstellung ist der lokale Computer.
+Gibt einen Remotecomputer an. Die Standardeinstellung ist der lokale Computer.
 
-Geben Sie den NetBIOS-Namen, eine IP-Adresse oder den vollqualifizierten Domänennamen eines Remotecomputers ein.
-Um den lokalen Computer anzugeben, geben Sie den Computernamen, einen Punkt (.) oder %%amp;quot;localhost%%amp;quot; ein.
+Geben Sie den NetBIOS-Namen, eine IP-Adresse oder den vollqualifizierten Domänennamen eines Remotecomputers ein. Um den lokalen Computer anzugeben, geben Sie den Computernamen, einen Punkt (.) oder %%amp;quot;localhost%%amp;quot; ein.
 
-Dieser Parameter beruht nicht auf Windows PowerShell-Remoting.
-Sie können den **Computername** -Parameter `Get-EventLog` auch dann verwenden, wenn der Computer nicht für das Ausführen von Remote Befehlen konfiguriert ist.
+Dieser Parameter beruht nicht auf Windows PowerShell-Remoting. Sie können den **Computername** -Parameter `Get-EventLog` auch dann verwenden, wenn der Computer nicht für das Ausführen von Remote Befehlen konfiguriert ist.
 
 ```yaml
 Type: System.String[]
@@ -119,10 +114,10 @@ Accept wildcard characters: False
 
 ### -LogName
 
-Gibt die Ereignisprotokolle an.
-Geben Sie den Protokollnamen (den Wert der Log-Eigenschaft, nicht %%amp;quot;LogDisplayName%%amp;quot;) von Ereignisprotokollen durch Kommas getrennt ein.
-Platzhalterzeichen sind nicht zulässig.
-Dieser Parameter ist erforderlich.
+Gibt die Ereignisprotokolle an. Geben Sie den Protokollnamen (den Wert der **Log** -Eigenschaft nicht den **LogDisplayName**) eines oder mehrerer Ereignisprotokolle ein, die durch Kommas getrennt sind. Platzhalterzeichen sind nicht zulässig. Dieser Parameter ist erforderlich.
+
+> [!IMPORTANT]
+> Dieser Parameter soll Werte aus der Pipeline über den Eigenschaftsnamen akzeptieren. Es gibt jedoch einen Fehler, der verhindert, dass dies funktioniert. Sie müssen einen Wert direkt mit dem-Parameter übergeben.
 
 ```yaml
 Type: System.String[]

@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 09/08/2020
+ms.date: 02/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: c54efeb79f4129b55e078a1ccf9d46afc2e754ab
-ms.sourcegitcommit: fb9bafd041e3615b9dc9fb77c9245581b705cd02
+ms.openlocfilehash: 584ca877cedfe1494f8386af75f9f1911a5b8f15
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725169"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685653"
 ---
 # ForEach-Object
 
@@ -42,7 +42,7 @@ ForEach-Object [-InputObject <PSObject>] -Parallel <ScriptBlock> [-ThrottleLimit
  [-TimeoutSeconds <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## Beschreibung
+## BESCHREIBUNG
 
 Das- `ForEach-Object` Cmdlet führt einen Vorgang für jedes Element in einer Auflistung von Eingabe Objekten aus. Die Eingabe Objekte können an das Cmdlet weitergeleitet oder mithilfe des **Inputobject** -Parameters angegeben werden.
 
@@ -383,6 +383,44 @@ Output: 5
 
 `Output: 3` wird nie geschrieben, da der parallele ScriptBlock für diese Iterationen beendet wurde.
 
+### Beispiel 17: übergeben von Variablen in einem Skript für einen genten parallelen Skript-scriptblockset
+
+Sie können eine Variable außerhalb eines Bereichs bezogenen `Foreach-Object -Parallel` Scriptblocks erstellen und innerhalb von ScriptBlock mit dem `$using` Schlüsselwort verwenden.
+
+```powershell
+$test1 = 'TestA'
+1..2 | Foreach-Object -Parallel {
+    $using:test1
+}
+```
+
+```Output
+TestA
+TestA
+```
+
+```powershell
+# You CANNOT create a variable inside a scoped scriptblock
+# to be used in a nested foreach parallel scriptblock.
+$test1 = 'TestA'
+1..2 | Foreach-Object -Parallel {
+    $using:test1
+    $test2 = 'TestB'
+    1..2 | Foreach-Object -Parallel {
+        $using:test2
+    }
+}
+```
+
+```Output
+Line |
+   2 |  1..2 | Foreach-Object -Parallel {
+     |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The value of the using variable '$using:test2' cannot be retrieved because it has not been set in the local session.
+```
+
+Der geschsted ScriptBlock kann nicht auf die Variable zugreifen, `$test2` und es wird ein Fehler ausgelöst.
+
 ## Parameter
 
 ### -Argumentlist
@@ -531,7 +569,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 
-Gibt an, wie viele Skriptblöcke parallel ausgeführt werden. Eingabe Objekte werden blockiert, bis die Anzahl der ausgefallenen Skriptblöcke unter den **throttlelimit** fällt. Der Standardwert ist `5`.
+Gibt an, wie viele Skriptblöcke parallel ausgeführt werden. Eingabe Objekte werden blockiert, bis die Anzahl der ausgefallenen Skriptblöcke unter den **throttlelimit** fällt. Standardwert: `5`.
 
 Dieser Parameter wurde in PowerShell 7,0 eingeführt.
 
@@ -631,13 +669,13 @@ Sie können jedes beliebige Objekt über die Pipeline an dieses Cmdlet übergebe
 
 Dieses Cmdlet gibt Objekte zurück, die von der Eingabe bestimmt werden.
 
-## Hinweise
+## Notizen
 
 - Das- `ForEach-Object` Cmdlet funktioniert ähnlich wie die **foreach** -Anweisung, mit dem Unterschied, dass Sie Eingaben nicht an eine **foreach** -Anweisung übergeben können. Weitere Informationen zur **foreach** -Anweisung finden Sie unter [about_Foreach](./About/about_Foreach.md).
 
 - Ab PowerShell 4,0 `Where` wurden-und-Methoden für die Verwendung mit-Auflistungen `ForEach` hinzugefügt. Weitere Informationen zu diesen neuen Methoden finden Sie hier [about_arrays](./About/about_Arrays.md)
 
-- Der `ForEach-Object -Parallel` Parametersatz verwendet die interne PowerShell-API, um jeden Skriptblock auszuführen. Dies ist deutlich mehr Aufwand als `ForEach-Object` bei der sequenziellen Verarbeitung. Es ist wichtig, **parallel** zu verwenden, wenn der mehr Aufwand für die parallele Ausführung im Vergleich zu den vom Skriptblock ausgeführten Arbeiten gering ist. Beispiele:
+- Der `ForEach-Object -Parallel` Parametersatz verwendet die interne PowerShell-API, um jeden Skriptblock auszuführen. Dies ist deutlich mehr Aufwand als `ForEach-Object` bei der sequenziellen Verarbeitung. Es ist wichtig, **parallel** zu verwenden, wenn der mehr Aufwand für die parallele Ausführung im Vergleich zu den vom Skriptblock ausgeführten Arbeiten gering ist. Beispiel:
 
   - Rechenintensive Skripts auf mehr Kern Computern
   - Skripts, die Zeit für das warten auf Ergebnisse oder Datei Vorgänge aufwenden

@@ -6,12 +6,12 @@ ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/psscheduledjob/about/about_scheduled_jobs_troubleshooting?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Scheduled_Jobs_Troubleshooting
-ms.openlocfilehash: 924205edb9d44724cfef201d84baa304ecde67ad
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: aac2133cee4abdd7e50e7b433104b9578d74b0a8
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93221919"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685863"
 ---
 # <a name="about-scheduled-jobs-troubleshooting"></a>Informationen zur Problembehandlung bei geplanten Aufträgen
 
@@ -56,7 +56,7 @@ Id     Name         PSJobTypeName   State         HasMoreData     Location
 50     ProcessJob   PSScheduledJob  Completed     False           localhost
 ```
 
-Das- `Get-Job` Cmdlet sendet **processjob** -Objekte über die Pipeline. Mit dem- `Format-Table` Cmdlet werden die Eigenschaften " **Name** ", " **ID** " und " **psbegintime** " einer geplanten Auftrags Instanz in einer Tabelle angezeigt.
+Das- `Get-Job` Cmdlet sendet **processjob** -Objekte über die Pipeline. Mit dem- `Format-Table` Cmdlet werden die Eigenschaften " **Name**", " **ID**" und " **psbegintime** " einer geplanten Auftrags Instanz in einer Tabelle angezeigt.
 
 ```powershell
 Get-Job ProcessJob | Format-Table -Property Name, ID, PSBeginTime -Auto
@@ -273,7 +273,7 @@ Außerdem sind Hintergrund Aufträge und ihre Ergebnisse Sitzungs spezifisch. Si
 
 Geplante Aufträge werden nicht automatisch ausgeführt, wenn der Auftrag ausgelöst oder der geplante Auftrag deaktiviert wird.
 
-Verwenden Sie das `Get-ScheduledJob` Cmdlet, um den geplanten Auftrag zu erhalten. Vergewissern Sie sich, dass der Wert der **aktivierten** Eigenschaft des geplanten Auftrags " **true** " lautet.
+Verwenden Sie das `Get-ScheduledJob` Cmdlet, um den geplanten Auftrag zu erhalten. Vergewissern Sie sich, dass der Wert der **aktivierten** Eigenschaft des geplanten Auftrags " **true**" lautet.
 
 ```powershell
 Get-ScheduledJob ProcessJob
@@ -294,7 +294,7 @@ True
 ```
 
 Verwenden Sie das `Get-JobTrigger` Cmdlet, um die Auftrags Trigger des geplanten Auftrags zu erhalten.
-Vergewissern Sie sich, dass der Wert der **aktivierten** Eigenschaft des Auftrags Auslösers " **true** " ist.
+Vergewissern Sie sich, dass der Wert der **aktivierten** Eigenschaft des Auftrags Auslösers " **true**" ist.
 
 ```powershell
 Get-ScheduledJob ProcessJob | Get-JobTrigger
@@ -332,7 +332,7 @@ Beispielsweise wird ein geplanter Auftrag, der erfordert, dass sich der Computer
 Verwenden `Get-ScheduledJobOption` Sie das Cmdlet, um die Auftrags Optionen und deren Werte zu überprüfen.
 
 ```powershell
-Get-ScheduledJob -Name ProcessJob
+Get-ScheduledJobOption -Name ProcessJob
 ```
 
 ```Output
@@ -454,7 +454,7 @@ Id     Name         PSJobTypeName   State       HasMoreData     Location
 
 Dieses Verhalten tritt auf, da der `Get-ScheduledJob` Befehl automatisch das **psscheduledjob** -Modul importiert und dann den Befehl ausführt.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Scheduled_Jobs_Basics](about_Scheduled_Jobs_Basics.md)
 

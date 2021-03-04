@@ -3,12 +3,12 @@ title: Alles, was Sie schon immer über Hashtabellen wissen wollten
 description: Hashtabellen spielen eine wichtige Rolle in PowerShell, daher sollten Sie mit dem Konzept vertraut sein.
 ms.date: 05/23/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: e386e2aa2f7b85bee4bf622fd9251ef7642cf16a
-ms.sourcegitcommit: 57e577097085dc621bd797ef4a7e2854ea7d4e29
+ms.openlocfilehash: a471c0fe2c48820d6c1d152e2850b1e431d28f23
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "97980500"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101686059"
 ---
 # <a name="everything-you-wanted-to-know-about-hashtables"></a>Alles, was Sie schon immer über Hashtabellen wissen wollten
 
@@ -360,7 +360,7 @@ Das Cmdlet bezeichnet die Spalte mit `name`. `expression` ist ein Skriptblock, d
 
 ```powershell
 $drives = Get-PSDrive | Where Used
-$drives | Select-Object -Properties name, $property
+$drives | Select-Object -Property name, $property
 
 Name     totalSpaceGB
 ----     ------------
@@ -370,7 +370,7 @@ C    238.472652435303
 Ich habe das Ganze in einer Variable platziert, aber Sie könnten es auch inline definieren und bei der Gelegenheit `name` zu `n` sowie `expression` zu `e` verkürzen.
 
 ```powershell
-$drives | Select-Object -properties name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
+$drives | Select-Object -property name, @{n='totalSpaceGB';e={($_.used + $_.free) / 1GB}}
 ```
 
 Mir persönlich gefällt nicht, dass Befehle damit so lang werden, und außerdem werden damit schlechte Angewohnheiten gefördert, in die ich nicht verfallen möchte. Ich erstelle eher eine neue Hashtabelle oder ein `pscustomobject` mit allen benötigten Feldern und Eigenschaften, als diesen Ansatz in Skripts zu verwenden. Es gibt aber sehr viel Code, in dem das so gehandhabt wird, daher wollte ich Sie darauf aufmerksam machen. Auf das Thema `pscustomobject` komme ich etwas später zurück.

@@ -1,16 +1,16 @@
 ---
 description: Beschreibt die Operatoren, die Werte in PowerShell vergleichen.
 Locale: en-US
-ms.date: 01/20/2021
+ms.date: 02/19/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: 38067baa2490caa32160212c6c553ec5c2d597bd
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: 97875bb9c194cfef3d823b681973bd556d4195d3
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500141"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685922"
 ---
 # <a name="about-comparison-operators"></a>Informationen zu Vergleichs Operatoren
 
@@ -158,7 +158,7 @@ $null -ne $a
 ```
 
 ```output
-False
+True
 ```
 
 Der folgende Filter filtert jedoch alle NULL-Elemente aus `$a` :
@@ -178,7 +178,7 @@ $a -ne $null # Output: 1, 2, 4, 6
 
 `-gt`, `-ge` , `-lt` und `-le` Verhalten sich ähnlich. Wenn beide Seiten Skalar sind, geben Sie " **true** " oder " **false** " zurück, je nachdem, wie die beiden Seiten verglichen werden
 
-| Betreiber | Gibt "true" zurück, wenn...                   |
+| Operator | Gibt "true" zurück, wenn...                   |
 | -------- | -------------------------------------- |
 | -gt      | Die linke Seite ist größer.          |
 | -ge      | Die linke Seite ist größer als oder gleich. |

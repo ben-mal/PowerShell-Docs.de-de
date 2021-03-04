@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/04/2020
+ms.date: 03/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-Host
-ms.openlocfilehash: b76fc092046a29dcad52f755794fd55dd84ac675
-ms.sourcegitcommit: 57df49488015e7ac17ff1df402a94441aa6d6064
+ms.openlocfilehash: 1c799a5b0f9041d285ce0e83a98582d6888c607e
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "93217924"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685290"
 ---
 # Read-Host
 
@@ -36,6 +36,9 @@ Read-Host [[-Prompt] <Object>] [-AsSecureString] [<CommonParameters>]
 ## DESCRIPTION
 
 Das `Read-Host` Cmdlet liest eine Zeile der Eingabe aus der Konsole. Damit kann ein Benutzer zur Eingabe aufgefordert werden. Da Sie die Eingabe als sichere Zeichenfolge speichern können, können Sie dieses Cmdlet verwenden, um Benutzer zur Eingabe von sicheren Daten wie Kennwörtern oder freigegebenen Daten aufzufordern.
+
+> [!NOTE]
+> `Read-Host` hat ein Limit von 1022 Zeichen, das als Eingabe eines Benutzers akzeptiert werden kann.
 
 ## BEISPIELE
 
@@ -67,7 +70,7 @@ $pwd_string = Read-Host "Enter a Password" -MaskInput
 
 ### -Assecurestring
 
-Gibt an, dass das Cmdlet Sternchen ( `*` ) anstelle der Zeichen anzeigt, die vom Benutzer als Eingabe eingegeben werden. Wenn Sie diesen Parameter verwenden, ist die Ausgabe des `Read-Host` Cmdlets ein **SecureString** -Objekt ( **System. Security. SecureString** ).
+Gibt an, dass das Cmdlet Sternchen ( `*` ) anstelle der Zeichen anzeigt, die vom Benutzer als Eingabe eingegeben werden. Wenn Sie diesen Parameter verwenden, ist die Ausgabe des `Read-Host` Cmdlets ein **SecureString** -Objekt (**System. Security. SecureString**).
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -100,10 +103,7 @@ Accept wildcard characters: False
 
 ### -Eingabeaufforderung
 
-Gibt den Text der Eingabeaufforderung an.
-Geben Sie eine Zeichenfolge ein.
-Wenn die Zeichenfolge Leerzeichen enthält, müssen Sie sie in Anführungszeichen einschließen.
-PowerShell fügt einen Doppelpunkt ( `:` ) an den eingegebenen Text an.
+Gibt den Text der Eingabeaufforderung an. Geben Sie eine Zeichenfolge ein. Wenn die Zeichenfolge Leerzeichen enthält, müssen Sie sie in Anführungszeichen einschließen. PowerShell fügt einen Doppelpunkt ( `:` ) an den eingegebenen Text an.
 
 ```yaml
 Type: System.Object

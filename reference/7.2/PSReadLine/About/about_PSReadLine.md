@@ -5,12 +5,12 @@ ms.date: 11/23/2020
 online version: https://docs.microsoft.com/powershell/module/psreadline/about/about_psreadline?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Informationen über psread Line
-ms.openlocfilehash: b0c5950b2af6a866d0ffcfdd6ce7ad92a1763778
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: ddc88dda3514e4279b6d91b023e26da88f645af7
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500211"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685211"
 ---
 # <a name="psreadline"></a>PSReadLine
 
@@ -114,13 +114,19 @@ Löschen Sie das Zeichen vor dem Cursor.
 - VI-Einfügemodus: `<Backspace>`
 - VI-Befehlsmodus: `<X>` , `<d,h>`
 
+### <a name="backwarddeleteinput"></a>Backwarddelta-eInput
+
+Wie backwardkillinput: löscht Text von der Stelle bis zum Anfang der Eingabe, legt den gelöschten Text jedoch nicht in den Kill-Ring.
+
+- Befehl: `<Ctrl+Home>`
+- VI-Einfügemodus: `<Ctrl+u>` , `<Ctrl+Home>`
+- VI-Befehlsmodus: `<Ctrl+u>` , `<Ctrl+Home>`
+
 ### <a name="backwarddeleteline"></a>Backwarddelta-Eline
 
 Wie backwardkillline löscht Text vom Punkt bis zum Anfang der Zeile, aber der gelöschte Text wird nicht in den Kill-Ring eingefügt.
 
-- Befehl: `<Ctrl+Home>`
-- VI-Einfügemodus: `<Ctrl+u>` , `<Ctrl+Home>`
-- VI-Befehlsmodus: `<Ctrl+u>` , `<Ctrl+Home>` , `<d,0>`
+- VI-Befehlsmodus: `<d,0>`
 
 ### <a name="backwarddeleteword"></a>Backwarddeleteword
 
@@ -128,11 +134,17 @@ Löscht das vorherige Wort.
 
 - VI-Befehlsmodus: `<Ctrl+w>` , `<d,b>`
 
-### <a name="backwardkillline"></a>Backwardkillline
+### <a name="backwardkillinput"></a>Backwardkillinput
 
-Löschen Sie die Eingabe vom Beginn der Eingabe in den Cursor. Der gelöschte Text wird in den Kill-Ring eingefügt.
+Löschen Sie den Text vom Beginn der Eingabe bis zum Cursor. Der gelöschte Text wird in den Kill-Ring eingefügt.
 
 - Emacs: `<Ctrl+u>` , `<Ctrl+x,Backspace>`
+
+### <a name="backwardkillline"></a>Backwardkillline
+
+Löschen Sie den Text vom Anfang der aktuellen logischen Zeile bis zum Cursor. Der gelöschte Text wird in den Kill-Ring eingefügt.
+
+- Die Bindung der Funktion ist aufgehoben.
 
 ### <a name="backwardkillword"></a>Backwardkillword
 
@@ -243,13 +255,19 @@ Löschen Sie das nächste Wort.
 
 - VI-Befehlsmodus: `<d,w>`
 
-### <a name="forwarddeleteline"></a>Forwarddelta-Eline
+### <a name="forwarddeleteinput"></a>Forwarddelta eteinput
 
-Wie forwardkillline löscht Text vom Punkt bis zum Ende der Zeile, aber der gelöschte Text wird nicht in den Kill-Ring eingefügt.
+Wie bei "killline" wird Text vom Punkt bis zum Ende der Eingabe gelöscht, aber der gelöschte Text wird nicht in den Kill-Ring eingefügt.
 
 - Befehl: `<Ctrl+End>`
 - VI-Einfügemodus: `<Ctrl+End>`
 - VI-Befehlsmodus: `<Ctrl+End>`
+
+### <a name="forwarddeleteline"></a>Forwarddelta-Eline
+
+Löscht Text vom Punkt bis zum Ende der aktuellen logischen Zeile, legt den gelöschten Text jedoch nicht im Kill-Ring ab.
+
+- Funktion ist nicht gebunden
 
 ### <a name="insertlineabove"></a>Insertlineoberhalb
 
@@ -1029,7 +1047,9 @@ Fügen Sie den Schlüssel ein.
 
 ### <a name="showcommandhelp"></a>Showcommandhelp
 
-Bietet eine Ansicht der vollständigen Cmdlet-Hilfe auf dem alternativen Bildschirm Puffer unter Verwendung eines Pager von **Microsoft. PowerShell. Pager**.
+Bietet eine Ansicht der vollständigen Cmdlet-Hilfe. Wenn sich der Cursor am Ende eines vollständig erweiterten Parameters befindet, wird durch das Drücken der `<F1>` Taste die Anzeige der Hilfe an der Position dieses Parameters positioniert.
+
+Die Hilfe wird mithilfe eines Pager von **Microsoft. PowerShell. Pager** auf einem alternativen Bildschirm Puffer angezeigt. Wenn Sie den Pager beenden, werden Sie auf dem ursprünglichen Bildschirm an die ursprüngliche Cursorposition zurückgegeben. Dieser Pager funktioniert nur in modernen Terminalanwendungen wie z. b. [Windows-Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701).
 
 - Befehl: `<F1>`
 - Ansehen `<F1>`
@@ -1046,7 +1066,7 @@ Alle gebundenen Schlüssel anzeigen.
 
 ### <a name="showparameterhelp"></a>Showparameterhelp
 
-Bietet dynamische Hilfe für Parameter, indem Sie unter der aktuellen Befehlszeile wie angezeigt wird `MenuComplete` .
+Bietet dynamische Hilfe für Parameter, indem Sie unter der aktuellen Befehlszeile wie angezeigt wird `MenuComplete` . Der Cursor muss sich am Ende des vollständig erweiterten Parameter namens befinden, wenn Sie die `<Alt+h>` Taste drücken.
 
 - Befehl: `<Alt+h>`
 - Ansehen `<Alt+h>`
@@ -1125,6 +1145,15 @@ Passen Sie die aktuelle Auswahl so an, dass Sie das vorherige Wort enthält.
 
 - Befehl: `<Shift+Ctrl+LeftArrow>`
 - Ansehen `<Alt+B>`
+
+### <a name="selectcommandargument"></a>Selectcommandargument
+
+Erstellen Sie die visuelle Auswahl der Befehlsargumente. Die Auswahl von Argumenten wird in einem Skriptblock festgelegt. Basierend auf der Cursorposition wird vom innersten Skriptblock nach dem äußersten Skriptblock gesucht und beendet, wenn Argumente in einem Skriptblock Bereich gefunden werden.
+
+Diese Funktion berücksichtigt digitargument. Die positiven oder negativen Argument Werte werden als vorwärts-oder rückwärts Offsets vom aktuell ausgewählten Argument oder von der aktuellen Cursorposition, wenn kein Argument ausgewählt ist, behandelt.
+
+- Befehl: `<Alt+a>`
+- Ansehen `<Alt+a>`
 
 ### <a name="selectforwardchar"></a>Selectforwardchar
 
@@ -1430,7 +1459,7 @@ Diese Hilfsmethode wird für benutzerdefinierte Bindungen verwendet, die digitar
   [ref]$numericArg, 1)
 ```
 
-## <a name="notes"></a>Hinweise
+## <a name="notes"></a>Notizen
 
 ### <a name="command-history"></a>Befehlsverlauf
 
