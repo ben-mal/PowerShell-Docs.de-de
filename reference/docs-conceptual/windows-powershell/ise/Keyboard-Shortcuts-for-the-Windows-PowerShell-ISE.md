@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 title: Tastenkombinationen für Windows PowerShell ISE
 description: Dieser Artikel enthält eine Liste der Tastenkombinationen, die in PowerShell ISE verwendet werden.
-ms.openlocfilehash: 690997524ab90d7581bb03c802f189d1a4b79d3f
-ms.sourcegitcommit: 77f6225ab0c8ea9faa1fe46b2ea15c178ec170e3
+ms.openlocfilehash: 6a55bb2e6046fbda1c8b7b83345138f294009ac8
+ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100500192"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101685954"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tastenkombinationen für Windows PowerShell ISE
 
@@ -20,6 +20,7 @@ Sie können die folgenden Tastenkombinationen verwenden, wenn Sie Text bearbeite
 |              Aktion              |              Tastenkombinationen               |                                                                                                                                           Verwenden in                                                                                                                                           |
 | -------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Hilfe**                         | <kbd>F1</kbd>                                 | Skriptbereich **Wichtig:** Sie können angeben, dass <kbd>F1</kbd>-Hilfe auf docs.microsoft.com oder in der heruntergeladenen Hilfe abgerufen wird (siehe `Update-Help`). Zur Auswahl klicken Sie auf **Tools** > **Optionen** und aktivieren oder deaktivieren dann auf der Registerkarte **Allgemeine Einstellungen** die Option **Lokale Hilfe anstelle von Onlineinhalt verwenden**. |
+| **Alles markieren**                   | <kbd>STRG</kbd>+<kbd>A</kbd>                  | Skriptbereich                                                                                                                                                                                                                                                                                |
 | **Copy**                         | <kbd>STRG</kbd>+<kbd>C</kbd>                  | Skriptbereich, Befehlsbereich, Ausgabebereich                                                                                                                                                                                                                                                     |
 | **Ausschneiden**                          | <kbd>STRG</kbd>+<kbd>X</kbd>                  | Skriptbereich, Befehlsbereich                                                                                                                                                                                                                                                                  |
 | **Gliederung erweitern oder reduzieren** | <kbd>STRG</kbd>+<kbd>M</kbd>                  | Skriptbereich                                                                                                                                                                                                                                                                                |
@@ -36,6 +37,9 @@ Sie können die folgenden Tastenkombinationen verwenden, wenn Sie Text bearbeite
 | **Alles markieren**                   | <kbd>STRG</kbd>+<kbd>A</kbd>                  | Skriptbereich, Befehlsbereich, Ausgabebereich                                                                                                                                                                                                                                                     |
 | **Codeausschnitte anzeigen**                | <kbd>STRG</kbd>+<kbd>J</kbd>                  | Skriptbereich, Befehlsbereich                                                                                                                                                                                                                                                                  |
 | **Rückgängig**                         | <kbd>STRG</kbd>+<kbd>Z</kbd>                  | Skriptbereich, Befehlsbereich                                                                                                                                                                                                                                                                  |
+| **IntelliSense-Hilfe anzeigen**       | <kbd>STRG</kbd>+<kbd>LEERTASTE</kbd>              | Skriptbereich                                                                                                                                                                                                                                                                                |
+| **Wort links löschen**          | <kbd>STRG</kbd>+<kbd>RÜCKTASTE</kbd>          | Skriptbereich                                                                                                                                                                                                                                                                                |
+| **Wort rechts löschen**         | <kbd>STRG</kbd>+<kbd>ENTF-TASTE</kbd>             | Skriptbereich                                                                                                                                                                                                                                                                                |
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Tastenkombinationen zum Ausführen von Skripts
 
