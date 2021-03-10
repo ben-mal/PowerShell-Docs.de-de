@@ -1,14 +1,14 @@
 ---
-ms.date: 09/13/2016
+ms.date: 03/09/2021
 ms.topic: reference
 title: Unterstützen von Aufträgen
 description: Unterstützen von Aufträgen
-ms.openlocfilehash: d755093e941aa660032f8d283cb43ba5eeec8c4b
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 1528f5d934605caa4009688845a6caa7b95b86a3
+ms.sourcegitcommit: e679533f966f4e97cddae24531a22436da13610c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92666976"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532117"
 ---
 # <a name="how-to-support-jobs"></a>Unterstützen von Aufträgen
 
@@ -32,7 +32,7 @@ In diesem Beispiel wird gezeigt, wie Aufträge beim Schreiben von Cmdlets unters
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06AsJobParam](msh_samplesGetProc06#GetProc06AsJobParam)]  -->
 
-2. Erstellen Sie ein Objekt, das von der [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) -Klasse abgeleitet wird. Bei diesem Objekt kann es sich um ein benutzerdefiniertes Auftrags Objekt oder eines der von Windows PowerShell bereitgestellten Auftrags Objekte handeln, z. b. ein [System. Management. Automation. psiebziger Job](/dotnet/api/System.Management.Automation.PSEventJob) -Objekt.
+1. Erstellen Sie ein Objekt, das von der [System. Management. Automation. Job](/dotnet/api/System.Management.Automation.Job) -Klasse abgeleitet wird. Bei diesem Objekt kann es sich um ein benutzerdefiniertes Auftrags Objekt oder eines der von Windows PowerShell bereitgestellten Auftrags Objekte handeln, z. b. ein [System. Management. Automation. psiebziger Job](/dotnet/api/System.Management.Automation.PSEventJob) -Objekt.
 
     Das folgende Beispiel zeigt ein benutzerdefiniertes Auftrags Objekt.
 
@@ -42,7 +42,7 @@ In diesem Beispiel wird gezeigt, wie Aufträge beim Schreiben von Cmdlets unters
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobObject](msh_samplesGetProc06#GetProc06JobObject)]  -->
 
-3. Fügen Sie in einer Daten Satz Verarbeitungsmethode eine-Anweisung hinzu, `if` um zu ermitteln, ob das Cmdlet als Auftrag ausgeführt werden soll. Der folgende Code verwendet die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
+1. Fügen Sie in einer Daten Satz Verarbeitungsmethode eine-Anweisung hinzu, `if` um zu ermitteln, ob das Cmdlet als Auftrag ausgeführt werden soll. Der folgende Code verwendet die [System. Management. Automation. Cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) -Methode.
 
     ```csharp
     protected override void ProcessRecord()
@@ -69,7 +69,7 @@ In diesem Beispiel wird gezeigt, wie Aufträge beim Schreiben von Cmdlets unters
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06ProcessRecord](msh_samplesGetProc06#GetProc06ProcessRecord)]  -->
 
-4. Implementieren Sie für benutzerdefinierte Auftrags Objekte die Job-Klasse.
+1. Implementieren Sie für benutzerdefinierte Auftrags Objekte die Job-Klasse.
 
     ```csharp
     private class SampleJob : Job
@@ -126,7 +126,7 @@ In diesem Beispiel wird gezeigt, wie Aufträge beim Schreiben von Cmdlets unters
 
     <!-- TODO!!!: review snippet reference      [!CODE [msh_samplesGetProc06#GetProc06JobClass](msh_samplesGetProc06#GetProc06JobClass)]  -->
 
-5. Wenn das Cmdlet die Arbeit ausführt, wenden Sie die [System. Management. Automation. Cmdlet. Write Object](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) -Methode an, um ein Prozess Objekt an die Pipeline zurückzugeben. Wenn die Arbeit als Auftrag ausgeführt wird, fügen Sie dem Auftrag einen untergeordneten Auftrag hinzu.
+1. Wenn das Cmdlet die Arbeit ausführt, wenden Sie die [System. Management. Automation. Cmdlet. Write Object](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) -Methode an, um ein Prozess Objekt an die Pipeline zurückzugeben. Wenn die Arbeit als Auftrag ausgeführt wird, fügen Sie dem Auftrag einen untergeordneten Auftrag hinzu.
 
     ```csharp
     void DoProcessLogic(bool asJob)
@@ -209,6 +209,7 @@ namespace Microsoft.Samples.PowerShell.Commands
     /// Specify the AsJob parameter. This parameter indicates
     /// whether the cmdlet should retrieve the processes internally
     /// or return a Job object that retrieves the processes.
+    /// </summary>
     [Parameter()]
     public SwitchParameter AsJob
     {
