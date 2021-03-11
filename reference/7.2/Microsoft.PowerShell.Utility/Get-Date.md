@@ -6,12 +6,12 @@ ms.date: 08/25/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Date
-ms.openlocfilehash: 6f5c76faafa2c68a6d9dfc604238c514489aa717
-ms.sourcegitcommit: 3a1d80e27438976101f216b8c3d623c61b868db8
+ms.openlocfilehash: bb3c3686310440d9f75d36ca1c83fb60066f5d6a
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99975055"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771495"
 ---
 # Get-Date
 
@@ -544,10 +544,10 @@ In der folgenden Tabelle werden die gültigen **Uformat-Spezifizierer** angezeig
 | `%c` | Datum und Uhrzeit-gekürzt                                             | Do Jun 27 08:44:18 2019 |
 | `%D` | Datum im Format mm/dd/yy                                                 | 06/27/19                 |
 | `%d` | Tag des Monats-2 Ziffern                                             | 05                       |
-| `%e` | Tag des Monats, dem ein Leerzeichen vorangestellt ist, wenn nur eine einzelne Ziffer           | \<space\>5@@               |
+| `%e` | Tag des Monats, dem ein Leerzeichen vorangestellt ist, wenn nur eine einzelne Ziffer           | \<space\>5                |
 | `%F` | Datum im Format yyyy-mm-dd, gleich% Y-% m-% d (ISO 8601-Datumsformat) | 2019-06-27               |
-| `%G` | Identisch mit "Y"                                                             |                          |
-| `%g` | Identisch mit "y"                                                             |                          |
+| `%G` | ISO-Woche (Datum Jahr) (Jahr mit dem Donnerstag der Woche)               |                          |
+| `%g` | Identisch mit "G"-2 Ziffern                                                  |                          |
 | `%H` | Stunde im 24-Stunden-Format                                                  | 17                       |
 | `%h` | Identisch mit "b"                                                             |                          |
 | `%I` | Stunde im 12-Stunden-Format                                                  | 05                       |

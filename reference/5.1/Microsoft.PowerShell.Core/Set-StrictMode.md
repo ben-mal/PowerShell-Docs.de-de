@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 04/09/2020
+ms.date: 03/10/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/set-strictmode?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-StrictMode
-ms.openlocfilehash: e44cad2bab6c81de67cdd0902af5172438efa19e
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 32fd07174bacb7d0b99361916574f6b672052d1b
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94388500"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771425"
 ---
 # Set-StrictMode
 
@@ -216,7 +216,7 @@ Gibt die Bedingungen an, die im Strict-Modus einen Fehler verursachen. Dieser Pa
 
 Die effektiven Werte für diesen Parameter lauten wie folgt:
 
-- 1,0
+- 1.0
   - Verhindert Verweise auf nicht initialisierte Variablen, ausgenommen nicht initialisierte Variablen in Zeichen folgen.
 - 2.0
   - Verhindert Verweise auf nicht initialisierte Variablen. Dies schließt nicht initialisierte Variablen in Zeichen folgen ein.
@@ -227,7 +227,7 @@ Die effektiven Werte für diesen Parameter lauten wie folgt:
   - Verhindert Verweise auf nicht vorhandene Eigenschaften eines Objekts.
   - Verhindert Funktionsaufrufe, die die Syntax zum Aufrufen von Methoden verwenden.
   - Nicht genügend Begrenzungen oder nicht auflösbare Array Indizes.
-- Neueste Version
+- Neueste
   - Wählt die neueste verfügbare Version aus. Die neueste Version ist die strengste Version. Verwenden Sie diesen Wert, um sicherzustellen, dass Skripts die strengste verfügbare Version verwenden, auch wenn neue Versionen zu PowerShell hinzugefügt werden.
 
 > [!CAUTION]
@@ -262,6 +262,8 @@ Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 Dieses Cmdlet gibt keine Ausgabe zurück.
 
 ## HINWEISE
+
+Obwohl der `Set-StrictMode` **Versions** Parameterwerte überschreitet `3.0` , die größer als sind, sind zurzeit keine weiteren Regeln für etwas höher als definiert `3.0` .
 
 `Set-StrictMode` ist nur in dem Bereich wirksam, in dem Sie festgelegt ist, und in den untergeordneten Bereichen. Weitere Informationen zu Bereichen in PowerShell finden Sie unter [about_Scopes](about/about_Scopes.md).
 
