@@ -1,15 +1,17 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
+Locale: en-US
 Module Name: Microsoft.PowerShell.Core
 ms.date: 10/15/2020
-online version: ''
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-pssubsystem?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
-ms.openlocfilehash: 34998e7c4a6876821df949019970dc1d87297397
-ms.sourcegitcommit: c9e56ec489522c706b8d6b8733f3f015d6d7e893
+title: Get-PSSubsystem
+ms.openlocfilehash: 1e08715562ab5a5b52193dacdd2c48cacb4540e8
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "93224527"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195531"
 ---
 # Get-PSSubsystem
 
@@ -45,7 +47,7 @@ Ruft Informationen zu den in PowerShell registrierten Subsystemen ab.
 
 Es ermöglicht das Trennen von Komponenten von `System.Management.Automation.dll` in einzelne Subsysteme, die sich in einer eigenen Assembly befinden. Diese Trennung reduziert den Speicherbedarf des Datenträgers der Kern-Engine von PowerShell. Zudem werden diese Komponenten zu optionalen Features für eine Minimalinstallation von PowerShell.
 
-Derzeit wird nur das Subsystem **CommandPredictor** unterstützt. Dieses Subsystem wird zusammen mit dem PSReadLine-Modul zum Bereitstellen benutzerdefinierter Vorhersage-Plug-Ins verwendet. Zukünftig können **Job** , **CommandCompleter** , **Remoting** und andere Komponenten in Subsystemassemblys außerhalb von `System.Management.Automation.dll` getrennt werden.
+Derzeit wird nur das Subsystem **CommandPredictor** unterstützt. Dieses Subsystem wird zusammen mit dem PSReadLine-Modul zum Bereitstellen benutzerdefinierter Vorhersage-Plug-Ins verwendet. Zukünftig können **Job**, **CommandCompleter**, **Remoting** und andere Komponenten in Subsystemassemblys außerhalb von `System.Management.Automation.dll` getrennt werden.
 
 ## BEISPIELE
 

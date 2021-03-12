@@ -1,16 +1,16 @@
 ---
 description: Hier wird beschrieben, wie ein PowerShell-Profil erstellt und verwendet wird.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 11/30/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Profiles
-ms.openlocfilehash: 3fb6a67e160281f60f20c187bf37c6920a506705
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 3fe32a83ad1a63d64d293559c79f1465828d0a0a
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93220660"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195014"
 ---
 # <a name="about-profiles"></a>Informationen zu Profilen
 
@@ -64,7 +64,7 @@ Die `$PROFILE` Variable speichert den Pfad zum Profil "aktueller Benutzer, aktue
 
 Beispielsweise enthält die `$PROFILE` Variable die folgenden Werte in der Windows PowerShell-Konsole.
 
-|BESCHREIBUNG                |Name                              |
+|Beschreibung                |Name                              |
 |---------------------------|----------------------------------|
 |Aktueller Benutzer, aktueller Host |`$PROFILE`                        |
 |Aktueller Benutzer, aktueller Host |`$PROFILE.CurrentUserCurrentHost` |
@@ -206,7 +206,7 @@ Weitere Informationen zur PowerShell-Eingabeaufforderung finden Sie unter [about
 
 ## <a name="the-noprofile-parameter"></a>Der NoProfile-Parameter
 
-Wenn Sie PowerShell ohne profile starten möchten, verwenden Sie den **NoProfile** -Parameter von **PowerShell.exe** , das Programm, das PowerShell startet.
+Wenn Sie PowerShell ohne profile starten möchten, verwenden Sie den **NoProfile** -Parameter von **PowerShell.exe**, das Programm, das PowerShell startet.
 
 Öffnen Sie zunächst ein Programm, mit dem PowerShell gestartet werden kann, z. b. Cmd.exe oder PowerShell selbst. Sie können auch das Dialogfeld Ausführen in Windows verwenden.
 

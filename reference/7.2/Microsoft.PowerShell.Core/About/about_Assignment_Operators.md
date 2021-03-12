@@ -1,15 +1,16 @@
 ---
 description: Beschreibt, wie Operatoren verwendet werden, um Variablen Werte zuzuweisen.
+Locale: en-US
 ms.date: 04/26/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Assignment_Operators
-ms.openlocfilehash: 4e21c9d0f2b0a47cd4db10ee515ceb07548eb971
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: adc54dd045fdffbb6605554b535c92680ee0d525
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99600318"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195247"
 ---
 # <a name="about-assignment-operators"></a>Informationen über Zuweisungs Operator
 
@@ -22,7 +23,7 @@ Zuweisungs Operatoren weisen einer Variablen einen oder mehrere Werte zu. Sie k�
 
 PowerShell unterstützt die folgenden Zuweisungs Operatoren.
 
-|Operator|BESCHREIBUNG                                                  |
+|Operator|Beschreibung                                                  |
 |--------|-------------------------------------------------------------|
 |=       |Legt den Wert einer Variablen auf den angegebenen Wert fest.         |
 |+=      |Erhöht den Wert einer Variablen um den angegebenen Wert, oder |
@@ -707,7 +708,7 @@ Zusätzlich zur Verwendung einer Zuweisungs Operation zum Festlegen eines Variab
 Set-Variable -Name a -Value 1, 2, 3
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [about_Arrays](about_Arrays.md)
 
