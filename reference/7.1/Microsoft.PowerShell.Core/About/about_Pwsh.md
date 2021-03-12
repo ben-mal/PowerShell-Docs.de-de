@@ -1,15 +1,16 @@
 ---
 description: Erläutert, wie die `pwsh` Befehlszeilenschnittstelle verwendet wird. Zeigt die Befehlszeilenparameter an und beschreibt die Syntax.
+Locale: en-US
 ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pwsh
-ms.openlocfilehash: 6f6e7ea66aa04eaeea2b9da7c07864180210131c
-ms.sourcegitcommit: bf07cffb2a66dec94bf3576e197090f958701f18
+ms.openlocfilehash: a3420af2f46c7946d6282ca639117e4104d2bd17
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97692993"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195956"
 ---
 # <a name="about-pwsh"></a>Informationen zu pwsh
 
@@ -98,7 +99,7 @@ Wenn der Wert von " **Command** " eine Zeichenfolge ist, muss **Command** der le
 
 Wenn Sie innerhalb einer vorhandenen PowerShell-Sitzung aufgerufen werden, werden die Ergebnisse als deserialisierte XML-Objekte und nicht als Live-Objekte an die übergeordnete Shell zurückgegeben. Bei anderen Shells werden die Ergebnisse als Zeichen folgen zurückgegeben.
 
-Wenn der Wert von **Command** ist `-` , wird der Befehls Text aus der Standardeingabe gelesen. Sie müssen die Standardeingabe umleiten, wenn Sie den **Command** -Parameter mit der Standardeingabe verwenden. Beispiele:
+Wenn der Wert von **Command** ist `-` , wird der Befehls Text aus der Standardeingabe gelesen. Sie müssen die Standardeingabe umleiten, wenn Sie den **Command** -Parameter mit der Standardeingabe verwenden. Beispiel:
 
 ```powershell
 @'
@@ -135,7 +136,7 @@ Gibt den Namen an, der für einen zusätzlichen IPC-Server (Named Pipe) verwende
 
 Dieser Parameter wurde in PowerShell 6,2 eingeführt.
 
-Beispiele:
+Beispiel:
 
 ```powershell
 # PowerShell instance 1
@@ -148,7 +149,7 @@ Enter-PSHostProcess -CustomPipeName mydebugpipe
 
 Akzeptiert eine Base64-codierte Zeichen folgen Version eines Befehls. Verwenden Sie diesen Parameter, um Befehle an PowerShell zu übermitteln, die komplexe, in Anführungszeichen eingefügte Zitate Die Base64-Darstellung muss eine UTF-16LE-codierte Zeichenfolge sein.
 
-Beispiele:
+Beispiel:
 
 ```powershell
 $command = 'dir "c:\program files" '
@@ -239,7 +240,7 @@ Wird in sshd_config zum Ausführen von PowerShell als SSH-Subsystem verwendet. S
 
 ### <a name="-sta"></a>-STA
 
-Starten Sie PowerShell mit einem Single Thread-Apartment. Dies ist die Standardoption. Dieser Schalter ist nur unter Windows verfügbar.
+Starten Sie PowerShell mit einem Single Thread-Apartment. Dies ist die Standardeinstellung. Dieser Schalter ist nur unter Windows verfügbar.
 
 ### <a name="-version---v"></a>-Version | -v
 

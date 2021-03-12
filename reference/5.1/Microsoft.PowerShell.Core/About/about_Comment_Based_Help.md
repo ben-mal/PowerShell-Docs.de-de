@@ -1,16 +1,16 @@
 ---
 description: Beschreibt, wie Kommentar basierte Hilfe Themen für Funktionen und Skripts geschrieben werden.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 06/18/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comment_based_help?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comment_Based_Help
-ms.openlocfilehash: c3e02edd6ca33f373b1632160e4a18dc4fb744f2
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: cc19b11322e8b2062f9659c3fbce92ad5c6eded0
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94386970"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103194232"
 ---
 # <a name="about-comment-based-help"></a>Informationen zur Kommentar basierten Hilfe
 
@@ -21,7 +21,7 @@ Beschreibt, wie Kommentar basierte Hilfe Themen für Funktionen und Skripts gesc
 
 Sie können Kommentar basierte Hilfe Themen für Funktionen und Skripts schreiben, indem Sie besondere Hilfe Kommentar Schlüsselwörter verwenden.
 
-Das Cmdlet " [Get-Help](xref:Microsoft.PowerShell.Core.Get-Help) " zeigt die Kommentar basierte Hilfe im gleichen Format an, in dem die Cmdlet-Hilfe Themen angezeigt werden, die aus XML-Dateien generiert werden. Benutzer können alle Parameter von `Get-Help` , wie z. b. " **ausführlich** ", " **vollständig** ", " **Beispiele** " und " **Online** ", verwenden, um den Inhalt der Kommentar basierten Hilfe anzuzeigen.
+Das Cmdlet " [Get-Help](xref:Microsoft.PowerShell.Core.Get-Help) " zeigt die Kommentar basierte Hilfe im gleichen Format an, in dem die Cmdlet-Hilfe Themen angezeigt werden, die aus XML-Dateien generiert werden. Benutzer können alle Parameter von `Get-Help` , wie z. b. " **ausführlich**", " **vollständig**", " **Beispiele**" und " **Online**", verwenden, um den Inhalt der Kommentar basierten Hilfe anzuzeigen.
 
 Sie können auch XML-basierte Hilfedateien für Funktionen und Skripts schreiben. `Get-Help`Verwenden Sie das-Schlüsselwort, um das Cmdlet für die Suche nach der XML-basierten Hilfedatei für eine Funktion oder ein Skript zu aktivieren `.ExternalHelp` . Ohne dieses Schlüsselwort `Get-Help` können keine XML-basierten Hilfe Themen für Funktionen oder Skripts gefunden werden.
 
@@ -307,11 +307,11 @@ Die **allgemeinen Parameter** werden der Syntax und der Parameterliste des Hilfe
 
 ### <a name="parameter-attribute-table"></a>Parameter Attribut Tabelle
 
-`Get-Help` generiert die Tabelle mit Parameter Attributen, die angezeigt wird, wenn Sie den **Full** -Parameter oder **Parameter** -Parameter von verwenden `Get-Help` . Der Wert der Attribute **Required** , **Position** und **default** value wird aus der Funktion oder der Skript Syntax entnommen.
+`Get-Help` generiert die Tabelle mit Parameter Attributen, die angezeigt wird, wenn Sie den **Full** -Parameter oder **Parameter** -Parameter von verwenden `Get-Help` . Der Wert der Attribute **Required**, **Position** und **default** value wird aus der Funktion oder der Skript Syntax entnommen.
 
 Standardwerte und ein Wert für Platzhalter **Zeichen annehmen** werden nicht in der Parameter-Attribut Tabelle angezeigt, auch wenn Sie in der Funktion oder im Skript definiert sind. Um Benutzer zu unterstützen, geben Sie diese Informationen in der Parameter Beschreibung an.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Der Abschnitt " **Hinweise** " des Hilfe Themas wird automatisch aus dem Namen der Funktion oder des Skripts generiert. Der Inhalt kann nicht geändert oder beeinflusst werden.
 
@@ -743,7 +743,7 @@ Displays information about PowerShell cmdlets and concepts.
 ...
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [about_Functions](about_Functions.md)
 

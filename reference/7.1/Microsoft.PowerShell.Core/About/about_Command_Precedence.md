@@ -1,16 +1,16 @@
 ---
 description: Beschreibt, wie PowerShell bestimmt, welcher Befehl ausgeführt werden soll.
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 02/13/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_command_precedence?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Command_Precedence
-ms.openlocfilehash: 0fc514f8e7e7894ae9da281867fd3d2fe61b89b6
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 30822ae18e7edfab2938c4fd697955881f64536d
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93224127"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196195"
 ---
 # <a name="about-command-precedence"></a>Informationen zur Befehls Rangfolge
 
@@ -165,7 +165,7 @@ Sie können bestimmte Befehle ausführen, indem Sie Element Eigenschaften angebe
 
 #### <a name="qualified-names"></a>Qualifizierte Namen
 
-Wenn Sie den mit dem Modul gekennzeichneten Namen eines Cmdlets verwenden, können Sie Befehle ausführen, die von einem Element mit dem gleichen Namen ausgeblendet werden. Beispielsweise können Sie das `Get-Date` Cmdlet ausführen, indem Sie es mit dem Modulnamen " **Microsoft. PowerShell. Utility** " qualifizieren.
+Wenn Sie den mit dem Modul gekennzeichneten Namen eines Cmdlets verwenden, können Sie Befehle ausführen, die von einem Element mit dem gleichen Namen ausgeblendet werden. Beispielsweise können Sie das `Get-Date` Cmdlet ausführen, indem Sie es mit dem Modulnamen " **Microsoft. PowerShell. Utility**" qualifizieren.
 
 Verwenden Sie diese bevorzugte Methode, wenn Sie Skripts schreiben, die Sie verteilen möchten. Sie können nicht vorhersagen, welche Befehle in der Sitzung vorhanden sein können, in der das Skript ausgeführt wird.
 

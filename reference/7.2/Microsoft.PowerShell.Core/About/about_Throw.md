@@ -2,15 +2,15 @@
 description: Beschreibt das Throw-Schlüsselwort, das einen Abbruchfehler generiert.
 Locale: en-US
 ms.date: 12/01/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-7&WT.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_throw?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Throw
-ms.openlocfilehash: 2984e0a9e5f470594dd1e5987b69b92f91ce4913
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: bef005f47583523f69a8b25651eb0ee5bfc5b224
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99600516"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195846"
 ---
 # <a name="about-throw"></a>Informationen zu Throw
 
@@ -95,7 +95,7 @@ Das RuntimeException-Objekt ist in einem ErrorRecord-Objekt umschließt, und das
 
 Verwenden Sie im Gegensatz zu früheren Versionen von PowerShell nicht das throw-Schlüsselwort für die Parameter Validierung. Die richtige Vorgehensweise finden Sie unter [about_Functions_Advanced_Parameters](about_Functions_Advanced_Parameters.md) .
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [about_Break](about_Break.md)
 - [about_Continue](about_Continue.md)

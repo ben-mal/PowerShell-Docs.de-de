@@ -1,16 +1,16 @@
 ---
 description: Beschreibt, wie die- `continue` Anweisung den Programmablauf sofort an den Anfang einer Programm Schleife, einer- `switch` Anweisung oder einer-Anweisung zurückgibt `trap` .
-keywords: powershell,cmdlet
+Locale: en-US
 ms.date: 06/04/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_continue?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Continue
-ms.openlocfilehash: 2b299726b3fe75e5d13e91bbde7564705d3e2112
-ms.sourcegitcommit: 0c31814bed14ff715dc7d4aace07cbdc6df2438e
+ms.openlocfilehash: 5a4ec2713ceed6d60cbca48b3795b4236c65ba88
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97614114"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195919"
 ---
 # <a name="about-continue"></a>Informationen zum Fortfahren
 
@@ -109,7 +109,7 @@ Dies bedeutet, dass Funktionen und Skripts, die versehentlich einen `continue` a
 
 Durch die Verwendung von `continue` in einer Pipeline, wie z. b. einem `ForEach-Object` Skriptblock, wird die Pipeline nicht nur beendet, sondern der gesamte Runspace wird möglicherweise beendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 [about_Break](about_Break.md)
 

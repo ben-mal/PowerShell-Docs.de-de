@@ -8,18 +8,18 @@ Module Name: PSReadLine
 ms.date: 02/10/2020
 schema: 2.0.0
 title: PSReadLine
-ms.openlocfilehash: a404461e2b92f269d581b18c3ebe7643aa86c3a4
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 3adfa4be7aae03120d2334a57c39d7e6351bcb16
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93220391"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103196209"
 ---
 # Psread-Line-Modul
 
-## BESCHREIBUNG
+## Beschreibung
 
-Das psleline-Modul enthält Cmdlets, mit denen Sie die Bearbeitungsumgebung für die Befehlszeile in PowerShell anpassen können. In diesen Artikeln wird psread Line v 2.0 dokumentiert. Diese Version wird in PowerShell V6 und dem Windows 10-Update vom Oktober 2018 (Build 1809) ausgeliefert.
+Das psleline-Modul enthält Cmdlets, mit denen Sie die Bearbeitungsumgebung für die Befehlszeile in PowerShell anpassen können. PowerShell 7,1 wurde mit psread Line v 2.1 ausgeliefert. In diesen Artikeln wird psread Line v 2.1 dokumentiert.
 
 > [!NOTE]
 > Ab PowerShell 7,0 überspringt PowerShell das automatische Laden von psleseline unter Windows, wenn ein Bildschirm Leseprogramm erkannt wird. Derzeit funktioniert psread Line nicht gut mit den Bildschirmlesern. Das Standard Rendering und die Formatierung von PowerShell 7,0 unter Windows funktionieren ordnungsgemäß. Sie können das Modul ggf. manuell laden.
