@@ -1,40 +1,41 @@
 ---
 external help file: System.Management.Automation.dll-Help.xml
 Locale: en-US
+Module Name: Microsoft.PowerShell.Core
 ms.date: 06/09/2017
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/clear-host?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-Host
-ms.openlocfilehash: de7dc6027653db063311bd34e1282e3cb5294e92
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 6b7541fba77c4160cf8d5c2dd36a4bad0bf99c5f
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99600700"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195187"
 ---
-# <span data-ttu-id="a960e-102">Clear-Host</span><span class="sxs-lookup"><span data-stu-id="a960e-102">Clear-Host</span></span>
+# <span data-ttu-id="123dd-102">Clear-Host</span><span class="sxs-lookup"><span data-stu-id="123dd-102">Clear-Host</span></span>
 
-## <span data-ttu-id="a960e-103">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="a960e-103">SYNOPSIS</span></span>
+## <span data-ttu-id="123dd-103">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="123dd-103">SYNOPSIS</span></span>
 
-<span data-ttu-id="a960e-104">Löscht die Anzeige im Hostprogramm.</span><span class="sxs-lookup"><span data-stu-id="a960e-104">Clears the display in the host program.</span></span>
+<span data-ttu-id="123dd-104">Löscht die Anzeige im Hostprogramm.</span><span class="sxs-lookup"><span data-stu-id="123dd-104">Clears the display in the host program.</span></span>
 
-## <span data-ttu-id="a960e-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="a960e-105">SYNTAX</span></span>
+## <span data-ttu-id="123dd-105">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="123dd-105">SYNTAX</span></span>
 
 ```
 Clear-Host [<CommonParameters>]
 ```
 
-## <span data-ttu-id="a960e-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="a960e-106">DESCRIPTION</span></span>
+## <span data-ttu-id="123dd-106">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="123dd-106">DESCRIPTION</span></span>
 
-<span data-ttu-id="a960e-107">Die- `Clear-Host` Funktion entfernt den gesamten Text aus der aktuellen Anzeige, einschließlich Befehle und Ausgaben, die möglicherweise gesammelt wurden.</span><span class="sxs-lookup"><span data-stu-id="a960e-107">The `Clear-Host` function removes all text from the current display, including commands and output that might have accumulated.</span></span> <span data-ttu-id="a960e-108">Nach Abschluss des Vorgangs wird die Eingabeaufforderung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a960e-108">When complete, it displays the command prompt.</span></span> <span data-ttu-id="a960e-109">Sie können den Funktionsnamen oder seinen Alias verwenden `cls` .</span><span class="sxs-lookup"><span data-stu-id="a960e-109">You can use the function name or its alias, `cls`.</span></span>
+<span data-ttu-id="123dd-107">Die- `Clear-Host` Funktion entfernt den gesamten Text aus der aktuellen Anzeige, einschließlich Befehle und Ausgaben, die möglicherweise gesammelt wurden.</span><span class="sxs-lookup"><span data-stu-id="123dd-107">The `Clear-Host` function removes all text from the current display, including commands and output that might have accumulated.</span></span> <span data-ttu-id="123dd-108">Nach Abschluss des Vorgangs wird die Eingabeaufforderung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="123dd-108">When complete, it displays the command prompt.</span></span> <span data-ttu-id="123dd-109">Sie können den Funktionsnamen oder seinen Alias verwenden `cls` .</span><span class="sxs-lookup"><span data-stu-id="123dd-109">You can use the function name or its alias, `cls`.</span></span>
 
-<span data-ttu-id="a960e-110">`Clear-Host` wirkt sich nur auf die aktuelle Anzeige aus.</span><span class="sxs-lookup"><span data-stu-id="a960e-110">`Clear-Host` affects only the current display.</span></span> <span data-ttu-id="a960e-111">Es löscht keine gespeicherten Ergebnisse oder entfernt Elemente aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="a960e-111">It does not delete saved results or remove any items from the session.</span></span> <span data-ttu-id="a960e-112">Sitzungsspezifische Objekte, z. B. Variablen und Funktionen, sind nicht von dieser Funktion betroffen.</span><span class="sxs-lookup"><span data-stu-id="a960e-112">Session-specific items, such as variables and functions, are not affected by this function.</span></span>
+<span data-ttu-id="123dd-110">`Clear-Host` wirkt sich nur auf die aktuelle Anzeige aus.</span><span class="sxs-lookup"><span data-stu-id="123dd-110">`Clear-Host` affects only the current display.</span></span> <span data-ttu-id="123dd-111">Es löscht keine gespeicherten Ergebnisse oder entfernt Elemente aus der Sitzung.</span><span class="sxs-lookup"><span data-stu-id="123dd-111">It does not delete saved results or remove any items from the session.</span></span> <span data-ttu-id="123dd-112">Sitzungsspezifische Objekte, z. B. Variablen und Funktionen, sind nicht von dieser Funktion betroffen.</span><span class="sxs-lookup"><span data-stu-id="123dd-112">Session-specific items, such as variables and functions, are not affected by this function.</span></span>
 
-<span data-ttu-id="a960e-113">Da das Verhalten der- `Clear-Host` Funktion durch das Host Programm bestimmt wird, `Clear-Host` funktioniert möglicherweise in verschiedenen Host Programmen anders.</span><span class="sxs-lookup"><span data-stu-id="a960e-113">Because the behavior of the `Clear-Host` function is determined by the host program, `Clear-Host` might work differently in different host programs.</span></span>
+<span data-ttu-id="123dd-113">Da das Verhalten der- `Clear-Host` Funktion durch das Host Programm bestimmt wird, `Clear-Host` funktioniert möglicherweise in verschiedenen Host Programmen anders.</span><span class="sxs-lookup"><span data-stu-id="123dd-113">Because the behavior of the `Clear-Host` function is determined by the host program, `Clear-Host` might work differently in different host programs.</span></span>
 
-## <span data-ttu-id="a960e-114">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="a960e-114">EXAMPLES</span></span>
+## <span data-ttu-id="123dd-114">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="123dd-114">EXAMPLES</span></span>
 
-### <span data-ttu-id="a960e-115">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="a960e-115">Example 1</span></span>
+### <span data-ttu-id="123dd-115">Beispiel 1</span><span class="sxs-lookup"><span data-stu-id="123dd-115">Example 1</span></span>
 
 ```
 # Before
@@ -70,36 +71,36 @@ PS C:\> cls
 PS C:>
 ```
 
-<span data-ttu-id="a960e-116">Dieser Befehl verwendet den `cls` Alias von `Clear-Host` , um die aktuelle Anzeige zu löschen.</span><span class="sxs-lookup"><span data-stu-id="a960e-116">This command uses the `cls` alias of `Clear-Host` to clear the current display.</span></span>
+<span data-ttu-id="123dd-116">Dieser Befehl verwendet den `cls` Alias von `Clear-Host` , um die aktuelle Anzeige zu löschen.</span><span class="sxs-lookup"><span data-stu-id="123dd-116">This command uses the `cls` alias of `Clear-Host` to clear the current display.</span></span>
 
-## <span data-ttu-id="a960e-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="a960e-117">PARAMETERS</span></span>
+## <span data-ttu-id="123dd-117">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="123dd-117">PARAMETERS</span></span>
 
-### <span data-ttu-id="a960e-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="a960e-118">CommonParameters</span></span>
-<span data-ttu-id="a960e-119">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="a960e-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="a960e-120">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="a960e-120">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="123dd-118">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="123dd-118">CommonParameters</span></span>
+<span data-ttu-id="123dd-119">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="123dd-119">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="123dd-120">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="123dd-120">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="a960e-121">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="a960e-121">INPUTS</span></span>
+## <span data-ttu-id="123dd-121">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="123dd-121">INPUTS</span></span>
 
-### <span data-ttu-id="a960e-122">Keine</span><span class="sxs-lookup"><span data-stu-id="a960e-122">None</span></span>
+### <span data-ttu-id="123dd-122">Keine</span><span class="sxs-lookup"><span data-stu-id="123dd-122">None</span></span>
 
-<span data-ttu-id="a960e-123">Eingaben können nicht an übergeben werden `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="a960e-123">You cannot pipe input to `Clear-Host`.</span></span>
+<span data-ttu-id="123dd-123">Eingaben können nicht an übergeben werden `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="123dd-123">You cannot pipe input to `Clear-Host`.</span></span>
 
-## <span data-ttu-id="a960e-124">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="a960e-124">OUTPUTS</span></span>
+## <span data-ttu-id="123dd-124">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="123dd-124">OUTPUTS</span></span>
 
-### <span data-ttu-id="a960e-125">Keine</span><span class="sxs-lookup"><span data-stu-id="a960e-125">None</span></span>
+### <span data-ttu-id="123dd-125">Keine</span><span class="sxs-lookup"><span data-stu-id="123dd-125">None</span></span>
 
-<span data-ttu-id="a960e-126">`Clear-Host` generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="a960e-126">`Clear-Host` does not generate any output</span></span>
+<span data-ttu-id="123dd-126">`Clear-Host` generiert keine Ausgabe.</span><span class="sxs-lookup"><span data-stu-id="123dd-126">`Clear-Host` does not generate any output</span></span>
 
-## <span data-ttu-id="a960e-127">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="a960e-127">NOTES</span></span>
+## <span data-ttu-id="123dd-127">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="123dd-127">NOTES</span></span>
 
-<span data-ttu-id="a960e-128">`Clear-Host` ist eine einfache Funktion, keine erweiterte Funktion.</span><span class="sxs-lookup"><span data-stu-id="a960e-128">`Clear-Host` is a simple function, not an advanced function.</span></span> <span data-ttu-id="a960e-129">Daher können Sie in einem Befehl keine allgemeinen Parameter wie z. b. **Debuggen** verwenden `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="a960e-129">As such, you cannot use common parameters, such as **Debug**, in a `Clear-Host` command.</span></span>
+<span data-ttu-id="123dd-128">`Clear-Host` ist eine einfache Funktion, keine erweiterte Funktion.</span><span class="sxs-lookup"><span data-stu-id="123dd-128">`Clear-Host` is a simple function, not an advanced function.</span></span> <span data-ttu-id="123dd-129">Daher können Sie in einem Befehl keine allgemeinen Parameter wie z. b. **Debuggen** verwenden `Clear-Host` .</span><span class="sxs-lookup"><span data-stu-id="123dd-129">As such, you cannot use common parameters, such as **Debug**, in a `Clear-Host` command.</span></span>
 
-## <span data-ttu-id="a960e-130">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="a960e-130">RELATED LINKS</span></span>
+## <span data-ttu-id="123dd-130">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="123dd-130">RELATED LINKS</span></span>
 
-[<span data-ttu-id="a960e-131">Get-Host</span><span class="sxs-lookup"><span data-stu-id="a960e-131">Get-Host</span></span>](../Microsoft.PowerShell.Utility/Get-Host.md)
+[<span data-ttu-id="123dd-131">Get-Host</span><span class="sxs-lookup"><span data-stu-id="123dd-131">Get-Host</span></span>](../Microsoft.PowerShell.Utility/Get-Host.md)
 
-[<span data-ttu-id="a960e-132">Out-Host</span><span class="sxs-lookup"><span data-stu-id="a960e-132">Out-Host</span></span>](Out-Host.md)
+[<span data-ttu-id="123dd-132">Out-Host</span><span class="sxs-lookup"><span data-stu-id="123dd-132">Out-Host</span></span>](Out-Host.md)
 
-[<span data-ttu-id="a960e-133">Read-Host</span><span class="sxs-lookup"><span data-stu-id="a960e-133">Read-Host</span></span>](../Microsoft.PowerShell.Utility/Read-Host.md)
+[<span data-ttu-id="123dd-133">Read-Host</span><span class="sxs-lookup"><span data-stu-id="123dd-133">Read-Host</span></span>](../Microsoft.PowerShell.Utility/Read-Host.md)
 
-[<span data-ttu-id="a960e-134">Write-Host</span><span class="sxs-lookup"><span data-stu-id="a960e-134">Write-Host</span></span>](../Microsoft.PowerShell.Utility/Write-Host.md)
+[<span data-ttu-id="123dd-134">Write-Host</span><span class="sxs-lookup"><span data-stu-id="123dd-134">Write-Host</span></span>](../Microsoft.PowerShell.Utility/Write-Host.md)
 
