@@ -1,17 +1,16 @@
 ---
-description: Konfigurationsdateien für PowerShell Core, die die Registrierungs Konfiguration ersetzen.
-keywords: powershell
+description: Konfigurationsdateien für PowerShell, die die Registrierungs Konfiguration ersetzen.
 Locale: en-US
-ms.date: 11/02/2018
+ms.date: 03/12/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PowerShell_Config
-ms.openlocfilehash: fd4467845cf2b895401a55cbb7abd88b7b72af76
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 80ff02200b066c6f4f5eb355d5ed08894235e986
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222015"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412885"
 ---
 # <a name="about-powershell-config"></a>Informationen zur PowerShell-Konfiguration
 
@@ -23,11 +22,7 @@ Konfigurationsdateien für PowerShell Core, die die Registrierungs Konfiguration
 Die `powershell.config.json` Datei enthält Konfigurationseinstellungen für PowerShell Core. Diese Konfiguration wird von PowerShell beim Start geladen. Die Einstellungen können auch zur Laufzeit geändert werden. Zuvor wurden diese Einstellungen in der Windows-Registrierung für PowerShell gespeichert, sind aber jetzt in einer Datei enthalten, um die Konfiguration unter macOS und Linux zu aktivieren.
 
 > [!WARNING]
-> Wenn die `powershell.config.json` Datei eine ungültige JSON-Datei enthält, kann PowerShell keine interaktive Sitzung starten.
-> Wenn dies der Fall ist, müssen Sie die Konfigurationsdatei korrigieren.
-
-> [!NOTE]
-> Nicht erkannte Schlüssel oder ungültige Werte in der Konfigurationsdatei werden automatisch ignoriert.
+> Nicht erkannte Schlüssel oder ungültige Werte in der Konfigurationsdatei werden automatisch ignoriert. Wenn die `powershell.config.json` Datei ungültige JSON enthält, kann PowerShell keine interaktive Sitzung starten. Wenn dies der Fall ist, müssen Sie die Konfigurationsdatei korrigieren.
 
 ### <a name="allusers-shared-configuration"></a>Konfiguration von ALLUSERS (Shared)
 
@@ -61,9 +56,7 @@ Bei CurrentUser-Konfigurationen wird die **CurrentUser** -Ausführungs Richtlini
 
 Hierbei gilt:
 
-- `<shell-id>` bezieht sich auf die ID des aktuellen PowerShell-Hosts.
-  Für den normalen PowerShell-Kern lautet der Wert `Microsoft.PowerShell` .
-  In einer beliebigen PowerShell-Sitzung können Sie diese mithilfe von ermitteln `$ShellId` .
+- `<shell-id>` bezieht sich auf die ID des aktuellen PowerShell-Hosts. Für den normalen PowerShell-Kern lautet der Wert `Microsoft.PowerShell` . In einer beliebigen PowerShell-Sitzung können Sie diese mithilfe von ermitteln `$ShellId` .
 - `<execution-policy>` verweist auf einen gültigen Namen für die Ausführungs Richtlinie.
 
 Im folgenden Beispiel wird die Ausführungs Richtlinie von PowerShell auf festgelegt `RemoteSigned` .
@@ -78,15 +71,14 @@ In Windows finden Sie die entsprechenden Registrierungsschlüssel `\SOFTWARE\Mic
 
 ### <a name="psmodulepath"></a>PSModulePath
 
-Überschreibt eine psmodulepath-Komponente für diese PowerShell-Sitzung. Wenn die Konfiguration für den aktuellen Benutzer gilt, legt den CurrentUser-Modulpfad fest. Wenn die Konfiguration für alle Benutzer gilt, wird der alluser-Modulpfad von festgelegt.
+Überschreibt die `PSModulePath` Einstellungen für diese PowerShell-Sitzung. Wenn die Konfiguration für den aktuellen Benutzer gilt, legt den **CurrentUser** -Modulpfad fest. Wenn die Konfiguration für alle Benutzer gilt, wird der **ALLUSERS** -Modulpfad von festgelegt.
 
 > [!WARNING]
-> Wenn Sie einen AllUsers-oder CurrentUser-Modulpfad hier konfigurieren, wird der Bereichs bezogene Installationsort für PowerShellGet-Module wie " [Install-Module](/powershell/module/powershellget/install-module)" nicht geändert.
-> Diese Cmdlets verwenden immer die *Standard* Modul Pfade.
+> Wenn Sie einen **ALLUSERS** -oder **CurrentUser** -Modulpfad hier konfigurieren, ändert sich der Bereichs bezogene Installationsort für PowerShellGet-Cmdlets wie " [Install-Module](/powershell/module/powershellget/install-module)" nicht. Diese Cmdlets verwenden immer die _Standard_ Modul Pfade.
 
-Wenn kein Wert festgelegt ist, wird der Standardwert für die jeweilige Modul Pfadkomponente verwendet. Weitere Informationen zu diesen Standardeinstellungen finden Sie unter [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath) .
+Wenn kein Wert festgelegt ist, verwendet PowerShell den Standardwert für die jeweilige Modulpfad Einstellung. Weitere Informationen zu diesen Standardeinstellungen finden Sie unter [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath).
 
-Diese Einstellung ermöglicht die Verwendung von Umgebungsvariablen, indem Sie Sie `%` `"%HOME%\Documents\PowerShell\Modules"` auf die gleiche Weise wie cmd zwischen Zeichen einbetten. Diese Syntax gilt auch für Linux und macOS. Weiter unten finden Sie Beispiele dafür.
+Diese Einstellung ermöglicht die Verwendung von Umgebungsvariablen, indem Sie Sie `%` `"%HOME%\Documents\PowerShell\Modules"` in derselben Weise wie cmd zwischen Zeichen einbetten. Diese Syntax gilt auch für Linux und macOS. Weiter unten finden Sie Beispiele dafür.
 
 ```Schema
 "PSModulePath": "<ps-module-path>"
@@ -96,7 +88,7 @@ Hierbei gilt:
 
 - `<ps-module-path>` der absolute Pfad zu einem Modul Verzeichnis. Für alle Benutzerkonfigurationen ist dies das Verzeichnis "ALLUSERS Shared Module". Bei aktuellen Benutzerkonfigurationen ist dies das CurrentUser-Modul Verzeichnis.
 
-Dieses Beispiel zeigt eine psmodulepath-Konfiguration für eine Windows-Umgebung:
+Dieses Beispiel zeigt eine `PSModulePath` Konfiguration für eine Windows-Umgebung:
 
 ```json
 {
@@ -104,7 +96,7 @@ Dieses Beispiel zeigt eine psmodulepath-Konfiguration für eine Windows-Umgebung
 }
 ```
 
-Dieses Beispiel zeigt eine psmodulepath-Konfiguration für eine macOS-oder Linux-Umgebung:
+Dieses Beispiel zeigt eine `PSModulePath` Konfiguration für eine macOS-oder Linux-Umgebung:
 
 ```json
 {
@@ -112,7 +104,7 @@ Dieses Beispiel zeigt eine psmodulepath-Konfiguration für eine macOS-oder Linux
 }
 ```
 
-Dieses Beispiel zeigt das Einbetten einer Umgebungsvariablen in eine psmodulepath-Konfiguration. Beachten Sie, dass `HOME` `/` dies unter Windows, macOS und Linux funktioniert, wenn die Umgebungsvariable und das Verzeichnis Trennzeichen verwendet werden.
+In diesem Beispiel wird gezeigt, wie eine Umgebungsvariable in eine Konfiguration eingebettet wird `PSModulePath` . Beachten Sie, dass `HOME` `/` dies unter Windows, macOS und Linux funktioniert, wenn die Umgebungsvariable und das Verzeichnis Trennzeichen verwendet werden.
 
 ```json
 {
@@ -120,7 +112,7 @@ Dieses Beispiel zeigt das Einbetten einer Umgebungsvariablen in eine psmodulepat
 }
 ```
 
-Dieses Beispiel zeigt das Einbetten einer Umgebungsvariablen in eine psmodulepath-Konfiguration, die nur unter macOS und Linux funktioniert:
+In diesem Beispiel wird gezeigt, wie eine Umgebungsvariable in einer `PSModulePath` Konfiguration eingebettet wird, die nur unter macOS und Linux funktioniert:
 
 ```json
 {
@@ -129,14 +121,12 @@ Dieses Beispiel zeigt das Einbetten einer Umgebungsvariablen in eine psmodulepat
 ```
 
 > [!NOTE]
-> PowerShell-Variablen können nicht in psmodulepath-Konfigurationen eingebettet werden.
-> Bei psmodulepath-Konfigurationen unter Linux und macOS wird die Groß-/Kleinschreibung beachtet. Eine psmodulepath-Konfiguration muss gültige Verzeichnis Trennzeichen für die Plattform verwenden. Unter macOS und Linux bedeutet dies `/` . Unter Windows funktionieren sowohl `/` als auch `\` .
+> PowerShell-Variablen können nicht in `PSModulePath` Konfigurationen eingebettet werden.
+> `PSModulePath` bei Konfigurationen unter Linux und macOS wird die Groß-/Kleinschreibung beachtet. Eine `PSModulePath` Konfiguration muss gültige Verzeichnis Trennzeichen für die Plattform verwenden. Unter macOS und Linux bedeutet dies `/` . Unter Windows funktionieren sowohl `/` als auch `\` .
 
 ### <a name="experimentalfeatures"></a>Experiment Features
 
-Die Namen der experimentellen Funktionen, die in PowerShell aktiviert werden sollen.
-Standardmäßig sind keine experimentellen Funktionen aktiviert.
-Der Standardwert ist ein leeres Array.
+Die Namen der experimentellen Funktionen, die in PowerShell aktiviert werden sollen. Standardmäßig sind keine experimentellen Funktionen aktiviert. Der Standardwert ist ein leeres Array.
 
 ```Schema
 "ExperimentalFeatures": ["<experimental-feature-name>", ...]
@@ -157,7 +147,7 @@ Im folgenden Beispiel werden die experimentellen Funktionen **pvereinfachcitremo
 }
 ```
 
-Weitere Informationen zu experimentellen Funktionen finden Sie unter [PowerShell RFC 29][RFC0029].
+Weitere Informationen zu experimentellen Funktionen finden Sie unter [Verwenden von experimentellen Features](/powershell/scripting/learn/experimental-features).
 
 ## <a name="non-windows-logging-configuration"></a>Konfiguration der nicht-Windows-Protokollierung
 
@@ -206,8 +196,8 @@ Gibt den minimalen Schweregrad an, mit dem PowerShell protokolliert werden soll.
 
 Hierbei gilt:
 
-- `<log-level>` ist eine von:
-  - Always
+- `<log-level>` ist einer dieser Werte:
+  - Immer
   - Kritisch
   - Fehler
   - Warnung
@@ -219,7 +209,7 @@ Hierbei gilt:
 > Durch Festlegen einer Protokollebene werden alle darüber liegenden Protokoll Ebenen aktiviert.
 
 Wenn diese Einstellung auf **default** festgelegt wird, wird Sie als Standardwert interpretiert.
-Der Standardwert ist " **Information** ".
+Der Standardwert ist " **Information**".
 
 Im folgenden Beispiel wird der Wert auf **verbose** festgelegt.
 
@@ -242,7 +232,7 @@ Bestimmt, welche Protokollierungs Kanäle aktiviert sind.
 
 Hierbei gilt:
 
-- `<log-channel>` ist eine von:
+- `<log-channel>` ist einer dieser Werte:
   - Operational: protokolliert grundlegende Informationen zu PowerShell-Aktivitäten.
   - Analytisch: protokolliert ausführlichere Diagnoseinformationen
 
@@ -267,7 +257,7 @@ Bestimmt, welche Teile von PowerShell protokolliert werden. Standardmäßig sind
 
 Hierbei gilt:
 
-- `<log-keyword>` ist eine von:
+- `<log-keyword>` ist einer dieser Werte:
   - Runspace-Runspace-Verwaltung
   - Pipeline-Pipeline Vorgänge
   - Protokoll Kommunikationsprotokoll-Behandlung, z. b. PSRP
@@ -279,8 +269,7 @@ Hierbei gilt:
   - Managedplugin-WSMAN-Plug-in
 
 > [!NOTE]
-> Es wird im Allgemeinen empfohlen, diesen Wert nicht festzulegen, es sei denn, Sie versuchen, ein bestimmtes Verhalten in einem bekannten Bereich von PowerShell zu diagnostizieren.
-> Durch Ändern dieses Werts wird nur die Menge der protokollierten Informationen verringert.
+> Es wird im Allgemeinen empfohlen, diesen Wert nicht festzulegen, es sei denn, Sie versuchen, ein bestimmtes Verhalten in einem bekannten Bereich von PowerShell zu diagnostizieren. Durch Ändern dieses Werts wird nur die Menge der protokollierten Informationen verringert.
 
 In diesem Beispiel wird die Protokollierung auf Runspace-Vorgänge, die Pipeline Logik und die Cmdlet-Verwendung beschränkt. Alle anderen Protokollierungen werden weggelassen.
 
@@ -345,11 +334,8 @@ Diese Konfiguration legt eine Reihe von Optionen fest, die nur in macOS oder Lin
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [Informationen zu Ausführungsrichtlinien](./about_Execution_Policies.md)
 
 [Informationen zu automatischen Variablen](./about_Automatic_Variables.md)
-
-[RFC0029]: https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md
-

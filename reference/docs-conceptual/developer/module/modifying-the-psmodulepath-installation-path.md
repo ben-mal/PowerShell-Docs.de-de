@@ -1,14 +1,14 @@
 ---
-ms.date: 09/13/2016
+ms.date: 03/12/2021
 ms.topic: reference
 title: Ändern des Installationspfads PSModulePath
 description: Ändern des Installationspfads PSModulePath
-ms.openlocfilehash: b802492bf9b49e8165e296817e3f80b9ae8265a6
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: 1bea1e8ed20f55352cc9b4270e95cf7f0f7e2faa
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "92661953"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412886"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Ändern des Installationspfads PSModulePath
 
@@ -47,9 +47,12 @@ Um dieser Variablen Pfade hinzuzufügen, verwenden Sie eine der folgenden Method
 
   ```
 
+Sie können auch die `PSModulePath` Werte in der `powershell.config.json` Konfigurationsdatei festlegen. Weitere Informationen finden Sie unter [about_PowerShell_Config](/powershell/module/microsoft.powershell.core/about/about_powershell_config#psmodulepath).
+
 ## <a name="to-remove-locations-from-the-psmodulepath"></a>So entfernen Sie Speicherorte aus dem psmodulepath
 
-Sie können Pfade aus der Variablen entfernen, indem Sie ähnliche Methoden verwenden: beispielsweise `$env:PSModulePath = $env:PSModulePath -replace "$([System.IO.Path]::PathSeparator)c:\\ModulePath"` wird der Pfad " **c:\modulepath** " aus der aktuellen Sitzung entfernt.
+Sie können Pfade aus der Variablen entfernen, indem Sie ähnliche Methoden verwenden: z. b. `$env:PSModulePath = $env:PSModulePath -replace "$([System.IO.Path]::PathSeparator)c:\\ModulePath"`
+entfernt den Pfad " **c:\modulepath** " aus der aktuellen Sitzung.
 
 ## <a name="see-also"></a>Weitere Informationen
 

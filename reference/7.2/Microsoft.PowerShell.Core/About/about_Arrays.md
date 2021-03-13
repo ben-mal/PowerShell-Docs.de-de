@@ -5,12 +5,12 @@ ms.date: 08/26/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Arrays
-ms.openlocfilehash: 2e7cf9c8f7d4e6f1d5bc66310f56d3de9461e592
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 4ec216a502f0031bc35cc7b04aacf5d262fd696d
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99596564"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412844"
 ---
 # <a name="about-arrays"></a>Informationen zu Arrays
 
@@ -320,7 +320,7 @@ $a.Length
 
 ### <a name="rank"></a>Rang
 
-Gibt die Anzahl der Dimensionen des Arrays zurück. Die meisten Arrays in PowerShell verfügen nur über eine einzige Dimension. Auch wenn Sie der Ansicht sind, dass Sie ein mehrdimensionales Array aufbauen, wie im folgenden Beispiel gezeigt:
+Gibt die Anzahl der Dimensionen des Arrays zurück. Die meisten Arrays in PowerShell verfügen nur über eine einzige Dimension. Auch wenn Sie der Ansicht sind, dass Sie ein mehrdimensionales Array wie im folgenden Beispiel entwickeln:
 
 ```powershell
 $a = @(
@@ -329,28 +329,77 @@ $a = @(
   @(Get-Process)
 )
 
-[int]$r = $a.Rank
-"`$a rank: $r"
+"`$a rank: $($a.Rank)"
+"`$a length: $($a.Length)"
+"`$a length: $($a.Length)"
+"Process `$a[2][1]: $($a[2][1].ProcessName)"
 ```
+
+In diesem Beispiel erstellen Sie ein eindimensionales Array, das andere Arrays enthält. Dies wird auch als _Jagged Array_ bezeichnet. Die **Rank** -Eigenschaft hat bewiesen, dass es sich um ein eindimensionales handelt. Für den Zugriff auf Elemente in einem Jagged Array müssen die Indizes in separaten Klammern ( `[]` ) angegeben werden.
 
 ```Output
 $a rank: 1
+$a length: 3
+$a[2] length: 348
+Process $a[2][1]: AcroRd32
 ```
 
-Im folgenden Beispiel wird gezeigt, wie ein wirklich mehrdimensionales Array mithilfe von .NET Framework erstellt wird.
+Mehrdimensionale Arrays werden in [Zeilen Hauptreihen Folge](https://wikipedia.org/wiki/Row-_and_column-major_order)gespeichert. Im folgenden Beispiel wird gezeigt, wie ein wirklich mehrdimensionales Array erstellt wird.
 
 ```powershell
-[int[,]]$rank2 = [int[,]]::new(5,5)
+[string[,]]$rank2 = [string[,]]::New(3,2)
 $rank2.rank
+$rank2.Length
+$rank2[0,0] = 'a'
+$rank2[0,1] = 'b'
+$rank2[1,0] = 'c'
+$rank2[1,1] = 'd'
+$rank2[2,0] = 'e'
+$rank2[2,1] = 'f'
+$rank2[1,1]
 ```
 
 ```Output
 2
+6
+d
+```
+
+Um auf Elemente in einem mehrdimensionalen Array zuzugreifen, trennen Sie die Indizes mithilfe eines Kommas ( `,` ) innerhalb eines einzelnen Satzes von Klammern ( `[]` ).
+
+Bei einigen Vorgängen in einem mehrdimensionalen Array (z. b. Replikation und Verkettung) muss das Array vereinfacht werden. Durch das vereinfachen wird das Array in ein eindimensionales Array vom Typ "nicht eingeschränkt" umgewandelt. Das resultierende Array übernimmt alle Elemente in der Reihenfolge der Zeilen. Betrachten Sie das folgende Beispiel:
+
+```powershell
+$a = "red",$true
+$b = (New-Object 'int[,]' 2,2)
+$b[0,0] = 10
+$b[0,1] = 20
+$b[1,0] = 30
+$b[1,1] = 40
+$c = $a + $b
+$a.GetType().Name
+$b.GetType().Name
+$c.GetType().Name
+$c
+```
+
+Die Ausgabe zeigt, dass `$c` ein eindimensionales Array ist, das die Elemente aus `$a` und `$b` in Zeilen Hauptreihen Folge enthält.
+
+```output
+Object[]
+Int32[,]
+Object[]
+red
+True
+10
+20
+30
+40
 ```
 
 ## <a name="methods-of-arrays"></a>Methoden von Arrays
 
-### <a name="clear"></a>Löschen
+### <a name="clear"></a>Clear
 
 Legt alle Element Werte auf den _Standardwert_ des Elementtyps des Arrays fest.
 Die Clear ()-Methode setzt nicht die Größe des Arrays zurück.
