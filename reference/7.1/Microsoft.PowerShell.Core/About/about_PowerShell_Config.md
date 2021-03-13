@@ -1,72 +1,65 @@
 ---
-description: Konfigurationsdateien für PowerShell Core, die die Registrierungs Konfiguration ersetzen.
-keywords: powershell
+description: Konfigurationsdateien für PowerShell, die die Registrierungs Konfiguration ersetzen.
 Locale: en-US
-ms.date: 11/02/2018
+ms.date: 03/12/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PowerShell_Config
-ms.openlocfilehash: fd4467845cf2b895401a55cbb7abd88b7b72af76
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 80ff02200b066c6f4f5eb355d5ed08894235e986
+ms.sourcegitcommit: 2560a122fe3a85ea762c3af6f1cba9e237512b2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222015"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103412885"
 ---
-# <a name="about-powershell-config"></a><span data-ttu-id="1c817-104">Informationen zur PowerShell-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="1c817-104">About PowerShell Config</span></span>
+# <a name="about-powershell-config"></a><span data-ttu-id="ea83d-103">Informationen zur PowerShell-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="ea83d-103">About PowerShell Config</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="1c817-105">KURZE BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="1c817-105">SHORT DESCRIPTION</span></span>
-<span data-ttu-id="1c817-106">Konfigurationsdateien für PowerShell Core, die die Registrierungs Konfiguration ersetzen.</span><span class="sxs-lookup"><span data-stu-id="1c817-106">Configuration files for PowerShell Core, replacing Registry configuration.</span></span>
+## <a name="short-description"></a><span data-ttu-id="ea83d-104">KURZE BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ea83d-104">SHORT DESCRIPTION</span></span>
+<span data-ttu-id="ea83d-105">Konfigurationsdateien für PowerShell Core, die die Registrierungs Konfiguration ersetzen.</span><span class="sxs-lookup"><span data-stu-id="ea83d-105">Configuration files for PowerShell Core, replacing Registry configuration.</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="1c817-107">LANGE BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="1c817-107">LONG DESCRIPTION</span></span>
+## <a name="long-description"></a><span data-ttu-id="ea83d-106">LANGE BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ea83d-106">LONG DESCRIPTION</span></span>
 
-<span data-ttu-id="1c817-108">Die `powershell.config.json` Datei enthält Konfigurationseinstellungen für PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="1c817-108">The `powershell.config.json` file contains configuration settings for PowerShell Core.</span></span> <span data-ttu-id="1c817-109">Diese Konfiguration wird von PowerShell beim Start geladen.</span><span class="sxs-lookup"><span data-stu-id="1c817-109">PowerShell loads this configuration at startup.</span></span> <span data-ttu-id="1c817-110">Die Einstellungen können auch zur Laufzeit geändert werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-110">The settings can also be modified at runtime.</span></span> <span data-ttu-id="1c817-111">Zuvor wurden diese Einstellungen in der Windows-Registrierung für PowerShell gespeichert, sind aber jetzt in einer Datei enthalten, um die Konfiguration unter macOS und Linux zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="1c817-111">Previously, these settings were stored in the Windows Registry for PowerShell, but are now contained in a file to enable configuration on macOS and Linux.</span></span>
+<span data-ttu-id="ea83d-107">Die `powershell.config.json` Datei enthält Konfigurationseinstellungen für PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="ea83d-107">The `powershell.config.json` file contains configuration settings for PowerShell Core.</span></span> <span data-ttu-id="ea83d-108">Diese Konfiguration wird von PowerShell beim Start geladen.</span><span class="sxs-lookup"><span data-stu-id="ea83d-108">PowerShell loads this configuration at startup.</span></span> <span data-ttu-id="ea83d-109">Die Einstellungen können auch zur Laufzeit geändert werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-109">The settings can also be modified at runtime.</span></span> <span data-ttu-id="ea83d-110">Zuvor wurden diese Einstellungen in der Windows-Registrierung für PowerShell gespeichert, sind aber jetzt in einer Datei enthalten, um die Konfiguration unter macOS und Linux zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="ea83d-110">Previously, these settings were stored in the Windows Registry for PowerShell, but are now contained in a file to enable configuration on macOS and Linux.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="1c817-112">Wenn die `powershell.config.json` Datei eine ungültige JSON-Datei enthält, kann PowerShell keine interaktive Sitzung starten.</span><span class="sxs-lookup"><span data-stu-id="1c817-112">If the `powershell.config.json` file contains invalid JSON PowerShell cannot start an interactive session.</span></span>
-> <span data-ttu-id="1c817-113">Wenn dies der Fall ist, müssen Sie die Konfigurationsdatei korrigieren.</span><span class="sxs-lookup"><span data-stu-id="1c817-113">If this occurs, you must fix the configuration file.</span></span>
+> <span data-ttu-id="ea83d-111">Nicht erkannte Schlüssel oder ungültige Werte in der Konfigurationsdatei werden automatisch ignoriert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-111">Unrecognized keys or invalid values in the configuration file are silently ignored.</span></span> <span data-ttu-id="ea83d-112">Wenn die `powershell.config.json` Datei ungültige JSON enthält, kann PowerShell keine interaktive Sitzung starten.</span><span class="sxs-lookup"><span data-stu-id="ea83d-112">If the `powershell.config.json` file contains invalid JSON, PowerShell cannot start an interactive session.</span></span> <span data-ttu-id="ea83d-113">Wenn dies der Fall ist, müssen Sie die Konfigurationsdatei korrigieren.</span><span class="sxs-lookup"><span data-stu-id="ea83d-113">If this occurs, you must fix the configuration file.</span></span>
+
+### <a name="allusers-shared-configuration"></a><span data-ttu-id="ea83d-114">Konfiguration von ALLUSERS (Shared)</span><span class="sxs-lookup"><span data-stu-id="ea83d-114">AllUsers (shared) configuration</span></span>
+
+<span data-ttu-id="ea83d-115">Eine `powershell.config.json` Datei im `$PSHOME` Verzeichnis definiert die Konfiguration für alle PowerShell-Kern Sitzungen, die von dieser PowerShell Core-Installation ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-115">A `powershell.config.json` file in the `$PSHOME` directory defines the configuration for all PowerShell Core sessions running from that PowerShell Core installation.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1c817-114">Nicht erkannte Schlüssel oder ungültige Werte in der Konfigurationsdatei werden automatisch ignoriert.</span><span class="sxs-lookup"><span data-stu-id="1c817-114">Unrecognized keys or invalid values in the configuration file will be silently ignored.</span></span>
+> <span data-ttu-id="ea83d-116">Der `$PSHOME` Speicherort wird als dasselbe Verzeichnis wie die ausführende System.Management.Automation.dll Assembly definiert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-116">The `$PSHOME` location is defined as the same directory as the executing System.Management.Automation.dll assembly.</span></span> <span data-ttu-id="ea83d-117">Dies gilt auch für gehostete PowerShell SDK-Instanzen.</span><span class="sxs-lookup"><span data-stu-id="ea83d-117">This applies to hosted PowerShell SDK instances as well.</span></span>
 
-### <a name="allusers-shared-configuration"></a><span data-ttu-id="1c817-115">Konfiguration von ALLUSERS (Shared)</span><span class="sxs-lookup"><span data-stu-id="1c817-115">AllUsers (shared) configuration</span></span>
+### <a name="currentuser-per-user-configurations"></a><span data-ttu-id="ea83d-118">CurrentUser-Konfigurationen (pro Benutzer)</span><span class="sxs-lookup"><span data-stu-id="ea83d-118">CurrentUser (per-user) configurations</span></span>
 
-<span data-ttu-id="1c817-116">Eine `powershell.config.json` Datei im `$PSHOME` Verzeichnis definiert die Konfiguration für alle PowerShell-Kern Sitzungen, die von dieser PowerShell Core-Installation ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-116">A `powershell.config.json` file in the `$PSHOME` directory defines the configuration for all PowerShell Core sessions running from that PowerShell Core installation.</span></span>
+<span data-ttu-id="ea83d-119">Sie können PowerShell auch pro Benutzer konfigurieren, indem Sie die Datei im Benutzer Bereichs-Konfigurationsverzeichnis platzieren.</span><span class="sxs-lookup"><span data-stu-id="ea83d-119">You can also configure PowerShell on a per-user basis by placing the file in the user-scope configuration directory.</span></span> <span data-ttu-id="ea83d-120">Das Benutzer Konfigurationsverzeichnis kann mit dem Befehl plattformübergreifend gefunden werden `Split-Path $PROFILE.CurrentUserCurrentHost` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-120">The user configuration directory can be found across platforms with the command `Split-Path $PROFILE.CurrentUserCurrentHost`.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="1c817-117">Der `$PSHOME` Speicherort wird als dasselbe Verzeichnis wie die ausführende System.Management.Automation.dll Assembly definiert.</span><span class="sxs-lookup"><span data-stu-id="1c817-117">The `$PSHOME` location is defined as the same directory as the executing System.Management.Automation.dll assembly.</span></span> <span data-ttu-id="1c817-118">Dies gilt auch für gehostete PowerShell SDK-Instanzen.</span><span class="sxs-lookup"><span data-stu-id="1c817-118">This applies to hosted PowerShell SDK instances as well.</span></span>
+## <a name="general-configuration-settings"></a><span data-ttu-id="ea83d-121">Allgemeine Konfigurationseinstellungen</span><span class="sxs-lookup"><span data-stu-id="ea83d-121">General configuration settings</span></span>
 
-### <a name="currentuser-per-user-configurations"></a><span data-ttu-id="1c817-119">CurrentUser-Konfigurationen (pro Benutzer)</span><span class="sxs-lookup"><span data-stu-id="1c817-119">CurrentUser (per-user) configurations</span></span>
-
-<span data-ttu-id="1c817-120">Sie können PowerShell auch pro Benutzer konfigurieren, indem Sie die Datei im Benutzer Bereichs-Konfigurationsverzeichnis platzieren.</span><span class="sxs-lookup"><span data-stu-id="1c817-120">You can also configure PowerShell on a per-user basis by placing the file in the user-scope configuration directory.</span></span> <span data-ttu-id="1c817-121">Das Benutzer Konfigurationsverzeichnis kann mit dem Befehl plattformübergreifend gefunden werden `Split-Path $PROFILE.CurrentUserCurrentHost` .</span><span class="sxs-lookup"><span data-stu-id="1c817-121">The user configuration directory can be found across platforms with the command `Split-Path $PROFILE.CurrentUserCurrentHost`.</span></span>
-
-## <a name="general-configuration-settings"></a><span data-ttu-id="1c817-122">Allgemeine Konfigurationseinstellungen</span><span class="sxs-lookup"><span data-stu-id="1c817-122">General configuration settings</span></span>
-
-### <a name="executionpolicy"></a><span data-ttu-id="1c817-123">ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="1c817-123">ExecutionPolicy</span></span>
+### <a name="executionpolicy"></a><span data-ttu-id="ea83d-122">ExecutionPolicy</span><span class="sxs-lookup"><span data-stu-id="ea83d-122">ExecutionPolicy</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="1c817-124">Diese Konfiguration gilt nur für Windows-Plattformen.</span><span class="sxs-lookup"><span data-stu-id="1c817-124">This configuration only applies on Windows platforms.</span></span>
+> <span data-ttu-id="ea83d-123">Diese Konfiguration gilt nur für Windows-Plattformen.</span><span class="sxs-lookup"><span data-stu-id="ea83d-123">This configuration only applies on Windows platforms.</span></span>
 
-<span data-ttu-id="1c817-125">Konfiguriert die Ausführungs Richtlinie für PowerShell-Sitzungen und bestimmt, welche Skripts ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="1c817-125">Configures the execution policy for PowerShell sessions, determining what scripts can be run.</span></span> <span data-ttu-id="1c817-126">Standardmäßig verwendet PowerShell die vorhandene Ausführungs Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="1c817-126">By default, PowerShell uses the existing execution policy.</span></span>
+<span data-ttu-id="ea83d-124">Konfiguriert die Ausführungs Richtlinie für PowerShell-Sitzungen und bestimmt, welche Skripts ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="ea83d-124">Configures the execution policy for PowerShell sessions, determining what scripts can be run.</span></span> <span data-ttu-id="ea83d-125">Standardmäßig verwendet PowerShell die vorhandene Ausführungs Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="ea83d-125">By default, PowerShell uses the existing execution policy.</span></span>
 
-<span data-ttu-id="1c817-127">Bei ALLUSERS-Konfigurationen wird dadurch die **LocalMachine** -Ausführungs Richtlinie festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1c817-127">For AllUsers configurations, this sets the **LocalMachine** execution policy.</span></span>
-<span data-ttu-id="1c817-128">Bei CurrentUser-Konfigurationen wird die **CurrentUser** -Ausführungs Richtlinie festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1c817-128">For CurrentUser configurations, this sets the **CurrentUser** execution policy.</span></span>
+<span data-ttu-id="ea83d-126">Bei ALLUSERS-Konfigurationen wird dadurch die **LocalMachine** -Ausführungs Richtlinie festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-126">For AllUsers configurations, this sets the **LocalMachine** execution policy.</span></span>
+<span data-ttu-id="ea83d-127">Bei CurrentUser-Konfigurationen wird die **CurrentUser** -Ausführungs Richtlinie festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-127">For CurrentUser configurations, this sets the **CurrentUser** execution policy.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1c817-129">Das- [`Set-ExecutionPolicy`](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy) Cmdlet ändert diese Einstellung in der ALLUSERS-Konfigurationsdatei, wenn Sie mit aufgerufen `-Scope LocalMachine` wird, und ändert diese Einstellung in der CurrentUser-Konfigurationsdatei, wenn Sie mit aufgerufen wird `-Scope CurrentUser` .</span><span class="sxs-lookup"><span data-stu-id="1c817-129">The [`Set-ExecutionPolicy`](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy) cmdlet modifies this setting in the AllUsers configuration file when invoked with `-Scope LocalMachine`, and modifies this setting in the CurrentUser configuration file when invoked with `-Scope CurrentUser`.</span></span>
+> <span data-ttu-id="ea83d-128">Das- [`Set-ExecutionPolicy`](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy) Cmdlet ändert diese Einstellung in der ALLUSERS-Konfigurationsdatei, wenn Sie mit aufgerufen `-Scope LocalMachine` wird, und ändert diese Einstellung in der CurrentUser-Konfigurationsdatei, wenn Sie mit aufgerufen wird `-Scope CurrentUser` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-128">The [`Set-ExecutionPolicy`](xref:Microsoft.PowerShell.Security.Set-ExecutionPolicy) cmdlet modifies this setting in the AllUsers configuration file when invoked with `-Scope LocalMachine`, and modifies this setting in the CurrentUser configuration file when invoked with `-Scope CurrentUser`.</span></span>
 
 ```Schema
 "<shell-id>:ExecutionPolicy": "<execution-policy>"
 ```
 
-<span data-ttu-id="1c817-130">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-130">Where:</span></span>
+<span data-ttu-id="ea83d-129">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-129">Where:</span></span>
 
-- <span data-ttu-id="1c817-131">`<shell-id>` bezieht sich auf die ID des aktuellen PowerShell-Hosts.</span><span class="sxs-lookup"><span data-stu-id="1c817-131">`<shell-id>` refers to the ID of the current PowerShell host.</span></span>
-  <span data-ttu-id="1c817-132">Für den normalen PowerShell-Kern lautet der Wert `Microsoft.PowerShell` .</span><span class="sxs-lookup"><span data-stu-id="1c817-132">For normal PowerShell Core, this is `Microsoft.PowerShell`.</span></span>
-  <span data-ttu-id="1c817-133">In einer beliebigen PowerShell-Sitzung können Sie diese mithilfe von ermitteln `$ShellId` .</span><span class="sxs-lookup"><span data-stu-id="1c817-133">In any PowerShell session, you can discover it with `$ShellId`.</span></span>
-- <span data-ttu-id="1c817-134">`<execution-policy>` verweist auf einen gültigen Namen für die Ausführungs Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="1c817-134">`<execution-policy>` refers to a valid execution policy name.</span></span>
+- <span data-ttu-id="ea83d-130">`<shell-id>` bezieht sich auf die ID des aktuellen PowerShell-Hosts.</span><span class="sxs-lookup"><span data-stu-id="ea83d-130">`<shell-id>` refers to the ID of the current PowerShell host.</span></span> <span data-ttu-id="ea83d-131">Für den normalen PowerShell-Kern lautet der Wert `Microsoft.PowerShell` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-131">For normal PowerShell Core, this is `Microsoft.PowerShell`.</span></span> <span data-ttu-id="ea83d-132">In einer beliebigen PowerShell-Sitzung können Sie diese mithilfe von ermitteln `$ShellId` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-132">In any PowerShell session, you can discover it with `$ShellId`.</span></span>
+- <span data-ttu-id="ea83d-133">`<execution-policy>` verweist auf einen gültigen Namen für die Ausführungs Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="ea83d-133">`<execution-policy>` refers to a valid execution policy name.</span></span>
 
-<span data-ttu-id="1c817-135">Im folgenden Beispiel wird die Ausführungs Richtlinie von PowerShell auf festgelegt `RemoteSigned` .</span><span class="sxs-lookup"><span data-stu-id="1c817-135">The following example sets the execution policy of PowerShell to `RemoteSigned`.</span></span>
+<span data-ttu-id="ea83d-134">Im folgenden Beispiel wird die Ausführungs Richtlinie von PowerShell auf festgelegt `RemoteSigned` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-134">The following example sets the execution policy of PowerShell to `RemoteSigned`.</span></span>
 
 ```json
 {
@@ -74,29 +67,28 @@ ms.locfileid: "93222015"
 }
 ```
 
-<span data-ttu-id="1c817-136">In Windows finden Sie die entsprechenden Registrierungsschlüssel `\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell` unter `HKEY_LOCAL_MACHINE` und `HKEY_CURRENT_USER` .</span><span class="sxs-lookup"><span data-stu-id="1c817-136">In Windows, the equivalent registry keys can be found in `\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell` under `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER`.</span></span>
+<span data-ttu-id="ea83d-135">In Windows finden Sie die entsprechenden Registrierungsschlüssel `\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell` unter `HKEY_LOCAL_MACHINE` und `HKEY_CURRENT_USER` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-135">In Windows, the equivalent registry keys can be found in `\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell` under `HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER`.</span></span>
 
-### <a name="psmodulepath"></a><span data-ttu-id="1c817-137">PSModulePath</span><span class="sxs-lookup"><span data-stu-id="1c817-137">PSModulePath</span></span>
+### <a name="psmodulepath"></a><span data-ttu-id="ea83d-136">PSModulePath</span><span class="sxs-lookup"><span data-stu-id="ea83d-136">PSModulePath</span></span>
 
-<span data-ttu-id="1c817-138">Überschreibt eine psmodulepath-Komponente für diese PowerShell-Sitzung.</span><span class="sxs-lookup"><span data-stu-id="1c817-138">Overrides a PSModulePath component for this PowerShell session.</span></span> <span data-ttu-id="1c817-139">Wenn die Konfiguration für den aktuellen Benutzer gilt, legt den CurrentUser-Modulpfad fest.</span><span class="sxs-lookup"><span data-stu-id="1c817-139">If the configuration is for the current user, sets the CurrentUser module path.</span></span> <span data-ttu-id="1c817-140">Wenn die Konfiguration für alle Benutzer gilt, wird der alluser-Modulpfad von festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1c817-140">If the configuration is for all users, sets the AllUser module path.</span></span>
+<span data-ttu-id="ea83d-137">Überschreibt die `PSModulePath` Einstellungen für diese PowerShell-Sitzung.</span><span class="sxs-lookup"><span data-stu-id="ea83d-137">Overrides the `PSModulePath` settings for this PowerShell session.</span></span> <span data-ttu-id="ea83d-138">Wenn die Konfiguration für den aktuellen Benutzer gilt, legt den **CurrentUser** -Modulpfad fest.</span><span class="sxs-lookup"><span data-stu-id="ea83d-138">If the configuration is for the current user, sets the **CurrentUser** module path.</span></span> <span data-ttu-id="ea83d-139">Wenn die Konfiguration für alle Benutzer gilt, wird der **ALLUSERS** -Modulpfad von festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-139">If the configuration is for all users, sets the **AllUsers** module path.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="1c817-141">Wenn Sie einen AllUsers-oder CurrentUser-Modulpfad hier konfigurieren, wird der Bereichs bezogene Installationsort für PowerShellGet-Module wie " [Install-Module](/powershell/module/powershellget/install-module)" nicht geändert.</span><span class="sxs-lookup"><span data-stu-id="1c817-141">Configuring an AllUsers or CurrentUser module path here will not change the scoped installation location for PowerShellGet modules like [Install-Module](/powershell/module/powershellget/install-module).</span></span>
-> <span data-ttu-id="1c817-142">Diese Cmdlets verwenden immer die *Standard* Modul Pfade.</span><span class="sxs-lookup"><span data-stu-id="1c817-142">These cmdlets always use the *default* module paths.</span></span>
+> <span data-ttu-id="ea83d-140">Wenn Sie einen **ALLUSERS** -oder **CurrentUser** -Modulpfad hier konfigurieren, ändert sich der Bereichs bezogene Installationsort für PowerShellGet-Cmdlets wie " [Install-Module](/powershell/module/powershellget/install-module)" nicht.</span><span class="sxs-lookup"><span data-stu-id="ea83d-140">Configuring an **AllUsers** or **CurrentUser** module path here does not change the scoped installation location for PowerShellGet cmdlets like [Install-Module](/powershell/module/powershellget/install-module).</span></span> <span data-ttu-id="ea83d-141">Diese Cmdlets verwenden immer die _Standard_ Modul Pfade.</span><span class="sxs-lookup"><span data-stu-id="ea83d-141">These cmdlets always use the _default_ module paths.</span></span>
 
-<span data-ttu-id="1c817-143">Wenn kein Wert festgelegt ist, wird der Standardwert für die jeweilige Modul Pfadkomponente verwendet.</span><span class="sxs-lookup"><span data-stu-id="1c817-143">If no value is set, the default value for the respective module path component will be used.</span></span> <span data-ttu-id="1c817-144">Weitere Informationen zu diesen Standardeinstellungen finden Sie unter [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath) .</span><span class="sxs-lookup"><span data-stu-id="1c817-144">See [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath) for more details on these defaults.</span></span>
+<span data-ttu-id="ea83d-142">Wenn kein Wert festgelegt ist, verwendet PowerShell den Standardwert für die jeweilige Modulpfad Einstellung.</span><span class="sxs-lookup"><span data-stu-id="ea83d-142">If no value is set, PowerShell uses the default value for the respective module path setting.</span></span> <span data-ttu-id="ea83d-143">Weitere Informationen zu diesen Standardeinstellungen finden Sie unter [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath).</span><span class="sxs-lookup"><span data-stu-id="ea83d-143">For more information about these defaults, see [about_Modules](./about_Modules.md#module-and-dsc-resource-locations-and-psmodulepath).</span></span>
 
-<span data-ttu-id="1c817-145">Diese Einstellung ermöglicht die Verwendung von Umgebungsvariablen, indem Sie Sie `%` `"%HOME%\Documents\PowerShell\Modules"` auf die gleiche Weise wie cmd zwischen Zeichen einbetten.</span><span class="sxs-lookup"><span data-stu-id="1c817-145">This setting allows environment variables to be used by embedding them between `%` characters, like `"%HOME%\Documents\PowerShell\Modules"`, in the same way as CMD allows.</span></span> <span data-ttu-id="1c817-146">Diese Syntax gilt auch für Linux und macOS.</span><span class="sxs-lookup"><span data-stu-id="1c817-146">This syntax also applies on Linux and macOS.</span></span> <span data-ttu-id="1c817-147">Weiter unten finden Sie Beispiele dafür.</span><span class="sxs-lookup"><span data-stu-id="1c817-147">See below for examples.</span></span>
+<span data-ttu-id="ea83d-144">Diese Einstellung ermöglicht die Verwendung von Umgebungsvariablen, indem Sie Sie `%` `"%HOME%\Documents\PowerShell\Modules"` in derselben Weise wie cmd zwischen Zeichen einbetten.</span><span class="sxs-lookup"><span data-stu-id="ea83d-144">This setting allows environment variables to be used by embedding them between `%` characters, like `"%HOME%\Documents\PowerShell\Modules"`, in the same way that CMD allows.</span></span> <span data-ttu-id="ea83d-145">Diese Syntax gilt auch für Linux und macOS.</span><span class="sxs-lookup"><span data-stu-id="ea83d-145">This syntax also applies on Linux and macOS.</span></span> <span data-ttu-id="ea83d-146">Weiter unten finden Sie Beispiele dafür.</span><span class="sxs-lookup"><span data-stu-id="ea83d-146">See below for examples.</span></span>
 
 ```Schema
 "PSModulePath": "<ps-module-path>"
 ```
 
-<span data-ttu-id="1c817-148">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-148">Where:</span></span>
+<span data-ttu-id="ea83d-147">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-147">Where:</span></span>
 
-- <span data-ttu-id="1c817-149">`<ps-module-path>` der absolute Pfad zu einem Modul Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="1c817-149">`<ps-module-path>` is the absolute path to a module directory.</span></span> <span data-ttu-id="1c817-150">Für alle Benutzerkonfigurationen ist dies das Verzeichnis "ALLUSERS Shared Module".</span><span class="sxs-lookup"><span data-stu-id="1c817-150">For all user configurations, this is the AllUsers shared module directory.</span></span> <span data-ttu-id="1c817-151">Bei aktuellen Benutzerkonfigurationen ist dies das CurrentUser-Modul Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="1c817-151">For current user configurations, this is CurrentUser module directory.</span></span>
+- <span data-ttu-id="ea83d-148">`<ps-module-path>` der absolute Pfad zu einem Modul Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="ea83d-148">`<ps-module-path>` is the absolute path to a module directory.</span></span> <span data-ttu-id="ea83d-149">Für alle Benutzerkonfigurationen ist dies das Verzeichnis "ALLUSERS Shared Module".</span><span class="sxs-lookup"><span data-stu-id="ea83d-149">For all user configurations, this is the AllUsers shared module directory.</span></span> <span data-ttu-id="ea83d-150">Bei aktuellen Benutzerkonfigurationen ist dies das CurrentUser-Modul Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="ea83d-150">For current user configurations, this is CurrentUser module directory.</span></span>
 
-<span data-ttu-id="1c817-152">Dieses Beispiel zeigt eine psmodulepath-Konfiguration für eine Windows-Umgebung:</span><span class="sxs-lookup"><span data-stu-id="1c817-152">This example shows a PSModulePath configuration for a Windows environment:</span></span>
+<span data-ttu-id="ea83d-151">Dieses Beispiel zeigt eine `PSModulePath` Konfiguration für eine Windows-Umgebung:</span><span class="sxs-lookup"><span data-stu-id="ea83d-151">This example shows a `PSModulePath` configuration for a Windows environment:</span></span>
 
 ```json
 {
@@ -104,7 +96,7 @@ ms.locfileid: "93222015"
 }
 ```
 
-<span data-ttu-id="1c817-153">Dieses Beispiel zeigt eine psmodulepath-Konfiguration für eine macOS-oder Linux-Umgebung:</span><span class="sxs-lookup"><span data-stu-id="1c817-153">This example shows a PSModulePath configuration for a macOS or Linux environment:</span></span>
+<span data-ttu-id="ea83d-152">Dieses Beispiel zeigt eine `PSModulePath` Konfiguration für eine macOS-oder Linux-Umgebung:</span><span class="sxs-lookup"><span data-stu-id="ea83d-152">This example shows a `PSModulePath` configuration for a macOS or Linux environment:</span></span>
 
 ```json
 {
@@ -112,7 +104,7 @@ ms.locfileid: "93222015"
 }
 ```
 
-<span data-ttu-id="1c817-154">Dieses Beispiel zeigt das Einbetten einer Umgebungsvariablen in eine psmodulepath-Konfiguration.</span><span class="sxs-lookup"><span data-stu-id="1c817-154">This example shows embedding an environment variable in a PSModulePath configuration.</span></span> <span data-ttu-id="1c817-155">Beachten Sie, dass `HOME` `/` dies unter Windows, macOS und Linux funktioniert, wenn die Umgebungsvariable und das Verzeichnis Trennzeichen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-155">Note that using the `HOME` environment variable and the `/` directory separator, this will work on Windows, macOS and Linux.</span></span>
+<span data-ttu-id="ea83d-153">In diesem Beispiel wird gezeigt, wie eine Umgebungsvariable in eine Konfiguration eingebettet wird `PSModulePath` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-153">This example shows embedding an environment variable in a `PSModulePath` configuration.</span></span> <span data-ttu-id="ea83d-154">Beachten Sie, dass `HOME` `/` dies unter Windows, macOS und Linux funktioniert, wenn die Umgebungsvariable und das Verzeichnis Trennzeichen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-154">Note that using the `HOME` environment variable and the `/` directory separator, this will work on Windows, macOS and Linux.</span></span>
 
 ```json
 {
@@ -120,7 +112,7 @@ ms.locfileid: "93222015"
 }
 ```
 
-<span data-ttu-id="1c817-156">Dieses Beispiel zeigt das Einbetten einer Umgebungsvariablen in eine psmodulepath-Konfiguration, die nur unter macOS und Linux funktioniert:</span><span class="sxs-lookup"><span data-stu-id="1c817-156">This example shows embedding an environment variable in a PSModulePath configuration that will only work on macOS and Linux:</span></span>
+<span data-ttu-id="ea83d-155">In diesem Beispiel wird gezeigt, wie eine Umgebungsvariable in einer `PSModulePath` Konfiguration eingebettet wird, die nur unter macOS und Linux funktioniert:</span><span class="sxs-lookup"><span data-stu-id="ea83d-155">This example shows embedding an environment variable in a `PSModulePath` configuration that will only work on macOS and Linux:</span></span>
 
 ```json
 {
@@ -129,24 +121,22 @@ ms.locfileid: "93222015"
 ```
 
 > [!NOTE]
-> <span data-ttu-id="1c817-157">PowerShell-Variablen können nicht in psmodulepath-Konfigurationen eingebettet werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-157">PowerShell variables cannot be embedded in PSModulePath configurations.</span></span>
-> <span data-ttu-id="1c817-158">Bei psmodulepath-Konfigurationen unter Linux und macOS wird die Groß-/Kleinschreibung beachtet.</span><span class="sxs-lookup"><span data-stu-id="1c817-158">PSModulePath configurations on Linux and macOS are case-sensitive.</span></span> <span data-ttu-id="1c817-159">Eine psmodulepath-Konfiguration muss gültige Verzeichnis Trennzeichen für die Plattform verwenden.</span><span class="sxs-lookup"><span data-stu-id="1c817-159">A PSModulePath configuration must use valid directory separators for the platform.</span></span> <span data-ttu-id="1c817-160">Unter macOS und Linux bedeutet dies `/` .</span><span class="sxs-lookup"><span data-stu-id="1c817-160">On macOS and Linux, this means `/`.</span></span> <span data-ttu-id="1c817-161">Unter Windows funktionieren sowohl `/` als auch `\` .</span><span class="sxs-lookup"><span data-stu-id="1c817-161">On Windows, both `/` and `\` will work.</span></span>
+> <span data-ttu-id="ea83d-156">PowerShell-Variablen können nicht in `PSModulePath` Konfigurationen eingebettet werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-156">PowerShell variables cannot be embedded in `PSModulePath` configurations.</span></span>
+> <span data-ttu-id="ea83d-157">`PSModulePath` bei Konfigurationen unter Linux und macOS wird die Groß-/Kleinschreibung beachtet.</span><span class="sxs-lookup"><span data-stu-id="ea83d-157">`PSModulePath` configurations on Linux and macOS are case-sensitive.</span></span> <span data-ttu-id="ea83d-158">Eine `PSModulePath` Konfiguration muss gültige Verzeichnis Trennzeichen für die Plattform verwenden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-158">A `PSModulePath` configuration must use valid directory separators for the platform.</span></span> <span data-ttu-id="ea83d-159">Unter macOS und Linux bedeutet dies `/` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-159">On macOS and Linux, this means `/`.</span></span> <span data-ttu-id="ea83d-160">Unter Windows funktionieren sowohl `/` als auch `\` .</span><span class="sxs-lookup"><span data-stu-id="ea83d-160">On Windows, both `/` and `\` will work.</span></span>
 
-### <a name="experimentalfeatures"></a><span data-ttu-id="1c817-162">Experiment Features</span><span class="sxs-lookup"><span data-stu-id="1c817-162">ExperimentalFeatures</span></span>
+### <a name="experimentalfeatures"></a><span data-ttu-id="ea83d-161">Experiment Features</span><span class="sxs-lookup"><span data-stu-id="ea83d-161">ExperimentalFeatures</span></span>
 
-<span data-ttu-id="1c817-163">Die Namen der experimentellen Funktionen, die in PowerShell aktiviert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="1c817-163">The names of the experimental features to enable in PowerShell.</span></span>
-<span data-ttu-id="1c817-164">Standardmäßig sind keine experimentellen Funktionen aktiviert.</span><span class="sxs-lookup"><span data-stu-id="1c817-164">By default, no experimental features are enabled.</span></span>
-<span data-ttu-id="1c817-165">Der Standardwert ist ein leeres Array.</span><span class="sxs-lookup"><span data-stu-id="1c817-165">The default value is an empty array.</span></span>
+<span data-ttu-id="ea83d-162">Die Namen der experimentellen Funktionen, die in PowerShell aktiviert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ea83d-162">The names of the experimental features to enable in PowerShell.</span></span> <span data-ttu-id="ea83d-163">Standardmäßig sind keine experimentellen Funktionen aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-163">By default, no experimental features are enabled.</span></span> <span data-ttu-id="ea83d-164">Der Standardwert ist ein leeres Array.</span><span class="sxs-lookup"><span data-stu-id="ea83d-164">The default value is an empty array.</span></span>
 
 ```Schema
 "ExperimentalFeatures": ["<experimental-feature-name>", ...]
 ```
 
-<span data-ttu-id="1c817-166">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-166">Where:</span></span>
+<span data-ttu-id="ea83d-165">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-165">Where:</span></span>
 
-- <span data-ttu-id="1c817-167">`<experimental-feature-name>` der Name eines experimentellen Features, das aktiviert werden soll.</span><span class="sxs-lookup"><span data-stu-id="1c817-167">`<experimental-feature-name>` is the name of an experimental feature to enable.</span></span>
+- <span data-ttu-id="ea83d-166">`<experimental-feature-name>` der Name eines experimentellen Features, das aktiviert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ea83d-166">`<experimental-feature-name>` is the name of an experimental feature to enable.</span></span>
 
-<span data-ttu-id="1c817-168">Im folgenden Beispiel werden die experimentellen Funktionen **pvereinfachcitremoting** und **psugkürzen ationexpansion** aktiviert, wenn PowerShell gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="1c817-168">The following example enables the **PSImplicitRemoting** and **PSUseAbbreviationExpansion** experimental features when PowerShell starts up.</span></span>
+<span data-ttu-id="ea83d-167">Im folgenden Beispiel werden die experimentellen Funktionen **pvereinfachcitremoting** und **psugkürzen ationexpansion** aktiviert, wenn PowerShell gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="ea83d-167">The following example enables the **PSImplicitRemoting** and **PSUseAbbreviationExpansion** experimental features when PowerShell starts up.</span></span>
 
 ```json
 {
@@ -157,35 +147,35 @@ ms.locfileid: "93222015"
 }
 ```
 
-<span data-ttu-id="1c817-169">Weitere Informationen zu experimentellen Funktionen finden Sie unter [PowerShell RFC 29][RFC0029].</span><span class="sxs-lookup"><span data-stu-id="1c817-169">For more information on experimental features, see [PowerShell RFC 29][RFC0029].</span></span>
+<span data-ttu-id="ea83d-168">Weitere Informationen zu experimentellen Funktionen finden Sie unter [Verwenden von experimentellen Features](/powershell/scripting/learn/experimental-features).</span><span class="sxs-lookup"><span data-stu-id="ea83d-168">For more information on experimental features, see [Using experimental features](/powershell/scripting/learn/experimental-features).</span></span>
 
-## <a name="non-windows-logging-configuration"></a><span data-ttu-id="1c817-170">Konfiguration der nicht-Windows-Protokollierung</span><span class="sxs-lookup"><span data-stu-id="1c817-170">Non-Windows logging configuration</span></span>
-
-> [!IMPORTANT]
-> <span data-ttu-id="1c817-171">Die Konfigurationsoptionen in diesem Abschnitt gelten nur für macOS und Linux.</span><span class="sxs-lookup"><span data-stu-id="1c817-171">The configuration options in this section only apply to macOS and Linux.</span></span>
-> <span data-ttu-id="1c817-172">Die Protokollierung für Windows wird von der Windows-Ereignisanzeige verwaltet.</span><span class="sxs-lookup"><span data-stu-id="1c817-172">Logging for Windows is managed by the Windows Event Viewer.</span></span>
-
-<span data-ttu-id="1c817-173">Die PowerShell-Protokollierung unter macOS und Linux kann in der PowerShell-Konfigurationsdatei konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-173">PowerShell's logging on macOS and Linux can be configured in the PowerShell configuration file.</span></span> <span data-ttu-id="1c817-174">Eine vollständige Beschreibung der PowerShell-Protokollierung für nicht-Windows-Systeme finden Sie unter [Informationen zur Protokollierung](./about_Logging_Non-Windows.md).</span><span class="sxs-lookup"><span data-stu-id="1c817-174">For a full description of PowerShell logging for non-Windows systems, see [About Logging](./about_Logging_Non-Windows.md).</span></span>
-
-### <a name="logidentity"></a><span data-ttu-id="1c817-175">Logidentity</span><span class="sxs-lookup"><span data-stu-id="1c817-175">LogIdentity</span></span>
+## <a name="non-windows-logging-configuration"></a><span data-ttu-id="ea83d-169">Konfiguration der nicht-Windows-Protokollierung</span><span class="sxs-lookup"><span data-stu-id="ea83d-169">Non-Windows logging configuration</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="1c817-176">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-176">This setting can only be used in macOS and Linux.</span></span>
+> <span data-ttu-id="ea83d-170">Die Konfigurationsoptionen in diesem Abschnitt gelten nur für macOS und Linux.</span><span class="sxs-lookup"><span data-stu-id="ea83d-170">The configuration options in this section only apply to macOS and Linux.</span></span>
+> <span data-ttu-id="ea83d-171">Die Protokollierung für Windows wird von der Windows-Ereignisanzeige verwaltet.</span><span class="sxs-lookup"><span data-stu-id="ea83d-171">Logging for Windows is managed by the Windows Event Viewer.</span></span>
 
-<span data-ttu-id="1c817-177">Legt den Identitäts Namen fest, der zum Schreiben in das System Protokoll verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="1c817-177">Sets the identity name used to write to the system log.</span></span> <span data-ttu-id="1c817-178">Der Standardwert ist "PowerShell".</span><span class="sxs-lookup"><span data-stu-id="1c817-178">The default value is "powershell".</span></span>
+<span data-ttu-id="ea83d-172">Die PowerShell-Protokollierung unter macOS und Linux kann in der PowerShell-Konfigurationsdatei konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-172">PowerShell's logging on macOS and Linux can be configured in the PowerShell configuration file.</span></span> <span data-ttu-id="ea83d-173">Eine vollständige Beschreibung der PowerShell-Protokollierung für nicht-Windows-Systeme finden Sie unter [Informationen zur Protokollierung](./about_Logging_Non-Windows.md).</span><span class="sxs-lookup"><span data-stu-id="ea83d-173">For a full description of PowerShell logging for non-Windows systems, see [About Logging](./about_Logging_Non-Windows.md).</span></span>
+
+### <a name="logidentity"></a><span data-ttu-id="ea83d-174">Logidentity</span><span class="sxs-lookup"><span data-stu-id="ea83d-174">LogIdentity</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="ea83d-175">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-175">This setting can only be used in macOS and Linux.</span></span>
+
+<span data-ttu-id="ea83d-176">Legt den Identitäts Namen fest, der zum Schreiben in das System Protokoll verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ea83d-176">Sets the identity name used to write to the system log.</span></span> <span data-ttu-id="ea83d-177">Der Standardwert ist "PowerShell".</span><span class="sxs-lookup"><span data-stu-id="ea83d-177">The default value is "powershell".</span></span>
 
 ```Schema
 "LogIdentity": "<log-identity>"
 ```
 
-<span data-ttu-id="1c817-179">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-179">Where:</span></span>
+<span data-ttu-id="ea83d-178">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-178">Where:</span></span>
 
-- <span data-ttu-id="1c817-180">`<log-identity>` die Zeichen folgen Identität, die von PowerShell zum Schreiben in syslog verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1c817-180">`<log-identity>` is the string identity that PowerShell should use for writing to syslog.</span></span>
+- <span data-ttu-id="ea83d-179">`<log-identity>` die Zeichen folgen Identität, die von PowerShell zum Schreiben in syslog verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ea83d-179">`<log-identity>` is the string identity that PowerShell should use for writing to syslog.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1c817-181">Möglicherweise möchten Sie für jede andere Instanz von PowerShell, die Sie installiert haben, unterschiedliche **logidentity** -Werte haben.</span><span class="sxs-lookup"><span data-stu-id="1c817-181">You may want to have different **LogIdentity** values for each different instance of PowerShell you have installed.</span></span>
+> <span data-ttu-id="ea83d-180">Möglicherweise möchten Sie für jede andere Instanz von PowerShell, die Sie installiert haben, unterschiedliche **logidentity** -Werte haben.</span><span class="sxs-lookup"><span data-stu-id="ea83d-180">You may want to have different **LogIdentity** values for each different instance of PowerShell you have installed.</span></span>
 
-<span data-ttu-id="1c817-182">In diesem Beispiel konfigurieren wir die **logidentity** für eine Vorschauversion von PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1c817-182">In this example, we are configuring the **LogIdentity** for a preview release of PowerShell.</span></span>
+<span data-ttu-id="ea83d-181">In diesem Beispiel konfigurieren wir die **logidentity** für eine Vorschauversion von PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ea83d-181">In this example, we are configuring the **LogIdentity** for a preview release of PowerShell.</span></span>
 
 ```json
 {
@@ -193,35 +183,35 @@ ms.locfileid: "93222015"
 }
 ```
 
-### <a name="loglevel"></a><span data-ttu-id="1c817-183">LogLevel</span><span class="sxs-lookup"><span data-stu-id="1c817-183">LogLevel</span></span>
+### <a name="loglevel"></a><span data-ttu-id="ea83d-182">LogLevel</span><span class="sxs-lookup"><span data-stu-id="ea83d-182">LogLevel</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="1c817-184">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-184">This setting can only be used in macOS and Linux.</span></span>
+> <span data-ttu-id="ea83d-183">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-183">This setting can only be used in macOS and Linux.</span></span>
 
-<span data-ttu-id="1c817-185">Gibt den minimalen Schweregrad an, mit dem PowerShell protokolliert werden soll.</span><span class="sxs-lookup"><span data-stu-id="1c817-185">Specifies the minimum severity level at which PowerShell should log.</span></span>
+<span data-ttu-id="ea83d-184">Gibt den minimalen Schweregrad an, mit dem PowerShell protokolliert werden soll.</span><span class="sxs-lookup"><span data-stu-id="ea83d-184">Specifies the minimum severity level at which PowerShell should log.</span></span>
 
 ```Schema
 "LogLevel": "<log-level>|default"
 ```
 
-<span data-ttu-id="1c817-186">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-186">Where:</span></span>
+<span data-ttu-id="ea83d-185">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-185">Where:</span></span>
 
-- <span data-ttu-id="1c817-187">`<log-level>` ist eine von:</span><span class="sxs-lookup"><span data-stu-id="1c817-187">`<log-level>` is one of:</span></span>
-  - <span data-ttu-id="1c817-188">Always</span><span class="sxs-lookup"><span data-stu-id="1c817-188">Always</span></span>
-  - <span data-ttu-id="1c817-189">Kritisch</span><span class="sxs-lookup"><span data-stu-id="1c817-189">Critical</span></span>
-  - <span data-ttu-id="1c817-190">Fehler</span><span class="sxs-lookup"><span data-stu-id="1c817-190">Error</span></span>
-  - <span data-ttu-id="1c817-191">Warnung</span><span class="sxs-lookup"><span data-stu-id="1c817-191">Warning</span></span>
-  - <span data-ttu-id="1c817-192">Informational</span><span class="sxs-lookup"><span data-stu-id="1c817-192">Informational</span></span>
-  - <span data-ttu-id="1c817-193">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="1c817-193">Verbose</span></span>
-  - <span data-ttu-id="1c817-194">Debuggen</span><span class="sxs-lookup"><span data-stu-id="1c817-194">Debug</span></span>
+- <span data-ttu-id="ea83d-186">`<log-level>` ist einer dieser Werte:</span><span class="sxs-lookup"><span data-stu-id="ea83d-186">`<log-level>` is one of:</span></span>
+  - <span data-ttu-id="ea83d-187">Immer</span><span class="sxs-lookup"><span data-stu-id="ea83d-187">Always</span></span>
+  - <span data-ttu-id="ea83d-188">Kritisch</span><span class="sxs-lookup"><span data-stu-id="ea83d-188">Critical</span></span>
+  - <span data-ttu-id="ea83d-189">Fehler</span><span class="sxs-lookup"><span data-stu-id="ea83d-189">Error</span></span>
+  - <span data-ttu-id="ea83d-190">Warnung</span><span class="sxs-lookup"><span data-stu-id="ea83d-190">Warning</span></span>
+  - <span data-ttu-id="ea83d-191">Informational</span><span class="sxs-lookup"><span data-stu-id="ea83d-191">Informational</span></span>
+  - <span data-ttu-id="ea83d-192">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="ea83d-192">Verbose</span></span>
+  - <span data-ttu-id="ea83d-193">Debuggen</span><span class="sxs-lookup"><span data-stu-id="ea83d-193">Debug</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1c817-195">Durch Festlegen einer Protokollebene werden alle darüber liegenden Protokoll Ebenen aktiviert.</span><span class="sxs-lookup"><span data-stu-id="1c817-195">Setting a the log level enables all log levels above it.</span></span>
+> <span data-ttu-id="ea83d-194">Durch Festlegen einer Protokollebene werden alle darüber liegenden Protokoll Ebenen aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-194">Setting a the log level enables all log levels above it.</span></span>
 
-<span data-ttu-id="1c817-196">Wenn diese Einstellung auf **default** festgelegt wird, wird Sie als Standardwert interpretiert.</span><span class="sxs-lookup"><span data-stu-id="1c817-196">Setting this setting to **default** will be interpreted as the default value.</span></span>
-<span data-ttu-id="1c817-197">Der Standardwert ist " **Information** ".</span><span class="sxs-lookup"><span data-stu-id="1c817-197">The default value is **Informational**.</span></span>
+<span data-ttu-id="ea83d-195">Wenn diese Einstellung auf **default** festgelegt wird, wird Sie als Standardwert interpretiert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-195">Setting this setting to **default** will be interpreted as the default value.</span></span>
+<span data-ttu-id="ea83d-196">Der Standardwert ist " **Information**".</span><span class="sxs-lookup"><span data-stu-id="ea83d-196">The default value is **Informational**.</span></span>
 
-<span data-ttu-id="1c817-198">Im folgenden Beispiel wird der Wert auf **verbose** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1c817-198">The following example sets the value to **Verbose**.</span></span>
+<span data-ttu-id="ea83d-197">Im folgenden Beispiel wird der Wert auf **verbose** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-197">The following example sets the value to **Verbose**.</span></span>
 
 ```json
 {
@@ -229,24 +219,24 @@ ms.locfileid: "93222015"
 }
 ```
 
-### <a name="logchannels"></a><span data-ttu-id="1c817-199">Logchannels</span><span class="sxs-lookup"><span data-stu-id="1c817-199">LogChannels</span></span>
+### <a name="logchannels"></a><span data-ttu-id="ea83d-198">Logchannels</span><span class="sxs-lookup"><span data-stu-id="ea83d-198">LogChannels</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="1c817-200">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-200">This setting can only be used in macOS and Linux.</span></span>
+> <span data-ttu-id="ea83d-199">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-199">This setting can only be used in macOS and Linux.</span></span>
 
-<span data-ttu-id="1c817-201">Bestimmt, welche Protokollierungs Kanäle aktiviert sind.</span><span class="sxs-lookup"><span data-stu-id="1c817-201">Determines which logging channels are enabled.</span></span>
+<span data-ttu-id="ea83d-200">Bestimmt, welche Protokollierungs Kanäle aktiviert sind.</span><span class="sxs-lookup"><span data-stu-id="ea83d-200">Determines which logging channels are enabled.</span></span>
 
 ```Schema
 "LogChannels": "<log-channel>,..."
 ```
 
-<span data-ttu-id="1c817-202">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-202">Where:</span></span>
+<span data-ttu-id="ea83d-201">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-201">Where:</span></span>
 
-- <span data-ttu-id="1c817-203">`<log-channel>` ist eine von:</span><span class="sxs-lookup"><span data-stu-id="1c817-203">`<log-channel>` is one of:</span></span>
-  - <span data-ttu-id="1c817-204">Operational: protokolliert grundlegende Informationen zu PowerShell-Aktivitäten.</span><span class="sxs-lookup"><span data-stu-id="1c817-204">Operational - logs basic information about PowerShell activities</span></span>
-  - <span data-ttu-id="1c817-205">Analytisch: protokolliert ausführlichere Diagnoseinformationen</span><span class="sxs-lookup"><span data-stu-id="1c817-205">Analytic - logs more detailed diagnostic information</span></span>
+- <span data-ttu-id="ea83d-202">`<log-channel>` ist einer dieser Werte:</span><span class="sxs-lookup"><span data-stu-id="ea83d-202">`<log-channel>` is one of:</span></span>
+  - <span data-ttu-id="ea83d-203">Operational: protokolliert grundlegende Informationen zu PowerShell-Aktivitäten.</span><span class="sxs-lookup"><span data-stu-id="ea83d-203">Operational - logs basic information about PowerShell activities</span></span>
+  - <span data-ttu-id="ea83d-204">Analytisch: protokolliert ausführlichere Diagnoseinformationen</span><span class="sxs-lookup"><span data-stu-id="ea83d-204">Analytic - logs more detailed diagnostic information</span></span>
 
-<span data-ttu-id="1c817-206">Der Standardwert ist **Operational**.</span><span class="sxs-lookup"><span data-stu-id="1c817-206">The default value is **Operational**.</span></span> <span data-ttu-id="1c817-207">Um beide Kanäle zu aktivieren, schließen Sie beide Werte als einzelne durch Trennzeichen getrennte Zeichenfolge ein.</span><span class="sxs-lookup"><span data-stu-id="1c817-207">To enable both channels, include both values as a single comma-separated string.</span></span> <span data-ttu-id="1c817-208">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="1c817-208">For example:</span></span>
+<span data-ttu-id="ea83d-205">Der Standardwert ist **Operational**.</span><span class="sxs-lookup"><span data-stu-id="ea83d-205">The default value is **Operational**.</span></span> <span data-ttu-id="ea83d-206">Um beide Kanäle zu aktivieren, schließen Sie beide Werte als einzelne durch Trennzeichen getrennte Zeichenfolge ein.</span><span class="sxs-lookup"><span data-stu-id="ea83d-206">To enable both channels, include both values as a single comma-separated string.</span></span> <span data-ttu-id="ea83d-207">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ea83d-207">For example:</span></span>
 
 ```json
 {
@@ -254,35 +244,34 @@ ms.locfileid: "93222015"
 }
 ```
 
-### <a name="logkeywords"></a><span data-ttu-id="1c817-209">Logschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="1c817-209">LogKeywords</span></span>
+### <a name="logkeywords"></a><span data-ttu-id="ea83d-208">Logschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="ea83d-208">LogKeywords</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="1c817-210">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-210">This setting can only be used in macOS and Linux.</span></span>
+> <span data-ttu-id="ea83d-209">Diese Einstellung kann nur in macOS und Linux verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-209">This setting can only be used in macOS and Linux.</span></span>
 
-<span data-ttu-id="1c817-211">Bestimmt, welche Teile von PowerShell protokolliert werden.</span><span class="sxs-lookup"><span data-stu-id="1c817-211">Determines which parts of PowerShell are logged.</span></span> <span data-ttu-id="1c817-212">Standardmäßig sind alle Protokoll Schlüsselwörter aktiviert.</span><span class="sxs-lookup"><span data-stu-id="1c817-212">By default, all log keywords are enabled.</span></span> <span data-ttu-id="1c817-213">Um mehrere Schlüsselwörter zu aktivieren, Listen Sie die Werte in einer einzelnen durch Trennzeichen getrennten Zeichenfolge auf.</span><span class="sxs-lookup"><span data-stu-id="1c817-213">To enable multiple keywords, list the values in a single comma-separated string.</span></span>
+<span data-ttu-id="ea83d-210">Bestimmt, welche Teile von PowerShell protokolliert werden.</span><span class="sxs-lookup"><span data-stu-id="ea83d-210">Determines which parts of PowerShell are logged.</span></span> <span data-ttu-id="ea83d-211">Standardmäßig sind alle Protokoll Schlüsselwörter aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-211">By default, all log keywords are enabled.</span></span> <span data-ttu-id="ea83d-212">Um mehrere Schlüsselwörter zu aktivieren, Listen Sie die Werte in einer einzelnen durch Trennzeichen getrennten Zeichenfolge auf.</span><span class="sxs-lookup"><span data-stu-id="ea83d-212">To enable multiple keywords, list the values in a single comma-separated string.</span></span>
 
 ```Schema
 "LogKeywords": "<log-keyword>,..."
 ```
 
-<span data-ttu-id="1c817-214">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="1c817-214">Where:</span></span>
+<span data-ttu-id="ea83d-213">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-213">Where:</span></span>
 
-- <span data-ttu-id="1c817-215">`<log-keyword>` ist eine von:</span><span class="sxs-lookup"><span data-stu-id="1c817-215">`<log-keyword>` is one of:</span></span>
-  - <span data-ttu-id="1c817-216">Runspace-Runspace-Verwaltung</span><span class="sxs-lookup"><span data-stu-id="1c817-216">Runspace - runspace management</span></span>
-  - <span data-ttu-id="1c817-217">Pipeline-Pipeline Vorgänge</span><span class="sxs-lookup"><span data-stu-id="1c817-217">Pipeline - pipeline operations</span></span>
-  - <span data-ttu-id="1c817-218">Protokoll Kommunikationsprotokoll-Behandlung, z. b. PSRP</span><span class="sxs-lookup"><span data-stu-id="1c817-218">Protocol - communication protocol handling, such as PSRP</span></span>
-  - <span data-ttu-id="1c817-219">Transport-Transportschicht Unterstützung, z. b. ssh</span><span class="sxs-lookup"><span data-stu-id="1c817-219">Transport - transport layer support, such as SSH</span></span>
-  - <span data-ttu-id="1c817-220">Host-PowerShell-Host Funktionen, z. b. Konsolen Interaktion</span><span class="sxs-lookup"><span data-stu-id="1c817-220">Host - PowerShell host functionality, for example console interaction</span></span>
-  - <span data-ttu-id="1c817-221">Cmdlets: PowerShell-Cmdlets für Builtin</span><span class="sxs-lookup"><span data-stu-id="1c817-221">Cmdlets -PowerShell builtin cmdlets</span></span>
-  - <span data-ttu-id="1c817-222">Serializer-Serialisierungslogik</span><span class="sxs-lookup"><span data-stu-id="1c817-222">Serializer - serialization logic</span></span>
-  - <span data-ttu-id="1c817-223">Sitzung-PowerShell-Sitzungs Status</span><span class="sxs-lookup"><span data-stu-id="1c817-223">Session - PowerShell session state</span></span>
-  - <span data-ttu-id="1c817-224">Managedplugin-WSMAN-Plug-in</span><span class="sxs-lookup"><span data-stu-id="1c817-224">ManagedPlugin - WSMan plugin</span></span>
+- <span data-ttu-id="ea83d-214">`<log-keyword>` ist einer dieser Werte:</span><span class="sxs-lookup"><span data-stu-id="ea83d-214">`<log-keyword>` is one of:</span></span>
+  - <span data-ttu-id="ea83d-215">Runspace-Runspace-Verwaltung</span><span class="sxs-lookup"><span data-stu-id="ea83d-215">Runspace - runspace management</span></span>
+  - <span data-ttu-id="ea83d-216">Pipeline-Pipeline Vorgänge</span><span class="sxs-lookup"><span data-stu-id="ea83d-216">Pipeline - pipeline operations</span></span>
+  - <span data-ttu-id="ea83d-217">Protokoll Kommunikationsprotokoll-Behandlung, z. b. PSRP</span><span class="sxs-lookup"><span data-stu-id="ea83d-217">Protocol - communication protocol handling, such as PSRP</span></span>
+  - <span data-ttu-id="ea83d-218">Transport-Transportschicht Unterstützung, z. b. ssh</span><span class="sxs-lookup"><span data-stu-id="ea83d-218">Transport - transport layer support, such as SSH</span></span>
+  - <span data-ttu-id="ea83d-219">Host-PowerShell-Host Funktionen, z. b. Konsolen Interaktion</span><span class="sxs-lookup"><span data-stu-id="ea83d-219">Host - PowerShell host functionality, for example console interaction</span></span>
+  - <span data-ttu-id="ea83d-220">Cmdlets: PowerShell-Cmdlets für Builtin</span><span class="sxs-lookup"><span data-stu-id="ea83d-220">Cmdlets -PowerShell builtin cmdlets</span></span>
+  - <span data-ttu-id="ea83d-221">Serializer-Serialisierungslogik</span><span class="sxs-lookup"><span data-stu-id="ea83d-221">Serializer - serialization logic</span></span>
+  - <span data-ttu-id="ea83d-222">Sitzung-PowerShell-Sitzungs Status</span><span class="sxs-lookup"><span data-stu-id="ea83d-222">Session - PowerShell session state</span></span>
+  - <span data-ttu-id="ea83d-223">Managedplugin-WSMAN-Plug-in</span><span class="sxs-lookup"><span data-stu-id="ea83d-223">ManagedPlugin - WSMan plugin</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1c817-225">Es wird im Allgemeinen empfohlen, diesen Wert nicht festzulegen, es sei denn, Sie versuchen, ein bestimmtes Verhalten in einem bekannten Bereich von PowerShell zu diagnostizieren.</span><span class="sxs-lookup"><span data-stu-id="1c817-225">It is generally advised to leave this value unset unless you are trying to diagnose a specific behavior in a known part of PowerShell.</span></span>
-> <span data-ttu-id="1c817-226">Durch Ändern dieses Werts wird nur die Menge der protokollierten Informationen verringert.</span><span class="sxs-lookup"><span data-stu-id="1c817-226">Changing this value only decreases the amount of information logged.</span></span>
+> <span data-ttu-id="ea83d-224">Es wird im Allgemeinen empfohlen, diesen Wert nicht festzulegen, es sei denn, Sie versuchen, ein bestimmtes Verhalten in einem bekannten Bereich von PowerShell zu diagnostizieren.</span><span class="sxs-lookup"><span data-stu-id="ea83d-224">It is generally advised to leave this value unset unless you are trying to diagnose a specific behavior in a known part of PowerShell.</span></span> <span data-ttu-id="ea83d-225">Durch Ändern dieses Werts wird nur die Menge der protokollierten Informationen verringert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-225">Changing this value only decreases the amount of information logged.</span></span>
 
-<span data-ttu-id="1c817-227">In diesem Beispiel wird die Protokollierung auf Runspace-Vorgänge, die Pipeline Logik und die Cmdlet-Verwendung beschränkt.</span><span class="sxs-lookup"><span data-stu-id="1c817-227">This example limits the logging to runspace operations, pipeline logic, and cmdlet use.</span></span> <span data-ttu-id="1c817-228">Alle anderen Protokollierungen werden weggelassen.</span><span class="sxs-lookup"><span data-stu-id="1c817-228">All other logging will be omitted.</span></span>
+<span data-ttu-id="ea83d-226">In diesem Beispiel wird die Protokollierung auf Runspace-Vorgänge, die Pipeline Logik und die Cmdlet-Verwendung beschränkt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-226">This example limits the logging to runspace operations, pipeline logic, and cmdlet use.</span></span> <span data-ttu-id="ea83d-227">Alle anderen Protokollierungen werden weggelassen.</span><span class="sxs-lookup"><span data-stu-id="ea83d-227">All other logging will be omitted.</span></span>
 
 ```json
 "LogKeywords": "Runspace,Pipeline,Cmdlets"
@@ -306,18 +295,18 @@ ms.locfileid: "93222015"
 
 -->
 
-## <a name="more-example-configurations"></a><span data-ttu-id="1c817-229">Weitere Beispielkonfigurationen</span><span class="sxs-lookup"><span data-stu-id="1c817-229">More example configurations</span></span>
+## <a name="more-example-configurations"></a><span data-ttu-id="ea83d-228">Weitere Beispielkonfigurationen</span><span class="sxs-lookup"><span data-stu-id="ea83d-228">More example configurations</span></span>
 
-### <a name="example-windows-configuration"></a><span data-ttu-id="1c817-230">Windows-Beispielkonfiguration</span><span class="sxs-lookup"><span data-stu-id="1c817-230">Example Windows configuration</span></span>
+### <a name="example-windows-configuration"></a><span data-ttu-id="ea83d-229">Windows-Beispielkonfiguration</span><span class="sxs-lookup"><span data-stu-id="ea83d-229">Example Windows configuration</span></span>
 
-<span data-ttu-id="1c817-231">Für diese Konfiguration sind mehr Einstellungen explizit festgelegt:</span><span class="sxs-lookup"><span data-stu-id="1c817-231">This configuration has more settings explicitly set:</span></span>
+<span data-ttu-id="ea83d-230">Für diese Konfiguration sind mehr Einstellungen explizit festgelegt:</span><span class="sxs-lookup"><span data-stu-id="ea83d-230">This configuration has more settings explicitly set:</span></span>
 
-- <span data-ttu-id="1c817-232">Die Ausführungs Richtlinie für diese PowerShell-Installation ist `AllSigned`</span><span class="sxs-lookup"><span data-stu-id="1c817-232">Execution policy for this PowerShell installation is `AllSigned`</span></span>
-- <span data-ttu-id="1c817-233">Der CurrentUser-Modulpfad wird auf ein Modul Verzeichnis auf einem freigegebenen Laufwerk festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1c817-233">The CurrentUser module path is set to a module directory on a shared drive</span></span>
-- <span data-ttu-id="1c817-234">Die `PSImplicitRemotingBatching` experimentelle Funktion ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="1c817-234">The `PSImplicitRemotingBatching` experimental feature is enabled</span></span>
+- <span data-ttu-id="ea83d-231">Die Ausführungs Richtlinie für diese PowerShell-Installation ist `AllSigned`</span><span class="sxs-lookup"><span data-stu-id="ea83d-231">Execution policy for this PowerShell installation is `AllSigned`</span></span>
+- <span data-ttu-id="ea83d-232">Der CurrentUser-Modulpfad wird auf ein Modul Verzeichnis auf einem freigegebenen Laufwerk festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-232">The CurrentUser module path is set to a module directory on a shared drive</span></span>
+- <span data-ttu-id="ea83d-233">Die `PSImplicitRemotingBatching` experimentelle Funktion ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-233">The `PSImplicitRemotingBatching` experimental feature is enabled</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1c817-235">Die `ExecutionPolicy` -und- `PSModulePath` Einstellungen können hier nur auf einer Windows-Plattform verwendet werden, da der Modulpfad `\` und `;` Trennzeichen verwendet, und die Ausführungs Richtlinie ist nicht `Unrestricted` (die einzige Richtlinie, die auf Unix-ähnlichen Plattformen zulässig ist).</span><span class="sxs-lookup"><span data-stu-id="1c817-235">The `ExecutionPolicy` and `PSModulePath` settings here would only work on a Windows platform, since the module path uses `\` and `;` separator characters and the execution policy is not `Unrestricted` (the only policy allowed on UNIX-like platforms).</span></span>
+> <span data-ttu-id="ea83d-234">Die `ExecutionPolicy` -und- `PSModulePath` Einstellungen können hier nur auf einer Windows-Plattform verwendet werden, da der Modulpfad `\` und `;` Trennzeichen verwendet, und die Ausführungs Richtlinie ist nicht `Unrestricted` (die einzige Richtlinie, die auf Unix-ähnlichen Plattformen zulässig ist).</span><span class="sxs-lookup"><span data-stu-id="ea83d-234">The `ExecutionPolicy` and `PSModulePath` settings here would only work on a Windows platform, since the module path uses `\` and `;` separator characters and the execution policy is not `Unrestricted` (the only policy allowed on UNIX-like platforms).</span></span>
 
 ```json
 {
@@ -327,14 +316,14 @@ ms.locfileid: "93222015"
 }
 ```
 
-### <a name="example-non-windows-configuration"></a><span data-ttu-id="1c817-236">Beispiel für eine nicht-Windows-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="1c817-236">Example non-Windows configuration</span></span>
+### <a name="example-non-windows-configuration"></a><span data-ttu-id="ea83d-235">Beispiel für eine nicht-Windows-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="ea83d-235">Example non-Windows configuration</span></span>
 
-<span data-ttu-id="1c817-237">Diese Konfiguration legt eine Reihe von Optionen fest, die nur in macOS oder Linux funktionieren:</span><span class="sxs-lookup"><span data-stu-id="1c817-237">This configuration sets a number of options that only work in macOS or Linux:</span></span>
+<span data-ttu-id="ea83d-236">Diese Konfiguration legt eine Reihe von Optionen fest, die nur in macOS oder Linux funktionieren:</span><span class="sxs-lookup"><span data-stu-id="ea83d-236">This configuration sets a number of options that only work in macOS or Linux:</span></span>
 
-- <span data-ttu-id="1c817-238">Der CurrentUser-Modulpfad wird auf ein benutzerdefiniertes Modul Verzeichnis in festgelegt. `$HOME`</span><span class="sxs-lookup"><span data-stu-id="1c817-238">The CurrentUser module path is set to a custom module directory in `$HOME`</span></span>
-- <span data-ttu-id="1c817-239">Das experimentelle **pvereinfachcitrefitingbatching** -Funktion ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="1c817-239">The **PSImplicitRemotingBatching** experimental feature is enabled</span></span>
-- <span data-ttu-id="1c817-240">Der PowerShell-Protokolliergrad **ist für weitere Protokollierung auf ausführlich** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="1c817-240">The PowerShell logging level is set to **Verbose** , for more logging</span></span>
-- <span data-ttu-id="1c817-241">Diese PowerShell-Installation schreibt mithilfe der **Home-PowerShell** -Identität in die Protokolle.</span><span class="sxs-lookup"><span data-stu-id="1c817-241">This PowerShell installation writes to the logs using the **home-powershell** identity.</span></span>
+- <span data-ttu-id="ea83d-237">Der CurrentUser-Modulpfad wird auf ein benutzerdefiniertes Modul Verzeichnis in festgelegt. `$HOME`</span><span class="sxs-lookup"><span data-stu-id="ea83d-237">The CurrentUser module path is set to a custom module directory in `$HOME`</span></span>
+- <span data-ttu-id="ea83d-238">Das experimentelle **pvereinfachcitrefitingbatching** -Funktion ist aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ea83d-238">The **PSImplicitRemotingBatching** experimental feature is enabled</span></span>
+- <span data-ttu-id="ea83d-239">Der PowerShell-Protokolliergrad **ist für weitere Protokollierung auf ausführlich** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ea83d-239">The PowerShell logging level is set to **Verbose**, for more logging</span></span>
+- <span data-ttu-id="ea83d-240">Diese PowerShell-Installation schreibt mithilfe der **Home-PowerShell** -Identität in die Protokolle.</span><span class="sxs-lookup"><span data-stu-id="ea83d-240">This PowerShell installation writes to the logs using the **home-powershell** identity.</span></span>
 
 ```json
 {
@@ -345,11 +334,8 @@ ms.locfileid: "93222015"
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1c817-242">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="1c817-242">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea83d-241">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="ea83d-241">See also</span></span>
 
-[<span data-ttu-id="1c817-243">Informationen zu Ausführungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="1c817-243">About Execution Policies</span></span>](./about_Execution_Policies.md)
+[<span data-ttu-id="ea83d-242">Informationen zu Ausführungsrichtlinien</span><span class="sxs-lookup"><span data-stu-id="ea83d-242">About Execution Policies</span></span>](./about_Execution_Policies.md)
 
-[<span data-ttu-id="1c817-244">Informationen zu automatischen Variablen</span><span class="sxs-lookup"><span data-stu-id="1c817-244">About Automatic Variables</span></span>](./about_Automatic_Variables.md)
-
-[RFC0029]: https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md
-
+[<span data-ttu-id="ea83d-243">Informationen zu automatischen Variablen</span><span class="sxs-lookup"><span data-stu-id="ea83d-243">About Automatic Variables</span></span>](./about_Automatic_Variables.md)
