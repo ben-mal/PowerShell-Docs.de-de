@@ -2,12 +2,12 @@
 title: Neuerungen in PowerShell Core 6.2
 description: Neue Funktionen und Änderungen in PowerShell Core 6.2
 ms.date: 03/28/2019
-ms.openlocfilehash: 98dd97b064e11509bf97e68e0a312e6b34b5d2bc
-ms.sourcegitcommit: f9d855dd73b916559a22e337672dea3fbb11c634
+ms.openlocfilehash: 068f345ee5174bceade2b85183646ede9ead1949
+ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96833784"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103195575"
 ---
 # <a name="whats-new-in-powershell-core-62"></a>Neuerungen in PowerShell Core 6.2
 
@@ -15,7 +15,7 @@ Das Release PowerShell Core 6.2 konzentriert sich auf Leistungsverbesserungen, F
 
 ## <a name="experimental-features"></a>Experimentelle Features
 
-Wir haben bereits früher die Unterstützung [Experimentelle Features][] aktiviert. Release 6.2 enthält vier experimentelle Features, die Sie ausprobieren können. Bitte geben Sie uns Feedback, damit wir Verbesserungen vornehmen und entscheiden können, ob das Feature allgemein verfügbar gemacht werden sollte.
+Wir haben bereits früher die Unterstützung [experimenteller Features][] aktiviert. Release 6.2 enthält vier experimentelle Features, die Sie ausprobieren können. Bitte geben Sie uns Feedback, damit wir Verbesserungen vornehmen und entscheiden können, ob das Feature allgemein verfügbar gemacht werden sollte.
 
 Verwenden Sie `Get-ExperimentalFeature`, um eine Liste der verfügbaren experimentellen Features abzurufen. Sie können diese Features mit `Enable-ExperimentalFeature` und `Disable-ExperimentalFeature` aktivieren oder deaktivieren.
 
@@ -121,7 +121,7 @@ PS> Import-AzRecoveryServicesAsrVaultSettingsFile
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
-- Beim Remoting tritt auf Windows IOT-ARM-Plattformen beim Laden von Modulen ein Problem auf. Siehe (#8053)
+- Beim Remoting tritt auf Plattform, die auf Windows IOT ARM basieren, beim Laden von Modulen ein Problem auf. Siehe (#8053)
 
 ## <a name="general-updates-and-fixes"></a>Allgemeine Updates und Fixes
 

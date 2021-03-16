@@ -2,12 +2,12 @@
 title: Supportlebenszyklus von PowerShell Core
 description: Führt die Richtlinien für die Unterstützung von PowerShell im Details aus.
 ms.date: 11/11/2020
-ms.openlocfilehash: 0803dda070c66b4c1d803171ecdb7029a096517b
-ms.sourcegitcommit: 4879b9cdfa3f03b04a07b84442dc1ca9ae0f6b46
+ms.openlocfilehash: a11c4df1f105364307b8a99ffe9b0cc7e9c29122
+ms.sourcegitcommit: 925819a5ad5799650c14944bd3e50fb309a7e6c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98105178"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102771476"
 ---
 # <a name="powershell-support-lifecycle"></a>Supportlebenszyklus von PowerShell
 
@@ -131,11 +131,15 @@ Weitere Informationen finden Sie im Artikel [about_Windows_Compatibility][] und 
 PowerShell folgt den [Microsoft-Kriterien für die Sicherheitswartung für Windows][].
 In der folgenden Tabelle sind die Features aufgeführt, die die Kriterien für die Sicherheitswartung erfüllen, und diejenigen, die dies nicht tun.
 
-| Funktion                          | type             |
-|----------------------------------|------------------|
-| Ausführungsrichtlinie                 | Tiefgehende Verteidigung |
-| Systemsperrung mit AppLocker | Tiefgehende Verteidigung |
-| Systemsperrung mit WDAC      | Sicherheitsfeature |
+|                  Funktion                   |       type       |
+| ------------------------------------------ | ---------------- |
+| Ausführungsrichtlinie                           | Tiefgehende Verteidigung |
+| Systemsperrung mit AppLocker           | Tiefgehende Verteidigung |
+| Eingeschränkter Sprachmodus mit AppLocker | Tiefgehende Verteidigung |
+| Systemsperrung mit WDAC                | Sicherheitsfeature |
+| Eingeschränkter Sprachmodus mit WDAC      | Sicherheitsfeature |
+
+Weitere Informationen zu AppLocker und Windows Defender Application Control (WDAC) finden Sie unter [Anwendungssteuerung für Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
 
 ## <a name="release-history"></a>Releaseverlauf
 
