@@ -4,12 +4,12 @@ description: Informationen, wo Sie als neuer Benutzer PowerShell finden und wie 
 ms.date: 06/02/2020
 ms.custom: Contributor-mikefrobbins
 ms.reviewer: mirobb
-ms.openlocfilehash: 8b9fee222347970df4e35f9ba0841232952a292d
-ms.sourcegitcommit: df5e6f032ee2d4b556d50406832732d2f7dc2502
+ms.openlocfilehash: cc634eb1732947dca953d7d91baedf8052edf718
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "99598382"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483473"
 ---
 # <a name="chapter-1---getting-started-with-powershell"></a>Kapitel 1: Erste Schritte mit PowerShell
 
@@ -61,7 +61,7 @@ At line:1 char:29
 ```
 
 Die Lösung für dieses Problem besteht darin, PowerShell als Domänenbenutzer auszuführen, der lokaler Administrator ist.
-Auf diese Weise ist mein zweites Domänenbenutzerkonto konfiguriert. Bei Verwendung des Prinzips der geringsten Rechte sollte dieses Konto WEDER Domänenadministrator sein NOCH über erhöhte Rechte in der Domäne verfügen.
+Auf diese Weise ist mein zweites Domänenbenutzerkonto konfiguriert. Bei Verwendung des Prinzips der geringsten Rechte sollte dieses Konto kein Domänen Administrator sein oder über erweiterte Berechtigungen in der Domäne verfügen.
 
 Schließen Sie PowerShell. Starten Sie die PowerShell-Konsole neu, wobei Sie aber diesmal mit der rechten Maustaste auf die Verknüpfung **Windows PowerShell** klicken, und wählen Sie **Als Administrator ausführen** aus, wie in Abbildung 1-5 dargestellt.
 

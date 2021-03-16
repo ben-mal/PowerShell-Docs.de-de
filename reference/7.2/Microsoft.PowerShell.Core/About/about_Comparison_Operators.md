@@ -1,16 +1,16 @@
 ---
 description: Beschreibt die Operatoren, die Werte in PowerShell vergleichen.
 Locale: en-US
-ms.date: 02/19/2021
+ms.date: 03/15/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Comparison_Operators
-ms.openlocfilehash: 73a83e1cd93c3467857d5eded8ad6c384e548937
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 739639f87628a59e781252b6a6c024a09262dcfd
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685308"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483367"
 ---
 # <a name="about-comparison-operators"></a>Informationen zu Vergleichs Operatoren
 
@@ -39,7 +39,7 @@ Mit Vergleichs Operatoren können Sie Werte vergleichen oder Werte suchen, die d
 |             | -notcontains | die Sammlung enthält keinen Wert.       |
 |             | -in          | Wert ist in einer Sammlung                  |
 |             | -NOTIN       | der Wert ist nicht in einer Sammlung.              |
-| type        | -ist          | beide Objekte weisen denselben Typ auf.            |
+| Type        | -ist          | beide Objekte weisen denselben Typ auf.            |
 |             | -IsNot       | die Objekte weisen nicht denselben Typ auf.         |
 
 ## <a name="common-features"></a>Allgemeine Funktionen
@@ -64,7 +64,7 @@ Es gibt ein paar Ausnahmen:
 
 - Der Containment-und der Type-Operator geben immer einen **booleschen** Wert zurück.
 - Der `-replace` Operator gibt das Ersetzungs Ergebnis zurück.
-- Die `-match` `-notmatch` Operatoren und füllen auch die `$Matches` Automatische Variable auf.
+- Die `-match` `-notmatch` Operatoren und füllen auch die `$Matches` Automatische Variable auf, es sei denn, die linke Seite des Ausdrucks ist eine Auflistung.
 
 ## <a name="equality-operators"></a>Gleichheitsoperatoren
 
