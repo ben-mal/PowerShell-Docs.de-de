@@ -1,16 +1,16 @@
 ---
 description: Beschreibt die Verwendung von Methoden zum Ausführen von Aktionen für Objekte in PowerShell.
 Locale: en-US
-ms.date: 04/08/2020
+ms.date: 03/15/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_methods?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Methods
-ms.openlocfilehash: 35eaafcec5d645be6fe88f506bc0971344406273
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: c52afed005965512b16e6869dd32f21d9f72740c
+ms.sourcegitcommit: 15f759ca68d17acecab46b52250298d4f2037c4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99602116"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575541"
 ---
 # <a name="about-methods"></a>Informationen zu Methoden
 
@@ -78,7 +78,7 @@ Wie in den vorherigen Beispielen gezeigt, können Sie eine Methode für ein Obje
 
 Ab PowerShell 4,0 wird der Methodenaufruf mithilfe dynamischer Methodennamen unterstützt.
 
-### <a name="learning-about-methods"></a>Erlernen von Methoden
+## <a name="learning-about-methods"></a>Erlernen von Methoden
 
 Um Definitionen der Methoden eines Objekts zu suchen, navigieren Sie zu Hilfe Themen für den Objekttyp, und suchen Sie nach der entsprechenden Methoden Seite. Auf der folgenden Seite werden z. b. die Methoden von Process Objects [System. Diagnostics. Process](/dotnet/api/system.diagnostics.process#methods)beschrieben.
 
@@ -110,7 +110,7 @@ Im folgenden Beispiel wird die zweite Methode verwendet, um `CopyTo` die `Final.
 (Get-ChildItem c:\final.txt).CopyTo("c:\bin\final.txt", $true)
 ```
 
-### <a name="methods-of-scalar-objects-and-collections"></a>Methoden von skalaren Objekten und Auflistungen
+## <a name="methods-of-scalar-objects-and-collections"></a>Methoden von skalaren Objekten und Auflistungen
 
 Die Methoden eines Objekts ("Skalar") eines bestimmten Typs unterscheiden sich häufig von den Methoden einer Auflistung von Objekten desselben Typs.
 
@@ -172,7 +172,7 @@ Ab PowerShell 4,0 wird das Filtern von Sammlungen mithilfe einer Methoden Syntax
 
 Weitere Informationen zu diesen Methoden finden Sie unter [about_arrays](about_arrays.md).
 
-### <a name="calling-a-specific-method-when-multiple-overloads-exist"></a>Aufrufen einer bestimmten Methode, wenn mehrere über Ladungen vorhanden sind
+## <a name="calling-a-specific-method-when-multiple-overloads-exist"></a>Aufrufen einer bestimmten Methode, wenn mehrere über Ladungen vorhanden sind
 
 Beachten Sie das folgende Szenario, wenn Sie .NET-Methoden aufrufen. Wenn eine Methode ein-Objekt akzeptiert, aber über eine-Schnittstelle verfügt, die einen spezifischeren Typ annimmt, wählt PowerShell die Methode aus, die das Objekt akzeptiert, es sei denn, Sie haben es explizit in diese Schnittstelle umgewandelt.
 
@@ -219,6 +219,12 @@ In diesem Beispiel konvertieren wir die-Methode in die-Schnittstelle **IFoo** , 
 int: 1
 ```
 
+## <a name="using-net-methods-that-take-filesystem-paths"></a>Verwenden von .NET-Methoden, die Dateisystem Pfade übernehmen
+
+PowerShell unterstützt mehrere Runspaces pro Prozess. Jeder Runspace verfügt über ein eigenes _Aktuelles Verzeichnis_. Dies entspricht nicht dem Arbeitsverzeichnis des aktuellen Prozesses: `[System.Environment]::CurrentDirectory` .
+
+.NET-Methoden verwenden das Arbeitsverzeichnis für den Prozess. PowerShell-Cmdlets verwenden den Runspace-Speicherort. Außerdem funktionieren .NET-Methoden nur mit nativen Dateisystem Pfaden, nicht mit PowerShell-Pfad Objekten. Um PowerShell-Pfade mit .NET-Methoden zu verwenden, müssen Sie den Pfad zu einem Dateisystem eigenen Pfad auflösen, bevor Sie ihn an die .NET-Methode übergeben.
+
 ## <a name="see-also"></a>Weitere Informationen
 
 [about_Objects](about_Objects.md)
@@ -226,4 +232,3 @@ int: 1
 [about_Properties](about_Properties.md)
 
 [Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member)
-
