@@ -15,7 +15,7 @@ ms.locfileid: "86301317"
 Es gibt viele Möglichkeiten, Variablen in Zeichenfolgen zu verwenden. Ich nenne das Variablenersetzung, aber gemeint ist eigentlich jeder Fall, in dem eine Zeichenfolge so formatiert werden soll, dass sie Werte aus Variablen enthält. Das erläutere ich oft für neue Skriptentwickler.
 
 > [!NOTE]
-> Die [Originalversion][] dieses Artikels ist im Blog von [@KevinMarquette][] erschienen. Das PowerShell-Team dankt Kevin Marquette dafür, dass er diesen Inhalt mit uns teilt. Weitere Informationen finden Sie in seinem Blog auf [PowerShellExplained.com][].
+> Die [Originalversion][] dieses Artikels ist im Blog von [@KevinMarquette][] erschienen. Das PowerShell-Team dankt Kevin Marquette, dass er diesen Inhalt mit uns teilt. Weitere Informationen finden Sie in seinem Blog auf [PowerShellExplained.com][].
 
 ## <a name="concatenation"></a>Verkettung
 
