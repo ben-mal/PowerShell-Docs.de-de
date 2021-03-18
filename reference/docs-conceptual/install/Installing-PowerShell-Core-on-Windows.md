@@ -2,12 +2,12 @@
 title: Installieren von PowerShell unter Windows
 description: Informationen zur Installation von PowerShell unter Windows
 ms.date: 02/02/2021
-ms.openlocfilehash: 12dedfed8349d243d3f2988fd7cb69c4cfc276bb
-ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
+ms.openlocfilehash: bd3643c1ca6beb60a8727478a1ae612dcb34c7fb
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100563269"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483435"
 ---
 # <a name="installing-powershell-on-windows"></a>Installieren von PowerShell unter Windows
 
@@ -30,8 +30,8 @@ Laden Sie zum Installieren von PowerShell unter Windows das [neueste][] Installa
 
 Die MSI-Datei sieht so aus: `PowerShell-<version>-win-<os-arch>.msi`. Beispiel:
 
-- `PowerShell-7.1.2-win-x64.msi`
-- `PowerShell-7.1.2-win-x86.msi`
+- `PowerShell-7.1.3-win-x64.msi`
+- `PowerShell-7.1.3-win-x86.msi`
 
 Sobald sie heruntergeladen wurde, führen Sie den Installer mit einem Doppelklick aus und befolgen die Anweisungen.
 
@@ -62,7 +62,7 @@ MSI-Pakete können über die Befehlszeile installiert werden, sodass Administrat
 Das folgenden Beispiel zeigt, wie PowerShell mit allen aktivierten Installationsoptionen im Hintergrund installiert wird.
 
 ```powershell
-msiexec.exe /package PowerShell-7.1.2-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.1.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 ```
 
 Eine vollständige Liste der Befehlszeilenoptionen für `Msiexec.exe` finden Sie unter [Befehlszeilenoptionen](/windows/desktop/Msi/command-line-options).
@@ -84,14 +84,20 @@ Dies kann von Administratoren und Entwicklern verwendet werden, um den Pfad zu P
 
 Binäre PowerShell ZIP-Archive werden zur Verfügung gestellt, um erweiterte Bereitstellungsszenarios zu ermöglichen. Laden Sie eines der folgenden ZIP-Archive von der Seite [Releases][Releases] herunter.
 
-- PowerShell-7.1.2-win-x64.zip
-- PowerShell-7.1.2-win-x86.zip
-- PowerShell-7.1.2-win-arm64.zip
-- PowerShell-7.1.2-win-arm32.zip
+- PowerShell-7.1.3-win-x64.zip
+- PowerShell-7.1.3-win-x86.zip
+- PowerShell-7.1.3-win-arm64.zip
+- PowerShell-7.1.3-win-arm32.zip
 
 Je nachdem, wie Sie die Datei herunterladen, müssen Sie die Blockierung der Datei mit dem Cmdlet `Unblock-File` aufheben. Entpacken Sie den Inhalt an den Speicherort Ihrer Wahl, und führen Sie `pwsh.exe` von dort aus. Anders als bei der Installation der MSI-Pakete erfolgt bei der Installation des ZIP-Archivs keine Prüfung auf Voraussetzungen. Damit Remoting über WSMan einwandfrei funktioniert, müssen die [Voraussetzungen](#prerequisites) unbedingt erfüllt sein.
 
 Installieren Sie mit dieser Methode die ARM-basierte Version von PowerShell auf Computern wie Microsoft Surface Pro X. Die besten Ergebnisse erzielen Sie, wenn Sie PowerShell im Ordner `$env:ProgramFiles\PowerShell\7` installieren.
+
+> [!NOTE]
+> Sie können diese Methode verwenden, um eine beliebige Version von PowerShell zu installieren, einschließlich der neuesten:
+> - Stabiles Release: [https://aka.ms/powershell-release?tag=stable](https://aka.ms/powershell-release?tag=stable)
+> - Vorschaurelease: [https://aka.ms/powershell-release?tag=preview](https://aka.ms/powershell-release?tag=preview)
+> - LTS-Release: [https://aka.ms/powershell-release?tag=lts](https://aka.ms/powershell-release?tag=lts)
 
 ## <a name="deploying-on-windows-10-iot-enterprise"></a>Bereitstellung unter Windows 10 IoT Enterprise
 
@@ -224,10 +230,11 @@ Die folgenden Befehle können verwendet werden, um PowerShell mithilfe der verö
    ```
 
    ```Output
-   Name               Id                           Version
-   ---------------------------------------------------------------
-   PowerShell         Microsoft.PowerShell         7.1.2
-   PowerShell-Preview Microsoft.PowerShell-Preview 7.1.2-preview.5
+   Name                      Id                                Version
+   ---------------------------------------------------------------------------
+   PowerShell                Microsoft.PowerShell              7.1.3
+   PowerShell Preview (MSIX) Microsoft.PowerShell-Preview-MSIX 7.0.2
+   PowerShell-Preview        Microsoft.PowerShell-Preview      7.2.0-preview.3
    ```
 
 1. Installieren einer PowerShell-Version mithilfe des `--exact`-Parameters

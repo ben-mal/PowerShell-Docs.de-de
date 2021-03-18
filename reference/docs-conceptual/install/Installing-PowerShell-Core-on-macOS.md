@@ -1,13 +1,13 @@
 ---
 title: Installieren von PowerShell unter macOS
 description: Informationen zur Installation von PowerShell unter macOS
-ms.date: 02/02/2021
-ms.openlocfilehash: 3ae1fe0eb29b4d826221a2c11db19bc18c3efba7
-ms.sourcegitcommit: 4f1c2fe700b8a0544c59e371eb7cfbc6d852b185
+ms.date: 03/15/2021
+ms.openlocfilehash: e69a757e761039799fe399c0e59c31c800a5094a
+ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100563208"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103483454"
 ---
 # <a name="installing-powershell-on-macos"></a>Installieren von PowerShell unter macOS
 
@@ -112,12 +112,12 @@ brew upgrade powershell
 
 ## <a name="installation-via-direct-download"></a>Installation über einen direkten Download
 
-Laden Sie das PKG-Paket `powershell-7.1.2-osx-x64.pkg` über die Seite [Releases][] auf den macOS-Computer herunter.
+Laden Sie das PKG-Paket `powershell-7.1.3-osx-x64.pkg` über die Seite [Releases][] auf den macOS-Computer herunter.
 
 Doppelklicken Sie entweder auf die Datei, und befolgen Sie die Anweisungen, oder installieren Sie das Paket über das Terminal:
 
 ```sh
-sudo installer -pkg powershell-7.1.2-osx-x64.pkg -target /
+sudo installer -pkg powershell-7.1.3-osx-x64.pkg -target /
 ```
 
 Installieren Sie [OpenSSL](#installing-dependencies). OpenSSL ist für PowerShell-Remotingfunktionen und CIM-Vorgänge erforderlich.
@@ -140,23 +140,29 @@ Installieren Sie [OpenSSL](#installing-dependencies). OpenSSL ist für PowerShel
 
 Installieren Sie [OpenSSL](#installing-dependencies). OpenSSL ist für PowerShell-Remotingfunktionen und CIM-Vorgänge erforderlich.
 
+> [!NOTE]
+> Sie können diese Methode verwenden, um eine beliebige Version von PowerShell zu installieren, einschließlich der neuesten:
+> - Stabiles Release: [https://aka.ms/powershell-release?tag=stable](https://aka.ms/powershell-release?tag=stable)
+> - Vorschaurelease: [https://aka.ms/powershell-release?tag=preview](https://aka.ms/powershell-release?tag=preview)
+> - LTS-Release: [https://aka.ms/powershell-release?tag=lts](https://aka.ms/powershell-release?tag=lts)
+
 ### <a name="installing-binary-archives-on-macos"></a>Installieren von Archiven der Binärdateien unter macOS
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/7.1.2
+sudo mkdir -p /usr/local/microsoft/powershell/7.1.3
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.2
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.3
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/7.1.2/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.1.3/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/7.1.2/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.1.3/pwsh /usr/local/bin/pwsh
 ```
 
 ## <a name="installing-dependencies"></a>Installieren von Abhängigkeiten
@@ -204,7 +210,7 @@ Lesen Sie den Abschnitt [Pfade](#paths) in diesem Artikel, um zu erfahren, wie S
 
 ## <a name="paths"></a>Paths
 
-- `$PSHOME` ist `/usr/local/microsoft/powershell/7.1.2/`.
+- `$PSHOME` ist `/usr/local/microsoft/powershell/7.1.3/`.
 - Benutzerprofile werden über `~/.config/powershell/profile.ps1` gelesen.
 - Standardprofile werden über `$PSHOME/profile.ps1` gelesen.
 - Benutzermodule werden über `~/.local/share/powershell/Modules` gelesen.
@@ -216,7 +222,7 @@ Die Profile halten sich an die Konfiguration von PowerShell pro Host. Dies bedeu
 
 PowerShell hält die [XDG Base Directory Specification (XDG Base Directory-Spezifikation)][xdg-bds] unter macOs ein.
 
-Da macOS eine Ableitung von BSD ist, wird das Präfix `/usr/local` anstelle von `/opt` verwendet. Daher ist `$PSHOME` gleich `/usr/local/microsoft/powershell/7.1.2/`, und der symbolische Link wird unter `/usr/local/bin/pwsh` gespeichert.
+Da macOS eine Ableitung von BSD ist, wird das Präfix `/usr/local` anstelle von `/opt` verwendet. Daher ist `$PSHOME` gleich `/usr/local/microsoft/powershell/7.1.3/`, und der symbolische Link wird unter `/usr/local/bin/pwsh` gespeichert.
 
 ## <a name="installation-support"></a>Installationsunterstützung
 
