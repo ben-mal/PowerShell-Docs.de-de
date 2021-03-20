@@ -7,12 +7,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: 0bcd46e49559ad625621a7ff81162af695f6f93c
-ms.sourcegitcommit: 7f712e12ec5b3f3f3e695da804b050ea0ce58b3a
+ms.openlocfilehash: d0ace050648806e22e182ecf629e8ee7ef7dce23
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94661323"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726467"
 ---
 # Get-ChildItem
 
@@ -176,10 +176,10 @@ Mode                LastWriteTime         Length Name
 Das `Get-ChildItem` Cmdlet verwendet den **path** -Parameter, um das Verzeichnis " **c:\test**" anzugeben. Der **path** -Parameter enthält einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben.
 Der **include** -Parameter verwendet ein Sternchen-Platzhalter Zeichen ( `*` ), um alle Dateien mit der Dateinamenerweiterung **. txt** anzugeben.
 
-Wenn der **include** -Parameter verwendet wird, benötigt der **path** -Parameter einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben. Beispielsweise `-Path C:\Test\*`.
+Wenn der **include** -Parameter verwendet wird, benötigt der **path** -Parameter einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben. Beispiel: `-Path C:\Test\*`.
 
 - Wenn der **recurse** -Parameter dem Befehl hinzugefügt wird, ist das nachfolgende Sternchen ( `*` ) im **path** -Parameter optional. Der **recurse** -Parameter ruft Elemente aus dem **Pfad** Verzeichnis und seinen Unterverzeichnissen ab. Zum Beispiel, `-Path C:\Test\ -Recurse -Include *.txt`
-- Wenn ein nach gestelltes Sternchen ( `*` ) nicht im **path** -Parameter enthalten ist, gibt der Befehl keine Ausgabe zurück und kehrt zur PowerShell-Eingabeaufforderung zurück. Beispielsweise `-Path C:\Test\`.
+- Wenn ein nach gestelltes Sternchen ( `*` ) nicht im **path** -Parameter enthalten ist, gibt der Befehl keine Ausgabe zurück und kehrt zur PowerShell-Eingabeaufforderung zurück. Beispiel: `-Path C:\Test\`.
 
 ### Beispiel 5: Aufrufen von untergeordneten Elementen mit dem Exclude-Parameter
 
@@ -317,7 +317,7 @@ In PowerShell 6,2 wurde eine Alternative Ansicht hinzugefügt, um hardlinkinform
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### Beispiel 9: Ausgabe für nicht-Windows-Betriebssysteme
+### Beispiel 10: Ausgabe für nicht-Windows-Betriebssysteme
 
 In PowerShell 7,1 auf UNIX `Get-ChildItem` -Systemen stellt eine UNIX-ähnliche Ausgabe bereit:
 

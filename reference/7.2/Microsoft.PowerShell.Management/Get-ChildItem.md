@@ -6,12 +6,12 @@ ms.date: 03/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ChildItem
-ms.openlocfilehash: dc47a7bc29d93e1784571f9e6b27dafcb8494bae
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: d5372b8b8a57c82e2d0c6ee731b810e9a2e0f987
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603720"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726705"
 ---
 # Get-ChildItem
 
@@ -177,7 +177,7 @@ Der **include** -Parameter verwendet ein Sternchen-Platzhalter Zeichen ( `*` ), 
 
 Wenn der **include** -Parameter verwendet wird, benötigt der **path** -Parameter einen nachfolgenden Sternchen ( `*` )-Platzhalter, um den Inhalt des Verzeichnisses anzugeben. Beispiel: `-Path C:\Test\*`.
 
-- Wenn der **recurse** -Parameter dem Befehl hinzugefügt wird, ist das nachfolgende Sternchen ( `*` ) im **path** -Parameter optional. Der **recurse** -Parameter ruft Elemente aus dem **Pfad** Verzeichnis und seinen Unterverzeichnissen ab. Beispiel: `-Path C:\Test\ -Recurse -Include *.txt`
+- Wenn der **recurse** -Parameter dem Befehl hinzugefügt wird, ist das nachfolgende Sternchen ( `*` ) im **path** -Parameter optional. Der **recurse** -Parameter ruft Elemente aus dem **Pfad** Verzeichnis und seinen Unterverzeichnissen ab. Zum Beispiel, `-Path C:\Test\ -Recurse -Include *.txt`
 - Wenn ein nach gestelltes Sternchen ( `*` ) nicht im **path** -Parameter enthalten ist, gibt der Befehl keine Ausgabe zurück und kehrt zur PowerShell-Eingabeaufforderung zurück. Beispiel: `-Path C:\Test\`.
 
 ### Beispiel 5: Aufrufen von untergeordneten Elementen mit dem Exclude-Parameter
@@ -316,7 +316,7 @@ In PowerShell 6,2 wurde eine Alternative Ansicht hinzugefügt, um hardlinkinform
 Get-ChildItem -Path C:\PathContainingHardLink | Format-Table -View childrenWithHardLink
 ```
 
-### Beispiel 9: Ausgabe für nicht-Windows-Betriebssysteme
+### Beispiel 10: Ausgabe für nicht-Windows-Betriebssysteme
 
 In PowerShell 7,1 auf UNIX `Get-ChildItem` -Systemen stellt eine UNIX-ähnliche Ausgabe bereit:
 
@@ -375,7 +375,7 @@ Der **Attribute** -Parameter unterstützt die folgenden Eigenschaften:
 - **Normal**
 - **Noscrubdata**
 - **Notcontentindiziert**
-- **Aufzu**
+- **Offline**
 - **ReadOnly**
 - **Analyse Punkt**
 - **Sparpfad**

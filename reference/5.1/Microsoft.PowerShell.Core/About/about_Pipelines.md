@@ -1,17 +1,16 @@
 ---
 description: Kombinieren von Befehlen in Pipelines in PowerShell
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 09/27/2019
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pipelines
-ms.openlocfilehash: 651ba1f42743d83958d6711cff01fec030fa9a02
-ms.sourcegitcommit: ae8b89e12c6fa2108075888dd6da92788d6c2888
+ms.openlocfilehash: 0ad5daf9e63fa755bc48ab23538789063f1567b5
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "93224956"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726637"
 ---
 # <a name="about-pipelines"></a>Informationen zu Pipelines
 
@@ -25,7 +24,7 @@ Eine Pipeline ist eine Reihe von Befehlen, die durch Pipeline Operatoren ( `|` )
 
 Die Ausgabe des ersten Befehls kann als Eingabe für den zweiten Befehl zur Verarbeitung gesendet werden. Und diese Ausgabe kann an einen anderen Befehl gesendet werden. Das Ergebnis ist eine komplexe Befehlskette oder _Pipeline_ , die aus einer Reihe einfacher Befehle besteht.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```powershell
 Command-1 | Command-2 | Command-3
@@ -38,7 +37,7 @@ In einer Pipeline werden die Befehle in der Reihenfolge von links nach rechts ve
 
 Hier ist ein einfaches Beispiel. Der folgende Befehl ruft den Notepad-Prozess ab und beendet ihn.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```powershell
 Get-Process notepad | Stop-Process
@@ -95,7 +94,7 @@ Diese Beispiel Pipeline startet den WMI-Dienst auf dem Computer:
 Get-Service wmi | Start-Service
 ```
 
-Ein weiteres Beispiel: Sie können die Ausgabe von `Get-Item` oder `Get-ChildItem` innerhalb des PowerShell-Registrierungs Anbieters an das- `New-ItemProperty` Cmdlet weiterreichen. In diesem Beispiel wird dem Registrierungsschlüssel **MyCompany** ein neuer Registrierungs Eintrag, **noofemployees** , mit dem Wert **8124** hinzugefügt.
+Ein weiteres Beispiel: Sie können die Ausgabe von `Get-Item` oder `Get-ChildItem` innerhalb des PowerShell-Registrierungs Anbieters an das- `New-ItemProperty` Cmdlet weiterreichen. In diesem Beispiel wird dem Registrierungsschlüssel **MyCompany** ein neuer Registrierungs Eintrag, **noofemployees**, mit dem Wert **8124** hinzugefügt.
 
 ```powershell
 Get-Item -Path HKLM:\Software\MyCompany |
@@ -115,6 +114,19 @@ Dieses Beispiel zeigt, wie das `Format-List` Cmdlet verwendet wird, um eine List
 ```powershell
 Get-Process winlogon | Format-List -Property *
 ```
+
+Sie können die Ausgabe der systemeigenen Befehle auch über die Pipeline an PowerShell-Cmdlets übergeben. Beispiel:
+
+```powershell
+PS> ipconfig.exe | Select-String -Pattern 'IPv4'
+
+   IPv4 Address. . . . . . . . . . . : 172.24.80.1
+   IPv4 Address. . . . . . . . . . . : 192.168.1.45
+   IPv4 Address. . . . . . . . . . . : 100.64.108.37
+```
+
+> [!IMPORTANT]
+> Die **Erfolgs** -und **Fehler** Datenströme ähneln den stdin-und stderr-Datenströmen anderer Shells. Stdin ist jedoch nicht für die Eingabe mit der PowerShell-Pipeline verbunden. Weitere Informationen finden Sie unter [about_Redirection](about_Redirection.md).
 
 In der Praxis werden Sie feststellen, dass die Kombination einfacher Befehle in Pipelines Zeit und Eingabe spart und die Skripterstellung effizienter macht.
 
@@ -171,11 +183,11 @@ Wenn Sie Objekte über die Pipeline an senden `Start-Service` , versucht PowerSh
 
 Cmdlets-Parameter können eine Pipeline Eingabe auf zwei verschiedene Arten akzeptieren:
 
-- **Byvalue** : der Parameter akzeptiert Werte, die dem erwarteten .NET-Typ entsprechen oder in diesen Typ konvertiert werden können.
+- **Byvalue**: der Parameter akzeptiert Werte, die dem erwarteten .NET-Typ entsprechen oder in diesen Typ konvertiert werden können.
 
   Der **Name** -Parameter von akzeptiert beispielsweise `Start-Service` Pipeline Eingaben nach Wert. Sie kann Zeichen folgen Objekte oder-Objekte akzeptieren, die in Zeichen folgen konvertiert werden können.
 
-- **Bypropertyname** : der-Parameter akzeptiert nur Eingaben, wenn das Eingabe Objekt eine Eigenschaft mit dem gleichen Namen wie der-Parameter aufweist.
+- **Bypropertyname**: der-Parameter akzeptiert nur Eingaben, wenn das Eingabe Objekt eine Eigenschaft mit dem gleichen Namen wie der-Parameter aufweist.
 
   Der Name-Parameter von kann z `Start-Service` . b.-Objekte akzeptieren, die über eine **Name** -Eigenschaft verfügen. Um die Eigenschaften eines Objekts aufzulisten, übergeben Sie es an `Get-Member` .
 
@@ -274,7 +286,7 @@ NPM       AliasProperty  NPM = NonpagedSystemMemorySize
 
 Wenn Sie jedoch den **Inputobject** -Parameter von verwenden `Get-Member` , `Get-Member` empfängt ein Array von **System. Diagnostics. Process** -Objekten als einzelne Einheit. Es zeigt die Eigenschaften eines Arrays von-Objekten an. (Beachten Sie das Array Symbol ( `[]` ) nach dem **System. Object** -Typnamen.)
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```powershell
 Get-Member -InputObject (Get-Process)
@@ -293,7 +305,7 @@ Clone              Method        System.Object Clone()
 
 Das Ergebnis ist möglicherweise nicht das, was Sie beabsichtigt haben. Aber nachdem Sie es verstanden haben, können Sie es verwenden. Beispielsweise verfügen alle Array Objekte über eine **count** -Eigenschaft. Damit können Sie die Anzahl der Prozesse zählen, die auf dem Computer ausgeführt werden.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```powershell
 (Get-Process).count
@@ -374,7 +386,7 @@ Get-Help Move-ItemProperty -Parameter Destination
     Accept wildcard characters?  false
 ```
 
-Die Ergebnisse zeigen an, dass das **Ziel** nur Pipeline Eingaben "by Property Name" annimmt. Daher muss das weitergeleitete Objekt über eine Eigenschaft mit dem Namen " **Destination** " verfügen.
+Die Ergebnisse zeigen an, dass das **Ziel** nur Pipeline Eingaben "by Property Name" annimmt. Daher muss das weitergeleitete Objekt über eine Eigenschaft mit dem Namen " **Destination**" verfügen.
 
 Verwenden `Get-Member` Sie, um die Eigenschaften des Objekts anzuzeigen, das aus stammt `Get-Item` .
 
@@ -402,7 +414,7 @@ Get-Help Move-ItemProperty -Parameter Path
 
 Zum Beheben des Befehls müssen wir das Ziel im `Move-ItemProperty` Cmdlet angeben und verwenden `Get-Item` , um den **Pfad** des Elements zu erhalten, das verschoben werden soll.
 
-Ein auf ein Objekt angewendeter
+Beispiel:
 
 ```powershell
 Get-Item -Path HKLM:\Software\MyCompany\design |

@@ -6,12 +6,12 @@ ms.date: 10/05/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_PowerShell_exe
-ms.openlocfilehash: ef03558a6b58868b98c9da488934b0bfbbce9fe7
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 4025630ebb3abe4c0598c85940cfce383e9c7890
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93223332"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726654"
 ---
 # <a name="about-powershellexe"></a>Informationen zu PowerShell.exe
 
@@ -144,7 +144,7 @@ In `cmd.exe` gibt es keinen Skriptblock (oder einen **ScriptBlock** -Typ), sodas
 Eine an den **Befehl** weiter gegebene Zeichenfolge wird weiterhin als PowerShell-Code ausgeführt, sodass die Skriptblock geschweiften Klammern bei der Ausführung von häufig nicht erforderlich sind `cmd.exe` . Zum Ausführen eines Inlineskriptblocks, der in einer Zeichenfolge definiert ist, kann der [Aufrufoperator](about_operators.md#special-operators) `&` verwendet werden:
 
 ```cmd
-pwsh -Command "& {Get-WinEvent -LogName security}"
+powershell.exe -Command "& {Get-WinEvent -LogName security}"
 ```
 
 Wenn der Wert von " **Command** " eine Zeichenfolge ist, muss **Command** der letzte Parameter für "pwsh" sein, da alle nachfolgenden Argumente als Teil des auszuführenden Befehls interpretiert werden.
@@ -175,18 +175,6 @@ out
 Der Prozessexitcode wird durch den Status des letzten (ausgeführten) Befehls im Skriptblock bestimmt. Der Exitcode ist, wenn den Wert hat `0` `$?` `$true` oder `1` Wenn `$?` ist `$false` . Wenn der letzte Befehl ein externes Programm oder ein PowerShell-Skript ist, das explizit einen Exitcode angibt, der nicht `0` oder ist `1` , wird der Exitcode `1` für den Prozessexitcode in konvertiert. Fügen Sie der `exit $LASTEXITCODE` Befehls Zeichenfolge oder dem Skriptblock hinzu, um den spezifischen Exitcode beizubehalten.
 
 Entsprechend wird der Wert 1 zurückgegeben, wenn ein Fehler mit Skript Abbruch (Runspace-abschließende), wie z `throw` . `-ErrorAction Stop` b. oder, auftritt oder wenn die Ausführung durch <kbd>STRG</kbd> - <kbd>C</kbd>unterbrochen wird.
-
-_nur_ möglich, wenn **PowerShell.exe** von einem anderen PowerShell-Host ausgeführt wird.
-Der **ScriptBlock** -Typ kann in einer vorhandenen Variablen enthalten, von einem Ausdruck zurückgegeben oder vom PowerShell-Host als literaler Skriptblock, der in geschweiften Klammern eingeschlossen ist, analysiert werden, `{}` bevor er an **PowerShell.exe** übergeben wird.
-
-In **cmd.exe** gibt es keinen Skriptblock (oder **ScriptBlock** -Typ), sodass der an den **Befehl** übergeben Wert _immer_ eine Zeichenfolge ist. Sie können einen Skriptblock innerhalb der Zeichenfolge schreiben, aber anstatt ausgeführt zu werden, verhält er sich genau so, als ob Sie ihn an einer typischen PowerShell-Eingabeaufforderung eingegeben hätten, wobei der Inhalt des Skriptblocks wieder an Sie ausgegeben wird.
-
-Eine Zeichenfolge, die an den **Befehl** weitergegeben wird, wird weiterhin als PowerShell ausgeführt, sodass die Skriptblock geschweiften Klammern bei der Ausführung von **cmd.exe** häufig nicht erforderlich sind. Um einen Inline Skriptblock auszuführen, der in einer Zeichenfolge definiert ist, kann der [calloperator](about_operators.md#special-operators) 
- `&` verwendet werden:
-
-```console
-"& {<command>}"
-```
 
 #### <a name="-help---"></a>-Help, -?, /?
 

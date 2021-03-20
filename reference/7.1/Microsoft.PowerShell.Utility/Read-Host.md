@@ -1,18 +1,17 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 03/02/2021
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-Host
-ms.openlocfilehash: 1c799a5b0f9041d285ce0e83a98582d6888c607e
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 9635457a7b6afc641e67bd4c9367ea4dfc5c9470
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685290"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726722"
 ---
 # Read-Host
 
@@ -35,7 +34,7 @@ Read-Host [[-Prompt] <Object>] [-AsSecureString] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Das `Read-Host` Cmdlet liest eine Zeile der Eingabe aus der Konsole. Damit kann ein Benutzer zur Eingabe aufgefordert werden. Da Sie die Eingabe als sichere Zeichenfolge speichern können, können Sie dieses Cmdlet verwenden, um Benutzer zur Eingabe von sicheren Daten wie Kennwörtern oder freigegebenen Daten aufzufordern.
+Das- `Read-Host` Cmdlet liest eine Zeile der Eingabe aus der Konsole (stdin). Damit kann ein Benutzer zur Eingabe aufgefordert werden. Da Sie die Eingabe als sichere Zeichenfolge speichern können, können Sie dieses Cmdlet verwenden, um Benutzer zur Eingabe von sicheren Daten, z. b. Kenn Wörtern, aufzufordern.
 
 > [!NOTE]
 > `Read-Host` hat ein Limit von 1022 Zeichen, das als Eingabe eines Benutzers akzeptiert werden kann.
@@ -125,7 +124,7 @@ Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -Err
 
 ### Keine
 
-Eingaben können nicht an dieses Cmdlet weitergereicht werden.
+Dieses Cmdlet akzeptiert keine Eingaben aus der PowerShell-Pipeline.
 
 ## AUSGABEN
 
@@ -134,6 +133,8 @@ Eingaben können nicht an dieses Cmdlet weitergereicht werden.
 Wenn der **assecurestring** -Parameter verwendet wird, `Read-Host` gibt eine **SecureString** zurück. Andernfalls wird eine Zeichenfolge zurückgegeben.
 
 ## HINWEISE
+
+Dieses Cmdlet liest nur aus dem stdin-Stream des Host Prozesses. Normalerweise ist der stdin-Stream mit der Tastatur der Host Konsole verbunden.
 
 ## VERWANDTE LINKS
 

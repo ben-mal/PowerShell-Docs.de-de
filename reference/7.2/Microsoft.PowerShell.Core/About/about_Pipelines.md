@@ -1,16 +1,16 @@
 ---
 description: Kombinieren von Befehlen in Pipelines in PowerShell
 Locale: en-US
-ms.date: 09/27/2019
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Pipelines
-ms.openlocfilehash: e4ae85fbbfe5232048a90e1fe4f62db3e95e5f1b
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 6e3f15682caeecba6fa10166e1def7cc3d4a9eed
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99599645"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726739"
 ---
 # <a name="about-pipelines"></a>Informationen zu Pipelines
 
@@ -114,6 +114,19 @@ Dieses Beispiel zeigt, wie das `Format-List` Cmdlet verwendet wird, um eine List
 ```powershell
 Get-Process winlogon | Format-List -Property *
 ```
+
+Sie können die Ausgabe der systemeigenen Befehle auch über die Pipeline an PowerShell-Cmdlets übergeben. Beispiel:
+
+```powershell
+PS> ipconfig.exe | Select-String -Pattern 'IPv4'
+
+   IPv4 Address. . . . . . . . . . . : 172.24.80.1
+   IPv4 Address. . . . . . . . . . . : 192.168.1.45
+   IPv4 Address. . . . . . . . . . . : 100.64.108.37
+```
+
+> [!IMPORTANT]
+> Die **Erfolgs** -und **Fehler** Datenströme ähneln den stdin-und stderr-Datenströmen anderer Shells. Stdin ist jedoch nicht für die Eingabe mit der PowerShell-Pipeline verbunden. Weitere Informationen finden Sie unter [about_Redirection](about_Redirection.md).
 
 In der Praxis werden Sie feststellen, dass die Kombination einfacher Befehle in Pipelines Zeit und Eingabe spart und die Skripterstellung effizienter macht.
 

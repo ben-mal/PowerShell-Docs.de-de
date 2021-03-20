@@ -1,16 +1,16 @@
 ---
 description: Erläutert, wie die Ausgabe von PowerShell an Textdateien umgeleitet wird.
 Locale: en-US
-ms.date: 10/14/2020
+ms.date: 03/18/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Redirection
-ms.openlocfilehash: 91eb3f524ddeeb729ce53749c9b0ae922ce21f18
-ms.sourcegitcommit: b9826dcf402db8a2b6d3eab37edb82c6af113343
+ms.openlocfilehash: 3ab418c99691a61840180c5475da0db4148629b4
+ms.sourcegitcommit: 16a02ae47d1a85b01692101aa0aa6e91e1ba398e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "99603149"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104726756"
 ---
 # <a name="about-redirection"></a>Informationen über die Umleitung
 
@@ -19,7 +19,7 @@ Erläutert, wie die Ausgabe von PowerShell an Textdateien umgeleitet wird.
 
 ## <a name="long-description"></a>Lange Beschreibung
 
-PowerShell sendet die Ausgabe standardmäßig an den PowerShell-Host. In der Regel handelt es sich hierbei um die Konsolenanwendung. Sie können die Ausgabe jedoch an eine Textdatei weiterleiten, und Sie können die Fehlerausgabe an den regulären Ausgabedatenstrom umleiten.
+PowerShell sendet die Ausgabe standardmäßig an den PowerShell-Host. In der Regel handelt es sich hierbei um die Konsolenanwendung. Allerdings können Sie die Ausgabe in eine Textdatei umleiten und die Fehlerausgabe an den regulären Ausgabedatenstrom umleiten.
 
 Zum Umleiten der Ausgabe können Sie die folgenden Methoden verwenden:
 
@@ -46,8 +46,10 @@ PowerShell unterstützt die Umleitung der folgenden Ausgabedaten Ströme.
 | 6        | **Informationen** Streich | PowerShell 5.0 | `Write-Information` |
 | *        | Alle Streams            | PowerShell 3.0 |                     |
 
-> [!NOTE]
-> In PowerShell gibt es auch einen **Fortschritts** Datenstrom, der jedoch keine Umleitung unterstützt.
+In PowerShell gibt es auch einen **Fortschritts** Datenstrom, der jedoch keine Umleitung unterstützt.
+
+> [!IMPORTANT]
+> Die **Erfolgs** -und **Fehler** Datenströme ähneln den stdin-und stderr-Datenströmen anderer Shells. Stdin ist jedoch nicht für die Eingabe mit der PowerShell-Pipeline verbunden.
 
 ### <a name="powershell-redirection-operators"></a>PowerShell-Umleitungs Operatoren
 
@@ -221,12 +223,11 @@ Wenn Sie versuchen, den umgekehrten Vergleich `<` (kleiner als) zu verwenden, er
 
 ```powershell
 PS> if (36 < 42) { "true" } else { "false" }
-At line:1 char:8
-+ if (36 < 42) { "true" } else { "false" }
-+        ~
-The '<' operator is reserved for future use.
-    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
-    + FullyQualifiedErrorId : RedirectionNotSupported
+ParserError:
+Line |
+   1 |  if (36 < 42) { "true" } else { "false" }
+     |         ~
+     | The '<' operator is reserved for future use.
 ```
 
 Wenn der numerische Vergleich der erforderliche Vorgang ist `-lt` , `-gt` sollte verwendet werden. Weitere Informationen finden Sie unter dem- `-gt` Operator in [about_Comparison_Operators](about_Comparison_Operators.md#-gt--ge--lt-and--le).
