@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 03/22/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-job?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-Job
-ms.openlocfilehash: 7b872c2a28943ee3d2b9ab27459ddb87722cc954
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 6d1018b2e623129b9d5315e8f674bc3faf88ae34
+ms.sourcegitcommit: a0148ef8bf9757f68c788d24f2eaf92792c3979f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212839"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104796327"
 ---
 # Receive-Job
 
@@ -76,7 +76,7 @@ Weitere Informationen zu Hintergrund Aufträgen in PowerShell finden Sie unter [
 Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse abgerufen, die von dem Zeitpunkt generiert wurden, an dem der `Receive-Job` Befehl übermittelt wird.
 Wenn die Ergebnisse noch nicht erfüllt sind, können Sie zusätzliche Befehle ausführen, `Receive-Job` um die verbleibenden Ergebnisse zu erhalten.
 
-Standardmäßig werden die Auftragsergebnisse aus dem System gelöscht, nachdem Sie sie erhalten haben, Sie können jedoch den **Keep** -Parameter verwenden, um die Ergebnisse zu speichern, damit Sie sie erneut empfangen können.
+Standardmäßig werden die Auftragsergebnisse aus dem System gelöscht, nachdem Sie sie erhalten haben, Sie können jedoch den **Keep**-Parameter verwenden, um die Ergebnisse zu speichern, damit Sie sie erneut empfangen können.
 Um die Auftrags Ergebnisse zu löschen, führen Sie den `Receive-Job` Befehl ohne den **Keep** -Parameter erneut aus, schließen Sie die Sitzung, oder verwenden `Remove-Job` Sie das Cmdlet, um den Auftrag aus der Sitzung zu löschen.
 
 Ab Windows PowerShell 3,0 ruft `Receive-Job` auch die Ergebnisse von benutzerdefinierten Auftrags Typen ab, wie z. b. Workflow Aufträge und Instanzen geplanter Aufträge.
@@ -97,7 +97,7 @@ Diese Befehle verwenden den **Job** -Parameter von `Receive-Job` , um die Ergebn
 Der erste Befehl startet einen Auftrag mit `Start-Job` und speichert das Auftrags Objekt in der `$job` Variablen.
 
 Der zweite Befehl verwendet das `Receive-Job` Cmdlet, um die Ergebnisse des Auftrags zu erhalten.
-Mit dem **Job** -Parameter wird der Auftrag angegeben.
+Mit dem **Job**-Parameter wird der Auftrag angegeben.
 
 ### Beispiel 2: Verwenden des Keep-Parameters
 
@@ -180,9 +180,10 @@ Running AppMgmt     Application Management             Server02
 # Use the New-PSSession cmdlet to create three user-managed PSSessions on three servers, and save the sessions in the $s variable.
 $s = New-PSSession -ComputerName Server01, Server02, Server03
 # Use Invoke-Command run a Start-Job command in each of the PSSessions in the $s variable.
-# The job outputs the ComputerName of each server.
+# The creates a new job with a custom name to each server
+# The job outputs the datetime from each server
 # Save the job objects in the $j variable.
-$j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$env:COMPUTERNAME}}
+$j = Invoke-Command -Session $s -ScriptBlock {Start-Job -Name $('MyJob-' +$env:COMPUTERNAME) -ScriptBlock {(Get-Date).ToString()}}
 # To confirm that these job objects are from the remote machines, run Get-Job to show no local jobs running.
 Get-Job
 ```
@@ -198,30 +199,27 @@ $j
 ```
 
 ```Output
-Id   Name     State      HasMoreData   Location   Command
---   ----     -----      -----------   --------   -------
-1    Job1     Completed  True          Localhost  $env:COMPUTERNAME
-2    Job2     Completed  True          Localhost  $env:COMPUTERNAME
-3    Job3     Completed  True          Localhost  $env:COMPUTERNAME
+Id   Name               State      HasMoreData   Location   Command
+--   ----               -----      -----------   --------   -------
+1    MyJob-Server01     Completed  True          Localhost  (Get-Date).ToString()
+2    MyJob-Server02     Completed  True          Localhost  (Get-Date).ToString()
+3    MyJob-Server03     Completed  True          Localhost  (Get-Date).ToString()
 ```
 
 ```powershell
-# Use Invoke-Command to run a Receive-Job command in each of the sessions in the $s variable and save the results in the $Results variable.
+# Use Invoke-Command to run a Receive-Job command in each of the sessions in the $s variable and save the results in the $results variable.
 # The Receive-Job command must be run in each session because the jobs were run locally on each server.
-$results = Invoke-Command -Session $s -ScriptBlock {Receive-Job -Job $Using:j}
+$results = Invoke-Command -Session $s -ScriptBlock {Receive-Job -Name $('MyJob-' +$env:COMPUTERNAME)}
 ```
 
 ```Output
-Server01
-Server02
-Server03
+3/22/2021 7:41:47 PM
+3/22/2021 7:41:47 PM
+3/22/2021 9:41:47 PM
 ```
 
 Dieses Beispiel zeigt, wie Sie die Ergebnisse der Hintergrundaufträge abrufen können, die auf drei Computern ausgeführt werden.
 Im Gegensatz zum vorherigen Beispiel wurden `Invoke-Command` bei der Verwendung von zum Ausführen des `Start-Job` Befehls tatsächlich drei unabhängige Aufträge auf jedem der drei Computer gestartet. Daher gibt der Befehl drei Auftragsobjekte zurück, die die drei Aufträge darstellen, die lokal auf drei verschiedenen Computern ausgeführt werden.
-
-> [!NOTE]
-> Im letzten Befehl, da `$j` eine lokale Variable ist, verwendet der Skriptblock den **using** -bereichsmodifizierer, um die Variable zu identifizieren `$j` . Weitere Informationen zum using-bereichsmodifizierer finden **Sie** unter [about_Remote_Variables](./About/about_Remote_Variables.md).
 
 ### Beispiel 5: Zugriff auf untergeordnete Aufträge
 
@@ -330,7 +328,7 @@ Gibt an, dass dieses Cmdlet weiterhin wartet, wenn sich **Aufträge im angehalte
 - Ausgesetzt
 - Getrennt
 
-Der **Force** -Parameter ist nur gültig, wenn der **Wait** -Parameter ebenfalls im Befehl verwendet wird.
+Der **Force**-Parameter ist nur gültig, wenn der **Wait**-Parameter ebenfalls im Befehl verwendet wird.
 
 Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
@@ -479,7 +477,7 @@ Accept wildcard characters: False
 ### -Sitzung
 
 Gibt ein Array von Sitzungen an.
-Dieses Cmdlet ruft die Ergebnisse der Aufträge ab, die in der angegebenen PowerShell-Sitzung ( **PSSession** ) ausgeführt wurden.
+Dieses Cmdlet ruft die Ergebnisse der Aufträge ab, die in der angegebenen PowerShell-Sitzung (**PSSession**) ausgeführt wurden.
 Geben Sie eine Variable ein, die die **PSSession** oder einen Befehl enthält, mit dem die **PSSession** abgerufen wird, z. b. einen- `Get-PSSession` Befehl.
 
 ```yaml
@@ -499,7 +497,7 @@ Accept wildcard characters: False
 Gibt an, dass dieses Cmdlet die Eingabeaufforderung unterdrückt, bis alle Auftrags Ergebnisse empfangen wurden.
 Standardmäßig werden `Receive-Job` die verfügbaren Ergebnisse sofort zurückgegeben.
 
-Standardmäßig wartet der **Wait** -Parameter, bis der Auftrag sich in einem der folgenden Zustände befindet:
+Standardmäßig wartet der **Wait**-Parameter, bis der Auftrag sich in einem der folgenden Zustände befindet:
 
 - Abgeschlossen
 - Fehler
@@ -527,7 +525,7 @@ Accept wildcard characters: False
 
 Gibt an, dass dieses Cmdlet Änderungen im Auftrags Zustand meldet, während es darauf wartet, dass der Auftrag beendet wird.
 
-Dieser Parameter ist nur gültig, wenn der **Wait** -Parameter im Befehl verwendet wird und der **Keep** -Parameter weggelassen wird.
+Dieser Parameter ist nur gültig, wenn der **Wait**-Parameter im Befehl verwendet wird und der **Keep**-Parameter weggelassen wird.
 
 Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
@@ -547,7 +545,7 @@ Accept wildcard characters: False
 
 Gibt an, dass dieses Cmdlet das Auftrags Objekt zurückgibt, gefolgt von den Ergebnissen.
 
-Dieser Parameter ist nur gültig, wenn der **Wait** -Parameter im Befehl verwendet wird und der **Keep** -Parameter weggelassen wird.
+Dieser Parameter ist nur gültig, wenn der **Wait**-Parameter im Befehl verwendet wird und der **Keep**-Parameter weggelassen wird.
 
 Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.
 
