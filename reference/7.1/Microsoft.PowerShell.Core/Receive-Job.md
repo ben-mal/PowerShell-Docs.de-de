@@ -3,103 +3,103 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 03/22/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/receive-job?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Receive-Job
-ms.openlocfilehash: 51cf0abc1a6362122f18812cd90e59a6ca7dc4ab
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: fcf124115be3642cec50fcab71385e1b604e73b3
+ms.sourcegitcommit: a0148ef8bf9757f68c788d24f2eaf92792c3979f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93217071"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104796344"
 ---
-# <span data-ttu-id="e69aa-103">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-103">Receive-Job</span></span>
+# <span data-ttu-id="33ca1-103">Receive-Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-103">Receive-Job</span></span>
 
-## <span data-ttu-id="e69aa-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="e69aa-104">SYNOPSIS</span></span>
-<span data-ttu-id="e69aa-105">Ruft die Ergebnisse der PowerShell-Hintergrund Aufträge in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="e69aa-105">Gets the results of the PowerShell background jobs in the current session.</span></span>
+## <span data-ttu-id="33ca1-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="33ca1-104">SYNOPSIS</span></span>
+<span data-ttu-id="33ca1-105">Ruft die Ergebnisse der PowerShell-Hintergrund Aufträge in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="33ca1-105">Gets the results of the PowerShell background jobs in the current session.</span></span>
 
-## <span data-ttu-id="e69aa-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="e69aa-106">SYNTAX</span></span>
+## <span data-ttu-id="33ca1-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="33ca1-106">SYNTAX</span></span>
 
-### <span data-ttu-id="e69aa-107">Speicherort (Standard)</span><span class="sxs-lookup"><span data-stu-id="e69aa-107">Location (Default)</span></span>
+### <span data-ttu-id="33ca1-107">Speicherort (Standard)</span><span class="sxs-lookup"><span data-stu-id="33ca1-107">Location (Default)</span></span>
 
 ```
 Receive-Job [-Job] <Job[]> [[-Location] <String[]>] [-Keep] [-NoRecurse] [-Force] [-Wait] [-AutoRemoveJob]
  [-WriteEvents] [-WriteJobInResults] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="e69aa-108">Computername</span><span class="sxs-lookup"><span data-stu-id="e69aa-108">ComputerName</span></span>
+### <span data-ttu-id="33ca1-108">Computername</span><span class="sxs-lookup"><span data-stu-id="33ca1-108">ComputerName</span></span>
 
 ```
 Receive-Job [-Job] <Job[]> [[-ComputerName] <String[]>] [-Keep] [-NoRecurse] [-Force] [-Wait] [-AutoRemoveJob]
  [-WriteEvents] [-WriteJobInResults] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="e69aa-109">Sitzung</span><span class="sxs-lookup"><span data-stu-id="e69aa-109">Session</span></span>
+### <span data-ttu-id="33ca1-109">Sitzung</span><span class="sxs-lookup"><span data-stu-id="33ca1-109">Session</span></span>
 
 ```
 Receive-Job [-Job] <Job[]> [[-Session] <PSSession[]>] [-Keep] [-NoRecurse] [-Force] [-Wait] [-AutoRemoveJob]
  [-WriteEvents] [-WriteJobInResults] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="e69aa-110">Nameparameterset</span><span class="sxs-lookup"><span data-stu-id="e69aa-110">NameParameterSet</span></span>
+### <span data-ttu-id="33ca1-110">Nameparameterset</span><span class="sxs-lookup"><span data-stu-id="33ca1-110">NameParameterSet</span></span>
 
 ```
 Receive-Job [-Keep] [-NoRecurse] [-Force] [-Wait] [-AutoRemoveJob] [-WriteEvents] [-WriteJobInResults]
  [-Name] <String[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="e69aa-111">Instanceidparameterset</span><span class="sxs-lookup"><span data-stu-id="e69aa-111">InstanceIdParameterSet</span></span>
+### <span data-ttu-id="33ca1-111">Instanceidparameterset</span><span class="sxs-lookup"><span data-stu-id="33ca1-111">InstanceIdParameterSet</span></span>
 
 ```
 Receive-Job [-Keep] [-NoRecurse] [-Force] [-Wait] [-AutoRemoveJob] [-WriteEvents] [-WriteJobInResults]
  [-InstanceId] <Guid[]> [<CommonParameters>]
 ```
 
-### <span data-ttu-id="e69aa-112">Sessionidparameterset</span><span class="sxs-lookup"><span data-stu-id="e69aa-112">SessionIdParameterSet</span></span>
+### <span data-ttu-id="33ca1-112">Sessionidparameterset</span><span class="sxs-lookup"><span data-stu-id="33ca1-112">SessionIdParameterSet</span></span>
 
 ```
 Receive-Job [-Keep] [-NoRecurse] [-Force] [-Wait] [-AutoRemoveJob] [-WriteEvents] [-WriteJobInResults]
  [-Id] <Int32[]> [<CommonParameters>]
 ```
 
-## <span data-ttu-id="e69aa-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="e69aa-113">DESCRIPTION</span></span>
+## <span data-ttu-id="33ca1-113">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="33ca1-113">DESCRIPTION</span></span>
 
-<span data-ttu-id="e69aa-114">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse von PowerShell-Hintergrund Aufträgen abgerufen, z. b. solche, die mit dem `Start-Job` Cmdlet oder dem **AsJob** -Parameter eines beliebigen Cmdlets gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-114">The `Receive-Job` cmdlet gets the results of PowerShell background jobs, such as those started by using the `Start-Job` cmdlet or the **AsJob** parameter of any cmdlet.</span></span>
-<span data-ttu-id="e69aa-115">Sie können die Ergebnisse aller Aufträge abrufen oder Aufträge nach Name, ID, Instanz-ID, Computername, Speicherort oder Sitzung oder durch Senden eines Auftragsobjekts identifizieren.</span><span class="sxs-lookup"><span data-stu-id="e69aa-115">You can get the results of all jobs or identify jobs by their name, ID, instance ID, computer name, location, or session, or by submitting a job object.</span></span>
+<span data-ttu-id="33ca1-114">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse von PowerShell-Hintergrund Aufträgen abgerufen, z. b. solche, die mit dem `Start-Job` Cmdlet oder dem **AsJob** -Parameter eines beliebigen Cmdlets gestartet wurden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-114">The `Receive-Job` cmdlet gets the results of PowerShell background jobs, such as those started by using the `Start-Job` cmdlet or the **AsJob** parameter of any cmdlet.</span></span>
+<span data-ttu-id="33ca1-115">Sie können die Ergebnisse aller Aufträge abrufen oder Aufträge nach Name, ID, Instanz-ID, Computername, Speicherort oder Sitzung oder durch Senden eines Auftragsobjekts identifizieren.</span><span class="sxs-lookup"><span data-stu-id="33ca1-115">You can get the results of all jobs or identify jobs by their name, ID, instance ID, computer name, location, or session, or by submitting a job object.</span></span>
 
-<span data-ttu-id="e69aa-116">Wenn Sie einen PowerShell-Hintergrund Auftrag starten, wird der Auftrag gestartet, aber die Ergebnisse werden nicht sofort angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-116">When you start a PowerShell background job, the job starts, but the results do not appear immediately.</span></span> <span data-ttu-id="e69aa-117">Stattdessen gibt der Befehl ein Objekt zurück, das den Hintergrundauftrag darstellt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-117">Instead, the command returns an object that represents the background job.</span></span>
-<span data-ttu-id="e69aa-118">Das Auftragsobjekt enthält nützliche Informationen zum Auftrag, jedoch nicht die Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="e69aa-118">The job object contains useful information about the job, but it does not contain the results.</span></span>
-<span data-ttu-id="e69aa-119">Mit dieser Methode können Sie die Arbeit in der Sitzung fortsetzen, während der Auftrag ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-119">This method lets you continue to work in the session while the job runs.</span></span>
-<span data-ttu-id="e69aa-120">Weitere Informationen zu Hintergrund Aufträgen in PowerShell finden Sie unter [about_Jobs](./About/about_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="e69aa-120">For more information about background jobs in PowerShell, see [about_Jobs](./About/about_Jobs.md).</span></span>
+<span data-ttu-id="33ca1-116">Wenn Sie einen PowerShell-Hintergrund Auftrag starten, wird der Auftrag gestartet, aber die Ergebnisse werden nicht sofort angezeigt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-116">When you start a PowerShell background job, the job starts, but the results do not appear immediately.</span></span> <span data-ttu-id="33ca1-117">Stattdessen gibt der Befehl ein Objekt zurück, das den Hintergrundauftrag darstellt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-117">Instead, the command returns an object that represents the background job.</span></span>
+<span data-ttu-id="33ca1-118">Das Auftragsobjekt enthält nützliche Informationen zum Auftrag, jedoch nicht die Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="33ca1-118">The job object contains useful information about the job, but it does not contain the results.</span></span>
+<span data-ttu-id="33ca1-119">Mit dieser Methode können Sie die Arbeit in der Sitzung fortsetzen, während der Auftrag ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-119">This method lets you continue to work in the session while the job runs.</span></span>
+<span data-ttu-id="33ca1-120">Weitere Informationen zu Hintergrund Aufträgen in PowerShell finden Sie unter [about_Jobs](./About/about_Jobs.md).</span><span class="sxs-lookup"><span data-stu-id="33ca1-120">For more information about background jobs in PowerShell, see [about_Jobs](./About/about_Jobs.md).</span></span>
 
-<span data-ttu-id="e69aa-121">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse abgerufen, die von dem Zeitpunkt generiert wurden, an dem der `Receive-Job` Befehl übermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-121">The `Receive-Job` cmdlet gets the results that have been generated by the time that the `Receive-Job` command is submitted.</span></span>
-<span data-ttu-id="e69aa-122">Wenn die Ergebnisse noch nicht erfüllt sind, können Sie zusätzliche Befehle ausführen, `Receive-Job` um die verbleibenden Ergebnisse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="e69aa-122">If the results are not yet complete, you can run additional `Receive-Job` commands to get the remaining results.</span></span>
+<span data-ttu-id="33ca1-121">Mit dem- `Receive-Job` Cmdlet werden die Ergebnisse abgerufen, die von dem Zeitpunkt generiert wurden, an dem der `Receive-Job` Befehl übermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-121">The `Receive-Job` cmdlet gets the results that have been generated by the time that the `Receive-Job` command is submitted.</span></span>
+<span data-ttu-id="33ca1-122">Wenn die Ergebnisse noch nicht erfüllt sind, können Sie zusätzliche Befehle ausführen, `Receive-Job` um die verbleibenden Ergebnisse zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="33ca1-122">If the results are not yet complete, you can run additional `Receive-Job` commands to get the remaining results.</span></span>
 
-<span data-ttu-id="e69aa-123">Standardmäßig werden die Auftragsergebnisse aus dem System gelöscht, nachdem Sie sie erhalten haben, Sie können jedoch den **Keep** -Parameter verwenden, um die Ergebnisse zu speichern, damit Sie sie erneut empfangen können.</span><span class="sxs-lookup"><span data-stu-id="e69aa-123">By default, job results are deleted from the system when you receive them, but you can use the **Keep** parameter to save the results so that you can receive them again.</span></span>
-<span data-ttu-id="e69aa-124">Um die Auftrags Ergebnisse zu löschen, führen Sie den `Receive-Job` Befehl ohne den **Keep** -Parameter erneut aus, schließen Sie die Sitzung, oder verwenden `Remove-Job` Sie das Cmdlet, um den Auftrag aus der Sitzung zu löschen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-124">To delete the job results, run the `Receive-Job` command again without the **Keep** parameter, close the session, or use the `Remove-Job` cmdlet to delete the job from the session.</span></span>
+<span data-ttu-id="33ca1-123">Standardmäßig werden die Auftragsergebnisse aus dem System gelöscht, nachdem Sie sie erhalten haben, Sie können jedoch den **Keep**-Parameter verwenden, um die Ergebnisse zu speichern, damit Sie sie erneut empfangen können.</span><span class="sxs-lookup"><span data-stu-id="33ca1-123">By default, job results are deleted from the system when you receive them, but you can use the **Keep** parameter to save the results so that you can receive them again.</span></span>
+<span data-ttu-id="33ca1-124">Um die Auftrags Ergebnisse zu löschen, führen Sie den `Receive-Job` Befehl ohne den **Keep** -Parameter erneut aus, schließen Sie die Sitzung, oder verwenden `Remove-Job` Sie das Cmdlet, um den Auftrag aus der Sitzung zu löschen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-124">To delete the job results, run the `Receive-Job` command again without the **Keep** parameter, close the session, or use the `Remove-Job` cmdlet to delete the job from the session.</span></span>
 
-<span data-ttu-id="e69aa-125">Ab Windows PowerShell 3,0 ruft `Receive-Job` auch die Ergebnisse von benutzerdefinierten Auftrags Typen ab, wie z. b. Workflow Aufträge und Instanzen geplanter Aufträge.</span><span class="sxs-lookup"><span data-stu-id="e69aa-125">Starting in Windows PowerShell 3.0, `Receive-Job` also gets the results of custom job types, such as workflow jobs and instances of scheduled jobs.</span></span>
-<span data-ttu-id="e69aa-126">Um `Receive-Job` die Ergebnisse eines benutzerdefinierten Auftrags Typs zu erhalten, importieren Sie das Modul, das den benutzerdefinierten Auftragstyp unterstützt, in die Sitzung, bevor ein `Receive-Job` Befehl ausgeführt wird, entweder mithilfe des- `Import-Module` Cmdlets oder mithilfe des-Cmdlets oder mithilfe eines Cmdlets im Modul.</span><span class="sxs-lookup"><span data-stu-id="e69aa-126">To enable `Receive-Job` to get the results a custom job type, import the module that supports the custom job type into the session before it runs a `Receive-Job` command, either by using the `Import-Module` cmdlet or by using or getting a cmdlet in the module.</span></span>
-<span data-ttu-id="e69aa-127">Informationen zu einem bestimmten benutzerdefinierten Auftragstyp finden Sie in der Dokumentation der Funktion „Benutzerdefinierte Auftragstypen“.</span><span class="sxs-lookup"><span data-stu-id="e69aa-127">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
+<span data-ttu-id="33ca1-125">Ab Windows PowerShell 3,0 ruft `Receive-Job` auch die Ergebnisse von benutzerdefinierten Auftrags Typen ab, wie z. b. Workflow Aufträge und Instanzen geplanter Aufträge.</span><span class="sxs-lookup"><span data-stu-id="33ca1-125">Starting in Windows PowerShell 3.0, `Receive-Job` also gets the results of custom job types, such as workflow jobs and instances of scheduled jobs.</span></span>
+<span data-ttu-id="33ca1-126">Um `Receive-Job` die Ergebnisse eines benutzerdefinierten Auftrags Typs zu erhalten, importieren Sie das Modul, das den benutzerdefinierten Auftragstyp unterstützt, in die Sitzung, bevor ein `Receive-Job` Befehl ausgeführt wird, entweder mithilfe des- `Import-Module` Cmdlets oder mithilfe des-Cmdlets oder mithilfe eines Cmdlets im Modul.</span><span class="sxs-lookup"><span data-stu-id="33ca1-126">To enable `Receive-Job` to get the results a custom job type, import the module that supports the custom job type into the session before it runs a `Receive-Job` command, either by using the `Import-Module` cmdlet or by using or getting a cmdlet in the module.</span></span>
+<span data-ttu-id="33ca1-127">Informationen zu einem bestimmten benutzerdefinierten Auftragstyp finden Sie in der Dokumentation der Funktion „Benutzerdefinierte Auftragstypen“.</span><span class="sxs-lookup"><span data-stu-id="33ca1-127">For information about a particular custom job type, see the documentation of the custom job type feature.</span></span>
 
-## <span data-ttu-id="e69aa-128">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="e69aa-128">EXAMPLES</span></span>
+## <span data-ttu-id="33ca1-128">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="33ca1-128">EXAMPLES</span></span>
 
-### <span data-ttu-id="e69aa-129">Beispiel 1: Ergebnisse für einen bestimmten Auftrag erhalten</span><span class="sxs-lookup"><span data-stu-id="e69aa-129">Example 1: Get results for a particular job</span></span>
+### <span data-ttu-id="33ca1-129">Beispiel 1: Ergebnisse für einen bestimmten Auftrag erhalten</span><span class="sxs-lookup"><span data-stu-id="33ca1-129">Example 1: Get results for a particular job</span></span>
 
 ```powershell
 $job = Start-Job -ScriptBlock {Get-Process}
 Receive-Job -Job $job
 ```
 
-<span data-ttu-id="e69aa-130">Diese Befehle verwenden den **Job** -Parameter von `Receive-Job` , um die Ergebnisse eines bestimmten Auftrags zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="e69aa-130">These commands use the **Job** parameter of `Receive-Job` to get the results of a particular job.</span></span>
+<span data-ttu-id="33ca1-130">Diese Befehle verwenden den **Job** -Parameter von `Receive-Job` , um die Ergebnisse eines bestimmten Auftrags zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="33ca1-130">These commands use the **Job** parameter of `Receive-Job` to get the results of a particular job.</span></span>
 
-<span data-ttu-id="e69aa-131">Der erste Befehl startet einen Auftrag mit `Start-Job` und speichert das Auftrags Objekt in der `$job` Variablen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-131">The first command starts a job with `Start-Job` and stores the job object in the `$job` variable.</span></span>
+<span data-ttu-id="33ca1-131">Der erste Befehl startet einen Auftrag mit `Start-Job` und speichert das Auftrags Objekt in der `$job` Variablen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-131">The first command starts a job with `Start-Job` and stores the job object in the `$job` variable.</span></span>
 
-<span data-ttu-id="e69aa-132">Der zweite Befehl verwendet das `Receive-Job` Cmdlet, um die Ergebnisse des Auftrags zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="e69aa-132">The second command uses the `Receive-Job` cmdlet to get the results of the job.</span></span>
-<span data-ttu-id="e69aa-133">Mit dem **Job** -Parameter wird der Auftrag angegeben.</span><span class="sxs-lookup"><span data-stu-id="e69aa-133">It uses the **Job** parameter to specify the job.</span></span>
+<span data-ttu-id="33ca1-132">Der zweite Befehl verwendet das `Receive-Job` Cmdlet, um die Ergebnisse des Auftrags zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="33ca1-132">The second command uses the `Receive-Job` cmdlet to get the results of the job.</span></span>
+<span data-ttu-id="33ca1-133">Mit dem **Job**-Parameter wird der Auftrag angegeben.</span><span class="sxs-lookup"><span data-stu-id="33ca1-133">It uses the **Job** parameter to specify the job.</span></span>
 
-### <span data-ttu-id="e69aa-134">Beispiel 2: Verwenden des Keep-Parameters</span><span class="sxs-lookup"><span data-stu-id="e69aa-134">Example 2: Use the Keep parameter</span></span>
+### <span data-ttu-id="33ca1-134">Beispiel 2: Verwenden des Keep-Parameters</span><span class="sxs-lookup"><span data-stu-id="33ca1-134">Example 2: Use the Keep parameter</span></span>
 
 ```powershell
 $job = Start-Job -ScriptBlock {Get-Service dhcp, fakeservice}
@@ -132,14 +132,14 @@ Status   Name               DisplayName
 Running  dhcp               DHCP Client
 ```
 
-<span data-ttu-id="e69aa-135">In diesem Beispiel wird ein Auftrag in der `$job` -Variable gespeichert, und der Auftrag wird an das `Receive-Job` Cmdlet weitergeleitet.</span><span class="sxs-lookup"><span data-stu-id="e69aa-135">This example stores a job in the `$job` variable, and pipes the job to the `Receive-Job` cmdlet.</span></span> <span data-ttu-id="e69aa-136">Der- `-Keep` Parameter wird auch verwendet, um zuzulassen, dass alle aggregierten Datenstrom Daten nach der ersten Ansicht erneut abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-136">The `-Keep` parameter is also used to allow all aggregated stream data to be retrieved again after first view.</span></span>
+<span data-ttu-id="33ca1-135">In diesem Beispiel wird ein Auftrag in der `$job` -Variable gespeichert, und der Auftrag wird an das `Receive-Job` Cmdlet weitergeleitet.</span><span class="sxs-lookup"><span data-stu-id="33ca1-135">This example stores a job in the `$job` variable, and pipes the job to the `Receive-Job` cmdlet.</span></span> <span data-ttu-id="33ca1-136">Der- `-Keep` Parameter wird auch verwendet, um zuzulassen, dass alle aggregierten Datenstrom Daten nach der ersten Ansicht erneut abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-136">The `-Keep` parameter is also used to allow all aggregated stream data to be retrieved again after first view.</span></span>
 
-### <span data-ttu-id="e69aa-137">Beispiel 3: Ergebnisse mehrerer Hintergrund Aufträge erhalten</span><span class="sxs-lookup"><span data-stu-id="e69aa-137">Example 3: Get results of several background jobs</span></span>
+### <span data-ttu-id="33ca1-137">Beispiel 3: Ergebnisse mehrerer Hintergrund Aufträge erhalten</span><span class="sxs-lookup"><span data-stu-id="33ca1-137">Example 3: Get results of several background jobs</span></span>
 
-<span data-ttu-id="e69aa-138">Wenn Sie den **AsJob** -Parameter von verwenden, `Invoke-Command` um einen Auftrag zu starten, wird das Auftrags Objekt auf dem lokalen Computer erstellt, auch wenn der Auftrag auf den Remote Computern ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-138">When you use the **AsJob** parameter of `Invoke-Command` to start a job, the job object is created on the local computer, even though the job runs on the remote computers.</span></span>
-<span data-ttu-id="e69aa-139">Folglich verwenden Sie lokale Befehle, um den Auftrag zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="e69aa-139">As a result, you use local commands to manage the job.</span></span>
+<span data-ttu-id="33ca1-138">Wenn Sie den **AsJob** -Parameter von verwenden, `Invoke-Command` um einen Auftrag zu starten, wird das Auftrags Objekt auf dem lokalen Computer erstellt, auch wenn der Auftrag auf den Remote Computern ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-138">When you use the **AsJob** parameter of `Invoke-Command` to start a job, the job object is created on the local computer, even though the job runs on the remote computers.</span></span>
+<span data-ttu-id="33ca1-139">Folglich verwenden Sie lokale Befehle, um den Auftrag zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="33ca1-139">As a result, you use local commands to manage the job.</span></span>
 
-<span data-ttu-id="e69aa-140">Wenn Sie **AsJob** verwenden, gibt PowerShell außerdem ein Auftrags Objekt zurück, das einen untergeordneten Auftrag für jeden gestarteten Auftrag enthält.</span><span class="sxs-lookup"><span data-stu-id="e69aa-140">Also, when you use **AsJob** , PowerShell returns one job object that contains a child job for each job that was started.</span></span> <span data-ttu-id="e69aa-141">In diesem Fall enthält das Auftragsobjekt drei untergeordnete Aufträge, einen für jeden Auftrag auf jedem Remotecomputer.</span><span class="sxs-lookup"><span data-stu-id="e69aa-141">In this case, the job object contains three child jobs, one for each job on each remote computer.</span></span>
+<span data-ttu-id="33ca1-140">Wenn Sie **AsJob** verwenden, gibt PowerShell außerdem ein Auftrags Objekt zurück, das einen untergeordneten Auftrag für jeden gestarteten Auftrag enthält.</span><span class="sxs-lookup"><span data-stu-id="33ca1-140">Also, when you use **AsJob**, PowerShell returns one job object that contains a child job for each job that was started.</span></span> <span data-ttu-id="33ca1-141">In diesem Fall enthält das Auftragsobjekt drei untergeordnete Aufträge, einen für jeden Auftrag auf jedem Remotecomputer.</span><span class="sxs-lookup"><span data-stu-id="33ca1-141">In this case, the job object contains three child jobs, one for each job on each remote computer.</span></span>
 
 ```powershell
 # Use the Invoke-Command cmdlet with the -AsJob parameter to start a background job that runs a Get-Service command on three remote computers.
@@ -174,15 +174,16 @@ Running Appinfo     Application Information            Server02
 Running AppMgmt     Application Management             Server02
 ```
 
-### <span data-ttu-id="e69aa-142">Beispiel 4: erhalten der Ergebnisse von Hintergrund Aufträgen auf mehreren Remote Computern</span><span class="sxs-lookup"><span data-stu-id="e69aa-142">Example 4: Get results of background jobs on multiple remote computers</span></span>
+### <span data-ttu-id="33ca1-142">Beispiel 4: erhalten der Ergebnisse von Hintergrund Aufträgen auf mehreren Remote Computern</span><span class="sxs-lookup"><span data-stu-id="33ca1-142">Example 4: Get results of background jobs on multiple remote computers</span></span>
 
 ```powershell
 # Use the New-PSSession cmdlet to create three user-managed PSSessions on three servers, and save the sessions in the $s variable.
 $s = New-PSSession -ComputerName Server01, Server02, Server03
 # Use Invoke-Command run a Start-Job command in each of the PSSessions in the $s variable.
-# The job outputs the ComputerName of each server.
+# The creates a new job with a custom name to each server
+# The job outputs the datetime from each server
 # Save the job objects in the $j variable.
-$j = Invoke-Command -Session $s -ScriptBlock {Start-Job -ScriptBlock {$env:COMPUTERNAME}}
+$j = Invoke-Command -Session $s -ScriptBlock {Start-Job -Name $('MyJob-' +$env:COMPUTERNAME) -ScriptBlock {(Get-Date).ToString()}}
 # To confirm that these job objects are from the remote machines, run Get-Job to show no local jobs running.
 Get-Job
 ```
@@ -198,37 +199,34 @@ $j
 ```
 
 ```Output
-Id   Name     State      HasMoreData   Location   Command
---   ----     -----      -----------   --------   -------
-1    Job1     Completed  True          Localhost  $env:COMPUTERNAME
-2    Job2     Completed  True          Localhost  $env:COMPUTERNAME
-3    Job3     Completed  True          Localhost  $env:COMPUTERNAME
+Id   Name               State      HasMoreData   Location   Command
+--   ----               -----      -----------   --------   -------
+1    MyJob-Server01     Completed  True          Localhost  (Get-Date).ToString()
+2    MyJob-Server02     Completed  True          Localhost  (Get-Date).ToString()
+3    MyJob-Server03     Completed  True          Localhost  (Get-Date).ToString()
 ```
 
 ```powershell
-# Use Invoke-Command to run a Receive-Job command in each of the sessions in the $s variable and save the results in the $Results variable.
+# Use Invoke-Command to run a Receive-Job command in each of the sessions in the $s variable and save the results in the $results variable.
 # The Receive-Job command must be run in each session because the jobs were run locally on each server.
-$results = Invoke-Command -Session $s -ScriptBlock {Receive-Job -Job $Using:j}
+$results = Invoke-Command -Session $s -ScriptBlock {Receive-Job -Name $('MyJob-' +$env:COMPUTERNAME)}
 ```
 
 ```Output
-Server01
-Server02
-Server03
+3/22/2021 7:41:47 PM
+3/22/2021 7:41:47 PM
+3/22/2021 9:41:47 PM
 ```
 
-<span data-ttu-id="e69aa-143">Dieses Beispiel zeigt, wie Sie die Ergebnisse der Hintergrundaufträge abrufen können, die auf drei Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-143">This example shows how to get the results of background jobs run on three remote computers.</span></span>
-<span data-ttu-id="e69aa-144">Im Gegensatz zum vorherigen Beispiel wurden `Invoke-Command` bei der Verwendung von zum Ausführen des `Start-Job` Befehls tatsächlich drei unabhängige Aufträge auf jedem der drei Computer gestartet.</span><span class="sxs-lookup"><span data-stu-id="e69aa-144">Unlike the previous example, using `Invoke-Command` to run the `Start-Job` command actually started three independent jobs on each of the three computers.</span></span> <span data-ttu-id="e69aa-145">Daher gibt der Befehl drei Auftragsobjekte zurück, die die drei Aufträge darstellen, die lokal auf drei verschiedenen Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-145">As a result, the command returned three job objects representing three jobs run locally on three different computers.</span></span>
+<span data-ttu-id="33ca1-143">Dieses Beispiel zeigt, wie Sie die Ergebnisse der Hintergrundaufträge abrufen können, die auf drei Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-143">This example shows how to get the results of background jobs run on three remote computers.</span></span>
+<span data-ttu-id="33ca1-144">Im Gegensatz zum vorherigen Beispiel wurden `Invoke-Command` bei der Verwendung von zum Ausführen des `Start-Job` Befehls tatsächlich drei unabhängige Aufträge auf jedem der drei Computer gestartet.</span><span class="sxs-lookup"><span data-stu-id="33ca1-144">Unlike the previous example, using `Invoke-Command` to run the `Start-Job` command actually started three independent jobs on each of the three computers.</span></span> <span data-ttu-id="33ca1-145">Daher gibt der Befehl drei Auftragsobjekte zurück, die die drei Aufträge darstellen, die lokal auf drei verschiedenen Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-145">As a result, the command returned three job objects representing three jobs run locally on three different computers.</span></span>
+
+### <span data-ttu-id="33ca1-146">Beispiel 5: Zugriff auf untergeordnete Aufträge</span><span class="sxs-lookup"><span data-stu-id="33ca1-146">Example 5: Access child jobs</span></span>
+
+<span data-ttu-id="33ca1-147">Der- `-Keep` Parameter behält den Zustand der aggregierten Streams eines Auftrags bei, sodass er wieder angezeigt werden kann.</span><span class="sxs-lookup"><span data-stu-id="33ca1-147">The `-Keep` parameter preserves the state of the aggregated streams of a job so that it can be viewed again.</span></span> <span data-ttu-id="33ca1-148">Ohne diesen Parameter werden alle aggregierten Datenstrom Daten gelöscht, wenn der Auftrag empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-148">Without this parameter all aggregated stream data is erased when the job is received.</span></span> <span data-ttu-id="33ca1-149">Weitere Informationen finden Sie unter [about_Job_Details](About/about_Job_Details.md#child-jobs)</span><span class="sxs-lookup"><span data-stu-id="33ca1-149">For more information, see [about_Job_Details](About/about_Job_Details.md#child-jobs)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e69aa-146">Im letzten Befehl, da `$j` eine lokale Variable ist, verwendet der Skriptblock den **using** -bereichsmodifizierer, um die Variable zu identifizieren `$j` .</span><span class="sxs-lookup"><span data-stu-id="e69aa-146">In the last command, because `$j` is a local variable, the script block uses the **Using** scope modifier to identify the `$j` variable.</span></span> <span data-ttu-id="e69aa-147">Weitere Informationen zum using-bereichsmodifizierer finden **Sie** unter [about_Remote_Variables](./About/about_Remote_Variables.md).</span><span class="sxs-lookup"><span data-stu-id="e69aa-147">For more information about the **Using** scope modifier, see [about_Remote_Variables](./About/about_Remote_Variables.md).</span></span>
-
-### <span data-ttu-id="e69aa-148">Beispiel 5: Zugriff auf untergeordnete Aufträge</span><span class="sxs-lookup"><span data-stu-id="e69aa-148">Example 5: Access child jobs</span></span>
-
-<span data-ttu-id="e69aa-149">Der- `-Keep` Parameter behält den Zustand der aggregierten Streams eines Auftrags bei, sodass er wieder angezeigt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e69aa-149">The `-Keep` parameter preserves the state of the aggregated streams of a job so that it can be viewed again.</span></span> <span data-ttu-id="e69aa-150">Ohne diesen Parameter werden alle aggregierten Datenstrom Daten gelöscht, wenn der Auftrag empfangen wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-150">Without this parameter all aggregated stream data is erased when the job is received.</span></span> <span data-ttu-id="e69aa-151">Weitere Informationen finden Sie unter [about_Job_Details](About/about_Job_Details.md#child-jobs)</span><span class="sxs-lookup"><span data-stu-id="e69aa-151">For more information, see [about_Job_Details](About/about_Job_Details.md#child-jobs)</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="e69aa-152">Die aggregierten Streams enthalten die Streams aller untergeordneten Aufträge.</span><span class="sxs-lookup"><span data-stu-id="e69aa-152">The aggregated streams include the streams of all child jobs.</span></span> <span data-ttu-id="e69aa-153">Die einzelnen Datenströme können weiterhin über das Auftrags Objekt und die untergeordneten Auftrags Objekte erreicht werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-153">You can still reach the individual streams of data through the job object and child job objects.</span></span>
+> <span data-ttu-id="33ca1-150">Die aggregierten Streams enthalten die Streams aller untergeordneten Aufträge.</span><span class="sxs-lookup"><span data-stu-id="33ca1-150">The aggregated streams include the streams of all child jobs.</span></span> <span data-ttu-id="33ca1-151">Die einzelnen Datenströme können weiterhin über das Auftrags Objekt und die untergeordneten Auftrags Objekte erreicht werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-151">You can still reach the individual streams of data through the job object and child job objects.</span></span>
 
 ```powershell
 Start-Job -Name TestJob -ScriptBlock {dir C:\, Z:\}
@@ -274,19 +272,19 @@ Cannot find drive. A drive with the name 'Z' does not exist.
     + PSComputerName        : localhost
 ```
 
-## <span data-ttu-id="e69aa-154">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="e69aa-154">PARAMETERS</span></span>
+## <span data-ttu-id="33ca1-152">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="33ca1-152">PARAMETERS</span></span>
 
-### <span data-ttu-id="e69aa-155">-Autoremovejob</span><span class="sxs-lookup"><span data-stu-id="e69aa-155">-AutoRemoveJob</span></span>
+### <span data-ttu-id="33ca1-153">-Autoremovejob</span><span class="sxs-lookup"><span data-stu-id="33ca1-153">-AutoRemoveJob</span></span>
 
-<span data-ttu-id="e69aa-156">Gibt an, dass dieses Cmdlet den Auftrag löscht, nachdem die Auftrags Ergebnisse zurückgegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-156">Indicates that this cmdlet deletes the job after it returns the job results.</span></span>
-<span data-ttu-id="e69aa-157">Wenn für den Auftrag weitere Ergebnisse ausgegeben werden, wird der Auftrag weiterhin gelöscht, aber `Receive-Job` eine Meldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-157">If the job has more results, the job is still deleted, but `Receive-Job` displays a message.</span></span>
+<span data-ttu-id="33ca1-154">Gibt an, dass dieses Cmdlet den Auftrag löscht, nachdem die Auftrags Ergebnisse zurückgegeben wurden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-154">Indicates that this cmdlet deletes the job after it returns the job results.</span></span>
+<span data-ttu-id="33ca1-155">Wenn für den Auftrag weitere Ergebnisse ausgegeben werden, wird der Auftrag weiterhin gelöscht, aber `Receive-Job` eine Meldung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-155">If the job has more results, the job is still deleted, but `Receive-Job` displays a message.</span></span>
 
-<span data-ttu-id="e69aa-158">Dieser Parameter kann nur für benutzerdefinierte Auftragstypen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-158">This parameter works only on custom job types.</span></span>
-<span data-ttu-id="e69aa-159">Er wurde für Instanzen von Auftragstypen entwickelt, die den Auftrag oder den Typ außerhalb der Sitzung speichern, z. B. Instanzen von geplanten Aufträgen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-159">It is designed for instances of job types that save the job or the type outside of the session, such as instances of scheduled jobs.</span></span>
+<span data-ttu-id="33ca1-156">Dieser Parameter kann nur für benutzerdefinierte Auftragstypen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-156">This parameter works only on custom job types.</span></span>
+<span data-ttu-id="33ca1-157">Er wurde für Instanzen von Auftragstypen entwickelt, die den Auftrag oder den Typ außerhalb der Sitzung speichern, z. B. Instanzen von geplanten Aufträgen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-157">It is designed for instances of job types that save the job or the type outside of the session, such as instances of scheduled jobs.</span></span>
 
-<span data-ttu-id="e69aa-160">Dieser Parameter kann nicht ohne den **Wait** -Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-160">This parameter cannot be used without the **Wait** parameter.</span></span>
+<span data-ttu-id="33ca1-158">Dieser Parameter kann nicht ohne den **Wait** -Parameter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-158">This parameter cannot be used without the **Wait** parameter.</span></span>
 
-<span data-ttu-id="e69aa-161">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-161">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="33ca1-159">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-159">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -300,13 +298,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-162">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="e69aa-162">-ComputerName</span></span>
+### <span data-ttu-id="33ca1-160">-ComputerName</span><span class="sxs-lookup"><span data-stu-id="33ca1-160">-ComputerName</span></span>
 
-<span data-ttu-id="e69aa-163">Gibt ein Array von Namen von Computern an.</span><span class="sxs-lookup"><span data-stu-id="e69aa-163">Specifies an array of names of computers.</span></span>
+<span data-ttu-id="33ca1-161">Gibt ein Array von Namen von Computern an.</span><span class="sxs-lookup"><span data-stu-id="33ca1-161">Specifies an array of names of computers.</span></span>
 
-<span data-ttu-id="e69aa-164">Mit diesem Parameter wird unter den Auftragsergebnissen ausgewählt, die auf dem lokalen Computer gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="e69aa-164">This parameter selects from among the job results that are stored on the local computer.</span></span>
-<span data-ttu-id="e69aa-165">Er ruft keine Daten für Aufträge ab, die auf Remote Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-165">It does not get data for jobs run on remote computers.</span></span>
-<span data-ttu-id="e69aa-166">Verwenden Sie zum Ausführen von Auftrags Ergebnissen, die auf Remote Computern gespeichert sind, das- `Invoke-Command` Cmdlet, um einen `Receive-Job` Befehl Remote auszuführen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-166">To get job results that are stored on remote computers, use the `Invoke-Command` cmdlet to run a `Receive-Job` command remotely.</span></span>
+<span data-ttu-id="33ca1-162">Mit diesem Parameter wird unter den Auftragsergebnissen ausgewählt, die auf dem lokalen Computer gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="33ca1-162">This parameter selects from among the job results that are stored on the local computer.</span></span>
+<span data-ttu-id="33ca1-163">Er ruft keine Daten für Aufträge ab, die auf Remote Computern ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-163">It does not get data for jobs run on remote computers.</span></span>
+<span data-ttu-id="33ca1-164">Verwenden Sie zum Ausführen von Auftrags Ergebnissen, die auf Remote Computern gespeichert sind, das- `Invoke-Command` Cmdlet, um einen `Receive-Job` Befehl Remote auszuführen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-164">To get job results that are stored on remote computers, use the `Invoke-Command` cmdlet to run a `Receive-Job` command remotely.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -320,19 +318,19 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="e69aa-167">-Force</span><span class="sxs-lookup"><span data-stu-id="e69aa-167">-Force</span></span>
+### <span data-ttu-id="33ca1-165">-Force</span><span class="sxs-lookup"><span data-stu-id="33ca1-165">-Force</span></span>
 
-<span data-ttu-id="e69aa-168">Gibt an, dass dieses Cmdlet weiterhin wartet, wenn sich **Aufträge im angehaltenen oder** **getrennten** Zustand befinden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-168">Indicates that this cmdlet continues waiting if jobs are in the **Suspended** or **Disconnected** state.</span></span> <span data-ttu-id="e69aa-169">Standardmäßig gibt der **Wait** -Parameter von `Receive-Job` zurück oder beendet den warte Vorgang, wenn Aufträge einen der folgenden Zustände aufweisen:</span><span class="sxs-lookup"><span data-stu-id="e69aa-169">By default, the **Wait** parameter of `Receive-Job` returns, or terminates the wait, when jobs are in one of the following states:</span></span>
+<span data-ttu-id="33ca1-166">Gibt an, dass dieses Cmdlet weiterhin wartet, wenn sich **Aufträge im angehaltenen oder** **getrennten** Zustand befinden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-166">Indicates that this cmdlet continues waiting if jobs are in the **Suspended** or **Disconnected** state.</span></span> <span data-ttu-id="33ca1-167">Standardmäßig gibt der **Wait** -Parameter von `Receive-Job` zurück oder beendet den warte Vorgang, wenn Aufträge einen der folgenden Zustände aufweisen:</span><span class="sxs-lookup"><span data-stu-id="33ca1-167">By default, the **Wait** parameter of `Receive-Job` returns, or terminates the wait, when jobs are in one of the following states:</span></span>
 
-- <span data-ttu-id="e69aa-170">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="e69aa-170">Completed</span></span>
-- <span data-ttu-id="e69aa-171">Fehler</span><span class="sxs-lookup"><span data-stu-id="e69aa-171">Failed</span></span>
-- <span data-ttu-id="e69aa-172">Beendet</span><span class="sxs-lookup"><span data-stu-id="e69aa-172">Stopped</span></span>
-- <span data-ttu-id="e69aa-173">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="e69aa-173">Suspended</span></span>
-- <span data-ttu-id="e69aa-174">Getrennt</span><span class="sxs-lookup"><span data-stu-id="e69aa-174">Disconnected.</span></span>
+- <span data-ttu-id="33ca1-168">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="33ca1-168">Completed</span></span>
+- <span data-ttu-id="33ca1-169">Fehler</span><span class="sxs-lookup"><span data-stu-id="33ca1-169">Failed</span></span>
+- <span data-ttu-id="33ca1-170">Beendet</span><span class="sxs-lookup"><span data-stu-id="33ca1-170">Stopped</span></span>
+- <span data-ttu-id="33ca1-171">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="33ca1-171">Suspended</span></span>
+- <span data-ttu-id="33ca1-172">Getrennt</span><span class="sxs-lookup"><span data-stu-id="33ca1-172">Disconnected.</span></span>
 
-<span data-ttu-id="e69aa-175">Der **Force** -Parameter ist nur gültig, wenn der **Wait** -Parameter ebenfalls im Befehl verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-175">The **Force** parameter is valid only when the **Wait** parameter is also used in the command.</span></span>
+<span data-ttu-id="33ca1-173">Der **Force**-Parameter ist nur gültig, wenn der **Wait**-Parameter ebenfalls im Befehl verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-173">The **Force** parameter is valid only when the **Wait** parameter is also used in the command.</span></span>
 
-<span data-ttu-id="e69aa-176">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-176">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="33ca1-174">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-174">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -346,14 +344,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-177">-Id</span><span class="sxs-lookup"><span data-stu-id="e69aa-177">-Id</span></span>
+### <span data-ttu-id="33ca1-175">-Id</span><span class="sxs-lookup"><span data-stu-id="33ca1-175">-Id</span></span>
 
-<span data-ttu-id="e69aa-178">Gibt ein Array von IDs an.</span><span class="sxs-lookup"><span data-stu-id="e69aa-178">Specifies an array of IDs.</span></span>
-<span data-ttu-id="e69aa-179">Dieses Cmdlet ruft die Ergebnisse von Aufträgen mit den angegebenen IDs ab.</span><span class="sxs-lookup"><span data-stu-id="e69aa-179">This cmdlet gets the results of jobs with the specified IDs.</span></span>
+<span data-ttu-id="33ca1-176">Gibt ein Array von IDs an.</span><span class="sxs-lookup"><span data-stu-id="33ca1-176">Specifies an array of IDs.</span></span>
+<span data-ttu-id="33ca1-177">Dieses Cmdlet ruft die Ergebnisse von Aufträgen mit den angegebenen IDs ab.</span><span class="sxs-lookup"><span data-stu-id="33ca1-177">This cmdlet gets the results of jobs with the specified IDs.</span></span>
 
-<span data-ttu-id="e69aa-180">Die ID ist eine Ganzzahl, die den Auftrag in der aktuellen Sitzung eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="e69aa-180">The ID is an integer that uniquely identifies the job in the current session.</span></span>
-<span data-ttu-id="e69aa-181">Es ist leichter zu merken und einzugeben als die Instanz-ID, Sie ist jedoch nur in der aktuellen Sitzung eindeutig.</span><span class="sxs-lookup"><span data-stu-id="e69aa-181">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span> <span data-ttu-id="e69aa-182">Sie können eine oder mehrere durch Kommas getrennte IDs eingeben.</span><span class="sxs-lookup"><span data-stu-id="e69aa-182">You can type one or more IDs separated by commas.</span></span>
-<span data-ttu-id="e69aa-183">Um die ID eines Auftrags zu ermitteln, verwenden Sie `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="e69aa-183">To find the ID of a job, use `Get-Job`.</span></span>
+<span data-ttu-id="33ca1-178">Die ID ist eine Ganzzahl, die den Auftrag in der aktuellen Sitzung eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="33ca1-178">The ID is an integer that uniquely identifies the job in the current session.</span></span>
+<span data-ttu-id="33ca1-179">Es ist leichter zu merken und einzugeben als die Instanz-ID, Sie ist jedoch nur in der aktuellen Sitzung eindeutig.</span><span class="sxs-lookup"><span data-stu-id="33ca1-179">It is easier to remember and type than the instance ID, but it is unique only in the current session.</span></span> <span data-ttu-id="33ca1-180">Sie können eine oder mehrere durch Kommas getrennte IDs eingeben.</span><span class="sxs-lookup"><span data-stu-id="33ca1-180">You can type one or more IDs separated by commas.</span></span>
+<span data-ttu-id="33ca1-181">Um die ID eines Auftrags zu ermitteln, verwenden Sie `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="33ca1-181">To find the ID of a job, use `Get-Job`.</span></span>
 
 ```yaml
 Type: System.Int32[]
@@ -367,13 +365,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-184">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="e69aa-184">-InstanceId</span></span>
+### <span data-ttu-id="33ca1-182">-InstanceId</span><span class="sxs-lookup"><span data-stu-id="33ca1-182">-InstanceId</span></span>
 
-<span data-ttu-id="e69aa-185">Gibt ein Array von Instanz-IDs an.</span><span class="sxs-lookup"><span data-stu-id="e69aa-185">Specifies an array of instance IDs.</span></span>
-<span data-ttu-id="e69aa-186">Dieses Cmdlet ruft die Ergebnisse von Aufträgen mit den angegebenen Instanz-IDs ab.</span><span class="sxs-lookup"><span data-stu-id="e69aa-186">This cmdlet gets the results of jobs with the specified instance IDs.</span></span>
+<span data-ttu-id="33ca1-183">Gibt ein Array von Instanz-IDs an.</span><span class="sxs-lookup"><span data-stu-id="33ca1-183">Specifies an array of instance IDs.</span></span>
+<span data-ttu-id="33ca1-184">Dieses Cmdlet ruft die Ergebnisse von Aufträgen mit den angegebenen Instanz-IDs ab.</span><span class="sxs-lookup"><span data-stu-id="33ca1-184">This cmdlet gets the results of jobs with the specified instance IDs.</span></span>
 
-<span data-ttu-id="e69aa-187">Eine Instanz-ID ist eine GUID, die den Auftrag auf dem Computer eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="e69aa-187">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span>
-<span data-ttu-id="e69aa-188">Verwenden Sie das-Cmdlet, um die Instanz-ID eines Auftrags zu ermitteln `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="e69aa-188">To find the instance ID of a job, use the `Get-Job` cmdlet.</span></span>
+<span data-ttu-id="33ca1-185">Eine Instanz-ID ist eine GUID, die den Auftrag auf dem Computer eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="33ca1-185">An instance ID is a GUID that uniquely identifies the job on the computer.</span></span>
+<span data-ttu-id="33ca1-186">Verwenden Sie das-Cmdlet, um die Instanz-ID eines Auftrags zu ermitteln `Get-Job` .</span><span class="sxs-lookup"><span data-stu-id="33ca1-186">To find the instance ID of a job, use the `Get-Job` cmdlet.</span></span>
 
 ```yaml
 Type: System.Guid[]
@@ -387,12 +385,12 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-189">-Auftrag</span><span class="sxs-lookup"><span data-stu-id="e69aa-189">-Job</span></span>
+### <span data-ttu-id="33ca1-187">-Auftrag</span><span class="sxs-lookup"><span data-stu-id="33ca1-187">-Job</span></span>
 
-<span data-ttu-id="e69aa-190">Gibt den Auftrag an, für den Ergebnisse abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-190">Specifies the job for which results are being retrieved.</span></span>
+<span data-ttu-id="33ca1-188">Gibt den Auftrag an, für den Ergebnisse abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-188">Specifies the job for which results are being retrieved.</span></span>
 
-<span data-ttu-id="e69aa-191">Geben Sie eine Variable ein, die den Auftrag enthält, oder geben Sie einen Befehl ein, mit dem das Objekt abgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-191">Enter a variable that contains the job or a command that gets the job.</span></span>
-<span data-ttu-id="e69aa-192">Sie können ein Auftrags Objekt auch an die Pipeline übergeben `Receive-Job` .</span><span class="sxs-lookup"><span data-stu-id="e69aa-192">You can also pipe a job object to `Receive-Job`.</span></span>
+<span data-ttu-id="33ca1-189">Geben Sie eine Variable ein, die den Auftrag enthält, oder geben Sie einen Befehl ein, mit dem das Objekt abgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-189">Enter a variable that contains the job or a command that gets the job.</span></span>
+<span data-ttu-id="33ca1-190">Sie können ein Auftrags Objekt auch an die Pipeline übergeben `Receive-Job` .</span><span class="sxs-lookup"><span data-stu-id="33ca1-190">You can also pipe a job object to `Receive-Job`.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Job[]
@@ -406,11 +404,11 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-193">-Keep</span><span class="sxs-lookup"><span data-stu-id="e69aa-193">-Keep</span></span>
+### <span data-ttu-id="33ca1-191">-Keep</span><span class="sxs-lookup"><span data-stu-id="33ca1-191">-Keep</span></span>
 
-<span data-ttu-id="e69aa-194">Gibt an, dass dieses Cmdlet die aggregierten Datenstrom Daten im System speichert, auch nachdem Sie Sie empfangen haben.</span><span class="sxs-lookup"><span data-stu-id="e69aa-194">Indicates that this cmdlet saves the aggregated stream data in the system, even after you have received them.</span></span> <span data-ttu-id="e69aa-195">Standardmäßig werden aggregierte Datenstrom Daten gelöscht, nachdem Sie mit angezeigt wurden `Receive-Job` .</span><span class="sxs-lookup"><span data-stu-id="e69aa-195">By default, aggregated stream data is erased after viewed with `Receive-Job`.</span></span>
+<span data-ttu-id="33ca1-192">Gibt an, dass dieses Cmdlet die aggregierten Datenstrom Daten im System speichert, auch nachdem Sie Sie empfangen haben.</span><span class="sxs-lookup"><span data-stu-id="33ca1-192">Indicates that this cmdlet saves the aggregated stream data in the system, even after you have received them.</span></span> <span data-ttu-id="33ca1-193">Standardmäßig werden aggregierte Datenstrom Daten gelöscht, nachdem Sie mit angezeigt wurden `Receive-Job` .</span><span class="sxs-lookup"><span data-stu-id="33ca1-193">By default, aggregated stream data is erased after viewed with `Receive-Job`.</span></span>
 
-<span data-ttu-id="e69aa-196">Wenn Sie die Sitzung schließen oder den Auftrag mit dem `Remove-Job` Cmdlet entfernen, werden auch aggregierte Datenstrom Daten gelöscht.</span><span class="sxs-lookup"><span data-stu-id="e69aa-196">Closing the session, or removing the job with the `Remove-Job` cmdlet also deletes aggregated stream data.</span></span>
+<span data-ttu-id="33ca1-194">Wenn Sie die Sitzung schließen oder den Auftrag mit dem `Remove-Job` Cmdlet entfernen, werden auch aggregierte Datenstrom Daten gelöscht.</span><span class="sxs-lookup"><span data-stu-id="33ca1-194">Closing the session, or removing the job with the `Remove-Job` cmdlet also deletes aggregated stream data.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -424,10 +422,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-197">-Location</span><span class="sxs-lookup"><span data-stu-id="e69aa-197">-Location</span></span>
+### <span data-ttu-id="33ca1-195">-Location</span><span class="sxs-lookup"><span data-stu-id="33ca1-195">-Location</span></span>
 
-<span data-ttu-id="e69aa-198">Gibt ein Array von Speicherorten an.</span><span class="sxs-lookup"><span data-stu-id="e69aa-198">Specifies an array of locations.</span></span>
-<span data-ttu-id="e69aa-199">Mit diesem Cmdlet werden nur die Ergebnisse der Aufträge an den angegebenen Speicherorten abgerufen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-199">This cmdlet gets only the results of jobs in the specified locations.</span></span>
+<span data-ttu-id="33ca1-196">Gibt ein Array von Speicherorten an.</span><span class="sxs-lookup"><span data-stu-id="33ca1-196">Specifies an array of locations.</span></span>
+<span data-ttu-id="33ca1-197">Mit diesem Cmdlet werden nur die Ergebnisse der Aufträge an den angegebenen Speicherorten abgerufen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-197">This cmdlet gets only the results of jobs in the specified locations.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -441,11 +439,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-200">-Name</span><span class="sxs-lookup"><span data-stu-id="e69aa-200">-Name</span></span>
+### <span data-ttu-id="33ca1-198">-Name</span><span class="sxs-lookup"><span data-stu-id="33ca1-198">-Name</span></span>
 
-<span data-ttu-id="e69aa-201">Gibt ein Array von Anzeigenamen an.</span><span class="sxs-lookup"><span data-stu-id="e69aa-201">Specifies an array of friendly names.</span></span>
-<span data-ttu-id="e69aa-202">Dieses Cmdlet ruft die Ergebnisse der Aufträge ab, die über die angegebenen Namen verfügen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-202">This cmdlet gets the results of jobs that have the specified names.</span></span>
-<span data-ttu-id="e69aa-203">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-203">Wildcard characters are supported.</span></span>
+<span data-ttu-id="33ca1-199">Gibt ein Array von Anzeigenamen an.</span><span class="sxs-lookup"><span data-stu-id="33ca1-199">Specifies an array of friendly names.</span></span>
+<span data-ttu-id="33ca1-200">Dieses Cmdlet ruft die Ergebnisse der Aufträge ab, die über die angegebenen Namen verfügen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-200">This cmdlet gets the results of jobs that have the specified names.</span></span>
+<span data-ttu-id="33ca1-201">Platzhalterzeichen werden unterstützt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-201">Wildcard characters are supported.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -459,10 +457,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="e69aa-204">-Norecurse</span><span class="sxs-lookup"><span data-stu-id="e69aa-204">-NoRecurse</span></span>
+### <span data-ttu-id="33ca1-202">-Norecurse</span><span class="sxs-lookup"><span data-stu-id="33ca1-202">-NoRecurse</span></span>
 
-<span data-ttu-id="e69aa-205">Gibt an, dass dieses Cmdlet Ergebnisse nur aus dem angegebenen Auftrag abruft.</span><span class="sxs-lookup"><span data-stu-id="e69aa-205">Indicates that this cmdlet gets results only from the specified job.</span></span>
-<span data-ttu-id="e69aa-206">In der Standardeinstellung werden von `Receive-Job` auch die Ergebnisse aller untergeordneten Aufträge des angegebenen Auftrags abgerufen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-206">By default, `Receive-Job` also gets the results of all child jobs of the specified job.</span></span>
+<span data-ttu-id="33ca1-203">Gibt an, dass dieses Cmdlet Ergebnisse nur aus dem angegebenen Auftrag abruft.</span><span class="sxs-lookup"><span data-stu-id="33ca1-203">Indicates that this cmdlet gets results only from the specified job.</span></span>
+<span data-ttu-id="33ca1-204">In der Standardeinstellung werden von `Receive-Job` auch die Ergebnisse aller untergeordneten Aufträge des angegebenen Auftrags abgerufen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-204">By default, `Receive-Job` also gets the results of all child jobs of the specified job.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -476,11 +474,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-207">-Sitzung</span><span class="sxs-lookup"><span data-stu-id="e69aa-207">-Session</span></span>
+### <span data-ttu-id="33ca1-205">-Sitzung</span><span class="sxs-lookup"><span data-stu-id="33ca1-205">-Session</span></span>
 
-<span data-ttu-id="e69aa-208">Gibt ein Array von Sitzungen an.</span><span class="sxs-lookup"><span data-stu-id="e69aa-208">Specifies an array of sessions.</span></span>
-<span data-ttu-id="e69aa-209">Dieses Cmdlet ruft die Ergebnisse der Aufträge ab, die in der angegebenen PowerShell-Sitzung ( **PSSession** ) ausgeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-209">This cmdlet gets the results of jobs that were run in the specified PowerShell session ( **PSSession** ).</span></span>
-<span data-ttu-id="e69aa-210">Geben Sie eine Variable ein, die die **PSSession** oder einen Befehl enthält, mit dem die **PSSession** abgerufen wird, z. b. einen- `Get-PSSession` Befehl.</span><span class="sxs-lookup"><span data-stu-id="e69aa-210">Enter a variable that contains the **PSSession** or a command that gets the **PSSession** , such as a `Get-PSSession` command.</span></span>
+<span data-ttu-id="33ca1-206">Gibt ein Array von Sitzungen an.</span><span class="sxs-lookup"><span data-stu-id="33ca1-206">Specifies an array of sessions.</span></span>
+<span data-ttu-id="33ca1-207">Dieses Cmdlet ruft die Ergebnisse der Aufträge ab, die in der angegebenen PowerShell-Sitzung (**PSSession**) ausgeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-207">This cmdlet gets the results of jobs that were run in the specified PowerShell session (**PSSession**).</span></span>
+<span data-ttu-id="33ca1-208">Geben Sie eine Variable ein, die die **PSSession** oder einen Befehl enthält, mit dem die **PSSession** abgerufen wird, z. b. einen- `Get-PSSession` Befehl.</span><span class="sxs-lookup"><span data-stu-id="33ca1-208">Enter a variable that contains the **PSSession** or a command that gets the **PSSession**, such as a `Get-PSSession` command.</span></span>
 
 ```yaml
 Type: System.Management.Automation.Runspaces.PSSession[]
@@ -494,22 +492,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-211">-Wait</span><span class="sxs-lookup"><span data-stu-id="e69aa-211">-Wait</span></span>
+### <span data-ttu-id="33ca1-209">-Wait</span><span class="sxs-lookup"><span data-stu-id="33ca1-209">-Wait</span></span>
 
-<span data-ttu-id="e69aa-212">Gibt an, dass dieses Cmdlet die Eingabeaufforderung unterdrückt, bis alle Auftrags Ergebnisse empfangen wurden.</span><span class="sxs-lookup"><span data-stu-id="e69aa-212">Indicates that this cmdlet suppresses the command prompt until all job results are received.</span></span>
-<span data-ttu-id="e69aa-213">Standardmäßig werden `Receive-Job` die verfügbaren Ergebnisse sofort zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="e69aa-213">By default, `Receive-Job` immediately returns the available results.</span></span>
+<span data-ttu-id="33ca1-210">Gibt an, dass dieses Cmdlet die Eingabeaufforderung unterdrückt, bis alle Auftrags Ergebnisse empfangen wurden.</span><span class="sxs-lookup"><span data-stu-id="33ca1-210">Indicates that this cmdlet suppresses the command prompt until all job results are received.</span></span>
+<span data-ttu-id="33ca1-211">Standardmäßig werden `Receive-Job` die verfügbaren Ergebnisse sofort zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="33ca1-211">By default, `Receive-Job` immediately returns the available results.</span></span>
 
-<span data-ttu-id="e69aa-214">Standardmäßig wartet der **Wait** -Parameter, bis der Auftrag sich in einem der folgenden Zustände befindet:</span><span class="sxs-lookup"><span data-stu-id="e69aa-214">By default, the **Wait** parameter waits until the job is in one of the following states:</span></span>
+<span data-ttu-id="33ca1-212">Standardmäßig wartet der **Wait**-Parameter, bis der Auftrag sich in einem der folgenden Zustände befindet:</span><span class="sxs-lookup"><span data-stu-id="33ca1-212">By default, the **Wait** parameter waits until the job is in one of the following states:</span></span>
 
-- <span data-ttu-id="e69aa-215">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="e69aa-215">Completed</span></span>
-- <span data-ttu-id="e69aa-216">Fehler</span><span class="sxs-lookup"><span data-stu-id="e69aa-216">Failed</span></span>
-- <span data-ttu-id="e69aa-217">Beendet</span><span class="sxs-lookup"><span data-stu-id="e69aa-217">Stopped</span></span>
-- <span data-ttu-id="e69aa-218">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="e69aa-218">Suspended</span></span>
-- <span data-ttu-id="e69aa-219">Getrennt</span><span class="sxs-lookup"><span data-stu-id="e69aa-219">Disconnected.</span></span>
+- <span data-ttu-id="33ca1-213">Abgeschlossen</span><span class="sxs-lookup"><span data-stu-id="33ca1-213">Completed</span></span>
+- <span data-ttu-id="33ca1-214">Fehler</span><span class="sxs-lookup"><span data-stu-id="33ca1-214">Failed</span></span>
+- <span data-ttu-id="33ca1-215">Beendet</span><span class="sxs-lookup"><span data-stu-id="33ca1-215">Stopped</span></span>
+- <span data-ttu-id="33ca1-216">Ausgesetzt</span><span class="sxs-lookup"><span data-stu-id="33ca1-216">Suspended</span></span>
+- <span data-ttu-id="33ca1-217">Getrennt</span><span class="sxs-lookup"><span data-stu-id="33ca1-217">Disconnected.</span></span>
 
-<span data-ttu-id="e69aa-220">Verwenden Sie den **Force** -Parameter und den **Wait** -Parameter, um den **Wait** -Parameter so zu leiten, dass er weiterhin wartet, wenn der Auftrags Zustand angehalten oder getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-220">To direct the **Wait** parameter to continue waiting if the job state is Suspended or Disconnected, use the **Force** parameter together with the **Wait** parameter.</span></span>
+<span data-ttu-id="33ca1-218">Verwenden Sie den **Force** -Parameter und den **Wait** -Parameter, um den **Wait** -Parameter so zu leiten, dass er weiterhin wartet, wenn der Auftrags Zustand angehalten oder getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-218">To direct the **Wait** parameter to continue waiting if the job state is Suspended or Disconnected, use the **Force** parameter together with the **Wait** parameter.</span></span>
 
-<span data-ttu-id="e69aa-221">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-221">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="33ca1-219">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-219">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -523,33 +521,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-222">-Write Events</span><span class="sxs-lookup"><span data-stu-id="e69aa-222">-WriteEvents</span></span>
+### <span data-ttu-id="33ca1-220">-Write Events</span><span class="sxs-lookup"><span data-stu-id="33ca1-220">-WriteEvents</span></span>
 
-<span data-ttu-id="e69aa-223">Gibt an, dass dieses Cmdlet Änderungen im Auftrags Zustand meldet, während es darauf wartet, dass der Auftrag beendet wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-223">Indicates that this cmdlet reports changes in the job state while it waits for the job to finish.</span></span>
+<span data-ttu-id="33ca1-221">Gibt an, dass dieses Cmdlet Änderungen im Auftrags Zustand meldet, während es darauf wartet, dass der Auftrag beendet wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-221">Indicates that this cmdlet reports changes in the job state while it waits for the job to finish.</span></span>
 
-<span data-ttu-id="e69aa-224">Dieser Parameter ist nur gültig, wenn der **Wait** -Parameter im Befehl verwendet wird und der **Keep** -Parameter weggelassen wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-224">This parameter is valid only when the **Wait** parameter is used in the command and the **Keep** parameter is omitted.</span></span>
+<span data-ttu-id="33ca1-222">Dieser Parameter ist nur gültig, wenn der **Wait**-Parameter im Befehl verwendet wird und der **Keep**-Parameter weggelassen wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-222">This parameter is valid only when the **Wait** parameter is used in the command and the **Keep** parameter is omitted.</span></span>
 
-<span data-ttu-id="e69aa-225">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-225">This parameter was introduced in Windows PowerShell 3.0.</span></span>
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### <span data-ttu-id="e69aa-226">-Beschreib Items @ binresults</span><span class="sxs-lookup"><span data-stu-id="e69aa-226">-WriteJobInResults</span></span>
-
-<span data-ttu-id="e69aa-227">Gibt an, dass dieses Cmdlet das Auftrags Objekt zurückgibt, gefolgt von den Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="e69aa-227">Indicates that this cmdlet returns the job object followed by the results.</span></span>
-
-<span data-ttu-id="e69aa-228">Dieser Parameter ist nur gültig, wenn der **Wait** -Parameter im Befehl verwendet wird und der **Keep** -Parameter weggelassen wird.</span><span class="sxs-lookup"><span data-stu-id="e69aa-228">This parameter is valid only when the **Wait** parameter is used in the command and the **Keep** parameter is omitted.</span></span>
-
-<span data-ttu-id="e69aa-229">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="e69aa-229">This parameter was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="33ca1-223">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-223">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -563,35 +541,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="e69aa-230">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="e69aa-230">CommonParameters</span></span>
+### <span data-ttu-id="33ca1-224">-Beschreib Items @ binresults</span><span class="sxs-lookup"><span data-stu-id="33ca1-224">-WriteJobInResults</span></span>
 
-<span data-ttu-id="e69aa-231">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="e69aa-231">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="e69aa-232">Weitere Informationen findest du unter [about_CommonParameters](./About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="e69aa-232">For more information, see [about_CommonParameters](./About/about_CommonParameters.md).</span></span>
+<span data-ttu-id="33ca1-225">Gibt an, dass dieses Cmdlet das Auftrags Objekt zurückgibt, gefolgt von den Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="33ca1-225">Indicates that this cmdlet returns the job object followed by the results.</span></span>
 
-## <span data-ttu-id="e69aa-233">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="e69aa-233">INPUTS</span></span>
+<span data-ttu-id="33ca1-226">Dieser Parameter ist nur gültig, wenn der **Wait**-Parameter im Befehl verwendet wird und der **Keep**-Parameter weggelassen wird.</span><span class="sxs-lookup"><span data-stu-id="33ca1-226">This parameter is valid only when the **Wait** parameter is used in the command and the **Keep** parameter is omitted.</span></span>
 
-### <span data-ttu-id="e69aa-234">System. Management. Automation. Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-234">System.Management.Automation.Job</span></span>
+<span data-ttu-id="33ca1-227">Dieser Parameter wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="33ca1-227">This parameter was introduced in Windows PowerShell 3.0.</span></span>
 
-<span data-ttu-id="e69aa-235">Sie können Auftrags Objekte über die Pipeline an dieses Cmdlet übergeben.</span><span class="sxs-lookup"><span data-stu-id="e69aa-235">You can pipe job objects to this cmdlet.</span></span>
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-## <span data-ttu-id="e69aa-236">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="e69aa-236">OUTPUTS</span></span>
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-### <span data-ttu-id="e69aa-237">PSObject</span><span class="sxs-lookup"><span data-stu-id="e69aa-237">PSObject</span></span>
+### <span data-ttu-id="33ca1-228">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="33ca1-228">CommonParameters</span></span>
 
-<span data-ttu-id="e69aa-238">Mit diesem Cmdlet werden die Ergebnisse der Befehle im Auftrag zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="e69aa-238">This cmdlet returns the results of the commands in the job.</span></span>
+<span data-ttu-id="33ca1-229">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="33ca1-229">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="33ca1-230">Weitere Informationen findest du unter [about_CommonParameters](./About/about_CommonParameters.md).</span><span class="sxs-lookup"><span data-stu-id="33ca1-230">For more information, see [about_CommonParameters](./About/about_CommonParameters.md).</span></span>
 
-## <span data-ttu-id="e69aa-239">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="e69aa-239">NOTES</span></span>
+## <span data-ttu-id="33ca1-231">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="33ca1-231">INPUTS</span></span>
 
-## <span data-ttu-id="e69aa-240">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="e69aa-240">RELATED LINKS</span></span>
+### <span data-ttu-id="33ca1-232">System. Management. Automation. Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-232">System.Management.Automation.Job</span></span>
 
-[<span data-ttu-id="e69aa-241">Get-Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-241">Get-Job</span></span>](Get-Job.md)
+<span data-ttu-id="33ca1-233">Sie können Auftrags Objekte über die Pipeline an dieses Cmdlet übergeben.</span><span class="sxs-lookup"><span data-stu-id="33ca1-233">You can pipe job objects to this cmdlet.</span></span>
 
-[<span data-ttu-id="e69aa-242">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="e69aa-242">Invoke-Command</span></span>](Invoke-Command.md)
+## <span data-ttu-id="33ca1-234">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="33ca1-234">OUTPUTS</span></span>
 
-[<span data-ttu-id="e69aa-243">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-243">Remove-Job</span></span>](Remove-Job.md)
+### <span data-ttu-id="33ca1-235">PSObject</span><span class="sxs-lookup"><span data-stu-id="33ca1-235">PSObject</span></span>
 
-[<span data-ttu-id="e69aa-244">Start-Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-244">Start-Job</span></span>](Start-Job.md)
+<span data-ttu-id="33ca1-236">Mit diesem Cmdlet werden die Ergebnisse der Befehle im Auftrag zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="33ca1-236">This cmdlet returns the results of the commands in the job.</span></span>
 
-[<span data-ttu-id="e69aa-245">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-245">Stop-Job</span></span>](Stop-Job.md)
+## <span data-ttu-id="33ca1-237">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="33ca1-237">NOTES</span></span>
 
-[<span data-ttu-id="e69aa-246">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="e69aa-246">Wait-Job</span></span>](Wait-Job.md)
+## <span data-ttu-id="33ca1-238">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="33ca1-238">RELATED LINKS</span></span>
+
+[<span data-ttu-id="33ca1-239">Get-Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-239">Get-Job</span></span>](Get-Job.md)
+
+[<span data-ttu-id="33ca1-240">Invoke-Command</span><span class="sxs-lookup"><span data-stu-id="33ca1-240">Invoke-Command</span></span>](Invoke-Command.md)
+
+[<span data-ttu-id="33ca1-241">Remove-Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-241">Remove-Job</span></span>](Remove-Job.md)
+
+[<span data-ttu-id="33ca1-242">Start-Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-242">Start-Job</span></span>](Start-Job.md)
+
+[<span data-ttu-id="33ca1-243">Stop-Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-243">Stop-Job</span></span>](Stop-Job.md)
+
+[<span data-ttu-id="33ca1-244">Wait-Job</span><span class="sxs-lookup"><span data-stu-id="33ca1-244">Wait-Job</span></span>](Wait-Job.md)
 
