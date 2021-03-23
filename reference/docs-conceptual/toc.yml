@@ -51,6 +51,12 @@
           href: learn/ps101/10-script-modules.md
         - name: "Anhang\_A: Hilfesyntax"
           href: learn/ps101/appendix-a.md
+    - name: Tutorials
+      items:
+        - name: Einführung
+          href: learn/tutorials/00-introduction.md
+        - name: PowerShell entdecken
+          href: learn/tutorials/01-discover-powershell.md
     - name: Ausführliche Betrachtungen
       items:
         - name: Übersicht
