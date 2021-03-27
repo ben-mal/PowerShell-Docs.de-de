@@ -3,16 +3,16 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 02/18/2021
+ms.date: 03/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: ForEach-Object
-ms.openlocfilehash: c8b674a895bb323b734f018e5e8654cfec4d0045
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 7da05aed73fdb52132404bc08f0fd39fafbfc4ca
+ms.sourcegitcommit: ca5a89977913bad9efec6bcc23a792d113ec0396
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685577"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105631050"
 ---
 # ForEach-Object
 
@@ -687,7 +687,7 @@ Sie können jedes beliebige Objekt über die Pipeline an dieses Cmdlet übergebe
 
 Dieses Cmdlet gibt Objekte zurück, die von der Eingabe bestimmt werden.
 
-## Notizen
+## Hinweise
 
 - Das- `ForEach-Object` Cmdlet funktioniert ähnlich wie die **foreach** -Anweisung, mit dem Unterschied, dass Sie Eingaben nicht an eine **foreach** -Anweisung übergeben können. Weitere Informationen zur **foreach** -Anweisung finden Sie unter [about_Foreach](./About/about_Foreach.md).
 
@@ -699,6 +699,8 @@ Dieses Cmdlet gibt Objekte zurück, die von der Eingabe bestimmt werden.
   - Skripts, die Zeit für das warten auf Ergebnisse oder Datei Vorgänge aufwenden
 
   Die Verwendung des **parallel** -Parameters kann bewirken, dass Skripts wesentlich langsamer ausgeführt werden. Insbesondere, wenn die parallelen Skripts trivial sind. Experimentieren Sie mit **parallel** , um herauszufinden, wo es nützlich sein kann.
+
+- [Pipelinevariable](About/about_CommonParameters.md) allgemeine Parameter Variablen werden  in `Foreach-Object -Parallel` Szenarios auch mit dem- `$using:` Schlüsselwort nicht unterstützt.
 
   > [!IMPORTANT]
   > Der `ForEach-Object -Parallel` Parametersatz führt Skriptblöcke parallel in separaten Prozessthreads aus. Das- `$using:` Schlüsselwort ermöglicht das Übergeben von Variablen verweisen vom Cmdlet-Aufruf Thread an jeden Skriptblock Thread, der ausgeführt wird. Da die Skriptblöcke in verschiedenen Threads ausgeführt werden, müssen die als Verweis übergebenen Objektvariablen sicher verwendet werden. Im Allgemeinen ist es sicher, aus referenzierten Objekten zu lesen, die sich nicht ändern. Wenn der Objektstatus jedoch geändert wird, müssen Sie Thread sichere Objekte verwenden, wie z. b. .net **System. Collection. Concurrent** -Typen (siehe Beispiel 11).

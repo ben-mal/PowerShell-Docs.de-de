@@ -1,16 +1,16 @@
 ---
 description: Enthält Informationen dazu, wie PowerShell-Hintergrund Aufträge einen Befehl oder Ausdruck im Hintergrund ausführen, ohne mit der aktuellen Sitzung zu interagieren.
 Locale: en-US
-ms.date: 11/11/2020
+ms.date: 03/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Jobs
-ms.openlocfilehash: 862fbf54b927bb70c68e4b3cc43c564f178f9db5
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 189476d98f92b8d53251b16bd27e45f4a980ab0e
+ms.sourcegitcommit: ca5a89977913bad9efec6bcc23a792d113ec0396
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99599424"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105630965"
 ---
 # <a name="about-jobs"></a>Informationen zu Aufträgen
 
@@ -23,7 +23,7 @@ PowerShell führt Befehle und Skripts gleichzeitig durch Aufträge aus. Es gibt 
 
 - `RemoteJob` -Befehle und Skripts werden in einer Remote Sitzung ausgeführt. Weitere Informationen finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).
 - `BackgroundJob` -Befehle und Skripts werden in einem separaten Prozess auf dem lokalen Computer ausgeführt.
-- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).
+- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](about_Thread_Jobs.md).
 
 Das Remote Ausführen von Skripts auf einem separaten Computer oder in einem separaten Prozess bietet eine hohe Isolation. Fehler, die im Remote Auftrag auftreten, wirken sich nicht auf andere laufende Aufträge oder die übergeordnete Sitzung aus, die den Auftrag gestartet hat. Allerdings erhöht die Remoting-Ebene mehr Aufwand, einschließlich Objektserialisierung. Alle Objekte werden serialisiert und deserialisiert, wenn Sie zwischen der übergeordneten Sitzung und der Remote Sitzung (Auftrags Sitzung) weitergegeben werden. Die Serialisierung von großen komplexen Datenobjekten kann große Mengen an COMPUTE-und Speicherressourcen beanspruchen und große Datenmengen über das Netzwerk übertragen.
 
@@ -265,7 +265,7 @@ In diesem Fall ist der Auftrag nicht erfolgreich, weil der Remote Computer expli
 
 > Fehler beim Herstellen einer Verbindung mit dem Remote Server mit der folgenden Fehlermeldung: "der Zugriff wurde verweigert."
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [about_Remote_Jobs](about_Remote_Jobs.md)
 - [about_Thread_Jobs](about_Thread_Jobs.md)

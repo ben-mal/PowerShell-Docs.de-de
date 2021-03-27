@@ -2,16 +2,16 @@
 description: Enthält Informationen dazu, wie PowerShell-Hintergrund Aufträge einen Befehl oder Ausdruck im Hintergrund ausführen, ohne mit der aktuellen Sitzung zu interagieren.
 keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 11/11/2020
+ms.date: 03/26/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_jobs?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Jobs
-ms.openlocfilehash: d4d4f4b8a2f57edcfa72247d9f9bc224b848789a
-ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
+ms.openlocfilehash: 861998646693491d65358da7c51c41021497be6d
+ms.sourcegitcommit: ca5a89977913bad9efec6bcc23a792d113ec0396
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94524772"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105631016"
 ---
 # <a name="about-jobs"></a>Informationen zu Aufträgen
 
@@ -24,7 +24,7 @@ PowerShell führt Befehle und Skripts gleichzeitig durch Aufträge aus. Es gibt 
 
 - `RemoteJob` -Befehle und Skripts werden in einer Remote Sitzung ausgeführt. Weitere Informationen finden Sie unter [about_Remote_Jobs](about_Remote_Jobs.md).
 - `BackgroundJob` -Befehle und Skripts werden in einem separaten Prozess auf dem lokalen Computer ausgeführt.
-- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).
+- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](about_Thread_Jobs.md).
 
 Das Remote Ausführen von Skripts auf einem separaten Computer oder in einem separaten Prozess bietet eine hohe Isolation. Fehler, die im Remote Auftrag auftreten, wirken sich nicht auf andere laufende Aufträge oder die übergeordnete Sitzung aus, die den Auftrag gestartet hat. Allerdings erhöht die Remoting-Ebene mehr Aufwand, einschließlich Objektserialisierung. Alle Objekte werden serialisiert und deserialisiert, wenn Sie zwischen der übergeordneten Sitzung und der Remote Sitzung (Auftrags Sitzung) weitergegeben werden. Die Serialisierung von großen komplexen Datenobjekten kann große Mengen an COMPUTE-und Speicherressourcen beanspruchen und große Datenmengen über das Netzwerk übertragen.
 
@@ -94,7 +94,7 @@ Das- `Get-Job` Cmdlet gibt Objekte zurück, die die Hintergrund Aufträge darste
 Get-Job
 ```
 
-Das Auftrags Objekt enthält den Status des Auftrags, der angibt, ob der Auftrag abgeschlossen wurde. Ein fertiggestelltes Auftrag hat den Status " **abgeschlossen** " oder " **failed** ". Ein Auftrag kann auch **blockiert** werden oder **ausgeführt** werden.
+Das Auftrags Objekt enthält den Status des Auftrags, der angibt, ob der Auftrag abgeschlossen wurde. Ein fertiggestelltes Auftrag hat den Status " **abgeschlossen** " oder " **failed**". Ein Auftrag kann auch **blockiert** werden oder **ausgeführt** werden.
 
 ```Output
 Id  Name  PSJobTypeName State      HasMoreData  Location   Command
