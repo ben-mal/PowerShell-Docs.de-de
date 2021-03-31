@@ -7,12 +7,12 @@ ms.date: 04/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-typedata?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TypeData
-ms.openlocfilehash: 431b768ba909ddbd3671f03fc52789ae56c01019
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 252915c63539ce4af2ae56a04c4488cc14a13826
+ms.sourcegitcommit: bdd0fedaf9ba534645b2f7eb1fe1241481f58715
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213916"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105936494"
 ---
 # Get-TypeData
 
@@ -47,20 +47,19 @@ In diesem Beispiel werden alle erweiterten Typdaten in der aktuellen Sitzung abg
 Get-TypeData
 ```
 
-### Beispiel 2: Get Types by Name
+### Beispiel 2: Get Type Data by Name
 
-In diesem Beispiel werden alle Typen in der aktuellen Sitzung abgerufen, die Namen enthalten, die Ereignisse enthalten.
+In diesem Beispiel werden alle Typdaten in der aktuellen Sitzung abgerufen, deren Name mit "System.IO" gekennzeichnet ist.
 
- ```powershell
-"*Eventing*" | Get-TypeData
+```powershell
+Get-TypeData -TypeName System.IO.*
 ```
 
 ```Output
-TypeName                                                  Members
---------                                                  -------
-System.Diagnostics.Eventing.Reader.EventLogConfiguration  {}System.Diagnostics.Eventing.Reader.EventLogRecord
-                                                          {}System.Diagnostics.Eventing.Reader.ProviderMetadata
-                                                          {[ProviderName, System.Management.Automation.Runspaces.AliasProper...
+TypeName                Members
+--------                -------
+System.IO.DirectoryInfo {[Mode, System.Management.Automation.Runspaces.CodePropert…
+System.IO.FileInfo      {[Mode, System.Management.Automation.Runspaces.CodePropert…
 ```
 
 ### Beispiel 3: Ruft den Skriptblock ab, der einen Eigenschafts Wert erstellt.
@@ -94,7 +93,7 @@ else {
 }
 ```
 
-Der Befehl verwendet das `Get-TypeData` Cmdlet, um die erweiterten Typdaten für den **System. DataTime** -Typ zu erhalten. Mit dem Befehl wird die **Members** -Eigenschaft des **TypeData** -Objekts abgerufen.
+Der Befehl verwendet das `Get-TypeData` Cmdlet, um die erweiterten Typdaten für den **System. DataTime** -Typ zu erhalten. Mit dem Befehl wird die **Members**-Eigenschaft des **TypeData**-Objekts abgerufen.
 
 Die **Members** -Eigenschaft enthält eine Hash Tabelle mit Eigenschaften und Methoden, die durch erweiterte Typdaten definiert werden. Jeder Schlüssel in der Hashtabelle „Members“ ist ein Eigenschaften- oder Methodenname, und jeder Wert ist die Definition des Eigenschaften- oder Methodenwerts.
 
@@ -136,7 +135,7 @@ Sie können Typnamen an übergeben `Get-TypeData` .
 
 ### System. Management. Automation. Runspaces. typedata
 
-## Notizen
+## Hinweise
 
 `Get-TypeData` Ruft nur die erweiterten Typdaten in der aktuellen Sitzung ab. Es ruft keine erweiterten Typdaten ab, die sich auf dem Computer befinden, aber nicht der aktuellen Sitzung hinzugefügt wurden, wie z. B. erweiterte Typen, die in Modulen definiert und nicht in die aktuelle Sitzung importiert wurden.
 

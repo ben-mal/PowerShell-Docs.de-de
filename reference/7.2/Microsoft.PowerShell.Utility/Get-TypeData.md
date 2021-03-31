@@ -6,12 +6,12 @@ ms.date: 04/27/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-typedata?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TypeData
-ms.openlocfilehash: db5dc586f2a165d83c25bdf2addaeb625f9e1ba0
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: a4f7106bfeadc963a265f5fb239f9fa6bab40800
+ms.sourcegitcommit: bdd0fedaf9ba534645b2f7eb1fe1241481f58715
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99601693"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105936511"
 ---
 # Get-TypeData
 
@@ -46,20 +46,19 @@ In diesem Beispiel werden alle erweiterten Typdaten in der aktuellen Sitzung abg
 Get-TypeData
 ```
 
-### Beispiel 2: Get Types by Name
+### Beispiel 2: Get Type Data by Name
 
-In diesem Beispiel werden alle Typen in der aktuellen Sitzung abgerufen, die Namen enthalten, die Ereignisse enthalten.
+In diesem Beispiel werden alle Typdaten in der aktuellen Sitzung abgerufen, deren Name mit "System.IO" gekennzeichnet ist.
 
- ```powershell
-"*Eventing*" | Get-TypeData
+```powershell
+Get-TypeData -TypeName System.IO.*
 ```
 
 ```Output
-TypeName                                                  Members
---------                                                  -------
-System.Diagnostics.Eventing.Reader.EventLogConfiguration  {}System.Diagnostics.Eventing.Reader.EventLogRecord
-                                                          {}System.Diagnostics.Eventing.Reader.ProviderMetadata
-                                                          {[ProviderName, System.Management.Automation.Runspaces.AliasProper...
+TypeName                Members
+--------                -------
+System.IO.DirectoryInfo {[Mode, System.Management.Automation.Runspaces.CodePropert…
+System.IO.FileInfo      {[Mode, System.Management.Automation.Runspaces.CodePropert…
 ```
 
 ### Beispiel 3: Ruft den Skriptblock ab, der einen Eigenschafts Wert erstellt.
@@ -135,7 +134,7 @@ Sie können Typnamen an übergeben `Get-TypeData` .
 
 ### System. Management. Automation. Runspaces. typedata
 
-## Notizen
+## Hinweise
 
 `Get-TypeData` Ruft nur die erweiterten Typdaten in der aktuellen Sitzung ab. Es ruft keine erweiterten Typdaten ab, die sich auf dem Computer befinden, aber nicht der aktuellen Sitzung hinzugefügt wurden, wie z. B. erweiterte Typen, die in Modulen definiert und nicht in die aktuelle Sitzung importiert wurden.
 

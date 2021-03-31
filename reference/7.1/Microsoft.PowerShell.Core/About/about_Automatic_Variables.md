@@ -1,16 +1,16 @@
 ---
 description: Beschreibt Variablen, die Zustandsinformationen für PowerShell speichern. Diese Variablen werden von PowerShell erstellt und verwaltet.
 Locale: en-US
-ms.date: 03/15/2021
+ms.date: 03/29/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Automatic_Variables
-ms.openlocfilehash: 8267b71c8d5103bcaa915b664ee9f1746d0045bb
-ms.sourcegitcommit: 15f759ca68d17acecab46b52250298d4f2037c4d
+ms.openlocfilehash: a439ba5e678c68dcd25b79ea898ed7a157c851b5
+ms.sourcegitcommit: bdd0fedaf9ba534645b2f7eb1fe1241481f58715
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103575643"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105936657"
 ---
 # <a name="about-automatic-variables"></a>Informationen zu automatischen Variablen
 
@@ -171,6 +171,9 @@ Die `Matches` -Variable funktioniert mit `-match` den `-notmatch` Operatoren und
 Wenn Sie skalare Eingaben an den `-match` `-notmatch` -Operator oder den-Operator übermitteln und eine Übereinstimmung erkannt wird, wird ein boolescher Wert zurückgegeben, und die `$Matches` Automatische Variable wird mit einer Hash Tabelle mit allen übereinstimmenden Zeichen folgen Werten aufgefüllt. Die `$Matches` Hash Tabelle kann auch mit Erfassungen aufgefüllt werden, wenn Sie reguläre Ausdrücke mit dem- `-match` Operator verwenden.
 
 Weitere Informationen zum- `-match` Operator finden Sie unter [about_Comparison_Operators](about_comparison_operators.md). Weitere Informationen zu regulären Ausdrücken finden Sie unter [about_Regular_Expressions](about_Regular_Expressions.md).
+
+Die- `$Matches` Variable kann auch in einer- `switch` Anweisung mit dem-Parameter verwendet werden `-Regex` . Es wird auf die gleiche Weise wie die `-match` -und- `-notmatch` Operatoren aufgefüllt.
+Weitere Informationen zur- `switch` Anweisung finden Sie unter [about_Switch](about_Switch.md).
 
 ### <a name="myinvocation"></a>$MyInvocation
 
