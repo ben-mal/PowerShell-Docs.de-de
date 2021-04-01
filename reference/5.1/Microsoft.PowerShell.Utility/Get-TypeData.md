@@ -14,42 +14,42 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "105936494"
 ---
-# <span data-ttu-id="f5d6a-103">Get-TypeData</span><span class="sxs-lookup"><span data-stu-id="f5d6a-103">Get-TypeData</span></span>
+# <span data-ttu-id="a4bd5-103">Get-TypeData</span><span class="sxs-lookup"><span data-stu-id="a4bd5-103">Get-TypeData</span></span>
 
-## <span data-ttu-id="f5d6a-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="f5d6a-104">Synopsis</span></span>
-<span data-ttu-id="f5d6a-105">Ruft die erweiterten Typdaten in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-105">Gets the extended type data in the current session.</span></span>
+## <span data-ttu-id="a4bd5-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="a4bd5-104">Synopsis</span></span>
+<span data-ttu-id="a4bd5-105">Ruft die erweiterten Typdaten in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-105">Gets the extended type data in the current session.</span></span>
 
-## <span data-ttu-id="f5d6a-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="f5d6a-106">Syntax</span></span>
+## <span data-ttu-id="a4bd5-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="a4bd5-106">Syntax</span></span>
 
 ```
 Get-TypeData [[-TypeName] <String[]>] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="f5d6a-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="f5d6a-107">Description</span></span>
+## <span data-ttu-id="a4bd5-107">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="a4bd5-107">Description</span></span>
 
-<span data-ttu-id="f5d6a-108">Das- `Get-TypeData` Cmdlet ruft die erweiterten Typdaten in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-108">The `Get-TypeData` cmdlet gets the extended type data in the current session.</span></span> <span data-ttu-id="f5d6a-109">Dies schließt Typdaten ein, die der Sitzung durch `Types.ps1xml` Datei-und dynamische Typdaten hinzugefügt wurden, die mithilfe des-Parameters des `Update-TypeData` Cmdlets hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-109">This includes type data that was added to the session by `Types.ps1xml` file and dynamic type data that was added by using the parameter of the `Update-TypeData` cmdlet.</span></span>
+<span data-ttu-id="a4bd5-108">Das- `Get-TypeData` Cmdlet ruft die erweiterten Typdaten in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-108">The `Get-TypeData` cmdlet gets the extended type data in the current session.</span></span> <span data-ttu-id="a4bd5-109">Dies schließt Typdaten ein, die der Sitzung durch `Types.ps1xml` Datei-und dynamische Typdaten hinzugefügt wurden, die mithilfe des-Parameters des `Update-TypeData` Cmdlets hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-109">This includes type data that was added to the session by `Types.ps1xml` file and dynamic type data that was added by using the parameter of the `Update-TypeData` cmdlet.</span></span>
 
-<span data-ttu-id="f5d6a-110">Sie können die erweiterten Typdaten verwenden, die `Get-TypeData` zurückgibt, um die Typdaten in der Sitzung zu überprüfen und Sie an die `Update-TypeData` -und- `Remove-TypeData` Cmdlets zu senden.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-110">You can use the extended type data that `Get-TypeData` returns to examine the type data in the session and send it to the `Update-TypeData` and `Remove-TypeData` cmdlets.</span></span>
+<span data-ttu-id="a4bd5-110">Sie können die erweiterten Typdaten verwenden, die `Get-TypeData` zurückgibt, um die Typdaten in der Sitzung zu überprüfen und Sie an die `Update-TypeData` -und- `Remove-TypeData` Cmdlets zu senden.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-110">You can use the extended type data that `Get-TypeData` returns to examine the type data in the session and send it to the `Update-TypeData` and `Remove-TypeData` cmdlets.</span></span>
 
-<span data-ttu-id="f5d6a-111">Erweiterte Typdaten fügen Objekten in PowerShell Eigenschaften und Methoden hinzu.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-111">Extended type data adds properties and methods to objects in PowerShell.</span></span> <span data-ttu-id="f5d6a-112">Sie können die hinzugefügten Eigenschaften und Methoden auf die gleiche Weise wie die im Objekttyp definierten Eigenschaften und Methoden verwenden.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-112">You can use the added properties and methods in the same ways that you would use the properties and methods that are defined in the object type.</span></span> <span data-ttu-id="f5d6a-113">Beachten Sie jedoch beim Schreiben von Skripts, dass die hinzugefügten Eigenschaften und Methoden möglicherweise nicht in jeder PowerShell-Sitzung vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-113">However, when writing scripts, be aware that the added properties and methods might not be present in every PowerShell session.</span></span>
+<span data-ttu-id="a4bd5-111">Erweiterte Typdaten fügen Objekten in PowerShell Eigenschaften und Methoden hinzu.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-111">Extended type data adds properties and methods to objects in PowerShell.</span></span> <span data-ttu-id="a4bd5-112">Sie können die hinzugefügten Eigenschaften und Methoden auf die gleiche Weise wie die im Objekttyp definierten Eigenschaften und Methoden verwenden.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-112">You can use the added properties and methods in the same ways that you would use the properties and methods that are defined in the object type.</span></span> <span data-ttu-id="a4bd5-113">Beachten Sie jedoch beim Schreiben von Skripts, dass die hinzugefügten Eigenschaften und Methoden möglicherweise nicht in jeder PowerShell-Sitzung vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-113">However, when writing scripts, be aware that the added properties and methods might not be present in every PowerShell session.</span></span>
 
-<span data-ttu-id="f5d6a-114">Weitere Informationen zu `Types.ps1xml` Dateien finden Sie unter [about_Types.ps1XML](../Microsoft.PowerShell.Core/About/about_Types.ps1xml.md).</span><span class="sxs-lookup"><span data-stu-id="f5d6a-114">For more information about `Types.ps1xml` files, see [about_Types.ps1xml](../Microsoft.PowerShell.Core/About/about_Types.ps1xml.md).</span></span> <span data-ttu-id="f5d6a-115">Weitere Informationen zu dynamischen Typdaten, die vom `Update-TypeData` Cmdlet hinzugefügt werden, finden Sie unter `Update-TypeData` .</span><span class="sxs-lookup"><span data-stu-id="f5d6a-115">For more information about dynamic type data that the `Update-TypeData` cmdlet adds, see `Update-TypeData`.</span></span>
+<span data-ttu-id="a4bd5-114">Weitere Informationen zu `Types.ps1xml` Dateien finden Sie unter [about_Types.ps1XML](../Microsoft.PowerShell.Core/About/about_Types.ps1xml.md).</span><span class="sxs-lookup"><span data-stu-id="a4bd5-114">For more information about `Types.ps1xml` files, see [about_Types.ps1xml](../Microsoft.PowerShell.Core/About/about_Types.ps1xml.md).</span></span> <span data-ttu-id="a4bd5-115">Weitere Informationen zu dynamischen Typdaten, die vom `Update-TypeData` Cmdlet hinzugefügt werden, finden Sie unter `Update-TypeData` .</span><span class="sxs-lookup"><span data-stu-id="a4bd5-115">For more information about dynamic type data that the `Update-TypeData` cmdlet adds, see `Update-TypeData`.</span></span>
 
-<span data-ttu-id="f5d6a-116">Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-116">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
+<span data-ttu-id="a4bd5-116">Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-116">This cmdlet was introduced in Windows PowerShell 3.0.</span></span>
 
-## <span data-ttu-id="f5d6a-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="f5d6a-117">Examples</span></span>
+## <span data-ttu-id="a4bd5-117">Beispiele</span><span class="sxs-lookup"><span data-stu-id="a4bd5-117">Examples</span></span>
 
-### <span data-ttu-id="f5d6a-118">Beispiel 1: alle erweiterten Typdaten</span><span class="sxs-lookup"><span data-stu-id="f5d6a-118">Example 1: Get all extended type data</span></span>
+### <span data-ttu-id="a4bd5-118">Beispiel 1: alle erweiterten Typdaten</span><span class="sxs-lookup"><span data-stu-id="a4bd5-118">Example 1: Get all extended type data</span></span>
 
-<span data-ttu-id="f5d6a-119">In diesem Beispiel werden alle erweiterten Typdaten in der aktuellen Sitzung abgerufen.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-119">This example gets all extended type data in the current session.</span></span>
+<span data-ttu-id="a4bd5-119">In diesem Beispiel werden alle erweiterten Typdaten in der aktuellen Sitzung abgerufen.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-119">This example gets all extended type data in the current session.</span></span>
 
  ```powershell
 Get-TypeData
 ```
 
-### <span data-ttu-id="f5d6a-120">Beispiel 2: Get Type Data by Name</span><span class="sxs-lookup"><span data-stu-id="f5d6a-120">Example 2: Get type data by name</span></span>
+### <span data-ttu-id="a4bd5-120">Beispiel 2: Get Type Data by Name</span><span class="sxs-lookup"><span data-stu-id="a4bd5-120">Example 2: Get type data by name</span></span>
 
-<span data-ttu-id="f5d6a-121">In diesem Beispiel werden alle Typdaten in der aktuellen Sitzung abgerufen, deren Name mit "System.IO" gekennzeichnet ist.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-121">This example gets all type data in the current session whose name is qualified with "System.IO".</span></span>
+<span data-ttu-id="a4bd5-121">In diesem Beispiel werden alle Typdaten in der aktuellen Sitzung abgerufen, deren Name mit "System.IO" gekennzeichnet ist.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-121">This example gets all type data in the current session whose name is qualified with "System.IO".</span></span>
 
 ```powershell
 Get-TypeData -TypeName System.IO.*
@@ -62,9 +62,9 @@ System.IO.DirectoryInfo {[Mode, System.Management.Automation.Runspaces.CodePrope
 System.IO.FileInfo      {[Mode, System.Management.Automation.Runspaces.CodePropert…
 ```
 
-### <span data-ttu-id="f5d6a-122">Beispiel 3: Ruft den Skriptblock ab, der einen Eigenschafts Wert erstellt.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-122">Example 3: Get the script block that creates a property value</span></span>
+### <span data-ttu-id="a4bd5-122">Beispiel 3: Ruft den Skriptblock ab, der einen Eigenschafts Wert erstellt.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-122">Example 3: Get the script block that creates a property value</span></span>
 
-<span data-ttu-id="f5d6a-123">In diesem Beispiel wird der Skriptblock abgerufen, der den Wert der **EventID-** Eigenschaft von **EventLogEntry** -Objekten erstellt.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-123">This example gets the script block that creates the value of the **EventID** property of **EventLogEntry** objects.</span></span>
+<span data-ttu-id="a4bd5-123">In diesem Beispiel wird der Skriptblock abgerufen, der den Wert der **EventID-** Eigenschaft von **EventLogEntry** -Objekten erstellt.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-123">This example gets the script block that creates the value of the **EventID** property of **EventLogEntry** objects.</span></span>
 
  ```powershell
 (Get-TypeData *EventLogEntry*).Members.EventID
@@ -76,9 +76,9 @@ GetScriptBlock                     SetScriptBlock     IsHidden Name
 $this.get_EventID() -band 0xFFFF                         False EventID
 ```
 
-### <span data-ttu-id="f5d6a-124">Beispiel 4: der Skriptblock, der eine Eigenschaft für ein angegebenes Objekt definiert</span><span class="sxs-lookup"><span data-stu-id="f5d6a-124">Example 4: Get the script block that defines a property for a specified object</span></span>
+### <span data-ttu-id="a4bd5-124">Beispiel 4: der Skriptblock, der eine Eigenschaft für ein angegebenes Objekt definiert</span><span class="sxs-lookup"><span data-stu-id="a4bd5-124">Example 4: Get the script block that defines a property for a specified object</span></span>
 
-<span data-ttu-id="f5d6a-125">In diesem Beispiel wird der Skriptblock abgerufen, der die **DateTime** -Eigenschaft der **System. DateTime** -Objekte in PowerShell definiert.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-125">This example gets the script block that defines the **DateTime** property of **System.DateTime** objects in PowerShell.</span></span>
+<span data-ttu-id="a4bd5-125">In diesem Beispiel wird der Skriptblock abgerufen, der die **DateTime** -Eigenschaft der **System. DateTime** -Objekte in PowerShell definiert.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-125">This example gets the script block that defines the **DateTime** property of **System.DateTime** objects in PowerShell.</span></span>
 
  ```powershell
 (Get-TypeData -TypeName System.DateTime).Members["DateTime"].GetScriptBlock
@@ -93,21 +93,21 @@ else {
 }
 ```
 
-<span data-ttu-id="f5d6a-126">Der Befehl verwendet das `Get-TypeData` Cmdlet, um die erweiterten Typdaten für den **System. DataTime** -Typ zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-126">The command uses the `Get-TypeData` cmdlet to get the extended type data for the **System.DataTime** type.</span></span> <span data-ttu-id="f5d6a-127">Mit dem Befehl wird die **Members**-Eigenschaft des **TypeData**-Objekts abgerufen.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-127">The command gets the **Members** property of the **TypeData** object.</span></span>
+<span data-ttu-id="a4bd5-126">Der Befehl verwendet das `Get-TypeData` Cmdlet, um die erweiterten Typdaten für den **System. DataTime** -Typ zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-126">The command uses the `Get-TypeData` cmdlet to get the extended type data for the **System.DataTime** type.</span></span> <span data-ttu-id="a4bd5-127">Mit dem Befehl wird die **Members**-Eigenschaft des **TypeData**-Objekts abgerufen.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-127">The command gets the **Members** property of the **TypeData** object.</span></span>
 
-<span data-ttu-id="f5d6a-128">Die **Members** -Eigenschaft enthält eine Hash Tabelle mit Eigenschaften und Methoden, die durch erweiterte Typdaten definiert werden.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-128">The **Members** property contains a hash table of properties and methods that are defined by extended type data.</span></span> <span data-ttu-id="f5d6a-129">Jeder Schlüssel in der Hashtabelle „Members“ ist ein Eigenschaften- oder Methodenname, und jeder Wert ist die Definition des Eigenschaften- oder Methodenwerts.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-129">Each key in the Members hash table is a property or method name and each value is the definition of the property or method value.</span></span>
+<span data-ttu-id="a4bd5-128">Die **Members** -Eigenschaft enthält eine Hash Tabelle mit Eigenschaften und Methoden, die durch erweiterte Typdaten definiert werden.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-128">The **Members** property contains a hash table of properties and methods that are defined by extended type data.</span></span> <span data-ttu-id="a4bd5-129">Jeder Schlüssel in der Hashtabelle „Members“ ist ein Eigenschaften- oder Methodenname, und jeder Wert ist die Definition des Eigenschaften- oder Methodenwerts.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-129">Each key in the Members hash table is a property or method name and each value is the definition of the property or method value.</span></span>
 
-<span data-ttu-id="f5d6a-130">Der Befehl ruft den **DateTime** **-Schlüssel** in Membern und dessen **getscriptblock** -Eigenschafts Wert ab.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-130">The command gets the **DateTime** key in **Members** and its **GetScriptBlock** property value.</span></span>
+<span data-ttu-id="a4bd5-130">Der Befehl ruft den **DateTime** **-Schlüssel** in Membern und dessen **getscriptblock** -Eigenschafts Wert ab.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-130">The command gets the **DateTime** key in **Members** and its **GetScriptBlock** property value.</span></span>
 
-<span data-ttu-id="f5d6a-131">Die Ausgabe zeigt den Skriptblock, der den Wert der **DateTime** -Eigenschaft jedes **System. DateTime** -Objekts in PowerShell erstellt.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-131">The output shows the script block that creates the value of the **DateTime** property of every **System.DateTime** object in PowerShell.</span></span>
+<span data-ttu-id="a4bd5-131">Die Ausgabe zeigt den Skriptblock, der den Wert der **DateTime** -Eigenschaft jedes **System. DateTime** -Objekts in PowerShell erstellt.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-131">The output shows the script block that creates the value of the **DateTime** property of every **System.DateTime** object in PowerShell.</span></span>
 
-## <span data-ttu-id="f5d6a-132">Parameter</span><span class="sxs-lookup"><span data-stu-id="f5d6a-132">Parameters</span></span>
+## <span data-ttu-id="a4bd5-132">Parameter</span><span class="sxs-lookup"><span data-stu-id="a4bd5-132">Parameters</span></span>
 
-### <span data-ttu-id="f5d6a-133">-Typname</span><span class="sxs-lookup"><span data-stu-id="f5d6a-133">-TypeName</span></span>
+### <span data-ttu-id="a4bd5-133">-Typname</span><span class="sxs-lookup"><span data-stu-id="a4bd5-133">-TypeName</span></span>
 
-<span data-ttu-id="f5d6a-134">Gibt Typdaten nur für Typen mit den angegebenen Namen als Array an.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-134">Specifies type data as an array only for the types with the specified names.</span></span> <span data-ttu-id="f5d6a-135">Standardmäßig ruft `Get-TypeData` alle Typen in der Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-135">By default, `Get-TypeData` gets all types in the session.</span></span>
+<span data-ttu-id="a4bd5-134">Gibt Typdaten nur für Typen mit den angegebenen Namen als Array an.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-134">Specifies type data as an array only for the types with the specified names.</span></span> <span data-ttu-id="a4bd5-135">Standardmäßig ruft `Get-TypeData` alle Typen in der Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-135">By default, `Get-TypeData` gets all types in the session.</span></span>
 
-<span data-ttu-id="f5d6a-136">Geben Sie Namen oder ein Namensmuster ein.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-136">Enter type names or a name patterns.</span></span> <span data-ttu-id="f5d6a-137">Vollständige Namen oder Namensmuster mit Platzhalter Zeichen sind erforderlich, auch für Typen im System-Namespace.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-137">Full names, or name patterns with wildcard characters are required, even for types in the System namespace.</span></span> <span data-ttu-id="f5d6a-138">Platzhalter werden unterstützt, und der Parameter Name **tykenname** ist optional.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-138">Wildcards are supported and the parameter name **TypeName** is optional.</span></span> <span data-ttu-id="f5d6a-139">Sie können Typnamen auch über die Pipeline an senden `Get-TypeData` .</span><span class="sxs-lookup"><span data-stu-id="f5d6a-139">You can also pipe type names to `Get-TypeData`.</span></span>
+<span data-ttu-id="a4bd5-136">Geben Sie Namen oder ein Namensmuster ein.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-136">Enter type names or a name patterns.</span></span> <span data-ttu-id="a4bd5-137">Vollständige Namen oder Namensmuster mit Platzhalter Zeichen sind erforderlich, auch für Typen im System-Namespace.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-137">Full names, or name patterns with wildcard characters are required, even for types in the System namespace.</span></span> <span data-ttu-id="a4bd5-138">Platzhalter werden unterstützt, und der Parameter Name **tykenname** ist optional.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-138">Wildcards are supported and the parameter name **TypeName** is optional.</span></span> <span data-ttu-id="a4bd5-139">Sie können Typnamen auch über die Pipeline an senden `Get-TypeData` .</span><span class="sxs-lookup"><span data-stu-id="a4bd5-139">You can also pipe type names to `Get-TypeData`.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -121,28 +121,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: True
 ```
 
-### <span data-ttu-id="f5d6a-140">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="f5d6a-140">CommonParameters</span></span>
+### <span data-ttu-id="a4bd5-140">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="a4bd5-140">CommonParameters</span></span>
 
-<span data-ttu-id="f5d6a-141">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-141">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="f5d6a-142">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="f5d6a-142">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="a4bd5-141">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-141">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="a4bd5-142">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="a4bd5-142">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="f5d6a-143">Eingaben</span><span class="sxs-lookup"><span data-stu-id="f5d6a-143">Inputs</span></span>
+## <span data-ttu-id="a4bd5-143">Eingaben</span><span class="sxs-lookup"><span data-stu-id="a4bd5-143">Inputs</span></span>
 
-### <span data-ttu-id="f5d6a-144">System.String</span><span class="sxs-lookup"><span data-stu-id="f5d6a-144">System.String</span></span>
+### <span data-ttu-id="a4bd5-144">System.String</span><span class="sxs-lookup"><span data-stu-id="a4bd5-144">System.String</span></span>
 
-<span data-ttu-id="f5d6a-145">Sie können Typnamen an übergeben `Get-TypeData` .</span><span class="sxs-lookup"><span data-stu-id="f5d6a-145">You can pipe type names to `Get-TypeData`.</span></span>
+<span data-ttu-id="a4bd5-145">Sie können Typnamen an übergeben `Get-TypeData` .</span><span class="sxs-lookup"><span data-stu-id="a4bd5-145">You can pipe type names to `Get-TypeData`.</span></span>
 
-## <span data-ttu-id="f5d6a-146">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="f5d6a-146">Outputs</span></span>
+## <span data-ttu-id="a4bd5-146">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="a4bd5-146">Outputs</span></span>
 
-### <span data-ttu-id="f5d6a-147">System. Management. Automation. Runspaces. typedata</span><span class="sxs-lookup"><span data-stu-id="f5d6a-147">System.Management.Automation.Runspaces.TypeData</span></span>
+### <span data-ttu-id="a4bd5-147">System. Management. Automation. Runspaces. typedata</span><span class="sxs-lookup"><span data-stu-id="a4bd5-147">System.Management.Automation.Runspaces.TypeData</span></span>
 
-## <span data-ttu-id="f5d6a-148">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f5d6a-148">Notes</span></span>
+## <span data-ttu-id="a4bd5-148">Notizen</span><span class="sxs-lookup"><span data-stu-id="a4bd5-148">Notes</span></span>
 
-<span data-ttu-id="f5d6a-149">`Get-TypeData` Ruft nur die erweiterten Typdaten in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-149">`Get-TypeData` gets only the extended type data in the current session.</span></span> <span data-ttu-id="f5d6a-150">Es ruft keine erweiterten Typdaten ab, die sich auf dem Computer befinden, aber nicht der aktuellen Sitzung hinzugefügt wurden, wie z. B. erweiterte Typen, die in Modulen definiert und nicht in die aktuelle Sitzung importiert wurden.</span><span class="sxs-lookup"><span data-stu-id="f5d6a-150">It does not get extended type data that is on the computer, but has not been added to the current session, such as extended types that are defined in modules that have not been imported into the current session.</span></span>
+<span data-ttu-id="a4bd5-149">`Get-TypeData` Ruft nur die erweiterten Typdaten in der aktuellen Sitzung ab.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-149">`Get-TypeData` gets only the extended type data in the current session.</span></span> <span data-ttu-id="a4bd5-150">Es ruft keine erweiterten Typdaten ab, die sich auf dem Computer befinden, aber nicht der aktuellen Sitzung hinzugefügt wurden, wie z. B. erweiterte Typen, die in Modulen definiert und nicht in die aktuelle Sitzung importiert wurden.</span><span class="sxs-lookup"><span data-stu-id="a4bd5-150">It does not get extended type data that is on the computer, but has not been added to the current session, such as extended types that are defined in modules that have not been imported into the current session.</span></span>
 
-## <span data-ttu-id="f5d6a-151">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="f5d6a-151">Related links</span></span>
+## <span data-ttu-id="a4bd5-151">Verwandte Links</span><span class="sxs-lookup"><span data-stu-id="a4bd5-151">Related links</span></span>
 
-[<span data-ttu-id="f5d6a-152">about_Types.ps1xml</span><span class="sxs-lookup"><span data-stu-id="f5d6a-152">about_Types.ps1xml</span></span>](../Microsoft.PowerShell.Core/About/about_Types.ps1xml.md)
+[<span data-ttu-id="a4bd5-152">about_Types.ps1xml</span><span class="sxs-lookup"><span data-stu-id="a4bd5-152">about_Types.ps1xml</span></span>](../Microsoft.PowerShell.Core/About/about_Types.ps1xml.md)
 
-[<span data-ttu-id="f5d6a-153">Remove-TypeData</span><span class="sxs-lookup"><span data-stu-id="f5d6a-153">Remove-TypeData</span></span>](Remove-TypeData.md)
+[<span data-ttu-id="a4bd5-153">Remove-TypeData</span><span class="sxs-lookup"><span data-stu-id="a4bd5-153">Remove-TypeData</span></span>](Remove-TypeData.md)
 
-[<span data-ttu-id="f5d6a-154">Update-TypeData</span><span class="sxs-lookup"><span data-stu-id="f5d6a-154">Update-TypeData</span></span>](Update-TypeData.md)
+[<span data-ttu-id="a4bd5-154">Update-TypeData</span><span class="sxs-lookup"><span data-stu-id="a4bd5-154">Update-TypeData</span></span>](Update-TypeData.md)
