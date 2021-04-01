@@ -183,7 +183,7 @@ Enthält Informationen über den aktuellen Befehl, z. b. den Namen, die Paramete
 
 Ab PowerShell 3,0 `MyInvocation` verfügt über die folgenden neuen Eigenschaften.
 
-| Eigenschaft      | BESCHREIBUNG                                         |
+| Eigenschaft      | Beschreibung                                         |
 | ------------- | --------------------------------------------------- |
 | **PSScriptRoot**  | Enthält den vollständigen Pfad des aufgerufenen Skripts.   |
 |               | der aktuelle Befehl. Der Wert dieser Eigenschaft ist  |
@@ -371,7 +371,7 @@ Enthält den Namen der Kultur der Benutzeroberfläche (UI), die derzeit im Betri
 
 Enthält eine schreibgeschützte Hash Tabelle, in der Details zur PowerShell-Version angezeigt werden, die in der aktuellen Sitzung ausgeführt wird. Die Tabelle enthält die folgenden Elemente:
 
-| Eigenschaft                  | BESCHREIBUNG                                   |
+| Eigenschaft                  | Beschreibung                                   |
 | ------------------------- | --------------------------------------------- |
 | **PSVersion**             | Die PowerShell-Versionsnummer                 |
 | **PSEdition**             | Diese Eigenschaft hat den Wert "Desktop" für  |
@@ -735,7 +735,7 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [about_Functions](about_Functions.md)
 
