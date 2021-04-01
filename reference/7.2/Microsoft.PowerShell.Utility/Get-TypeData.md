@@ -134,7 +134,7 @@ Sie können Typnamen an übergeben `Get-TypeData` .
 
 ### System. Management. Automation. Runspaces. typedata
 
-## Hinweise
+## Notizen
 
 `Get-TypeData` Ruft nur die erweiterten Typdaten in der aktuellen Sitzung ab. Es ruft keine erweiterten Typdaten ab, die sich auf dem Computer befinden, aber nicht der aktuellen Sitzung hinzugefügt wurden, wie z. B. erweiterte Typen, die in Modulen definiert und nicht in die aktuelle Sitzung importiert wurden.
 

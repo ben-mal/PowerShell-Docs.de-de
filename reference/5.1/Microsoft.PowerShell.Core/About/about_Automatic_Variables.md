@@ -710,7 +710,7 @@ Default (Current): Start
 Default (Current): End
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [about_Functions](about_Functions.md)
 
