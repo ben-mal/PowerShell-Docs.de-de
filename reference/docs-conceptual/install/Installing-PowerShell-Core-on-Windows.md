@@ -1,13 +1,13 @@
 ---
 title: Installieren von PowerShell unter Windows
 description: Informationen zur Installation von PowerShell unter Windows
-ms.date: 02/02/2021
-ms.openlocfilehash: bd3643c1ca6beb60a8727478a1ae612dcb34c7fb
-ms.sourcegitcommit: 080c8b05a1242348c365fe1684457e873325f11e
+ms.date: 03/30/2021
+ms.openlocfilehash: 7e21a34ea4dd74d2d8a9108393009c9c2660dff9
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103483435"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072713"
 ---
 # <a name="installing-powershell-on-windows"></a>Installieren von PowerShell unter Windows
 
@@ -211,7 +211,7 @@ Wenn Sie das [.NET Core SDK](/dotnet/core/sdk) bereits installiert haben, könne
 dotnet tool install --global PowerShell
 ```
 
-Der .NET-Toolinstaller fügt `$env:USERPROFILE\dotnet\tools` Ihrer `$env:PATH`-Umgebungsvariablen hinzu. Die aktuell ausgeführte Shell verfügt jedoch nicht über die aktualisierte Umgebungsvariable `$env:PATH`. Sie können PowerShell über eine neue Shell starten, indem Sie `pwsh` eingeben.
+Der .NET-Toolinstaller fügt `$env:USERPROFILE\.dotnet\tools` Ihrer `$env:PATH`-Umgebungsvariablen hinzu. Die aktuell ausgeführte Shell verfügt jedoch nicht über die aktualisierte Umgebungsvariable `$env:PATH`. Sie können PowerShell über eine neue Shell starten, indem Sie `pwsh` eingeben.
 
 ## <a name="install-powershell-via-winget"></a>Installieren von PowerShell über Winget
 

@@ -1,17 +1,16 @@
 ---
 description: Beschreibt, wie Variablen Werte speichern, die in PowerShell verwendet werden können.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 11/09/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 858015f42ff58baf653d8d0f1502df0f7ed4a63f
-ms.sourcegitcommit: 768816a5c05cc2d07ffd84bed95b0499f4b49f2d
+ms.openlocfilehash: 691f6607c239cc8104daab55a380c1b64c5ba2ac
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94483100"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072456"
 ---
 # <a name="about-variables"></a>Informationen zu Variablen
 
@@ -45,7 +44,7 @@ Um eine neue Variable zu erstellen, verwenden Sie eine Zuweisungsanweisung, um d
 
 Geben Sie ein, um eine Liste aller Variablen in der PowerShell-Sitzung zu erhalten `Get-Variable` . Die Variablennamen werden ohne das vorangehende Dollar `$` Zeichen () angezeigt, das für den Verweis auf Variablen verwendet wird.
 
-Zum Beispiel:
+Beispiel:
 
 ```powershell
 $MyVariable = 1, 2, 3
@@ -55,7 +54,7 @@ $Path = "C:\Windows\System32"
 
 Variablen sind nützlich, um die Ergebnisse von Befehlen zu speichern.
 
-Zum Beispiel:
+Beispiel:
 
 ```powershell
 $Processes = Get-Process
@@ -65,7 +64,7 @@ $Today = (Get-Date).DateTime
 
 Wenn Sie den Wert einer Variablen anzeigen möchten, geben Sie den Variablennamen ein, dem ein Dollarzeichen () vorangestellt ist `$` .
 
-Zum Beispiel:
+Beispiel:
 
 ```powershell
 $MyVariable
@@ -129,6 +128,21 @@ Remove-Variable -Name MyVariable
 Remove-Item -Path Variable:\MyVariable
 ```
 
+Es ist auch möglich, mit einer Anweisung mehrere Variablen zu Werten. In den folgenden Beispielen wird der gleiche Wert mehreren Variablen zugewiesen:
+
+```powershell
+$a = $b = $c = 0
+```
+
+Im nächsten Beispiel werden mehrere Werte mehreren Variablen zugewiesen.
+
+```powershell
+$i,$j,$k = 10, "red", $true    # $i is 10, $j is "red", $k is True
+$i,$j = 10, "red", $true       # $i is 10, $j is [object[]], Length 2
+```
+
+Ausführlichere Informationen finden Sie im Abschnitt **zuweisen mehrerer Variablen** [about_Assignment_Operators](about_assignment_operators.md#assigning-multiple-variables).
+
 ## <a name="types-of-variables"></a>Typen von Variablen
 
 Sie können beliebige Objekttypen in einer Variablen speichern, einschließlich Ganzzahlen, Zeichen folgen, Arrays und Hash Tabellen. Und,-Objekte, die Prozesse, Dienste, Ereignisprotokolle und Computer darstellen.
@@ -137,7 +151,7 @@ PowerShell-Variablen sind lose typisiert, was bedeutet, dass Sie nicht auf einen
 
 Der Datentyp einer Variablen wird durch die .NET-Typen der Werte der Variablen bestimmt. Verwenden [Sie Get-Member](xref:Microsoft.PowerShell.Utility.Get-Member), um den Objekttyp einer Variablen anzuzeigen.
 
-Zum Beispiel:
+Beispiel:
 
 ```powershell
 $a = 12                         # System.Int32
@@ -250,7 +264,7 @@ Die bewährte Vorgehensweise besteht darin, dass Variablennamen nur alphanumeris
 
 Alphanumerische Variablennamen können folgende Zeichen enthalten:
 
-- Unicode-Zeichen aus diesen Kategorien: **lu** , **ll** , **lt** , **LM** , **Lo** oder **ND**.
+- Unicode-Zeichen aus diesen Kategorien: **lu**, **ll**, **lt**, **LM**, **Lo** oder **ND**.
 - Unterstrich ( `_` ).
 - Fragezeichen ( `?` ).
 
@@ -395,7 +409,7 @@ Um Hilfe zu einem bestimmten Cmdlet zu erhalten, geben Sie Folgendes ein:
 Get-Help <cmdlet-name>
 ```
 
-| Cmdlet-Name       | BESCHREIBUNG                                |
+| Cmdlet-Name       | Beschreibung                                |
 | ---------------   | ------------------------------------------ |
 | `Clear-Variable`  | Löscht den Wert einer Variablen.           |
 | `Get-Variable`    | Ruft die Variablen in der aktuellen Konsole ab. |
@@ -418,4 +432,3 @@ Get-Help <cmdlet-name>
 [about_Scopes](about_Scopes.md)
 
 [about_Remote_Variables](about_Remote_Variables.md)
-

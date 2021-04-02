@@ -1,16 +1,16 @@
 ---
 description: Beschreibt, wie Operatoren verwendet werden, um Variablen Werte zuzuweisen.
 Locale: en-US
-ms.date: 04/26/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_assignment_operators?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Assignment_Operators
-ms.openlocfilehash: fd5f807241953c19d2db32fb9063e5596615a44f
-ms.sourcegitcommit: 71173a89c4f05b5283ccd1e885a780773c13fa47
+ms.openlocfilehash: 5ebb637d885488cfdccd63052b1bc5ffa161867f
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103193846"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072395"
 ---
 # <a name="about-assignment-operators"></a>Informationen über Zuweisungs Operator
 
@@ -665,7 +665,9 @@ Tuesday, May 31, 2005 12:00:00 AM
 
 ## <a name="assigning-multiple-variables"></a>Zuweisen von mehreren Variablen
 
-In PowerShell können Sie mithilfe eines einzelnen Befehls mehreren Variablen Werte zuweisen. Das erste Element des Zuweisungs Werts wird der ersten Variablen zugewiesen, das zweite Element wird der zweiten Variablen zugewiesen, das dritte Element der dritten Variablen usw. Der folgende Befehl weist z. b. den Wert 1 der Variablen `$a` , den Wert 2 der `$b` Variablen und den Wert 3 der `$c` Variablen zu:
+In PowerShell können Sie mithilfe eines einzelnen Befehls mehreren Variablen Werte zuweisen. Das erste Element des Zuweisungs Werts wird der ersten Variablen zugewiesen, das zweite Element wird der zweiten Variablen zugewiesen, das dritte Element der dritten Variablen usw. Dies wird als _mehrfache Zuweisung_ bezeichnet.
+
+Der folgende Befehl weist z. b. den Wert 1 der Variablen `$a` , den Wert 2 der `$b` Variablen und den Wert 3 der `$c` Variablen zu:
 
 ```powershell
 $a, $b, $c = 1, 2, 3
@@ -686,13 +688,13 @@ $d, $e, $f = $c
 
 Dieser Befehl weist den Wert 3 der Variablen `$d` , den Wert 4 der `$e` Variablen und den Wert 5 der `$f` Variablen zu.
 
-Wenn der Zuweisungs Wert weniger Elemente als Variablen enthält, werden allen verbleibenden Variablen am Ende keine Werte zugewiesen. Der folgende Befehl enthält z. b. drei Variablen und zwei Werte:
+Wenn der Zuweisungs Wert weniger Elemente als Variablen enthält, wird den verbleibenden Variablen der Wert zugewiesen `$null` . Der folgende Befehl enthält z. b. drei Variablen und zwei Werte:
 
 ```powershell
 $a, $b, $c = 1, 2
 ```
 
-Daher weist PowerShell den Wert 1 der `$a` Variablen und den Wert 2 der `$b` Variablen zu. Der Variablen wird kein Wert zugewiesen `$c` .
+Daher weist PowerShell den Wert 1 der `$a` Variablen und den Wert 2 der `$b` Variablen zu. Die `$c` Variable ist `$null` .
 
 Sie können einem einzelnen Wert auch mehrere Variablen zuweisen, indem Sie die Variablen verketten. Beispielsweise weist der folgende Befehl allen vier Variablen den Wert "drei" zu:
 
@@ -708,7 +710,7 @@ Zusätzlich zur Verwendung einer Zuweisungs Operation zum Festlegen eines Variab
 Set-Variable -Name a -Value 1, 2, 3
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 [about_Arrays](about_Arrays.md)
 

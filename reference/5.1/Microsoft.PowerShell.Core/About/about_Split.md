@@ -1,29 +1,27 @@
 ---
 description: Erläutert, wie der Split-Operator verwendet wird, um eine oder mehrere Zeichen folgen in Teil Zeichenfolgen aufzuteilen.
-keywords: powershell,cmdlet
 Locale: en-US
-ms.date: 12/20/2017
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_split?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Split
-ms.openlocfilehash: e93f68265bf560b03ac503ca914a11dde1f6b061
-ms.sourcegitcommit: f874dc1d4236e06a3df195d179f59e0a7d9f8436
+ms.openlocfilehash: 1667964840c0ead67ccd72aac4697779b84f864e
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "93222500"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072645"
 ---
 # <a name="about-split"></a>Informationen zur Aufteilung
 
 ## <a name="short-description"></a>KURZE BESCHREIBUNG
-
 Erläutert, wie der Split-Operator verwendet wird, um eine oder mehrere Zeichen folgen in Teil Zeichenfolgen aufzuteilen.
 
 ## <a name="long-description"></a>LANGE BESCHREIBUNG
 
 Der Split-Operator teilt eine oder mehrere Zeichen folgen in Teil Zeichenfolgen auf. Sie können die folgenden Elemente des Split-Vorgangs ändern:
 
-- Trennzeichen. Der Standardwert ist Leerraum, aber Sie können Zeichen, Zeichen folgen, Muster oder Skriptblöcke angeben, die das Trennzeichen angeben. Der Split-Operator in Windows PowerShell verwendet anstelle eines einfachen Zeichens einen regulären Ausdruck im Trennzeichen.
+- Trennzeichen. Der Standardwert ist Leerraum, aber Sie können Zeichen, Zeichen folgen, Muster oder Skriptblöcke angeben, die das Trennzeichen angeben. Der Split-Operator in PowerShell verwendet anstelle eines einfachen Zeichens einen regulären Ausdruck im Trennzeichen.
 - Maximale Anzahl von Teil Zeichenfolgen. Der Standardwert besteht darin, alle Teil Zeichenfolgen zurückzugeben. Wenn Sie eine Zahl angeben, die kleiner ist als die Anzahl der Teil Zeichenfolgen, werden die restlichen Teil Zeichenfolgen in der letzten Teil Zeichenfolge verkettet.
 - Optionen, die die Bedingungen angeben, unter denen das Trennzeichen abgeglichen wird, z. b. simplematch und Multiline.
 
@@ -62,7 +60,7 @@ green
 
 Die Zeichen, die das Ende einer Teil Zeichenfolge identifizieren. Das Standard Trennzeichen ist Leerzeichen, einschließlich Leerzeichen und nicht druckbaren Zeichen, wie z. b. Zeilen Vorschriften ( \` n) und Tab ( \` t). Wenn die Zeichen folgen aufgeteilt werden, wird das Trennzeichen in allen Teil Zeichenfolgen ausgelassen. Beispiel:
 
-```
+```powershell
 "Lastname:FirstName:Address" -split ":"
 Lastname
 FirstName
@@ -70,11 +68,11 @@ Address
 ```
 
 Standardmäßig wird das Trennzeichen in den Ergebnissen ausgelassen. Um das Trennzeichen vollständig oder teilweise beizubehalten, schließen Sie in Klammern den Teil ein, den Sie beibehalten möchten.
-Wenn der- \<Max-substrings\> Parameter hinzugefügt wird, hat dies Vorrang, wenn der Befehl die Auflistung aufteilt. Wenn Sie ein Trennzeichen als Teil der Ausgabe einschließen möchten, gibt der Befehl das Trennzeichen als Teil der Ausgabe zurück. das Aufteilen der Zeichenfolge, um das Trennzeichen als Teil der Ausgabe zurückzugeben, wird jedoch nicht als Teilung gezählt.
+Wenn der- `<Max-substrings>` Parameter hinzugefügt wird, hat dies Vorrang, wenn der Befehl die Auflistung aufteilt. Wenn Sie ein Trennzeichen als Teil der Ausgabe einschließen möchten, gibt der Befehl das Trennzeichen als Teil der Ausgabe zurück. das Aufteilen der Zeichenfolge, um das Trennzeichen als Teil der Ausgabe zurückzugeben, wird jedoch nicht als Teilung gezählt.
 
 Beispiele:
 
-```
+```powershell
 "Lastname:FirstName:Address" -split "(:)"
 Lastname
 :
@@ -90,26 +88,9 @@ FirstName
 Address
 ```
 
-Im folgenden Beispiel \<Max-substrings\> wird auf 3 festgelegt. Dies führt zu drei Teilungen der Zeichen folgen Werte, aber insgesamt fünf Zeichen folgen in der resultierenden Ausgabe. das Trennzeichen ist nach den Teilungen enthalten, bis das Maximum von drei Teil Zeichenfolgen erreicht wird. Zusätzliche Trennzeichen in der letzten Teil Zeichenfolge werden Teil der Teil Zeichenfolge.
+### `<Max-substrings>`
 
-```powershell
-'Chocolate-Vanilla-Strawberry-Blueberry' -split '(-)', 3
-```
-
-```output
-Chocolate
--
-Vanilla
--
-Strawberry-Blueberry
-```
-
-### \<Max-substrings\>
-
-Gibt an, wie oft eine Zeichenfolge maximal aufgeteilt ist. Der Standardwert ist alle Teil Zeichenfolgen, die durch das Trennzeichen geteilt werden. Wenn weitere Teil Zeichenfolgen vorhanden sind, werden Sie mit der endgültigen Teil Zeichenfolge verkettet. Wenn weniger Teil Zeichenfolgen vorhanden sind, werden alle Teil Zeichenfolgen zurückgegeben. Bei einem Wert von 0 und negativen Werten werden alle Teil Zeichenfolgen zurückgegeben.
-
-Max-Substrings gibt nicht die maximale Anzahl von Objekten an, die zurückgegeben werden. der Wert entspricht der maximalen Anzahl von Zeichen, für die eine Zeichenfolge aufgeteilt ist.
-Wenn Sie mehr als eine Zeichenfolge (ein Array von Zeichen folgen) an den Split-Operator übermitteln, wird die maximale Anzahl von Teil Zeichenfolgen separat auf jede Zeichenfolge angewendet.
+Gibt die maximale Anzahl von Teil Zeichenfolgen an, die vom Split-Vorgang zurückgegeben werden Der Standardwert ist alle Teil Zeichenfolgen, die durch das Trennzeichen geteilt werden. Wenn weitere Teil Zeichenfolgen vorhanden sind, werden Sie mit der endgültigen Teil Zeichenfolge verkettet. Wenn weniger Teil Zeichenfolgen vorhanden sind, werden alle Teil Zeichenfolgen zurückgegeben. Der Wert 0 gibt alle Teil Zeichenfolgen zurück.
 
 Beispiel:
 
@@ -118,13 +99,45 @@ $c = "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"
 $c -split ",", 5
 ```
 
-```output
+```Output
 Mercury
 Venus
 Earth
 Mars
 Jupiter,Saturn,Uranus,Neptune
 ```
+
+Wenn Sie mehr als eine Zeichenfolge (ein Array von Zeichen folgen) an den Operator übermitteln `-split` , `Max-substrings` wird die Beschränkung auf jede Zeichenfolge separat angewendet.
+
+```powershell
+$c = 'a,b,c','1,2,3,4,5'
+$c -split ',', 3
+
+a
+b
+c
+1
+2
+3,4,5
+```
+
+`<Max-substrings>` gibt nicht die maximale Anzahl von Objekten an, die zurückgegeben werden. Im folgenden Beispiel `<Max-substrings>` wird auf 3 festgelegt.
+Dies führt zu drei Teil Zeichenfolgen-Werten, aber insgesamt fünf Zeichen folgen in der resultierenden Ausgabe. Das Trennzeichen ist nach den Teilungen enthalten, bis das Maximum von drei Teil Zeichenfolgen erreicht wird. Zusätzliche Trennzeichen in der letzten Teil Zeichenfolge werden Teil der Teil Zeichenfolge.
+
+```powershell
+'Chocolate-Vanilla-Strawberry-Blueberry' -split '(-)', 3
+```
+
+```Output
+Chocolate
+-
+Vanilla
+-
+Strawberry-Blueberry
+```
+
+Negative Werte werden ignoriert.
+
 
 ### \<ScriptBlock\>
 
@@ -137,7 +150,7 @@ $c = "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune"
 $c -split {$_ -eq "e" -or $_ -eq "p"}
 ```
 
-```output
+```Output
 M
 rcury,V
 nus,
@@ -164,19 +177,19 @@ Die Syntax für den options-Parameter lautet wie folgt:
 
 Die simplematch-Optionen lauten wie folgt:
 
-- **Simplematch** : Verwenden Sie einen einfachen Zeichen folgen Vergleich, wenn Sie das Trennzeichen auswerten. Kann nicht mit RegexMatch verwendet werden.
-- **IgnoreCase** : erzwingt Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung, auch wenn der-csplit-Operator angegeben wird.
+- **Simplematch**: Verwenden Sie einen einfachen Zeichen folgen Vergleich, wenn Sie das Trennzeichen auswerten. Kann nicht mit RegexMatch verwendet werden.
+- **IgnoreCase**: erzwingt Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung, auch wenn der-csplit-Operator angegeben wird.
 
 Die RegexMatch-Optionen lauten wie folgt:
 
-- **RegexMatch** : verwendet reguläre Ausdrucks Vergleiche, um das Trennzeichen auszuwerten. Dies ist das Standardverhalten. Kann nicht mit simplematch verwendet werden.
-- **IgnoreCase** : erzwingt Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung, auch wenn der-csplit-Operator angegeben wird.
-- **CultureInvariant** : ignoriert kulturelle Unterschiede in der Sprache, wenn das Trennzeichen angegeben wird. Nur mit RegexMatch gültig.
-- **IgnorePatternWhitespace** : ignoriert Leerzeichen ohne Escapezeichen und Kommentare, die mit dem Nummern Zeichen (#) gekennzeichnet sind. Nur mit RegexMatch gültig.
-- **MultiLine** : der mehrzeilige Modus erzwingt `^` und `$` , um das Anfangs Ende jeder Zeile anstelle von Anfang und Ende der Eingabe Zeichenfolge abzugleichen.
-- **SingleLine** : der SingleLine-Modus behandelt die Eingabe Zeichenfolge als *SingleLine*.
+- **RegexMatch**: verwendet reguläre Ausdrucks Vergleiche, um das Trennzeichen auszuwerten. Dies ist das Standardverhalten. Kann nicht mit simplematch verwendet werden.
+- **IgnoreCase**: erzwingt Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung, auch wenn der-csplit-Operator angegeben wird.
+- **CultureInvariant**: ignoriert kulturelle Unterschiede in der Sprache, wenn das Trennzeichen angegeben wird. Nur mit RegexMatch gültig.
+- **IgnorePatternWhitespace**: ignoriert Leerzeichen ohne Escapezeichen und Kommentare, die mit dem Nummern Zeichen (#) gekennzeichnet sind. Nur mit RegexMatch gültig.
+- **MultiLine**: der mehrzeilige Modus erzwingt `^` und `$` , um das Anfangs Ende jeder Zeile anstelle von Anfang und Ende der Eingabe Zeichenfolge abzugleichen.
+- **SingleLine**: der SingleLine-Modus behandelt die Eingabe Zeichenfolge als *SingleLine*.
   Es erzwingt `.` , dass das Zeichen jedem Zeichen (einschließlich der Zeilenumbrüche) entspricht, anstatt jedes Zeichen mit Ausnahme von Zeilenumbrüche abzugleichen `\n` .
-- **Explizicapture** : ignoriert nicht benannte Übereinstimmungs Gruppen, sodass nur explizite Erfassungs Gruppen in der Ergebnisliste zurückgegeben werden. Nur mit RegexMatch gültig.
+- **Explizicapture**: ignoriert nicht benannte Übereinstimmungs Gruppen, sodass nur explizite Erfassungs Gruppen in der Ergebnisliste zurückgegeben werden. Nur mit RegexMatch gültig.
 
 > [!NOTE]
 > Singleline ist das Standardverhalten. SingleLine und Multiline können nicht in Verbindung mit dem options-Parameter verwendet werden. Dies wurde in PowerShell 6,0 aufgelöst.
@@ -235,7 +248,7 @@ Die folgende Anweisung teilt die Zeichenfolge bei Leerraum.
 -split "Windows PowerShell 2.0`nWindows PowerShell with remoting"
 ```
 
-```output
+```Output
 
 Windows
 PowerShell
@@ -252,7 +265,7 @@ Mit der folgenden Anweisung wird die Zeichenfolge bei jedem Komma unterteilt.
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split ','
 ```
 
-```output
+```Output
 Mercury
 Venus
 Earth
@@ -269,7 +282,7 @@ Die folgende Anweisung teilt die Zeichenfolge mit dem Muster "er".
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split 'er'
 ```
 
-```output
+```Output
 M
 cury,Venus,Earth,Mars,Jupit
 ,Saturn,Uranus,Neptune
@@ -281,7 +294,7 @@ Mit der folgenden Anweisung wird die Unterscheidung nach Groß-/Kleinschreibung 
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -cSplit 'N'
 ```
 
-```output
+```Output
 Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,
 eptune
 ```
@@ -292,7 +305,7 @@ Die folgende Anweisung teilt die Zeichenfolge unter "e" und "t".
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split '[et]'
 ```
 
-```output
+```Output
 M
 rcury,V
 nus,
@@ -311,7 +324,7 @@ Mit der folgenden Anweisung wird die Zeichenfolge bei "e" und "r" unterteilt, ab
 "Mercury,Venus,Earth,Mars,Jupiter,Saturn,Uranus,Neptune" -split '[er]', 6
 ```
 
-```output
+```Output
 M
 
 cu
@@ -326,7 +339,7 @@ Die folgende Anweisung teilt eine Zeichenfolge in drei Teil Zeichenfolgen auf.
 "a,b,c,d,e,f,g,h" -split ",", 3
 ```
 
-```output
+```Output
 a
 b
 c,d,e,f,g,h
@@ -339,7 +352,7 @@ Die folgende Anweisung teilt zwei Zeichen folgen in drei Teil Zeichenfolgen auf.
 "a,b,c,d", "e,f,g,h" -split ",", 3
 ```
 
-```output
+```Output
 a
 b
 c,d
@@ -378,7 +391,7 @@ Mit dem Standardwert RegexMatch wird der in Anführungszeichen (".") eingeschlos
 "This.is.a.test" -split "\."
 ```
 
-```output
+```Output
 This
 is
 a
@@ -393,7 +406,7 @@ Der Wert 0 stellt den Wert "return all" des Parameters "Max-Substrings" dar. Sie
 "This.is.a.test" -split ".", 0, "simplematch"
 ```
 
-```output
+```Output
 This
 is
 a
@@ -408,7 +421,7 @@ $c = "LastName, FirstName; Address, City, State, Zip"
 $c -split $(if ($i -lt 1) {","} else {";"})
 ```
 
-```output
+```Output
 LastName, FirstName
  Address, City, State, Zip
 ```

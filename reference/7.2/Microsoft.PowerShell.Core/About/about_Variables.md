@@ -1,16 +1,16 @@
 ---
 description: Beschreibt, wie Variablen Werte speichern, die in PowerShell verwendet werden können.
 Locale: en-US
-ms.date: 11/09/2020
+ms.date: 03/30/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Variables
-ms.openlocfilehash: 8d8c8d3098d33980c9c802bf00846a21e8baeb40
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 9c9c9aa7604a39aa0cc84ec252334649965f6941
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99597370"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072678"
 ---
 # <a name="about-variables"></a>Informationen zu Variablen
 
@@ -127,6 +127,21 @@ Remove-Variable -Name MyVariable
 ```powershell
 Remove-Item -Path Variable:\MyVariable
 ```
+
+Es ist auch möglich, mit einer Anweisung mehrere Variablen zu Werten. In den folgenden Beispielen wird der gleiche Wert mehreren Variablen zugewiesen:
+
+```powershell
+$a = $b = $c = 0
+```
+
+Im nächsten Beispiel werden mehrere Werte mehreren Variablen zugewiesen.
+
+```powershell
+$i,$j,$k = 10, "red", $true    # $i is 10, $j is "red", $k is True
+$i,$j = 10, "red", $true       # $i is 10, $j is [object[]], Length 2
+```
+
+Ausführlichere Informationen finden Sie im Abschnitt **zuweisen mehrerer Variablen** [about_Assignment_Operators](about_assignment_operators.md#assigning-multiple-variables).
 
 ## <a name="types-of-variables"></a>Typen von Variablen
 
@@ -394,7 +409,7 @@ Um Hilfe zu einem bestimmten Cmdlet zu erhalten, geben Sie Folgendes ein:
 Get-Help <cmdlet-name>
 ```
 
-| Cmdlet-Name       | BESCHREIBUNG                                |
+| Cmdlet-Name       | Beschreibung                                |
 | ---------------   | ------------------------------------------ |
 | `Clear-Variable`  | Löscht den Wert einer Variablen.           |
 | `Get-Variable`    | Ruft die Variablen in der aktuellen Konsole ab. |
@@ -402,7 +417,7 @@ Get-Help <cmdlet-name>
 | `Remove-Variable` | Löscht eine Variable und ihren Wert.          |
 | `Set-Variable`    | Ändert den Wert einer Variablen.           |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [about_Automatic_Variables](about_Automatic_Variables.md)
 
@@ -417,4 +432,3 @@ Get-Help <cmdlet-name>
 [about_Scopes](about_Scopes.md)
 
 [about_Remote_Variables](about_Remote_Variables.md)
-
