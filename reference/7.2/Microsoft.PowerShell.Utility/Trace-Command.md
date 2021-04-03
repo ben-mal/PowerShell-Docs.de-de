@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 04/09/2020
+ms.date: 04/01/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/trace-command?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Trace-Command
-ms.openlocfilehash: afc08b263d75f8a728ce6d64cc7ede0a639df196
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 97571023c1428de5db0c2e6e13e285cafe609843
+ms.sourcegitcommit: 5b48fe7b2593581b7d4f7dd7c22206d8a45bb8af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99600300"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106184408"
 ---
 # Trace-Command
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Konfiguriert und startet eine Ablaufverfolgung des angegebenen Ausdrucks oder Befehls.
 
-## SYNTAX
+## Syntax
 
 ### expressionset (Standard)
 
@@ -36,11 +36,12 @@ Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSo
  [-Debugger] [-PSHost] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
+
 Das `Trace-Command` -Cmdlet konfiguriert und startet eine Ablauf Verfolgung des angegebenen Ausdrucks oder Befehls.
 Es funktioniert wie Set-TraceSource, mit dem Unterschied, dass es nur für den angegebenen Befehl gilt.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Verarbeitung von Ablauf Verfolgungs Metadaten, Parameter Bindung und ein Ausdruck
 
@@ -70,7 +71,7 @@ Der erste Befehl speichert die Zeichenfolge `i*` in der `$A` Variablen. Der zwei
 
 Der Ausdruck, der verarbeitet wird `Get-Alias $Input` , ist, wobei die `$Input` Variable dem **Inputobject** -Parameter zugeordnet ist. Der **Inputobject** -Parameter übergibt die Variable `$A` an den Ausdruck. Tatsächlich ist der Befehl, der während der Ablauf Verfolgung verarbeitet wird, `Get-Alias -InputObject $A" or "$A | Get-Alias` .
 
-## PARAMETERS
+## Parameter
 
 ### -Argumentlist
 
@@ -190,17 +191,17 @@ Accept wildcard characters: False
 
 Gibt optionale Daten für das Präfix der einzelnen Ablauf Verfolgungs Meldungen in der Ausgabe an. Zulässige Werte für diesen Parameter:
 
-- Keine
-- LogicalOperationStack
-- Datetime
-- Timestamp
-- ProcessId
--  ThreadId
-- Aufruf Liste
+- `None`
+- `LogicalOperationStack`
+- `DateTime`
+- `Timestamp`
+- `ProcessId`
+- `ThreadId`
+- `Callstack`
 
-**Keine** ist die Standardeinstellung.
+`None` ist die Standardeinstellung.
 
-Um mehrere Optionen anzugeben, trennen Sie diese durch Kommas, aber ohne Leerzeichen, und schließen Sie sie in Anführungszeichen ein, z. B. "ProcessID,ThreadID".
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **listeneroption** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Diagnostics.TraceOptions
@@ -235,36 +236,36 @@ Accept wildcard characters: False
 
 Bestimmt den Typ der Ereignisse, die verfolgt werden. Zulässige Werte für diesen Parameter:
 
-- Keine
-- Konstruktor
-- Dispose
-- Finalizer
-- Methode
-- Eigenschaft
-- Delegaten
-- Ereignisse
-- Ausnahme
-- Sperre
-- Fehler
-- Errors
-- Warnung
-- Ausführlich
-- WriteLine
-- Daten
+- `None`
+- `Constructor`
+- `Dispose`
+- `Finalizer`
+- `Method`
+- `Property`
+- `Delegates`
+- `Events`
+- `Exception`
+- `Lock`
+- `Error`
+- `Errors`
+- `Warning`
+- `Verbose`
+- `WriteLine`
+- `Data`
 - `Scope`
-- ExecutionFlow
-- Assert
-- Alle
+- `ExecutionFlow`
+- `Assert`
+- `All`
 
-„All“ ist die Standardeinstellung.
+`All` ist die Standardeinstellung.
 
 Die folgenden Werte sind Kombinationen von anderen Werten:
 
-- Executionflow: (Konstruktor, verwerfen, Finalizer, Methode, Delegaten, Ereignisse und Bereich)
-- Daten: (Konstruktor, verwerfen, Finalizer, Property, verbose und Write teline)
-- Fehler: (Fehler und Ausnahme).
+- `ExecutionFlow`: `Constructor`, `Dispose`, `Finalizer`, `Method`, `Delegates`, `Events`, `Scope`
+- `Data`: `Constructor`, `Dispose`, `Finalizer`, `Property`, `Verbose`, `WriteLine`
+- `Errors`: `Error`, `Exception`
 
-Um mehrere Optionen anzugeben, trennen Sie diese durch Kommas, aber ohne Leerzeichen, und schließen Sie sie in Anführungszeichen ein, z. B. "Constructor,Dispose".
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **options** Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Management.Automation.PSTraceSourceOptions
@@ -299,19 +300,19 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System. Management. Automation. psobject
 
 Sie können Objekte, die Eingaben darstellen, an den Ausdruck übergeben `Trace-Command` .
 
-## AUSGABEN
+## Ausgaben
 
 ### System. Management. Automation. psobject
 
 Gibt die Befehlsablaufverfolgung im Debug-Stream zurück.
 
-## HINWEISE
+## Notizen
 
 - Die Ablaufverfolgung ist eine Methode, die Entwickler zum Debuggen und Optimieren von Programmen verwenden. Bei der Ablaufverfolgung erzeugt das Programm ausführliche Meldungen zu den einzelnen Schritten in der internen Verarbeitung.
 
@@ -327,7 +328,7 @@ Gibt die Befehlsablaufverfolgung im Debug-Stream zurück.
 
 - Die Namen der Parameter " **Name**", " **Ausdruck**", " **Option**" und " **Command** " sind optional. Wenn Sie die Parameternamen weglassen, müssen die unbenannten Parameterwerte in dieser Reihenfolge angezeigt werden: **Name**, **Ausdruck**, **Option** oder **Name**, **Befehl**, **Option**. Wenn Sie die Parameternamen angeben, können die Parameter in beliebiger Reihenfolge angegeben werden.
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Get-TraceSource](Get-TraceSource.md)
 

@@ -1,19 +1,18 @@
 ---
 Download Help Link: https://go.microsoft.com/fwlink/?linkid=2113633
 Help Version: 7.0.1.0
-keywords: powershell,cmdlet
 Locale: en-US
 Module Guid: 1da87e53-152b-403e-98dc-74d7b4d63d59
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/02/2021
 schema: 2.0.0
 title: Microsoft.PowerShell.Utility
-ms.openlocfilehash: 6afa678e516ca3f3f6af5be87d2bb7eea628fcf5
-ms.sourcegitcommit: 9d95532afe81c235c8094eae28ab84b2f77f8c48
+ms.openlocfilehash: 65801c5c75c449fc1ef074c2abe70ebeb8fae2a0
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "93220404"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274031"
 ---
 # Microsoft.PowerShell.Utility-Modul
 
@@ -27,7 +26,7 @@ Dieser Abschnitt enthält die Hilfe Themen für die Cmdlets, die mit dem Microso
 Fügt einer Instanz eines PowerShell-Objekts benutzerdefinierte Eigenschaften und Methoden hinzu.
 
 ### [Add-Type](Add-Type.md)
-Fügt einer PowerShell-Sitzung eine Microsoft .net Core-Klasse hinzu.
+Fügt einer PowerShell-Sitzung eine Microsoft .NET Klasse hinzu.
 
 ### [Clear-Variable](Clear-Variable.md)
 Löscht den Wert einer Variablen.
@@ -83,7 +82,7 @@ Exportiert Informationen zu aktuell definierten Aliasen in eine Datei.
 ### [Export-Clixml](Export-Clixml.md)
 Erstellt eine XML-basierte Darstellung eines Objekts oder von Objekten und speichert sie in einer Datei.
 
-### [Export-Csv](Export-Csv.md)
+### [Export-CSV](Export-Csv.md)
 Konvertiert-Objekte in eine Reihe von CSV-Zeichen folgen (Comma-Separated Value, Komma getrennte Werte) und speichert die Zeichen folgen in einer Datei.
 
 ### [Export-FormatData](Export-FormatData.md)
@@ -347,7 +346,7 @@ Wartet, bis ein bestimmtes Ereignis ausgelöst wird, bevor die Ausführung fortg
 ### [Write-Debug](Write-Debug.md)
 Schreibt eine Debugmeldung in die Konsole.
 
-### [Schreibfehler](Write-Error.md)
+### [Write-Error](Write-Error.md)
 Schreibt ein Objekt in den Fehlerdatenstrom.
 
 ### [Write-Host](Write-Host.md)

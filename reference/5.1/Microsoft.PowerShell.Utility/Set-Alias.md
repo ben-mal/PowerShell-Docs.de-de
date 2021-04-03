@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 2/28/2019
+ms.date: 04/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Alias
-ms.openlocfilehash: d7df44947717ee9a46ab665a60cf8a35259214e6
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 3c3e95058ff150666c9db9e84d9a6fce38fc74bb
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213716"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274237"
 ---
 # Set-Alias
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Erstellt oder ändert einen Alias für ein Cmdlet oder einen anderen Befehl in der aktuellen PowerShell-Sitzung.
 
-## SYNTAX
+## Syntax
 
 ### Standard (Standard)
 
@@ -28,7 +28,7 @@ Set-Alias [-Name] <string> [-Value] <string> [-Description <string>] [-Option <S
  [-PassThru] [-Scope <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Das- `Set-Alias` Cmdlet erstellt oder ändert einen Alias für ein Cmdlet oder einen Befehl, z. b. eine Funktion, ein Skript, eine Datei oder eine andere ausführbare Datei. Ein Alias ist ein alternativer Name, der auf ein Cmdlet oder einen Befehl verweist.
 Beispielsweise `sal` ist der Alias für das `Set-Alias` Cmdlet. Weitere Informationen finden Sie unter [about_Aliases](../Microsoft.PowerShell.Core/About/about_Aliases.md).
@@ -37,7 +37,7 @@ Ein Cmdlet kann über mehrere Aliase verfügen, aber ein Alias kann nur einem Cm
 
 Ein Alias, der von erstellt oder geändert wird, `Set-Alias` ist nicht permanent und ist nur während der aktuellen PowerShell-Sitzung verfügbar. Wenn die PowerShell-Sitzung geschlossen ist, wird der Alias entfernt.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Erstellen eines Alias für ein Cmdlet
 
@@ -136,18 +136,30 @@ In diesem Beispiel wird gezeigt, wie ein Alias einem Befehl mit Parametern zugew
 Sie können einen Alias für ein Cmdlet erstellen, z `Set-Location` . b.. Sie können keinen Alias für einen Befehl mit Parametern und Werten erstellen, z `Set-Location -Path C:\Windows\System32` . b.. Um einen Alias für einen Befehl zu erstellen, erstellen Sie eine Funktion, die den Befehl enthält, und erstellen dann einen Alias für die Funktion. Weitere Informationen finden Sie unter [about_Functions](../Microsoft.PowerShell.Core/about/about_Functions.md).
 
 ```
-PS> Function CD32 {Set-Location -Path C:\Windows\System32}
+Function CD32 {Set-Location -Path C:\Windows\System32}
 
-PS> Set-Alias -Name Go -Value CD32
+Set-Alias -Name Go -Value CD32
 ```
 
-Es wird eine Funktion mit dem Namen `CD32` erstellt. Die-Funktion verwendet das- `Set-Location` Cmdlet mit dem **path** -Parameter, um das Verzeichnis anzugeben, **c:\Windows\System32** .
+Es wird eine Funktion mit dem Namen `CD32` erstellt. Die-Funktion verwendet das- `Set-Location` Cmdlet mit dem **path** -Parameter, um das Verzeichnis anzugeben `C:\Windows\System32` .
 
 Mit dem- `Set-Alias` Cmdlet wird ein Alias für die-Funktion in der aktuellen PowerShell-Sitzung erstellt. Der **Name** -Parameter gibt den Aliasnamen an `Go` . Der **value** -Parameter gibt den Namen der Funktion an `CD32` .
 
-Um den Alias auszuführen, geben Sie `Go` in der PowerShell-Befehlszeile ein. Die `CD32` Funktion wird ausgeführt und wechselt zum Verzeichnis **c:\Windows\System32** .
+Um den Alias auszuführen, geben Sie `Go` in der PowerShell-Befehlszeile ein. Die `CD32` Funktion wird ausgeführt und ändert sich in das Verzeichnis `C:\Windows\System32` .
 
-## PARAMETERS
+### Beispiel 6: Aktualisieren von Optionen für einen vorhandenen Alias
+
+In diesem Beispiel wird gezeigt, wie mehrere Optionen mithilfe des **options** -Parameters zugewiesen werden.
+
+Im obigen Beispiel wird der Alias `Go` als und festgelegt `ReadOnly` `Private` .
+
+```powershell
+Set-Alias -Name Go -Option ReadOnly, Private
+```
+
+Der Alias `Go` sollte bereits vorhanden sein. Nach dem Ausführen des obigen Befehls kann der Alias nicht mehr geändert werden, ohne dass der **Force** -Parameter verwendet wird, und ist nur im aktuellen Bereich verfügbar.
+
+## Parameter
 
 ### -Description
 
@@ -201,16 +213,18 @@ Accept wildcard characters: False
 
 ### -Option
 
-Legt den Wert der **Option** -Eigenschaft des Alias fest. Werte wie "schreibgeschützt **" und "** **Constant** " schützen einen Alias vor unbeabsichtigten Änderungen. Um die **options** -Eigenschaft aller Aliase in der Sitzung anzuzeigen, geben Sie ein `Get-Alias | Format-Table -Property Name, Options -Autosize` .
+Legt den Wert der **Option** -Eigenschaft des Alias fest. Werte wie `ReadOnly` und `Constant` schützen einen Alias vor unbeabsichtigten Änderungen. Um die **options** -Eigenschaft aller Aliase in der Sitzung anzuzeigen, geben Sie ein `Get-Alias | Format-Table -Property Name, Options -Autosize` .
 
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
-- **Allscope** Der Alias wird in neue Bereiche kopiert, die erstellt werden.
-- **Konstante** Kann nicht geändert oder gelöscht werden.
-- **Keine** Legt keine Optionen fest und ist die Standardeinstellung.
-- **Privat** Der Alias ist nur im aktuellen Bereich verfügbar.
-- **ReadOnly** Schreibgeschützt Kann nicht geändert oder gelöscht werden, es sei denn, der **Force** -Parameter wird verwendet.
-- **Nicht angegeben**
+- `AllScope` -Der Alias wird in neue Bereiche kopiert, die erstellt werden.
+- `Constant` -Kann nicht geändert oder gelöscht werden.
+- `None` -Legt keine Optionen fest und ist die Standardeinstellung.
+- `Private` -Der Alias ist nur im aktuellen Bereich verfügbar.
+- `ReadOnly` -Kann nur geändert oder gelöscht werden, wenn der **Force** -Parameter verwendet wird.
+- `Unspecified`
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **options** Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Management.Automation.ScopedItemOptions
@@ -243,7 +257,7 @@ Accept wildcard characters: False
 
 ### -Bereich
 
-Gibt den Bereich an, in dem dieser Alias gültig ist. Der Standardwert ist **local** . Weitere Informationen finden Sie unter [about_Scopes](../Microsoft.PowerShell.Core/About/about_Scopes.md).
+Gibt den Bereich an, in dem dieser Alias gültig ist. Der Standardwert ist **local**. Weitere Informationen finden Sie unter [about_Scopes](../Microsoft.PowerShell.Core/About/about_Scopes.md).
 
 Die zulässigen Werte lauten wie folgt:
 
@@ -318,13 +332,13 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### Keine
 
 `Set-Alias` akzeptiert keine Eingaben aus der Pipeline.
 
-## AUSGABEN
+## Ausgaben
 
 ### None oder System. Management. Automation. AliasInfo
 

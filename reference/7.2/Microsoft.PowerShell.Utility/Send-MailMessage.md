@@ -2,25 +2,25 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 05/11/2020
+ms.date: 04/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Send-MailMessage
-ms.openlocfilehash: 0a68c665e8a0b504cfef416134374c5598ba55a7
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: e1363b2f30420c130093fd92d4da2f7c8037d640
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99602923"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274324"
 ---
 # Send-MailMessage
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Sendet eine E-Mail.
 
-## SYNTAX
+## Syntax
 
-### Alle
+### All
 
 ```
 Send-MailMessage [-Attachments <String[]>] [-Bcc <String[]>] [[-Body] <String>] [-BodyAsHtml]
@@ -30,7 +30,7 @@ Send-MailMessage [-Attachments <String[]>] [-Bcc <String[]>] [[-Body] <String>] 
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Das `Send-MailMessage` Cmdlet sendet eine e-Mail-Nachricht in PowerShell.
 
@@ -40,7 +40,7 @@ Der Wert, der zugewiesen `$PSEmailServer` wird, ist die SMTP-Standardeinstellung
 > [!WARNING]
 > Das- `Send-MailMessage` Cmdlet ist veraltet. Dieses Cmdlet garantiert keine sicheren Verbindungen mit SMTP-Servern. Obwohl es in PowerShell keinen unmittelbaren Austausch gibt, wird empfohlen, nicht zu verwenden `Send-MailMessage` . Weitere Informationen finden Sie unter [Platform Compatibility Note DE0005](https://aka.ms/SendMailMessage).
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Senden einer e-Mail von einer Person an eine andere Person
 
@@ -79,7 +79,7 @@ Das `Send-MailMessage` Cmdlet verwendet den **from** -Parameter, um den Absender
 
 Der **Credential** -Parameter gibt an, dass die Anmelde Informationen eines Domänen Administrators zum Senden der Nachricht verwendet werden. Der **Parameter** "", gibt an, dass Secure Socket Layer (SSL) eine sichere Verbindung erstellt.
 
-## PARAMETERS
+## Parameter
 
 ### -Anhänge
 
@@ -198,6 +198,8 @@ Die zulässigen Werte für diesen Parameter lauten wie folgt:
 - `OnFailure`: Benachrichtigen, wenn die Übermittlung nicht erfolgreich war.
 - `Delay`: Benachrichtigen, wenn die Übermittlung verzögert ist.
 - `Never`: Nie benachrichtigen.
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können an den Parameter **deliverynotification** als Array von Werten oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Net.Mail.DeliveryNotificationOptions
@@ -382,21 +384,21 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System.String
 
 Sie können die Pfad-und Dateinamen von Anlagen an übergeben `Send-MailMessage` .
 
-## AUSGABEN
+## Ausgaben
 
 ### Keine
 
 Dieses Cmdlet generiert keine Ausgabe.
 
-## HINWEISE
+## Notizen
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [about_Preference_Variables](../Microsoft.PowerShell.Core/About/about_Preference_Variables.md)
 

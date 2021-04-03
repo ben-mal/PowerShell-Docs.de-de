@@ -1,23 +1,22 @@
 ---
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
-keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 08/26/2019
+ms.date: 04/02/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/add-type?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-Type
-ms.openlocfilehash: af7cd937ccfc7c5f05fd0213764ed51a3ba9f2bb
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: e6fa1d63f2c748c590920db0cbfdf241e0646a73
+ms.sourcegitcommit: c91f79576bc54e162bcc7adf78026417b2776687
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93214159"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274254"
 ---
 # Add-Type
 
 ## ZUSAMMENFASSUNG
-Fügt einer PowerShell-Sitzung eine Microsoft .NET Framework-Klasse hinzu.
+Fügt einer PowerShell-Sitzung eine Microsoft .NET Klasse hinzu.
 
 ## SYNTAX
 
@@ -198,7 +197,7 @@ $ShowWindowAsync::ShowWindowAsync((Get-Process -Id $Pid).MainWindowHandle, 4)
 Die `$Signature` Variable speichert die c#-Signatur der `ShowWindowAsync` Funktion. Um sicherzustellen, dass die resultierende Methode in einer PowerShell-Sitzung sichtbar ist, wurde das- `public` Schlüsselwort der Standard Signatur hinzugefügt. Weitere Informationen finden Sie unter [ShowWindowAsync-Funktion](/windows/win32/api/winuser/nf-winuser-showwindowasync).
 
 Die- `$ShowWindowAsync` Variable speichert das-Objekt, das vom `Add-Type` **passthru** -Parameter erstellt wurde.
-Das- `Add-Type` Cmdlet fügt die `ShowWindowAsync` Funktion als statische Methode zur PowerShell-Sitzung hinzu. Der Befehl verwendet den Parameter " **Membership Definition** ", um die in der Variablen gespeicherte Methoden Definition anzugeben `$Signature` . Der Befehl verwendet die Parameter **Name** und **Namespace** , um einen Namen und einen Namespace für die Klasse anzugeben. Der **passthru** -Parameter generiert ein Objekt, das die Typen darstellt.
+Das- `Add-Type` Cmdlet fügt die `ShowWindowAsync` Funktion als statische Methode zur PowerShell-Sitzung hinzu. Der Befehl verwendet den Parameter " **Membership Definition** ", um die in der Variablen gespeicherte Methoden Definition anzugeben `$Signature` . Der Befehl verwendet die Parameter **Name** und **Namespace**, um einen Namen und einen Namespace für die Klasse anzugeben. Der **passthru** -Parameter generiert ein Objekt, das die Typen darstellt.
 
 Die neue `ShowWindowAsync` statische Methode wird in den Befehlen verwendet, um die PowerShell-Konsole zu minimieren und wiederherzustellen. Die-Methode nimmt zwei Parameter an: das Fenster Handle und eine ganze Zahl, die angibt, wie das Fenster angezeigt wird.
 
@@ -234,7 +233,7 @@ Hello, World
 
 ### Beispiel 6: Hinzufügen einer Klasse mit JScript.net
 
-In diesem Beispiel wird JScript.NET verwendet, um eine neue Klasse ( **frechteck** ) in der PowerShell-Sitzung zu erstellen.
+In diesem Beispiel wird JScript.NET verwendet, um eine neue Klasse ( **frechteck**) in der PowerShell-Sitzung zu erstellen.
 
 ```powershell
 Add-Type @'
@@ -282,7 +281,7 @@ $FSharpType::loop(4)
 `Add-Type` verwendet den **path** -Parameter, um eine Assembly anzugeben, und ruft die Typen in der Assembly ab.
 `New-Object` erstellt eine Instanz des F #-Code Anbieters und speichert das Ergebnis in der `$Provider` Variablen. Die- `$FSharpCode` Variable speichert den F #-Code, der die **Schleifen** Methode definiert.
 
-Die- `$FSharpType` Variable speichert die Ergebnisse des- `Add-Type` Cmdlets, das die in definierten öffentlichen Typen speichert `$FSharpCode` . Der **TypeDefinition** -Parameter gibt den Quellcode an, der die Typen definiert. Der **CodeDomProvider** -Parameter gibt den Quellcodecompiler an. Der **passthru** -Parameter weist `Add-Type` an, ein **Lauf** Zeit Objekt zurückzugeben, das die Typen darstellt.
+Die- `$FSharpType` Variable speichert die Ergebnisse des- `Add-Type` Cmdlets, das die in definierten öffentlichen Typen speichert `$FSharpCode` . Der **TypeDefinition**-Parameter gibt den Quellcode an, der die Typen definiert. Der **CodeDomProvider**-Parameter gibt den Quellcodecompiler an. Der **passthru** -Parameter weist `Add-Type` an, ein **Lauf** Zeit Objekt zurückzugeben, das die Typen darstellt.
 Die Objekte werden über die Pipeline an das `Where-Object` Cmdlet gesendet, das nur die öffentlichen Typen zurückgibt. Das **Where-Object-** Cmdlet wird verwendet, da der F #-Anbieter nicht öffentliche Typen generiert, um den resultierenden öffentlichen Typ zu unterstützen.
 
 Die Schleifen Methode wird als statische Methode des in der Variablen gespeicherten Typs aufgerufen `$FSharpType` .
@@ -329,7 +328,7 @@ Accept wildcard characters: False
 
 Gibt die Optionen für den Quellcodecompiler an. Diese Optionen werden ohne Revision an den Compiler gesendet.
 
-Mit diesem Parameter können Sie den Compiler anweisen, eine ausführbare Datei zu generieren, Ressourcen einzubetten oder Befehlszeilenoptionen (z. b. die Option) festzulegen `/unsafe` . Dieser Parameter implementiert die **CompilerParameters** -Klasse, **System. CodeDom. Compiler. CompilerParameters** .
+Mit diesem Parameter können Sie den Compiler anweisen, eine ausführbare Datei zu generieren, Ressourcen einzubetten oder Befehlszeilenoptionen (z. b. die Option) festzulegen `/unsafe` . Dieser Parameter implementiert die **CompilerParameters** -Klasse, **System. CodeDom. Compiler. CompilerParameters**.
 
 Der **CompilerParameters** -Parameter und der **referencedassemblyparameter** können nicht im selben Befehl verwendet werden.
 
@@ -497,7 +496,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt ein **System.Runtime** -Objekt zurück, das die Typen darstellt, die hinzugefügt wurden. Standardmäßig generiert dieses Cmdlet keine Ausgabe.
+Gibt ein **System.Runtime**-Objekt zurück, das die Typen darstellt, die hinzugefügt wurden. Standardmäßig generiert dieses Cmdlet keine Ausgabe.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -517,7 +516,7 @@ Gibt den Pfad zu Quellcodedateien oder Assembly-DLL-Dateien an, die die Typen en
 
 Wenn Sie Quell Code Dateien übermitteln, `Add-Type` kompiliert den Code in den Dateien und erstellt eine in-Memory-Assembly der Typen. Die im **Pfad** Wert angegebene Dateinamenerweiterung bestimmt den Compiler, der von `Add-Type` verwendet wird.
 
-Wenn Sie eine Assemblydatei übermitteln, `Add-Type` übernimmt die Typen aus der Assembly. Um eine speicherinterne Assembly oder den globalen Assemblycache anzugeben, verwenden Sie den **AssemblyName** -Parameter.
+Wenn Sie eine Assemblydatei übermitteln, `Add-Type` übernimmt die Typen aus der Assembly. Um eine speicherinterne Assembly oder den globalen Assemblycache anzugeben, verwenden Sie den **AssemblyName**-Parameter.
 
 ```yaml
 Type: System.String[]
@@ -553,7 +552,7 @@ Accept wildcard characters: False
 
 Gibt den Quellcode an, der die Typdefinitionen enthält. Geben Sie den Quellcode in einer Zeichenfolge oder einer here-Zeichenfolge ein, oder geben Sie eine Variable ein, die den Quellcode enthält. Weitere Informationen zu here-Zeichen folgen finden Sie unter [about_Quoting_Rules](../Microsoft.PowerShell.Core/about/about_Quoting_Rules.md).
 
-Schließen Sie eine Namespacedeklaration in die Typdefinition ein. Wenn Sie die Namespacedeklaration weglassen, kann der Typ denselben Namen wie ein anderer Typ oder die Verknüpfung für einen anderen Typ aufweisen, was zu einer unbeabsichtigten Überschreibung führen kann. Wenn Sie z. b. einen Typ mit dem Namen " **Exception** " definieren, schlagen Skripts, die eine **Ausnahme** als Verknüpfung für **System. Exception** verwenden, fehl.
+Schließen Sie eine Namespacedeklaration in die Typdefinition ein. Wenn Sie die Namespacedeklaration weglassen, kann der Typ denselben Namen wie ein anderer Typ oder die Verknüpfung für einen anderen Typ aufweisen, was zu einer unbeabsichtigten Überschreibung führen kann. Wenn Sie z. b. einen Typ mit dem Namen " **Exception**" definieren, schlagen Skripts, die eine **Ausnahme** als Verknüpfung für **System. Exception** verwenden, fehl.
 
 ```yaml
 Type: System.String
@@ -571,7 +570,7 @@ Accept wildcard characters: False
 
 Gibt andere Namespaces an, die für die Klasse erforderlich sind. Dies ähnelt dem c#-Schlüsselwort `Using` .
 
-Standardmäßig `Add-Type` verweist auf den **System** -Namespace. Wenn der Parameter " **Membership Definition** " verwendet wird, `Add-Type` verweist standardmäßig auch auf den **System. Runtime. InteropServices** -Namespace. Auf die Namespaces, die Sie mithilfe der **UsingNamespace** -Parameter hinzufügen, wird zusätzlich zu den standardmäßigen Namespaces verwiesen.
+Standardmäßig `Add-Type` verweist auf den **System** -Namespace. Wenn der Parameter " **Membership Definition** " verwendet wird, `Add-Type` verweist standardmäßig auch auf den **System. Runtime. InteropServices** -Namespace. Auf die Namespaces, die Sie mithilfe der **UsingNamespace**-Parameter hinzufügen, wird zusätzlich zu den standardmäßigen Namespaces verwiesen.
 
 ```yaml
 Type: System.String[]
