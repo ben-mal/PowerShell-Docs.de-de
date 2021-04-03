@@ -3,25 +3,25 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 04/09/2020
+ms.date: 04/01/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/trace-command?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Trace-Command
-ms.openlocfilehash: 00c267b5db630944dbccd35a30ea614d13193af8
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 5880ded4ea7b6c901f9d242dfe19db2a2a4f6c7d
+ms.sourcegitcommit: 5b48fe7b2593581b7d4f7dd7c22206d8a45bb8af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213652"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106184357"
 ---
-# <span data-ttu-id="2a249-103">Trace-Command</span><span class="sxs-lookup"><span data-stu-id="2a249-103">Trace-Command</span></span>
+# <span data-ttu-id="d646b-103">Trace-Command</span><span class="sxs-lookup"><span data-stu-id="d646b-103">Trace-Command</span></span>
 
-## <span data-ttu-id="2a249-104">ZUSAMMENFASSUNG</span><span class="sxs-lookup"><span data-stu-id="2a249-104">SYNOPSIS</span></span>
-<span data-ttu-id="2a249-105">Konfiguriert und startet eine Ablaufverfolgung des angegebenen Ausdrucks oder Befehls.</span><span class="sxs-lookup"><span data-stu-id="2a249-105">Configures and starts a trace of the specified expression or command.</span></span>
+## <span data-ttu-id="d646b-104">Übersicht</span><span class="sxs-lookup"><span data-stu-id="d646b-104">Synopsis</span></span>
+<span data-ttu-id="d646b-105">Konfiguriert und startet eine Ablaufverfolgung des angegebenen Ausdrucks oder Befehls.</span><span class="sxs-lookup"><span data-stu-id="d646b-105">Configures and starts a trace of the specified expression or command.</span></span>
 
-## <span data-ttu-id="2a249-106">SYNTAX</span><span class="sxs-lookup"><span data-stu-id="2a249-106">SYNTAX</span></span>
+## <span data-ttu-id="d646b-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="d646b-106">Syntax</span></span>
 
-### <span data-ttu-id="2a249-107">expressionset (Standard)</span><span class="sxs-lookup"><span data-stu-id="2a249-107">expressionSet (Default)</span></span>
+### <span data-ttu-id="d646b-107">expressionset (Standard)</span><span class="sxs-lookup"><span data-stu-id="d646b-107">expressionSet (Default)</span></span>
 
 ```
 Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSourceOptions>]
@@ -29,7 +29,7 @@ Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSo
  [-PSHost] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="2a249-108">commandSet</span><span class="sxs-lookup"><span data-stu-id="2a249-108">commandSet</span></span>
+### <span data-ttu-id="d646b-108">commandSet</span><span class="sxs-lookup"><span data-stu-id="d646b-108">commandSet</span></span>
 
 ```
 Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSourceOptions>]
@@ -37,47 +37,48 @@ Trace-Command [-InputObject <PSObject>] [-Name] <String[]> [[-Option] <PSTraceSo
  [-Debugger] [-PSHost] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="2a249-109">DESCRIPTION</span><span class="sxs-lookup"><span data-stu-id="2a249-109">DESCRIPTION</span></span>
-<span data-ttu-id="2a249-110">Das `Trace-Command` -Cmdlet konfiguriert und startet eine Ablauf Verfolgung des angegebenen Ausdrucks oder Befehls.</span><span class="sxs-lookup"><span data-stu-id="2a249-110">The `Trace-Command` cmdlet configures and starts a trace of the specified expression or command.</span></span>
-<span data-ttu-id="2a249-111">Es funktioniert wie Set-TraceSource, mit dem Unterschied, dass es nur für den angegebenen Befehl gilt.</span><span class="sxs-lookup"><span data-stu-id="2a249-111">It works like Set-TraceSource, except that it applies only to the specified command.</span></span>
+## <span data-ttu-id="d646b-109">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="d646b-109">Description</span></span>
 
-## <span data-ttu-id="2a249-112">BEISPIELE</span><span class="sxs-lookup"><span data-stu-id="2a249-112">EXAMPLES</span></span>
+<span data-ttu-id="d646b-110">Das `Trace-Command` -Cmdlet konfiguriert und startet eine Ablauf Verfolgung des angegebenen Ausdrucks oder Befehls.</span><span class="sxs-lookup"><span data-stu-id="d646b-110">The `Trace-Command` cmdlet configures and starts a trace of the specified expression or command.</span></span>
+<span data-ttu-id="d646b-111">Es funktioniert wie Set-TraceSource, mit dem Unterschied, dass es nur für den angegebenen Befehl gilt.</span><span class="sxs-lookup"><span data-stu-id="d646b-111">It works like Set-TraceSource, except that it applies only to the specified command.</span></span>
 
-### <span data-ttu-id="2a249-113">Beispiel 1: Verarbeitung von Ablauf Verfolgungs Metadaten, Parameter Bindung und ein Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2a249-113">Example 1: Trace metadata processing, parameter binding, and an expression</span></span>
+## <span data-ttu-id="d646b-112">Beispiele</span><span class="sxs-lookup"><span data-stu-id="d646b-112">Examples</span></span>
 
-<span data-ttu-id="2a249-114">In diesem Beispiel wird eine Ablauf Verfolgung der Metadatenverarbeitung, der Parameter Bindung und der Cmdlet-Erstellung und-Zerstörung des `Get-Process Notepad` Ausdrucks gestartet.</span><span class="sxs-lookup"><span data-stu-id="2a249-114">This example starts a trace of metadata processing, parameter binding, and cmdlet creation and destruction of the `Get-Process Notepad` expression.</span></span>
+### <span data-ttu-id="d646b-113">Beispiel 1: Verarbeitung von Ablauf Verfolgungs Metadaten, Parameter Bindung und ein Ausdruck</span><span class="sxs-lookup"><span data-stu-id="d646b-113">Example 1: Trace metadata processing, parameter binding, and an expression</span></span>
+
+<span data-ttu-id="d646b-114">In diesem Beispiel wird eine Ablauf Verfolgung der Metadatenverarbeitung, der Parameter Bindung und der Cmdlet-Erstellung und-Zerstörung des `Get-Process Notepad` Ausdrucks gestartet.</span><span class="sxs-lookup"><span data-stu-id="d646b-114">This example starts a trace of metadata processing, parameter binding, and cmdlet creation and destruction of the `Get-Process Notepad` expression.</span></span>
 
 ```powershell
 Trace-Command -Name metadata,parameterbinding,cmdlet -Expression {Get-Process Notepad} -PSHost
 ```
 
-<span data-ttu-id="2a249-115">Er verwendet den **Name** -Parameter zum Angeben der Ablauf Verfolgungs Quellen, den **Expression** -Parameter zur Angabe des Befehls und den **pshost** -Parameter, um die Ausgabe an die Konsole zu senden.</span><span class="sxs-lookup"><span data-stu-id="2a249-115">It uses the **Name** parameter to specify the trace sources, the **Expression** parameter to specify the command, and the **PSHost** parameter to send the output to the console.</span></span> <span data-ttu-id="2a249-116">Da keine Ablauf Verfolgungs Optionen oder Listeneroptionen angegeben werden, verwendet der Befehl die Standardwerte:</span><span class="sxs-lookup"><span data-stu-id="2a249-116">Because it does not specify any tracing options or listener options, the command uses the defaults:</span></span>
+<span data-ttu-id="d646b-115">Er verwendet den **Name** -Parameter zum Angeben der Ablauf Verfolgungs Quellen, den **Expression** -Parameter zur Angabe des Befehls und den **pshost** -Parameter, um die Ausgabe an die Konsole zu senden.</span><span class="sxs-lookup"><span data-stu-id="d646b-115">It uses the **Name** parameter to specify the trace sources, the **Expression** parameter to specify the command, and the **PSHost** parameter to send the output to the console.</span></span> <span data-ttu-id="d646b-116">Da keine Ablauf Verfolgungs Optionen oder Listeneroptionen angegeben werden, verwendet der Befehl die Standardwerte:</span><span class="sxs-lookup"><span data-stu-id="d646b-116">Because it does not specify any tracing options or listener options, the command uses the defaults:</span></span>
 
-- <span data-ttu-id="2a249-117">Alle für die Ablauf Verfolgungs Optionen</span><span class="sxs-lookup"><span data-stu-id="2a249-117">All for the tracing options</span></span>
-- <span data-ttu-id="2a249-118">Keine für die Listeneroptionen</span><span class="sxs-lookup"><span data-stu-id="2a249-118">None for the listener options</span></span>
+- <span data-ttu-id="d646b-117">Alle für die Ablauf Verfolgungs Optionen</span><span class="sxs-lookup"><span data-stu-id="d646b-117">All for the tracing options</span></span>
+- <span data-ttu-id="d646b-118">Keine für die Listeneroptionen</span><span class="sxs-lookup"><span data-stu-id="d646b-118">None for the listener options</span></span>
 
-### <span data-ttu-id="2a249-119">Beispiel 2: Verfolgen der Aktionen von ParameterBinding-Vorgängen</span><span class="sxs-lookup"><span data-stu-id="2a249-119">Example 2: Trace the actions of ParameterBinding operations</span></span>
+### <span data-ttu-id="d646b-119">Beispiel 2: Verfolgen der Aktionen von ParameterBinding-Vorgängen</span><span class="sxs-lookup"><span data-stu-id="d646b-119">Example 2: Trace the actions of ParameterBinding operations</span></span>
 
-<span data-ttu-id="2a249-120">In diesem Beispiel werden die Aktionen der **ParameterBinding** -Vorgänge von PowerShell nachverfolgt, während ein-Ausdruck verarbeitet wird `Get-Alias` , der Eingaben aus der Pipeline annimmt.</span><span class="sxs-lookup"><span data-stu-id="2a249-120">This example traces the actions of the **ParameterBinding** operations of PowerShell while it processes a `Get-Alias` expression that takes input from the pipeline.</span></span>
+<span data-ttu-id="d646b-120">In diesem Beispiel werden die Aktionen der **ParameterBinding** -Vorgänge von PowerShell nachverfolgt, während ein-Ausdruck verarbeitet wird `Get-Alias` , der Eingaben aus der Pipeline annimmt.</span><span class="sxs-lookup"><span data-stu-id="d646b-120">This example traces the actions of the **ParameterBinding** operations of PowerShell while it processes a `Get-Alias` expression that takes input from the pipeline.</span></span>
 
 ```powershell
 $A = "i*"
 Trace-Command ParameterBinding {Get-Alias $Input} -PSHost -InputObject $A
 ```
 
-<span data-ttu-id="2a249-121">In `Trace-Command` übergibt der **Inputobject** -Parameter ein Objekt an den Ausdruck, der während der Ablauf Verfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="2a249-121">In `Trace-Command`, the **InputObject** parameter passes an object to the expression that is being processed during the trace.</span></span>
+<span data-ttu-id="d646b-121">In `Trace-Command` übergibt der **Inputobject** -Parameter ein Objekt an den Ausdruck, der während der Ablauf Verfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="d646b-121">In `Trace-Command`, the **InputObject** parameter passes an object to the expression that is being processed during the trace.</span></span>
 
-<span data-ttu-id="2a249-122">Der erste Befehl speichert die Zeichenfolge `i*` in der `$A` Variablen.</span><span class="sxs-lookup"><span data-stu-id="2a249-122">The first command stores the string `i*` in the `$A` variable.</span></span> <span data-ttu-id="2a249-123">Der zweite Befehl verwendet das `Trace-Command` Cmdlet mit der ParameterBinding-Ablauf Verfolgungs Quelle.</span><span class="sxs-lookup"><span data-stu-id="2a249-123">The second command uses the `Trace-Command` cmdlet with the ParameterBinding trace source.</span></span> <span data-ttu-id="2a249-124">Der **pshost** -Parameter sendet die Ausgabe an die Konsole.</span><span class="sxs-lookup"><span data-stu-id="2a249-124">The **PSHost** parameter sends the output to the console.</span></span>
+<span data-ttu-id="d646b-122">Der erste Befehl speichert die Zeichenfolge `i*` in der `$A` Variablen.</span><span class="sxs-lookup"><span data-stu-id="d646b-122">The first command stores the string `i*` in the `$A` variable.</span></span> <span data-ttu-id="d646b-123">Der zweite Befehl verwendet das `Trace-Command` Cmdlet mit der ParameterBinding-Ablauf Verfolgungs Quelle.</span><span class="sxs-lookup"><span data-stu-id="d646b-123">The second command uses the `Trace-Command` cmdlet with the ParameterBinding trace source.</span></span> <span data-ttu-id="d646b-124">Der **pshost** -Parameter sendet die Ausgabe an die Konsole.</span><span class="sxs-lookup"><span data-stu-id="d646b-124">The **PSHost** parameter sends the output to the console.</span></span>
 
-<span data-ttu-id="2a249-125">Der Ausdruck, der verarbeitet wird `Get-Alias $Input` , ist, wobei die `$Input` Variable dem **Inputobject** -Parameter zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="2a249-125">The expression being processed is `Get-Alias $Input`, where the `$Input` variable is associated with the **InputObject** parameter.</span></span> <span data-ttu-id="2a249-126">Der **Inputobject** -Parameter übergibt die Variable `$A` an den Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="2a249-126">The **InputObject** parameter passes the variable `$A` to the expression.</span></span> <span data-ttu-id="2a249-127">Tatsächlich ist der Befehl, der während der Ablauf Verfolgung verarbeitet wird, `Get-Alias -InputObject $A" or "$A | Get-Alias` .</span><span class="sxs-lookup"><span data-stu-id="2a249-127">In effect, the command being processed during the trace is `Get-Alias -InputObject $A" or "$A | Get-Alias`.</span></span>
+<span data-ttu-id="d646b-125">Der Ausdruck, der verarbeitet wird `Get-Alias $Input` , ist, wobei die `$Input` Variable dem **Inputobject** -Parameter zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="d646b-125">The expression being processed is `Get-Alias $Input`, where the `$Input` variable is associated with the **InputObject** parameter.</span></span> <span data-ttu-id="d646b-126">Der **Inputobject** -Parameter übergibt die Variable `$A` an den Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="d646b-126">The **InputObject** parameter passes the variable `$A` to the expression.</span></span> <span data-ttu-id="d646b-127">Tatsächlich ist der Befehl, der während der Ablauf Verfolgung verarbeitet wird, `Get-Alias -InputObject $A" or "$A | Get-Alias` .</span><span class="sxs-lookup"><span data-stu-id="d646b-127">In effect, the command being processed during the trace is `Get-Alias -InputObject $A" or "$A | Get-Alias`.</span></span>
 
-## <span data-ttu-id="2a249-128">PARAMETERS</span><span class="sxs-lookup"><span data-stu-id="2a249-128">PARAMETERS</span></span>
+## <span data-ttu-id="d646b-128">Parameter</span><span class="sxs-lookup"><span data-stu-id="d646b-128">Parameters</span></span>
 
-### <span data-ttu-id="2a249-129">-Argumentlist</span><span class="sxs-lookup"><span data-stu-id="2a249-129">-ArgumentList</span></span>
+### <span data-ttu-id="d646b-129">-Argumentlist</span><span class="sxs-lookup"><span data-stu-id="d646b-129">-ArgumentList</span></span>
 
-<span data-ttu-id="2a249-130">Gibt die Parameter und Parameterwerte für den verfolgten Befehl an.</span><span class="sxs-lookup"><span data-stu-id="2a249-130">Specifies the parameters and parameter values for the command being traced.</span></span> <span data-ttu-id="2a249-131">Der Alias für **ArgumentList** ist **Args** .</span><span class="sxs-lookup"><span data-stu-id="2a249-131">The alias for **ArgumentList** is **Args** .</span></span> <span data-ttu-id="2a249-132">Diese Funktion ist besonders nützlich für das Debuggen dynamischer Parameter.</span><span class="sxs-lookup"><span data-stu-id="2a249-132">This feature is especially useful for debugging dynamic parameters.</span></span>
+<span data-ttu-id="d646b-130">Gibt die Parameter und Parameterwerte für den verfolgten Befehl an.</span><span class="sxs-lookup"><span data-stu-id="d646b-130">Specifies the parameters and parameter values for the command being traced.</span></span> <span data-ttu-id="d646b-131">Der Alias für **ArgumentList** ist **Args**.</span><span class="sxs-lookup"><span data-stu-id="d646b-131">The alias for **ArgumentList** is **Args**.</span></span> <span data-ttu-id="d646b-132">Diese Funktion ist besonders nützlich für das Debuggen dynamischer Parameter.</span><span class="sxs-lookup"><span data-stu-id="d646b-132">This feature is especially useful for debugging dynamic parameters.</span></span>
 
-<span data-ttu-id="2a249-133">Weitere Informationen zum Verhalten von **argumentlist** finden Sie unter [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).</span><span class="sxs-lookup"><span data-stu-id="2a249-133">For more information about the behavior of **ArgumentList** , see [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).</span></span>
+<span data-ttu-id="d646b-133">Weitere Informationen zum Verhalten von **argumentlist** finden Sie unter [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).</span><span class="sxs-lookup"><span data-stu-id="d646b-133">For more information about the behavior of **ArgumentList**, see [about_Splatting](../Microsoft.PowerShell.Core/About/about_Splatting.md#splatting-with-arrays).</span></span>
 
 ```yaml
 Type: System.Object[]
@@ -91,9 +92,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-134">-Command</span><span class="sxs-lookup"><span data-stu-id="2a249-134">-Command</span></span>
+### <span data-ttu-id="d646b-134">-Command</span><span class="sxs-lookup"><span data-stu-id="d646b-134">-Command</span></span>
 
-<span data-ttu-id="2a249-135">Gibt einen Befehl an, der während der Ablaufverfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="2a249-135">Specifies a command that is being processed during the trace.</span></span>
+<span data-ttu-id="d646b-135">Gibt einen Befehl an, der während der Ablaufverfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="d646b-135">Specifies a command that is being processed during the trace.</span></span>
 
 ```yaml
 Type: System.String
@@ -107,9 +108,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-136">-Debugger</span><span class="sxs-lookup"><span data-stu-id="2a249-136">-Debugger</span></span>
+### <span data-ttu-id="d646b-136">-Debugger</span><span class="sxs-lookup"><span data-stu-id="d646b-136">-Debugger</span></span>
 
-<span data-ttu-id="2a249-137">Gibt an, dass das Cmdlet die Ablauf Verfolgungs Ausgabe an den Debugger sendet.</span><span class="sxs-lookup"><span data-stu-id="2a249-137">Indicates that the cmdlet sends the trace output to the debugger.</span></span> <span data-ttu-id="2a249-138">Sie können die Ausgabe in jeden Benutzermodus- oder Kernelmodus-Debugger oder in Visual Studio anzeigen.</span><span class="sxs-lookup"><span data-stu-id="2a249-138">You can view the output in any user-mode or kernel mode debugger or in Visual Studio.</span></span> <span data-ttu-id="2a249-139">Dieser Parameter wählt auch den Standard-Ablaufverfolgungslistener aus.</span><span class="sxs-lookup"><span data-stu-id="2a249-139">This parameter also selects the default trace listener.</span></span>
+<span data-ttu-id="d646b-137">Gibt an, dass das Cmdlet die Ablauf Verfolgungs Ausgabe an den Debugger sendet.</span><span class="sxs-lookup"><span data-stu-id="d646b-137">Indicates that the cmdlet sends the trace output to the debugger.</span></span> <span data-ttu-id="d646b-138">Sie können die Ausgabe in jeden Benutzermodus- oder Kernelmodus-Debugger oder in Visual Studio anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d646b-138">You can view the output in any user-mode or kernel mode debugger or in Visual Studio.</span></span> <span data-ttu-id="d646b-139">Dieser Parameter wählt auch den Standard-Ablaufverfolgungslistener aus.</span><span class="sxs-lookup"><span data-stu-id="d646b-139">This parameter also selects the default trace listener.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -123,9 +124,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-140">-Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2a249-140">-Expression</span></span>
+### <span data-ttu-id="d646b-140">-Ausdruck</span><span class="sxs-lookup"><span data-stu-id="d646b-140">-Expression</span></span>
 
-<span data-ttu-id="2a249-141">Gibt den Ausdruck an, der während der Ablaufverfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="2a249-141">Specifies the expression that is being processed during the trace.</span></span> <span data-ttu-id="2a249-142">Schließen Sie den Ausdruck in geschweifte Klammern ( `{}` ) ein.</span><span class="sxs-lookup"><span data-stu-id="2a249-142">Enclose the expression in braces (`{}`).</span></span>
+<span data-ttu-id="d646b-141">Gibt den Ausdruck an, der während der Ablaufverfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="d646b-141">Specifies the expression that is being processed during the trace.</span></span> <span data-ttu-id="d646b-142">Schließen Sie den Ausdruck in geschweifte Klammern ( `{}` ) ein.</span><span class="sxs-lookup"><span data-stu-id="d646b-142">Enclose the expression in braces (`{}`).</span></span>
 
 ```yaml
 Type: System.Management.Automation.ScriptBlock
@@ -139,9 +140,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-143">-FilePath</span><span class="sxs-lookup"><span data-stu-id="2a249-143">-FilePath</span></span>
+### <span data-ttu-id="d646b-143">-FilePath</span><span class="sxs-lookup"><span data-stu-id="d646b-143">-FilePath</span></span>
 
-<span data-ttu-id="2a249-144">Gibt eine Datei an, an die das Cmdlet die Ablauf Verfolgungs Ausgabe sendet.</span><span class="sxs-lookup"><span data-stu-id="2a249-144">Specifies a file that the cmdlet sends the trace output to.</span></span> <span data-ttu-id="2a249-145">Dieser Parameter wählt auch den Ablaufverfolgungslistener der Datei aus.</span><span class="sxs-lookup"><span data-stu-id="2a249-145">This parameter also selects the file trace listener.</span></span>
+<span data-ttu-id="d646b-144">Gibt eine Datei an, an die das Cmdlet die Ablauf Verfolgungs Ausgabe sendet.</span><span class="sxs-lookup"><span data-stu-id="d646b-144">Specifies a file that the cmdlet sends the trace output to.</span></span> <span data-ttu-id="d646b-145">Dieser Parameter wählt auch den Ablaufverfolgungslistener der Datei aus.</span><span class="sxs-lookup"><span data-stu-id="d646b-145">This parameter also selects the file trace listener.</span></span>
 
 ```yaml
 Type: System.String
@@ -155,9 +156,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-146">-Force</span><span class="sxs-lookup"><span data-stu-id="2a249-146">-Force</span></span>
+### <span data-ttu-id="d646b-146">-Force</span><span class="sxs-lookup"><span data-stu-id="d646b-146">-Force</span></span>
 
-<span data-ttu-id="2a249-147">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="2a249-147">Forces the command to run without asking for user confirmation.</span></span> <span data-ttu-id="2a249-148">Wird mit dem **FilePath** -Parameter verwendet.</span><span class="sxs-lookup"><span data-stu-id="2a249-148">Used with the **FilePath** parameter.</span></span> <span data-ttu-id="2a249-149">Selbst bei Verwendung des **Force** -Parameters kann das Cmdlet keine Sicherheitseinschränkungen außer Kraft setzen.</span><span class="sxs-lookup"><span data-stu-id="2a249-149">Even using the **Force** parameter, the cmdlet cannot override security restrictions.</span></span>
+<span data-ttu-id="d646b-147">Erzwingt die Ausführung des Befehls ohne Aufforderung zur Bestätigung durch den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="d646b-147">Forces the command to run without asking for user confirmation.</span></span> <span data-ttu-id="d646b-148">Wird mit dem **FilePath** -Parameter verwendet.</span><span class="sxs-lookup"><span data-stu-id="d646b-148">Used with the **FilePath** parameter.</span></span> <span data-ttu-id="d646b-149">Selbst bei Verwendung des **Force** -Parameters kann das Cmdlet keine Sicherheitseinschränkungen außer Kraft setzen.</span><span class="sxs-lookup"><span data-stu-id="d646b-149">Even using the **Force** parameter, the cmdlet cannot override security restrictions.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -171,9 +172,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-150">-InputObject</span><span class="sxs-lookup"><span data-stu-id="2a249-150">-InputObject</span></span>
+### <span data-ttu-id="d646b-150">-InputObject</span><span class="sxs-lookup"><span data-stu-id="d646b-150">-InputObject</span></span>
 
-<span data-ttu-id="2a249-151">Gibt die Eingabe für den Ausdruck an, der während der Ablauf Verfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="2a249-151">Specifies input to the expression that is being processed during the trace.</span></span> <span data-ttu-id="2a249-152">Sie können eine Variable eingeben, die die Eingabe darstellt und die vom Ausdruck akzeptiert wird, oder Sie können ein Objekt über die Pipeline übergeben.</span><span class="sxs-lookup"><span data-stu-id="2a249-152">You can enter a variable that represents the input that the expression accepts, or pass an object through the pipeline.</span></span>
+<span data-ttu-id="d646b-151">Gibt die Eingabe für den Ausdruck an, der während der Ablauf Verfolgung verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="d646b-151">Specifies input to the expression that is being processed during the trace.</span></span> <span data-ttu-id="d646b-152">Sie können eine Variable eingeben, die die Eingabe darstellt und die vom Ausdruck akzeptiert wird, oder Sie können ein Objekt über die Pipeline übergeben.</span><span class="sxs-lookup"><span data-stu-id="d646b-152">You can enter a variable that represents the input that the expression accepts, or pass an object through the pipeline.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -187,21 +188,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-153">-Listeneroption</span><span class="sxs-lookup"><span data-stu-id="2a249-153">-ListenerOption</span></span>
+### <span data-ttu-id="d646b-153">-Listeneroption</span><span class="sxs-lookup"><span data-stu-id="d646b-153">-ListenerOption</span></span>
 
-<span data-ttu-id="2a249-154">Gibt optionale Daten für das Präfix der einzelnen Ablauf Verfolgungs Meldungen in der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="2a249-154">Specifies optional data to the prefix of each trace message in the output.</span></span> <span data-ttu-id="2a249-155">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="2a249-155">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="d646b-154">Gibt optionale Daten für das Präfix der einzelnen Ablauf Verfolgungs Meldungen in der Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="d646b-154">Specifies optional data to the prefix of each trace message in the output.</span></span> <span data-ttu-id="d646b-155">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="d646b-155">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="2a249-156">Keine</span><span class="sxs-lookup"><span data-stu-id="2a249-156">None</span></span>
-- <span data-ttu-id="2a249-157">LogicalOperationStack</span><span class="sxs-lookup"><span data-stu-id="2a249-157">LogicalOperationStack</span></span>
-- <span data-ttu-id="2a249-158">Datetime</span><span class="sxs-lookup"><span data-stu-id="2a249-158">DateTime</span></span>
-- <span data-ttu-id="2a249-159">Timestamp</span><span class="sxs-lookup"><span data-stu-id="2a249-159">Timestamp</span></span>
-- <span data-ttu-id="2a249-160">ProcessId</span><span class="sxs-lookup"><span data-stu-id="2a249-160">ProcessId</span></span>
-- <span data-ttu-id="2a249-161">ThreadID</span><span class="sxs-lookup"><span data-stu-id="2a249-161">ThreadId</span></span>
-- <span data-ttu-id="2a249-162">Aufruf Liste</span><span class="sxs-lookup"><span data-stu-id="2a249-162">Callstack</span></span>
+- `None`
+- `LogicalOperationStack`
+- `DateTime`
+- `Timestamp`
+- `ProcessId`
+- `ThreadId`
+- `Callstack`
 
-<span data-ttu-id="2a249-163">" **None** " ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="2a249-163">**None** is the default.</span></span>
+<span data-ttu-id="d646b-156">`None` ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="d646b-156">`None` is the default.</span></span>
 
-<span data-ttu-id="2a249-164">Um mehrere Optionen anzugeben, trennen Sie diese durch Kommas, aber ohne Leerzeichen, und schließen Sie sie in Anführungszeichen ein, z. B. "ProcessID,ThreadID".</span><span class="sxs-lookup"><span data-stu-id="2a249-164">To specify multiple options, separate them with commas, but with no spaces, and enclose them in quotation marks, such as "ProcessID,ThreadID".</span></span>
+<span data-ttu-id="d646b-157">Diese Werte werden als Flag-basierte Enumeration definiert.</span><span class="sxs-lookup"><span data-stu-id="d646b-157">These values are defined as a flag-based enumeration.</span></span> <span data-ttu-id="d646b-158">Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen.</span><span class="sxs-lookup"><span data-stu-id="d646b-158">You can combine multiple values together to set multiple flags using this parameter.</span></span> <span data-ttu-id="d646b-159">Die Werte können als Array von Werten an den **listeneroption** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="d646b-159">The values can be passed to the **ListenerOption** parameter as an array of values or as a comma-separated string of those values.</span></span> <span data-ttu-id="d646b-160">Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert.</span><span class="sxs-lookup"><span data-stu-id="d646b-160">The cmdlet will combine the values using a binary-OR operation.</span></span> <span data-ttu-id="d646b-161">Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="d646b-161">Passing values as an array is the simplest option and also allows you to use tab-completion on the values.</span></span>
 
 ```yaml
 Type: System.Diagnostics.TraceOptions
@@ -216,9 +217,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-165">-Name</span><span class="sxs-lookup"><span data-stu-id="2a249-165">-Name</span></span>
+### <span data-ttu-id="d646b-162">-Name</span><span class="sxs-lookup"><span data-stu-id="d646b-162">-Name</span></span>
 
-<span data-ttu-id="2a249-166">Gibt ein Array von PowerShell-Komponenten an, die nachverfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="2a249-166">Specifies an array of PowerShell components that are traced.</span></span> <span data-ttu-id="2a249-167">Geben Sie den Namen der Ablaufverfolgungsquelle jeder Komponente ein.</span><span class="sxs-lookup"><span data-stu-id="2a249-167">Enter the name of the trace source of each component.</span></span> <span data-ttu-id="2a249-168">Platzhalter sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="2a249-168">Wildcards are permitted.</span></span> <span data-ttu-id="2a249-169">Geben Sie ein, um die Ablauf Verfolgungs Quellen auf Ihrem Computer zu finden `Get-TraceSource` .</span><span class="sxs-lookup"><span data-stu-id="2a249-169">To find the trace sources on your computer, type `Get-TraceSource`.</span></span>
+<span data-ttu-id="d646b-163">Gibt ein Array von PowerShell-Komponenten an, die nachverfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="d646b-163">Specifies an array of PowerShell components that are traced.</span></span> <span data-ttu-id="d646b-164">Geben Sie den Namen der Ablaufverfolgungsquelle jeder Komponente ein.</span><span class="sxs-lookup"><span data-stu-id="d646b-164">Enter the name of the trace source of each component.</span></span> <span data-ttu-id="d646b-165">Platzhalter sind zulässig.</span><span class="sxs-lookup"><span data-stu-id="d646b-165">Wildcards are permitted.</span></span> <span data-ttu-id="d646b-166">Geben Sie ein, um die Ablauf Verfolgungs Quellen auf Ihrem Computer zu finden `Get-TraceSource` .</span><span class="sxs-lookup"><span data-stu-id="d646b-166">To find the trace sources on your computer, type `Get-TraceSource`.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -232,40 +233,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-170">-Option</span><span class="sxs-lookup"><span data-stu-id="2a249-170">-Option</span></span>
+### <span data-ttu-id="d646b-167">-Option</span><span class="sxs-lookup"><span data-stu-id="d646b-167">-Option</span></span>
 
-<span data-ttu-id="2a249-171">Bestimmt den Typ der Ereignisse, die verfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="2a249-171">Determines the type of events that are traced.</span></span> <span data-ttu-id="2a249-172">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="2a249-172">The acceptable values for this parameter are:</span></span>
+<span data-ttu-id="d646b-168">Bestimmt den Typ der Ereignisse, die verfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="d646b-168">Determines the type of events that are traced.</span></span> <span data-ttu-id="d646b-169">Zulässige Werte für diesen Parameter:</span><span class="sxs-lookup"><span data-stu-id="d646b-169">The acceptable values for this parameter are:</span></span>
 
-- <span data-ttu-id="2a249-173">Keine</span><span class="sxs-lookup"><span data-stu-id="2a249-173">None</span></span>
-- <span data-ttu-id="2a249-174">Konstruktor</span><span class="sxs-lookup"><span data-stu-id="2a249-174">Constructor</span></span>
-- <span data-ttu-id="2a249-175">Dispose</span><span class="sxs-lookup"><span data-stu-id="2a249-175">Dispose</span></span>
-- <span data-ttu-id="2a249-176">Finalizer</span><span class="sxs-lookup"><span data-stu-id="2a249-176">Finalizer</span></span>
-- <span data-ttu-id="2a249-177">Methode</span><span class="sxs-lookup"><span data-stu-id="2a249-177">Method</span></span>
-- <span data-ttu-id="2a249-178">Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="2a249-178">Property</span></span>
-- <span data-ttu-id="2a249-179">Delegaten</span><span class="sxs-lookup"><span data-stu-id="2a249-179">Delegates</span></span>
-- <span data-ttu-id="2a249-180">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="2a249-180">Events</span></span>
-- <span data-ttu-id="2a249-181">Ausnahme</span><span class="sxs-lookup"><span data-stu-id="2a249-181">Exception</span></span>
-- <span data-ttu-id="2a249-182">Sperre</span><span class="sxs-lookup"><span data-stu-id="2a249-182">Lock</span></span>
-- <span data-ttu-id="2a249-183">Fehler</span><span class="sxs-lookup"><span data-stu-id="2a249-183">Error</span></span>
-- <span data-ttu-id="2a249-184">Errors</span><span class="sxs-lookup"><span data-stu-id="2a249-184">Errors</span></span>
-- <span data-ttu-id="2a249-185">Warnung</span><span class="sxs-lookup"><span data-stu-id="2a249-185">Warning</span></span>
-- <span data-ttu-id="2a249-186">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="2a249-186">Verbose</span></span>
-- <span data-ttu-id="2a249-187">WriteLine</span><span class="sxs-lookup"><span data-stu-id="2a249-187">WriteLine</span></span>
-- <span data-ttu-id="2a249-188">Daten</span><span class="sxs-lookup"><span data-stu-id="2a249-188">Data</span></span>
-- <span data-ttu-id="2a249-189">`Scope`</span><span class="sxs-lookup"><span data-stu-id="2a249-189">Scope</span></span>
-- <span data-ttu-id="2a249-190">ExecutionFlow</span><span class="sxs-lookup"><span data-stu-id="2a249-190">ExecutionFlow</span></span>
-- <span data-ttu-id="2a249-191">Assert</span><span class="sxs-lookup"><span data-stu-id="2a249-191">Assert</span></span>
-- <span data-ttu-id="2a249-192">Alle</span><span class="sxs-lookup"><span data-stu-id="2a249-192">All</span></span>
+- `None`
+- `Constructor`
+- `Dispose`
+- `Finalizer`
+- `Method`
+- `Property`
+- `Delegates`
+- `Events`
+- `Exception`
+- `Lock`
+- `Error`
+- `Errors`
+- `Warning`
+- `Verbose`
+- `WriteLine`
+- `Data`
+- `Scope`
+- `ExecutionFlow`
+- `Assert`
+- `All`
 
-<span data-ttu-id="2a249-193">„All“ ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="2a249-193">All is the default.</span></span>
+<span data-ttu-id="d646b-170">`All` ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="d646b-170">`All` is the default.</span></span>
 
-<span data-ttu-id="2a249-194">Die folgenden Werte sind Kombinationen von anderen Werten:</span><span class="sxs-lookup"><span data-stu-id="2a249-194">The following values are combinations of other values:</span></span>
+<span data-ttu-id="d646b-171">Die folgenden Werte sind Kombinationen von anderen Werten:</span><span class="sxs-lookup"><span data-stu-id="d646b-171">The following values are combinations of other values:</span></span>
 
-- <span data-ttu-id="2a249-195">Executionflow: (Konstruktor, verwerfen, Finalizer, Methode, Delegaten, Ereignisse und Bereich)</span><span class="sxs-lookup"><span data-stu-id="2a249-195">ExecutionFlow: (Constructor, Dispose, Finalizer, Method, Delegates, Events, and Scope)</span></span>
-- <span data-ttu-id="2a249-196">Daten: (Konstruktor, verwerfen, Finalizer, Property, verbose und Write teline)</span><span class="sxs-lookup"><span data-stu-id="2a249-196">Data: (Constructor, Dispose, Finalizer, Property, Verbose, and WriteLine)</span></span>
-- <span data-ttu-id="2a249-197">Fehler: (Fehler und Ausnahme).</span><span class="sxs-lookup"><span data-stu-id="2a249-197">Errors: (Error and Exception).</span></span>
+- <span data-ttu-id="d646b-172">`ExecutionFlow`: `Constructor`, `Dispose`, `Finalizer`, `Method`, `Delegates`, `Events`, `Scope`</span><span class="sxs-lookup"><span data-stu-id="d646b-172">`ExecutionFlow`: `Constructor`, `Dispose`, `Finalizer`, `Method`, `Delegates`, `Events`, `Scope`</span></span>
+- <span data-ttu-id="d646b-173">`Data`: `Constructor`, `Dispose`, `Finalizer`, `Property`, `Verbose`, `WriteLine`</span><span class="sxs-lookup"><span data-stu-id="d646b-173">`Data`: `Constructor`, `Dispose`, `Finalizer`, `Property`, `Verbose`, `WriteLine`</span></span>
+- <span data-ttu-id="d646b-174">`Errors`: `Error`, `Exception`</span><span class="sxs-lookup"><span data-stu-id="d646b-174">`Errors`: `Error`, `Exception`</span></span>
 
-<span data-ttu-id="2a249-198">Um mehrere Optionen anzugeben, trennen Sie diese durch Kommas, aber ohne Leerzeichen, und schließen Sie sie in Anführungszeichen ein, z. B. "Constructor,Dispose".</span><span class="sxs-lookup"><span data-stu-id="2a249-198">To specify multiple options, separate them with commas, but with no spaces, and enclose them in quotation marks, such as "Constructor,Dispose".</span></span>
+<span data-ttu-id="d646b-175">Diese Werte werden als Flag-basierte Enumeration definiert.</span><span class="sxs-lookup"><span data-stu-id="d646b-175">These values are defined as a flag-based enumeration.</span></span> <span data-ttu-id="d646b-176">Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen.</span><span class="sxs-lookup"><span data-stu-id="d646b-176">You can combine multiple values together to set multiple flags using this parameter.</span></span> <span data-ttu-id="d646b-177">Die Werte können als Array von Werten an den **options** Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="d646b-177">The values can be passed to the **Option** parameter as an array of values or as a comma-separated string of those values.</span></span> <span data-ttu-id="d646b-178">Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert.</span><span class="sxs-lookup"><span data-stu-id="d646b-178">The cmdlet will combine the values using a binary-OR operation.</span></span> <span data-ttu-id="d646b-179">Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="d646b-179">Passing values as an array is the simplest option and also allows you to use tab-completion on the values.</span></span>
 
 ```yaml
 Type: System.Management.Automation.PSTraceSourceOptions
@@ -280,9 +281,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-199">-Pshost</span><span class="sxs-lookup"><span data-stu-id="2a249-199">-PSHost</span></span>
+### <span data-ttu-id="d646b-180">-Pshost</span><span class="sxs-lookup"><span data-stu-id="d646b-180">-PSHost</span></span>
 
-<span data-ttu-id="2a249-200">Gibt an, dass das Cmdlet die Ablauf Verfolgungs Ausgabe an den PowerShell-Host sendet.</span><span class="sxs-lookup"><span data-stu-id="2a249-200">Indicates that the cmdlet sends the trace output to the PowerShell host.</span></span> <span data-ttu-id="2a249-201">Dieser Parameter wählt auch den PSHost-Ablaufverfolgungslistener aus.</span><span class="sxs-lookup"><span data-stu-id="2a249-201">This parameter also selects the PSHost trace listener.</span></span>
+<span data-ttu-id="d646b-181">Gibt an, dass das Cmdlet die Ablauf Verfolgungs Ausgabe an den PowerShell-Host sendet.</span><span class="sxs-lookup"><span data-stu-id="d646b-181">Indicates that the cmdlet sends the trace output to the PowerShell host.</span></span> <span data-ttu-id="d646b-182">Dieser Parameter wählt auch den PSHost-Ablaufverfolgungslistener aus.</span><span class="sxs-lookup"><span data-stu-id="d646b-182">This parameter also selects the PSHost trace listener.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -296,44 +297,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="2a249-202">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="2a249-202">CommonParameters</span></span>
+### <span data-ttu-id="d646b-183">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="d646b-183">CommonParameters</span></span>
 
-<span data-ttu-id="2a249-203">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="2a249-203">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="2a249-204">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="2a249-204">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+<span data-ttu-id="d646b-184">Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="d646b-184">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="d646b-185">Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="d646b-185">For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="2a249-205">EINGABEN</span><span class="sxs-lookup"><span data-stu-id="2a249-205">INPUTS</span></span>
+## <span data-ttu-id="d646b-186">Eingaben</span><span class="sxs-lookup"><span data-stu-id="d646b-186">Inputs</span></span>
 
-### <span data-ttu-id="2a249-206">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="2a249-206">System.Management.Automation.PSObject</span></span>
+### <span data-ttu-id="d646b-187">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="d646b-187">System.Management.Automation.PSObject</span></span>
 
-<span data-ttu-id="2a249-207">Sie können Objekte, die Eingaben darstellen, an den Ausdruck übergeben `Trace-Command` .</span><span class="sxs-lookup"><span data-stu-id="2a249-207">You can pipe objects that represent input to the expression to `Trace-Command`.</span></span>
+<span data-ttu-id="d646b-188">Sie können Objekte, die Eingaben darstellen, an den Ausdruck übergeben `Trace-Command` .</span><span class="sxs-lookup"><span data-stu-id="d646b-188">You can pipe objects that represent input to the expression to `Trace-Command`.</span></span>
 
-## <span data-ttu-id="2a249-208">AUSGABEN</span><span class="sxs-lookup"><span data-stu-id="2a249-208">OUTPUTS</span></span>
+## <span data-ttu-id="d646b-189">Ausgaben</span><span class="sxs-lookup"><span data-stu-id="d646b-189">Outputs</span></span>
 
-### <span data-ttu-id="2a249-209">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="2a249-209">System.Management.Automation.PSObject</span></span>
+### <span data-ttu-id="d646b-190">System. Management. Automation. psobject</span><span class="sxs-lookup"><span data-stu-id="d646b-190">System.Management.Automation.PSObject</span></span>
 
-<span data-ttu-id="2a249-210">Gibt die Befehlsablaufverfolgung im Debug-Stream zurück.</span><span class="sxs-lookup"><span data-stu-id="2a249-210">Returns the command trace in the debug stream.</span></span>
+<span data-ttu-id="d646b-191">Gibt die Befehlsablaufverfolgung im Debug-Stream zurück.</span><span class="sxs-lookup"><span data-stu-id="d646b-191">Returns the command trace in the debug stream.</span></span>
 
-## <span data-ttu-id="2a249-211">HINWEISE</span><span class="sxs-lookup"><span data-stu-id="2a249-211">NOTES</span></span>
+## <span data-ttu-id="d646b-192">Notizen</span><span class="sxs-lookup"><span data-stu-id="d646b-192">Notes</span></span>
 
-- <span data-ttu-id="2a249-212">Die Ablaufverfolgung ist eine Methode, die Entwickler zum Debuggen und Optimieren von Programmen verwenden.</span><span class="sxs-lookup"><span data-stu-id="2a249-212">Tracing is a method that developers use to debug and refine programs.</span></span> <span data-ttu-id="2a249-213">Bei der Ablaufverfolgung erzeugt das Programm ausführliche Meldungen zu den einzelnen Schritten in der internen Verarbeitung.</span><span class="sxs-lookup"><span data-stu-id="2a249-213">When tracing, the program generates detailed messages about each step in its internal processing.</span></span>
+- <span data-ttu-id="d646b-193">Die Ablaufverfolgung ist eine Methode, die Entwickler zum Debuggen und Optimieren von Programmen verwenden.</span><span class="sxs-lookup"><span data-stu-id="d646b-193">Tracing is a method that developers use to debug and refine programs.</span></span> <span data-ttu-id="d646b-194">Bei der Ablaufverfolgung erzeugt das Programm ausführliche Meldungen zu den einzelnen Schritten in der internen Verarbeitung.</span><span class="sxs-lookup"><span data-stu-id="d646b-194">When tracing, the program generates detailed messages about each step in its internal processing.</span></span>
 
-- <span data-ttu-id="2a249-214">Die PowerShell-Ablaufverfolgungs-Cmdlets sind für die Unterstützung von PowerShell-Entwicklern konzipiert, aber Sie stehen allen Benutzern zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="2a249-214">The PowerShell tracing cmdlets are designed to help PowerShell developers, but they are available to all users.</span></span> <span data-ttu-id="2a249-215">Damit können Sie fast jeden Aspekt der Shell-Funktionalität überwachen.</span><span class="sxs-lookup"><span data-stu-id="2a249-215">They let you monitor nearly every aspect of the functionality of the shell.</span></span>
+- <span data-ttu-id="d646b-195">Die PowerShell-Ablaufverfolgungs-Cmdlets sind für die Unterstützung von PowerShell-Entwicklern konzipiert, aber Sie stehen allen Benutzern zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="d646b-195">The PowerShell tracing cmdlets are designed to help PowerShell developers, but they are available to all users.</span></span> <span data-ttu-id="d646b-196">Damit können Sie fast jeden Aspekt der Shell-Funktionalität überwachen.</span><span class="sxs-lookup"><span data-stu-id="d646b-196">They let you monitor nearly every aspect of the functionality of the shell.</span></span>
 
-- <span data-ttu-id="2a249-216">Zum Ermitteln der PowerShell-Komponenten, die für die Ablauf Verfolgung aktiviert sind, geben Sie ein `Get-Help Get-TraceSource` .</span><span class="sxs-lookup"><span data-stu-id="2a249-216">To find the PowerShell components that are enabled for tracing, type `Get-Help Get-TraceSource`.</span></span>
+- <span data-ttu-id="d646b-197">Zum Ermitteln der PowerShell-Komponenten, die für die Ablauf Verfolgung aktiviert sind, geben Sie ein `Get-Help Get-TraceSource` .</span><span class="sxs-lookup"><span data-stu-id="d646b-197">To find the PowerShell components that are enabled for tracing, type `Get-Help Get-TraceSource`.</span></span>
 
-  <span data-ttu-id="2a249-217">Eine Ablauf Verfolgungs Quelle ist der Teil jeder PowerShell-Komponente, die die Ablauf Verfolgung verwaltet und Ablauf Verfolgungs Meldungen für die Komponente generiert.</span><span class="sxs-lookup"><span data-stu-id="2a249-217">A trace source is the part of each PowerShell component that manages tracing and generates trace messages for the component.</span></span> <span data-ttu-id="2a249-218">Um eine Komponente zu verfolgen, identifizieren Sie die Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="2a249-218">To trace a component, you identify its trace source.</span></span>
+  <span data-ttu-id="d646b-198">Eine Ablauf Verfolgungs Quelle ist der Teil jeder PowerShell-Komponente, die die Ablauf Verfolgung verwaltet und Ablauf Verfolgungs Meldungen für die Komponente generiert.</span><span class="sxs-lookup"><span data-stu-id="d646b-198">A trace source is the part of each PowerShell component that manages tracing and generates trace messages for the component.</span></span> <span data-ttu-id="d646b-199">Um eine Komponente zu verfolgen, identifizieren Sie die Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="d646b-199">To trace a component, you identify its trace source.</span></span>
 
-  <span data-ttu-id="2a249-219">Ein Ablaufverfolgungslistener empfängt die Ausgabe der Ablauf Verfolgung und zeigt Sie dem Benutzer an.</span><span class="sxs-lookup"><span data-stu-id="2a249-219">A trace listener receives the output of the trace and displays it to the user.</span></span> <span data-ttu-id="2a249-220">Sie können festlegen, dass die Ablauf Verfolgungs Daten an einen Benutzermodus-oder Kernel Modus-Debugger, an den Host oder die Konsole, an eine Datei oder an einen benutzerdefinierten Listener gesendet werden, der von der **System. Diagnostics. TraceListener** -Klasse abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="2a249-220">You can elect to send the trace data to a user-mode or kernel-mode debugger, to the host or console, to a file, or to a custom listener derived from the **System.Diagnostics.TraceListener** class.</span></span>
+  <span data-ttu-id="d646b-200">Ein Ablaufverfolgungslistener empfängt die Ausgabe der Ablauf Verfolgung und zeigt Sie dem Benutzer an.</span><span class="sxs-lookup"><span data-stu-id="d646b-200">A trace listener receives the output of the trace and displays it to the user.</span></span> <span data-ttu-id="d646b-201">Sie können festlegen, dass die Ablauf Verfolgungs Daten an einen Benutzermodus-oder Kernel Modus-Debugger, an den Host oder die Konsole, an eine Datei oder an einen benutzerdefinierten Listener gesendet werden, der von der **System. Diagnostics. TraceListener** -Klasse abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="d646b-201">You can elect to send the trace data to a user-mode or kernel-mode debugger, to the host or console, to a file, or to a custom listener derived from the **System.Diagnostics.TraceListener** class.</span></span>
 
-- <span data-ttu-id="2a249-221">Wenn Sie den CommandSet-Parametersatz verwenden, verarbeitet PowerShell den Befehl genauso wie in einer Pipeline.</span><span class="sxs-lookup"><span data-stu-id="2a249-221">When you use the commandSet parameter set, PowerShell processes the command just as it would be processed in a pipeline.</span></span> <span data-ttu-id="2a249-222">Beispielsweise wird die Befehlsermittlung nicht für jedes eingehende Objekt wiederholt.</span><span class="sxs-lookup"><span data-stu-id="2a249-222">For example, command discovery is not repeated for each incoming object.</span></span>
+- <span data-ttu-id="d646b-202">Wenn Sie den CommandSet-Parametersatz verwenden, verarbeitet PowerShell den Befehl genauso wie in einer Pipeline.</span><span class="sxs-lookup"><span data-stu-id="d646b-202">When you use the commandSet parameter set, PowerShell processes the command just as it would be processed in a pipeline.</span></span> <span data-ttu-id="d646b-203">Beispielsweise wird die Befehlsermittlung nicht für jedes eingehende Objekt wiederholt.</span><span class="sxs-lookup"><span data-stu-id="d646b-203">For example, command discovery is not repeated for each incoming object.</span></span>
 
-- <span data-ttu-id="2a249-223">Die Namen der Parameter " **Name** ", " **Ausdruck** ", " **Option** " und " **Command** " sind optional.</span><span class="sxs-lookup"><span data-stu-id="2a249-223">The names of the **Name** , **Expression** , **Option** , and **Command** parameters are optional.</span></span> <span data-ttu-id="2a249-224">Wenn Sie die Parameternamen weglassen, müssen die unbenannten Parameterwerte in dieser Reihenfolge angezeigt werden: **Name** , **Ausdruck** , **Option** oder **Name** , **Befehl** , **Option** .</span><span class="sxs-lookup"><span data-stu-id="2a249-224">If you omit the parameter names, the unnamed parameter values must appear in this order: **Name** , **Expression** , **Option** or **Name** , **Command** , **Option** .</span></span> <span data-ttu-id="2a249-225">Wenn Sie die Parameternamen angeben, können die Parameter in beliebiger Reihenfolge angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="2a249-225">If you include the parameter names, the parameters can appear in any order.</span></span>
+- <span data-ttu-id="d646b-204">Die Namen der Parameter " **Name**", " **Ausdruck**", " **Option**" und " **Command** " sind optional.</span><span class="sxs-lookup"><span data-stu-id="d646b-204">The names of the **Name**, **Expression**, **Option**, and **Command** parameters are optional.</span></span> <span data-ttu-id="d646b-205">Wenn Sie die Parameternamen weglassen, müssen die unbenannten Parameterwerte in dieser Reihenfolge angezeigt werden: **Name**, **Ausdruck**, **Option** oder **Name**, **Befehl**, **Option**.</span><span class="sxs-lookup"><span data-stu-id="d646b-205">If you omit the parameter names, the unnamed parameter values must appear in this order: **Name**, **Expression**, **Option** or **Name**, **Command**, **Option**.</span></span> <span data-ttu-id="d646b-206">Wenn Sie die Parameternamen angeben, können die Parameter in beliebiger Reihenfolge angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="d646b-206">If you include the parameter names, the parameters can appear in any order.</span></span>
 
-## <span data-ttu-id="2a249-226">VERWANDTE LINKS</span><span class="sxs-lookup"><span data-stu-id="2a249-226">RELATED LINKS</span></span>
+## <span data-ttu-id="d646b-207">Ähnliche Themen</span><span class="sxs-lookup"><span data-stu-id="d646b-207">Related Links</span></span>
 
-[<span data-ttu-id="2a249-227">Get-TraceSource</span><span class="sxs-lookup"><span data-stu-id="2a249-227">Get-TraceSource</span></span>](Get-TraceSource.md)
+[<span data-ttu-id="d646b-208">Get-TraceSource</span><span class="sxs-lookup"><span data-stu-id="d646b-208">Get-TraceSource</span></span>](Get-TraceSource.md)
 
-[<span data-ttu-id="2a249-228">Measure-Command</span><span class="sxs-lookup"><span data-stu-id="2a249-228">Measure-Command</span></span>](Measure-Command.md)
+[<span data-ttu-id="d646b-209">Measure-Command</span><span class="sxs-lookup"><span data-stu-id="d646b-209">Measure-Command</span></span>](Measure-Command.md)
 
-[<span data-ttu-id="2a249-229">Set-TraceSource</span><span class="sxs-lookup"><span data-stu-id="2a249-229">Set-TraceSource</span></span>](Set-TraceSource.md)
+[<span data-ttu-id="d646b-210">Set-TraceSource</span><span class="sxs-lookup"><span data-stu-id="d646b-210">Set-TraceSource</span></span>](Set-TraceSource.md)
 
-[<span data-ttu-id="2a249-230">Show-Command</span><span class="sxs-lookup"><span data-stu-id="2a249-230">Show-Command</span></span>](Show-Command.md)
+[<span data-ttu-id="d646b-211">Show-Command</span><span class="sxs-lookup"><span data-stu-id="d646b-211">Show-Command</span></span>](Show-Command.md)
