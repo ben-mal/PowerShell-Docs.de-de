@@ -3,19 +3,19 @@ title: Alles, was Sie schon immer über Arrays wissen wollten
 description: Arrays sind ein grundlegendes Sprachfeature der meisten Programmiersprachen.
 ms.date: 10/08/2020
 ms.custom: contributor-KevinMarquette
-ms.openlocfilehash: b26aa11aadbeea1984b2754cfcad061c7fa3ff1e
-ms.sourcegitcommit: ba7315a496986451cfc1296b659d73ea2373d3f0
+ms.openlocfilehash: a6c3aea82982feafc47b4aa718981857595d5fc2
+ms.sourcegitcommit: 4d6ed6f7d747a9bbb3fcfcf6c981c5aa8a973a08
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "91852560"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106072426"
 ---
 # <a name="everything-you-wanted-to-know-about-arrays"></a>Alles, was Sie schon immer über Arrays wissen wollten
 
 [Arrays][] sind ein grundlegendes Sprachfeature der meisten Programmiersprachen. Es handelt sich um eine Auflistung aus Werten oder Objekten, um die Sie kaum herumkommen werden. Sehen wir uns also Arrays und ihre Möglichkeiten einmal genauer an.
 
 > [!NOTE]
-> Die [Originalversion][] dieses Artikels wurde im Blog von [@KevinMarquette][] veröffentlicht. Das PowerShell-Team dankt Kevin, dass er diesen Inhalt mit uns teilt. Weitere Informationen finden Sie in seinem Blog auf [PowerShellExplained.com][].
+> Die [Originalversion][] dieses Artikels wurde im Blog von [@KevinMarquette][] veröffentlicht. Das PowerShell-Team dankt Kevin Marquette, dass er diesen Inhalt mit uns teilt. Weitere Informationen finden Sie in seinem Blog auf [PowerShellExplained.com][].
 
 ## <a name="what-is-an-array"></a>Was ist ein Array?
 
@@ -1047,7 +1047,7 @@ TypeName: System.String
 ...
 ```
 
-Um zu verhindern, dass die Umschließung eines Arrays aufgehoben wird, können Sie `Write-Object -NoEnumerate` verwenden.
+Um zu verhindern, dass die Umschließung eines Arrays aufgehoben wird, können Sie `Write-Output -NoEnumerate` verwenden.
 
 ```powershell
 PS> Write-Output -NoEnumerate $data | Get-Member
