@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/26/2021
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: 07c10f33b0cffd56d84ddf6aab3553a0b71e4017
-ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
+ms.openlocfilehash: bf5fb5587e4a0f1686c87e9aa6b0cfb62697a70d
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860710"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555235"
 ---
 # Invoke-WebRequest
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Ruft Inhalte von einer Webseite im Internet ab.
 
-## SYNTAX
+## Syntax
 
 ### Standardmethod (Standard)
 
@@ -82,15 +82,15 @@ Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSessio
  [-PreserveAuthorizationOnRedirect] [-SkipHeaderValidation] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
-Das `Invoke-WebRequest` -Cmdlet sendet HTTP-und HTTPS-Anforderungen an eine Webseite oder einen Webdienst. Sie analysiert die Antwort und gibt Auflistungen von Links, Bildern und anderen wichtigen HTML-Elementen zurück.
+Das `Invoke-WebRequest` -Cmdlet sendet HTTP-und HTTPS-Anforderungen an eine Webseite oder einen Webdienst. Er analysiert die Antwort und gibt Auflistungen von Links, Bildern und anderen wichtigen HTML-Elementen zurück.
 
 Dieses Cmdlet wurde in PowerShell 3,0 eingeführt.
 
 Ab PowerShell 7,0 `Invoke-WebRequest` unterstützt die durch Umgebungsvariablen definierte Proxykonfiguration. Weitere Informationen finden Sie in diesem Artikel im Abschnitt mit [hinweisen](#notes) .
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Senden einer Webanforderung
 
@@ -243,7 +243,7 @@ $StatusCode
 
 Der abschließende Fehler wird durch den- `catch` Block abgefangen, der den **Statuscode** aus dem **Ausnahme** Objekt abruft.
 
-## PARAMETERS
+## Parameter
 
 ### -"-Zugewunverschlüsseltedauthentication"
 
@@ -273,10 +273,10 @@ Die **Authentifizierung** kann nicht mit **usedefault-Anmelde** Informationen ve
 
 Verfügbare Authentifizierungs Optionen:
 
-- **None**: Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
-- **Basic**: erfordert **Credential**. Die Anmelde Informationen werden in einem RFC 7617-Standard Authentifizierungs Header im Format von gesendet `base64(user:password)` .
-- Bearername **: erfordert** **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
-- **OAuth**: erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
+- `None`: Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
+- `Basic`: Erfordert **Credential**. Die Anmelde Informationen werden in einem RFC 7617-Standard Authentifizierungs Header im Format von gesendet `base64(user:password)` .
+- `Bearer`: Erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
+- `OAuth`: Erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
 
 Durch die Bereitstellung der **Authentifizierung** werden alle Header überschrieben `Authorization` , die für **Header** bereitgestellt oder in **websession** eingeschlossen
 
@@ -555,16 +555,16 @@ Accept wildcard characters: False
 
 Gibt die für die Webanforderung verwendete Methode an. Zulässige Werte für diesen Parameter:
 
-- Standard
-- Löschen
-- Herunterladen
-- Head
-- Zusammenführen
-- Optionen
-- Patch
-- Posten
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 Der **custommethod** -Parameter kann für Anforderungs Methoden verwendet werden, die oben nicht aufgeführt sind.
 
@@ -845,7 +845,7 @@ Accept wildcard characters: False
 
 Legt die SSL/TLS-Protokolle fest, die für die Webanforderung zulässig sind. Standardmäßig sind alle vom System unterstützten SSL/TLS-Protokolle zulässig. **SslProtocol** ermöglicht die Beschränkung auf bestimmte Protokolle zu Konformitäts Zwecken.
 
-**SslProtocol** verwendet die **websslprotocol** -Flag-Aufzählung. Es ist möglich, mehr als ein Protokoll mithilfe der Flag-Notation oder mit der Kombination mehrerer **websslprotocol** -Optionen mit **Bor** bereitzustellen. die Bereitstellung mehrerer Protokolle wird jedoch nicht auf allen Plattformen unterstützt.
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **SslProtocol** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden. Möglicherweise sind Sie nicht in der Lage, mehrere Optionen auf allen Plattformen zu definieren.
 
 > [!NOTE]
 > Auf nicht-Windows-Plattformen ist es möglicherweise nicht möglich, `Tls` oder `Tls12` als Option anzugeben.
@@ -913,7 +913,7 @@ Gibt einen Wert für den HTTP-Antwortheader transfer-encoding an. Zulässige Wer
 - Komprimieren
 - Deflate
 - GZip
-- Identität
+- Identity
 
 ```yaml
 Type: System.String
@@ -1032,17 +1032,17 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System.Object
 
 Sie können den Text einer Webanforderung an übergeben `Invoke-WebRequest` .
 
-## AUSGABEN
+## Ausgaben
 
 ### Microsoft. PowerShell. Commands. basichtmlwebresponseobject
 
-## HINWEISE
+## Hinweise
 
 Ab PowerShell 6.0.0 `Invoke-WebRequest` unterstützt nur die grundlegende-Verarbeitung.
 
@@ -1058,12 +1058,12 @@ Der Wert dieser Eigenschaft wird von Ihrer Plattform bestimmt:
 
 Die Umgebungsvariablen, die für die `DefaultProxy` Initialisierung auf Windows-und UNIX-basierten Plattformen verwendet werden, sind:
 
-- ` HTTP_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTP-Anforderungen verwendet wird.
+- `HTTP_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTP-Anforderungen verwendet wird.
 - `HTTPS_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTPS-Anforderungen verwendet wird.
 - `ALL_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für http-und HTTPS-Anforderungen verwendet wird, falls `HTTP_PROXY` oder `HTTPS_PROXY` nicht definiert sind.
 - `NO_PROXY`: eine durch Trennzeichen getrennte Liste von Hostnamen, die von der Proxy Datei ausgeschlossen werden sollen.
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Invoke-RestMethod](Invoke-RestMethod.md)
 

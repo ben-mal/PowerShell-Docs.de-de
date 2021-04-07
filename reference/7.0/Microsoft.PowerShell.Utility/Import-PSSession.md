@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/import-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-PSSession
-ms.openlocfilehash: c64a59300cdaffe71de04c7843bf644df49530d5
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: b9a01c527969c2354397f237898f1f01a24f8229
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94390115"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555269"
 ---
 # Import-PSSession
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Importiert Befehle aus einer anderen Sitzung in die aktuelle Sitzung.
 
-## SYNTAX
+## Syntax
 
 ```
 Import-PSSession [-Prefix <String>] [-DisableNameChecking] [[-CommandName] <String[]>] [-AllowClobber]
@@ -28,13 +28,13 @@ Import-PSSession [-Prefix <String>] [-DisableNameChecking] [[-CommandName] <Stri
  [-Certificate <X509Certificate2>] [-Session] <PSSession> [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Das- `Import-PSSession` Cmdlet importiert Befehle, z. b. Cmdlets, Funktionen und Aliase, von einer PSSession auf einem lokalen oder Remote Computer in die aktuelle Sitzung. Sie können jeden Befehl importieren, den das `Get-Command` Cmdlet in der PSSession finden kann.
 
 Verwenden `Import-PSSession` Sie einen Befehl zum Importieren von Befehlen aus einer angepassten Shell (z. b. eine Microsoft Exchange Server-Shell) oder aus einer Sitzung, die Windows PowerShell-Module und-Snap-Ins oder andere Elemente enthält, die sich nicht in der aktuellen Sitzung befinden.
 
-Zum Importieren von Befehlen verwenden Sie zunächst das `New-PSSession` Cmdlet, um eine PSSession zu erstellen. Verwenden Sie dann das `Import-PSSession` Cmdlet, um die Befehle zu importieren. Standardmäßig `Import-PSSession` importiert alle Befehle mit Ausnahme von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben. Zum Importieren aller Befehle verwenden Sie den **AllowClobber** -Parameter.
+Zum Importieren von Befehlen verwenden Sie zunächst das `New-PSSession` Cmdlet, um eine PSSession zu erstellen. Verwenden Sie dann das `Import-PSSession` Cmdlet, um die Befehle zu importieren. Standardmäßig `Import-PSSession` importiert alle Befehle mit Ausnahme von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben. Zum Importieren aller Befehle verwenden Sie den **AllowClobber**-Parameter.
 
 Sie können importierte Befehle genauso wie jeden anderen Befehl in der Sitzung ausführen. Wenn Sie einen importierten Befehl verwenden, wird der importierte Teil des Befehls implizit in der Sitzung ausgeführt, aus der er importiert wurde. Die Remotevorgänge werden jedoch vollständig von Windows PowerShell verarbeitet. Abgesehen davon, dass die Verbindung mit der anderen Sitzung (PSSession) geöffnet bleiben muss, können Remotevorgänge vollständig unbeaufsichtigt ablaufen. Wenn Sie die Verbindung trennen, sind die importierten Befehle nicht mehr verfügbar.
 
@@ -46,44 +46,44 @@ Das- `Import-PSSession` Cmdlet verwendet das implizite Remoting-Feature von Wind
 
 Ab Windows PowerShell 3,0 können Sie das `Import-Module` Cmdlet verwenden, um Module aus einer Remote Sitzung in die aktuelle Sitzung zu importieren. Dieses Feature verwendet implizites Remoting. Dies entspricht `Import-PSSession` der Verwendung von, um ausgewählte Module aus einer Remote Sitzung in die aktuelle Sitzung zu importieren.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Importieren aller Befehle aus einer PSSession
 
 ```
-PS C:\> $S = New-PSSession -ComputerName Server01
-PS C:\> Import-PSSession -Session $S
+$S = New-PSSession -ComputerName Server01
+Import-PSSession -Session $S
 ```
 
 Dieser Befehl importiert alle Befehle einer PSSession auf Computer Server01 in die aktuelle Sitzung. Dies gilt nicht für Befehle, die über dieselben Namen wie Befehle in der aktuellen Sitzung verfügen.
 
-Da der **CommandName** -Parameter von diesem Befehl nicht verwendet wird, werden außerdem alle für die importierten Befehle erforderlichen Formatierungsdaten importiert.
+Da der **CommandName**-Parameter von diesem Befehl nicht verwendet wird, werden außerdem alle für die importierten Befehle erforderlichen Formatierungsdaten importiert.
 
 ### Beispiel 2: Importieren von Befehlen, die mit einer bestimmten Zeichenfolge enden
 
 ```
-PS C:\> $S = New-PSSession https://ps.testlabs.com/powershell
-PS C:\> Import-PSSession -Session $S -CommandName *-test -FormatTypeName *
-PS C:\> New-Test -Name Test1
-PS C:\> Get-Test test1 | Run-Test
+$S = New-PSSession https://ps.testlabs.com/powershell
+Import-PSSession -Session $S -CommandName *-test -FormatTypeName *
+New-Test -Name Test1
+Get-Test test1 | Run-Test
 ```
 
 Durch diese Befehle werden die auf „-test“ endenden Namen aus einer PSSession in die lokale Sitzung importiert. Anschließend wird die Verwendung eines importierten Cmdlets gezeigt.
 
 Der erste Befehl verwendet das `New-PSSession` Cmdlet, um eine PSSession zu erstellen. Er speichert die PSSession in der `$S` Variablen.
 
-Der zweite Befehl verwendet das `Import-PSSession` Cmdlet, um Befehle aus der PSSession in in `$S` die aktuelle Sitzung zu importieren. Er verwendet den **CommandName** -Parameter, um Befehle mit dem Substantiv „Test“ anzugeben, und den **FormatTypeName** -Parameter, um die Formatierungsdaten für die Test-Befehle zu importieren.
+Der zweite Befehl verwendet das `Import-PSSession` Cmdlet, um Befehle aus der PSSession in in `$S` die aktuelle Sitzung zu importieren. Er verwendet den **CommandName**-Parameter, um Befehle mit dem Substantiv „Test“ anzugeben, und den **FormatTypeName**-Parameter, um die Formatierungsdaten für die Test-Befehle zu importieren.
 
 Vom dritten und vierten Befehl werden die importierten Befehle in der aktuellen Sitzung verwendet. Importierte Befehle werden der aktuellen Sitzung tatsächlich hinzugefügt, sodass Sie sie mithilfe lokaler Syntax ausführen. Sie müssen das `Invoke-Command` Cmdlet nicht verwenden, um einen importierten Befehl auszuführen.
 
 ### Beispiel 3: Importieren von Cmdlets aus einer PSSession
 
 ```
-PS C:\> $S1 = New-PSSession -ComputerName s1
-PS C:\> $S2 = New-PSSession -ComputerName s2
-PS C:\> Import-PSSession -Session s1 -Type cmdlet -Name New-Test, Get-Test -FormatTypeName *
-PS C:\> Import-PSSession -Session s2 -Type Cmdlet -Name Set-Test -FormatTypeName *
-PS C:\> New-Test Test1 | Set-Test -RunType Full
+$S1 = New-PSSession -ComputerName s1
+$S2 = New-PSSession -ComputerName s2
+Import-PSSession -Session s1 -Type cmdlet -Name New-Test, Get-Test -FormatTypeName *
+Import-PSSession -Session s2 -Type Cmdlet -Name Set-Test -FormatTypeName *
+New-Test Test1 | Set-Test -RunType Full
 ```
 
 Dieses Beispiel zeigt, dass Sie importierte Cmdlets genauso verwenden, wie Sie lokale Cmdlets verwenden würden.
@@ -95,15 +95,15 @@ Obwohl die Cmdlets aus verschiedenen PSSessions importiert wurden, können Sie e
 ### Beispiel 4: Ausführen eines importierten Befehls als Hintergrund Auftrag
 
 ```
-PS C:\> $S = New-PSSession -ComputerName Server01
-PS C:\> Import-PSSession -Session $S -CommandName *-test* -FormatTypeName *
-PS C:\> $batch = New-Test -Name Batch -AsJob
-PS C:\> Receive-Job $batch
+$S = New-PSSession -ComputerName Server01
+Import-PSSession -Session $S -CommandName *-test* -FormatTypeName *
+$batch = New-Test -Name Batch -AsJob
+Receive-Job $batch
 ```
 
 In diesem Beispiel wird erläutert, wie ein importierter Befehl als Hintergrundauftrag ausgeführt wird.
 
-Da die Ausführung importierter Befehle länger dauern kann als lokale Befehle, `Import-PSSession` fügt jedem importierten Befehl einen **AsJob** -Parameter hinzu. Der **AsJob** -Parameter ermöglicht Ihnen die Ausführung des Befehls als Hintergrundauftrag.
+Da die Ausführung importierter Befehle länger dauern kann als lokale Befehle, `Import-PSSession` fügt jedem importierten Befehl einen **AsJob** -Parameter hinzu. Der **AsJob**-Parameter ermöglicht Ihnen die Ausführung des Befehls als Hintergrundauftrag.
 
 Der erste Befehl erstellt eine PSSession auf dem Server01-Computer und speichert das PSSession-Objekt in der `$S` Variablen.
 
@@ -116,9 +116,9 @@ Der vierte Befehl verwendet das `Receive-Job` Cmdlet, um die Ergebnisse des Auft
 ### Beispiel 5: Importieren von Cmdlets und Funktionen aus einem Windows PowerShell-Modul
 
 ```
-PS C:\> $S = New-PSSession -ComputerName Server01
-PS C:\> Invoke-Command -Session $S {Import-Module TestManagement}
-PS C:\> Import-PSSession -Session $S -Module TestManagement
+$S = New-PSSession -ComputerName Server01
+Invoke-Command -Session $S {Import-Module TestManagement}
+Import-PSSession -Session $S -Module TestManagement
 ```
 
 In diesem Beispiel wird veranschaulicht, wie Cmdlets und Funktionen aus einem Windows PowerShell-Modul auf einem Remotecomputer in die aktuelle Sitzung importiert werden.
@@ -232,11 +232,11 @@ Der erste Befehl verwendet das `Import-PSSession` Cmdlet, um Befehle zu importie
 
 Der zweite Befehl verwendet das `Get-Command` Cmdlet, um die Befehle, die vom Modul in der Variablen exportiert werden, zu erhalten `$M` .
 
-Der **Module** -Parameter akzeptiert einen Zeichenfolgenwert, der eigens für den Modulnamen erstellt wurde. Wenn Sie ein Modulobjekt senden, verwendet Windows PowerShell jedoch die **ToString** -Methode für das Modulobjekt, das den Modulnamen zurückgibt.
+Der **Module**-Parameter akzeptiert einen Zeichenfolgenwert, der eigens für den Modulnamen erstellt wurde. Wenn Sie ein Modulobjekt senden, verwendet Windows PowerShell jedoch die **ToString**-Methode für das Modulobjekt, das den Modulnamen zurückgibt.
 
 Der `Get-Command` Befehl ist das Äquivalent zu `Get-Command $M.Name` ".
 
-## PARAMETERS
+## Parameter
 
 ### -Allowclobber
 
@@ -300,9 +300,9 @@ Accept wildcard characters: False
 
 Gibt Befehle mit den angegebenen Namen oder namens Mustern an. Platzhalter sind zulässig. Verwenden Sie **CommandName** oder den Alias **Name**.
 
-Standardmäßig `Import-PSSession` importiert alle Befehle aus der Sitzung, mit Ausnahme von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben. Dadurch wird verhindert, dass Befehle in der Sitzung durch importierte Befehle ausgeblendet oder ersetzt werden. Um alle Befehle zu importieren, also auch die Befehle, durch die andere Befehle ausgeblendet oder ersetzt werden, verwenden Sie den **AllowClobber** -Parameter.
+Standardmäßig `Import-PSSession` importiert alle Befehle aus der Sitzung, mit Ausnahme von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben. Dadurch wird verhindert, dass Befehle in der Sitzung durch importierte Befehle ausgeblendet oder ersetzt werden. Um alle Befehle zu importieren, also auch die Befehle, durch die andere Befehle ausgeblendet oder ersetzt werden, verwenden Sie den **AllowClobber**-Parameter.
 
-Bei Verwendung des **CommandName** -Parameters werden die Formatierungsdateien für die Befehle nicht importiert, sofern nicht der **FormatTypeName** -Parameter verwendet wird. Entsprechend werden bei Verwendung des **FormatTypeName** -Parameters keine Befehle importiert, sofern Sie nicht den **CommandName** -Parameter verwenden.
+Bei Verwendung des **CommandName**-Parameters werden die Formatierungsdateien für die Befehle nicht importiert, sofern nicht der **FormatTypeName**-Parameter verwendet wird. Entsprechend werden bei Verwendung des **FormatTypeName**-Parameters keine Befehle importiert, sofern Sie nicht den **CommandName**-Parameter verwenden.
 
 ```yaml
 Type: System.String[]
@@ -320,13 +320,15 @@ Accept wildcard characters: False
 
 Gibt den Typ von Befehls Objekten an. Der Standardwert ist Cmdlet. Verwenden Sie **CommandType** oder dessen Aliasname **Type**. Zulässige Werte für diesen Parameter:
 
-- Alias. Die Windows PowerShell-Aliase in der Remotesitzung.
-- Alle Die Cmdlets und Funktionen in der Remotesitzung.
-- Anwendung: Alle Dateien außer Windows-PowerShell Dateien in den Pfaden, die in der PATH-Umgebungsvariablen ( `$env:path` ) in der Remote Sitzung aufgelistet sind, einschließlich txt-, exe-und dll-Dateien.
-- Cmdlet. Die Cmdlets in der Remotesitzung. Der Standardwert ist Cmdlet.
-- Externalscript. Die PS1-Dateien in den Pfaden, die in der PATH-Umgebungsvariablen ( `$env:path` ) in der Remote Sitzung aufgelistet sind.
-- Filter und function. Die Windows PowerShell-Funktionen in der Remotesitzung.
-- Skript. Die Skriptblöcke in der Remotesitzung.
+- `Alias`: Windows PowerShell-Aliase in der Remote Sitzung.
+- `All`: Die Cmdlets und Funktionen in der Remote Sitzung.
+- `Application`: Alle Dateien außer Windows-PowerShell Dateien in den Pfaden, die in der PATH-Umgebungsvariablen ( `$env:path` ) in der Remote Sitzung aufgelistet sind, einschließlich txt-, exe-und dll-Dateien.
+- `Cmdlet`: Die Cmdlets in der Remote Sitzung. Der Standardwert ist Cmdlet.
+- `ExternalScript`: Die PS1-Dateien in den Pfaden, die in der PATH-Umgebungsvariablen ( `$env:path` ) in der Remote Sitzung aufgelistet sind.
+- `Filter` und `Function` : die Windows PowerShell-Funktionen in der Remote Sitzung.
+- `Script`: Die Skriptblöcke in der Remote Sitzung.
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **CommandType** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -373,9 +375,9 @@ Der Wert dieses Parameters muss dem Namen eines Typs entsprechen, der von einem 
 
 Wenn der Befehl weder den **CommandName** -Parameter noch den **formattypame** -Parameter enthält, `Import-PSSession` importiert Formatierungs Anweisungen für alle .NET Framework Typen, die von einem `Get-FormatData` Befehl in der Remote Sitzung zurückgegeben werden.
 
-Wenn Sie den **FormatTypeName** -Parameter verwenden, werden keine Befehle importiert, sofern nicht der **CommandName** -Parameter verwendet wird.
+Wenn Sie den **FormatTypeName**-Parameter verwenden, werden keine Befehle importiert, sofern nicht der **CommandName**-Parameter verwendet wird.
 
-Entsprechend werden bei Verwendung des **CommandName** -Parameters die Formatierungsdateien für die Befehle nicht importiert, sofern Sie nicht den **FormatTypeName** -Parameter verwenden.
+Entsprechend werden bei Verwendung des **CommandName**-Parameters die Formatierungsdateien für die Befehle nicht importiert, sofern Sie nicht den **FormatTypeName**-Parameter verwenden.
 
 ```yaml
 Type: System.String[]
@@ -472,24 +474,24 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### Keine
 
 Objekte können nicht an dieses Cmdlet weitergereicht werden.
 
-## AUSGABEN
+## Ausgaben
 
 ### System. Management. Automation. psmoduleinfo
 
 `Import-PSSession` Gibt das gleiche Modul Objekt zurück, das `New-Module` und die `Get-Module` Cmdlets zurückgeben.
 Das importierte Modul ist jedoch temporär und nur in der aktuellen Sitzung vorhanden. Verwenden Sie das-Cmdlet, um ein dauerhaftes Modul auf dem Datenträger zu erstellen `Export-PSSession` .
 
-## HINWEISE
+## Hinweise
 
 - `Import-PSSession` basiert auf der PowerShell-Remoting-Infrastruktur. Zur Verwendung dieses Cmdlets muss der Computer für das WS-Management-Remoting konfiguriert sein. Weitere Informationen finden Sie unter [about_Remote](../Microsoft.PowerShell.Core/about/about_Remote.md) und [about_Remote_Requirements](../Microsoft.PowerShell.Core/about/about_Remote_Requirements.md).
 - `Import-PSSession` keine Variablen oder PowerShell-Anbieter werden importiert.
-- Beim Importieren von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben, können die importierten Befehle Aliase, Funktionen und Cmdlets in der Sitzung ausblenden sowie Funktionen und Variablen in der Sitzung ersetzen. Um Namenskonflikte zu vermeiden, verwenden Sie den **Prefix** -Parameter. Weitere Informationen finden Sie unter [about_Command_Precedence](../Microsoft.PowerShell.Core/about/about_Command_Precedence.md).
+- Beim Importieren von Befehlen, die denselben Namen wie die Befehle in der aktuellen Sitzung haben, können die importierten Befehle Aliase, Funktionen und Cmdlets in der Sitzung ausblenden sowie Funktionen und Variablen in der Sitzung ersetzen. Um Namenskonflikte zu vermeiden, verwenden Sie den **Prefix**-Parameter. Weitere Informationen finden Sie unter [about_Command_Precedence](../Microsoft.PowerShell.Core/about/about_Command_Precedence.md).
 - `Import-PSSession` konvertiert alle Befehle in Funktionen, bevor Sie importiert werden. Folglich zeigen importierte Befehle ein etwas anderes Verhalten, als wenn sie den ursprünglichen Befehlstyp behalten würden. Wenn Sie z. B. ein Cmdlet aus einer PSSession importieren und dann ein Cmdlet desselben Namens aus einem Modul oder Snap-In importieren, wird standardmäßig das aus der PSSession importierte Cmdlet ausgeführt, weil Funktionen Vorrang vor Cmdlets haben. Wenn Sie dagegen einen Alias in eine Sitzung importieren, die über einen Alias desselben Namens verfügt, wird immer der ursprüngliche Alias verwendet, weil Aliase Vorrang vor Funktionen haben. Weitere Informationen finden Sie unter [about_Command_Precedence](../Microsoft.PowerShell.Core/about/about_Command_Precedence.md).
 - `Import-PSSession` verwendet das `Write-Progress` Cmdlet, um den Fortschritt des Befehls anzuzeigen. Während der Befehlsausführung wird u. U. die Statusanzeige angezeigt.
 - Zum Ermitteln der zu importierenden Befehle `Import-PSSession` verwendet das `Invoke-Command` Cmdlet, um einen `Get-Command` Befehl in der PSSession auszuführen. Um Formatierungsdaten für die Befehle zu erhalten, wird das- `Get-FormatData` Cmdlet verwendet. Wenn Sie einen Befehl ausführen, werden möglicherweise Fehlermeldungen von diesen Cmdlets angezeigt `Import-PSSession` . Kann auch keine `Import-PSSession` Befehle aus einer PSSession importieren, die nicht die `Get-Command` `Get-FormatData` `Select-Object` Cmdlets,, und enthält `Get-Help` .
@@ -497,8 +499,8 @@ Das importierte Modul ist jedoch temporär und nur in der aktuellen Sitzung vorh
 - Da Windows PowerShell-Profile nicht in pssessions ausgeführt werden, stehen die Befehle, die ein Profil einer Sitzung hinzufügt, nicht für zur Verfügung `Import-PSSession` . Zum Importieren von Befehlen aus einem Profil verwenden Sie einen- `Invoke-Command` Befehl, um das Profil manuell in der PSSession auszuführen, bevor Sie Befehle importieren.
 - Das temporäre Modul, das `Import-PSSession` erstellt, kann eine Formatierungs Datei enthalten, auch wenn der Befehl keine Formatierungsdaten importiert. Wenn durch den Befehl keine Formatierungsdaten importiert werden, enthält keine der erstellten Formatierungsdateien Formatierungsdaten.
 - Um zu verwenden `Import-PSSession` , kann die Ausführungs Richtlinie in der aktuellen Sitzung nicht eingeschränkt oder AllSigned sein, da das temporäre Modul, das `Import-PSSession` erstellt, nicht signierte Skriptdateien enthält, die von diesen Richtlinien nicht unterbunden werden. Wenn Sie `Import-PSSession` ohne Änderung der Ausführungs Richtlinie für den lokalen Computer verwenden möchten, verwenden Sie den **Scope** -Parameter von, `Set-ExecutionPolicy` um eine weniger restriktive Ausführungs Richtlinie für einen einzelnen Prozess festzulegen.
-- In Windows PowerShell 2.0 enthalten Hilfethemen zu Befehlen, die aus einer anderen Sitzung importiert werden, nicht das über den **Prefix** -Parameter zugewiesene Präfix. Um Hilfe zu einem importierten Befehl in Windows PowerShell 2.0 zu erhalten, verwenden Sie den ursprünglichen Befehlsnamen (ohne Präfix).
+- In Windows PowerShell 2.0 enthalten Hilfethemen zu Befehlen, die aus einer anderen Sitzung importiert werden, nicht das über den **Prefix**-Parameter zugewiesene Präfix. Um Hilfe zu einem importierten Befehl in Windows PowerShell 2.0 zu erhalten, verwenden Sie den ursprünglichen Befehlsnamen (ohne Präfix).
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Export-PSSession](Export-PSSession.md)

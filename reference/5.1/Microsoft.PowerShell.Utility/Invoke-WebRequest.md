@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 01/26/2021
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: f3545065d4879830a5051ef687f210c7fbd1251e
-ms.sourcegitcommit: 11880ca974fe2df308191c9f6dcdfe0b89c2dc67
+ms.openlocfilehash: 4aa3b889ed00c6b0442a1191f055e1228f252631
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860659"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555524"
 ---
 # Invoke-WebRequest
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Ruft Inhalte von einer Webseite im Internet ab.
 
-## SYNTAX
+## Syntax
 
 ```
 Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSession>] [-SessionVariable <String>]
@@ -29,7 +29,7 @@ Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSessio
  [-TransferEncoding <String>] [-InFile <String>] [-OutFile <String>] [-PassThru] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Das- `Invoke-WebRequest` Cmdlet sendet http-, HTTPS-, FTP-und File-Anforderungen an eine Webseite oder einen Webdienst.
 Das Cmdlet analysiert die Antwort und gibt Auflistungen von Formularen, Links, Bildern und anderen wichtigen HTML-Elementen zurück.
@@ -37,10 +37,9 @@ Das Cmdlet analysiert die Antwort und gibt Auflistungen von Formularen, Links, B
 Dieses Cmdlet wurde in Windows PowerShell 3.0 eingeführt.
 
 > [!NOTE]
-> Standardmäßig kann der Skriptcode auf der Webseite ausgeführt werden, wenn die Seite analysiert wird, um die Eigenschaft aufzufüllen `ParsedHtml` .
-> Verwenden Sie den- `-UseBasicParsing` Schalter, um dies zu unterdrücken.
+> Standardmäßig kann der Skriptcode auf der Webseite ausgeführt werden, wenn die Seite analysiert wird, um die Eigenschaft aufzufüllen `ParsedHtml` . Verwenden Sie den- `-UseBasicParsing` Schalter, um dies zu unterdrücken.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Senden einer Webanforderung
 
@@ -138,7 +137,7 @@ $StatusCode
 
 Der abschließende Fehler wird durch den- `catch` Block abgefangen, der den **Statuscode** aus dem **Ausnahme** Objekt abruft.
 
-## PARAMETERS
+## Parameter
 
 ### -Text
 
@@ -151,7 +150,7 @@ Der **Body**-Parameter kann verwendet werden, um eine Liste von Abfrageparameter
 Wenn die Eingabe eine GET-Anforderung und der Text ein **IDictionary** (in der Regel eine Hash Tabelle) ist, wird der Text dem URI als Abfrage Parameter hinzugefügt. Bei anderen Get-Anforderungen wird der Text als Wert des Anforderungs Texts im Standardformat festgelegt `name=value` .
 
 Wenn der Text ein Formular oder die Ausgabe eines- `Invoke-WebRequest` Aufrufes ist, legt PowerShell den Anforderungs Inhalt auf die Formularfelder fest.
-Beispiele:
+Beispiel:
 
 `$r = Invoke-WebRequest https://website.com/login.aspx`
 `$r.Forms\[0\].Name = "MyName"`
@@ -323,16 +322,16 @@ Accept wildcard characters: False
 
 Gibt die für die Webanforderung verwendete Methode an. Zulässige Werte für diesen Parameter:
 
-- Standard
-- Löschen
-- Herunterladen
-- Head
-- Zusammenführen
-- Optionen
-- Patch
-- Posten
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.WebRequestMethod
@@ -484,11 +483,11 @@ Accept wildcard characters: False
 
 Gibt einen Wert für den HTTP-Antwortheader transfer-encoding an. Zulässige Werte für diesen Parameter:
 
-- Aufgeteilte
-- Komprimieren
-- Deflate
-- GZip
-- Identität
+- `Chunked`
+- `Compress`
+- `Deflate`
+- `GZip`
+- `Identity`
 
 ```yaml
 Type: System.String
@@ -539,7 +538,7 @@ Accept wildcard characters: False
 
 ### -Usedefault-Anmelde Informationen
 
-Gibt an, dass das cmdet die Anmelde Informationen des aktuellen Benutzers verwendet, um die Webanforderung zu senden.
+Gibt an, dass das Cmdlet die Anmelde Informationen des aktuellen Benutzers verwendet, um die Webanforderung zu senden.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -599,19 +598,19 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt die allgemeinen Parameter: `-Debug` , `-ErrorAction` , `-ErrorVariable` , `-InformationAction` , `-InformationVariable` , `-OutVariable` , `-OutBuffer` , `-PipelineVariable` , `-Verbose` , `-WarningAction` und `-WarningVariable` . Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System.Object
 
 Sie können den Text einer Webanforderung an übergeben `Invoke-WebRequest` .
 
-## AUSGABEN
+## Ausgaben
 
 ### Microsoft.PowerShell.Commands.Htmlwebresponseobject
 
-## HINWEISE
+## Hinweise
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Invoke-RestMethod](Invoke-RestMethod.md)
 

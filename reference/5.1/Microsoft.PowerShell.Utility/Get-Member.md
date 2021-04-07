@@ -3,36 +3,36 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 05/06/2020
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-member?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Member
-ms.openlocfilehash: 290d19cb2bf04e22bf7855cb88467ed26ad42fe7
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 95a44ceb6c10b78779538c0755054e937e4318fe
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213964"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555133"
 ---
 # Get-Member
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Ruft die Eigenschaften und Methoden der Objekte ab.
 
-## SYNTAX
+## Syntax
 
 ```
 Get-Member [-InputObject <PSObject>] [[-Name] <String[]>] [-MemberType <PSMemberTypes>]
  [-View <PSMemberViewTypes>] [-Static] [-Force] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 `Get-Member`Mit dem-Cmdlet werden die Elemente, die Eigenschaften und Methoden von Objekten abgerufen.
 
-Um das Objekt anzugeben, verwenden Sie den **Inputobject** -Parameter, oder übergeben Sie ein Objekt an `Get-Member` . Um Informationen zu statischen Membern zu erhalten, verwenden die Member der-Klasse und nicht die-Instanz den **static** -Parameter. Um nur bestimmte Typen von Membern (z. b. **noteproperties** ) zu erhalten, verwenden Sie den Parameter " **Membership Type** ".
+Um das Objekt anzugeben, verwenden Sie den **Inputobject** -Parameter, oder übergeben Sie ein Objekt an `Get-Member` . Um Informationen zu statischen Membern zu erhalten, verwenden die Member der-Klasse und nicht die-Instanz den **static** -Parameter. Um nur bestimmte Typen von Membern (z. b. **noteproperties**) zu erhalten, verwenden Sie den Parameter " **Membership Type** ".
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: erhalten der Member von Process-Objekten
 
@@ -86,7 +86,7 @@ ToString                  ScriptMethod  System.Object ToString();
 
 ### Beispiel 2: erhalten von Mitgliedern von Dienst Objekten
 
-In diesem Beispiel werden alle Member (Eigenschaften und Methoden) der Dienst Objekte abgerufen, die vom `Get-Service` Cmdlet abgerufen werden, einschließlich der systeminternen Member (z. b. **PSBase** , **psobject** ) und der Methoden **get_** und **set_** .
+In diesem Beispiel werden alle Member (Eigenschaften und Methoden) der Dienst Objekte abgerufen, die vom `Get-Service` Cmdlet abgerufen werden, einschließlich der systeminternen Member (z. b. **PSBase**, **psobject**) und der Methoden **get_** und **set_** .
 
 ```powershell
 Get-Service | Get-Member -Force
@@ -139,7 +139,7 @@ Der Befehl gibt die **Message** -Eigenschaft des **EventLogRecord** -Objekts zur
 
 In diesem Beispiel werden Objekte mit einer **MachineName** -Eigenschaft in der Ausgabe aus einer Liste von Cmdlets abgerufen.
 
-Die- `$list` Variable enthält eine Liste von Cmdlets, die ausgewertet werden sollen. Die **foreach** -Anweisung ruft jeden Befehl auf und sendet die Ergebnisse an `Get-Member` . Mit dem **Name** -Parameter werden die Ergebnisse von `Get-Member` auf Member mit dem Namen " **MachineName** " eingeschränkt.
+Die- `$list` Variable enthält eine Liste von Cmdlets, die ausgewertet werden sollen. Die **foreach** -Anweisung ruft jeden Befehl auf und sendet die Ergebnisse an `Get-Member` . Mit dem **Name** -Parameter werden die Ergebnisse von `Get-Member` auf Member mit dem Namen " **MachineName**" eingeschränkt.
 
 ```powershell
 $list = "Get-Process", "Get-Service", "Get-Culture", "Get-PSDrive", "Get-ExecutionPolicy"
@@ -249,20 +249,20 @@ LastWriteTimeUtc
 Attributes
 ```
 
-## PARAMETERS
+## Parameter
 
 ### -Force
 
 Fügt die systeminternen Member und die vom Compiler generierten **get_** und **set_** Methoden der Anzeige hinzu.
 In der folgenden Liste werden die Eigenschaften beschrieben, die hinzugefügt werden, wenn Sie den **Force** -Parameter verwenden:
 
-- **PSBase** : die ursprünglichen Eigenschaften des .NET-Objekts ohne Erweiterung oder Anpassung. Dabei handelt es sich um die für die Objektklasse definierten Eigenschaften.
-- **Psangepasste** . Die Eigenschaften und Methoden, die im erweiterten PowerShell-Typsystem definiert sind.
-- **Psexgepflegt** . Die Eigenschaften und Methoden, die in den `Types.ps1xml` Dateien oder mithilfe des- `Add-Member` Cmdlets hinzugefügt wurden.
-- **Psobject** . Der Adapter, der das Basisobjekt in ein PowerShell- **psobject** -Objekt konvertiert.
-- **Pstypames** . Eine Liste der Objekttypen, die das Objekt nach Genauigkeit beschreiben. Bei der Formatierung des Objekts sucht PowerShell nach den Typen in den `Format.ps1xml` Dateien im PowerShell-Installationsverzeichnis ( `$PSHOME` ). Dabei wird die Formatierungsdefinition für den ersten gefundenen Typ verwendet.
+- `PSBase`: Die ursprünglichen Eigenschaften des .NET-Objekts ohne Erweiterung oder Anpassung. Dabei handelt es sich um die für die Objektklasse definierten Eigenschaften.
+- `PSAdapted`: Die Eigenschaften und Methoden, die im erweiterten PowerShell-Typsystem definiert sind.
+- `PSExtended`: Die Eigenschaften und Methoden, die in den `Types.ps1xml` Dateien oder mithilfe des- `Add-Member` Cmdlets hinzugefügt wurden.
+- `PSObject`: Der Adapter, der das Basisobjekt in ein PowerShell- **psobject** -Objekt konvertiert.
+- `PSTypeNames`: Eine Liste von Objekttypen, die das Objekt in der Reihenfolge der Spezifizität beschreiben. Bei der Formatierung des Objekts sucht PowerShell nach den Typen in den `Format.ps1xml` Dateien im PowerShell-Installationsverzeichnis ( `$PSHOME` ). Dabei wird die Formatierungsdefinition für den ersten gefundenen Typ verwendet.
 
-Standardmäßig `Get-Member` ruft diese Eigenschaften in allen Ansichten ab, mit Ausnahme von " **Base** " und " **angepasst** ", zeigt Sie jedoch nicht an.
+Standardmäßig `Get-Member` ruft diese Eigenschaften in allen Ansichten ab, mit Ausnahme von " **Base** " und " **angepasst**", zeigt Sie jedoch nicht an.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -299,32 +299,32 @@ Accept wildcard characters: False
 
 ### -Mitgliedstyp
 
-Gibt den Elementtyp an, der von diesem Cmdlet abgerufen wird. Die Standardeinstellung ist **Alle** .
+Gibt den Elementtyp an, der von diesem Cmdlet abgerufen wird. Der Standardwert ist `All`.
 
 Zulässige Werte für diesen Parameter:
 
-- AliasProperty
-- CodeProperty
-- Eigenschaft
-- NoteProperty
-- ScriptProperty
-- Eigenschaften
-- PropertySet
-- Methode
-- CodeMethod
-- ScriptMethod
-- Methoden
-- ParameterizedProperty
-- MemberSet
-- Ereignis
-- Dynamisch
-- Alle
+- `AliasProperty`
+- `CodeProperty`
+- `Property`
+- `NoteProperty`
+- `ScriptProperty`
+- `Properties`
+- `PropertySet`
+- `Method`
+- `CodeMethod`
+- `ScriptMethod`
+- `Methods`
+- `ParameterizedProperty`
+- `MemberSet`
+- `Event`
+- `Dynamic`
+- `All`
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte an den Parameter " **Membership Type** " übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 Weitere Informationen zu diesen Werten finden Sie unter [psmembership types-Enumeration](/dotnet/api/system.management.automation.psmembertypes).
 
-Nicht alle Objekte verfügen über jeden Membertyp. Wenn Sie einen Elementtyp angeben, der für das Objekt nicht vorhanden ist, gibt PowerShell einen NULL-Wert zurück.
-
-Um verwandte Membertypen, wie z. B. alle erweiterten Member abzurufen, verwenden Sie den **View** -Parameter. Wenn Sie den Parameter " **Membership Type** " mit den Parametern " **static** " oder " **View** " verwenden, ruft die Member ab, die `Get-Member` zu beiden Sätzen gehören.
+Nicht alle Objekte verfügen über jeden Membertyp. Wenn Sie einen Elementtyp angeben, der für das Objekt nicht vorhanden ist, gibt PowerShell einen NULL-Wert zurück. Um verwandte Membertypen, wie z. B. alle erweiterten Member abzurufen, verwenden Sie den **View**-Parameter. Wenn Sie den Parameter " **Membership Type** " mit den Parametern " **static** " oder " **View** " verwenden, ruft die Member ab, die `Get-Member` zu beiden Sätzen gehören.
 
 ```yaml
 Type: System.Management.Automation.PSMemberTypes
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 Gibt die Namen von mindestens einer Eigenschaft oder Methode des Objekts an. `Get-Member` Ruft nur die angegebenen Eigenschaften und Methoden ab.
 
-Wenn Sie den Parameter " **Name** " mit dem Parameter " **Membership Type** ", " **View** " oder " **static** " verwenden, ruft nur die Member ab, die `Get-Member` die Kriterien aller Parameter erfüllen.
+Wenn Sie den Parameter " **Name** " mit dem Parameter " **Membership Type**", " **View**" oder " **static** " verwenden, ruft nur die Member ab, die `Get-Member` die Kriterien aller Parameter erfüllen.
 
 Um einen statischen Member nach Namen zu erhalten, verwenden Sie den **static** -Parameter mit dem **Name** -Parameter.
 
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 
 ### -Ansicht
 
-Gibt an, dass dieses Cmdlet nur bestimmte Typen Eigenschaften und Methoden abruft. Geben Sie mindestens einen der Werte an. Der Standardwert ist **angepasst** , **erweitert** .
+Gibt an, dass dieses Cmdlet nur bestimmte Typen Eigenschaften und Methoden abruft. Geben Sie mindestens einen der Werte an. Der Standardwert ist **angepasst**, **erweitert**.
 
 Zulässige Werte für diesen Parameter:
 
@@ -410,19 +410,19 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System. Management. Automation. psobject
 
 Sie können jedes beliebige Objekt an die Pipeline übergeben `Get-Member` .
 
-## AUSGABEN
+## Ausgaben
 
 ### Microsoft. PowerShell. Commands. Membership Definition
 
 `Get-Member` Gibt ein-Objekt für jede Eigenschaft oder Methode zurück, die von ihr abgerufen wird.
 
-## HINWEISE
+## Hinweise
 
 Sie können Informationen zu einem Auflistungs Objekt entweder mithilfe des **Inputobject** -Parameters oder durch Weiterleiten des Objekts, dem ein Komma vorangestellt ist, zu erhalten `Get-Member` .
 
@@ -430,6 +430,6 @@ Sie können die `$This` Automatische Variable in Skript Blöcken verwenden, die 
 
 Wenn Sie ein Objekt übergeben, das einen _Typ_ darstellt, wie z. b. einen typliterals `[int]` , geben Sie `Get-Member` Informationen über den `[System.RuntimeType]` Typ zurück. Wenn Sie jedoch den **static** -Parameter verwenden, `Get-Member` gibt die statischen Member des angegebenen Typs zurück, der durch die-Instanz dargestellt wird `System.RuntimeType` .
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Add-Member](Add-Member.md)

@@ -3,26 +3,26 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 04/08/2020
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-pssession?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PSSession
-ms.openlocfilehash: 5aa9b9967ec6a79a569c9f0e7ca93db9e9e4d5b6
-ms.sourcegitcommit: 2c311274ce721cd1072dcf2dc077226789e21868
+ms.openlocfilehash: 4ea76140cb126216204bebd5c9c87ed9c1ad2339
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94387038"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555252"
 ---
 # Export-PSSession
 
-## ZUSAMMENFASSUNG
+## Übersicht
 
 Exportiert Befehle aus einer anderen Sitzung und speichert Sie in einem PowerShell-Modul.
 
-## SYNTAX
+## Syntax
 
-### Alle
+### All
 
 ```
 Export-PSSession [-OutputModule] <String> [-Force] [-Encoding <Encoding>]
@@ -32,7 +32,7 @@ Export-PSSession [-OutputModule] <String> [-Force] [-Encoding <Encoding>]
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Das `Export-PSSession` Cmdlet ruft Cmdlets, Funktionen, Aliase und andere Befehls Typen aus einer anderen PowerShell-Sitzung (PSSession) auf einem lokalen Computer oder einem Remote Computer ab und speichert Sie in einem PowerShell-Modul. Verwenden Sie das-Cmdlet, um der aktuellen Sitzung die Befehle aus dem Modul hinzuzufügen `Import-Module` .
 
@@ -44,7 +44,7 @@ Um Konflikte bei Befehlsnamen zu vermeiden, wird standardmäßig `Export-PSSessi
 
 Das- `Export-PSSession` Cmdlet verwendet das implizite Remoting-Feature von PowerShell. Wenn Sie Befehle in die aktuelle Sitzung importieren, werden Sie implizit in der ursprünglichen Sitzung oder in einer ähnlichen Sitzung auf dem ursprünglichen Computer ausgeführt.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Exportieren von Befehlen aus einer PSSession
 
@@ -123,7 +123,7 @@ Das- `Remove-PSSession` Cmdlet löscht die PSSession in der `$S` Variablen.
 
 Das- `New-PSSession` Cmdlet erstellt eine neue PSSession, die eine Verbindung mit dem Server01-Computer herstellt. Der **sessionoption** -Parameter verwendet das in gespeicherte-Objekt `$Options` . Mit dem- `Import-Module` Cmdlet werden die Befehle aus dem Server01-Modul importiert. Die Befehle im Modul werden in der PSSession auf dem Computer Server01 ausgeführt.
 
-## PARAMETERS
+## Parameter
 
 ### -Allowclobber
 
@@ -205,15 +205,17 @@ Exportiert nur die angegebenen Typen von Befehlsobjekten. Verwenden Sie **Comman
 
 Die zulässigen Werte für diesen Parameter lauten wie folgt:
 
-- Alias. Alle PowerShell-Aliase in der aktuellen Sitzung.
-- Alle Alle Befehlstypen. Dies entspricht `Get-Command -Name *` .
-- Anwendung: Alle anderen Dateien als PowerShell-Dateien in Pfaden, die in der PATH-Umgebungsvariablen ( `$env:path` ) aufgelistet sind, einschließlich txt-, exe-und dll-Dateien.
-- Cmdlet. Die Cmdlets in der aktuellen Sitzung. Das-Cmdlet ist die Standardeinstellung.
-- Konfiguration Eine PowerShell-Konfiguration. Weitere Informationen finden Sie unter [about_Session_Configurations](../Microsoft.PowerShell.Core/About/about_Session_Configurations.md).
-- Externalscript. Alle PS1-Dateien in den Pfaden, die in der PATH-Umgebungsvariablen () aufgelistet sind `$env:path` .
-- Filter und function. Alle PowerShell-Funktionen.
-- Skript. Skriptblöcke in der aktuellen Sitzung.
-- Workflow. Einen PowerShell-Workflow. Weitere Informationen finden Sie unter [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows).
+- `Alias`: Alle PowerShell-Aliase in der aktuellen Sitzung.
+- `All`: Alle Befehls Typen. Dies entspricht `Get-Command -Name *` .
+- `Application`: Alle anderen Dateien als PowerShell-Dateien in Pfaden, die in der PATH-Umgebungsvariablen ( `$env:path` ) aufgelistet sind, einschließlich txt-, exe-und dll-Dateien.
+- `Cmdlet`: Die Cmdlets in der aktuellen Sitzung. Das-Cmdlet ist die Standardeinstellung.
+- `Configuration`: Eine PowerShell-Konfiguration. Weitere Informationen finden Sie unter [about_Session_Configurations](../Microsoft.PowerShell.Core/About/about_Session_Configurations.md).
+- `ExternalScript`: Alle PS1-Dateien in den Pfaden, die in der PATH-Umgebungsvariablen () aufgelistet sind `$env:path` .
+- `Filter` und `Function` : alle PowerShell-Funktionen.
+- `Script` Skriptblöcke in der aktuellen Sitzung.
+- `Workflow` Einen PowerShell-Workflow. Weitere Informationen finden Sie unter [about_Workflows](/powershell/module/PSWorkflow/About/about_Workflows).
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **CommandType** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -376,19 +378,19 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### Keine
 
 Objekte können nicht an übergeben werden `Export-PSSession` .
 
-## AUSGABEN
+## Ausgaben
 
 ### System. IO. fileingefo
 
 `Export-PSSession` gibt eine Liste der Dateien zurück, die das Modul enthalten, das es erstellt hat.
 
-## HINWEISE
+## Hinweise
 
 `Export-PSSession` basiert auf der PowerShell-Remoting-Infrastruktur. Um dieses Cmdlet zu verwenden, muss der Computer für Remoting konfiguriert werden. Weitere Informationen finden Sie unter [about_Remote_Requirements](../Microsoft.PowerShell.Core/About/about_Remote_Requirements.md).
 
@@ -410,7 +412,7 @@ Da PowerShell-Profile nicht in pssessions ausgeführt werden, stehen die Befehle
 
 Das Modul, das `Export-PSSession` erstellt, kann eine Formatierungs Datei enthalten, auch wenn der Befehl keine Formatierungsdaten importiert. Wenn durch den Befehl keine Formatierungsdaten importiert werden, enthält keine der erstellten Formatierungsdateien Formatierungsdaten.
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [about_Command_Precedence](../Microsoft.PowerShell.Core/About/about_Command_Precedence.md)
 

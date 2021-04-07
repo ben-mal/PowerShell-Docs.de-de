@@ -3,16 +3,16 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 12/13/2018
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-RestMethod
-ms.openlocfilehash: c89f7351e9c874cea2cc0cd5e0912e3ca0d8b0bf
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 916c221a4fb0886494a4632e38f25a639d5d414e
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93213844"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555506"
 ---
 # Invoke-RestMethod
 
@@ -146,7 +146,7 @@ Invoke-RestMethod https://website.com/service.aspx -Body $R.Forms[0]
 Gibt den Anforderungstext an. Der Text entspricht dem Inhalt der Anforderung, der auf die Header folgt.
 Sie können einen Textwert auch über die Pipeline an senden `Invoke-RestMethod` .
 
-Der **Body** -Parameter kann verwendet werden, um eine Liste von Abfrageparametern oder den Inhalt der Antwort anzugeben.
+Der **Body**-Parameter kann verwendet werden, um eine Liste von Abfrageparametern oder den Inhalt der Antwort anzugeben.
 
 Wenn die Eingabe eine GET-Anforderung und der Text ein IDictionary-Objekt (i. d. r. eine Hashtabelle) ist, wird der Text dem URI als Abfrageparameter hinzugefügt. Für andere Anforderungstypen (z. B. POST) wird der Text als Wert des Anforderungstexts im Format „Standardname=Wertformat“ festgelegt.
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 Gibt ein Benutzerkonto an, das über die Berechtigung zum Senden der Anforderung verfügt. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01** , oder geben Sie ein **PSCredential** -Objekt ein, das vom `Get-Credential` Cmdlet generiert wurde.
+Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01**, oder geben Sie ein **PSCredential** -Objekt ein, das vom `Get-Credential` Cmdlet generiert wurde.
 
 Anmelde Informationen werden in einem [PSCredential](/dotnet/api/system.management.automation.pscredential) -Objekt gespeichert, und das Kennwort wird als [SecureString](/dotnet/api/system.security.securestring)gespeichert.
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Disablekeepalive
 
-Legt den **KeepAlive** -Wert im HTTP-Header auf „False“ fest. Der Standardwert von **KeepAlive** ist „True“.
+Legt den **KeepAlive**-Wert im HTTP-Header auf „False“ fest. Der Standardwert von **KeepAlive** ist „True“.
 **KeepAlive** richtet eine persistente Verbindung mit dem Server ein, um nachfolgende Anforderungen zu erleichtern.
 
 ```yaml
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 Gibt die Header der Webanforderung an. Geben Sie eine Hashtabelle oder ein Wörterbuch ein.
 
-Verwenden Sie zum Festlegen der UserAgent-Header den **UserAgent** -Parameter. Sie können diesen Parameter nicht verwenden, um UserAgent- oder Cookieheader anzugeben.
+Verwenden Sie zum Festlegen der UserAgent-Header den **UserAgent**-Parameter. Sie können diesen Parameter nicht verwenden, um UserAgent- oder Cookieheader anzugeben.
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -317,16 +317,16 @@ Accept wildcard characters: False
 
 Gibt die für die Webanforderung verwendete Methode an. Zulässige Werte für diesen Parameter:
 
-- Standard
-- Löschen
-- Herunterladen
-- Head
-- Merge
-- Optionen
-- Patch
-- Posten
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 ```yaml
 Type: Microsoft.PowerShell.Commands.WebRequestMethod
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 Speichert den Antworttext in der angegebenen Ausgabedatei. Geben Sie einen Pfad- und Dateinamen ein. Wenn Sie den Pfad weglassen, wird der aktuelle Speicherort als Standard verwendet.
 
-Standardmäßig `Invoke-RestMethod` gibt die Ergebnisse an die Pipeline zurück. Verwenden Sie den **Passthru** -Parameter, um Ergebnisse an eine Datei und an die Pipeline zu senden.
+Standardmäßig `Invoke-RestMethod` gibt die Ergebnisse an die Pipeline zurück. Verwenden Sie den **Passthru**-Parameter, um Ergebnisse an eine Datei und an die Pipeline zu senden.
 
 ```yaml
 Type: System.String
@@ -361,7 +361,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt die Ergebnisse zurück und schreibt sie in eine Datei. Dieser Parameter ist nur gültig, wenn der **OutFile** -Parameter ebenfalls im Befehl verwendet wird.
+Gibt die Ergebnisse zurück und schreibt sie in eine Datei. Dieser Parameter ist nur gültig, wenn der **OutFile**-Parameter ebenfalls im Befehl verwendet wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -393,11 +393,11 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird. Der Standardwert ist der aktuelle Benutzer.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential** -Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
+Geben Sie einen Benutzernamen ein, z. B. %%amp;quot;User01%%amp;quot; oder %%amp;quot;Domain01\User01%%amp;quot;, oder geben Sie ein **PSCredential**-Objekt ein, z. B. ein vom `Get-Credential`-Cmdlet generiertes Objekt.
 
-Dieser Parameter ist nur gültig, wenn der **Proxy** Parameter auch im Befehl verwendet wird. Der **ProxyCredential** -Parameter und der **ProxyUseDefaultCredentials** -Parameter können nicht im selben Befehl verwendet werden.
+Dieser Parameter ist nur gültig, wenn der **Proxy** Parameter auch im Befehl verwendet wird. Der **ProxyCredential**-Parameter und der **ProxyUseDefaultCredentials**-Parameter können nicht im selben Befehl verwendet werden.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -413,9 +413,9 @@ Accept wildcard characters: False
 
 ### -Proxyusedefault-Anmelde Informationen
 
-Verwendet die Anmeldeinformationen des aktuellen Benutzers, um auf den Proxyserver zuzugreifen, der vom **Proxy** -Parameter angegeben wird.
+Verwendet die Anmeldeinformationen des aktuellen Benutzers, um auf den Proxyserver zuzugreifen, der vom **Proxy**-Parameter angegeben wird.
 
-Dieser Parameter ist nur gültig, wenn der **Proxy** Parameter auch im Befehl verwendet wird. Der **ProxyCredential** -Parameter und der **ProxyUseDefaultCredentials** -Parameter können nicht im selben Befehl verwendet werden.
+Dieser Parameter ist nur gültig, wenn der **Proxy** Parameter auch im Befehl verwendet wird. Der **ProxyCredential**-Parameter und der **ProxyUseDefaultCredentials**-Parameter können nicht im selben Befehl verwendet werden.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -437,7 +437,7 @@ Wenn Sie eine Sitzungs Variable angeben, `Invoke-RestMethod` erstellt ein Webanf
 
 Im Gegensatz zu einer Remotesitzung besteht bei der Webanforderungssitzung keine persistente Verbindung. Es handelt sich um ein Objekt, das Informationen über die Verbindung und die Anforderung enthält, einschließlich Cookies, Anmeldeinformationen, dem Maximalwert für Umleitungen und der Zeichenfolge des Benutzer-Agents. Sie können das Objekt verwenden, um den Zustand und die Daten übergreifend für Webanforderungen zu nutzen.
 
-Um die Webanforderungssitzung in nachfolgenden Webanforderungen zu verwenden, geben Sie die Sitzungsvariable im Wert des **WebSession** -Parameters an. Windows PowerShell verwendet die Daten im Objekt der Webanforderungssitzung beim Herstellen der neuen Verbindung. Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential** . Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
+Um die Webanforderungssitzung in nachfolgenden Webanforderungen zu verwenden, geben Sie die Sitzungsvariable im Wert des **WebSession**-Parameters an. Windows PowerShell verwendet die Daten im Objekt der Webanforderungssitzung beim Herstellen der neuen Verbindung. Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential**. Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
 
 Der **sessionvariable** -Parameter und der **websession** -Parameter können nicht im selben Befehl verwendet werden.
 
@@ -475,11 +475,11 @@ Accept wildcard characters: False
 
 Gibt einen Wert für den HTTP-Antwortheader transfer-encoding an. Zulässige Werte für diesen Parameter:
 
-- Aufgeteilte
-- Komprimieren
-- Deflate
-- GZip
-- Identität
+- `Chunked`
+- `Compress`
+- `Deflate`
+- `GZip`
+- `Identity`
 
 ```yaml
 Type: System.String
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 
 Gibt den URI (Uniform Resource Identifier) der Internetressource an, an die die Webanforderung gesendet wird. Dieser Parameter unterstützt HTTP-, HTTPS-, FTP- und FILE-Werte.
 
-Dieser Parameter ist erforderlich. Der Parameter Name ( **URI** ) ist optional.
+Dieser Parameter ist erforderlich. Der Parameter Name (**URI**) ist optional.
 
 ```yaml
 Type: System.Uri
@@ -568,11 +568,11 @@ Accept wildcard characters: False
 
 Gibt eine Webanforderungssitzung an. Geben Sie den Variablennamen einschließlich des Dollar Zeichens ( `$` ) ein.
 
-Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential** . Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
+Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential**. Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
 
 Im Gegensatz zu einer Remotesitzung besteht bei der Webanforderungssitzung keine persistente Verbindung. Es handelt sich um ein Objekt, das Informationen über die Verbindung und die Anforderung enthält, einschließlich Cookies, Anmeldeinformationen, dem Maximalwert für Umleitungen und der Zeichenfolge des Benutzer-Agents. Sie können das Objekt verwenden, um den Zustand und die Daten übergreifend für Webanforderungen zu nutzen.
 
-Um eine Webanforderungs Sitzung zu erstellen, geben Sie einen Variablennamen (ohne Dollarzeichen) in den Wert des **sessionvariable** -Parameters eines `Invoke-RestMethod` Befehls ein. `Invoke-RestMethod` erstellt die Sitzung und speichert Sie in der Variablen. In allen nachfolgenden Befehlen verwenden Sie die Variable als Wert für den **WebSession** -Parameter.
+Um eine Webanforderungs Sitzung zu erstellen, geben Sie einen Variablennamen (ohne Dollarzeichen) in den Wert des **sessionvariable** -Parameters eines `Invoke-RestMethod` Befehls ein. `Invoke-RestMethod` erstellt die Sitzung und speichert Sie in der Variablen. In allen nachfolgenden Befehlen verwenden Sie die Variable als Wert für den **WebSession**-Parameter.
 
 Der **sessionvariable** -Parameter und der **websession** -Parameter können nicht im selben Befehl verwendet werden.
 
@@ -608,7 +608,7 @@ Die Ausgabe des Cmdlets hängt vom Format des abgerufenen Inhalts ab.
 
 Wenn die Anforderung JSON-Zeichen folgen zurückgibt, `Invoke-RestMethod` gibt ein psobject zurück, das die Zeichen folgen darstellt.
 
-## Notizen
+## Hinweise
 
 ## Ähnliche Themen
 

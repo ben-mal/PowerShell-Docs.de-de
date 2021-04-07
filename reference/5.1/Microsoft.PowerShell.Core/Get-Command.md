@@ -3,23 +3,23 @@ external help file: System.Management.Automation.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Core
-ms.date: 06/09/2017
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-command?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Command
-ms.openlocfilehash: daa58a732dafb11fa8f6ce3c20965aebcce55844
-ms.sourcegitcommit: 9b28fb9a3d72655bb63f62af18b3a5af6a05cd3f
+ms.openlocfilehash: 7cb2b6af886e8175ab035cfe599641fa1afa02ff
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "93212055"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555150"
 ---
 # Get-Command
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Ruft alle Befehle ab.
 
-## SYNTAX
+## Syntax
 
 ### CmdletSet (Standard)
 
@@ -37,9 +37,9 @@ Get-Command [[-Name] <String[]>] [-Module <String[]>] [-FullyQualifiedModule <Mo
  [-All] [-ListImported] [-ParameterName <String[]>] [-ParameterType <PSTypeName[]>] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
-Das- `Get-Command` Cmdlet ruft alle Befehle ab, die auf dem Computer installiert sind, einschließlich Cmdlets, Aliase, Funktionen, Filter, Skripts und Anwendungen. `Get-Command` Ruft die Befehle aus PowerShell-Modulen und-Befehlen ab, die aus anderen Sitzungen importiert wurden. Um nur die Befehle zu erhalten, die in die aktuelle Sitzung importiert wurden, verwenden Sie den **ListImported** -Parameter.
+Das- `Get-Command` Cmdlet ruft alle Befehle ab, die auf dem Computer installiert sind, einschließlich Cmdlets, Aliase, Funktionen, Filter, Skripts und Anwendungen. `Get-Command` Ruft die Befehle aus PowerShell-Modulen und-Befehlen ab, die aus anderen Sitzungen importiert wurden. Um nur die Befehle zu erhalten, die in die aktuelle Sitzung importiert wurden, verwenden Sie den **ListImported**-Parameter.
 
 Ohne Parameter `Get-Command` Ruft alle-Cmdlets,-Funktionen und-Aliase ab, die auf dem Computer installiert sind. `Get-Command *` Ruft alle Befehls Typen ab, einschließlich aller nicht-PowerShell-Dateien in der PATH-Umgebungsvariablen ( `$env:Path` ), die Sie im Anwendungs Befehlstyp auflistet.
 
@@ -49,7 +49,7 @@ Ohne Parameter `Get-Command` Ruft alle-Cmdlets,-Funktionen und-Aliase ab, die au
 
 Ab Windows PowerShell 5,0 zeigen die Ergebnisse des `Get-Command` Cmdlets standardmäßig eine **Versions** Spalte an. Der **CommandInfo** -Klasse wurde eine neue **Versions** Eigenschaft hinzugefügt.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Cmdlets, Funktionen und Aliase
 
@@ -61,7 +61,7 @@ Get-Command
 
 ### Beispiel 2: Get-Befehle in der aktuellen Sitzung
 
-Dieser Befehl verwendet den **ListImported** -Parameter, um nur die Befehle in der aktuellen Sitzung abzurufen.
+Dieser Befehl verwendet den **ListImported**-Parameter, um nur die Befehle in der aktuellen Sitzung abzurufen.
 
 ```powershell
 Get-Command -ListImported
@@ -85,7 +85,7 @@ Get-Command -Module Microsoft.PowerShell.Security, Microsoft.PowerShell.Utility
 
 ### Beispiel 5: erhalten von Informationen zu einem Cmdlet
 
-Dieser Befehl ruft Informationen über das `Get-AppLockerPolicy` Cmdlet ab. Der Befehl importiert auch das **AppLocker** -Modul, das alle Befehle im **AppLocker** -Modul zur aktuellen Sitzung hinzufügt.
+Dieser Befehl ruft Informationen über das `Get-AppLockerPolicy` Cmdlet ab. Der Befehl importiert auch das **AppLocker**-Modul, das alle Befehle im **AppLocker**-Modul zur aktuellen Sitzung hinzufügt.
 
 ```powershell
 Get-Command Get-AppLockerPolicy
@@ -99,10 +99,10 @@ Das Modul kann Befehle, Typen und Formatierungsdateien hinzufügen und Skripts i
 Dieser Befehl verwendet den Argument **List** -Parameter und den **Syntax** Parameter, um die Syntax des Cmdlets zu erhalten, `Get-ChildItem` Wenn es im CERT:-Laufwerk verwendet wird. Das Laufwerk "CERT:" ist ein PowerShell-Laufwerk, das der Zertifikat Anbieter der Sitzung hinzufügt.
 
 ```powershell
-Get-Command Get-Childitem -Args Cert: -Syntax
+Get-Command  -Name Get-Childitem -Args Cert: -Syntax
 ```
 
-Wenn Sie die in der Ausgabe angezeigte Syntax mit der Syntax vergleichen, die angezeigt wird, wenn Sie den **args** -Parameter (Argument **List** ) weglassen, sehen Sie, dass der **Zertifikat Anbieter** dem Cmdlet einen dynamischen Parameter, **codeSigningCert** , hinzufügt `Get-ChildItem` .
+Wenn Sie die in der Ausgabe angezeigte Syntax mit der Syntax vergleichen, die angezeigt wird, wenn Sie den **args** -Parameter (Argument **List**) weglassen, sehen Sie, dass der **Zertifikat Anbieter** dem Cmdlet einen dynamischen Parameter, **codeSigningCert**, hinzufügt `Get-ChildItem` .
 
 Weitere Informationen zum Zertifikat Anbieter finden Sie unter [about_Certificate_Provider](../Microsoft.PowerShell.Security/About/about_Certificate_Provider.md).
 
@@ -114,7 +114,10 @@ Der Befehl im Beispiel verwendet die- `Get-DynamicParameters` Funktion, um die d
 function Get-DynamicParameters
 {
     param ($Cmdlet, $PSDrive)
-    (Get-Command $Cmdlet -ArgumentList $PSDrive).ParameterSets | ForEach-Object {$_.Parameters} | Where-Object { $_.IsDynamic } | Select-Object -Property Name -Unique
+    (Get-Command -Name $Cmdlet -ArgumentList $PSDrive).ParameterSets | 
+      ForEach-Object {$_.Parameters} | 
+        Where-Object { $_.IsDynamic } | 
+          Select-Object -Property Name -Unique
 }
 Get-DynamicParameters -Cmdlet Get-ChildItem -PSDrive Cert:
 ```
@@ -135,11 +138,11 @@ Mit diesem Befehl werden alle Befehle aller Typen auf dem lokalen Computer abger
 Get-Command *
 ```
 
-Der Befehl gibt ein **ApplicationInfo** -Objekt (System.Management.Automation.ApplicationInfo) für jede Datei und kein **FileInfo** -Objekt (System.IO.FileInfo) zurück.
+Der Befehl gibt ein **ApplicationInfo**-Objekt (System.Management.Automation.ApplicationInfo) für jede Datei und kein **FileInfo**-Objekt (System.IO.FileInfo) zurück.
 
 ### Beispiel 9: Cmdlets mithilfe eines Parameter namens und-Typs
 
-Dieser Befehl ruft Cmdlets ab, die über einen Parameter verfügen, dessen Name "auth" und dessen Typ " **authenticationmechanism** " ist.
+Dieser Befehl ruft Cmdlets ab, die über einen Parameter verfügen, dessen Name "auth" und dessen Typ " **authenticationmechanism**" ist.
 
 ```powershell
 Get-Command -ParameterName *Auth* -ParameterType AuthenticationMechanism
@@ -147,14 +150,14 @@ Get-Command -ParameterName *Auth* -ParameterType AuthenticationMechanism
 
 Verwenden Sie Befehle wie diesen, um nach Cmdlets zu suchen, mit denen Sie die Methode angeben können, die zum Authentifizieren des Benutzers verwendet wird.
 
-Der **ParameterType** -Parameter unterscheidet Parameter, die einen **AuthenticationMechanism** -Wert akzeptieren, von Parametern, die einen **AuthenticationLevel** -Wert akzeptieren, selbst wenn sie ähnliche Namen haben.
+Der **ParameterType**-Parameter unterscheidet Parameter, die einen **AuthenticationMechanism**-Wert akzeptieren, von Parametern, die einen **AuthenticationLevel**-Wert akzeptieren, selbst wenn sie ähnliche Namen haben.
 
 ### Beispiel 10: Holen Sie sich einen Alias
 
 In diesem Beispiel wird gezeigt, wie das `Get-Command` Cmdlet mit einem Alias verwendet wird.
 
 ```powershell
-Get-Command dir
+Get-Command -Name dir
 ```
 
 ```Output
@@ -165,11 +168,11 @@ Alias           dir -> Get-ChildItem
 
 Obwohl es in der Regel für Cmdlets und Funktionen verwendet wird, ruft `Get-Command` auch Skripts, Funktionen, Aliase und ausführbare Dateien ab.
 
-Die Befehlsausgabe zeigt die Ansicht des **Name** -Eigenschaftswerts für Aliase. Die Ansicht zeigt den Alias und den vollständigen Befehlsnamen.
+Die Befehlsausgabe zeigt die Ansicht des **Name**-Eigenschaftswerts für Aliase. Die Ansicht zeigt den Alias und den vollständigen Befehlsnamen.
 
 ### Beispiel 11: alle Instanzen des Notepad-Befehls erhalten
 
-In diesem Beispiel wird der **all** -Parameter des `Get-Command` Cmdlets verwendet, um alle Instanzen des Befehls "Notepad" auf dem lokalen Computer anzuzeigen.
+In diesem Beispiel wird der **all** -Parameter des `Get-Command` Cmdlets verwendet, um alle Instanzen des `Notepad` Befehls auf dem lokalen Computer anzuzeigen.
 
 ```powershell
 Get-Command Notepad -All | Format-Table CommandType, Name, Definition
@@ -182,7 +185,7 @@ Application     notepad.exe    C:\WINDOWS\system32\notepad.exe
 Application     NOTEPAD.EXE    C:\WINDOWS\NOTEPAD.EXE
 ```
 
-Der **All** -Parameter ist nützlich, wenn es mehr als einen Befehl mit demselben Namen in der Sitzung gibt.
+Der **All**-Parameter ist nützlich, wenn es mehr als einen Befehl mit demselben Namen in der Sitzung gibt.
 
 Ab Windows PowerShell 3,0, wenn die Sitzung mehrere Befehle mit demselben Namen enthält, wird von nur der Befehl abgerufen, der ausgeführt wird, `Get-Command` Wenn Sie den Befehlsnamen eingeben. Mit dem **all** -Parameter ruft `Get-Command` alle Befehle mit dem angegebenen Namen ab und gibt Sie in der Ausführungs Rangfolge zurück. Um einen anderen Befehl als den ersten in der Liste auszuführen, geben Sie den vollqualifizierten Pfad zu dem Befehl ein.
 
@@ -191,7 +194,7 @@ Weitere Informationen zur Befehls Rangfolge finden Sie unter [about_Command_Prec
 ### Beispiel 12: Holen Sie sich den Namen eines Moduls, das ein Cmdlet enthält.
 
 Mit diesem Befehl wird der Name des Moduls abgerufen, von dem das `Get-Date` Cmdlet stammt.
-Der Befehl verwendet die **ModuleName** -Eigenschaft aller Befehle.
+Der Befehl verwendet die **ModuleName**-Eigenschaft aller Befehle.
 
 ```powershell
 (Get-Command Get-Date).ModuleName
@@ -211,11 +214,9 @@ Get-Command -Type Cmdlet | Where-Object OutputType | Format-List -Property Name,
 
 Dieser Befehl ruft die Cmdlets und Funktionen ab, die über einen Ausgabetyp verfügen, und den Typ der Objekte, die sie zurückgeben.
 
-Der erste Teil des Befehls ruft alle Cmdlets ab.
-Ein Pipeline Operator (|) sendet die Cmdlets an das `Where-Object` Cmdlet, das nur die Cmdlets auswählt, in denen die **OutputType** -Eigenschaft aufgefüllt ist.
-Ein weiterer Pipeline Operator sendet die ausgewählten Cmdlet-Objekte an das `Format-List` Cmdlet, das den Namen und den Ausgabetyp der einzelnen Cmdlets in einer Liste anzeigt.
+Der erste Teil des Befehls ruft alle Cmdlets ab. Ein Pipeline Operator ( `|` ) sendet die Cmdlets an das `Where-Object` Cmdlet, das nur diejenigen auswählt, in denen die **OutputType** -Eigenschaft aufgefüllt ist. Ein weiterer Pipeline Operator sendet die ausgewählten Cmdlet-Objekte an das `Format-List` Cmdlet, das den Namen und den Ausgabetyp der einzelnen Cmdlets in einer Liste anzeigt.
 
-Die **OutputType** -Eigenschaft eines **CommandInfo** -Objekts hat nur dann einen Nicht-Null-Wert, wenn der Cmdlet-Code das **OutputType** -Attribut für das Cmdlet definiert.
+Die **OutputType**-Eigenschaft eines **CommandInfo**-Objekts hat nur dann einen Nicht-Null-Wert, wenn der Cmdlet-Code das **OutputType**-Attribut für das Cmdlet definiert.
 
 ### Beispiel 14: Get-Cmdlets, die einen bestimmten Objekttyp als Eingabe annehmen
 
@@ -235,10 +236,9 @@ Function        Set-NetAdapter                                     NetAdapter
 
 Mit diesem Befehl wird nach Cmdlets gesucht, die Netzwerkadapterobjekte als Eingabe akzeptieren. Verwenden Sie dieses Befehlsformat, um nach den Cmdlets zu suchen, die den Typ von Objekten akzeptieren, die ein beliebiger Befehl zurückgibt.
 
-Der Befehl verwendet die systeminterne Eigenschaft aller Objekte **PSTypeNames** , die die Typen abruft, die das Objekt beschreiben. Zum Abrufen der **PSTypeNames** -Eigenschaft eines Netzwerkadapters und nicht der **PSTypeNames** -Eigenschaft einer Auflistung von Netzwerkadaptern verwendet der Befehl die Arraynotation, um den ersten Netzwerkadapter abzurufen, den das Cmdlet zurückgibt.
-Zum Abrufen der **PSTypeNames** -Eigenschaft eines Netzwerkadapters und nicht der **PSTypeNames** -Eigenschaft einer Auflistung von Netzwerkadaptern verwendet der Befehl die Arraynotation, um den ersten Netzwerkadapter abzurufen, den das Cmdlet zurückgibt.
+Der Befehl verwendet die systeminterne Eigenschaft aller Objekte **PSTypeNames**, die die Typen abruft, die das Objekt beschreiben. Zum Abrufen der **PSTypeNames**-Eigenschaft eines Netzwerkadapters und nicht der **PSTypeNames**-Eigenschaft einer Auflistung von Netzwerkadaptern verwendet der Befehl die Arraynotation, um den ersten Netzwerkadapter abzurufen, den das Cmdlet zurückgibt. Zum Abrufen der **PSTypeNames**-Eigenschaft eines Netzwerkadapters und nicht der **PSTypeNames**-Eigenschaft einer Auflistung von Netzwerkadaptern verwendet der Befehl die Arraynotation, um den ersten Netzwerkadapter abzurufen, den das Cmdlet zurückgibt.
 
-## PARAMETERS
+## Parameter
 
 ### -All
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 ### -Argumentlist
 
-Gibt ein Array von Argumenten an. Dieses Cmdlet ruft Informationen zu einem Cmdlet oder einer Funktion ab, wenn es mit den angegebenen Parametern ("Argumenten") verwendet wird. Der Alias für **ArgumentList** ist **Args** .
+Gibt ein Array von Argumenten an. Dieses Cmdlet ruft Informationen zu einem Cmdlet oder einer Funktion ab, wenn es mit den angegebenen Parametern ("Argumenten") verwendet wird. Der Alias für **ArgumentList** ist **Args**.
 
 Um dynamische Parameter zu ermitteln, die nur verfügbar sind, wenn bestimmte andere Parameter verwendet werden, legen Sie den Wert von Argument **List** auf die Parameter fest, die die dynamischen Parameter auslöst.
 
@@ -285,18 +285,20 @@ Accept wildcard characters: False
 
 ### -CommandType
 
-Gibt die Typen von Befehlen an, die von diesem Cmdlet abgerufen werden. Geben Sie einen oder mehrere Befehlstypen ein. Verwenden Sie **CommandType** oder dessen Aliasname **Type** . Standardmäßig `Get-Command` Ruft alle-Cmdlets,-Funktionen und-Aliase ab.
+Gibt die Typen von Befehlen an, die von diesem Cmdlet abgerufen werden. Geben Sie einen oder mehrere Befehlstypen ein. Verwenden Sie **CommandType** oder dessen Aliasname **Type**. Standardmäßig `Get-Command` Ruft alle-Cmdlets,-Funktionen und-Aliase ab.
 
 Zulässige Werte für diesen Parameter:
 
-- Alias. Ruft die Aliase aller PowerShell-Befehle ab. Weitere Informationen finden Sie unter [about_Aliases](About/about_Aliases.md).
-- Alle Ruft alle Befehlstypen ab. Dieser Parameterwert entspricht `Get-Command *` .
-- Anwendung: Ruft nicht-PowerShell-Dateien in Pfaden ab, die in der **path** -Umgebungsvariablen ($env:p ATH) aufgelistet sind, einschließlich. txt-,. exe-und. dll-Dateien. Weitere Informationen zur **path** -Umgebungsvariablen finden Sie unter about_Environment_Variables.
-- Cmdlet. Ruft alle Cmdlets ab.
-- Externalscript. Ruft alle PS1-Dateien in den Pfaden ab, die in der **Path** -Umgebungsvariablen ($env:path) aufgeführt sind.
-- Filter und function. Ruft alle erweiterten und einfachen PowerShell-Funktionen und-Filter ab.
-- Skript. Ruft alle Skriptblöcke ab. Um PowerShell-Skripts (PS1-Dateien) zu erhalten, verwenden Sie den externalscript-Wert.
-- Workflow. Ruft alle Workflows ab. Weitere Informationen zu Workflows finden Sie unter Introducing Windows PowerShell Workflow.
+- `Alias`: Ruft die Aliase aller PowerShell-Befehle ab. Weitere Informationen finden Sie unter [about_Aliases](About/about_Aliases.md).
+- `All`: Ruft alle Befehls Typen ab. Dieser Parameterwert entspricht `Get-Command *` .
+- `Application`: Ruft nicht-PowerShell-Dateien in Pfaden ab, die in der **path** -Umgebungsvariablen ( `$env:path` ) aufgelistet sind, einschließlich. txt-,. exe-und. dll-Dateien. Weitere Informationen zur **Path**-Umgebungsvariablen finden Sie unter [about_Environment_Variables](About/about_Environment_Variables.md).
+- `Cmdlet`: Ruft alle Cmdlets ab.
+- `ExternalScript`: Ruft alle PS1-Dateien in den Pfaden ab, die in der **path** -Umgebungsvariablen () aufgelistet sind `$env:path` .
+- `Filter` und `Function` : Ruft alle erweiterten und einfachen PowerShell-Funktionen und-Filter ab.
+- `Script`: Ruft alle Skriptblöcke ab. Um PowerShell-Skripts (PS1-Dateien) zu erhalten, verwenden Sie den `ExternalScript` Wert.
+- `Workflow`: Ruft alle Workflows ab. Weitere Informationen zu Workflows finden Sie unter Introducing Windows PowerShell Workflow.
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **CommandType** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Management.Automation.CommandTypes
@@ -361,8 +363,7 @@ Gibt ein Array von Modulen an. Dieses Cmdlet ruft die Befehle ab, die von den an
 
 Dieser Parameter nimmt Zeichen folgen Werte an, aber der Wert dieses Parameters kann auch ein **psmoduleinfo** -oder **pssnapininfo** -Objekt sein, z. b. die Objekte, die von den `Get-Module` `Get-PSSnapin` `Import-PSSession` Cmdlets, und zurückgegeben werden.
 
-Sie können auf diesen Parameter mit dessen Namen, **Module** oder über den Alias **PSSnapin** verweisen.
-Der Name des Parameters, den Sie auswählen, hat keine Auswirkungen auf die Befehlsausgabe.
+Sie können auf diesen Parameter mit dessen Namen, **Module** oder über den Alias **PSSnapin** verweisen. Der Name des Parameters, den Sie auswählen, hat keine Auswirkungen auf die Befehlsausgabe.
 
 ```yaml
 Type: System.String[]
@@ -380,7 +381,7 @@ Accept wildcard characters: True
 
 Gibt ein Array von Namen an. Dieses Cmdlet ruft nur Befehle mit dem angegebenen Namen ab. Geben Sie einen Namen oder ein Namensmuster ein. Platzhalterzeichen sind zulässig.
 
-Um Befehle abzurufen, die den gleichen Namen haben, verwenden Sie den **All** -Parameter. Wenn zwei Befehle denselben Namen haben, ruft standardmäßig den Befehl ab, der ausgeführt wird, `Get-Command` Wenn Sie den Befehlsnamen eingeben.
+Um Befehle abzurufen, die den gleichen Namen haben, verwenden Sie den **All**-Parameter. Wenn zwei Befehle denselben Namen haben, ruft standardmäßig den Befehl ab, der ausgeführt wird, `Get-Command` Wenn Sie den Befehlsnamen eingeben.
 
 ```yaml
 Type: System.String[]
@@ -472,7 +473,7 @@ Accept wildcard characters: False
 
 Gibt an, dass dieses Cmdlet nur die folgenden angegebenen Daten über den Befehl abruft:
 
-- Aliase. Ruft den Standardnamen ab.
+- Aliase Ruft den Standardnamen ab.
 - Cmdlets. Ruft die Syntax ab.
 - Funktionen und Filter. Ruft die Funktionsdefinition ab.
 - Skripts und Anwendungen oder Dateien. Ruft den Pfad und Dateinamen ab.
@@ -525,13 +526,13 @@ Accept wildcard characters: True
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](About/about_CommonParameters.md).
 
-## EINGABEN
+## Eingaben
 
 ### System.String
 
 Sie können Befehlsnamen an dieses Cmdlet weiterreichen.
 
-## AUSGABEN
+## Ausgaben
 
 ### System. Management. Automation. CommandInfo
 
@@ -557,13 +558,13 @@ Stellt Funktionen und Filter dar.
 
 Stellt Workflows dar.
 
-## HINWEISE
+## Hinweise
 
-* Wenn mehr als ein Befehl mit demselben Namen für die Sitzung verfügbar ist, `Get-Command` gibt den Befehl zurück, der ausgeführt wird, wenn Sie den Befehlsnamen eingeben. Verwenden Sie den **all** -Parameter, um Befehle mit dem gleichen Namen, die in der Reihenfolge der Bestellung aufgeführt sind, zu erhalten. Weitere Informationen finden Sie unter [about_Command_Precedence](../Microsoft.PowerShell.Core/About/about_Command_Precedence.md).
-* Wenn ein Modul automatisch importiert wird, entspricht der Effekt dem Verwenden des `Import-Module` Cmdlets. Das Modul kann Befehle, Typen und Formatierungsdateien hinzufügen und Skripts in der Sitzung ausführen.
+- Wenn mehr als ein Befehl mit demselben Namen für die Sitzung verfügbar ist, `Get-Command` gibt den Befehl zurück, der ausgeführt wird, wenn Sie den Befehlsnamen eingeben. Verwenden Sie den **all** -Parameter, um Befehle mit dem gleichen Namen, die in der Reihenfolge der Bestellung aufgeführt sind, zu erhalten. Weitere Informationen finden Sie unter [about_Command_Precedence](../Microsoft.PowerShell.Core/About/about_Command_Precedence.md).
+- Wenn ein Modul automatisch importiert wird, entspricht der Effekt dem Verwenden des `Import-Module` Cmdlets. Das Modul kann Befehle, Typen und Formatierungsdateien hinzufügen und Skripts in der Sitzung ausführen.
   Verwenden Sie die Preference-Variable, um das automatische Importieren von Modulen zu aktivieren, zu deaktivieren und zu konfigurieren `$PSModuleAutoLoadingPreference` . Weitere Informationen finden Sie unter [about_Preference_Variables](../Microsoft.PowerShell.Core/About/about_Preference_Variables.md).
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Export-PSSession](../Microsoft.PowerShell.Utility/Export-PSSession.md)
 

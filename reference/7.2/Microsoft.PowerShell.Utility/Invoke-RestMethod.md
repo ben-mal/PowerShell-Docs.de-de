@@ -2,23 +2,23 @@
 external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/03/2020
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-RestMethod
-ms.openlocfilehash: 91cd2dda912d6e79177e8a961012a1604d9460ee
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 2dde1afca4241519f8ccd317d32660f789faf802
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99596356"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555600"
 ---
 # Invoke-RestMethod
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Sendet eine HTTP- oder HTTPS-Anforderung an einen RESTful-Webdienst.
 
-## SYNTAX
+## Syntax
 
 ### Standardmethod (Standard)
 
@@ -96,7 +96,7 @@ Dieses Cmdlet wird in Windows PowerShell 3.0 eingeführt.
 
 Ab PowerShell 7,0 `Invoke-RestMethod` unterstützt die durch Umgebungsvariablen definierte Proxykonfiguration. Weitere Informationen finden Sie in diesem Artikel im Abschnitt mit [hinweisen](#notes) .
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Holen Sie sich den PowerShell-RSS-Feed
 
@@ -220,10 +220,10 @@ Die **Authentifizierung** kann nicht mit **usedefault-Anmelde** Informationen ve
 
 Verfügbare Authentifizierungs Optionen:
 
-- **None**: Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
-- **Basic**: erfordert **Credential**. Die Anmelde Informationen werden verwendet, um einen RFC 7617-Standard Authentifizierungs `Authorization: Basic` Header im Format von zu senden `base64(user:password)` .
-- Bearername **: erfordert** **Token**. Sendet und RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
-- **OAuth**: erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
+- `None`: Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
+- `Basic`: Erfordert **Credential**. Die Anmelde Informationen werden verwendet, um einen RFC 7617-Standard Authentifizierungs `Authorization: Basic` Header im Format von zu senden `base64(user:password)` .
+- `Bearer`: Erfordert **Token**. Sendet und RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
+- `OAuth`: Erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
 
 Durch die Bereitstellung der **Authentifizierung** werden alle `Authorization` Header überschrieben, die an **Header gesendet** oder in **websession** eingeschlossen werden
 
@@ -496,7 +496,7 @@ Accept wildcard characters: False
 
 ### -Maximumfollowrellink
 
-Gibt an, wie oft Beziehungslinks befolgt werden sollen, wenn " **followrellink** " verwendet wird. Ein kleinerer Wert ist möglicherweise erforderlich, wenn die Rest-API aufgrund von zu vielen Anforderungen drosselt wird. Der Standardwert ist `[Int32]::MaxValue`. Der Wert 0 (null) verhindert die folgenden Beziehungslinks.
+Gibt an, wie oft Beziehungslinks befolgt werden sollen, wenn " **followrellink** " verwendet wird. Ein kleinerer Wert ist möglicherweise erforderlich, wenn die Rest-API aufgrund von zu vielen Anforderungen drosselt wird. Standardwert: `[Int32]::MaxValue`. Der Wert 0 (null) verhindert die folgenden Beziehungslinks.
 
 ```yaml
 Type: System.Int32
@@ -546,16 +546,16 @@ Accept wildcard characters: False
 
 Gibt die für die Webanforderung verwendete Methode an. Zulässige Werte für diesen Parameter:
 
-- Standard
-- Löschen
-- Herunterladen
-- Head
-- Zusammenführen
-- Optionen
-- Patch
-- Posten
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 Der **custommethod** -Parameter kann für Anforderungs Methoden verwendet werden, die oben nicht aufgeführt sind.
 
@@ -858,7 +858,7 @@ Accept wildcard characters: False
 
 Legt die SSL/TLS-Protokolle fest, die für die Webanforderung zulässig sind. Standardmäßig sind alle vom System unterstützten SSL/TLS-Protokolle zulässig. **SslProtocol** ermöglicht die Beschränkung auf bestimmte Protokolle zu Konformitäts Zwecken.
 
-**SslProtocol** verwendet die Flag-Aufzählung `WebSslProtocol` . Es ist möglich, mehr als ein Protokoll mithilfe der Flag-Notation anzugeben oder mehrere `WebSslProtocol` Optionen mit zu kombinieren `-bor` . das Bereitstellen mehrerer Protokolle wird jedoch nicht auf allen Plattformen unterstützt.
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **SslProtocol** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden. Möglicherweise sind Sie nicht in der Lage, mehrere Werte auf allen Plattformen bereitzustellen.
 
 > [!NOTE]
 > Auf nicht-Windows-Plattformen ist es möglicherweise nicht möglich, `Tls` oder `Tls12` als Option anzugeben. Die Unterstützung für `Tls13` ist nicht auf allen Betriebssystemen verfügbar und muss pro Betriebssystem überprüft werden.
@@ -1060,13 +1060,13 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System.Object
 
 Sie können den Text einer Webanforderung an übergeben `Invoke-RestMethod` .
 
-## AUSGABEN
+## Ausgaben
 
 ### System. Int64, System. String, System.Xml.XmlDokument
 
@@ -1076,7 +1076,7 @@ Die Ausgabe des Cmdlets hängt vom Format des abgerufenen Inhalts ab.
 
 Wenn die Anforderung JSON-Zeichen folgen zurückgibt, `Invoke-RestMethod` gibt ein **psobject** zurück, das die Zeichen folgen darstellt.
 
-## HINWEISE
+## Hinweise
 
 Einige Features sind möglicherweise nicht auf allen Plattformen verfügbar.
 
@@ -1090,12 +1090,12 @@ Der Wert dieser Eigenschaft ist abhängig von Ihrer Plattform von unterschiedlic
 
 Die Umgebungsvariablen, die für die `DefaultProxy` Initialisierung auf Windows-und UNIX-basierten Plattformen verwendet werden, sind:
 
-- ` HTTP_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTP-Anforderungen verwendet wird.
+- `HTTP_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTP-Anforderungen verwendet wird.
 - `HTTPS_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTPS-Anforderungen verwendet wird.
 - `ALL_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für http-und HTTPS-Anforderungen verwendet wird, falls `HTTP_PROXY` oder `HTTPS_PROXY` nicht definiert sind.
 - `NO_PROXY`: eine durch Trennzeichen getrennte Liste von Hostnamen, die von der Proxy Datei ausgeschlossen werden sollen.
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [ConvertTo-Json](ConvertTo-Json.md)
 

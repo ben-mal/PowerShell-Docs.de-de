@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 09/03/2020
+ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-RestMethod
-ms.openlocfilehash: d00885d0911d20dee0e5c498e5e339af4fa39a34
-ms.sourcegitcommit: eaac7af89171379df2e20464ebee9fc7e7d7674a
+ms.openlocfilehash: a5bed4574d6590272192cbcee09c4a8cd2e3a803
+ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "93219855"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "106555713"
 ---
 # Invoke-RestMethod
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Sendet eine HTTP- oder HTTPS-Anforderung an einen RESTful-Webdienst.
 
-## SYNTAX
+## Syntax
 
 ### Standardmethod (Standard)
 
@@ -97,7 +97,7 @@ Dieses Cmdlet wird in Windows PowerShell 3.0 eingeführt.
 
 Ab PowerShell 7,0 `Invoke-RestMethod` unterstützt die durch Umgebungsvariablen definierte Proxykonfiguration. Weitere Informationen finden Sie in diesem Artikel im Abschnitt mit [hinweisen](#notes) .
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Holen Sie sich den PowerShell-RSS-Feed
 
@@ -221,10 +221,10 @@ Die **Authentifizierung** kann nicht mit **usedefault-Anmelde** Informationen ve
 
 Verfügbare Authentifizierungs Optionen:
 
-- **None** : Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
-- **Basic** : erfordert **Credential**. Die Anmelde Informationen werden verwendet, um einen RFC 7617-Standard Authentifizierungs `Authorization: Basic` Header im Format von zu senden `base64(user:password)` .
-- Bearername **: erfordert** **Token**. Sendet und RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
-- **OAuth** : erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
+- `None`: Dies ist die Standardoption, wenn keine **Authentifizierung** bereitgestellt wird. Es wird keine explizite Authentifizierung verwendet.
+- `Basic`: Erfordert **Credential**. Die Anmelde Informationen werden verwendet, um einen RFC 7617-Standard Authentifizierungs `Authorization: Basic` Header im Format von zu senden `base64(user:password)` .
+- `Bearer`: Erfordert **Token**. Sendet und RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein Alias für **OAuth.**
+- `OAuth`: Erfordert **Token**. Sendet einen RFC 6750- `Authorization: Bearer` Header mit dem angegebenen Token. Dies ist ein **Alias für** Bearer.
 
 Durch die Bereitstellung der **Authentifizierung** werden alle `Authorization` Header überschrieben, die an **Header gesendet** oder in **websession** eingeschlossen werden
 
@@ -248,13 +248,13 @@ Accept wildcard characters: False
 Gibt den Anforderungstext an. Der Text entspricht dem Inhalt der Anforderung, der auf die Header folgt.
 Sie können einen Textwert auch über die Pipeline an senden `Invoke-RestMethod` .
 
-Der **Body** -Parameter kann verwendet werden, um eine Liste von Abfrageparametern oder den Inhalt der Antwort anzugeben.
+Der **Body**-Parameter kann verwendet werden, um eine Liste von Abfrageparametern oder den Inhalt der Antwort anzugeben.
 
 Wenn die Eingabe eine GET-Anforderung und der Text `IDictionary` (in der Regel eine Hash Tabelle) ist, wird der Text dem Uniform Resource Identifier (URI) als Abfrage Parameter hinzugefügt. Für andere Anforderungstypen (z. B. POST) wird der Text als Wert des Anforderungstexts im Format „Standardname=Wertformat“ festgelegt.
 
 Wenn der Text ein Formular oder die Ausgabe eines anderen `Invoke-WebRequest` Aufrufes ist, legt PowerShell den Anforderungs Inhalt auf die Formularfelder fest.
 
-Der **Body** -Parameter kann auch ein **System .net. http. multipartformdatacontent** -Objekt akzeptieren. Dies erleichtert `multipart/form-data` Anforderungen. Wenn für **Body** ein **multipartformdatacontent** -Objekt bereitgestellt wird, werden alle Inhalts bezogenen Header, die für den **ContentType** -, **Header** -oder **websession** -Parameter bereitgestellt werden, von den Inhalts Headern des-Objekts überschrieben `MultipartFormDataContent` . Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
+Der **Body** -Parameter kann auch ein **System .net. http. multipartformdatacontent** -Objekt akzeptieren. Dies erleichtert `multipart/form-data` Anforderungen. Wenn für **Body** ein **multipartformdatacontent** -Objekt bereitgestellt wird, werden alle Inhalts bezogenen Header, die für den **ContentType**-, **Header**-oder **websession** -Parameter bereitgestellt werden, von den Inhalts Headern des-Objekts überschrieben `MultipartFormDataContent` . Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
 
 ```yaml
 Type: System.Object
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 
 Gibt ein Benutzerkonto an, das über die Berechtigung zum Senden der Anforderung verfügt. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01** , oder geben Sie ein **PSCredential** -Objekt ein, das vom `Get-Credential` Cmdlet generiert wurde.
+Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01**, oder geben Sie ein **PSCredential** -Objekt ein, das vom `Get-Credential` Cmdlet generiert wurde.
 
 Anmelde **Informationen können allein** oder in Verbindung mit bestimmten **Authentifizierungs** Parameter Optionen verwendet werden. Bei Verwendung allein werden Anmelde Informationen nur für den Remote Server bereitgestellt, wenn vom Remote Server eine Anforderung zur Authentifizierungsanforderung gesendet wird. Bei Verwendung mit **Authentifizierungs** Optionen werden die Anmelde Informationen explizit gesendet.
 
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 
 Gibt die Header der Webanforderung an. Geben Sie eine Hashtabelle oder ein Wörterbuch ein.
 
-Verwenden Sie zum Festlegen der UserAgent-Header den **UserAgent** -Parameter. Sie können diesen Parameter nicht verwenden, um- `User-Agent` oder-Cookie-Header anzugeben.
+Verwenden Sie zum Festlegen der UserAgent-Header den **UserAgent**-Parameter. Sie können diesen Parameter nicht verwenden, um- `User-Agent` oder-Cookie-Header anzugeben.
 
 Inhalts bezogene Header, z. b., werden `Content-Type` überschrieben, wenn ein- `MultipartFormDataContent` Objekt für den **Textkörper** bereitgestellt wird.
 
@@ -497,7 +497,7 @@ Accept wildcard characters: False
 
 ### -Maximumfollowrellink
 
-Gibt an, wie oft Beziehungslinks befolgt werden sollen, wenn " **followrellink** " verwendet wird. Ein kleinerer Wert ist möglicherweise erforderlich, wenn die Rest-API aufgrund von zu vielen Anforderungen drosselt wird. Der Standardwert ist `[Int32]::MaxValue`. Der Wert 0 (null) verhindert die folgenden Beziehungslinks.
+Gibt an, wie oft Beziehungslinks befolgt werden sollen, wenn " **followrellink** " verwendet wird. Ein kleinerer Wert ist möglicherweise erforderlich, wenn die Rest-API aufgrund von zu vielen Anforderungen drosselt wird. Standardwert: `[Int32]::MaxValue`. Der Wert 0 (null) verhindert die folgenden Beziehungslinks.
 
 ```yaml
 Type: System.Int32
@@ -547,16 +547,16 @@ Accept wildcard characters: False
 
 Gibt die für die Webanforderung verwendete Methode an. Zulässige Werte für diesen Parameter:
 
-- Standard
-- Löschen
-- Herunterladen
-- Head
-- Merge
-- Optionen
-- Patch
-- Posten
-- Put
-- Trace
+- `Default`
+- `Delete`
+- `Get`
+- `Head`
+- `Merge`
+- `Options`
+- `Patch`
+- `Post`
+- `Put`
+- `Trace`
 
 Der **custommethod** -Parameter kann für Anforderungs Methoden verwendet werden, die oben nicht aufgeführt sind.
 
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 
 Speichert den Antworttext in der angegebenen Ausgabedatei. Geben Sie einen Pfad- und Dateinamen ein. Wenn Sie den Pfad weglassen, wird der aktuelle Speicherort als Standard verwendet. Der Name wird als literalpfad behandelt. Namen, die eckige Klammern () enthalten, `[]` müssen in einfache Anführungszeichen () eingeschlossen werden `'` .
 
-Standardmäßig `Invoke-RestMethod` gibt die Ergebnisse an die Pipeline zurück. Verwenden Sie den **Passthru** -Parameter, um Ergebnisse an eine Datei und an die Pipeline zu senden.
+Standardmäßig `Invoke-RestMethod` gibt die Ergebnisse an die Pipeline zurück. Verwenden Sie den **Passthru**-Parameter, um Ergebnisse an eine Datei und an die Pipeline zu senden.
 
 ```yaml
 Type: System.String
@@ -613,7 +613,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Gibt die Ergebnisse zurück und schreibt sie in eine Datei. Dieser Parameter ist nur gültig, wenn der **OutFile** -Parameter ebenfalls im Befehl verwendet wird.
+Gibt die Ergebnisse zurück und schreibt sie in eine Datei. Dieser Parameter ist nur gültig, wenn der **OutFile**-Parameter ebenfalls im Befehl verwendet wird.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -667,9 +667,9 @@ Accept wildcard characters: False
 
 ### -Proxy Credential
 
-Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy** -Parameter angegeben wird. Der Standardwert ist der aktuelle Benutzer.
+Gibt ein Benutzerkonto an, das über die Berechtigung zur Verwendung des Proxyservers verfügt, der durch den **Proxy**-Parameter angegeben wird. Der Standardwert ist der aktuelle Benutzer.
 
-Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01** , **User@Domain.Com** , oder geben Sie ein- `PSCredential` Objekt ein, z. b. das vom `Get-Credential` Cmdlet generierte.
+Geben Sie einen Benutzernamen ein, z. b. **USER01** oder **Domain01\User01**, **User@Domain.Com** , oder geben Sie ein- `PSCredential` Objekt ein, z. b. das vom `Get-Credential` Cmdlet generierte.
 
 Dieser Parameter ist nur gültig, wenn der **Proxy** Parameter auch im Befehl verwendet wird. Die Parameter " **proxycredential** " und " **proxyusedefaultcredential** " können nicht im selben Befehl verwendet werden.
 
@@ -776,7 +776,7 @@ Wenn Sie eine Sitzungs Variable angeben, `Invoke-RestMethod` erstellt ein Webanf
 
 Im Gegensatz zu einer Remote Sitzung ist die Webanforderungs Sitzung keine persistente Verbindung. Dabei handelt es sich um ein Objekt, das Informationen über die Verbindung und die Anforderung enthält, einschließlich Cookies, Anmelde Informationen, des maximalen Umleitungs Werts und der Zeichenfolge des Benutzer-Agents. Sie können das Objekt verwenden, um den Zustand und die Daten übergreifend für Webanforderungen zu nutzen.
 
-Um die Webanforderungssitzung in nachfolgenden Webanforderungen zu verwenden, geben Sie die Sitzungsvariable im Wert des **WebSession** -Parameters an. PowerShell verwendet die Daten im Sitzungs Objekt der Webanforderung, wenn die neue Verbindung hergestellt wird. Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential**. Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
+Um die Webanforderungssitzung in nachfolgenden Webanforderungen zu verwenden, geben Sie die Sitzungsvariable im Wert des **WebSession**-Parameters an. PowerShell verwendet die Daten im Sitzungs Objekt der Webanforderung, wenn die neue Verbindung hergestellt wird. Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie einen Cmdletparameter wie **UserAgent** oder **Credential**. Parameterwerte haben Vorrang vor Werten in der Webanforderungssitzung.
 
 Der **sessionvariable** -Parameter und der **websession** -Parameter können nicht im selben Befehl verwendet werden.
 
@@ -820,7 +820,7 @@ Gibt an, dass das Cmdlet der Anforderung Header ohne Validierung hinzufügen sol
 Dieser Switch sollte für Standorte verwendet werden, für die Header Werte erforderlich sind, die nicht den Standards entsprechen.
 Wenn Sie diesen Schalter angeben, wird die Validierung deaktiviert, damit der Wert nicht aktiviert werden kann. Wenn angegeben, werden alle Header ohne Validierung hinzugefügt.
 
-Dadurch wird die Überprüfung für Werte deaktiviert, die an die Parameter **ContentType** , **Headers** und **userAgent** übermittelt werden.
+Dadurch wird die Überprüfung für Werte deaktiviert, die an die Parameter **ContentType**, **Headers** und **userAgent** übermittelt werden.
 
 Diese Funktion wurde in PowerShell 6.0.0 hinzugefügt.
 
@@ -859,7 +859,7 @@ Accept wildcard characters: False
 
 Legt die SSL/TLS-Protokolle fest, die für die Webanforderung zulässig sind. Standardmäßig sind alle vom System unterstützten SSL/TLS-Protokolle zulässig. **SslProtocol** ermöglicht die Beschränkung auf bestimmte Protokolle zu Konformitäts Zwecken.
 
-**SslProtocol** verwendet die Flag-Aufzählung `WebSslProtocol` . Es ist möglich, mehr als ein Protokoll mithilfe der Flag-Notation anzugeben oder mehrere `WebSslProtocol` Optionen mit zu kombinieren `-bor` . das Bereitstellen mehrerer Protokolle wird jedoch nicht auf allen Plattformen unterstützt.
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **SslProtocol** -Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden. Möglicherweise sind Sie nicht in der Lage, mehrere Werte auf allen Plattformen bereitzustellen.
 
 > [!NOTE]
 > Auf nicht-Windows-Plattformen ist es möglicherweise nicht möglich, `Tls` oder `Tls12` als Option anzugeben. Die Unterstützung für `Tls13` ist nicht auf allen Betriebssystemen verfügbar und muss pro Betriebssystem überprüft werden.
@@ -948,7 +948,7 @@ Gibt einen Wert für den HTTP-Antwortheader transfer-encoding an. Zulässige Wer
 - Komprimieren
 - Deflate
 - GZip
-- Identität
+- Identity
 
 ```yaml
 Type: System.String
@@ -967,7 +967,7 @@ Accept wildcard characters: False
 
 Gibt den Uniform Resource Identifier (URI) der Internet Ressource an, an die die Webanforderung gesendet wird. Dieser Parameter unterstützt HTTP-, HTTPS-, FTP- und FILE-Werte.
 
-Dieser Parameter ist erforderlich. Der Parameter Name ( **URI** ) ist optional.
+Dieser Parameter ist erforderlich. Der Parameter Name (**URI**) ist optional.
 
 ```yaml
 Type: System.Uri
@@ -1041,7 +1041,7 @@ Um einen Wert in der Webanforderungssitzung zu überschreiben, verwenden Sie ein
 
 Im Gegensatz zu einer Remote Sitzung ist die Webanforderungs Sitzung keine persistente Verbindung. Dabei handelt es sich um ein Objekt, das Informationen über die Verbindung und die Anforderung enthält, einschließlich Cookies, Anmelde Informationen, des maximalen Umleitungs Werts und der Zeichenfolge des Benutzer-Agents. Sie können das Objekt verwenden, um den Zustand und die Daten übergreifend für Webanforderungen zu nutzen.
 
-Um eine Webanforderungs Sitzung zu erstellen, geben Sie einen Variablennamen ohne Dollarzeichen in den Wert des **sessionvariable** -Parameters eines `Invoke-RestMethod` Befehls ein. `Invoke-RestMethod` erstellt die Sitzung und speichert Sie in der Variablen. In allen nachfolgenden Befehlen verwenden Sie die Variable als Wert für den **WebSession** -Parameter.
+Um eine Webanforderungs Sitzung zu erstellen, geben Sie einen Variablennamen ohne Dollarzeichen in den Wert des **sessionvariable** -Parameters eines `Invoke-RestMethod` Befehls ein. `Invoke-RestMethod` erstellt die Sitzung und speichert Sie in der Variablen. In allen nachfolgenden Befehlen verwenden Sie die Variable als Wert für den **WebSession**-Parameter.
 
 Der **sessionvariable** -Parameter und der **websession** -Parameter können nicht im selben Befehl verwendet werden.
 
@@ -1061,13 +1061,13 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System.Object
 
 Sie können den Text einer Webanforderung an übergeben `Invoke-RestMethod` .
 
-## AUSGABEN
+## Ausgaben
 
 ### System. Int64, System. String, System.Xml.XmlDokument
 
@@ -1077,7 +1077,7 @@ Die Ausgabe des Cmdlets hängt vom Format des abgerufenen Inhalts ab.
 
 Wenn die Anforderung JSON-Zeichen folgen zurückgibt, `Invoke-RestMethod` gibt ein **psobject** zurück, das die Zeichen folgen darstellt.
 
-## HINWEISE
+## Hinweise
 
 Einige Features sind möglicherweise nicht auf allen Plattformen verfügbar.
 
@@ -1085,18 +1085,18 @@ Aufgrund von Änderungen in .net Core 3,1 verwenden PowerShell 7,0 und höher di
 
 Der Wert dieser Eigenschaft ist abhängig von Ihrer Plattform von unterschiedlichen Regeln:
 
-- **Für Windows** : liest die Proxykonfiguration aus den Umgebungsvariablen oder, wenn diese nicht definiert sind, aus den Proxy Einstellungen des Benutzers.
-- **Für macOS** : liest die Proxykonfiguration aus den Umgebungsvariablen oder, wenn diese nicht definiert sind, aus den Proxy Einstellungen des Systems.
-- **Für Linux** : liest die Proxykonfiguration aus Umgebungsvariablen, oder wenn diese nicht definiert sind, initialisiert diese Eigenschaft eine nicht konfigurierte Instanz, die alle Adressen umgeht.
+- **Für Windows**: liest die Proxykonfiguration aus den Umgebungsvariablen oder, wenn diese nicht definiert sind, aus den Proxy Einstellungen des Benutzers.
+- **Für macOS**: liest die Proxykonfiguration aus den Umgebungsvariablen oder, wenn diese nicht definiert sind, aus den Proxy Einstellungen des Systems.
+- **Für Linux**: liest die Proxykonfiguration aus Umgebungsvariablen, oder wenn diese nicht definiert sind, initialisiert diese Eigenschaft eine nicht konfigurierte Instanz, die alle Adressen umgeht.
 
 Die Umgebungsvariablen, die für die `DefaultProxy` Initialisierung auf Windows-und UNIX-basierten Plattformen verwendet werden, sind:
 
-- ` HTTP_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTP-Anforderungen verwendet wird.
+- `HTTP_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTP-Anforderungen verwendet wird.
 - `HTTPS_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für HTTPS-Anforderungen verwendet wird.
 - `ALL_PROXY`: der Hostname oder die IP-Adresse des Proxy Servers, der für http-und HTTPS-Anforderungen verwendet wird, falls `HTTP_PROXY` oder `HTTPS_PROXY` nicht definiert sind.
 - `NO_PROXY`: eine durch Trennzeichen getrennte Liste von Hostnamen, die von der Proxy Datei ausgeschlossen werden sollen.
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [ConvertTo-Json](ConvertTo-Json.md)
 
