@@ -3,23 +3,23 @@ external help file: Microsoft.PowerShell.Commands.Utility.dll-Help.xml
 keywords: powershell,cmdlet
 Locale: en-US
 Module Name: Microsoft.PowerShell.Utility
-ms.date: 06/09/2017
+ms.date: 04/06/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-variable?view=powershell-7&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-Variable
-ms.openlocfilehash: 876129fc8df9a78df257bf95220fc6587e68b9a2
-ms.sourcegitcommit: fcf7bd222f5ee3fdbe21ffddcae47050cffe7e42
+ms.openlocfilehash: 7335511f3e95d603261a021dab1df1b92e605d8e
+ms.sourcegitcommit: 241071803915ab7d544576b5652ac23349a86369
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93239841"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "107027157"
 ---
 # Set-Variable
 
-## ZUSAMMENFASSUNG
+## Übersicht
 Legt den Wert einer Variablen fest. Erstellt die Variable, wenn keine Variable mit dem angeforderten Namen vorhanden ist.
 
-## SYNTAX
+## Syntax
 
 ```
 Set-Variable [-Name] <String[]> [[-Value] <Object>] [-Include <String[]>] [-Exclude <String[]>]
@@ -27,11 +27,11 @@ Set-Variable [-Name] <String[]> [[-Value] <Object>] [-Include <String[]>] [-Excl
  [-PassThru] [-Scope <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## BESCHREIBUNG
 
 Das `Set-Variable` Cmdlet weist einer angegebenen Variablen einen Wert zu oder ändert den aktuellen Wert. Wenn die Variable nicht vorhanden ist, wird sie vom Cmdlet erstellt.
 
-## BEISPIELE
+## Beispiele
 
 ### Beispiel 1: Festlegen einer Variablen und deren Wert
 
@@ -59,7 +59,7 @@ Set-Variable -Name "processes" -Value (Get-Process) -Option constant -Scope glob
 
 Der Befehl verwendet das `Set-Variable` Cmdlet, um die Variable zu erstellen. Er verwendet den **passthru** -Parameter, um ein Objekt zu erstellen, das die neue Variable darstellt, und verwendet den Pipeline Operator ( `|` ), um das Objekt an das `Format-List` Cmdlet zu übergeben. Er verwendet den **Property** -Parameter von `Format-List` mit dem Wert all ( `*` ), um alle Eigenschaften der neu erstellten Variablen anzuzeigen.
 
-Der Wert, `(Get-Process)` , wird in Klammern eingeschlossen, um sicherzustellen, dass er ausgeführt wird, bevor er in der Variablen gespeichert wird. Andernfalls enthält die Variable die Wörter " **Get-Process** ".
+Der Wert, `(Get-Process)` , wird in Klammern eingeschlossen, um sicherzustellen, dass er ausgeführt wird, bevor er in der Variablen gespeichert wird. Andernfalls enthält die Variable die Wörter "**Get-Process**".
 
 ### Beispiel 3: verstehen von öffentlichen und privaten Variablen
 
@@ -99,7 +99,7 @@ PS C:\> .\use-counter.ps1
 
 Dieser Befehl zeigt, wie die Sichtbarkeit einer Variablen in "private" geändert wird. Diese Variable kann von Skripts mit den erforderlichen Berechtigungen gelesen und geändert werden, aber sie ist nicht für den Benutzer sichtbar.
 
-## PARAMETERS
+## Parameter
 
 ### -Description
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -Ausschließen
 
-Gibt ein Array von Elementen an, die von diesem Cmdlet aus dem Vorgang ausgeschlossen werden. Der Wert dieses Parameters qualifiziert den **Path** -Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` . b..
+Gibt ein Array von Elementen an, die von diesem Cmdlet aus dem Vorgang ausgeschlossen werden. Der Wert dieses Parameters qualifiziert den **Path**-Parameter. Geben Sie ein Pfad Element oder-Muster ein, z `*.txt` . b..
 Platzhalter sind zulässig.
 
 ```yaml
@@ -190,11 +190,13 @@ Gibt den Wert der **options** -Eigenschaft der Variablen an.
 
 Gültige Werte sind:
 
-- `None`: Legt keine Optionen fest. („None“ ist der Standardwert.)
+- `None`: Legt keine Optionen fest. ( `None` ist die Standardeinstellung.)
 - `ReadOnly`: Kann gelöscht werden. Kann nicht geändert werden, außer mit dem Force-Parameter.
 - `Constant`: Kann nicht gelöscht oder geändert werden. `Constant` ist nur gültig, wenn Sie eine Variable erstellen. Die Optionen einer vorhandenen Variablen können nicht in geändert werden `Constant` .
 - `Private`: Die Variable ist nur im aktuellen Bereich verfügbar.
 - `AllScope`: Die Variable wird in neue Bereiche kopiert, die erstellt werden.
+
+Diese Werte werden als Flag-basierte Enumeration definiert. Sie können mehrere Werte kombinieren, um mehrere Flags mithilfe dieses Parameters festzulegen. Die Werte können als Array von Werten an den **options** Parameter oder als durch Trennzeichen getrennte Zeichenfolge dieser Werte übergeben werden. Mit dem-Cmdlet werden die Werte mithilfe eines binären OR-Vorgangs kombiniert. Das übergeben von Werten als Array ist die einfachste Option und ermöglicht Ihnen außerdem, die Vervollständigung mit der Tab-Taste für die Werte zu verwenden.
 
 ```yaml
 Type: System.Management.Automation.ScopedItemOptions
@@ -229,13 +231,13 @@ Accept wildcard characters: False
 
 Gibt den Gültigkeitsbereich der Variablen an. Die zulässigen Werte für diesen Parameter sind:
 
-- Global
-- Lokal
-- Skript
-- Private
+- `Global`
+- `Local`
+- `Script`
+- `Private`
 - Eine Zahl relativ zum aktuellen Bereich (0 bis zur Anzahl der Bereiche, wobei 0 der aktuelle Bereich und 1 der übergeordnete Bereich ist).
 
-Local ist die Standardeinstellung.
+`Local` ist die Standardeinstellung.
 
 Weitere Informationen finden Sie unter [about_Scopes](../Microsoft.PowerShell.Core/About/about_scopes.md).
 
@@ -273,8 +275,8 @@ Bestimmt, ob die Variable außerhalb der Sitzung, in der sie erstellt wurde, sic
 
 Gültige Werte sind:
 
-- Public: die Variable ist sichtbar. („Public“ ist der Standardwert.)
-- Privat: die Variable ist nicht sichtbar.
+- `Public`: Die Variable ist sichtbar. ( `Public` ist die Standardeinstellung.)
+- `Private`: Die Variable ist nicht sichtbar.
 
 Wenn eine Variable privat ist, wird Sie nicht in Listen mit Variablen angezeigt, z. b. die von zurückgegebenen Variablen `Get-Variable` oder in Anzeigen des **Variable:** -Laufwerks. Befehle zum Lesen oder Ändern des Werts einer privaten Variablen geben einen Fehler zurück. Der Benutzer kann jedoch Befehle ausführen, die eine private Variable verwenden, wenn die Befehle in der Sitzung geschrieben wurden, in der die Variable definiert wurde.
 
@@ -327,22 +329,22 @@ Accept wildcard characters: False
 
 Dieses Cmdlet unterstützt diese gängigen Parameter: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction und -WarningVariable. Weitere Informationen findest du unter [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## EINGABEN
+## Eingaben
 
 ### System.Object
 
 Sie können ein Objekt, das den Wert der Variablen darstellt, an die Pipeline übergeben `Set-Variable` .
 
-## AUSGABEN
+## Ausgaben
 
 ### None oder System. Management. Automation. psvariable
 
 Wenn Sie den **passthru** -Parameter verwenden, `Set-Variable` generiert ein **System. Management. Automation. psvariable** -Objekt, das die neue oder geänderte Variable darstellt.
 Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
 
-## HINWEISE
+## Hinweise
 
-## VERWANDTE LINKS
+## Ähnliche Themen
 
 [Clear-Variable](Clear-Variable.md)
 
