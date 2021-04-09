@@ -1,157 +1,90 @@
 ---
-ms.date: 05/22/2020
+ms.date: 03/22/2021
 keywords: powershell,cmdlet
 title: Was ist PowerShell?
 description: Dieser Artikel stellt eine Einführung in die PowerShell-Skriptumgebung und ihre Features dar.
-ms.openlocfilehash: 91fc580af9a3adf43a24c40b4aaf3f1843882705
-ms.sourcegitcommit: 9080316e3ca4f11d83067b41351531672b667b7a
+ms.openlocfilehash: 3e1c2cae4b8d6507057ee8136265710a8dfe74f3
+ms.sourcegitcommit: 719debaed3cc32ba463b1d4cc56a491d8ecbce26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92500775"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105029688"
 ---
 # <a name="what-is-powershell"></a>Was ist PowerShell?
 
-PowerShell ist ein Framework zur plattformübergreifenden Aufgabenautomatisierung und Konfigurationsverwaltung und besteht aus einer Befehlszeilenshell und Skriptsprache. Im Gegensatz zu den meisten Shells, bei denen Text akzeptiert und zurückgegeben wird, basiert PowerShell auf der .NET Common Language Runtime (CLR) und akzeptiert und gibt .NET-Objekte zurück. Diese grundlegende Änderung bringt völlig neue Tools und Methoden für die Automatisierung mit sich.
+PowerShell ist ein plattformübergreifendes Framework zur Aufgabenautomatisierung und Konfigurationsverwaltung, das aus einer Befehlszeilenshell und einer Skriptsprache besteht. PowerShell kann unter Windows, Linux und macOS ausgeführt werden.
 
-<!-- removing images until we can get replacements
-:::row:::
-   :::column span="":::
-      Windows
-      [![PowerShell on Windows](media/overview/windows-desktop-660.gif)](media/overview/windows-desktop.gif#lightbox)
-      [Install on Windows](install/installing-powershell-core-on-windows.md)
-   :::column-end:::
-   :::column span="":::
-      Linux
-      [![PowerShell on Linux](media/overview/linux-desktop-660.gif)](media/overview/linux-desktop.gif#lightbox)
-      [Install on Linux](install/installing-powershell-core-on-linux.md)
-   :::column-end:::
-   :::column span="":::
-      macOS
-      [![PowerShell on macOS](media/overview/macos-desktop-660.gif)](media/overview/macos-desktop.gif#lightbox)
-      [Install on macOS](install/installing-powershell-core-on-macos.md)
-   :::column-end:::
-:::row-end:::
--->
+## <a name="shell"></a>Shell
 
-## <a name="output-is-object-based"></a>Die Ausgabe ist objektbasiert
+PowerShell ist eine moderne Befehlsshell, die die besten Features anderer beliebter Shells umfasst. Anders als die meisten Shells, die nur Text akzeptieren und zurückgeben, kann PowerShell auch .NET-Objekte akzeptieren und zurückgeben. Die Shell umfasst die folgenden Funktionen:
 
-Im Gegensatz zu herkömmlichen Befehlszeilenschnittstellen sind PowerShell-Cmdlets für den Umgang mit Objekten entworfen.
-Ein Objekt setzt sich aus strukturierten Informationen zusammen und ist mehr als nur die Zeichenfolge, die auf dem Bildschirm erscheint. Die Befehlsausgabe umfasst immer zusätzliche Informationen, die Sie bei Bedarf nutzen können.
+- Stabiler [Verlauf][] der Befehlszeile
+- Vervollständigung mit der TAB-TASTE und Befehlsvorhersage (siehe [about_PSReadLine][])
+- Unterstützung für [Aliase][] für Befehle und Parameter
+- [Pipeline][] zum Verketten von Befehlen
+- In die Konsole integriertes [Hilfesystem][], vergleichbar mit Manpages (`man`) unter Unix
 
-Wenn Sie in schon mal ein Textverarbeitungsprogramm zum Verarbeiten von Daten verwendet haben, werden Sie das abweichende Verhalten der Daten in PowerShell bemerken. In den meisten Fällen benötigen Sie kein Textverarbeitungsprogramm, um bestimmte Informationen zu extrahieren. Sie greifen mit der standardmäßigen PowerShell-Objektsyntax direkt auf Teile der Daten zu.
+## <a name="scripting-language"></a>"Skriptsprache"
 
-## <a name="the-command-family-is-extensible"></a>Die Befehlsfamilie ist erweiterbar
+Als Skriptsprache wird PowerShell häufig zum Automatisieren der Verwaltung von Systemen verwendet. Sie wird auch zum Erstellen, Testen und Bereitstellen von Lösungen verwendet – insbesondere in CI/CD-Umgebungen. PowerShell basiert auf der .NET Common Language Runtime (CLR). Alle Ein- und Ausgaben sind .NET-Objekte. Die Textausgabe muss nicht analysiert werden, um Informationen aus der Ausgabe zu extrahieren. Die Skriptsprache von PowerShell bietet die folgenden Funktionen:
 
-Schnittstellen wie `cmd.exe` bieten keine Möglichkeit zur direkten Erweiterung des integrierten Befehlssatzes. Sie können externe Befehlszeilentools erstellen, die in `cmd.exe` ausgeführt werden. Aber diese externen Tools umfassen keine Dienste wie z.B. eine integrierte Hilfe. `cmd.exe` weiß nicht automatisch, dass es sich bei diesen externen Tools um gültige Befehle handelt.
+- Erweiterbar durch [Funktionen][], [Klassen][], [Skripts][] und [Module][]
+- Erweiterbares [Formatierungssystem][formatting] für einfache Ausgaben
+- Erweiterbares [Typsystem][types] zum Erstellen dynamischer Typen
+- Integrierte Unterstützung für gängige Datenformate wie [CSV][], [JSON][] und [XML][]
 
-Die Befehle in PowerShell werden als _Cmdlets_ bezeichnet. Sie können jedes Cmdlet einzeln verwenden, aber deren Leistungsfähigkeit wird freigesetzt, wenn Sie diese kombinieren, um komplexe Aufgaben auszuführen. Ähnlich wie viele Shells ermöglicht PowerShell Ihnen Zugriff auf das Dateisystem auf dem Computer. Mit PowerShell- _Anbietern_ haben Sie die Möglichkeit, auf andere Datenspeicher, etwa die Registrierung und den Zertifikatspeicher, so einfach zuzugreifen wie auf das Dateisystem.
+## <a name="configuration-management"></a>Konfigurationsverwaltung
 
-Mithilfe von kompiliertem Code oder Skripts können Sie eigene Cmdlets und Funktionsmodule erstellen. Mit Modulen können der Shell Cmdlets und Anbieter hinzugefügt werden. PowerShell bietet außerdem Unterstützung für Skripts, analog zu UNIX-Shellskripts und `cmd.exe`-Batchdateien.
+Desired State Configuration ([DSC][]) ist ein Verwaltungsframework in PowerShell, das Ihnen das Verwalten Ihrer Unternehmensinfrastruktur per Konfiguration als Code ermöglicht. Sie können mit DSC folgende Aufgaben durchführen:
 
-## <a name="support-for-command-aliases"></a>Unterstützung für Befehlsaliase
-
-PowerShell unterstützt Aliase, um mit alternativen Namen auf Befehle zu verweisen. Durch Aliase können Benutzer mit Erfahrung in anderen Shell-Umgebungen gängige Befehlsnamen, die sie bereits kennen, für ähnliche Vorgänge in PowerShell verwenden.
-
-Bei der Aliasverwendung wird einem Befehl ein neuer Name zugeordnet. Beispielsweise umfasst PowerShell eine interne Funktion namens `Clear-Host`, mit der das Ausgabefenster gelöscht wird. Sie können an einer Eingabeaufforderung entweder `cls` oder den Alias `clear` eingeben. PowerShell interpretiert diese Aliase und führt die Funktion `Clear-Host` aus.
-
-Dieses Feature unterstützt Benutzer beim Erlernen von PowerShell. Zunächst beherrschen die meisten `cmd.exe`- und Unix-Benutzer ein großes Repertoire an Befehlen, deren Namen sie bereits kennen. Die PowerShell-Äquivalente führen möglicherweise nicht zu identischen Ergebnissen. Dennoch sind die Ergebnisse ähnlich genug, um Benutzern das Arbeiten ohne Kenntnis der PowerShell-Befehlsnamen zu ermöglichen. Das „Muskelgedächtnis“ ist eine weitere Quelle für Frustrationen beim Erlernen einer neuen Befehlsshell. Wenn Sie seit Jahren `cmd.exe` verwenden, geben Sie möglicherweise reflexartig den Befehl `cls` ein, um den Bildschirm zu löschen. Ohne den Alias für `Clear-Host` erhalten Sie eine Fehlermeldung und wissen nicht, wie Sie zum Löschen der Ausgabe vorgehen müssen.
-
-## <a name="powershell-handles-console-input-and-display"></a>PowerShell verarbeitet Konsoleneingabe und Anzeige
-
-Wenn Sie einen Befehl eingeben, verarbeitet PowerShell die Befehlszeileneingabe immer sofort. PowerShell formatiert darüber hinaus die Ausgabe, die auf dem Bildschirm angezeigt wird. Dieser Unterschied ist wesentlich, weil dadurch die Arbeit für jedes Cmdlet verringert wird. Es wird sichergestellt, dass Sie Aufgaben mit beliebigen Cmdlets immer gleich ausführen können. Cmdlet-Entwickler müssen keinen Code schreiben, mit dem die Befehlszeilenargumente analysiert oder die Ausgabe formatiert wird.
-
-Herkömmliche Befehlszeilentools haben eigene Schemas zum Anfordern und Anzeigen von Hilfe. Einige Befehlszeilentools verwenden `/?` zum Aufrufen der Hilfe, während andere `-?`, `/H` oder `//` verwenden. Bei einigen wird Hilfe in einem Fenster auf der grafischen Benutzeroberfläche und nicht in der Konsole angezeigt. Wenn Sie den falschen Parameter verwenden, ignoriert das Tool möglicherweise Ihre Eingabe und beginnt damit, automatisch einen Task auszuführen.
-Da PowerShell die Befehlszeile automatisch analysiert und verarbeitet, bedeutet der Parameter `-?` immer „Hilfe für diesen Befehl anzeigen“.
-
-> [!NOTE]
-> Wenn Sie eine grafische Anwendung in PowerShell ausführen, wird das Fenster für die Anwendung geöffnet.
-> PowerShell greift nur beim Verarbeiten der angegebenen Befehlszeileneingabe oder zur Ausgabe der Anwendungsergebnisse im Konsolenfenster ein. PowerShell hat keinen Einfluss darauf, wie die Anwendung intern arbeitet.
-
-## <a name="powershell-has-a-pipeline"></a>Die PowerShell-Pipeline
-
-Pipelines sind wohl das wertvollste Konzept, das Befehlszeilenschnittstellen verwendet wird. Bei richtigem Einsatz verringern Pipelines den Aufwand durch die Verwendung von komplexen Befehlen und erleichtern es, den Ablauf zu sehen. Jeder Befehl in einer Pipeline gibt seine Ausgabe Element für Element an den nächsten Befehl weiter. Befehle müssen jeweils nur ein Element zurzeit verarbeiten. Das Ergebnis ist eine verringerte Ressourcennutzung und die Möglichkeit, die Ausgabe unmittelbar zu erhalten.
-
-Die Notation für Pipelines ist der Notation in anderen Shells ähnlich. Auf den ersten Blick ist es möglicherweise nicht offensichtlich, wie sich Pipelines in PowerShell unterscheiden. Obwohl Text auf dem Bildschirm angezeigt wird, leitet PowerShell Objekte und keinen Text zwischen Befehlen weiter.
-
-Wenn Sie beispielsweise das Cmdlet `Out-Host` zum Erzwingen einer seitenweisen Anzeige der Ausgabe eines anderen Befehls verwenden, sieht die Ausgabe wie der normale auf dem Bildschirm gezeigte Text aus, der in Seiten unterteilt ist:
-
-```powershell
-Get-ChildItem | Out-Host -Paging
-```
-
-```Output
-    Directory: /mnt/c/Git/PS-Docs/PowerShell-Docs/reference/7.0/Microsoft.PowerShell.Core
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          05/22/2020    08:30                About
------          05/20/2020    14:36           9044 Add-History.md
------          05/20/2020    14:36          12227 Clear-History.md
------          05/20/2020    14:36           3566 Clear-Host.md
------          05/20/2020    14:36          29087 Connect-PSSession.md
------          05/20/2020    14:36           5705 Debug-Job.md
------          05/20/2020    14:36           3515 Disable-ExperimentalFeature.md
------          05/20/2020    14:36          25531 Disable-PSRemoting.md
------          05/20/2020    14:36           7852 Disable-PSSessionConfiguration.md
------          05/20/2020    14:36          25355 Disconnect-PSSession.md
------          05/20/2020    14:36           3491 Enable-ExperimentalFeature.md
------          05/20/2020    14:36          13310 Enable-PSRemoting.md
------          05/20/2020    14:36           8401 Enable-PSSessionConfiguration.md
------          05/20/2020    14:36           9531 Enter-PSHostProcess.md
-...
-<SPACE> next page; <CR> next line; Q quit
-```
-
-Durch die Einteilung in Seiten wird auch die CPU-Auslastung reduziert, da die Verarbeitung an das Cmdlet `Out-Host` übertragen wird, wenn eine vollständige Seite für die Anzeige bereit ist. Die Cmdlets, die sich in der Pipeline davor befinden, unterbrechen die Ausführung, bis die nächste Seite der Ausgabe verfügbar ist.
-
-### <a name="objects-in-the-pipeline"></a>Objekte in der Pipeline
-
-Wenn Sie ein Cmdlet in PowerShell ausführen, sehen Sie eine Textausgabe, da es erforderlich ist, Objekte in einem Konsolenfenster als Text darzustellen. Die Textausgabe enthält möglicherweise nicht alle Eigenschaften des Objekts, das ausgegeben wird.
-
-Betrachten Sie beispielsweise das Cmdlet `Get-Location`. Die Textausgabe ist eine Zusammenfassung der Informationen, keine vollständige Darstellung des Objekts, das von `Get-Location` zurückgegeben wird. Die Überschrift in der Ausgabe wird durch den Prozess hinzugefügt, der die Daten für die Anzeige auf dem Bildschirm formatiert.
-
-```powershell
-Get-Location
-```
-
-```Output
-Path
-----
-C:\
-```
-
-Wenn Sie die Ausgabe an das Cmdlet `Get-Member` weiterleiten, werden Informationen über das Objekt angezeigt, das von `Get-Location` zurückgegeben wird.
-
-```powershell
-Get-Location | Get-Member
-```
-
-```Output
-   TypeName: System.Management.Automation.PathInfo
-
-Name         MemberType Definition
-----         ---------- ----------
-Equals       Method     bool Equals(System.Object obj)
-GetHashCode  Method     int GetHashCode()
-GetType      Method     type GetType()
-ToString     Method     string ToString()
-Drive        Property   System.Management.Automation.PSDriveInfo Drive {get;}
-Path         Property   string Path {get;}
-Provider     Property   System.Management.Automation.ProviderInfo Provider {get;}
-ProviderPath Property   string ProviderPath {get;}
-```
-
-`Get-Location` gibt ein **PathInfo** -Objekt zurück, das den aktuellen Pfad und andere Informationen enthält.
-
-## <a name="built-in-help-system"></a>Integriertes Hilfesystem
-
-Ähnlich wie bei `man`-Seiten, umfasst PowerShell ausführliche Hilfeartikel, in denen die Konzepte von PowerShell und die Befehlssyntax erläutert werden. Verwenden Sie das Cmdlet [Get-Help][], um diese Artikel über die Eingabeaufforderung anzuzeigen. Sie können aber auch die zuletzt aktualisierten Versionen dieser Artikel in der PowerShell-Dokumentation online anzeigen.
+- Erstellen von deklarativen [Konfigurationen][] und benutzerdefinierten Skripts für wiederholbare Bereitstellungen
+- Erzwingen von Konfigurationseinstellungen und Melden von Konfigurationsabweichungen
+- Bereitstellen von Konfigurationen mithilfe von [Push- oder Pullmodellen][push-pull]
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu PowerShell erhalten Sie im Abschnitt **Erlernen von PowerShell** auf dieser Website.
+### <a name="getting-started"></a>Erste Schritte
+
+Sind Sie neu bei PowerShell und wissen nicht, wo Sie anfangen sollen? Sehen Sie sich die folgenden Ressourcen an:
+
+- [Installieren von PowerShell][install]
+- [PowerShell 101][PS101]
+- [Tutorials zu PowerShell][tutorials]
+- [Learn-Module zu PowerShell][learn]
+
+### <a name="powershell-in-action"></a>PowerShell in Aktion
+
+Sehen Sie sich an, wie PowerShell in verschiedenen Szenarien und auf unterschiedlichen Plattformen verwendet wird.
+
+- [PowerShell-Remoting über SSH][remoting]
+- [Erste Schritte mit Azure PowerShell][azure]
+- [Erstellen einer CI/CD-Pipeline mit DSC][devops]
+- [Verwalten von Microsoft Exchange][exchange]
 
 <!-- link references -->
 
-[Get-Help]: /powershell/module/microsoft.powershell.core/Get-Help
+[Verlauf]: /powershell/module/microsoft.powershell.core/about/about_history
+[about_PSReadLine]: /powershell/module/psreadline/about/about_psreadline
+[Aliase]: /powershell/module/microsoft.powershell.core/about/about_aliases
+[Pipeline]: /powershell/module/microsoft.powershell.core/about/about_pipelines
+[help]: /powershell/module/microsoft.powershell.core/get-help
+[modules]: /powershell/module/microsoft.powershell.core/about/about_modules
+[functions]: /powershell/module/microsoft.powershell.core/about/about_functions_advanced
+[Klassen]: /powershell/module/microsoft.powershell.core/about/about_classes
+[Skripts]: /powershell/module/microsoft.powershell.core/about/about_scripts
+[formatting]: /powershell/module/microsoft.powershell.core/about/about_format.ps1xml
+[types]: /powershell/module/microsoft.powershell.core/about/about_types.ps1xml
+[CSV]: /powershell/module/microsoft.powershell.utility/convertfrom-csv
+[JSON]: /powershell/module/microsoft.powershell.utility/convertfrom-json
+[XML]: /powershell/module/microsoft.powershell.utility/convertto-xml
+[configurations]: /powershell/scripting/dsc/configurations/configurations
+[DSC]: /powershell/scripting/dsc/overview/dscforengineers
+[push-pull]: /powershell/scripting/dsc/pull-server/enactingconfigurations
+[install]: /powershell/scripting/install/installing-powershell
+[PS101]: /powershell/scripting/learn/ps101/00-introduction
+[tutorials]: /powershell/scripting/learn/tutorials/00-introduction
+[learn]: /learn/browse/?terms=PowerShell
+[azure]: /powershell/azure/get-started-azureps
+[devops]: /azure/devops/pipelines/release/dsc-cicd
+[exchange]: /powershell/exchange/exchange-management-shell
+[remoting]: /powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core
