@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: 1c178c9a7683b9630cabf6165fae0341385d67a6
-ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
+ms.openlocfilehash: 4d95eb45497c8c3592825c4d4606580de4bccd84
+ms.sourcegitcommit: 241071803915ab7d544576b5652ac23349a86369
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/07/2021
-ms.locfileid: "106555762"
+ms.locfileid: "107027259"
 ---
 # Invoke-WebRequest
 
@@ -82,7 +82,7 @@ Invoke-WebRequest [-UseBasicParsing] [-Uri] <Uri> [-WebSession <WebRequestSessio
  [-PreserveAuthorizationOnRedirect] [-SkipHeaderValidation] [<CommonParameters>]
 ```
 
-## BESCHREIBUNG
+## Beschreibung
 
 Das `Invoke-WebRequest` -Cmdlet sendet HTTP-und HTTPS-Anforderungen an eine Webseite oder einen Webdienst. Er analysiert die Antwort und gibt Auflistungen von Links, Bildern und anderen wichtigen HTML-Elementen zurück.
 
@@ -987,11 +987,7 @@ Der Standard-Benutzer-Agent ähnelt `Mozilla/5.0 (Windows NT 10.0; Microsoft Win
 
 Um eine Website mit der standardmäßigen Benutzer-Agent-Zeichenfolge zu testen, die von den meisten Internetbrowsern verwendet wird, verwenden Sie die Eigenschaften der Klasse [psuseragent](/dotnet/api/microsoft.powershell.commands.psuseragent) , z. b. Chrome, Firefox, Internet Explorer, Opera und Safari.
 
-Der folgende Befehl verwendet z. b. die Benutzer-Agent-Zeichenfolge für Internet Explorer:
-
-```powershell
-Invoke-WebRequest -Uri https://website.com/ -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)
-```
+Der folgende Befehl verwendet z. b. die Benutzer-Agent-Zeichenfolge für Internet Explorer: `Invoke-WebRequest -Uri https://website.com/ -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)`
 
 ```yaml
 Type: System.String
@@ -1043,7 +1039,7 @@ Sie können den Text einer Webanforderung an übergeben `Invoke-WebRequest` .
 
 ### Microsoft. PowerShell. Commands. basichtmlwebresponseobject
 
-## Hinweise
+## Notizen
 
 Ab PowerShell 6.0.0 `Invoke-WebRequest` unterstützt nur die grundlegende-Verarbeitung.
 

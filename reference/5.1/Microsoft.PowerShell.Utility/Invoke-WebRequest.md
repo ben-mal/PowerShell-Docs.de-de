@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-WebRequest
-ms.openlocfilehash: 4aa3b889ed00c6b0442a1191f055e1228f252631
-ms.sourcegitcommit: d95a7255f6775b2973aa9473611185a5583881ff
+ms.openlocfilehash: 516e73b36668bcb1606df77b0c6f63c3d477ac7c
+ms.sourcegitcommit: 241071803915ab7d544576b5652ac23349a86369
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/07/2021
-ms.locfileid: "106555524"
+ms.locfileid: "107027208"
 ---
 # Invoke-WebRequest
 
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 
 Gibt eine Benutzer-Agent-Zeichenfolge für die Webanforderung an. Der Standard-Benutzer-Agent ähnelt `Mozilla/5.0 (Windows NT; Windows NT 6.1; en-US) WindowsPowerShell/3.0` mit geringfügigen Abweichungen für die einzelnen Betriebssysteme und Plattformen.
 
-Um eine Website mit der standardmäßigen Benutzer-Agent-Zeichenfolge zu testen, die von den meisten Internet Browsern verwendet wird, verwenden Sie die Eigenschaften der Klasse [psuseragent](/dotnet/api/microsoft.powershell.commands.psuseragent) , z. b. Chrome, Firefox, Internet Explorer, Opera und Safari. Der folgende Befehl verwendet z. b. die Benutzer-Agent-Zeichenfolge für Internet Explorer.
+Um eine Website mit der standardmäßigen Benutzer-Agent-Zeichenfolge zu testen, die von den meisten Internet Browsern verwendet wird, verwenden Sie die Eigenschaften der Klasse [psuseragent](/dotnet/api/microsoft.powershell.commands.psuseragent) , z. b. Chrome, Firefox, Internet Explorer, Opera und Safari. Der folgende Befehl verwendet z. b. die Benutzer-Agent-Zeichenfolge für Internet Explorer: `Invoke-WebRequest -Uri https://website.com/ -UserAgent ([Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer)`
 
 ```yaml
 Type: System.String
