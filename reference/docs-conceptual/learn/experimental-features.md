@@ -2,12 +2,12 @@
 ms.date: 12/14/2020
 title: Verwenden experimenteller Features in PowerShell
 description: In diesem Artikel wird beschrieben, welche experimentellen Features verfügbar sind und wie sie verwendet werden.
-ms.openlocfilehash: f97cea1dff4030da22be1efbe3cd5cbb7a9f3527
-ms.sourcegitcommit: 1dfd5554b70c7e8f4e3df19e29c384a9c0a4b227
+ms.openlocfilehash: 828a962ca46e5563874ff1c941c46c8a0624f3d8
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101685268"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216893"
 ---
 # <a name="using-experimental-features-in-powershell"></a>Verwenden experimenteller Features in PowerShell
 
@@ -108,7 +108,7 @@ UnderlineOff     Property   string UnderlineOff {get;}
 
 Die Basismember geben Zeichenfolgen von ANSI-Escapesequenzen zurück, die ihren Namen zugeordnet sind. Die Werte können beliebig angepasst werden.
 
-Weitere Informationen finden Sie unter [about_Automatic_Variables](/reference/7.2/Microsoft.PowerShell.Core/About/about_Automatic_Variables.md).
+Weitere Informationen finden Sie unter [about_Automatic_Variables](/powershell/module/Microsoft.PowerShell.Core/About/about_Automatic_Variables.md).
 
 > [!NOTE]
 > C# Entwickler können auf `PSStyle` als Singleton zugreifen. Dies sieht wie folgt aus:

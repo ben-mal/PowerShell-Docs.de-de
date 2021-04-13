@@ -6,12 +6,12 @@ ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-5.1&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Remote_Jobs
-ms.openlocfilehash: 389db08a2b6528d14ff5f79cd4d369c23ed0c737
-ms.sourcegitcommit: aac365f7813756e16b59322832a904e703e0465b
+ms.openlocfilehash: 1a4ae0478ff3da84a872ffda93ddf799d2e0c2d9
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94524534"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216849"
 ---
 # <a name="about-remote-jobs"></a>Informationen zu Remote Aufträgen
 
@@ -24,7 +24,7 @@ PowerShell führt Befehle und Skripts gleichzeitig durch Aufträge aus. Es gibt 
 
 - `RemoteJob` -Befehle und Skripts werden in einer Remote Sitzung ausgeführt.
 - `BackgroundJob` -Befehle und Skripts werden in einem separaten Prozess auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Jobs](about_Jobs.md).
-- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).
+- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](/powershell/module/Microsoft.PowerShell.Core/About/about_Thread_Jobs).
 
 Das Remote Ausführen von Skripts auf einem separaten Computer oder in einem separaten Prozess bietet eine hohe Isolation. Fehler, die im Remote Auftrag auftreten, wirken sich nicht auf andere laufende Aufträge oder die übergeordnete Sitzung aus, die den Auftrag gestartet hat. Allerdings erhöht die Remoting-Ebene mehr Aufwand, einschließlich Objektserialisierung. Alle Objekte werden serialisiert und deserialisiert, wenn Sie zwischen der übergeordneten Sitzung und der Remote Sitzung (Auftrags Sitzung) weitergegeben werden. Die Serialisierung von großen komplexen Datenobjekten kann große Mengen an COMPUTE-und Speicherressourcen beanspruchen und große Datenmengen über das Netzwerk übertragen.
 

@@ -16,7 +16,7 @@ ms.locfileid: "107027191"
 ---
 # Set-Variable
 
-## Übersicht
+## Zusammenfassung
 Legt den Wert einer Variablen fest. Erstellt die Variable, wenn keine Variable mit dem angeforderten Namen vorhanden ist.
 
 ## Syntax
@@ -342,7 +342,7 @@ Sie können ein Objekt, das den Wert der Variablen darstellt, an die Pipeline ü
 Wenn Sie den **passthru** -Parameter verwenden, `Set-Variable` generiert ein **System. Management. Automation. psvariable** -Objekt, das die neue oder geänderte Variable darstellt.
 Andernfalls wird von diesem Cmdlet keine Ausgabe generiert.
 
-## Notizen
+## Hinweise
 
 ## Ähnliche Themen
 

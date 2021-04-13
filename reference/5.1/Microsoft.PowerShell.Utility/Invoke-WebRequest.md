@@ -15,7 +15,7 @@ ms.locfileid: "107027208"
 ---
 # Invoke-WebRequest
 
-## Übersicht
+## Zusammenfassung
 Ruft Inhalte von einer Webseite im Internet ab.
 
 ## Syntax
@@ -150,7 +150,7 @@ Der **Body**-Parameter kann verwendet werden, um eine Liste von Abfrageparameter
 Wenn die Eingabe eine GET-Anforderung und der Text ein **IDictionary** (in der Regel eine Hash Tabelle) ist, wird der Text dem URI als Abfrage Parameter hinzugefügt. Bei anderen Get-Anforderungen wird der Text als Wert des Anforderungs Texts im Standardformat festgelegt `name=value` .
 
 Wenn der Text ein Formular oder die Ausgabe eines- `Invoke-WebRequest` Aufrufes ist, legt PowerShell den Anforderungs Inhalt auf die Formularfelder fest.
-Beispiel:
+Beispiele:
 
 `$r = Invoke-WebRequest https://website.com/login.aspx`
 `$r.Forms\[0\].Name = "MyName"`

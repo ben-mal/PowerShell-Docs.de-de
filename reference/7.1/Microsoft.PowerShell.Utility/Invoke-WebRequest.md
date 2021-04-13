@@ -15,7 +15,7 @@ ms.locfileid: "107027259"
 ---
 # Invoke-WebRequest
 
-## Übersicht
+## Zusammenfassung
 Ruft Inhalte von einer Webseite im Internet ab.
 
 ## Syntax
@@ -1039,7 +1039,7 @@ Sie können den Text einer Webanforderung an übergeben `Invoke-WebRequest` .
 
 ### Microsoft. PowerShell. Commands. basichtmlwebresponseobject
 
-## Notizen
+## Hinweise
 
 Ab PowerShell 6.0.0 `Invoke-WebRequest` unterstützt nur die grundlegende-Verarbeitung.
 

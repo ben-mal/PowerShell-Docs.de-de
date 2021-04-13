@@ -5,12 +5,12 @@ ms.date: 11/11/2020
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_jobs?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Remote_Jobs
-ms.openlocfilehash: 93e1d3aba1f4037cc3c5c18386488bf321fc2a64
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: 4efeb4f4b89e6c44ace0b8b4099efd7d41821f66
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603692"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216832"
 ---
 # <a name="about-remote-jobs"></a>Informationen zu Remote Aufträgen
 
@@ -23,7 +23,7 @@ PowerShell führt Befehle und Skripts gleichzeitig durch Aufträge aus. Es gibt 
 
 - `RemoteJob` -Befehle und Skripts werden in einer Remote Sitzung ausgeführt.
 - `BackgroundJob` -Befehle und Skripts werden in einem separaten Prozess auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Jobs](about_Jobs.md).
-- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](/powershell/module/ThreadJob/about_Thread_Jobs).
+- `PSTaskJob``ThreadJob`-Befehle und-Skripts werden in einem separaten Thread innerhalb desselben Prozesses auf dem lokalen Computer ausgeführt. Weitere Informationen finden Sie unter [about_Thread_Jobs](about_Thread_Jobs.md).
 
 Das Remote Ausführen von Skripts auf einem separaten Computer oder in einem separaten Prozess bietet eine hohe Isolation. Fehler, die im Remote Auftrag auftreten, wirken sich nicht auf andere laufende Aufträge oder die übergeordnete Sitzung aus, die den Auftrag gestartet hat. Allerdings erhöht die Remoting-Ebene mehr Aufwand, einschließlich Objektserialisierung. Alle Objekte werden serialisiert und deserialisiert, wenn Sie zwischen der übergeordneten Sitzung und der Remote Sitzung (Auftrags Sitzung) weitergegeben werden. Die Serialisierung von großen komplexen Datenobjekten kann große Mengen an COMPUTE-und Speicherressourcen beanspruchen und große Datenmengen über das Netzwerk übertragen.
 
@@ -277,7 +277,7 @@ Output 11
 In diesem Beispiel werden die Aufträge immer noch an eine übergeordnete PowerShell-Sitzung angefügt.
 Allerdings ist die übergeordnete Sitzung nicht die ursprüngliche PowerShell-Sitzung, in der `Invoke-Command` ausgeführt wurde.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [about_Jobs](about_Jobs.md)
 - [about_Job_Details](about_Job_Details.md)

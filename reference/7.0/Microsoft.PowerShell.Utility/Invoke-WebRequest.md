@@ -15,7 +15,7 @@ ms.locfileid: "107027242"
 ---
 # Invoke-WebRequest
 
-## Übersicht
+## Zusammenfassung
 Ruft Inhalte von einer Webseite im Internet ab.
 
 ## Syntax

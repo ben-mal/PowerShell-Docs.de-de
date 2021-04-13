@@ -3,12 +3,12 @@ title: Verwalten von Issues
 description: In diesem Artikel wird erläutert, wie das PowerShell-Docs-Team Issues verwaltet.
 ms.date: 12/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 72267137a2657f51e5f616113adf92d80647acad
-ms.sourcegitcommit: 61765d08321623743dc5db5367160f6982fe7857
+ms.openlocfilehash: c6cb38bc37260b14e2a7c728879e2fa2a036133f
+ms.sourcegitcommit: f6cc3752463b254f6ba7fc14c1e4532ad33f06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "99598380"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "107216912"
 ---
 # <a name="how-we-manage-issues"></a>Verwalten von Issues
 
@@ -36,10 +36,10 @@ In diesem Artikel wird beschrieben, wie Issues im Repository „PowerShell-Docs�
 | -------- | ------------------------------------------------------------------- |
 | Bereich     | Dient zur Angabe des Teils von PowerShell oder der Dokumentation, der im Issue diskutiert wird.<br>Nützlich für Zuständige für Features, um Issues für ihr Feature zu finden. |
 | Problem    | Gibt den Typ des Problems an.                                         |
-| Priorität | Gibt die Priorität des Problems an. Wertebereich 0 (hoch)-4 (niedrig)  |
+| Priority | Gibt die Priorität des Problems an. Wertebereich 0 (hoch)-4 (niedrig)  |
 | Status   | Gibt den Status des Arbeits Elements an oder warum es geschlossen wurde.          |
 | Tag      | Bezeichnungen, die für die weitere Klassifizierung verwendet werden                        |
-| Wartend  | Gibt an, dass wir auf ein oder mehrere andere Ereignisse warten.         |
+| Warten  | Gibt an, dass wir auf ein oder mehrere andere Ereignisse warten.         |
 
 #### <a name="milestones"></a>Meilensteine
 
@@ -69,7 +69,6 @@ PowerShell docs Teammitglieder überprüfen die Probleme täglich und selektiert
   | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
   | DSC      | [https://windowsserver.uservoice.com/forums/301869-powershell](https://windowsserver.uservoice.com/forums/301869-powershell) |
   | Katalog  | [https://github.com/powershell/powershellgallery/issues/new](https://github.com/powershell/powershellgallery/issues/new)     |
-  | jea      | [https://github.com/powershell/jea/issues/new](https://github.com/powershell/jea/issues/new)                                 |
   | wmf      | [https://windowsserver.uservoice.com/forums/301869-powershell](https://windowsserver.uservoice.com/forums/301869-powershell) |
 
 ### <a name="support-requests"></a>Supportanfragen

@@ -16,7 +16,7 @@ ms.locfileid: "107027174"
 ---
 # Set-Variable
 
-## Übersicht
+## Zusammenfassung
 Legt den Wert einer Variablen fest. Erstellt die Variable, wenn keine Variable mit dem angeforderten Namen vorhanden ist.
 
 ## Syntax
