@@ -1,16 +1,16 @@
 ---
 description: Variablen, die das Verhalten von PowerShell anpassen.
 Locale: en-US
-ms.date: 04/22/2020
+ms.date: 04/12/2021
 online version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_preference_variables?view=powershell-7.2&WT.mc_id=ps-gethelp
 schema: 2.0.0
 title: about_Preference_Variables
-ms.openlocfilehash: d8eadf88d486de4758b56738089f27e8adc3bc91
-ms.sourcegitcommit: 95d41698c7a2450eeb70ef2fb6507fe7e6eff3b6
+ms.openlocfilehash: ffd640f7eac8b27cabce345f11da728945043e46
+ms.sourcegitcommit: 74270273e9097352dab174c08123b82063225e2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "99603919"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107297196"
 ---
 # <a name="about-preference-variables"></a>Informationen zu Einstellungs Variablen
 
@@ -28,7 +28,7 @@ In der folgenden Tabelle sind die Einstellungs Variablen und ihre Standardwerte 
 
 |             Variable             |       Standardwert       |
 | -------------------------------- | ------------------------- |
-| `$ConfirmPreference`             | Hoch                      |
+| `$ConfirmPreference`             | High                      |
 | `$DebugPreference`               | SilentlyContinue          |
 | `$ErrorActionPreference`         | Continue                  |
 | `$ErrorView`                     | Concianview               |
@@ -53,7 +53,7 @@ In der folgenden Tabelle sind die Einstellungs Variablen und ihre Standardwerte 
 | `$Transcript`                    | (none)                    |
 | `$VerbosePreference`             | SilentlyContinue          |
 | `$WarningPreference`             | Continue                  |
-| `$WhatIfPreference`              | Falsch                     |
+| `$WhatIfPreference`              | False                     |
 
 PowerShell umfasst die folgenden Umgebungsvariablen, in denen Benutzereinstellungen gespeichert werden. Weitere Informationen zu diesen Umgebungsvariablen finden Sie unter [about_Environment_Variables](about_Environment_Variables.md).
 
@@ -387,7 +387,7 @@ Bestimmt das Anzeige Format von Fehlermeldungen in PowerShell.
 
 Die folgenden Werte sind gültig:
 
-- " **Concianview**" (Standard): stellt eine kurze Fehlermeldung und eine umgestaltete Ansicht für erweiterte Modul Generatoren bereit. Wenn der Fehler von der Befehlszeile aus angezeigt wird, handelt es sich um eine einzelne Zeilen Fehlermeldung. Andernfalls erhalten Sie eine mehrzeilige Fehlermeldung, die den Fehler enthält, und einen Zeiger auf den Fehler, der anzeigt, wo Sie in dieser Zeile auftritt. Wenn das Terminal das virtuelle Terminal unterstützt, werden ANSI-Farbcodes verwendet, um Farbakzente bereitzustellen. Die Akzentfarbe kann unter geändert werden `$Host.PrivateData.ErrorAccentColor` . Verwenden Sie `Get-Error` das Cmdlet, um eine umfassende detaillierte Ansicht des voll qualifizierten Fehlers, einschließlich interner Ausnahmen, zu erhalten.
+- " **Concianview**" (Standard): stellt eine kurze Fehlermeldung und eine umgestaltete Ansicht für erweiterte Modul Generatoren bereit. Wenn der Fehler über die Befehlszeile oder ein Skript Modul vorliegt, ist die Ausgabe ab PowerShell 7,2 eine einzelne Zeilen Fehlermeldung. Andernfalls erhalten Sie eine mehrzeilige Fehlermeldung, die den Fehler enthält, und einen Zeiger auf den Fehler, der anzeigt, wo Sie in dieser Zeile auftritt. Wenn das Terminal das virtuelle Terminal unterstützt, werden ANSI-Farbcodes verwendet, um Farbakzente bereitzustellen. Die Akzentfarbe kann unter geändert werden `$Host.PrivateData.ErrorAccentColor` . Verwenden Sie `Get-Error` das Cmdlet, um eine umfassende detaillierte Ansicht des voll qualifizierten Fehlers, einschließlich interner Ausnahmen, zu erhalten.
 
   " **Concianview** " wurde in PowerShell 7 hinzugefügt.
 
